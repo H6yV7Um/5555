@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>当古典遇上时尚，朱亦兵大提琴演奏分享会</title>
+</head>
+
+<body>
+<div class="banner"><img src="images/banner.jpg"><a href="###"><span class="fl">我的订单</span><span class="fr">&gt;</span></a></div>
+<div class="tit"><i><img src="images/logoIcon.jpg"></i>活动简介</div>
+<div class="content">
+  <section class="con">
+    <p> 星讲堂大师：国际著名大提琴演奏家 朱亦兵<br/>
+      演讲关键词：时尚+音乐，音乐知识与感悟分享<br/>
+      分享会日期：2016年6月29日（周三）<br/>
+      分享会时间：19:30-21:00<br/>
+      分享会地点：北京大隐剧院 </p>
+  </section>
+  <div class="tit"><i><img src="images/logoIcon.jpg"></i>嘉宾简介</div>
+  <section class="con">
+    <p><span>朱亦兵</span>，中央音乐学院管弦系教授，中国音乐家协会理事，国家大剧院管弦乐团特邀首席，中国大提琴界在重大国际比赛中获奖第一人。</p>
+    <p>朱亦兵大提琴乐团为历届国家领导人及世界各国首脑演出，巡演印度、荷兰、德国和美国，在国内数十个城市的四百多所社会机关及院校举办公益演出，宣扬大提琴重奏之美。已出版三张专辑，大提琴八重奏《梦之旅》，大提琴四重奏《圣母颂》等。</p>
+    <p>他的琴声大家不会陌生，他是电视剧《蜗居》、《人间正道是沧桑》电影《山楂树之恋》、《金陵十三钗》、《匆匆那年》等大提琴主题曲的演奏者。</p>
+  </section>
+  <div class="tit"><i><img src="images/logoIcon.jpg"></i>购票流程</div>
+  <div class="con"><p>1.进入购买页面：点击首页活动详情滚动图，【点击进入，购票页面】；<br/>
+    2.购买指南：填写您的姓名、手机号码后，即跳转到支付页面，购买电子票；<br/>
+    3.购买成功：支付成功后，点击【我的订单】，查看您的购买信息。</p></div>
+  <div class="tit"><i><img src="images/logoIcon.jpg"></i>温馨提示</div>
+  <section class="con">
+    <p> 1.每张订单中的姓名与手机号码只支持购买1张电子票<br/>
+      2.每张电子票仅供个人使用，购票成功后，不可退换。</p>
+  </section>
+  <div class="tit"><i><img src="images/logoIcon.jpg"></i>入场须知</div>
+  <section class="con">
+    <p> 1.请观众<span>提前30分钟</span>到场，进场前您需提供购票时所填写的<span>手机号码与兑换码</span>，经由现场工作人员进行信息核实后方可入场，入场后请勿再次进出。<br/>
+      2.演出开始后，请勿随意走动。<br/>
+      3.本电子票限一次性使用，出场后无效。<br/>
+      4.下载时尚星秀app，进入星讲堂界面，可观看现场直播。<br/>
+      <span>5. 最终解释权归时尚星秀所有。</span> </p>
+  </section>
+  <section class="con"><p>客服电话：<a href='tel:010-65895320'>010-65895320</a></p></section>
+</div>
+<div class="btn join"><a href="javascript:;">立即参与</a></div>
+<div id="messdiv" class="dialog_tip" style="display:none;">
+  <div title="关闭窗口" class="js-close"> <span>×</span> </div>
+  <div class="messdivCons">您还没有下过订单哦！</div>
+</div>
+<script type="text/javascript" src="js/zepto.js"></script> 
+<script type="text/javascript" src="js/bodyart.js?v=62"></script> 
+<script type="text/javascript" src="js/tcc.js"></script> 
+<script type="text/javascript">
+$(".js-close").click(function(){
+	/*$("#messdiv").hide();
+	$("#BOX_overlay").hide();	*/
+  BOX_remove("messdiv")
+})
+</script>
+</body>
+</html>

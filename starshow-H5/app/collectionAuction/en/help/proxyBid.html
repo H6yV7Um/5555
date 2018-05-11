@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>entrustment bid</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div class="helps mt20">
+		<p>Q: what is the entrustment bid?  <br />
+  A: you can select the entrustment price when the auction is preset, and enter your acceptable maximum bid amount from the system agent. <br />
+  Q: bidding rules?  <br />
+  A: 1. The system will automatically make the first bid for you at the start of the bidding price + the lowest bid at the beginning of the bidding. If the price of other customers exceeds you, the system will continue to bid for you at the current price plus the lowest markup. If the current price plus the lowest markup is higher than the entrustment price you set, then stop the auction bid; <br />
+  2. The system will automatically make the first offer for you at current price plus minimum markup when you set up the automatic price of the product. If the price of other customers exceeds you, the system will continue to bid for you at the current price plus the lowest markup. If the current price plus the lowest markup is higher than the entrustment price you set, then stop the auction bid; <br />
+  3. The bidding price before shooting may be cancelled, but the price which has been successfully bid continues to be effective. </p>
+  <p class="col_red">Note: if your entrustment bid has been stopped but not successful, we will timely inform you that you can make the bid again manually.</p>
+<p class="col_grey">Here's an example: <br />
+  An auction price is 100 CNY, and the minimum price is 10 CNY. The -- 
+Case 1: user A offers 100 CNY, setting A commission bid of 1000 CNY; If A user B offers 200 CNY, the system automatically entrusts A bid of 210 CNY for A, and user B is eliminated. <br />
+  Situation 2: user A bid 100 CNY, setting the entrustment price of 1000 CNY; If A user B offers 998 CNY, user A is out; <br />
+  Situation 3: user A bid 100 CNY, the entrusted bid 1000 CNY; If there is a user B bid 110 CNY, the entrusted bid is 500 CNY. At the same time, there are two entrustment bids, and two natural entrustment bids will go into "mutual transcendence". At this time, the system will omit the meaningless record of "each of the two parties to make A bid for each other", and directly raise the price to 510 CNY (i.e., the entrustment price of B + the lowest bid), the user B is out; <br />
+  Situation 4: user A bid 100 CNY, the entrusted bid 1000 CNY; If A user B offers 110 CNY and the entrustment price is 1000 CNY, then the entrustment price of AB two will be the same. The system will bid 1000 CNY for user A, and user B is out. <br />
+  Case 5: user A offers 100 CNY for A bid and $1,000 for the entrustment. If A user B bid 110 CNY and the commission bid 1100 CNY, it is obvious that the system has A bid of 1010 CNY for B, and user A is out; <br />
+  Case 6: users for sale for 1000 CNY, A user B for sale for 2000 CNY, the lowest price is 100 CNY, in order to reduce the unnecessary bidding, leading the actual bid $1100 B, A out; B may cancel the entrustment bid before the auction begins, but the 1100 cannot be cancelled. If the final product is sold at 1100 CNY, then B won the bid.</p>
+	</div>
+</body>
+</html>

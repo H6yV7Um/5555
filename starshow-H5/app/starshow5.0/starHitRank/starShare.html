@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>帮偶像打榜，赢取偶像赠送的限量好礼</title>
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body>
+<a href="http://t.cn/R7COgYb"><img src="assets/images/down-bg.png" width="100%"></a>
+   <section class="crecmonyMain" id="js-crecmonyMain">
+	<header class="cereHeader mt10">
+		<div class="cere-info">
+			<div class="fl"><img src="assets/images/starShowLogo.png" /></div>
+			<div class="fr">
+				<p>当前参与人数</p>
+			    <p class="col_red">500</p>
+			</div>
+		</div>
+		<div class="cere-search" id="js-search">
+			<img src="assets/images/search_bg.png" />
+		</div>
+	</header>
+	<nav class="cereNav mt10">
+		<ul id="js-switchTab">
+			<!-- <li class="cur">演员榜</li>
+			<li>歌手榜</li> -->
+		</ul>
+	</nav>
+    <section class="showMain" style="display:none">
+
+	<div class="swiper-container">
+	    <div class="swiper-wrapper"> 
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	    <!-- 如果需要滚动条 -->
+	   
+	</div>
+	<section class="typeList" id="js-platTab">
+		<ul>
+			<!-- <li class="cur">
+				<img src="assets/images/icon-type/t1-hover.png"/>
+				<p>全部</p>
+			</li>
+			<li>
+				<img src="assets/images/icon-type/t2.png"/>
+				<p>星秀</p>
+			</li>
+			<li>
+				<img src="assets/images/icon-type/t3.png"/>
+				<p>微信</p>
+			</li>
+			<li>
+				<img src="assets/images/icon-type/t4.png"/>
+				<p>微博</p>
+			</li>
+			<li>
+				<img src="assets/images/icon-type/t5.png"/>
+				<p>Facebook</p>
+			</li>
+			<li>
+				<img src="assets/images/icon-type/t6.png"/>
+				<p>Instagram</p>
+			</li> -->
+		</ul>
+		<div class="line cb"></div>
+	</section>
+	<!-- <section class="cereNav2">
+		<div class="fl" id="cereNav2_tit">排行榜</div>
+		<ul id="js-switchTab-time" class="fr">
+			<li class="cur">日</li>
+			<li>周</li>
+			<li>月</li>
+		</ul>
+	</section> -->
+	<section class="list_tit">
+		<ul>
+			<li>周影响力</li>
+			<li>周涨幅</li>
+		</ul>
+	</section>
+    <section class="rankingMain">
+		<ul class="rankCon" id="js-rankContainer"></ul>
+		<p class="tc more-rank" id="js-moreRank" style="display:none">点击加载更多...</p>
+		
+     </section>
+     <a href="http://t.cn/R7COgYb"><img src="assets/images/join.png" class="icon_join"/></a>
+     </section>
+     <div class="noData tc" style="display:none">
+     	<img src="assets/images/noData.png" />
+     	<div class="text-tip">暂无数据</div>
+     </div>
+    </section> 
+    <!--search main-->
+    <section class="searchMain" id="js-searchMain" style="display:none">
+    	<section class="searchTitle">
+	     <form action="javascript:return true;" class="searchForm">
+		    <input type="search" name="search" class="txt_search" id="js-txt_search" placeholder="搜索明星" >
+		</form>
+	     <input type="button" class="btn_cancel" id="js-btn_cancel" value="取消"/>
+	    </section>
+	    <section id="js-searchList">
+	    	<!-- <li class="curPersonInfo searchPersonInfo">
+	    				    <p class="head-pic"><img src="assets/images/headPic-default.png"></p>
+	    					<div class="user-info">
+	    						<div>当前用户</div>
+	    						<div class="col_grey f13">排名第23</div>
+	    					</div>
+	    					<div class="follow-num">
+	    						<span id="followNum">23.4万</span>
+	    						<img src="assets/images/icon-heart.png">
+	    					</div>
+	    				</li> -->
+	    </section>
+	    
+
+    </section>
+    
+    <div id="messdiv" class="dialog_tip" style="display:none;">
+		 <div title="关闭窗口" class="js-close">
+        	<span>×</span>
+        </div>
+	    <div class="messdivCons"></div>
+	</div>
+	<div id="BOX_overlay"></div>
+	
+	<div class="star_detail_info" id="star_info"  style="display:none;">
+	  
+	</div>
+
+	
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/swiper-3.4.0.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+	<script type="text/javascript" src="assets/js/starHitShare.js"></script>
+	
+</body>
+</html>

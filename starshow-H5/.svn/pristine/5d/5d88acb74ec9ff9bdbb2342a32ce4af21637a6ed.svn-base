@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>2016时尚星秀盛典活动海选&1&1&8</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css?v=2">
+</head>
+<body>
+   <section class="crecmonyMain" id="js-crecmonyMain">
+	<header class="cereHeader mt10">
+		<div class="cere-info">
+			<div class="fl"><img src="assets/images/starShowLogo.png" /></div>
+			<div class="fr">
+				<p>当前参与明星</p>
+			    <p class="col_red">500</p>
+			</div>
+		</div>
+		<div class="cere-search" id="js-search">
+			<img src="assets/images/search_bg.png" />
+		</div>
+	</header>
+	<section class="cereBanner mt10">
+		<img src="assets/images/topBanner.gif" id="topb" />
+		<p class="icon-rule"><a href="http://testshare.xingxiu.tv/starshow5.0/starShare/index.html"><img src="assets/images/icon-rule.png"></a></p>
+	</section>
+	<nav class="cereNav">
+		<ul id="js-switchTab">
+			<li class="cur">演员榜</li>
+			<li>歌手榜</li>
+			<li>粉丝总榜</li>
+		</ul>
+	</nav>
+    <section class="rankingMain">
+		<ul class="rankCon" id="js-rankContainer"></ul>
+		<p class="tc more-rank" id="js-moreRank" style="display:none">点击加载更多...</p>
+		
+     </section>
+    </section> 
+    <!--search main-->
+    <section class="searchMain" id="js-searchMain" style="display:none">
+    	<section class="searchTitle">
+	     <form action="javascript:return true;" class="searchForm">
+		    <input type="search" name="search" class="txt_search" id="js-txt_search" placeholder="搜索明星" >
+		</form>
+	     <input type="button" class="btn_cancel" id="js-btn_cancel" value="取消"/>
+	    </section>
+	    <ul id="js-searchList">
+	    	<!-- <li class="curPersonInfo searchPersonInfo">
+	    				    <p class="head-pic"><img src="assets/images/headPic-default.png"></p>
+	    					<div class="user-info">
+	    						<div>当前用户</div>
+	    						<div class="col_grey f13">排名第23</div>
+	    					</div>
+	    					<div class="follow-num">
+	    						<span id="followNum">23.4万</span>
+	    						<img src="assets/images/icon-heart.png">
+	    					</div>
+	    				</li> -->
+	    </ul>
+	    
+
+    </section>
+    <div id="messdiv" class="dialog_tip" style="display:none;">
+		 <div title="关闭窗口" class="js-close">
+        	<span>×</span>
+        </div>
+	    <div class="messdivCons"></div>
+	</div>
+	<div id="BOX_overlay"></div>
+	<div class="waft_area"  id="btn_showDayRecord">
+		<img src="assets/images/waft-bg.png" class="bg" />
+	    <p class="c1">您已打榜</p>
+	    <p class="c2"><span>0</span>天</p>
+	    <p class="c3">点击查看成就&gt;</p>
+	</div>
+	<div id="messdiv-award" class="dialog_award" style="display:none;">
+		 <div title="关闭窗口" class="js-close-award">
+        	<img src="assets/images/live-close2.png" height="46" width="46">
+        </div>
+	    <div class="awardCons">
+	      <img src="assets/images/award-bg-1.png" class="award-bg" />
+	      <ul class="awardList">
+	      	<li>
+	         <a href="#none">
+	      		<p class="award-pic"><img src="assets/images/award1-disabled.png" /></p>
+	      		<p class="day-record">打榜1天</p>
+	      		<p class="awar-name">百度外卖优惠券</p>
+	      	  </a>
+	      	</li>
+	      	<li>
+	      	  <a href="#none">
+	      		<p class="award-pic"><img src="assets/images/award2-disabled.png" /></p>
+	      		<p class="day-record">打榜3天</p>
+	      		<p class="awar-name">美颜奇机提供面膜</p>
+	      	 </a>
+	      	</li>
+	      	<li>
+	      	  <a href="#none">
+	      		<p class="award-pic"><img src="assets/images/award3-disabled.png" /></p>
+	      		<p class="day-record">打榜5天</p>
+	      		<p class="awar-name">6000元理财基金</p>
+	      	  </a>
+	      	</li>
+	      	<li>
+	      		<a href="#none">
+	      		<p class="award-pic"><img src="assets/images/award4-disabled.png" /></p>
+	      		<p class="day-record">打榜9天</p>
+	      		<p class="awar-name">中粮我买网优惠券</p>
+	      		</a>
+	      	</li>
+			<li>
+				<a href="#none">
+	      		<p class="award-pic"><img src="assets/images/award5-disabled.png" /></p>
+	      		<p class="day-record">打榜12天</p>
+	      		<p class="awar-name">诺心礼盒优惠券</p>
+	      		</a>
+	      	</li>
+	      	
+	      	<li>
+	      		<a href="#none">
+	      		<p class="award-pic"><img src="assets/images/award6-disabled.png" /></p>
+	      		<p class="day-record">打榜18天</p>
+	      		<p class="awar-name">施丹兰沐浴产品</p>
+	      		</a>
+	      	</li>
+	      	<li>
+	      	  <a href="#none">
+	      		<p class="award-pic"><img src="assets/images/award7-disabled.png" /></p>
+	      		<p class="day-record">打榜25天</p>
+	      		<p class="awar-name">迪士尼周边一个</p>
+	      	  </a>
+	      	</li>
+			<li>
+				<a href="#none">
+	      		<p class="award-pic"><img src="assets/images/award8-disabled.png" /></p>
+	      		<p class="day-record">打榜30天</p>
+	      		<p class="awar-name">乐视车载净化器</p>
+	      		</a>
+	      	</li>
+	      </ul>
+	      <p class="award_desc">礼物有限，先到先得，送完为止</p>
+	    </div>
+	</div>
+	<input type="hidden" id="hide_params">
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/js/starCeremony.js?v=3226"></script>
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

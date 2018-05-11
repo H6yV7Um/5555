@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+  <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>时尚星秀-全明星直播间</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+<style type="text/css">
+  html,body{
+    height: 100%
+  }
+  .cb{
+    clear: both;
+    width: 100%;
+  }
+  .mt10{
+    margin-top:10px;
+  }
+  .loadding{
+    width: 100%;
+    height: 100%;
+  }
+  .loadding img{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    z-index:1;
+  }
+  .video_con{
+    width: 100%;
+    height: 100%;
+    position: relative;
+	
+    
+  }
+  .video_bg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+	background:url(poster.jpg) no-repeat;
+    background-size: cover;
+  }
+  .btn_play{
+    
+    width: 80px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    z-index:1;
+  }
+  .myVideo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    opacity: 0
+  }
+  .swing {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+	  animation-timing-function:ease-in-out;
+	  animation-duration:2s;
+    animation-iteration-count:infinite;
+  }
+
+  .regCon{
+    width: 100%
+  }
+   .regCon img{
+    width: 100%;
+    vertical-align: middle;
+    position: relative;
+  }
+  .btn_join{
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+  .relative_regs{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .abs_reg_cons{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width:70%;
+	height:12rem;
+  }
+  .abs_reg_cons div{
+        position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .zg_tit{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f0d16e;
+    text-align: center;
+    margin-bottom:5px;
+
+  }
+  .txt_con{
+    width:99%;
+    padding-left: 1%;
+    height: 1.5rem;
+    line-height:1.5rem;
+    font-size: 14px;
+    color: #959595;
+    margin-bottom:10px;
+    border:1px solid #f0d16e;
+    box-sizing:border-box;
+  }
+  select{
+     font-size: 14px;
+     color: #959595;
+     width: 49%;
+	  margin-bottom:10px;
+     height: 1.5rem;
+     line-height:1.5rem;
+     border:1px solid #f0d16e;
+     float: right;
+     box-sizing:border-box;
+     background: url(images/icon-select.png) no-repeat right center;
+     background-size: 20px;
+  }
+  select:first-child{
+    float: left;
+  }
+.error_tip{
+  font-size:8px;
+  color: #ff1d3e;
+  position: absolute;
+  bottom: 0
+}
+.sweet-alert h2 {
+       color: #575757;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+    display: block;
+}
+.sweet-alert button {
+    background-color: #8CD4F5;
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-border-radius: 4px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 5px 0 5px; 
+    cursor: pointer;
+}
+@media (max-width: 540px){
+.sweet-alert {
+    width:60%;
+    margin-left: 0;
+    margin-right: 0;
+    left: 15px;
+    right: 15px;
+    margin: auto;
+}
+}
+
+</style>
+<body>
+  <div class="loadding">
+    <img src="loadding.gif"  width="100%"/>
+  </div>
+  <div class="video_con" style="display:none">
+    <div class="video_bg">
+      <img src="btn_play.png" class="btn_play">
+      <span class="btn_join"><img src="images/btn_tojoin.png" width="150"></span>
+    </div>
+    <video class="myVideo" width="100%" height="100%" poster="poster.jpg" src="https://starshow-file.b0.upaiyun.com/videos/613bf9b6ffcad016e030507da159556a.mp4"   controls  ></video>
+  </div>
+  <div class="regCon"  style="display:none">
+    <img src="images/bg_01.png" >
+    <div class="relative_regs">
+      <img src="images/bg_02.png" >
+      <div class="abs_reg_cons">
+        <div>
+          <input type="text" placeholder="姓名" class="txt_con txt_name">
+          <p class="error_tip"></p>
+        </div>
+        <div>
+          <input type="text" placeholder="手机号码" class="txt_con txt_phone">
+          <p class="error_tip"></p>
+        </div>
+        <p class="zg_tit">专柜所在地</p>
+        <div>
+          <select class="sel_province">
+            <option>请选择</option>
+           
+          </select>
+          <select class="sel_city">
+            <option>请选择</option>
+          </select>
+          <p class="error_tip"></p>
+        </div>
+        <div class="cb "></div>
+        <div> 
+          <select class="txt_con sel_zg">>
+            <option>请选择</option>
+          </select>
+          <p class="error_tip"></p>
+        </div>
+        <p class="tc"><img class="btn_submit" src="images/btn_submit.png"  width="100%"></p>
+      </div>
+    </div>
+    
+    <img src="images/bg_03.png">
+  </div>
+ 
+      
+  		
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="../../applinks/openApp.js"></script>
+<script>
+$(function(){
+var addr={
+  "data":[
+        {
+          "name":"浙江",
+          "citys":[
+            {"name":"杭州","shoppe":[
+                                      "杭州银泰西湖店",
+                                      "杭州武林银泰（正式柜）",
+                                      "杭州萧山银隆百货(正式柜)",
+                                      "海宁华联大厦",
+                                      "杭州滨湖宝龙城"]
+            },
+            {"name":"诸暨","shoppe":["诸暨雄风百货"]},
+            {"name":"上虞","shoppe":["上虞大通购物中心"]},
+            {"name":"绍兴","shoppe":["绍兴国商"]},
+            {"name":"温州","shoppe":["温州开太百货"]},
+            {"name":"宁波","shoppe":["宁波银泰百货（鄞州店）"]}
+          ]
+        },
+        {
+          "name":"江苏",
+          "citys":[
+            {"name":"无锡","shoppe":[
+                                      "宜兴八佰伴",
+                                      "无锡百盛（三阳店）"]
+            },
+            {"name":"苏州","shoppe":["苏州石路国际商城","苏州久光百货"]},
+            {"name":"扬州","shoppe":["扬州金鹰"]},
+            {"name":"镇江","shoppe":["镇江八佰伴"]},
+            {"name":"常州","shoppe":["常州百货大楼"]},
+            {"name":"南通","shoppe":["南通八佰伴"]},
+            {"name":"淮安","shoppe":["淮安中央国际新亚广场"]},
+            {"name":"徐州","shoppe":["徐州苏宁广场"]}
+          ]
+        },
+        {
+          "name":"上海",
+          "citys":[
+            {"name":"上海","shoppe":[
+                                      "上海大丸百货",
+                                      "上海七宝宝龙城",
+                                      "上海东方商厦（中环店）",
+                                      "上海第一八佰伴",
+                                      "上海南方友谊购物中心",
+                                      "上海七宝汇宝"]
+            }
+          ]
+        },
+        {
+          "name":"四川",
+          "citys":[
+            {"name":"成都","shoppe":[
+                                      "成都茂业百货（春熙店）",
+                                      "成都伊藤洋华堂（锦华店）",
+                                      "成都茂业（盐市口店）"]
+            },
+            {"name":"南充","shoppe":["南充茂业百货"]},
+            {"name":"重庆","shoppe":["重庆涪陵商都"]},
+            {"name":"绵阳","shoppe":["绵阳茂业(兴达店）"]},
+            {"name":"宜宾","shoppe":["宜宾叙府商城"]}
+          ]
+        },
+        {
+          "name":"山东",
+          "citys":[
+            {"name":"济南","shoppe":[
+                                      "济南银座广场",
+                                      "济南银座商城（和谐广场店）"]
+            },
+            {"name":"东营市","shoppe":["东营振华商厦"]},
+            {"name":"青岛","shoppe":["青岛麦凯乐（总店）"]},
+            {"name":"威海","shoppe":["威海振华商厦"]},
+            {"name":"聊城","shoppe":["聊城振华五星百货"]}
+          ]
+        },
+        {
+          "name":"辽宁",
+          "citys":[
+            {"name":"沈阳","shoppe":[
+                                      "沈阳新玛特（总店）",
+                                      "沈阳兴隆大家庭（中街店）",
+                                      "沈阳百盛"]
+            },
+            {"name":"盘锦","shoppe":["盘锦兴隆大家庭"]},
+            {"name":"大连","shoppe":["大连新玛特"]}
+          ]
+        },
+        {
+          "name":"陕西",
+          "citys":[
+            {"name":"延安","shoppe":[
+                                      "延安百货大楼"]
+            },
+            {"name":"西安","shoppe":["西安金鹰百货（高新店）","西安开元商城（总店）"]}
+          ]
+        },
+        {
+          "name":"河北",
+          "citys":[
+            {"name":"沧州","shoppe":["沧州华北商厦（新华路店）"]},
+            {"name":"唐山","shoppe":["唐山百货大楼"]},
+            {"name":"石家庄","shoppe":["石家庄银座商城（东购店）"]}
+          ]
+        },
+        {
+          "name":"天津",
+          "citys":[
+            {"name":"天津","shoppe":["天津金元宝商厦","天津乐天百货（东马路店）"]},
+          ]
+        },
+        {
+          "name":"福建",
+          "citys":[
+            {"name":"福州","shoppe":["福州大洋百货（东街店）","福州新华都百货（宝龙店）","福州天虹百货"]},
+            {"name":"厦门","shoppe":["厦门SM百货"]},
+          ]
+        },
+        {
+          "name":"广东",
+          "citys":[
+            {"name":"深圳","shoppe":["深圳茂业百货（东门店）","深圳天虹百货（南山店）"]}
+          ]
+        },
+        {
+          "name":"湖北",
+          "citys":[
+            {"name":"武汉","shoppe":["武汉大洋百货（光谷店）","武汉大洋百货（中山店）"]}
+          ]
+        },
+        {
+          "name":"湖南",
+          "citys":[
+            {"name":"长沙","shoppe":["长沙平和堂（东塘店）","长沙平和堂（五一店）"]}
+          ]
+        },
+        {
+          "name":"甘肃",
+          "citys":[
+            {"name":"兰州市","shoppe":["兰州西太华商场","兰州王府井"]}
+          ]
+        },
+        {
+          "name":"河南",
+          "citys":[
+            {"name":"郑州","shoppe":["郑州丹尼斯（花园店）","郑州丹尼斯（人民店）"]}
+          ]
+        },
+        {
+          "name":"安徽",
+          "citys":[
+            {"name":"合肥","shoppe":["合肥大洋百货"]},
+            {"name":"六安","shoppe":["六安金商都"]}
+          ]
+        },
+         {
+          "name":"黑龙江省",
+          "citys":[
+            {"name":"大庆市","shoppe":["大庆百货大楼"]},
+          ]
+        },
+        {
+          "name":"新疆",
+          "citys":[
+            {"name":"乌鲁木齐","shoppe":["乌鲁木齐汇嘉百货广场（北京路店）"]},
+          ]
+        }
+  ]
+}
+setTimeout(function(){
+ $(".loadding").hide();
+ $(".video_con").show();
+},3000)
+$(".btn_play").click(function(){
+  $(".video_bg").hide();
+  $(".myVideo")[0].play();
+  $(".myVideo").css("opacity",1);
+  $(".myVideo").css("z-index",2);
+})
+$(".myVideo")[0].onended = function() {
+	   $(".video_bg").show();
+	   $(".myVideo").css("opacity","0");
+	   $(".myVideo").css("z-index","-1");
+     $(".video_con").hide();
+     $(".regCon").show();
+	   
+};
+/*$(".myVideo")[0].onpause = function() {
+	   setTimeout(function(){
+	   $(".video_bg").show();
+	   },500)
+	   $(".myVideo").css("opacity","0");
+	   $(".myVideo").css("z-index","-1");
+	   $(".myVideo")[0].end();
+};*/
+
+$(".btn_join").click(function(){
+  $(".video_con").hide();
+  $(".regCon").show();
+})
+
+var vaildate=function(){
+  $("p.error_tip").html("");
+  var name=$(".txt_name");
+  var phone=$(".txt_phone");
+  var province=$(".sel_province");
+  var city=$(".sel_city");
+  var zg=$(".sel_zg");
+  if(name.val()==""){
+      $(name).next("p.error_tip").html("姓名不能为空");
+      return false;
+  }
+  if(phone.val()==""){
+      $(phone).next("p.error_tip").html("电话不能为空");
+      return false;
+  }
+  if(!(/^1[34578]\d{9}$/.test(phone.val()))){ 
+        $(phone).next("p.error_tip").html("手机号码有误，请重填");  
+        return false; 
+  } 
+  if($(province)[0].selectedIndex==-1 || $(province)[0].selectedIndex==0){
+      $(province).parent().find("p.error_tip").html("请选择城市");
+      return false;
+  }
+  if($(city)[0].selectedIndex==-1 || $(city)[0].selectedIndex==0){
+      $(city).next("p.error_tip").html("请选择区域");
+      return false;
+  }
+  if($(zg)[0].selectedIndex==-1 || $(zg)[0].selectedIndex==0){
+      $(zg).next("p.error_tip").html("请选择专柜");
+      return false;
+  }
+
+  return true;
+}
+var clearInfo=function(){
+  $(".sel_city option").eq(0).prop("selected", 'selected'); 
+  $(".sel_province option").eq(0).prop("selected", 'selected'); 
+  $(".sel_zg option").eq(0).prop("selected", 'selected'); 
+  $(".txt_con").val("");
+}
+var info_submit=function(){
+  var url=commonCla.hostBase+"/meisu";
+  var name=$(".txt_name");
+  var phone=$(".txt_phone");
+  var province=$(".sel_province");
+  var city=$(".sel_city");
+  var zg=$(".sel_zg");
+  var params={
+    "name":name.val(),
+    "mobile":phone.val(),
+    "province":province.val(),
+    "city":city.val(),
+    "counter":zg.val()
+  }
+  commonCla.ajaxCommonFun(url,"POST",function(ret){
+    if(ret.code=="200"){
+      clearInfo()
+      swal({
+              "title":ret.data,
+              "confirmButtonText":"确定",
+              "confirmButtonColor": "#ff1d3e",
+              "animation":"none",
+
+            });
+    }else{
+      swal({
+              "title":ret.error,
+              "confirmButtonText":"确定",
+              "confirmButtonColor": "#ff1d3e",
+              "animation":"none",
+
+            });
+    }
+
+  },params)
+}
+var initSelectInfo=function(type){
+  var data=addr.data;
+  var p_inx=$(".sel_province")[0].selectedIndex-1;
+  if(type=="city"){
+    data=addr.data[p_inx].citys;
+  }else if(type=="zg"){
+    var c_inx=$(".sel_city")[0].selectedIndex-1;
+    data=addr.data[p_inx].citys[c_inx].shoppe;
+  }
+  var optionHtml="<option>请选择</option>";
+  for (var i = 0; i < data.length; i++) {
+    if(type=="zg"){
+       optionHtml+="<option>"+data[i]+"</option>"
+    }else{
+       optionHtml+="<option>"+data[i].name+"</option>"
+    }
+   
+  };
+  $(".sel_"+type).html(optionHtml)
+}
+//初始化省份
+initSelectInfo("province");
+//初始化city
+$(".sel_province").change(function(){
+  initSelectInfo("city");
+  $(".sel_zg").html("<option>请选择</option>")
+})
+//初始化专柜
+$(".sel_city").change(function(){
+  initSelectInfo("zg");
+})
+$(".btn_submit").click(function(){
+  if(vaildate()){
+		info_submit();
+  }
+})
+wx_share("伪装神器这样挑，不用美颜相机照样美","满脸菜色很减分，没关系，我们已经帮你找到了伪装神器","http://testshare.startvshow.com/starshow5.0/liveSingle/share.html","https://starshow-pic.b0.upaiyun.com/test_videos/1/1508211807.png")
+})
+</script>
+</body>
+</html>

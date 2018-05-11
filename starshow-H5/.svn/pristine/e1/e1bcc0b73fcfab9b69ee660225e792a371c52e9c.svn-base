@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>明星详情</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/newsDetail.css">
+</head>
+<body>   
+	<section id="newContent" class="newContent"></section>
+	<input type="hidden" id="hide_newInfo" />
+	<script type="text/javascript" src="../../assets/js/lib/zepto.min.js"></script>
+	<script type="text/javascript" sr="../../assets/js/common/bridge2.js"></script>
+	<script type="text/javascript" src="../../assets/js/common/common.js?v=1"></script>
+	<script type="text/javascript" src="assets/js/js.js?v=1"></script>
+</body>
+</html>

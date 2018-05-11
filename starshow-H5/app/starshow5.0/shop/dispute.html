@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh-CN">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <!--<meta name="apple-itunes-app" content="app-id=903692043" />-->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>申请售后</title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/js/lib/swiper-3.4.0.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/dispute.css">
+    <style>
+    .sweet-alert {
+        background: rgba(0, 0, 0, .2)
+    }
+    .sweet-alert h2 {
+        color: #FF1D3E;
+    }
+    .sweet-alert .sa-button-container {
+        display: none;
+    }
+    .sweet-alert[data-has-confirm-button=false][data-has-cancel-button=false] {
+        padding-bottom: 14px;
+    }
+    </style>
+    <script>
+        (function (win, doc) {
+                function change() {
+                    doc.documentElement.style.fontSize =
+                        doc.documentElement.clientWidth / 7.5 + "px";
+                }
+                change();
+                win.addEventListener('resize', change, false);
+            })(window, document)
+    </script>
+</head>
+
+<body>
+    <div class="dispute-page" style="display: none;">
+        <div class="goods-title flex-row">
+            <h2>退货商品</h2>
+            <div class="add-or-edit">
+                添加和编辑
+            </div>
+        </div>
+        <!-- 单个商品 加more多个商品 -->
+        <div class="product">
+            <div class="scroll">
+                <!-- <div class="single flex-row">
+                    <div class="product-img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="product-info flex-column">
+                        <div class="product-name two-line">LV包包</div>
+                        <div class="product-size"><span>颜色分类</span>：<span>中号</span></div>
+                        <div class="product-price">
+                            <span class="price">&yen;<b>1000</b></span>
+                            <span class="amount">X<b>1</b></span>
+                        </div>
+                    </div>
+                    <div class="more-info">
+                        <div class="goods-price">&yen;12000</div>
+                    </div>
+                </div> -->
+            </div>
+            
+        </div>
+        <div class="dispute-type">
+            <h2>选择申请服务</h2>
+            <ul class="service flex-row">
+                <li class="refund select" type="1">仅退款</li>
+                <li class="retreatAll" type="2">退货退款</li>
+                <!-- <li class="exchange">换货</li> -->
+            </ul>
+        </div>
+        <div class="dispute-con">
+            <div class="dispute-reason flex-row">
+                <h2 num="0">申请退款原因</h2>
+                <span>></span>
+            </div>
+            <div class="dispute-money flex-row">
+                <h2>退款金额</h2>
+                <span>&yen;<b>0</b></span>
+            </div>
+            <!-- <div class="dispute-exchange">
+                <h2>申请换货数量</h2>
+                <div class="num-module">
+                    <input type="button" class="minus" value="-"/>
+                    <input type="number" class="num" value="1" />
+                    <input type="button" class="add"  value="+"/>
+                </div>
+            </div> -->
+            <div class="dispute-descript">
+                <h2>退款说明</h2>
+                <textarea class="des-con" cols="30" rows="10"></textarea>
+            </div>
+            <div class="dispute-proof">
+                <h2>上传凭证（最多5张）</h2>
+                <div class="upload-area">
+                    <div class="upload-btn">
+                        <!-- <img src="" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="submit js-submit">确定</div>
+        
+    </div>
+    <div class="reason-select">
+        <div class="reason-area">
+            <div class="head flex-row">
+                <span class="close"></span>
+                <span class="title">申请原因</span>
+                <span class="determine">确定</span>
+            </div>
+            <ul class="select-area">
+                <li class="" data-num="1">1、尺码拍错\不喜欢\效果差</li>
+                <li data-num="2">2、质量问题</li>
+                <li data-num="3">3、面料\材质与商品描述不符</li>
+                <li data-num="4">4、大小尺寸与商品描述不符</li>
+                <li data-num="5">5、颜色\款式\图案与描述不符</li>
+                <li data-num="6">6、商家发错货</li>
+                <li data-num="7">7、假冒品牌</li>
+                <li data-num="8">8、收到商品少件或破损</li>
+            </ul>
+        </div>
+    </div>
+    <div class="mask"></div>
+    <div class="bigImg">
+        <div class="img-wrap">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="edit-page" style="display:none;">
+        <ul class="product-list">
+            <!-- <li class="product flex-row">
+                    <input id="checked" type="checkbox" name="checked" required="">
+                    <div class="product-img">
+                        <img src="" alt="">
+                    </div>
+                    <div class="product-info flex-column">
+                        <div class="product-name two-line">LV包包LV包包LV包包LV包包LV包包LV包包</div>
+                        <div class="product-size">
+                            <span>颜色分类</span>：
+                            <span>中号</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">&yen;
+                                <b>1000</b>
+                            </span>
+                            <span class="amount">X
+                                <b>1</b>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="num-module">
+                        <input type="button" class="minus" value="-" />
+                        <input type="number" class="num" value="1" />
+                        <input type="button" class="add" value="+" />
+                    </div>
+                </li> -->
+    
+    
+        </ul>
+        <div class="determine">确定</div>
+    </div>
+    <section class="loadding">
+        <div class="spinner">
+            <img src="assets/images/loadding.gif" height="40" width="40" />
+        </div>
+    </section>
+    <script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common/bridge2.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/swiper-3.4.0.min.js"></script>
+
+    <script type="text/javascript" src="assets/js/dispute.js"></script>
+</body>
+
+</html>

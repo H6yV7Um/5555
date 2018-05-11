@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+	<meta name="referrer" content="never">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>新闻详情</title>
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/dropload/dropload.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="news.css">
+</head>
+<body class="body_color2"> 
+	<section class="pageMain" id="newsMain" style="display:none">
+	    <a id="btn_download"><img src="../assets/images/download.png" width="100%" /></a>
+	    <!--新闻内容-->
+		<section class="newCons"></section>
+		<!--评论-->
+		<section class="cmt_short" style="background: rgb(255, 255, 255);">
+			<div class="cmt_Title">
+				<span><em class="fb">COMMENT</em>评论</span>
+				<div class="line"></div>
+		    </div>
+		    <a name="comment"></a>
+		    <ul class="cmt_list"></ul>
+		    <div class="btn_more"></div>
+		</section>
+		
+    </section> 
+    <!--加载-->
+    <section class="loadding">
+    	<div class="spinner">
+		  <img src="../assets/images/loadding.gif" height="40" width="40" />
+		</div>
+    </section>
+    <!--评论框-->
+    <section class="news_nav" id="news_nav" style="display:none">
+			<div class="news_msg">
+			    <!-- <input type="text" class="btn_txtMsg" placeholder="快来评论"> -->
+			    <div class="btn_txtMsg">快来评论</div>
+			    <!-- 				<input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg"> -->
+			</div>
+			<ul class="icons">
+				<li id="btn-toMsg"><a href="#comment">
+					   	<img src="../assets/images/icon-msg.png" />
+						<div class="num_area" id="msg_num">0</div></a>
+				</li>
+				<li id="zanArea">
+					<img src="../assets/images/icon-like.png"  class="zan" />
+					<div class="num_area" id="like_num">0</div>
+				</li>
+			</ul>
+			<div class="fr"></div>
+	</section>
+	<section class="toMsg md-modal">
+		<div class="msgHeader">
+			<input class="btn_cancel" type="button" value="取消"/>
+			<input class="btn_msgSend" type="button" value="发表" id="btn_sendMsg"/>
+		</div>
+		<!-- <input class="txtMsg"  placeholder="快来评论" /> -->
+		<textarea  class="txtMsg" placeholder="快来评论"  autofocus></textarea>
+	</section>
+	<div class="md-overlay"></div>
+
+
+	<input type="hidden" id="share_info" />
+	<input type="hidden" iShare="true" id="hide_source"/>
+	<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../applinks/openApp.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/echo.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/dropload/dropload.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+
+	<script type="text/javascript" src="news.js"></script>
+	
+	
+
+</body>
+</html>

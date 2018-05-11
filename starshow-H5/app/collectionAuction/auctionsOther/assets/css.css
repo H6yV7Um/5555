@@ -1,0 +1,271 @@
+html,body{
+	font-size: 62.5%
+}
+img{
+	vertical-align: middle;
+}
+a{
+  color:#000;
+text-decoration: none;
+}
+.col_red{
+	color: #ff1d3e
+}
+.col_grey{
+	color: #898989
+}
+.expertList .col_grey a{
+	color: #898989
+}
+.c-main{
+	width:100%;
+	overflow: hidden;
+	font-size: 1.2rem;
+	line-height: 2.2rem;
+
+}
+.btn_point{
+	position: fixed;
+	width: 1.2rem;
+	font-size: 1.2rem;
+	right:0;
+	bottom:120px;
+	display: inline-block;
+	padding: 5px 2px 5px 5px;
+	background: rgba(0,0,0,0.40);
+	border-radius: 8px 0 0 8px;
+	color: #ffffff;
+	z-index: 2;
+	line-height:1.3rem
+}
+.c-detail{
+	background: #f1f1f1
+}
+.m-header{
+	width: 100%;
+	height: 0;
+	padding-bottom: 75.2%;
+	position: relative;
+}
+.player-banner {
+	width: 100%;
+}
+.player_main{
+     width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.pre_times{
+	width: 90%; 
+	margin:auto;
+	font-size: 1.3rem;
+	color: #6EBD1F;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom:10px;
+}
+.pre_times2{
+	margin:auto;
+	font-size: 1.3rem;
+	color: #ffffff;
+	position: absolute;
+	bottom:20px;
+	padding: 0 10px;
+	background: rgba(235,15,15,0.70);
+	    z-index: 2;
+
+}
+.noprice{
+	font-size: 1.6rem;
+	color: #898989; 
+}
+#auction_params{
+	width: 90%;
+	font-size: 1.4rem;
+	line-height:2rem;
+	margin:0 auto;
+
+}
+.shadow{
+	height: 65px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,9) 100%);
+    
+}
+.m-title{
+	width: 90%; 
+	margin:auto;
+	font-size: 1.6rem;
+	color: #FFFFFF;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom:35px;
+	text-shadow: 1px 1px 1px #999
+}
+.m-user{
+	width: 90%;
+	display: flex;
+	margin:1rem auto;
+}
+
+.c-detail .m-user{
+	width:90%;
+	margin-top: 0px;
+	padding: 5px 5%;
+	background: #ffffff;
+}
+.m-user .users{
+	text-align: left;
+	 position: relative;
+	
+}
+.m-user .users .icon_roles{
+    position: absolute;
+    left: 17px;
+    bottom: 0;
+}
+.m-user .btn_follow{
+	text-align: right;
+	flex:1;
+	
+}
+.m-user .btn_ring{
+	text-align: right;
+	flex:1;
+	
+}
+.m-user .users .user_head{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 5px;
+
+}
+.m-user .users .user_name{
+	font-family: FZLTZHUNHK--GBK1-0;
+	font-size: 1.4rem;
+	color: #000000;
+}
+.m-user .btn_ring img{
+	width:48px;
+	/* height: 2.45rem */
+}
+.m-user .btn_follow img{
+	width:48px;
+	/* height: 2.45rem */
+}
+.m-desc{
+	width: 90%;
+	margin:10px auto;
+	font-size: 1.4rem;
+}
+.m-related{
+	width: 100%;
+	background: #f1f1f1;
+	overflow: hidden;
+}
+.m-related .lists{
+	width:98%;
+	margin-left: 2%;
+	margin-top:20px;
+	margin-bottom:20px;
+
+}
+.m-related .lists li{
+	width:48%;
+	float:left;
+	margin-bottom:10px;
+	margin-right: 2%;
+	background: #ffffff;
+	overflow:hidden;
+	
+}
+.m-related .lists li a{
+	text-decoration: none;
+	color: #000
+}
+.m-related .lists li .list_cover{
+	width:100%;
+	position: relative;
+}
+.img_cover{
+	width:100%;
+}
+.status{
+	height: 3rem;
+	overflow: hidden;
+	color:#999
+}
+.status.col_red{
+color: #ff1d3e
+}
+.list_desc,.list_title{
+	width: 99%;
+    padding: 5px;
+    height: 4rem;
+    padding-bottom: 5px;
+    line-height: 1.8rem;
+	overflow:hidden; 
+	text-overflow:ellipsis;
+	display:-webkit-box; 
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+	box-sizing: border-box;
+}
+.m-related .lists li img.icon_mark{
+	position: absolute;
+	width: 3rem;
+	height: 3rem;
+	bottom:0;
+	left: 20px;
+}
+.goodsInfo{
+	position: relative;
+	width: 100%;
+}
+.goodsInfo .icon_status{
+	position: absolute;
+	width: 30px;
+	left:15%
+}
+.goodsInfo li {
+	display: block;
+	width: 91%;
+	text-align: left;
+	padding: 1rem 5%;
+	background: #ffffff;
+	color:#000;
+	overflow: hidden;
+	border-bottom: 0.05rem solid #eaeaea;
+	font-size: 1.5rem;
+}
+.goodsInfo li:last-child{
+	margin-top: 1rem;
+	border-bottom: none;
+}
+.goodsInfo li:last-child h4 {
+	font-weight: bold;
+	font-size: 1.6rem;
+	line-height: 2.8rem;
+}
+.des {
+	text-indent: 2rem;
+}
+.btn_msgMore{
+	width: 100%;
+	background: none;
+	text-align: center;
+}
+#load_more {
+	width: 100%;
+	line-height: 3.5rem;
+	text-align: center;
+	background: #f1f1f1;
+}

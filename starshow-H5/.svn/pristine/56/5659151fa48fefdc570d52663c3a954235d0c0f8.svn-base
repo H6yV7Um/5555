@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<!--<meta name="apple-itunes-app" content="app-id=903692043" />-->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>时尚星秀——让你更时尚，让你更闪耀</title>
+<link rel="stylesheet" type="text/css" href="css/share.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+</head>
+<body class="bjf2">
+  <a class="app_link" id="btn_download2">
+    <img src="images/down-bg.png" width="100%">
+  </a>
+
+<div class="share">
+  <div class="share_vedio">
+    <div class="share_vedio_content">
+      <!-- <div class="ad_area">
+        <video id="video-ad" src="http://testshare.startvshow.com/web/dsp/assets/video/zuizhong.mp4" autoplay></video>
+      </div> -->
+      <div id="player" style="width:100%;"> 
+        <!--<video  id="video" preload="metadata"  src="40m.mp4"  controls="controls"  webkit-playsinline="" playsinline="" x-webkit-airplay="allow"  style="width: 100%; height: 100%; position: relative; display: inline;" style="background:#000"> 
+          <source src="40m.mp4" type="video/mp4">
+          </video>-->
+        </div>
+        <div style="width:100%;overflow:hidden" id="player2">
+		        <video  id="video" preload="matedata"  controls="controls" 
+ webkit-playsinline playsinline x-webkit-airplay="allow" style="width: 100%; height: 100%; position: relative; display: inline;"> </video>
+
+		</div>
+        <!-- 广告倒计时 -->
+            <div class="ad-info" style="display: none;">
+              <div class="ad-wrap">
+                <div class="countdown"><span>0</span>秒跳广告</div>
+                <div class="jump-ad">关闭</div>
+              </div>
+             <div class="ad-link"  style="display: none;">广告详情&nbsp;></div>
+           </div>
+        <div class="v_loadding" style="display:none"><img src="images/loadding2.gif" width="100%"></div>
+      <img src="" alt="" class="poster none"> </div>
+    <section class="live_info" >
+      <div class="star_info">
+        <ul>
+        </ul>
+      </div>
+      <div class="icon_info">
+        <div class="icon-arraw"><img src="images/icon-mark.png" height="100%"></div>
+      </div>
+      <div class="staffList">
+        <ul>
+          <!-- <li> 
+              <div class="box viewport-flip" title="点击翻面">
+                 <img class="list flip out head_pic" src="assets/images/head.png" />
+                 <div class="list flip back">大咖</div>
+              </div>
+              <p class="staff_name">ketty</p>
+            </li> -->
+        </ul>
+      </div>
+    </section>
+    <div class="share_video_title"> </div>
+  </div>
+  <div class="share_title"> <img width="16" height="13" class="icon-arrow" src="images/icon-arraw-red.png">
+    <div class="shareName"><img src="images/fasionicon.png" alt=""></div>
+    <div class="share_title_sum">
+      <h2></h2>
+      <p>已有<span></span>位订阅者</p>
+    </div>
+    <div class="follow"><a href="###">关注＋</a></div>
+  </div>
+  <div class="prod_list"  style="display:none">
+    <h2><img src="images/recommand-title2.png" width="100%"/></h2>
+    <div class="prod_con">
+      <ul></ul>
+    </div>
+    
+  </div>
+  <div class="vedioList-title"><img src="images/recommand-title.png"></div>
+  <div class="share_list">
+    <ul id="sharelist">
+    </ul>
+  </div>
+</div>
+<div id="messdiv" class="dialog_tip" style="display:none;">
+  <div class="messdivCons">下载【时尚星秀app】<br>
+    关注查看更多精彩内容</div>
+  <div class="operate"> <a href="javascript:;"  class="js-close">取消</a><a class="goDown">去下载</a> </div>
+</div>
+<div id="curPlay" class="dialog_tip" style="display:none;">
+  <div class="messdivCons">正在播放当前TV</div>
+</div>
+<div id="zan" class="dialog_tip" style="display:none;">
+  <div class="messdivCons">你已点过赞</div>
+</div>
+<!-- <div class="downApp"><a id="btn_download2"><img src="images/download.png" class="a-fadeinB"></a></div> -->
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script> 
+<!--<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js" charset="utf-8"></script>-->
+
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="js/video.js?v=1"></script> 
+<script type="text/javascript" src="js/common.js?v=2025"></script> 
+<script type="text/javascript" src="js/tcc.js"></script> 
+<script type="text/javascript" src="../../applinks/openApp.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".follow a").click(function(){
+		BOX_show("messdiv")
+	})
+	$(".js-close").click(function(){
+  		BOX_remove("messdiv")
+	})	
+   $("#messdiv").on("click", ".goDown", function() {
+		var paramsArr = new Array();
+		paramsArr['id'] =analyzParams("id");
+	    openApp('video', paramsArr);
+	});
+	$("#btn_download2").click(function() {
+		var paramsArr = new Array();
+		paramsArr['id'] = analyzParams("id");
+	    openApp('video', paramsArr);
+	});
+})
+setTimeout("wx_share()",2000)
+</script>
+<!-- 统计代码 -->
+<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<!--<meta name="apple-itunes-app" content="app-id=903692043" />-->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>时尚星秀——让你更时尚，让你更闪耀</title>
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="assets/css/order.css">
+</head>
+<body>
+	<div class="adrMain">
+		<ul class="adrList">
+			<li>
+					<div class="user_infos">
+						<img src="assets/images/icon-location.png"  class="icon_loc">
+						<span class="loc_name">苏苏苏</span>
+						<span class="loc_phone">15819898983</span>
+						<div class="loc_infos">
+							地址：北京市朝阳区金桐西路时尚大厦16层
+						</div>
+					</div>
+					
+					<div class="btn_lists">
+						<div class="defalt_adr">
+							<img src="assets/images/icon-checked.png" /><span>默认地址</span>
+						</div>
+						<div class="btns">
+							<p><img src="assets/images/icon-edit.png" ><span>编辑</span></p>
+							<p><img src="assets/images/icon-del.png"><span>删除</span></p>
+						</div>
+					</div>
+				
+			</li>
+			<li>
+					<div class="user_infos">
+						<img src="assets/images/icon-location.png"  class="icon_loc">
+						<span class="loc_name">苏苏苏</span>
+						<span class="loc_phone">15819898983</span>
+						<div class="loc_infos">
+							地址：北京市朝阳区金桐西路时尚大厦16层
+						</div>
+					</div>
+					
+					<div class="btn_lists">
+						<div class="defalt_adr">
+							<img src="assets/images/icon-circle.png" /><span>默认地址</span>
+						</div>
+						<div class="btns">
+							<p><img src="assets/images/icon-edit.png" ><span>编辑</span></p>
+							<p><img src="assets/images/icon-del.png"><span>删除</span></p>
+						</div>
+					</div>
+				
+			</li>
+		</ul>
+	
+		<div class="btn_createAdr">+新建地址</div>
+	</div>
+	<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>向上马拉松2017中国公开赛&0&1&8</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css" />
+</head>
+<body style="background:#e8e8e8">
+<header>
+	<img src="assets/images/banner.jpg"  class="bg_banner"/>
+	<a href="rules.html"><img src="assets/images/rule.png" class="icon_rules"/></a>
+</header>
+<section class="mls_main">
+	<ul class="teams">
+		<!-- <li class="teams_dj">
+			<img src="assets/images/teams-bg.png" class="bg_teams" />
+			<div class="teams_abs">
+				<div class="mls_stars_con">
+					<img src="assets/images/team_name1.png" class="teams_name"/>
+				    <img src="assets/images/star-temp.png"  class="mls_stars"/>
+				</div>
+				
+				<div class="mls_ball_main">
+					<div class="ball_cons">
+					  <div class="r_out">
+					  	<img src="assets/images/ball-out.png" width="100%" class="out_bg"/>
+					      <div class="r_in">
+					        <div class="r_c c1"></div>
+					        <div class="r_num"><img src="assets/images/btn-zan.png" class="btn_zan zan_moves"  id="js_zan"/></div>
+					      </div>
+					   </div>
+					   <div class="ball_shadow"><img src="assets/images/ball-shadow.png" width="70%" ></div>
+				     </div>
+		
+				     <div class="ball_desc">
+				       <p><span>4.2</span>万</p>
+				       <p class="font_small">能量</p>
+				     </div>
+					 <div class="team_remarks">
+							<div>台阶<span>34.5万</span></div>
+							<div>书本<span>1.6万</span></div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</li> -->
+
+		
+
+	</ul>
+	<div class="tr mt20 mls_history_tit"><img src="assets/images/btn-history.png" width="43%"/></div>
+	<section class="mls_history">
+		<!-- <div class="history_con">
+			<img src="assets/images/mark-adr.png"  class="icon_adr"/>
+			<ul class="score_title">
+				<li class="w1">战队</li>
+				<li class="w2">明星</li>
+				<li class="w3">台阶</li>
+				<li class="w4">书本</li>
+				<li class="w5">能量</li>
+			</ul>
+			<ul class="dj">
+				<li class="w1">动静队</li>
+				<li class="w2"><img src="assets/images/star-temp.png" width="100%"></li>
+				<li class="w3">17.8万</li>
+				<li class="w4">9999</li>
+				<li class="w5">38.8万</li>
+			</ul>
+			<ul class="zs">
+				<li class="w1">动静队</li>
+				<li class="w2"><img src="assets/images/star-temp.png" width="100%"></li>
+				<li class="w3">17.8万</li>
+				<li class="w4">9999</li>
+				<li class="w5">38.8万</li>
+			</ul>
+			<ul class="cy">
+				<li class="w1">动静队</li>
+				<li class="w2"><img src="assets/images/star-temp.png" width="100%"></li>
+				<li class="w3">17.8万</li>
+				<li class="w4">9999</li>
+				<li class="w5">38.8万</li>
+			</ul>
+		</div> -->
+
+
+	</section>
+</section>
+<input type="hidden" id="hide_info" />
+<div id="messdiv" class="dialog_tip" style="display:none;">
+     <div title="关闭窗口" class="js-close">
+          <img src="assets/images/close-tip.png" width="15" />
+        </div>
+      <div class="messdivCons"></div>
+</div>
+<div id="BOX_overlay"></div>
+<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+
+<script type="text/javascript" src="assets/js/pace.min.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript">
+
+   /*$(document).ready(function(){
+
+      $(".c1").animate({
+
+		  height: "32.8%"
+
+	  },1000);
+
+   })*/
+
+</script>
+</body>
+</html>

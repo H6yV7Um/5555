@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>星秀圣诞包包</title>
+</head>
+
+<body>
+<!--包-->
+<section class="wrap" id="Package"> <img src="images/Package_01.jpg"><img src="images/Package_02.jpg"><img src="images/Package_03.jpg"><img src="images/Package_04.jpg"><img src="images/Package_05.jpg"><img src="images/Package_06.jpg"><img src="images/Package_07.jpg"><img src="images/Package_08.jpg"><img src="images/Package_09.jpg"><img src="images/Package_10.jpg"><img src="images/Package_11.jpg"><img src="images/Package_12.jpg"><img src="images/Package_13.jpg"><img src="images/Package_14.jpg"><img src="images/Package_15.jpg"><img src="images/Package_16.jpg"><img src="images/Package_17.jpg"><img src="images/Package_18.jpg">
+  <div class="packageCon"></div>
+<div class="subNav">
+    <ul>
+      <li><a href="Perfume.html">圣诞香氛</a></li>
+      <li><a href="shoes.html">圣诞鞋履</a></li>
+      <li><a href="fashion.html">圣诞时装</a></li>
+      <li><a href="watch.html">圣诞腕表</a></li>
+      <li><a href="GiftBox.html">圣诞礼盒</a></li>
+      <li><a href="jewels.html">圣诞珠宝</a></li>
+      <li><a href="skin.html">圣诞护肤</a></li>
+      <li><a href="Makeup.html">圣诞美妆</a></li>
+      <li><a href="Package.html">圣诞包包</a></li>
+      <li><a href="life.html">圣诞party </a></li>
+    </ul>
+  </div>
+  <div class="closeBtn"><img src="images/closeBtn.png"></div>
+  <div class="add"><img src="images/add.png"</div>
+</section>
+<script src="js/zepto.js" type="text/javascript"></script> 
+<script type="text/javascript" src="js/christmas.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript">
+$(".add").click(function(){
+	$(".subNav").show()
+	$(".add").hide();
+})
+$(".closeBtn").click(function(){
+	$(".subNav").hide()
+	$(".add").show();
+})
+setTimeout("wx_share()",2000)
+</script>
+<!-- 统计代码 --> 
+<script type="text/javascript" src="../../tj.php"></script> </body>
+</html>

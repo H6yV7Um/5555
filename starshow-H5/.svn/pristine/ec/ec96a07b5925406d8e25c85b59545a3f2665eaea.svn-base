@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀广告投放管理平台</title>
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../assets/api/css/backstage.css">
+
+</head>
+<body>
+	<div class="dspHeader"></div>
+	<div class="dspMenu"></div>
+	<div class="dspContainer">
+		<div class="indexList dsp_container">
+		<div id="complete_tip" class="complete_tip" style="display:none">
+			您的账户信息尚不完善，请尽快补全，补全信息并通过账户审核后方可正常投放广告，点击进入<span class="toUserInfo">账户中心</span>
+		</div>
+		<div class="dsp_loginInfo mt20">
+			<span class="fl">上一次登录时间：<span class="UpdatedAt_time"></span></span>
+			<span class="col_blue fr" id="toRecharge">充值</span>
+		</div>
+		<div class="cb"></div>
+		<div class="money_info">
+			<ul>
+				<li>
+					<img src="../assets/images/icon-expend.png">
+					<div class="money_desc">
+						<p>今日消耗</p>
+						<p class="col_orange">
+							￥<span id="js_UseAmount"></span>
+						</p>
+					</div>
+				</li>
+				<li>
+					<img src="../assets/images/icon-balance.png">
+					<div class="money_desc">
+						<p>账户余额</p>
+						<p class="col_green">
+							￥<span id="js_Account"></span>
+						</p>
+					</div>
+				</li>
+				<li>
+					<img src="../assets/images/icon-canuse.png">
+					<div class="money_desc">
+						<p>可用余额</p>
+						<p class="col_blue">
+							￥<span id="js_canUse"></span>
+						</p>
+					</div>
+				</li>
+				<li>
+					<img src="../assets/images/icon-freeze.png">
+					<div class="money_desc">
+						<p>冻结资金</p>
+						<p class="col_red">
+							￥<span id="js_FreezAmount"></span>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="dsp_charts mt20">
+			<div class="charts_title">
+				<div class="charts_tit fl">
+					<span class="fb">今日</span><span class="fb_tit">CPC</span><span class="curTime"></span>
+					<span class="moreReport" id="moreReport">更多&gt;</span>
+				</div>
+				<select class="fr" id="sel_adList">
+					<option></option>
+				</select>
+			</div>
+			<div id="main" class="main" style="height:25rem"></div>
+		</div>
+		</div>
+	</div>
+	
+	<input type="hidden" page="indexList" id="hide_info">
+	<script type="text/javascript" src="../assets/common/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/charts/echarts.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/common.js"></script>
+	<script type="text/javascript" src="../assets/api/js/indexList.js"></script>
+	<script type="text/javascript" src="../assets/api/js/dataReport.js"></script>
+</body>
+</html>

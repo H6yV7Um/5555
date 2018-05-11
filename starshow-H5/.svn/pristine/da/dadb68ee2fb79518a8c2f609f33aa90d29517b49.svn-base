@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+ <head lang="zh-CN">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+  <meta charset="utf-8" /> 
+  <meta name="apple-itunes-app" content="app-id=903692043" /> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" /> 
+  <meta name="format-detection" content="telephone=no" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <title>帮偶像打榜，赢取偶像赠送的限量好礼</title> 
+  <link rel="stylesheet" type="text/css" href="../public/css/rank.css">
+ </head> 
+ <body> 
+  <div class="st_rank">
+  <div class="st_rank_top">
+    <div class="st_rank_img">
+      <img src="" alt="">
+    </div>
+    <div class="st_rank_mark"></div>
+    <div class="st_rank_con">
+      <h2 starid=""></h2>
+      <h3>FASHION STAR时尚全明星</h3>
+      <h4>当前排名  第<span>34</span>名</h4>
+    </div>
+    <div class="st_rank_geshu">
+      <p></p>
+      <h6>0</h6>
+    </div>
+  </div>
+  <div class="st_rank_detail">
+    <h2>和我一起为  <span></span>  打榜，赢取限量礼品吧！</h2>
+    <img src="../public/images/1.png" id="rank" onclick="like()">
+    <p>下载<img src="../public/images/starshow.png" alt="">客户端</p>
+    <p> 为喜欢的明星打榜  </p>
+    <p>有机会获得明星赠送的限量礼品</p>
+    <p>每个明星赠送的都不一样哦！</p>
+    <div class="st_prize"><a href="prize.htm">查看<span></span>准备的奖品</a></div>
+    <div class="seeList">
+      <a href="http://share.xingxiu.tv/starshow5.0/hit/starShare.html?type=2">查看大咖榜</a>
+      <a href="http://share.xingxiu.tv/starshow5.0/hit/starShare.html?type=1">查看星榜单</a>
+    </div>
+  </div>
+  <div class="st_rank_list">
+    <h2>一起打榜的好友</h2>
+    <ul>
+     
+    </ul>
+  </div>
+  <div class="maskLay"></div>
+  <div class="down">
+    <a href="http://t.cn/R7COgYb">我也要打榜</a>
+  </div>
+  </div>
+  <div class="rankSuc">恭喜你，打榜成功！<p class="sureBtn">确定</p></div>
+  <script src="../public/js/zepto.js"></script>
+ <script src="../public/js/rank.js"></script>
+  <script src="../public/js/jweixin-1.0.0.js"></script>
+  <script type="text/javascript">
+  /*! starshow 2016-03-25 */
+  var host='http://startvshow.com';
+  var star_id = location.search.slice(location.search.indexOf("&star_id=") + 10).split("&")[0];
+  var uid = location.search.slice(location.search.indexOf("&user_id=") + 9).split("&")[0];
+  var jwt_token= location.search.slice(location.search.indexOf("&jwt_token=") + 11).split("&")[0];
+  //alert(jwt_token);
+  var w=document.body.clientWidth||document.documentElement.clientWidth;
+  $('.st_rank_img').css('width',w);
+  var q_url= host+"/festival/invite?star_id="+star_id+"&user_id="+uid;
+  getDetail(q_url);
+  /*帮他打榜*/
+  function like() {
+        var lurl=host+"/list/inviteLike?star_id="+star_id+"&user_id="+uid+"&jwt_token="+jwt_token;
+        $.ajax({
+            url : lurl,
+            dataType : 'json',
+           // data: { uid: uid},
+            type : 'post',
+            global : false,
+            success : function(data) {
+                var v = data.code;
+                if('2' == v){
+                    location.href = data.info ;
+                }else if ('200' == v) {
+					var mh=$(document).height();
+					$(".maskLay").show();
+					$(".maskLay").css("height",mh);
+					$(".rankSuc").show();
+				   // $('.st_rank_list ul').prepend('<li><img src="'+data.info.avatar+'" class="img-scale" /><span>'+data.info.uname+'</span><span>'+ data.info.ctime+'</span> </li>').show();
+				   $(".sureBtn").click(function(){
+				   	location.href = 'Invite.htm?star_id='+star_id+'&user_id='+uid;
+				   });
+                    var likeNum = parseInt($('#likeNum').text());
+                    likeNum = likeNum+1;					
+                   $("#likeNum").html(likeNum+"位");
+                    //$('#pointbtn').unbind();
+                    $('#pointbtn').removeAttr("onclick");
+                } else if ('0' == v) {
+                    alert(data.info);
+                    //$('#pointbtn').unbind();
+                    $('#pointbtn').removeAttr("onclick");
+                }
+            }
+        });
+    }
+  </script>
+  <script src="../public/js/common.js"></script>
+ </body>
+</html>

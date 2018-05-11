@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>2018潮音发布夜，现场门票等你拿！</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body> 
+    <section class="zero_main"> 
+    <a href="http://t.cn/R7COgYb" id="btn_down">
+    <img src="assets/images/down-bg.png"  width="100%" />
+    </a>  
+      <section id="newContent" class="newContent">
+		<div class="zero_con1">
+		 烎•2018潮音发布夜是国内首个顶尖潮流音乐high趴，将于1月13日在广州劲爆开唱！潮音发布夜将定位潮流文化风向标，使之成为年轻群体聚集且热爱的音乐阵地。
+	   </div>
+		<img class="" src="assets/images/c1.jpg"  width="100%" />
+		<div class="zero_con1">
+		 烎•2018潮音发布夜大咖阵容一经公布便引起了粉丝们的热力追捧，其中包含李宇春、莫文蔚、窦靖童、华晨宇等实力唱将，王嘉尔等人气歌手，联合国际知名艺术家陶身体、KIM、真锅大度等，他们将在舞台上展示音乐与科幻艺术的结合。<br/>时尚星秀，作为百家亚文化合作品牌之一，一直秉承引领时尚潮流的经营理念，为广大用户提供时尚、潮流资讯，是中国最具特色的中国移动互联网时尚圈层互动传播的典范标杆，希望通过本次合作，为2018潮音发布夜融入更多时尚元素，为时尚潮流打Call！
+
+	    </div>
+	    <img class="" src="assets/images/c2.jpg"  width="100%" />
+
+	    <p class="zero_c2 tc">
+	    	为了让更多粉丝可以在线上享受到这一视听盛宴，<br/>星姐特送出，<br/>
+	    	<span style="color:#d3ad17;font-size:1.6rem"  class="fb">【现场门票2张】福利<br/></span>让你可以去现场为你的爱豆疯狂打Call，<br/>感受不一样的潮音发布！
+	        <!-- <br/>按照如下规则参与互动，<br/>
+	        <span>即有机会获得噢。 -->
+	    </p>
+	    <!-- <img class="" src="assets/images/winners.png"  width="100%" /> -->
+	    <!-- <img class="" src="assets/images/c3.gif"  width="100%" /> -->
+		<div class="zero_con3 winners">
+			<img src="assets/images/winner_tit.png" class="zero_con3_tit">
+			<div class="abs_cons tc">
+				<h2>酱油的酱啊</h2>
+		        <h2>bigbadggiirrll</h2>
+		        <p class="mb20 mt10 col_grey">恭喜中奖的小伙伴,稍后星姐会私聊各位中奖的小伙伴儿哦~~~请注意app私聊推送</p>
+		        <p></p>  
+			</div>
+		</div>
+	    <div class="zero_con3">
+			<img src="assets/images/c3_bg.png" class="zero_con3_tit">
+			<div class="abs_cons">
+				<h2>活动时间：</h2>
+		            <p>即刻起至1月12日15:00</p>
+		            <h2>活动规则：</h2>
+		            <p>原文评论，<span class="col_blue">“2018潮音发布夜，我最期待______。”</span>并留下个人微博昵称（微博ID），即有机会获得活动门票1张；</p>
+		            <h2>活动名额：</h2>
+		            <p>2位（分别获潮音发布夜门票1张）</p>
+		            <h2>名单公布：</h2>
+		            <p>2018年1月12日18:00
+		            	（中奖者按照评论所留微博ID私信通知领票具体信息，活动现场领取门票）</p>
+		           
+			</div>
+		</div>
+		
+    </section>
+
+	<!--评论-->
+	<section class="cmtArea">
+		<div class="channelTitle">
+			<a name="firstAnchor"><span><em class="fb">HCOMMENT</em>评论</span></a>
+		</div>
+		<ul class="cmt_list"></ul>
+		<p id="js-getMoreComment" class="tc">点击加载更多</p>
+		
+	</section>
+</section> 
+	<div class="sendMsg">
+		<input type="text" class="txtMsg" placeHolder="添加评论..."/>
+		<input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg"/> 
+       </div>
+	<div id="messdiv" class="dialog_tip" style="display:none;">
+		 <div title="关闭窗口" class="js-close">
+        	<span>×</span>
+        </div>
+	    <div class="messdivCons"></div>
+	</div>
+	<div id="BOX_overlay"></div>
+	<div id="msg_overlay" style="display: none;"></div>
+	<input type="hidden" id="hide_total" /> 
+	<!--评论 end-->
+	<input type="hidden" id="hide_newInfo" />
+	<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+
+	<script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="assets/js/zeroRange.js"></script>
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

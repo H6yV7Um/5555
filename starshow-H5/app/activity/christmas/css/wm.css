@@ -1,0 +1,88 @@
+@charset "utf-8";*{padding:0;margin:0;outline:0;border:none;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:none;-webkit-touch-callout:none;font-family:"Microsoft YaHei",sans-serif}
+
+
+.delay1{animation-delay:1.5s;-webkit-animation-delay:1.5s;}
+.delay2{animation-delay:2s;-webkit-animation-delay:2s}
+.delay3{animation-delay:3s;-webkit-animation-delay:3s}
+.delay4{animation-delay:4s;-webkit-animation-delay:4s;}
+.delay5{animation-delay:5s;-webkit-animation-delay:5s}
+.delay6{animation-delay:6s;-webkit-animation-delay:6s}
+.delay7{animation-delay:7s;-webkit-animation-delay:7s}
+.delay8{animation-delay:8s;-webkit-animation-delay:8s;}
+.delay9{animation-delay:9s;-webkit-animation-delay:9s}
+.delay10{animation-delay:10s;-webkit-animation-delay:10s}
+.delay11{animation-delay:11s;-webkit-animation-delay:11s}
+.delay12{animation-delay:12s;-webkit-animation-delay:12s}
+.delay13{animation-delay:13s;-webkit-animation-delay:13s}
+
+
+
+.pageTit{height:10%;}
+.pageTit01{height:32%;}
+
+.tree{position:absolute; bottom:0; left:7%; width:86%}
+
+.logo{position:absolute; top:3%; left:3%; width:35%;}
+.video{position:absolute; top:0; right:5%; width:15%}
+
+.video2{right:20%; top:0; width:20%}
+.starVideo{position:absolute; width:13%; top:12%; right:23%;}
+
+
+.watch{width:11%; left:49%; top:34%; position:absolute; z-index:999}
+.Package{width:12%; left:22%; top:49%; position:absolute; z-index:999}
+.skin{width:8%; left:62%; top:45%; position:absolute; z-index:999}
+.fashion{width:8%; left:42%; top:54%; position:absolute; z-index:999}
+.Perfume{width:10%; left:15%; top:64%; position:absolute; z-index:999}
+.shoes{width:12%; left:75%; top:55%; position:absolute; z-index:999}
+.Makeup{width:10%; left:54%; top:69%; position:absolute; z-index:999}
+.GiftBox{width:9%; left:19%; top:79%; position:absolute; z-index:999}
+.jewels{width:10%; left:78%; top:71%; position:absolute; z-index:999}
+.life{width:10%; left:49%; top:85%; position:absolute; z-index:999}
+
+.light01{animation: myfirst 4s infinite;
+-moz-animation: myfirst 4s infinite;	/* Firefox */
+-webkit-animation: myfirst 4s infinite;	/* Safari 和 Chrome */
+-o-animation: myfirst 4s infinite; width:65%; position:absolute; top:60%; left:10%;
+}
+.light02{animation: myfirst 5s infinite;
+-moz-animation: myfirst 5s infinite;	/* Firefox */
+-webkit-animation: myfirst 5s infinite;	/* Safari 和 Chrome */
+-o-animation: myfirst 5s infinite; width:50%; position:absolute; top:40%; left:40%;
+}
+.light03{animation: myfirst 7s infinite;
+-moz-animation: myfirst 7s infinite;	/* Firefox */
+-webkit-animation: myfirst 7s infinite;	/* Safari 和 Chrome */
+-o-animation: myfirst 7s infinite; width:40%; position:absolute; top:20%; left:15%;
+}
+@keyframes myfirst
+{
+0% {opacity:0;}
+50% {opacity:1;}
+100% {opacity:0;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+0% {opacity:0;}
+50% {opacity:1;}
+100% {opacity:0;}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+0% {opacity:0;}
+50% {opacity:1;}
+100% {opacity:0;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+0% {opacity:0;}
+50% {opacity:1;}
+100% {opacity:0;}
+}
+.music-logo{width:20px;height:20px;background:url(../images/music.gif);background-size:20px auto;position:absolute;top:10px;right:10px;z-index:5}
+.music-logo.playing{-webkit-animation:2.3s spin linear infinite}
+.star{width:20%; left:38.5%; top:15%; position:absolute}
+.star img{display:block; width:100%;}

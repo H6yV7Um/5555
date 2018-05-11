@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <meta charset="UTF-8">
+          <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+          <meta name="apple-mobile-web-app-capable" content="yes">
+          <meta name="format-detection" content="telephone=no, email=no">
+        <title>app下载页面</title>
+        <link rel="stylesheet" type="text/css" href="public/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="public/css/widget/slider.css" />
+        <link rel="stylesheet" type="text/css" href="public/css/widget/slider.default.css" /> 
+        <script type="text/javascript" src="public/js/zepto.js"></script>
+       
+        <!--<script type="text/javascript" src="http://gmu.baidu.com/demo/mobileevent2pc.js"></script>  -->   
+        <script type="text/javascript" src="public/js/widget/touch.js"></script>
+        <script type="text/javascript" src="public/js/widget/zepto.extend.js"></script>
+        <script type="text/javascript" src="public/js/widget/zepto.ui.js"></script>
+        <script type="text/javascript" src="public/js/widget/slider.js"></script>
+    </head>
+    <body>
+        <div class="lm_down">
+            <div class="lm_down_top">
+                <img src="public/images/dlicon.png" alt="">
+                <div class="lm_down_con">
+                    <h2>LookMe</h2>
+                    <h3>最新最时尚的视频直播平台</h3>
+                    <p>已有86863人下载  <a href="">去下载></a></p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div id="slider"></div>
+            <div class="lm_down_abaut">
+                <h2>关于我们 </h2>
+                <p>LOOKME是由互联网精英团队倾力打造的一款视频直播类软件。LOOKME致力于解放主播，扔掉狭小空间，扔掉模糊杂点画质，打造高清，美颜播放画质，开启全民直播时代。同时为观看者提供评论，点赞，送礼物等互动功能，真正的实现观众与粉丝间的互动。<br><br>
+
+                —特色介绍—<br>
+                这一刻你就是主角<br><br>
+
+                实时直播 开启全民直播时代；<br>
+                大咖互动 评论点赞嗨翻全场；<br>
+                全面分类   定制你的专属直播场；<br>
+                举起手机   这一刻你就是主角。</p>
+            </div>  
+        </div>
+        <script type="text/javascript">
+            var slider = $.ui.slider('#slider', {
+                autoPlay:false,
+                showArr:false,
+                viewNum:2.5,
+                content:[
+                    {
+                        href: "#",
+                        pic: "public/images/pic_1.png",
+                        title:''
+                    }, {
+                        href: "#",
+                        pic: "public/images/pic_2.png",
+                        title: ""
+                    }, {
+                        href: "#",
+                        pic: "public/images/pic_3.png",
+                        title: ""
+                    }, {
+                        href: "#",
+                        pic: "public/images/pic_4.png",
+                        title: ""
+                    }
+                ]
+            });
+        </script>
+         <script type="text/javascript" src="public/js/jquery1.9.1.js"></script>
+        <script type="text/javascript">
+        $(window).load(function(){
+            img_height = $('.ui-slider-item').children().children('img').height();
+            $('#slider').css('height',img_height + 'px');
+        })
+        </script>
+    </body>
+</html>

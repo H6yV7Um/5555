@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <title>剧组招募</title>
+    <link rel="stylesheet" type="text/css" href="../assets/js/lib/sweetAlert/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="crew.css">
+    <script src="../assets/js/lib/rem.js"></script>
+</head>
+
+<body>
+    <section class="pageMain" id="rankMain">
+        <a id="btn_download" class="btn_download"><img src="../assets/images/download.png" width="100%"/></a>
+        <!--剧组标题-->
+        <header>
+            <div class="crew-pic">
+                <img src="" alt="">
+                <span class="crew-status"></span>
+            </div>
+            <div class="crew-con">
+                <div class="crew-title"></div>
+                <div class="crew-des two-line"></div> 
+                <div class="crew-info">
+                    <span class="site"></span>
+                    <span class="number"><b></b>人</span>
+                </div>
+            </div>
+        </header>
+        <section class="crew-body">
+            <div class="crew-nav">
+                <div class="select">剧组简介</div>
+                <div>招募详情</div>
+            </div>
+            <div class="crew-tab">
+                <div class="crew-intro">
+                </div>
+                <div class="recruit" style="display: none;">
+                    <table>
+                        <tr>
+                            <td>招聘岗位</td>
+                            <td>招聘人数</td>
+                            <td>招聘费用</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <div class="sign-up">我要报名</div>
+    </section>
+    <!--加载-->
+    <section class="loadding">
+        <div class="spinner">
+            <img src="../assets/images/loadding.gif" height="40" width="40" />
+        </div>
+    </section>
+
+
+    <input type="hidden" id="share_info" />
+    <input type="hidden" iShare="true" id="hide_source" />
+    <script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../applinks/openApp.js"></script>
+    <script type="text/javascript" src="../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/echo.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+
+    <script type="text/javascript" src="crew.js"></script>
+
+
+</body>
+
+</html>

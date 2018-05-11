@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8" />
+		<meta name="apple-itunes-app" content="app-id=903692043" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>马拉松——成绩查询</title>
+		<link rel="stylesheet" type="text/css" href="../style/score.css"/>
+	</head>
+	<body>
+		<div id="score">
+			<p class="encoded">输入参赛编码，查询成绩</p>
+			<input class="result" type="text" name="code" value="请输入参赛编码" onfocus="javascript:if(this.value!='')this.value='';"/><br /><br />
+			<button id="btn">确定</button>
+		</div>
+		<div id="score_end" style="display: none;">
+			<p>恭喜您&nbsp;&nbsp;<span class="name"></span></p>
+			<p style="margin-left: 70px;">获得<span class="region">&nbsp;&nbsp;&nbsp;</span>区域场比赛第<span class="score">&nbsp;&nbsp;&nbsp;</span>名</p>
+		</div>
+	</body>
+	<script type="text/javascript" src="../script/jquery-1.11.3.js"></script>
+	<script type="text/javascript">
+		$("#btn").on("click",function(){
+			var code = $(".result").val();
+			//var host = "http://123.57.0.118:5000";
+			var host = 'https://startvshow.com';
+			$.ajax({
+				type:"get",
+				url:host + "/v9/marathon?code="+code,
+				success:function(e){
+					if(e.code == 200){
+						//alert($(".name").html());
+						$(".name").text(e.data.name);
+						$(".score").text(e.data.score);
+						$("#score").css("display","none");
+						$("#score_end").css("display","block");
+					}else{
+						alert(e.error);
+					}
+				}
+			});
+		})
+	</script>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>时尚星秀喊你来领奖啦！&4&0&8</title>
+	<style type="text/css">
+     html,body{height: 100%}
+	</style>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css?v=2">
+</head>
+<body style="background:#f8f8f8; min-height:100%">
+	<header class="awardHead">
+		<img src="assets/images/getTicket.jpg" id="btn_getTicket" class="mt20" />
+		<h1 class="mt20">仅限时尚星秀盛典活动粉丝列表前500名哦</h1>
+	</header>
+	<section class="awardCons">
+       <h2><img src="assets/images/ticket-tit.gif" /></h2>
+       <table cellspace="0" class="awardList">
+       	<THEAD>
+       		<tr>
+       		<td>用户名</td>
+       		<td>手机号</td>
+       	   </tr>
+       	</THEAD>
+       	<TBODY>
+       	<tr>
+       		<td>.A ♚ʚ我的小心脏?♚</td>
+       		<td> 138****6613</td>
+       	</tr>
+       	<tr>
+       		<td>欧妮静</td>
+       		<td>188****8033</td>
+       	</tr>
+
+       	</TBODY>
+       	
+       </table>
+       <h2><img src="assets/images/ticket-tit2.gif" /></h2>
+       <table cellspace="0" class="awardList">
+       	<THEAD>
+       		<tr>
+       		<td>用户名</td>
+       		<td>手机号</td>
+       	   </tr>
+       	</THEAD>
+       	<TBODY>
+       		<tr>
+       		<td>乔振宇官方网站</td>
+       		<td>136****1796</td>
+       	    </tr>
+       	    <tr>
+       		<td>黄尐。菟</td>
+       		<td>138****8709</td>
+       	    </tr>
+       	    <tr>
+       		<td>乔叔耐滴OKAMOTO</td>
+       		<td>134****2533</td>
+       	    </tr>
+       	    <tr>
+       		<td>Feven</td>
+       		<td>137****5196</td>
+       	    </tr>
+       	    <tr>
+       		<td>俧葙偹で旎僾</td>
+       		<td>134****0391</td>
+       	    </tr>
+       	</TBODY>
+       	
+       </table>
+       <p class="award_tip">注：乐视车载净化器和迪士尼周边商品稍后会核实邮寄信息后，以快递形式发放，请中奖者保持手机畅通哦~</p>
+	</section>
+
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript">
+     var analyzParams=function(param_name) {
+	    var url = window.location.search.split("?")[1];
+	    if (url == "" || url == undefined) return url;
+	    url = url.split(param_name + "=")[1];
+	    if (url == "" || url == undefined) {
+	      url = "";
+	      return url;
+	    }
+	    if (url.indexOf("&") >=0) {
+	      url = url.split("&")[0];
+	    }
+	    return url;
+	  }
+	  /**************************************************APP TO H5通信部分*********************************************************/
+		/**
+		参数：
+		action : '1'        //1-跳登陆；2-跳个人；3-普通分享；4-打榜分享；5-支付宝支付；6-微信支付
+		share : {title : "分享标题", content: "分享内容", cover : "分享icon", share_url : "分享link"}
+		order_id : '11'     // 订单id
+		user_id : '22'      // 跳转个人页的用户id
+		nextStep : '1'      //返回js下一步跳转地址类型
+
+		方法：
+		javascriptHandler :  用于“客户端”调取“JavaScript”方法
+		nativeCallback :     用于“JavaScript”调取“客户端”方法
+
+		*/
+		window.onerror = function(err) {
+		  //alert('window.onerror: ' + err)
+		}
+
+		//判断是否是Android
+		function isAndroid() {
+		  var ua = navigator.userAgent.toLowerCase();
+		  var isA = ua.indexOf("android") > -1;
+		  if (isA) {
+		    return true;
+		  }
+		  return false;
+		}
+
+		//判断是否Iphone
+		function isIphone() {
+		  var ua = navigator.userAgent.toLowerCase();
+		  var isIph = ua.indexOf("iphone") > -1;
+		  if (isIph) {
+		    return true;
+		  }
+		  return false;
+		}
+
+		//设置WebViewJavascriptBridge通信
+		function setupWebViewJavascriptBridge(callback) {
+		  if (isIphone()) { //用于Iphone
+		    if (window.WebViewJavascriptBridge) {
+		      return callback(WebViewJavascriptBridge);
+		    }
+		    if (window.WVJBCallbacks) {
+		      return window.WVJBCallbacks.push(callback);
+		    }
+		    window.WVJBCallbacks = [callback];
+		    var WVJBIframe = document.createElement('iframe');
+		    WVJBIframe.style.display = 'none';
+		    WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+		    document.documentElement.appendChild(WVJBIframe);
+		    setTimeout(function() {
+		      document.documentElement.removeChild(WVJBIframe)
+		    }, 0)
+		  } else {
+		    if (window.WebViewJavascriptBridge) {
+		      callback(WebViewJavascriptBridge)
+		    } else {
+		      document.addEventListener('WebViewJavascriptBridgeReady',
+		        function() {
+		          callback(WebViewJavascriptBridge)
+		        },
+		        false)
+		    }
+		  }
+		}
+
+		//设置调用客户端方法并赋值
+		function setBridgeCallHandler(bridge, data) {
+		  if (isIphone()) {
+		    bridge.callHandler('nativeCallback', data,
+		      function(response) {
+		        //
+		      })
+		  } else {
+		    window.WebViewJavascriptBridge.callHandler('nativeCallback', data,
+		      function(response) {
+		        //
+		      })
+		  }
+		}
+
+		//设置WebViewJavascriptBridge通信回调方法
+		setupWebViewJavascriptBridge(function(bridge) {
+		  //注册js回调方法
+		  bridge.registerHandler('javascriptHandler', function(data, responseCallback) {
+		    if (isIphone()) {} else {
+		      var data = eval("(" + data + ")");
+		    }
+		    if(data.nextStep=="1"){
+		    	jwt_token = data.jwt_token;
+		  	    window.location.href="redeemCode.html?jwt_token="+jwt_token;
+		    }
+		  })
+		  //调取客户端方法
+		  if (isIphone()) {} else {
+		    bridge.init(function(message, responseCallback) {
+		      var data = {
+		        'Javascript Responds': 'Wee!'
+		      }
+		      responseCallback(data)
+		    })
+		  }
+
+		    //展示签到记录
+		 
+	  $("#btn_getTicket").click(function(e){
+		  	 e.preventDefault()
+		      setBridgeCallHandler(bridge, {
+		        'action': '1',
+		        'nextStep': '1'
+		      })
+		  	
+		  })
+
+		})
+	  
+	</script>
+
+</body>
+</html>

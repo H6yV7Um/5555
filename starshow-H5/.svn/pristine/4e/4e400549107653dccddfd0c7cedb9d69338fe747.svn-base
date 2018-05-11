@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>明星详情</title>
+	<style type="text/css">
+	.newContent{
+		width: 90%;
+		margin:0 auto;
+		font-size: 14px;
+	}
+	.newContent img{max-width: 100%}
+	</style>
+</head>
+<body>   
+ <section id="newContent" class="newContent">
+	<!--内容-->
+
+	<!--内容 end-->
+ </section>
+ <script type="text/javascript" src="https://collection-auction.b0.upaiyun.com/assets/js/zepto.min.js"></script>
+ <script type="text/javascript">
+	var initPhotoalbum=function(){
+	 var imgDataNumber;
+	 var imgListData;
+	  var imgList=$("#newContent img");
+	  imgDataNumber=new Map();
+	  imgListData=[];
+	  for (var i = 0; i < imgList.length; i++) {
+	    var img_src=$(imgList[i]).attr("src");
+	    imgDataNumber[img_src]=i;
+	    imgListData[i]=img_src;
+	  };
+	  var imgObj={
+	  	"imgDataNumber":imgDataNumber,
+	  	"imgListData":imgListData,
+	  };
+	  return imgObj;
+	}
+	$(function(){ 
+	  $("body").on("click","#newContent img",function(){
+	      var imgVal=$(this).attr("src");
+	      var thisNumber=initPhotoalbum().imgDataNumber[imgVal];
+	      var resutlData=JSON.stringify({"photos":initPhotoalbum().imgListData,"position":thisNumber});
+	      window.starResult.gainPhotos(resutlData);
+	   })
+	})
+
+ </script>
+
+</body>
+</html>

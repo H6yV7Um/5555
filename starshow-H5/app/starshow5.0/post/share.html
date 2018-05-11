@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<meta name="apple-itunes-app" content="app-id=903692043" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<link href="css/bootstrap.css" rel="stylesheet" />
+<link href="css/bootstrap-responsive.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+<link href="css/fsgallery.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css/share.css">
+<title>来自时尚星秀的动态图集</title>
+</head>
+<body>
+<section class="postMain"  style="display:none">
+<a id="btn_download_post"><img src="images/down-bg.png" width="100%" /></a>
+<div class="dynamicTit"> 
+  <!--  <div class="userPic"><img src="images/userPic.jpg"></div>
+  <div class="userInfo">
+    <h2></h2>
+    <p></p>
+  </div>
+  <div class="userlike"><span class="likeIcon"><img src="images/like.png"></span><span class="likeNum">2384</span></div>
+--> 
+</div>
+<div class="dynamicContent"></div>
+<div class="container">
+  <ul class="thumbnails" id="gallery">
+    <!--<li style="width:100%" class="span3"> <a href="images/userPic.jpg"> <img src="images/starshow.png"/> </a> </li>
+    <li style="width:100%" class="span3"> <a href="images/userPic.jpg"> <img src="images/userPic.jpg"/> </a> </li>-->
+  </ul>
+</div>
+<div class="from_path" style=""></div>
+<div class="comment">
+  <section class="cmt_short">
+  	<div class="commentTit tc title-type2"><span><em class="fb">COMMENT</em>评论</span><div class="line"></div></div>
+		<ul class="cmt_list">
+		</ul>
+
+		<div class="btn_more"><p>去时尚星秀APP查看更多评论</p></div><a name="comment"></a>
+
+  </section>
+</div>
+<div id="zan" class="dialog_tip" style="display:none;">
+  <div class="messdivCons">你已点过赞</div>
+</div>
+	
+</section>
+<section class="loadding">
+    	<div class="spinner">
+		  <img src="images/loadding2.gif" height="30" width="30" />
+		</div>
+</section>
+<section class="news_nav" id="news_nav" style="display:none">
+	<div class="news_msg">
+	     <input type="text" class="txtMsg" placeholder="快来评论">
+		<input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg" cid="" uid="">
+	</div>
+	<ul class="icons">
+		<li class="fr">
+			<a href="#comment"></a><p id="btn-toMsg"><a href="#comment"><img src="images/icon-nav-msg.png"></a>
+			</p><div class="numArea" id="comment_num"></div><p></p>
+		</li>
+		<!-- <li id="zanArea">
+			<img src="images/icon-nav-zan.png" class="zan">
+			<div class="numArea" id="like_num">2420</div>
+		</li> -->
+
+	</ul>
+	<div class="fr"></div>
+</section>
+<input type="hidden" id="hide_source" source="post" />
+<input type="hidden" id="share_comment" share="true"> 
+<div id="msg_overlay" style="display:none"></div>
+<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script> 
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript" src="js/fs_forse.js"></script> 
+<script type="text/javascript" src="../../../applinks/openApp.js"></script>
+<script type="text/javascript" src="js/post.js"></script> 
+<script type="text/javascript">
+	$(".postMain").on("click", ".btn_more", function() {
+		var paramsArr = new Array();
+		paramsArr['id'] = commonCla.analyzParams("id");
+	    openApp('dynamic', paramsArr);
+	});
+	$("body").on("click", "#btn_download_post", function() {
+		var paramsArr = new Array();
+		paramsArr['id'] = commonCla.analyzParams("id");
+	    openApp('dynamic', paramsArr);
+	});
+</script>
+<!-- <script type="text/javascript" src="js/common.js"></script>  -->
+<!-- <script type="text/javascript" src="../news/v5/assets/js/comment.js"></script> -->
+
+<!-- 统计代码 -->
+<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

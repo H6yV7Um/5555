@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+<head>
+<meta http-equiv="Content-Type">
+<meta content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>当古典遇上时尚 —朱亦兵大提琴演奏分享会</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link rel="stylesheet" type="text/css" href="css/animations.css" />
+</head>
+<body>
+<div id='wx_logo' style='margin:0 auto;display:none;'> <img src="images/icon_up.png"/> </div>
+<div id="loading">
+  <div class="spinner">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+  </div>
+</div>
+<div id="content" style="display:none">
+  <div class="page page-1-1 page-current">
+    <div class="wrap"> <img class="img_6 pt-page-moveIconUp" src="images/icon_up.png" /> </div>
+  </div>
+  <div class="page page-2-1 hide">
+    <div class="wrap"><img class="img_6 hide pt-page-moveIconUp" src="images/icon_up.png" /> </div>
+  </div>
+  <div class="page page-3-1 hide">
+    <div class="wrap"> <img class="img_6 hide pt-page-moveIconUp" src="images/icon_up.png" /> </div>
+  </div>
+  <div class="page page-4-1 hide">
+    <div class="wrap"> <img class="img_6 hide pt-page-moveIconUp" src="images/icon_up.png" /> </div>
+  </div>
+  <div class="page page-5-1 hide">
+    <div class="wrap"> <img class="img_6 hide pt-page-moveIconUp" src="images/icon_up.png" /> </div>
+  </div>
+  <div class="page page-6-1 hide">
+    <div class="wrap"><img class="img_6 pt-page-moveIconUp" src="images/icon_up.png" /> </div>
+  </div>
+  <div class="page page-7-1 hide">
+    <div class="wrap"><p>客服电话：<a href="tel:010-65895320">010-65895320</a></p><img class="img_6 hide pt-page-moveIconUp"/> </div>
+  </div>
+</div>
+<script src="js/zepto.min.js"></script> 
+<script src="js/touch.js"></script> 
+<script src="js/index.js"></script>
+<script src="js/jweixin-1.0.0.js"></script>
+ <script src="js/common.js"></script>
+<script type="text/javascript">
+document.onreadystatechange = loading; 
+  function loading(){
+	  if(document.readyState == "complete")
+	  { 
+		  $("#loading").hide();
+		  $("#content").show();
+		  //playbksound();
+	  }
+  }
+  
+</script> 
+</body>
+</html>

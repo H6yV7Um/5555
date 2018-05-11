@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1,user-scalable=no">	
+	<title>作品详情</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css?v=23">
+	<link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css?v=55" />
+</head>
+<body>
+
+<section class="mrDetailCons" style="display:none">
+	<a id="btn_download2"><img src="assets/images/down-bg.png" width="100%"></a>
+	<header class="mrDetailHeader">
+		<div class="self_cons mt10">
+			<p class="head-pic"><img src="assets/images/defalut_cover2.png"></p>
+			<div class="user-info"></div>
+		</div>
+		<img src="assets/images/self-bg.jpg"  width="100%" />
+	</header>
+	<h1 class="mrDetailTitle"><!-- TA的视频 --><img src="assets/images/tit.png" width="100%"></h1>
+	<section class="tv_area">
+		<!-- <img id="" src="assets/images/vedio-default.png" width="100%"/> 
+		<img src="assets/images/vedio-button.png"  class="btn_video"/> -->
+		<video id="myVideo" controls  preload="auto"  x-webkit-airplay="true" webkit-playsinline="true">
+
+		      <p>Your browser does not support the video tag.</p>
+		</video>
+		<div id="output"></div>
+	</section>
+    <section class="btnList">
+    	<img src="assets/images/btn-hit.png" id="toHit" />
+    	<!-- <img src="assets/images/btn-share.png" id="toShare" /> -->
+    </section>
+</section>
+<!-- <div class="cereFooter"><input type="button" id="toHit" value="帮TA投票" num="0" /></div> -->
+<section class="loadding">
+  <div class="spinner">
+  <img src="assets/images/loadding2.gif" height="80" width="80">
+  </div>
+</section>
+
+<div class="loadding2" style="display:none">
+ <div class="spinner">
+  <img src="assets/images/loadding2.gif" height="80" width="80">
+  </div>
+</div>
+<div id="messdiv-tip" class="dialog_tip" style="display:none" >
+	
+	<div class="messdivCons">
+		<h1>登录后，首次观看完视频可获取一次投票机会</h1>
+		<div class="mess_btns">
+			<span id="btn_cancel">取消</span><span id="btn_sure">关闭</span>
+		</div>
+	</div>
+</div>
+<section class="loadding3" id="videoCon" style="display:none">
+  <div class="video_close" id="video_close"><img src="assets/images/live_close.png" width="30"></div>
+  <div class="spinner2">
+   <video id="adVideo" controls  preload="auto" poster="assets/images/adv-poster.png"  x-webkit-airplay="true" webkit-playsinline="true">
+          <source src="http://starshow-file.b0.upaiyun.com/videos/wfsp.mp4" type="video/mp4" />
+          <p>Your browser does not support the video tag.</p>
+    </video>
+  </div>
+</section>
+<input type="hidden" id="shareInfo" />
+<input type="hidden" id="type" status="share" /> 
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+<script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../../../applinks/openApp.js"></script>
+<script type="text/javascript">
+    $("#btn_download2").click(function(){
+      var params = {
+          "url":"http://testshare.xingxiu.tv/starshow5.0/schoolElchee/movieRoleDetail.html?id="+commonCla.analyzParams("id")
+        };
+       openApp_obj('activity', params);
+
+    })
+  </script>
+<script type="text/javascript" src="assets/js/mrDetail.js"></script>
+<!-- 统计代码 -->
+<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

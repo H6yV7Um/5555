@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+  <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>时尚星秀-全明星直播间</title>
+  <link rel="stylesheet" type="text/css" href="../assets/js/lib/swiper-3.4.0.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/css.css">
+  
+</head>
+<body>
+  <a class="app_link" id="btn_download2"><img src="assets/images/down-bg.png"  width="100%" /></a> 
+  <section class="liveRadioMain" style="display:none">
+  	<section class="PortraitCon">
+  		<section class="vedioCons">
+        <div class="ad_area_main" style="display:none">
+          <div title="关闭窗口" class="js-close2">
+          <img src="assets/images/close-tip.png" width="15" />
+         </div>
+         <div class="ad_area"></div>
+        </div>
+  			<div class="vedio_title">
+          <img src=""/>
+          <h1></h1>
+        </div>
+        <div class="video" style="display:none">
+          <span class="live_time" id="live_time"></span>
+          <!-- <span class="live_watch" ><span id="watchNum"></span>人在看</span> -->
+           <!-- <video id="tvLive" class="video-js vjs-default-skin" controls autoplay  preload="auto" width="100%" height="260" 
+                     data-setup='{}' webkit-playsinline style="width: 100%; height: 100%; position: relative; display: inline;">
+            <source src="" type="application/x-mpegURL">
+                     </video> -->
+           <div id="player" >
+               
+          </div>
+        </div>
+  			<div class="vedio_time"></div>
+  		</section>
+  		
+  		<section class="descInfo">
+        <div  class="countdown"  id="countdown" style="display:none"></div>
+  			<div class="desc_part1">
+  			  <img src="assets/images/icon-coins.png"  width="20" class="vm"/>&nbsp;<span id="coinsNum"  class="vm">0</span>
+  			</div>
+  			<ul class="desc_part2">
+  			 <!-- <li class="head-pic">
+           <img src="assets/images/head.png">
+           <div class="markclown"><img src="assets/images/crown1.png"></div>
+         </li> -->
+  			</ul>
+  			<div class="desc_part3" >
+          <span class="live_watch2" ><span id="watchNum"></span>人在看</span>
+  				<!-- <img src="assets/images/icon-like.png" id="btn-zan"/><span></span> -->
+  			</div>
+  		</section>
+      <section class="live_info"  style="display:none">
+        <div class="star_info">
+          <ul>
+            
+          </ul>
+        </div>
+        <div class="icon_info">
+          <div class="icon-arraw"><img src="assets/images/icon-mark.png" height="100%"></div>
+        </div>
+        <div class="staffList">
+          <ul>
+           <!-- <li> 
+              <div class="box viewport-flip" title="点击翻面">
+                 <img class="list flip out head_pic" src="assets/images/head.png" />
+                 <div class="list flip back">大咖</div>
+              </div>
+              <p class="staff_name">ketty</p>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+      <section class="live_tabs">
+        <div class="user_move">
+          <img class="head_pic" src="assets/images/headPic-default.png" />
+          <img src="" height="12" width="12" class="icon_roles" style="display:none">
+          <span class="user_name type-desc-main"></span>
+          <span class="icon_follow">关注</span>
+        </div>
+        <div class="user_info">
+          <img class="head_pic" src="assets/images/headPic-default.png" />
+          <img src="" height="12" width="12" class="icon_roles" style="display:none">
+          <a class="open_app"><img src="assets/images/add.png" /></a>
+        </div>
+        <ul class="liveRadioTab">
+		  <li  num="3">推荐</li>
+		  <li  num="2">聊天</li>
+          <li class="cur" style="display:none" num="1">主持人</li>
+          
+        </ul>
+      </section>
+  		
+  	    <section class="tabsMain">
+          <div class="tabCons" id="con1">
+            <ul class="master_msg" id="js-masterMsg">
+             </ul>
+             <div class="btn_more" id="btn_more_master" style="display:none">点击加载更多</div>
+          </div>
+  	    	<div class="tabCons" id="con2">
+            <ul class="msgList" id="js-msgList">
+             </ul>
+           <!--  <div class="toMsgArea">
+            <img src="assets/images/send-msg.png"/>
+           </div> -->
+           <div class="btn_more" id="btn_more" style="display:none">点击加载更多</div>
+  	    	</div>
+  	    	<section class="tabCons" id="con3" style="display:none">
+  	    		<!-- <div class="shortDesc">
+              <h1>
+                <span class="tv-title"></span>
+                                    <img src="assets/images/icon_title.png" class="icon_title"/>
+              </h1>
+              <div class="tit_desc">
+                <span id="seeNum"></span>
+                <span id="tit_desc_info" class="ml10"></span>
+              </div>
+            </div> -->
+
+  	    		<div class="rcdLiveVedio">
+  	    			<!-- <div class="typeInfo">
+                <div class="type-pic"><img src=""/></div>
+                <div class="type-desc">
+                  <p class="type-desc-main"></p>
+                  <p>已有<span id="orderNum"></span>人关注</p>
+              
+                               <span class='toAppConcern'><a href="http://t.cn/R7COgYb">关注+</a></span>
+                </div>
+                              <div class="cb"></div>
+                              <img src="assets/images/icon-arraw-red.png" height="20" width="25" class="icon-arrow" />
+              </div> -->
+              <!-- <div class="vedioList-title"><img src="assets/images/recommand-title.png" ></div> -->
+  	    			<ul class="vedioList">
+  	    				
+  	    			</ul>
+  	    		</div>
+  	    	</section>   
+  	    	
+  	    </section>
+  	</section>
+
+  	<section class="horizontalCon">
+  		
+  	</section>
+  </section>
+<!--缓冲-->
+<section class="loadding">
+  <div class="spinner">
+    <img src="assets/images/loadding2.gif" height="80" width="80" />
+  </div>
+</section>
+<!--nav-->
+<section class="news_nav" id="news_nav" style="display:none">
+    <div class="news_msg">
+      <img class="redPaper ml10" src="assets/images/redPaper.png" width="20px" />&nbsp;
+      <span class="spotlight" id="btn_spotlight" style="display:none">看点</span>
+      <input type="text" class="txtMsg" placeholder="快来评论" />
+      <!-- <input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg"> -->
+    </div>
+    <ul class="icons">
+      <!-- <li>
+        <a href="#comment"><p id="btn-toMsg"><img src="assets/images/icon-nav-msg.png" /></a>
+        <div class="numArea" id="comment_num" style="display:none"></div></a></p>
+      </li> -->
+      <li id="zanArea">
+        <img src="assets/images/icon-nav-zan.png" class="zan"  id="btn-zan" zan="4629" />
+        <div class="numArea" id="like_num" style="display:none"></div>
+      </li>
+  
+    </ul>
+    <div class="fr"></div>
+</section>
+<section class="spotlightCon" style="display:none">
+  <div class="spot_main">
+    <div class="spot_tit">
+      <span class="fl">看点回放</span>
+      <img class="fr spot_close"src="assets/images/close-tip.png" height="15" width="15" />
+    </div>
+    <ul class="spotList"></ul>
+  </div>
+</section>
+<!--查看大图-->
+<div class="bigImgcon" style="display:none">
+      <div class="bigImg_tit"><img src="assets/images/close-dist.png" /></div>
+       <!--star-->
+      <div class="swiper-container">
+      <div class="swiper-wrapper" id="js_imgList">
+      </div>
+      <!-- 如果需要导航按钮 -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+       </div>
+       <!--end-->
+       <div class="bigImg_footer">
+         <div class="footer_con" id="js-btnDown">
+          <!-- <a download="img"><img src="assets/images/icon-download.png" /></a> -->
+            <p>长按图片下载</p>
+        </div>
+       </div>
+</div>
+<div id="messdiv" class="dialog_tip" style="display:none;">
+     <div title="关闭窗口" class="js-close">
+        <span>×</span>
+    </div>
+    <div class="messdivCons"></div>
+    <div class="dialogFooter">
+      <div class="btn_dialog"><a href="http://t.cn/R7COgYb">去下载</a></div>
+      <div class="btn_dialog" id="btn_cancel">取消</div>
+    </div>
+</div>
+
+<input type="hidden" id="share_info" content="" cover="" shareUrl="" />
+<input type="hidden" id="tvStatus" status="" hls="" cover />
+<input type="hidden" id="isShare" isShare="true"/>
+
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../assets/js/lib/swiper-3.4.0.min.js"></script>
+<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js" charset="utf-8"></script>
+<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+<script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="assets/node_modules/leancloud-realtime/dist/realtime.browser.js"></script>
+<script type="text/javascript" src="../../../applinks/openApp.js"></script>
+<script type="text/javascript" src="assets/js/js.js?v=5"></script>
+
+<script>
+  $("#tvLive").attr("style","");
+</script>
+<!-- 统计代码 -->
+<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

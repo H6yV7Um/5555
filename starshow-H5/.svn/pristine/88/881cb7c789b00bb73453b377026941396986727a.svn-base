@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>2016时尚星秀盛典&4&0&7</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css?v=3">
+</head>
+<body>   
+	
+	<section class="cereDetailBanner">
+		<p class="bg"></p>
+		<div class="bannerDesc">
+			<p class="typeTitle"></p>
+			<p class="rankDesc"><img src="assets/images/icon-star.png" />
+					当前排名 第<span class="rankingNum"></span>位
+			</p>
+			<div class="heartNumber">
+				<img src="assets/images/icon-heart.png" />
+				<p></p>
+			</div>
+		</div>
+	</section>
+	<section class="curPersonInfo">
+		<p class="head-pic"><img src="assets/images/headPic-default.png"></p>
+		<div class="user-info">
+			<div><span id="curUserName"></span></div>
+			<div class="gradeDesc col_grey f13"></div>
+		</div>
+		<div class="follow-num">
+			<span id="followNum">0</span>
+			<img src="assets/images/icon-heart.png" />
+		</div>
+	</section>
+    <section class="rankingMain">
+		<ul class="rankCon" id="js-rankConDetail">
+			
+		</ul>
+    </section>
+    <div class="pd5rem"></div>
+    <div class="cereFooter"  style="width:100%"><input  type="button" id="toHit" value="帮偶像打榜"/></div>
+    <div class="cereFooter" id="letFriendHit"  style="display:none">
+    	邀请好友帮Ta打榜
+    </div>
+
+	<div id="messdiv" class="dialog_tip" style="display:none;">
+		 <div title="关闭窗口" class="js-close">
+        	<span>×</span>
+        </div>
+	    <div class="messdivCons"></div>
+	</div>
+	<div id="loadding" class="" style="display:none;">
+	    <div class="tc"><img src="assets/images/loadding.gif" width="60"></div>
+	</div>
+	<div id="BOX_overlay"></div>
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/js/starCeremony.js?v=4041"></script>
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

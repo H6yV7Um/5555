@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/animation.css">
+<link rel="stylesheet" type="text/css" href="css/touchTouch.css">
+<title>星秀杯纹身大师挑战赛复赛阶段</title>
+</head>
+
+<body class="helpBg">
+<div class="helpBanner"> <img src="images/helpBanner.png">
+  <div class="topPic"><img src="images/p1.jpg"></div>
+</div>
+<div class="name"></div>
+<div class="info">点赞数 <span class="likeNumber"></span> </div>
+<section class="page page-batt" data-plugin-type="info_front" >
+  <section class="page-content">
+    <div class="htmleaf-container">
+      <div class="htmleaf-content">
+        <div id="thumbs" class="slider photoAlbum"> </div>
+      </div>
+    </div>
+  </section>
+</section>
+<p class="clear"></p>
+<div class="rankBtn" onClick="like()" id="rankBtn"><img src="images/rankBtn.png"></div>
+<div class="rankBtn hide" id="yqBtn" href="share.html"><img src="images/yqBtn.png"></div>
+<div class="activityDesc">
+  <h3><span>活动说明</span></h3>
+  <p>由时尚集团·时尚星秀重磅打造,携手中国纹身联合会、中美文身协会联合“星秀杯·纹身大师挑战赛”海选现正式启动报名!届时,通过选拔 成功晋级决赛资格的前100 名选手将于 5 月 28 日前往北京在 CBD 大隐剧院决 赛现场争夺 8 组 24 个奖项以及全国总决赛冠军的终极角逐,最终 25 位获奖者将出席“星秀杯·文身大师颁奖盛典“ 接受纹身协会主席和明星(需要具体 人名)为你亲自颁奖,并授予荣誉证书。</p>
+</div>
+<div class="download"><a href="http://t.cn/R7COgYb"><img src="images/downLoad.png"></a></div>
+<div class="rankSuc">冲榜成功，(づ￣ 3￣)づ</div>
+<img src="images/fenxiang.png" class="st_share">
+<div class="mask"></div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript" src="js/cookie.js"></script> 
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript">
+var id = location.search.slice(location.search.indexOf("&id=") + 5).split("&")[0];
+var ck=$.cookie("star_masterSemi_"+id);
+if(ck!=null){
+	$("#rankBtn").hide();
+	$("#yqBtn").show();
+}else{
+	$("#rankBtn").show();
+	$("#yqBtn").hide();
+}
+var uid= location.search.slice(location.search.indexOf("&uid=") + 5).split("&")[0];
+
+var q_url="http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=getMastersCupInvite&id="+id+"&uid="+uid+"&returntype=jsonp&callback=?";
+  	getDetail(q_url);
+	function getDetail(a) {
+	$.getJSON(a, function(a) {
+		if ("succ" == a.result) {
+			for (var b = "", c = 0; c < a.info.works.length; c++) {
+				var d = "" == a.info.works[c].picpath ? "images/defaultimage_65x65.png" : a.info.works[c].picpath;
+				b += " <div class='slide pAlbum  a-ring rotate"+c+"'> <img src="+a.info.works[c].picpath+"><a href="+a.info.works[c].picpath2+"></a> </div> ";	
+			}
+			$(".topPic img").attr("src",a.info.avatar);
+			$(".ranking").text(a.info.grade);
+			$(".likeNumber").text(a.info.digg_count);
+			$(".name").text(a.info.uname);
+			$(".photoAlbum").append(b);
+		}
+	})
+}
+function like() {
+        var lurl = "http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=doMastersCupInviteDigg&id="+id+"&returntype=jsonp&callback=?";
+        $.ajax({
+            url : lurl,
+            dataType : 'json',
+           // data: { uid: uid},
+            type : 'get',
+            global : false,
+            success : function(data) {
+                var v = data.result;
+                if('succ' == v){
+					$(".rankSuc").show();
+					$(".rankSuc").fadeOut(1000);
+					$("#rankBtn").hide();
+					$("#yqBtn").show();
+					$.cookie('star_masterSemi_'+id, id, { expires: 30 }); 
+                } else{
+					$("#rankBtn").show();
+					$("#yqBtn").hide();
+                }
+            }
+        });
+ }
+$(function(){
+	 $("#yqBtn").click(function(){
+		$(".st_share").show(); 
+		var mh=$(document).height();
+		$(".mask").show();
+		$(".mask").css("height",mh);
+	})	
+})
+</script> 
+<script src="js/touchTouch.jquery.js"></script> 
+<script src="js/idangerous.swiper.min.js"></script> 
+<script type="text/javascript">
+window.onload = function() {
+    var mySwiper = new Swiper('.swiper-container',{
+            loop:0,
+            mode:'vertical',
+            //tdFlow: {rotate :60,depth: 150}
+    }); 
+    //window.addEventListener('load', onWndLoad, false);
+    setTimeout(onWndLoad,500);
+    $('#thumbs a').touchTouch();
+    function onWndLoad() {
+        var slider = document.querySelector('.slider');
+        var sliders = slider.children;
+        var initX = null;
+        var transX = 2;
+        var rotZ = 3;
+        var transY = 4;
+        var curSlide = null;
+        var Z_DIS = 50;
+        var Y_DIS = 10;
+        var TRANS_DUR = 0.4;
+        var images = slider.querySelectorAll('img');
+        for (var i = 0; i < images.length; i++) {
+            if (window.CP.shouldStopExecution(1)) {
+                break;
+            }
+            images[i].onmousemove = function (e) {
+                e.preventDefault();
+            };
+            images[i].ondragstart = function (e) {
+                return false;
+            };
+        }
+        window.CP.exitedLoop(1);
+
+        function init() {
+            var z = 0, y = 0;
+            for (var i = sliders.length - 1; i >= 0; i--) {
+                if (window.CP.shouldStopExecution(2)) {
+                    break;
+                }
+              //  sliders[i].style.transform = 'translateZ(' + z + 'px) translateY(' + y + 'px)';
+                z -= Z_DIS;
+                y += Y_DIS;
+            }
+            window.CP.exitedLoop(2);
+            attachEvents(sliders[sliders.length - 1]);
+        }
+
+        function attachEvents(elem) {
+            curSlide = elem;
+            curSlide.addEventListener('mousedown', slideMouseDown, false);
+            curSlide.addEventListener('touchstart', slideMouseDown, false);
+        }
+
+        init();
+
+        function slideMouseDown(e) {
+            if (e.touches) {
+                initX = e.touches[0].clientX;
+            } else {
+                initX = e.pageX;
+            }
+            document.addEventListener('mousemove', slideMouseMove, false);
+            document.addEventListener('touchmove', slideMouseMove, false);
+            document.addEventListener('mouseup', slideMouseUp, false);
+            document.addEventListener('touchend', slideMouseUp, false);
+        }
+
+        var prevSlide = null;
+        function slideMouseMove(e) {
+            var mouseX;
+            if (e.touches) {
+                mouseX = e.touches[0].clientX;
+            } else {
+                mouseX = e.pageX;
+            }
+            transX += mouseX - initX;
+            rotZ = transX / 20;
+            transY = -Math.abs(transX / 15);
+            curSlide.style.transition = 'none';
+            curSlide.style.webkitTransform = 'translateX(' + transX + 'px)' + ' rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+            curSlide.style.transform = 'translateX(' + transX + 'px)' + ' rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+            var j = 1;
+            for (var i = sliders.length - 2; i >= 0; i--) {
+                if (window.CP.shouldStopExecution(3)) {
+                    break;
+                }
+                sliders[i].style.webkitTransform = 'translateX(' + transX / (2 * j) + 'px)' + ' rotateZ(' + rotZ / (2 * j) + 'deg)' + ' translateY(' + Y_DIS * j + 'px)' + ' translateZ(' + -Z_DIS * j + 'px)';
+                sliders[i].style.transform = 'translateX(' + transX / (2 * j) + 'px)' + ' rotateZ(' + rotZ / (2 * j) + 'deg)' + ' translateY(' + Y_DIS * j + 'px)' + ' translateZ(' + -Z_DIS * j + 'px)';
+                sliders[i].style.transition = 'none';
+                j++;
+            }
+            window.CP.exitedLoop(3);
+            initX = mouseX;
+            e.preventDefault();
+            if (Math.abs(transX) >= curSlide.offsetWidth - 150) {
+                document.removeEventListener('mousemove', slideMouseMove, false);
+                document.removeEventListener('touchmove', slideMouseMove, false);
+                curSlide.style.transition = 'ease 0.2s';
+                curSlide.style.opacity = 0;
+                prevSlide = curSlide;
+                attachEvents(sliders[sliders.length - 2]);
+                slideMouseUp();
+                setTimeout(function () {
+                    slider.insertBefore(prevSlide, slider.firstChild);
+                    prevSlide.style.transition = 'none';
+                    prevSlide.style.opacity = '1';
+                    slideMouseUp();
+                }, 201);
+                return;
+            }
+        }
+
+
+        function slideMouseUp() {
+            transX = 0;
+            rotZ = 0;
+            transY = 0;
+            curSlide.style.transition = 'cubic-bezier(0,1.95,.49,.73) ' + TRANS_DUR + 's';
+            curSlide.style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+            curSlide.style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + transY + 'px)';
+            var j = 1;
+            for (var i = sliders.length - 2; i >= 0; i--) {
+                sliders[i].style.transition = 'cubic-bezier(0,1.95,.49,.73) ' + TRANS_DUR / (j + 0.9) + 's';
+                sliders[i].style.webkitTransform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + Y_DIS * j + 'px)' + ' translateZ(' + -Z_DIS * j + 'px)';
+                sliders[i].style.transform = 'translateX(' + transX + 'px)' + 'rotateZ(' + rotZ + 'deg)' + ' translateY(' + Y_DIS * j + 'px)' + ' translateZ(' + -Z_DIS * j + 'px)';
+                j++;
+            }
+            document.removeEventListener('mousemove', slideMouseMove, false);
+            document.removeEventListener('touchmove', slideMouseMove, false);
+        }
+
+
+    }
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀-让你更时尚，让你更闪耀！</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"  />
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper-3.4.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">	
+	<link rel="stylesheet" type="text/css" href="assets/css/index2.0.css">
+</head>
+<body>
+ <div class="xingx_mains">
+
+ 	<!--头部-->
+ 	<div class="xingx_header" style="display:none" id="ind_xingx_header"></div>
+ 	<!--top-->
+ 	<div class='xingx_top'>
+ 		<div class="topMain">
+ 		  <div class="topCon">
+			<span>全明星时尚媒体聚合平台</span>
+			<div class="fr">
+			   <div class="link">
+				<a class="toSearch"><img src="assets/images/icon-search.png" height="16" width="16"></a>
+				<a href="http://e.xingxiu.tv">广告投放</a><a href="downLoad.html">手机APP</a><a href="about.html">关于我们</a>
+				</div>
+			   <div class="platList">
+		 		<div class="c1">
+		 			<img src="assets/images/icon/icon-xingxiu.png" height="25" width="25">
+		             <div class="tips"><img src="assets/images/app.png" /></div>
+		 		</div>
+		 		<a class="fr" href="http://weibo.com/trendstarshow?refer_flag=1001030101_&is_all=1"><img src="assets/images/icon/icon-sina.png" height="25" width="25"></a>
+	 			<div class="c2">
+	 				<img src="assets/images/icon/icon-wechat.png" height="25" width="25">
+	                <div class="tips"><img src="assets/images/weix.png" /></div>
+	 			</div>
+		 	  </div>
+			</div>
+ 		  </div>
+ 		</div>
+ 		<p class="tc"><img src="assets/images/top-logo.png" height="98" width="306"></p>
+ 		<div class="xingx_header"></div>
+ 	</div>
+ 	<!--焦点图-->
+ 	<div class="focus" id="focus1">
+			<div class="center">
+				<div class="swiper-container swiper-container-top">
+					<ul class="swiper-wrapper" id="js-focusList"></ul>
+					 <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				</div>
+				<span class="btn-left"></span>
+				<span class="btn-right"></span>
+				<div class="mask-left"></div>
+				<div class="mask-right"></div>
+			</div>
+		</div>
+ 	<!--焦点图 end-->
+ 	<div class="cb"></div>
+ 	<!--时尚头条 -->
+	<div class="xingx_tit_center">
+		<span class="title_con"><span class="fb">FASHION HEADLINES</span> / 时尚头条</span>
+	</div>
+	<div class="headlineMain">
+		<ul class="headlines" id="js-newsList"></ul>
+	</div>
+	<!--时尚头条 end-->
+	<!--24小时快讯 -->
+	<div class="xingx_hours">
+		<div class="h_title"><span class="title_con"><span class="col_red fb">24</span><span class="fb">-HOURS NEWS</span> / 24小时快讯</span></div>
+		<ul class="h_cons">
+			<li>
+				<img src="assets/images/icon_hours.png" height="8" width="7" class="vm"/>
+				<span class="vm"></span>
+			</li>
+		</ul>
+		<div class="cb"></div>
+	</div>
+	<!--24小时快讯 end-->
+    <!--专题 special-->
+    <div class="xingx_tit_left">
+		<span class="title_left"><span class="fb">SPECIAL</span> / 专题</span>
+		<span class="title_right">处处都是精彩活动</span>
+	</div>
+	<div class="specialMain">
+		<ul class="js-special"></ul>
+	</div>
+	<div class="cb"></div>
+	<!--专题 special end-->
+
+	<!--星秀TV-->
+	<div class="xingx_tit_left">
+		<span class="title_left"><span class="fb">STAR TV</span> / 星秀TV</span>
+		<span class="title_right">看明星学时尚就看时尚星秀</span>
+	</div>
+	<div class="tvMain">
+		<div class="fl">
+		  <div class="tv_con"></div>
+		  <img src="assets/images/btn-play.png" height="58" width="58" class="btn_play">
+		</div>
+		<div class="fr">
+			<div class="swiper-container swiper-container-tv">
+			    <div class="swiper-wrapper"  id="js-videoList"> </div> 
+			</div>
+			<span class="btn-top"></span>
+			<span class="btn-bottom"></span>
+		</div>
+	</div>
+	<!--星秀TV end-->
+	<!--广告-->
+	<div class="cb"></div>
+ 	<div id="js_adv" class="tc mt30 adv_con3 index-ad"></div>
+ 	<!--广告 end-->
+
+ 	<!--星秀直播-->
+ 	<div class="xingx_tit_left">
+		<span class="title_left"><span class="fb">STAR LIVE</span> / 星秀直播</span>
+		<span class="title_right">看明星学时尚就看时尚星秀</span>
+	</div>
+	<div class="liveMain">
+		<div class="fl">
+			<div class="swiper-container swiper-container-live">
+				    <div class="swiper-wrapper" id="js-livesList">
+				        <!-- <div class="swiper-slide">Slide 1</div>
+				        <div class="swiper-slide">Slide 2</div>
+				        <div class="swiper-slide">Slide 3</div> -->
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				    <!-- 如果需要导航按钮 -->
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>
+				</div>
+			<img src="assets/images/btn-play.png" height="58" width="58" class="btn_play">
+		</div>
+		<div class="fr">
+			<div class="qunyi_con">
+				<!-- <a href="liveDetail.html?menuTag=2-&amp;id=100541" target="_blank"><img src="https://starshow-pic.b0.upaiyun.com/lives/1/1476190235.jpg!750x563"></a> -->
+			</div>
+			<div id="js-lives-self">
+			
+			</div>
+		</div>
+
+	</div>
+	<!--星秀直播 end-->
+	<!--今日榜单 -->
+	<div class="boardMain">
+		<div class="boardCons">
+			<div class="xingx_tit_center">
+				<span class="title_con"><span class="fb">STAR LIST TODAY</span> / 今日榜单</span>
+			</div>
+			<div class="cb"></div>
+			<ul id="js-rankList"></ul>
+		</div>
+	</div>
+	<!--今日榜单 end-->
+	<!--星美图-->
+	<div class="xingx_tit_left">
+		<span class="title_left"><span class="fb">STAR PICTURE</span> / 星美图</span>
+		<span class="title_right">
+		  <span class="pic_type">
+			/<a href="picList.html?tagid=2243&dtype=0&menuTag=3-1">明星</a>/<a href="picList.html?tagid=2253&dtype=0&menuTag=3-2">娱乐</a>/<a href="picList.html?tagid=2241&dtype=0&menuTag=3-3">时尚</a>/<a href="picList.html?tagid=2244&dtype=0&menuTag=3-4">美妆</a>/<a href="picList.html?tagid=2254&dtype=0&menuTag=3-5">尤物</a>/<a href="picList.html?tagid=2242&dtype=0&menuTag=3-6">乐活</a>/
+		   </span>
+			
+		</span>
+	</div>
+
+ 	<!--内容-->
+	<div class="pic mt30">
+		<div class="swiper-container featured">
+	    <div class="swiper-wrapper"  id="js-picList"> 
+	    	<!-- <div class="swiper-slide">
+	    		<img src="assets/images/pic/01.png"  />
+	    	</div>> -->
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <!-- <div class="swiper-pagination"></div> -->
+	    <!-- 如果需要导航按钮 -->
+		    <div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div>
+			   
+	</div>
+
+	</div>
+
+ 	<!--星美图 end-->
+ 	<!--尾部-->
+ 	<div class="xingx_footer" >
+ 		<div class="xingx_footer_con" id="xingx_footer"></div>
+ 	</div>
+
+ </div>
+
+ <!-- <div class="md-overlay"></div>
+ <div class="md-modal md-effect-9 " id="modal-9">
+ 	<div class="md-content">
+ 		<div class="search_con">
+ 			<input type="text" class="txt_search" id="txt_search" placeholder="搜索"/>
+ 			<h1>热门推荐</h1>
+ 			<ul class="news"></ul>
+ 		</div>
+ 	</div>
+ </div> -->
+<input type="hidden" id="hide_info" pageType="index" />
+
+ <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+ <script type="text/javascript" src="assets/js/swiper-3.4.0.min.js"></script>
+ <script type="text/javascript" src="assets/js/common.js"></script>
+<script type="text/javascript">
+(function(c){var g,s='script',w=window,n=c.name||'PLISTA';if(!w[n]){w[n]=c;g=w.document.getElementsByTagName(s)[0];s=w.document.createElement(s);s.async=true;s.type='text/javascript';s.src=(w.location.protocol==='https:'?'https:':'http:')+'//static'+(c.origin?'-'+c.origin:'')+'.plista.com/async'+(c.name?'/'+c.name:'')+'.js';g.parentNode.insertBefore(s,g);}
+}({
+    "publickey": "530e0503202b995561f9febf",
+    "origin": "cn"
+}));
+</script>
+ <script type="text/javascript" src="assets/js/index.js"></script>
+ <script type="text/javascript">
+    slidesPerView=3
+	slidesPerGroup=3
+/*if(document.body.clientWidth>1400){
+	slidesPerView=1
+	slidesPerGroup=2
+}*/
+
+   
+  
+
+  
+  
+
+  
+</script>
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cspan id='cnzz_stat_icon_1260324667'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260324667' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

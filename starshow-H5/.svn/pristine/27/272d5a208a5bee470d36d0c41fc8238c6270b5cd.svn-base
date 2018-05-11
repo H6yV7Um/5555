@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+	    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=0.5,maximum-scale=0.5, maximum-scale=0.5">	
+	    <meta name="format-detection" content="telephone=no" />
+		<title>电子账单详情</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+	</head>
+	<body>
+		<div class="export_c">
+			<section class="sec_detail">
+				<div class="dt_mon">
+				<!--<div class="main_section msin_sec">
+					<p class="success"></p>
+				</div>
+				<ul class="star_ul">
+					<li class="star_li">
+						<div class="left_de">金额：</div>
+						<div class="right_crash">-5000</div>
+					</li>
+					<li class="star_li">
+						<div class="left_de">服务费：</div>
+						<div class="right_crash">-50</div>
+					</li>
+					<li class="star_li">
+						<div class="left_de">用途：</div>
+						<div class="right_crash">摄影</div>
+					</li>
+					<li class="star_li">
+						<div class="left_de">时间</div>
+						<div class="right_crash">2016-03-07 19:30</div>
+					</li>
+					<li class="star_li">
+						<div class="left_de">编号：</div>
+						<div class="right_crash">HZ038400</div>
+					</li>
+					<li class="star_li">
+						<div class="left_de">备注：</div>
+						<div class="right_crash">转账人——奥利来</div>
+					</li>
+				</ul>-->
+				</div>
+				<div id="bg-2">
+					<img src="assets/images/bg-2.png" class="bg-2"/>
+				</div>
+				<p id="pho_star" style="margin-top: 2.2rem;">
+					<img src="assets/images/app_star-1.png"/>
+				</p>
+				<p class="saoma">来自时尚星秀APP  更多消息请扫码下载</p>
+			</section>
+			
+			<div class="zhang_detail">
+				<img src="assets/images/zhang-1.png"/>
+			</div>
+		</div>
+		<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script> 
+		<script type="text/javascript" src="assets/js/bridge.js"></script>
+		<script type="text/javascript" src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			getDetailList();
+		</script>
+	</body>
+</html>

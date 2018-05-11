@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>editor mobile</title>
+	<link rel="stylesheet" type="text/css" href="assets/wEditorDist/css/wangEditor-mobile.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body>
+<section id="js-editor">
+<div class="btn-poster">
+   <div class="posterArea">
+   <!-- 	<img src="http://starshow-pic.b0.upaiyun.com/2016/0519/13/573d4d1bb2b21.jpg!300x225"/> -->
+   <img src="assets/images/bg_cover.png" >
+   </div>
+   <!-- <div class="btn_upload_poster"><img src="assets/images/bg_cover.png" ></div> -->
+</div>
+<div class="title">
+	<input type="text" placeholder="添加标题" class="txt_title" />
+</div>
+<div class="container">
+        <textarea id="textarea1" style="width:100%;height:100%;" placeholder=""><p>输入正文</p></textarea>
+ </div>
+ 
+</section>
+<!-- <div class="btnList">
+ 	<input type="button"  value="发布" class="btn_publish" id="js-publish"/>
+ 	<input type="button"  value="保存草稿" class="btn_publish"/>
+ </div> -->
+ <div id="linkArea" style="display:none">
+ 	
+ </div>
+ <div id="messdiv" class="dialog_tip" style="display:none;">
+	    <div class="messdivCons">
+	    	<input type="text" placeholder="请输入链接" class="txt_link"/>
+            <input type="text" placeholder="请输入链接内容" class="txt_link_con"/>
+	    </div>
+	    <div class="messdivFoot">
+	    	<input type="button" class="btn_addLink" value="确定"/>
+	    	<input type="button" class="btn_addLink_cancel" value="取消" onclick="BOX_remove('messdiv')"/>
+	    </div>
+</div>
+<div id="tipCon" class="dialog_tip" style="display:none;">
+	 <div title="关闭窗口" class="js-close" onclick="BOX_remove('tipCon')">
+    	<span>×</span>
+    </div>
+    <div class="messdivCons"></div>
+</div>
+
+<div class="prevViewCon"style="display:none">
+	<div class="icon_back"><img src="assets/images/sunbolin_player_btn_back.png" /></div>
+	<div id="js-pervView" ></div>
+</div>
+<script type="text/javascript" src="assets/wEditorDist/js/lib/zepto.js" ></script>
+<script type="text/javascript" src="assets/wEditorDist/js/lib/zepto.touch.js"></script>
+<script type="text/javascript" src="assets/js/tcc.js"></script>
+<script type="text/javascript" src="assets/wEditorDist/js/wangEditor-mobile.js"></script>
+<script type="text/javascript" src="assets/js/js.js"></script>
+</body>
+</html>

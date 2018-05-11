@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀广告投放管理平台</title>
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/datepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/pagination/pagination.css">
+	<link rel="stylesheet" type="text/css" href="../assets/api/css/backstage.css">
+</head>
+<body>
+	<div class="dspHeader"></div>
+	<div class="dspMenu"></div>
+	<div class="dspContainer">
+		<div class="indexList dsp_container">
+			<div id="complete_tip" class="complete_tip" style="display:none">
+				您的账户信息尚不完善，请尽快补全，补全信息并通过账户审核后方可正常投放广告，点击进入<span class="toUserInfo">账户中心</span>
+			</div>
+			<div class="dsp_tools mt20">
+				<select class="fl">
+						<option>广告标题</option>
+				</select>
+				<input type="text" class="txt_title fl">
+
+				<select class="fl ml10" id="select_status">
+						<option typeId="">选择状态</option>
+						<option typeId="0">草稿</option>
+						<option typeId="1">审核中</option>
+						<option typeId="2">审核失败</option>
+						<option typeId="3">推广中</option>
+						<option typeId="4">未开始</option>
+						<option typeId="5">已结束</option>
+				</select>
+				<div id="reportrange" class="pull-left dateRange date no_border_left">  
+	                        <span id="searchDateRange"></span>  
+	                        <b class="caret"></b>  
+	                        <i class="glyphicon glyphicon-calendar fa fa-calendar abs_calendar"></i> 
+	             </div>
+	             <div class="btn_create_search fl" style="display:inline">
+					搜索
+				</div>
+				<!-- <div class="input-daterange input-group date" id="datepicker">  
+				  	            <input type="text" class="" name="start" id="qBeginTime" />  
+				  	            <span class="input-group-btn">至</span>  
+				  	            <input type="text" class="ml10" name="end" id="qEndTime" />  
+				  	            <i class="glyphicon glyphicon-calendar abs_calendar"></i>
+				  	        </div> -->  
+				
+				<div class="btn_create_adv fr" style="display:inline">
+					<a href="spreadCreat.html?mt=1">创建广告</a>
+				</div>
+			</div>
+			<div class="cb"></div>
+			<table class="dsp_table">
+				<thead>
+				 <tr>
+				 	<!--<th>ID</th>-->
+					<th>广告标题</th>
+					<th>计费方式</th>
+					<th>展示次数</th>
+					<th>点击次数</th>
+					<th>总花费（元）</th>
+					<th>单价（元）</th>
+					<th>推广时间</th>
+					<th>创建时间</th>
+					<th>状态</th>
+					<th>操作</th>
+				</tr>
+				</thead>
+				<tbody id="spread_tableCon">
+					
+				</tbody>
+			</table>
+			<div class="dsp_pagination">
+				<div class="M-box"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../assets/common/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/datepicker/moment.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/datepicker/daterangepicker.js"></script>
+	<script type="text/javascript" src="../assets/common/js/common.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/pagination/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../assets/api/js/spread.js"></script>
+	<script type="text/javascript">
+    
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">	
+	<title>special</title>
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="assets/css.css">
+</head>
+<body>
+	<a id="btn_download2"><img src="../assets/images/icon/download.png" width="100%" /></a>
+	<div class="c-main">
+		<div class="m-header">
+			<img src="" width="100%" class="player-banner"/>
+			<div class="player_main" style="display:">
+			</div>
+			
+	    </div>
+	    <div class="m-user">
+	    	<div class="users">
+	    		<!-- <img class="user_head vm" src="assets/images/icon-head.png"/>
+	    		<span class="user_name vm">中国艺术博览会</span> -->
+	    	</div>
+	    	<div class="btn_ring js_btn_down" style="display:none"><img src="assets/images/btn-ring.png" /></div>
+	    </div>
+	    <div class="m-desc">
+	    	
+	    </div>
+	    <div class="m-related">
+	    	<ul class="lists">
+
+	    	</ul>
+	    </div>
+	    <div id="load_more" style="display:none">load more</div>
+	</div>
+	<section class="init-loadding"  style="display:none">
+    	<div class="spinner">
+		  <img src="../assets/images/loadding.gif" height="80" width="80" />
+		</div>
+    </section>
+	<input type="hidden" id="share_info" />
+	<input type="hidden" id="share" value="share"/>
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="../../applinks/openApp.js"></script>
+<script type="text/javascript" src="../assets/js/lib/hammer.min.js"></script>
+<script type="text/javascript" src="assets/auction.js"></script>
+</body>
+</html>

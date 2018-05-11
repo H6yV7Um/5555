@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+  <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>时尚星秀-全明星直播间</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/css.css">
+  
+</head>
+<body>
+  <a class="app_link"><img src="assets/images/down-bg.png"  width="100%" /></a> 
+  <section class="liveRadioMain">
+  		<section class="vedioCons">
+        <div class="vedio_title" style="display:none">
+          <img src=""/>
+          <h1></h1>
+        </div>
+        <div id="player" style="width:100%;height:18rem;">
+		    <script type="text/javascript" charset="utf-8" src="assets/js/letv/blive.js"></script>
+	      </div>
+  		</section>
+  		
+  		<section class="descInfo">
+  			<div class="desc_part1">
+  			  <span id="watchNum"></span>人在看
+  			</div>
+  			<ul class="desc_part2">
+  			</ul>
+  			<div class="desc_part3" >
+  				<img src="assets/images/icon-like.png" id="btn-zan"/><span></span>
+  			</div>
+  		</section>
+  	    	<section class="tabCons" >
+  	    		<div class="shortDesc">
+  	    			<h1>
+  	    				<span class="tv-title"></span>
+                        <!-- <img src="assets/images/icon_title.png" class="icon_title"/> -->
+  	    			</h1>
+  	    			<div class="tit_desc">
+  	    				<span id="seeNum"></span>
+  	    				<span id="tit_desc_info" class="ml10"></span>
+  	    			</div>
+  	    		</div>
+
+  	    		<div class="rcdLiveVedio">
+  	    			
+              <div class=""><img src="assets/images/recommand-title.jpg" width="100%"/></div>
+  	    			<ul class="vedioList">
+  	    				
+  	    			</ul>
+  	    		</div>
+  	    	</section>   
+  </section>
+<div id="messdiv" class="dialog_tip" style="display:none;">
+     <div title="关闭窗口" class="js-close">
+        <span>×</span>
+    </div>
+    <div class="messdivCons"></div>
+    <div class="dialogFooter">
+      <div class="btn_dialog"><a href="http://t.cn/R7COgYb">去下载</a></div>
+      <div class="btn_dialog" id="btn_cancel">取消</div>
+    </div>
+</div>
+
+<input type="hidden" id="share_info" content="" cover="" shareUrl="" />
+<input type="hidden" id="tvStatus" status="" hls="" cover />
+
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="assets/js/common.js"></script>
+<script type="text/javascript" src="../../applinks/openApp.js"></script>
+
+<script type="text/javascript" src="assets/js/lejs.js?v=1"></script>
+
+
+
+<!-- 统计代码 -->
+<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>频道详情</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body>   
+	<section class="cmtArea">
+		<!--<div class="channelTitle">
+			<span><em class="fb">HCOMMENT</em>评论</span>
+		</div>-->
+		<ul class="cmt_list">
+			<!-- <li>
+				<div class="cmt_head fl"><img src="assets/images/head.png"></div>
+				<div class="cmt_content fr">
+					<p class="cmt_name">Divo</p>
+					<p class="cmt_data">2016-02-08  12:56</p>
+					<p class="cmt_comment">
+						够 YOUNG！最新大片曝光，简单休闲帅气逼人，元气少女活力爆棚。
+					</p>
+					<div class="reply">
+						<p>小编回复：</p>
+						<p>继续关注有惊喜哦！</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="cmt_head fl"><img src="assets/images/head.png"></div>
+				<div class="cmt_content fr">
+					<p class="cmt_name">Divo</p>
+					<p class="cmt_data">2016-02-08  12:56</p>
+					<p class="cmt_comment">
+						够 YOUNG！最新大片曝光，简单休闲帅气逼人，元气少女活力爆棚。
+					</p>
+					<div class="reply">
+						<p>小编回复：</p>
+						<p>继续关注有惊喜哦！</p>
+					</div>
+				</div>
+			</li> -->
+		</ul>
+
+		<p id="js-getMoreComment" class="tc">点击加载更多</p>
+
+	</section>
+	<div class="sendMsg">
+			<input type="text" class="txtMsg" placeHolder="添加评论..."/>
+			<input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg"/> 
+	</div>
+	<div id="messdiv" class="dialog_tip" style="display:none;">
+		 <div title="关闭窗口" class="js-close">
+        	<span>×</span>
+        </div>
+	    <div class="messdivCons"></div>
+	</div>
+	<div id="BOX_overlay"></div>
+	<div id="msg_overlay" style="display: none;"></div>
+	<input type="hidden" id="hide_total" /> 
+	<input type="hidden" id="share_comment" share="true"/>
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/js/comment.js"></script>
+	<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+<meta name="msapplication-tap-highlight" content="no">
+<link rel="stylesheet" type="text/css" href="css/style.css?v=2019">
+<title>购买详情</title>
+</head>
+
+<body class="grayBg">
+<div class="st_orderC_warp">
+  <div class="st_orderC_where">
+    <p class="st_where_tit"> 温馨提示：一个账户仅限购买一张<br>
+      请在<span id="now"></span>分内完成支付，过期请重新购买。 </p>
+    <div class="st_where_wrap">
+      <div class="st_where_img"> <img src="images/music.jpg"></div>
+      <div class="st_where_txt">
+        <h2>当古典遇上时尚，朱亦兵大提琴演奏分享会</h2>
+        <p>活动时间：2016-06-29 19：30-21：00<br>
+          活动地点：北京大隐剧院</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="userInfo mt20"> </div>
+  <div class="st_orderC_pay">
+    <p>应支付总金额：<span>¥50</span></p>
+    <ul>
+      <li type="wechatpay" class="active">
+        <label class="weixin">微信支付</label>
+        <span></span> </li>
+      <li type="alipay">
+        <label class="zhifubao">支付宝支付</label>
+        <span></span> </li>
+    </ul>
+    <h6>如支付遇到问题，请联系客服：&nbsp&nbsp<a href="tel:010-65895320">010-65895320</a></h6>
+  </div>
+  <div class="btn st_orderC_gopay notSucc"> <a  href="javascript:;" class="cancelOrder">取消订单</a><a  href="javascript:;" class="gopay gopayBtn">去支付</a> </div>
+</div>
+</div>
+<div id="messdiv" class="dialog_tip" style="display:none;">
+  <div title="关闭窗口" class="js-close"> <span>×</span> </div>
+  <div class="messdivCons"></div>
+</div>
+<script type="text/javascript" src="js/zepto.js?v=2019"></script> 
+<script type="text/javascript" src="js/bodyart.js?v=2022"></script>
+<script type="text/javascript" src="js/tcc.js"></script> 
+<script type="text/javascript">
+$(".js-close").click(function(){
+  BOX_remove("messdiv")
+})
+</script>
+</body>
+</html>

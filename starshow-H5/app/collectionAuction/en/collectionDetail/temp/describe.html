@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>明星详情</title>
+	<style type="text/css">
+	.newContent{
+		width: 90%;
+		margin:0 auto;
+		font-size: 14px;
+	}
+	.newContent img{max-width: 100%}
+	</style>
+</head>
+<body>   
+ <section id="newContent" class="newContent">
+	<!--内容-->
+<p>钧瓷天青釉敞口瓶 钧瓷天青釉敞口瓶高39.5公分，口径 9公分，圈足11公分。天青色釉厚而亮润，沿瓶口一圈见土黄色，两色互衬更显优雅。用放大镜观察，可见釉面中大小不等的气泡在闪亮，蓝白相间不断变化的如流淌状的美丽色彩被无数裂纹所分割，而细密的冰裂纹又体现出一种破碎的美。底部浅且平整，施釉薄并可微见胎色，也布满细碎裂纹。
+</p>
+<img src="images/pic1.png" />
+<img src="images/pic2.png" />
+<img src="images/pic3.png" />
+<img src="images/pic4.png" />
+<img src="images/pic5.png" />
+<img src="images/pic6.png" />
+<img src="images/pic7.png" />
+<img src="images/pic8.png" />
+	<!--内容 end-->
+ </section>
+ <script type="text/javascript" src="https://collection-auction.b0.upaiyun.com/assets/js/zepto.min.js"></script>
+ <script type="text/javascript">
+	var initPhotoalbum=function(){
+	 var imgDataNumber;
+	 var imgListData;
+	  var imgList=$("#newContent img");
+	  imgDataNumber=new Map();
+	  imgListData=[];
+	  for (var i = 0; i < imgList.length; i++) {
+	    var img_src=$(imgList[i]).attr("src");
+	    imgDataNumber[img_src]=i;
+	    imgListData[i]=img_src;
+	  };
+	  var imgObj={
+	  	"imgDataNumber":imgDataNumber,
+	  	"imgListData":imgListData,
+	  };
+	  return imgObj;
+	}
+	$(function(){ 
+	  $("body").on("click","#newContent img",function(){
+	      var imgVal=$(this).attr("src");
+	      var thisNumber=initPhotoalbum().imgDataNumber[imgVal];
+	      var resutlData=JSON.stringify({"photos":initPhotoalbum().imgListData,"position":thisNumber});
+	      window.starResult.gainPhotos(resutlData);
+	   })
+	})
+
+ </script>
+
+</body>
+</html>

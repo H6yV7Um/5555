@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <title>AQUAIR水之密语靓彩染烫修护系列抢先用</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script>
+        (function (win, doc) {
+            function change() {
+                doc.documentElement.style.fontSize =
+                    doc.documentElement.clientWidth / 7.5 + "px";
+            }
+            change();
+            win.addEventListener('resize', change, false);
+        })(window, document)
+    </script>
+</head>
+
+<body>
+    <div class="beauty-page">
+        <header>
+            <img src="images/banner.png" alt="">
+            <div class="apply-list">
+                <div>已申领
+                    <span class="num"></span>人</div>
+                <div class="head-list">
+                    <div class="head-item">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+            <ul class="nav">
+                <li class="select"></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </header>
+        <section>
+            <ul class="con">
+                <li>
+                    <img src="images/intro1.png" alt="">
+                    <img src="images/intro2.png" alt="">
+                </li>
+                <li>
+                    <img src="images/rule.png" alt="">
+                </li>
+                <li class="report-list">
+                    <div class="list-con">
+                        <!-- <div class="report-item">
+                            <div class="report-head">
+                                <div class="user-pic"><img src="" alt=""></div>
+                                <div class="user-name">小可爱</div>
+                            </div>
+                            <div class="report-time">
+                                2018-03-23
+                            </div>
+                            <div class="report-con">
+                                    比红旗连锁便宜一些，妹妹对苯甲酸钠和还有一些化学成分过敏， 很多东西都不能用，看了这款沙宣还可以
+                            </div>
+                            <div class="report-img">
+                                <div class="img-item"><img src="" alt=""></div>
+                                <div class="img-item"><img src="" alt=""></div>
+                                <div class="img-item"><img src="" alt=""></div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="no-data">暂没有更多内容啦~</div>
+                </li>
+            </ul>
+
+        </section>
+        <footer class="apply" id="btn_download" style="display:block; background: #0071e4;">立即申请</footer>
+    </div>
+    <div class="mask"></div>
+    <div class="alert" style="display:none;">
+        <div class="alert-con">
+            <h1>填写领取信息</h1>
+            <div class="lable">
+                <input type="text" placeholder="领取人姓名" id="name">
+            </div>
+            <div class="lable">
+                <input type="number" placeholder="领取人电话" id="tel">
+            </div>
+            <div class="lable">
+                <input type="text" placeholder="图片验证码" id="picCode">
+                <span id="getPicCode">
+                    <img src="" alt="">
+                </span>
+            </div>
+            <div class="lable">
+                <input type="number" placeholder="验证码" id="code">
+                <input type="button" value="获取" id="getCode">
+            </div>
+            <div class="lable last">
+                <textarea placeholder="领取人地址" id="address"></textarea>
+            </div>
+            <button id="submit">确定</button>
+        </div>
+    </div>
+    <!-- 查看大图 -->
+    <div class="swiper-container pic-swiper" id="pic-swiper">
+        <div class="swiper-wrapper">
+            <!-- <div class="swiper-slide">
+                <img src="" alt="">
+            </div> -->
+
+        </div>
+    </div>
+    <input type="hidden" id="share_info" />
+    <script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="../../applinks/openApp.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common/bridge2.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <!-- 统计代码 -->
+    <script type="text/javascript" src="../../tj.php"></script>
+</body>
+
+</html>

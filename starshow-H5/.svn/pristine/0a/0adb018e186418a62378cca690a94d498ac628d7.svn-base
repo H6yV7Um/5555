@@ -1,0 +1,143 @@
+body {
+    font-size: .28rem;
+    font-family: "微软雅黑";
+    background: #fff;
+}
+.banner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75.07%;
+    background: #ccc;
+}
+.banner img {
+    width: 100%;
+}
+.rule {
+    position: fixed;
+    right: 0;
+    top: 4.81rem;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50px;
+    line-height: .8rem;
+    text-align: center;
+    background: rgba(198, 22, 32, .9);
+    color: #fff;
+    box-shadow: 0 0 20px 4px #ffc154;
+    z-index: 100;
+    animation: action_scale 2s infinite;
+}
+@keyframes action_scale{  
+    0%{transform: scale(0.8);opacity: 0.7;}
+    50%{transform: scale(1);opacity: 1;}  
+    100%{ transform: scale(0.8);opacity: 0.7;}  
+}
+.search {
+    width: 100%;
+    padding-top: .34rem;
+}
+.search-area {
+    display: block;
+    width: 6.9rem;
+    height: .7rem;
+    margin: 0 auto;
+    padding-left: .3rem;
+    border-radius: .5rem;
+    border: .01rem solid #d0d0d0;
+    box-sizing: border-box;
+    background: #f6f6f6;
+    outline: none;
+    box-shadow: none;
+}
+.search input::-webkit-input-placeholder {
+    font-weight: bold;
+    color: #6e6e6e;
+    font-size: .26rem;
+    text-align: center;
+}
+.video {
+    width: 100%;
+    box-sizing: border-box;
+    padding: .4rem .4rem .1rem;
+}
+.video-title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: .34rem;
+    font-size: .28rem;
+}
+.all span {
+    color: #747474;
+}
+.srot-arrows img {
+    width: .14rem;
+    height: .27rem;
+}
+.video-item {
+    width: 100%;
+    margin-bottom: .26rem;    
+}
+.video-img-outer {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.23%;
+    background: #ccc;
+}
+.video-img-outer img {
+    width: 100%;
+}
+.video-img-outer .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -.35rem;
+    margin-left: -.35rem;
+    display: block;
+    width: .71rem;
+    height: .71rem;
+    background: url(../images/play.png) no-repeat 0 0;
+    background-size: .71rem;
+}
+.video-info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: .2rem .32rem .2rem .16rem;
+}
+.video-name {
+    font-weight: bold;
+    margin-bottom: .16rem;
+}
+.video-des {
+    font-size: .22rem;
+    color: #545454;
+}
+.author-school {
+    margin-left: .21rem;
+}
+.video-info .right {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.support {
+    width: .27rem;
+    height: .25rem;
+    margin-bottom: .1rem;
+}
+.support img {
+    width: 100%;
+}
+.load {
+    text-align: center;
+    padding-bottom: .4rem; 
+    cursor:pointer;
+}

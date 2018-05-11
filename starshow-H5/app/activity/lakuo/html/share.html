@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="Cache-Control" content="no-cache" />
+		<title>拉阔校草拼比大赛</title>
+		<link rel="stylesheet" href="../css/ranking.css" />
+		<link  rel="stylesheet" href="../js/common/sweet-alert.css" />
+		<link rel="stylesheet" type="text/css" href="../js/paperfold/jquery.paperfold.css">
+		<script src="../js/rem.js"></script>
+        <style type="text/css">
+        	.js-load-more{ text-align:center; color:#000; font-size:0.6rem; line-height:1.4rem; border:1px solid rgba(255,255,255,.5); margin:0 auto; border-radius:0.3rem;}
+        	html,body{-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+        </style>
+
+
+	</head>
+
+	<body>
+
+		<!--banner-->
+		<div class="main_art">
+			<div class="art_banner"><img src="../images/banner_new.jpg" /></div>
+			<!--评比规则-->
+			<a href="rule.html" class="art_rule"><img src="../images/rule-new.png" width="80"></a>
+			<!--tab切换-->
+			
+		</div>
+		<div class="atl_tab">
+				<div class="tab_old toColor" data-type="1">校草晋级区</div>
+				<div class="tab_new" data-type="2">嫩草初选区</div>
+			</div>
+		<div class="main">
+			<!--校草-->
+			<div class="ranking old">
+				<div class="div js_div  paperfold panel ready">
+					<!--<div class="beijing_03"><img src="../images/beijing_03.png" /></div>-->
+					<!--<ul class="ul_big">-->
+					<!--<a href="personage.html" class="a">-->
+					<!--<li class="old_img"><img src="../images/u30.jpg" /></li>
+                <li class="old_message">
+                    <ul class="ul_small">
+                        <li>方少</li>
+                        <li>21岁</li>
+                        <li>麻省理工大学</li>
+                    </ul>
+                </li>
+                <li class="old_num">59031<sub style="color: #97A4AC;font-size: 0.2rem">票</sub></li>-->
+					<!--</a>-->
+					<!--</ul>-->
+					<!--<div class="xian"><img src="../images/xian.png" /></div>-->
+
+				</div>
+				<div class="js-load-more" data-type="1"  style="display:none">
+					加载更多
+				</div>
+			</div>
+
+			<!--嫩草-->
+			<div class="ranking new">
+
+				<div class="div js_div">
+					<!--<div class="beijing_03"><img src="../images/beijing_03.png" /></div>-->
+					<!--<ul class="ul_big">-->
+					<!--<a href="personage.html" class="a">-->
+					<!--<li class="old_img"><img src="../images/u30.jpg" /></li>
+                <li class="old_message">
+                    <ul class="ul_small">
+                        <li>方少</li>
+                        <li>21岁</li>
+                        <li>麻省理工大学</li>
+                    </ul>
+                </li>
+                <li class="old_num">59031<sub style="color: #97A4AC;font-size: 0.2rem">票</sub></li>-->
+					<!--</a>-->
+					<!--</ul>-->
+					<!--<div class="xian"><img src="../images/xian.png" /></div>-->
+
+				</div>
+				<div class="js-load-more" data-type="2" style="display:none">
+					加载更多
+				</div>
+			</div>
+
+		</div>
+		<!--底部按钮 投票、报名、翻牌-->
+		<div style="height:2.5rem;clear:both"></div>
+		<div class="footer_box">
+			<div class="footer">
+				<a href="javascript:void(0)" id="btn_vote">投票</a>
+				<a href="javascript:void(0)" id="btn_apple">报名</a>
+				<a href="javascript:void(0)" id="btn_overturn">翻牌<span class="js_num"></span></a>
+			</div>
+			<!--<div id="overturn_num">3</div>-->
+		</div>
+			<div class="panel" style="position: absolute;top:-1000px;z-index: 0;">
+                <button class="btn btn-default paperfold-toggle">button</button>
+            </div>
+		<script src="../js/zepto.min.js"></script>
+		<script src="../js/paperfold/jquery.1.7.2.min.js"></script>
+		<script src="../js/paperfold/modernizr.custom.71147.js"></script>
+		<script src="../js/paperfold/jquery.paperfold.js"></script>
+		<script src="../applinks/openApp.js"></script>
+		<script src="../js/common/sweet-alert.min.js"></script>
+		<script src="../js/common/jweixin-1.0.0.js"></script>
+		<script src="../js/common/common.js"></script>
+		<script src="../js/common/bridge.js"></script>
+		
+		<script>
+            var link=commonCla.shareUrlBase+"/activity/lakuo/indexShare.html";
+            var title= "我在参加拉阔校草评比大赛，快来帮我拉票";
+            var desc= "只为寻找优秀的你，为传统文化代言，关注时尚星秀，拉阔校草评比大赛更多精彩为你呈现！";
+            var imgUrl= "https://starshow-pic.b0.upaiyun.com/lakuo/boy.jpg"
+            wx_share(title,desc,link,imgUrl)
+
+			$(function(){
+				//剩余翻牌次数
+				$.ajax({
+					url:commonCla.hostBase+"/lakuo/rewardNum?jwt_token="+jwt_token,
+					type:"get",
+					dataType:"json",
+					success: function(data){
+						console.log(data);
+						if(data.code==200){
+							var data=data['data'];
+							var num = data['reward_num'];
+							$('.js_num').text("("+num+")次");
+						}
+					}
+
+				});
+				
+				var oldCurrentCount=0,
+					newCurrentCount=0,
+					type=1,
+					count=10,
+					oldC=0,
+					newC=0;
+				//初始化
+				$(".ranking").eq(0).show().siblings().hide();
+				getData(type,oldCurrentCount,count,".old .js_div",false);
+				$('.atl_tab div').click(function(){
+					type =$(this).attr('data-type');//获取data-type 与接口type相同。
+					var $ind = $(this).index();
+					$(this).addClass("toColor").siblings().removeClass("toColor");
+					$(".ranking").eq($ind).show().siblings().hide();
+					var contDiv="";
+					switch(type.toString()){
+						case "1":
+							contDiv=".old .js_div";
+							oldC=0;
+							getData(type,0,count,contDiv,false);
+						break;
+						case "2":
+							contDiv=".new .js_div";
+							newC=0;
+							getData(type,0,count,contDiv,false);
+						break;
+					}
+					
+				});
+				//获得数据方法	
+				function getData(type,currentCount,count,contDiv,flag){
+				$(".js-load-more").hide();
+					$.ajax({
+						url:commonCla.hostBase+'/lakuo?type='+type+'&current_count='+currentCount+'&count='+count+'',
+						dataType:"json",
+						type:"get",
+						success:function(res){
+							var total=res.data.total;
+							if(res.code==200){
+								var curIndex =0;
+								switch(type.toString()){
+									case "1":
+										if(total<=oldC*count+count){
+											$(".old .js-load-more").hide();
+										}else{
+											$(".old .js-load-more").show();
+										}
+										curIndex=oldC*count;
+									break;
+									case "2":
+										if(total<=newC*count+count){
+											$(".new .js-load-more").hide();
+										}else{
+											$(".new .js-load-more").show();
+										}
+										curIndex=newC*count;
+									break;
+								}
+								var str = "";
+								for(var i in res.data.list) {
+									var listIndex =curIndex+(i-0);
+									str += '<div class="div" listid="'+res.data.list[i].id+'">' +
+//										'<div class="beijing_03"><img src="../images/beijing_03.png" /></div>' +
+											
+										'<ul class="ul_big">' +'<a href="javascript:void(0)" class="a">'+
+										'<li class="old_img" ><img src="' + res.data.list[i].user.head_pic + '" /></li>' +
+										'<li class="old_message">' +
+										'<ul class="ul_small">' +
+										'<li>' + res.data.list[i].name + '</li>' +
+										'<li>' + res.data.list[i].age + '岁</li>' +
+										'<li>' + res.data.list[i].school + '</li>' +
+										'</ul>' +
+										'</li>' +
+										'<li class="old_num">' + res.data.list[i].like_num + '<img src="../images/ye1_5.png"></li>' +
+										'</a></ul>' +
+										'<div class="xian"><img  在src="../images/xian.png" /></div>' +
+										'</div>'
+
+									}
+									if(flag){
+										$(contDiv).append(str);
+									}else{
+										$(contDiv).html(str);
+									}
+								 $(".js_div").hide();
+								 
+									if($(".js_div .div").length<=10){
+										$('.paperfold').paperfold({
+												'toggle': $('.paperfold-toggle'),
+												'folds':4
+											});
+											$(".js_div").show();
+											if(total>=newC*count+count){
+											 $(".js-load-more").show();
+											}
+											setTimeout(function(){$("button.paperfold-toggle").trigger("click");},300)
+											
+									}else{
+									   $(".js_div").show();
+									   if(total>=newC*count+count){
+											 $(".js-load-more").show();
+											}
+									   
+									}
+								}	
+							},error:function(error){
+							
+							}
+					});
+					
+				}
+				//加载更多
+				$('.js-load-more').click(function(){
+					var dataType =$(this).attr('data-type');
+					switch(dataType.toString()){
+						case "1":
+							oldC++;
+							oldCurrentCount=count*oldC;
+							getData(type,oldCurrentCount,count,".old .js_div",true);
+						break;
+						case "2":
+							newC++;
+							newCurrentCount=count*newC;
+							getData(type,newCurrentCount,count,".new .js_div",true);
+						break;
+					}
+				});
+                //登录
+                $("#btn_vote").click(function(e) {//投票
+
+                    if(jwt_token=="" || jwt_token==undefined){
+                        wx_authorize({},"lakuo-index")
+                    }else{
+                    	var type=$(".toColor").attr("data-type")
+                        window.location.href = "shareVote.html?type="+type+"&jwt_token=" + jwt_token;
+                    }
+
+                })
+                $("#btn_apple").click(function(e) {//报名
+                    openApp('home', null);
+                })
+                $("#btn_overturn").click(function(e) {//翻牌
+                    openApp('home', null);
+                })
+			});
+            var jwt_token = commonCla.analyzParams("jwt_token") == undefined ?"": commonCla.analyzParams("jwt_token");
+			$(".js_div").on("click",".ul_big",function () {
+			    var type=$(".atl_tab .toColor").attr("data-type");
+			    var listid=$(this).parent().attr("listid");
+			    var listIndex=$(this).parent().index();
+				window.location.href='sharePersonage.html?listId=' + listid + '&type='+type+'&index='+listIndex+'&jwt_token='+jwt_token
+            })
+
+
+
+		</script>	
+	</body>
+<script type="text/javascript" src="../../../tj.php"></script>
+</html>

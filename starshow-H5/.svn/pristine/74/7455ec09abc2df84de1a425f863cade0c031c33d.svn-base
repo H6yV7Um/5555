@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>每日拍规则</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div class="protocol">
+			<h1 class="tc">每日拍规则</h1>
+			<h2>1.什么是每日拍？</h2>
+			<p>每日拍就是把拍品挂在藏拍平台，拍卖7天，拍品以最后时间价格高者得。
+			<h2>2.每日拍优点？</h2>
+			<p>为了满足收藏爱好者喜欢拍品，却因各种原因错过拍卖会的一种拍卖方式，用户只需按照正常拍卖出价，7天后可直接查看拍卖结果。
+			<h2>3.每日拍拍品怎么拍？</h2>
+		<img src="images/help.png" width="100%">
+		<div class="toNotice tc"><a href="../help/auctionNotice.html">点击查看《拍卖须知》</a></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>专题</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="themeAssets/css.css">
+</head>
+<body>
+	<section class="topicCons">
+	  <div class="head_img"><img src="" width="100%"/></div>
+	  <div class="head_desc">
+	  	
+	  </div>
+	  <div class="watchNum tr">浏览<span id="watch_number"></span></div>
+	</section>
+	
+	<section class="rcmdCons">
+		<div class="channelTitle">
+			<span><em class="fb"></em>精彩直播</span>
+		</div>
+		<ul class="rcmdList mt10" id="livesTopicList"></ul>
+		<div class="cb"></div>
+		<div class="moreData" id="js_livesGetMore">查看更多</div>
+	</section>
+	
+	<section class="rcmdCons">
+		<div class="channelTitle">
+			<span><em class="fb"></em>精彩视频</span>
+		</div>
+		<ul class="rcmdList mt10" id="videosTopicList"></ul>
+		<div class="cb"></div>
+		<div class="moreData" id="js_videosGetMore">查看更多</div>
+	</section>
+	<section class="rcmdCons">
+		<div class="channelTitle">
+			<span><em class="fb"></em> 相关头条</span>
+		</div>
+		<ul class="rcmdList mt10" id="newsTopicList">
+			
+			<!-- <li>
+					<div class="imgArea"><a href=""><img src="images/img02.jpg" /></a></div>
+					<div class="descArea">
+						<a href="">
+						<h1>新星盛典—鹿晗专访</h1>
+						<p>重要度绝不亚于一件珠宝不亚于重要度绝不亚于</p>
+						<article class="activityList">
+							<section>
+								<img src="images/icon-eye.jpg" />
+								<span>1000</span>
+							</section>
+						    <section>
+						    	<img src="images/icon-heart.jpg"  />
+								<span>1000</span>
+						    </section>
+				
+						</article>
+						</a>
+					</div>
+				</li> -->	
+			
+		</ul>
+		<div class="cb"></div>
+		<div class="moreData" id="js_newsGetMore">查看更多</div>
+	</section>
+	<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" charset="UTF-8" src="themeAssets/js.js"></script>
+	<script type="text/javascript" src="themeAssets/common.js"></script>
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../tj.php"></script>
+
+</body>
+</html>

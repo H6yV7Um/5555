@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>时尚星秀</title>
+</head>
+
+<body>
+<div class="starIntro"><img src="images/star_01.jpg">
+  <div class="tab-tit">
+    <ul>
+      <li class="cur">star</li>
+      <li>韩庚</li>
+      <li>杜淳</li>
+      <li>穿搭日记</li>
+    </ul>
+  </div>
+  <div class="tab-con"> <a href="http://starshow-file.b0.upaiyun.com/2016/0411/17/04.mp4" class="show"><img src="images/bg01.jpg"> </a> <a href="http://starshow-file.b0.upaiyun.com/2016/0411/17/01.mov"><img src="images/bg04.jpg"> </a> <a href="http://starshow-file.b0.upaiyun.com/2016/0411/17/02.mov"><img src="images/bg02.jpg"> </a> <a href="http://starshow-file.b0.upaiyun.com/2016/0411/17/03.mp4"><img src="images/bg03.jpg"> </a> </div>
+  <img src="images/star_03.jpg"><img src="images/star_04.jpg"><img src="images/star_05.jpg"><img src="images/star_06.jpg"><img src="images/star_07.jpg"><img src="images/star_08.jpg"><img src="images/star_09.jpg"><img src="images/star_10.jpg"><img src="images/star_11.jpg"><img src="images/star_12.jpg"><img src="images/star_13.jpg"><img src="images/star_14.jpg"><img src="images/star_15.jpg"><img src="images/star_16.jpg"><img src="images/star_17.jpg"><img src="images/star_18.jpg"><img src="images/star_19.jpg"><img src="images/star_20.jpg"><img src="images/star_21.jpg"><img src="images/star_22.jpg"></div>
+<div class="downApp"><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xfdream.soft.starshow"><img src="images/downApp.png" class="a-fadeinB"></a></div>
+<script src="js/jquery1.9.1.js"></script> 
+<script src="js/jweixin-1.0.0.js"></script> 
+<script src="js/common.js"></script> 
+<script type="text/javascript">
+$(function(){
+	$(".tab-tit li").click(function(){
+		var ind=$(this).index();
+		$(this).addClass("cur").siblings().removeClass("cur");
+		$(".tab-con > a").eq(ind).show().siblings().hide();	
+	})	
+})
+
+</script>
+</body>
+</html>

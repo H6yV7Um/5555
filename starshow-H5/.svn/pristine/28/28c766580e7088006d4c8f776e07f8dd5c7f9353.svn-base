@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+	    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=0.5,maximum-scale=0.5, maximum-scale=0.5">	
+	    <meta name="format-detection" content="telephone=no" />
+		<title>电子账单</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+	</head>
+	<body>
+		
+		<div class="export_c">
+			<section>
+				<h3>总收入：<span class="total_income"></span>元</h3>
+				<h3>总支出：<span class="total_spending"></span>元</h3>
+				<p class="range">时间范围：<span class="start_time"></span>-<span class="end_time"></span></p>
+				<p>公司名称：<span>北京时尚星秀影视文化传媒有限公司</span></p>
+				<div class="main_section">
+					<div class="get_list">
+						
+						<!--<dl>
+							<dt class="dt_time">2017年1月</dt>
+							<dd>
+								<p class="income">收入￥xxxx.x万</p>
+								<p class="pay">支出￥xxxx.x万</p>
+							</dd>
+						</dl>
+						<ul>
+							
+							<li>
+								<a href="detail.html" class="li_a">
+									<div class="left_detail">
+										<p class="crash">提现</p>
+										<p class="time">03月07日 19:32</p>
+									</div>
+									<div class="right_crash">
+										<div class="right" style="float: left;text-align: right;">
+											<p class="crash" style="font-weight: bold;">100</p>
+											<p class="time">正在进行中</p>
+										</div>
+										<em class="arrow" style="float：right;">&nbsp;&nbsp;&gt;</em>
+									</div>
+								</a>
+							</li>
+							
+						</ul>-->
+						</div>
+					</div>
+					
+					<div id="bg-2">
+						<img src="assets/images/bg-2.png" class="bg-2"/>
+					</div>
+					<div id="btn">点击加载更多数据</div>
+					<p id="pho_star">
+						<img src="assets/images/app_star-1.png"/>
+					</p>
+					<p class="saoma">来自时尚星秀APP  更多消息请扫码下载</p>
+				</div>
+			</section>
+			
+			
+			<div class="zhang">
+				<img src="assets/images/zhang-1.png"/>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script> 
+		<script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="assets/js/common.js"></script>
+		<script type="text/javascript" src="assets/js/bridge.js"></script>
+		<script type="text/javascript" src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			getCheckList()
+		
+			$("#btn").click(function(){
+				getCheckList()
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<meta name="apple-itunes-app" content="app-id=903692043" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" type="text/css" href="../assets/js/lib/sweetAlert/sweet-alert.css">
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<title>查看全部回复</title>
+</head>
+<body>
+<section class="pageMain post_bg postMain"  style="display:none">
+  <section class="cmt_all">
+  	<!-- <div class="commentTit tc"><b>HCOMMENT</b> 评论</div> -->
+	<ul class="cmt_list">
+	</ul>
+
+	<div class="btn_more" id="btn_more"><p>点击加载更多</p><a name="comment"></a></div>
+  </section>
+
+</section>
+<section class="loadding">
+    	<div class="spinner">
+		  <img src="images/loadding2.gif" height="80" width="80" />
+		</div>
+</section>
+<section class="news_nav" id="news_nav" style="display:none">
+	<div class="news_msg_all">
+	     <input type="text" class="txtMsg" placeholder="快来评论">
+		<input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg" cid="" uid="">
+	</div>
+	<div class="fr"></div>
+</section>
+<input type="hidden" id="hide_source"  stype="reply"/>
+<input type="hidden" id="share_comment" share="true"> 
+<div id="msg_overlay" style="display:none"></div>
+<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script> 
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="../assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+<script type="text/javascript" src="../assets/js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript" src="../../applinks/openApp.js"></script>
+<script type="text/javascript" src="js/main.js"></script> 
+
+<script type="text/javascript">
+//setTimeout("wx_share()",2000)
+</script>
+
+</body>
+</html>

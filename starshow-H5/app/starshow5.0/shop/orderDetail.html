@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<!--<meta name="apple-itunes-app" content="app-id=903692043" />-->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>订单详情</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="assets/css/order.css">
+</head>
+<body>
+	<div class="o_detail_main" style="display:none">
+		<div class="od_order_con od_status_main">
+			<img src="assets/images/icon-car.png" class="icon_order_status">
+			<div class="od_status">
+				<h1>待发货</h1>
+				<p>请在<span class="counterTime">1天13小时34分</span>内完成发货</p>
+			</div>
+		</div>
+		<div class="od_order_con">
+			<div class="user_infos">
+				<img src="assets/images/icon-location.png"  class="icon_loc">
+				<span class="loc_name">苏苏苏</span>
+				<span class="loc_phone">15819898983</span>
+				<div class="loc_infos">
+					地址：北京市朝阳区金桐西路时尚大厦16层
+				</div>
+			</div>
+		</div>
+		<ul class="od_prod_list od_order_con">
+			<li>
+				<div class="prod_infos">
+					<img src="assets/images/prod01.png" class="order_prodCover">
+					<div class="o_prod_desc">
+						<p class="o_prod_tit">018年LV新品包包</p>
+						<p class="o_prod_choose">颜色分类：中号</p>
+						<p class="o_prod_price"><span class="js_prod_price">￥1000</span><span class="prod_num">x1</span></p>
+					</div>
+					<div class="btn_afterSale">售后</div>
+				</div>
+			</li>
+			<li>
+				<div class="prod_infos">
+					<img src="assets/images/prod01.png" class="order_prodCover">
+					<div class="o_prod_desc">
+						<p class="o_prod_tit">018年LV新品包包</p>
+						<p class="o_prod_choose">颜色分类：中号</p>
+						<p class="o_prod_price"><span class="js_prod_price">￥1000</span><span class="prod_num">x1</span></p>
+					</div>
+					<div class="btn_afterSale">售后</div>
+				</div>
+			</li>
+		</ul>
+		<div class="order_price od_order_con">
+			<div class="o_prod_price">
+				<div>商品价</div>
+				<div class="js_price01">￥1000</div>
+			</div>
+			<div class="o_freight">
+				<div>+运费</div>
+				<div class="js_price02">￥10.0</div>
+			</div>
+			<div class="o_real_price">
+				<div>实际付款</div>
+				<div class="js_price03 col_red">￥1010</div>
+			</div>
+			
+		</div>
+		<div class="od_order_con od_order_info">
+			<p>订单编号：283839920020</p>
+			<p>下单时间：2017-07-11  23：33：52</p>
+			<p>付款时间：2017-07-11  23：33：52</p>
+		</div>
+
+		<div class="btnsCon"></div>
+	</div>
+	<div class="order_pay">
+		<div class="pay_tit">
+			<img src="assets/images/icon-close.png" class="icon_close">
+			<h1>确认支付</h1>
+		</div>
+		
+		<div class="pay_type">
+			<p><span>支付金额</span><span class="truePay">2345元</span></p>
+			<div  class="type_list">
+				<h2>支付方式</h2>
+				<div class="payment">
+					<!-- <img src="assets/images/icon-wx-sel.png" ><img src="assets/images/icon-zfb.png" > -->
+					<p class="sel"><i class="icon-wx"></i><span>微信支付</span></P>
+					<p><i class="icon-zfb"></i><span>支付宝</span></p>
+				</div>
+
+				
+			</div>
+		</div>
+		<div class="btn_pay_sure">确定</div>
+	</div>
+	<div class="bg_overflow"></div>
+	<section class="loadding">
+    	<div class="spinner">
+		  <img src="assets/images/loadding.gif" height="40" width="40" />
+		</div>
+    </section>
+<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/bridge2.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="assets/js/orderDetail.js"></script>
+</body>
+</html>

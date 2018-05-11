@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获奖名单公布</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<img src="https://starshow-pic.b0.upaiyun.com/focus/0/jiepai.jpg">
+</body>
+</html>

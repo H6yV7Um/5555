@@ -1,0 +1,241 @@
+html,body{
+	font-size: 62.5%;
+	height: 100%;
+	background: #f1f1f1;
+	 -webkit-overflow-scrolling: touch; 
+}
+.orderMain{
+	width: 100%;
+	height: 100%;
+
+	overflow: scroll;
+}
+.prod_cover{
+	width: 100%;
+	overflow: hidden;
+}
+
+.listMenu{
+	width:90%;
+	overflow: hidden;
+	padding:0 5%;
+	background: #fff;
+	font-size: 1.5rem;
+	border-bottom: 1px solid #DCDCDC;
+	position:fixed;
+	background: #fff;
+	z-index: 1;
+
+}
+.listMenu li{
+	width: 15%;
+	margin: 0 2.5%;
+	text-align: center;
+	line-height: 5rem;
+	height: 5rem;
+	float: left;
+	display: inline;
+	position: relative;
+}
+.listMenu li .line{
+	display: none;
+}
+.listMenu li.cur .line{
+	display: block;
+	width:3.5rem;
+	height: 8px;
+	color: #ff1d3e; 
+	background: #ff1d3e; 
+	position: absolute;
+	bottom: 0;
+	left:0;
+	right: 0;
+	margin:auto;
+}
+.orderList{
+	width: 100%;
+	margin-top:6rem;
+	    min-height: 300px;
+}
+.orderList li{
+	background: #ffffff;
+	border-top: 1px solid #DCDCDC;
+	border-bottom: 1px solid #DCDCDC;
+	width: 100%;
+	margin-top: 10px;
+}
+.list_header{
+	width: 92%;
+	padding:0 4%;
+	background: #fff;
+	overflow: hidden;
+	border-bottom: 1px solid #F0F0F0;
+	
+	line-height: 5rem;
+	height: 5rem;
+	font-size: 1.5rem;
+}
+.list_header .shop_cover{
+	width:3rem;
+	vertical-align: middle;
+	border: 1px solid #F0F0F0;
+	border-radius: 100%;
+	margin-right: 5px;
+
+}
+.list_header  .order_status{
+	font-size: 1.3rem;
+	
+}
+.order_status.c1{
+	color: #F5A623;
+}
+.order_status.c2{
+	color: #EB1010;
+}
+.order_status.c3{
+	color: #7ED321;
+}
+.order_status.c4{
+	color: #494949;
+}
+.list_products{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.list_products.more{
+	width: 100%;
+	overflow: scroll;
+	 -webkit-overflow-scrolling: touch; 
+}
+.list_products.more .scroller{
+	min-width: 5000px;
+}
+.list_products.more .prodInfo{
+	width: 140px;
+	float: left;
+	display: inline;
+
+
+}
+.list_products.more .prodInfo .prod_cover{
+	width: 100%
+}
+.list_products .prodInfo {
+	margin-left: 15px;
+	margin-top: 15px;
+}
+.prodInfo .prod_cover{
+	width: 140px;
+	border: 1px solid #EEEEEE;
+	border-radius: 10px;
+}
+.prodInfo .prod_desc{
+	position: absolute;
+	left:180px;
+	top:0;
+	bottom: 0;
+	right:15px;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	 flex-direction:column 
+}
+
+.prod_desc_con h1{
+	font-size: 1.5rem;
+}
+.prod_desc_con p{
+	font-size: 1.3rem;
+	color: #898989;
+}
+.list_price{
+	width:92%;
+	margin: 0 4%;
+	overflow: hidden;
+	padding: 10px 0
+
+}
+.list_price .fl{
+	font-size: 1.5rem;
+	margin-top:8px;
+
+}
+.list_price .fl p{
+	display: inline;
+}
+.list_price .fl .col_grey{
+	font-size: 1.1rem;
+	color:#898989;
+	margin-left:10px;
+}
+.list_price .fr div{
+	display: inline-block;
+}
+.btn_cancelOrder,.btn_sendOut,.btn_agree,.btn_refuse,.btn_toDetail{
+	font-size: 1.5rem;
+	color: #9B9B9B;
+	letter-spacing: 0;
+	border: 1px solid #9B9B9B;
+	border-radius: 6px;
+	padding: 5px;
+}
+.btn_sendOut,.btn_refuse{
+	border: 1px solid #EB1010;
+	color: #EB1010;
+	margin-left: 10px;
+}
+.btn_agree,.btn_refuse{
+	border: 1px solid #000;
+	color: #000;
+}
+.apply-page .order-operate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 .3rem .3rem;
+    margin-top: 20px;
+}
+
+.apply-page .order-operate .btn {
+    width: 45%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.6rem;
+    border: 1px solid #417505;
+    border-radius: 6px;
+    color: #417505;
+}
+
+.apply-page .order-operate .accept,.apply-page .order-operate .btn_comfirm {
+    border-color: #EB1010;
+    color: #FF1D3E;
+}
+.apply-page .orderList {
+	margin-top: 0;
+}
+.apply-page .orderList li {
+	margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+}
+.apply-page .order-des {
+   width: 92%;
+   padding: 0 4%;
+   line-height: 25px;
+   font-size: 1.4rem;
+}

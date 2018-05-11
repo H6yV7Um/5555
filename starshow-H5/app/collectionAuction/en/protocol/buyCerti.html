@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>Collection subscription agreement </title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+<div class="protocol">
+	<h1 class="tc">《Collection subscription agreement 》 </h1>
+<p>Party a: international auction (Beijing) co., LTD <br />
+  Address: room 1602-1, floor 16, building 3, no.9 guanghua road, chaoyang district, Beijing <br />
+  Telephone: 010-65872723 </p>
+<div > 
+  <p id="js_buyer">
+   <!-- 地址： <br />
+   电话： <br />
+   身份证号码：<br /> -->
+   </p>
+</div>
+<p>The two parties have signed the following agreement on the sale of<u id="collectionName"></u> to party b regarding the sale of to party b, and the parties shall abide by it. 
+</p>
+<h2>Article 1 transaction object </h2>
+<p>Party a agrees to sell the item (hereinafter referred to as "the item") to party b with the right to dispose of it, and party b agrees to buy it.  </p>
+<p>The name, quantity and quality of the item are listed in details of the item. Party b shall pay the deposit for the auction of the auction, and the auction shall be deemed as the description and defects of the details of the auction. <br /></p>
+<h2>Article 2 prices, payment methods and delivery and acceptance  </h2>
+<ol>
+  <li>The auction price is<u id="capitalPrice">  </u>zero yuan (RMB<u id="rmbPrice">       </u>）。On the date of signing this contract, party b shall pay the total amount of the item to party a for the total amount of<u id="buyerPrice"> </u>RMB, and the contract shall come into force when the amount is in full amount to the account.  </li>
+</ol>
+<ol>
+  <li>Party a shall take effect within [10] days from the date of this contract will be shipped the items, the items arrived with party b confirm the delivery location (party a to party b before the items shipped to determine delivery location, subject to final SMS), after both parties shall immediately organize acceptance. The risk is transferred to party b after the sale is delivered to the designated place of delivery.  </li>
+</ol>
+<ol>
+  <li>Every item of the items acceptance should take photos (front, back, bottom, such as pictures, specific according to the requirements of party a) and signed by both sides representative in the photos back to each item acceptance after both parties shall sign the acceptance to confirm these auctions list and the "hidden subscription contract" the "hidden pat subscription contract" as the items delivered to party b and meet the requirements of the contract documents.  </li>
+</ol>
+<ol>
+  <li>All payments made by party b to party a shall be paid to the bank account designated by party a in writing.  </li>
+  <li>Party b shall, after paying the balance payment, ensure that its communication equipment is unimpeded to be contacted, otherwise, party a shall not be responsible for the transaction due to failure to contact party b.  </li>
+</ol>
+
+<h2>Article 3 confidentiality </h2>
+ Without the written consent of the other party either party shall not be any content of this agreement or in the process of negotiation and signing of this agreement and to perform the known to the other party shall be confidential information (such as trade secrets, technical secret, and according to law and other industry practice shall be confidential information) disclosed to any third party.  </p>
+<h2>Article 4 force majeure </h2>
+  If either party fails to perform this agreement due to force majeure, the party shall be exempted from liability within the scope of force majeure. Force majeure refers to situations which cannot be foreseen or avoided, such as fire, earthquake, flood, plague, war, social unrest, etc.  </p>
+<h2>Article 5 other  </h2>
+  1. This agreement shall be governed by the laws of the People's Republic of China and shall be interpreted accordingly.   </p>
+<ol>
+  <li>After signing the subscription contract, party a and party b shall transfer ownership of the item to party b.  </li>
+  <li>Any dispute arising out of this agreement shall be settled through friendly negotiation. If the settlement fails, either party may file a lawsuit in the court of the domicile of party a. </li>
+  <li>This agreement shall be executed in duplicate, with each party holding one copy and having the same legal effect. </li>
+</ol>
+</div>
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript">
+function changeNumMoneyToChinese(money) {
+  var cnNums = new Array("零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"); //汉字的数字
+  var cnIntRadice = new Array("", "拾", "佰", "仟"); //基本单位
+  var cnIntUnits = new Array("", "万", "亿", "兆"); //对应整数部分扩展单位
+  var cnDecUnits = new Array("角", "分", "毫", "厘"); //对应小数部分单位
+  var cnInteger = "整"; //整数金额时后面跟的字符
+  var cnIntLast = "元"; //整型完以后的单位
+  var maxNum = 999999999999999.9999; //最大处理的数字
+  var IntegerNum; //金额整数部分
+  var DecimalNum; //金额小数部分
+  var ChineseStr = ""; //输出的中文金额字符串
+  var parts; //分离金额后用的数组，预定义
+  if (money == "") {
+    return "";
+  }
+  money = parseFloat(money);
+  if (money >= maxNum) {
+    alert('超出最大处理数字');
+    return "";
+  }
+  if (money == 0) {
+    ChineseStr = cnNums[0] + cnIntLast + cnInteger;
+    return ChineseStr;
+  }
+  money = money.toString(); //转换为字符串
+  if (money.indexOf(".") == -1) {
+    IntegerNum = money;
+    DecimalNum = '';
+  } else {
+    parts = money.split(".");
+    IntegerNum = parts[0];
+    DecimalNum = parts[1].substr(0, 4);
+  }
+  if (parseInt(IntegerNum, 10) > 0) { //获取整型部分转换
+    var zeroCount = 0;
+    var IntLen = IntegerNum.length;
+    for (var i = 0; i < IntLen; i++) {
+      var n = IntegerNum.substr(i, 1);
+      var p = IntLen - i - 1;
+      var q = p / 4;
+      var m = p % 4;
+      if (n == "0") {
+        zeroCount++;
+      } else {
+        if (zeroCount > 0) {
+          ChineseStr += cnNums[0];
+        }
+        zeroCount = 0; //归零
+        ChineseStr += cnNums[parseInt(n)] + cnIntRadice[m];
+      }
+      if (m == 0 && zeroCount < 4) {
+        ChineseStr += cnIntUnits[q];
+      }
+    }
+    ChineseStr += cnIntLast;
+    //整型部分处理完毕
+  }
+  if (DecimalNum != '') { //小数部分
+    var decLen = DecimalNum.length;
+    for (var i = 0; i < decLen; i++) {
+      var n = DecimalNum.substr(i, 1);
+      if (n != '0') {
+        ChineseStr += cnNums[Number(n)] + cnDecUnits[i];
+      }
+    }
+  }
+  if (ChineseStr == '') {
+    ChineseStr += cnNums[0] + cnIntLast + cnInteger;
+  } else if (DecimalNum == '') {
+    ChineseStr += cnInteger;
+  }
+  return ChineseStr;
+
+}
+//changeNumMoneyToChinese(19876.234)
+var initData=function(ret){
+	var cName=decodeURI(commonCla.analyzParams("name"));
+	var m=commonCla.analyzParams("m");
+	var token=commonCla.analyzParams("token");
+	$("#collectionName").html(" "+cName+" ");
+	$("#buyerPrice").html(" "+m+" ");
+	$("#rmbPrice").html(" "+m+" ");
+	$("#capitalPrice").html(" "+changeNumMoneyToChinese(m)+" ");
+
+}
+var getBuyCertiData=function(){
+	initData();
+	//00未实名 1实名
+	var isReal=commonCla.analyzParams("real");
+	var url=commonCla.hostBase+"/v1/user/real?token="+commonCla.analyzParams("token");
+	if(isReal!=0){
+		commonCla.ajaxCommonFun(url,"get",function(ret,textStatus,request){
+			if(textStatus=="success"){
+              
+                var buyerInfo='Party B：'+ret.real_name+
+                              ' <br />Address：'+ret.address+
+                              ' <br />Telephone：'+ret.mobile+
+                              ' <br />Id Number：'+ret.id_card+' <br />';
+                $("#js_buyer").html(buyerInfo);
+			}
+
+		})
+	}else{
+    var buyerInfo='Party B：<br />Asddress：<br />Telephone：<br />Id Number：<br />';
+     $("#js_buyer").html(buyerInfo);
+  }
+}
+$(function(){
+  getBuyCertiData();
+})
+</script>
+</body>
+</html>

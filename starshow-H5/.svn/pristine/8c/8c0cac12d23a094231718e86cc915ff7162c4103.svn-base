@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时尚星秀广告投放平台</title>
+    <link rel="stylesheet" type="text/css" href="assets/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/api/css/index.css">
+</head>
+
+<body>
+    <div id="headBox"></div>
+    <div id="loginBox" class="js-loginBox" style="display: none;"></div>
+    <div id="success-wrap">
+        <!-- 1 -->
+        <div class="success-bg">
+            <div class="success-item w">
+                <h2>时尚星秀年度人物盛典 — 最具影响力、公信力的年度时尚人物盛典</h2>
+                <p>集结时尚明星、时尚行业大咖、时尚主流媒体、知名品牌商及粉丝，是目前国内时尚产业链中最具规模、最具影响力及最具公信力的年度时尚人物盛典。</p>
+                <p>目前已成功举办两届，共计吸引近<span>150位明星</span>现场参与，近<span>万名粉丝关注互动；</span></p>
+                <p>线上全平台推广互动，<span>百家媒体</span>全面报道，实现近<span>8亿传播量</span>。</p>
+                <div><img src="assets/images/success/1-star.jpg" width="100%"></div>
+                <div><img src="assets/images/success/1-cooper.png"></div>
+            </div>
+        </div>    
+        <!-- 2 -->
+        <div class="success-bg">
+            <div class="success-item w">
+                <h2>向上马拉松2017中国公开赛 — 跨界体育、时尚、品牌的全民互动盛事</h2>
+                <p>向上马拉松2017中国公开赛，全面倡导“只为向上”的运动精神，号召体育及娱乐明星倾力参与，融合公益精神，带动全国体育运动爱好者冲刺6大城市（上海、济南、成都、广州、大连、北京）地标建筑，辐射影响上亿人对该体育项目的关注，打造集专业性、时尚性、公益性于一身的专业级运动赛事。</p>
+                <p>整个赛事吸引了包括苏有朋、韩庚、王祖蓝、蒋劲夫、惠若琪等近<span>30位明星名人</span>、奥运冠军倾力加盟领跑，<span>近十万人报名</span>、数千跑友热情参与，<span>刷新亿万朋友圈</span>，引发了社会的广泛关注和支持，持续引爆了今春“向上之火”。</p>
+                <div><img src="assets/images/success/2-star.jpg" width="100%"></div>
+                <div><img src="assets/images/success/2-organizer.png"></div>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="success-bg">
+            <div class="success-item w">
+                <h2>品宣-拉动新品销量</h2>
+                <p>推广形式：原生文章</p>
+                <p>推广效果：平均浏览 40万人次，提升销售额15%；</p>
+                <div><img src="assets/images/success/3-cooper.png"></div>
+                <div><img src="assets/images/success/3-pic.jpg" width="100%"></div>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="success-bg">
+            <div class="success-item w">
+                <h2>品宣-新品发布</h2>
+                <p>推广形式：原生视频</p>
+                <p>推广效果：品牌总曝光 350万人次</p>
+                <div><img src="assets/images/success/4-cooper.png"></div>
+                <div><img src="assets/images/success/4-pic.jpg" width="100%"></div>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="success-bg">
+            <div class="success-item w">
+                <h2>品宣-新品发布</h2>
+                <p>推广形式：活动页面</p>
+                <p>推广效果：平均浏览80万人次，平均点击35万人次</p>
+                <div><img src="assets/images/success/5-cooper.png"></div>
+                <div><img src="assets/images/success/5-pic.jpg" width="60%"></div>
+            </div>
+        </div>
+        <!-- 6-->
+        <div class="success-bg">
+            <div class="success-item w">
+                <h2>电影角色人物选取</h2>
+                <p>电影：时尚女魔头</p>
+                <p>推广形式：活动竞选</p>
+                <p>推广效果：参与人数4.5万人次，并成功参演电影女一、女二</p>
+                <div><img src="assets/images/success/6-pic.jpg" width="60%"></div>
+            </div>
+        </div>
+        <!-- 7 -->
+        <div class="success-bg">
+            <div class="success-item w">
+                <h2>品宣-杂志发行</h2>
+                <p>推广形式：别册发行</p>
+                <p>推广效果：总发行量 3万册</p>
+                <div><img src="assets/images/success/7-cooper.png"></div>
+                <div><img src="assets/images/success/7-pic.png"></div>
+            </div>
+        </div>
+    </div>
+    <div id="footBox"></div>
+</body>
+<script type="text/javascript" src="assets/common/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+<script type="text/javascript" src="assets/common/js/common.js"></script>
+<script type="text/javascript" src="assets/api/js/index.js"></script>
+
+</html>

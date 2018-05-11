@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>大厨之作</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css" />
+</head>
+<body>
+	<section class="rules_main">
+		<img src="assets/images/rules/rules_02.png" /><img src="assets/images/rules/rules_03.png" /><img src="assets/images/rules/rules_04.png" /><img src="assets/images/rules/rules_05.png" /><img src="assets/images/rules/rules_06.png" /><img src="assets/images/rules/rules_07.png" /><img src="assets/images/rules/rules_08.png" /><img src="assets/images/rules/rules_09.png" /><img src="assets/images/rules/rules_10.png" />
+		<!-- <h1>《大厨之作》星主厨投票活动规则</h1>
+		<h2>一.	活动时间</h2>
+		<h3>1.《大厨之作》节目直播时间：</h3>
+		<p>2016年12月28日-2016年12月30日 每日10：00-22：00</p>
+		<p>2016年12月31日 10：00-24：00</p>
+		<h3>2.《大厨之作》投票时间：</h3>
+		        <p>2016年12月26日00：00-2016年12月31日 24：00</p>
+		<h2>二.	奖项设置</h2>
+		        <p class="fb">1.《大厨之作》3个奖项，由时尚星秀用户投票产生</p>
+		        <div class="rules_con">
+		        	<div class="abs_con">
+		        		<img src="assets/images/rule-tit.png" />
+		        		<p>最具人气星主厨</p>
+		        	</div>
+		        	<ul>
+		    			<li>◆	参赛知名大厨中获得投票数前三名，有机会成为时尚星秀生活频道特约美食顾问；
+		    			<li>◆	票数前三名大厨，作为“明星主厨团”有机会出席时尚星秀“时尚星味”（节目名称拟定）系列节目拍摄。与幸运观众面对面进行互动，时尚星秀全程直播录制。</li>
+		    		</ul>
+		        </div> -->
+        
+
+
+
+
+
+	</section>
+	
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

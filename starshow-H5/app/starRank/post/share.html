@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>帖子详情</title>
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../news/news.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/swiper/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/dropload/dropload.css">
+	<link rel="stylesheet" type="text/css" href="post.css">
+
+	
+</head>
+<body  class="body_color"> 
+    <section class="pageMain" id="postMain" style="display:none">
+    <a id="btn_download"><img src="../assets/images/download.png" width="100%" /></a>
+	<!--图片-->
+	<section class="picsMain" id="picsMain">
+		<!-- <div class="postHead">
+			<img class="user_head" src="https://starshow-pic.b0.upaiyun.com/test_post/914601/149723706953665364e22c1ba908a824a0164081b058b.jpg!250x250">
+			<span class="user_name">name</span>
+			<span class="post_time">times</span>
+		</div>
+		<ul class="lists style1">
+			<li><img src="https://starshow-pic.b0.upaiyun.com/test_post/914601/149723706953665364e22c1ba908a824a0164081b058b.jpg!250x250" width="100%"></li>
+		
+		</ul>
+		<div class="postDesc">
+			<div class="postTitle">这有什么好看的？没事多做做贡献吧</div>
+			<div class="post_btns">
+				<img src="../assets/images/icon/icon-eye.png" width="15"><span>1134万</span>
+				<img class="btn_zan" src="../assets/images/icon/icon-zan.png" width="15"><span>1134万</span>
+			</div>
+		</div> -->
+
+	</section>
+	
+
+	<!--评论-->
+	<section class="cmt_short" style="background: rgb(255, 255, 255);">
+		<div class="cmt_Title">
+			<span><em class="fb">全部评论</em></span>
+			<!-- <div class="line"></div> -->
+	    </div>
+	    <a name="comment"></a>
+	    <ul class="cmt_list"></ul>
+	    <div class="btn_more btn_download"></div>
+	</section>
+	
+
+	<input type="hidden" id="share_info" />
+    </section> 
+    <!-- 缓冲 -->
+    <section class="init-loadding">
+    	<div class="spinner">
+		  <img src="../assets/images/loadding.gif" height="80" width="80" />
+		</div>
+    </section>
+    <!-- 尾部 -->
+    <section class="news_nav" id="news_nav" style="display:none">
+		<div class="news_msg_all">
+			<div class="news_msg">
+			    <!-- <input type="text" class="btn_txtMsg" placeholder="快来评论"> -->
+			    <div class="btn_txtMsg">快来评论</div>
+			    <!-- 				<input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg"> -->
+			</div>
+			<ul class="icons">
+				<li id="btn-toMsg"><a href="#comment">
+					   	<img src="../assets/images/icon-msg.png">
+						<div class="num_area" id="msg_num">0</div></a>
+				</li>
+				<li id="zanArea">
+					<img src="../assets/images/icon-like.png" class="zan">
+					<div class="num_area" id="like_num" like_num="0">0</div>
+				</li>
+			</ul>
+			<!-- <div class="btn_txtMsg">快来评论</div> -->
+		     <!-- <input type="text" class="txtMsg" placeholder="快来评论">
+		     			<input type="button" class="btn_msgSend" value="发布" id="btn_sendMsg" cid="" uid=""> -->
+		</div>
+		<div class="fr"></div>
+	</section>
+    <!--show big pic-->
+    <div class="bigImgcon" style="display:none">
+    	<div class="bigImg_tit"><img src="../assets/images/close-dist.png" /></div>
+       <!--star-->
+    	<div class="swiper-container">
+		  <div class="swiper-wrapper" id="js_imgList">
+		  </div>
+		  <!-- 如果需要导航按钮 -->
+		    <!-- <div class="swiper-button-prev"></div>
+		    <div class="swiper-button-next"></div> -->
+       </div>
+       <!--end-->
+       <div class="bigImg_footer">
+       	 <div class="footer_con" id="js-btnDown">
+       		<!-- <a download="img"><img src="assets/images/icon-download.png" /></a> -->
+          	<p><span class="curPhotoNum"></span>/<span class="allPhotosNum"></span></p>
+       	</div>
+       </div>
+    </div>
+
+    <section class="toMsg md-modal">
+		<div class="msgHeader">
+			<input class="btn_cancel" type="button" value="取消"/>
+			<input class="btn_msgSend" type="button" value="发表" id="btn_sendMsg"/>
+		</div>
+		<!-- <input class="txtMsg"  placeholder="快来评论" /> -->
+		<textarea  class="txtMsg" placeholder="快来评论"  autofocus></textarea>
+	</section>
+    <div class="md-overlay"></div>
+	<div id="msg_overlay" style="display:none"></div>
+	<input type="hidden" id="hide_source" source="post"  stype="" iShare="true"/>
+	<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../applinks/openApp.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/swiper/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/dropload/dropload.min.js"></script>
+	<script type="text/javascript" src="post.js"></script>
+
+
+
+</body>
+</html>

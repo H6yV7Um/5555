@@ -1,0 +1,32 @@
+.protocol{
+	width: 95%;
+	margin: 0 auto;
+	line-height: 28px;
+	font-size: 14px;
+
+}
+.protocol h1{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0 10px 0;
+
+}
+.protocol h1{
+	font-size: 16px;
+	font-weight: bold;
+	margin: 20px 0 15px 0;
+
+}
+.protocol h2{
+	font-size: 14px;
+	font-weight: bold;
+	margin: 10px;
+}
+.toNotice{
+	font-size: 12px;
+    color: blue;
+    padding-bottom: 40px;
+}
+.toNotice a{
+	color: blue
+}

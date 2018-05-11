@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>大厨之作获奖页面&4</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css" />
+</head>
+<body  style="background: #000;">
+<section class="lottery_main">
+ <!-- <header class="head_banner"><img src="assets/images/banner-lottery.png"  /></header> -->
+ <section class="checkIn_award">
+ 	<!-- <img src="assets/images/lottery-bg.png" class="bg" /> -->
+ 	<section class="abs_cons">
+ 	 <h1>恭喜你，<span id="js_userName"></span></h1>
+ 	 <h2>您已累计签到<span id="js_signNum"></span>天，获得以下奖励</h2>
+ 	 <div class="js_signPrizes">
+	 	 <!-- <div class="prizeCon">
+	 	 	<img src="assets/images/prize-bg.png" />
+	 	 	<img src="assets/images/p1.png"  class="pNum"/>
+	 	 	<div class="prizeName">“鲜逢“产品兑换券1份；</div>
+	 	 </div>
+	 	 <div class="prizeCon">
+	 	 	<img src="assets/images/prize-bg.png" />
+	 	 	<img src="assets/images/p2.png"  class="pNum"/>
+	 	 	<div class="prizeName">“鲜逢“产品兑换券1份；</div>
+	 	 </div>
+	 	 <div class="prizeCon">
+	 	 	<img src="assets/images/prize-useless-bg.png" />
+	 	 	<img src="assets/images/p3.png"  class="pNum"/>
+	 	 	<div class="prizeName col_grey">“鲜逢“产品兑换券1份；</div>
+	 	 </div>
+	 	 <div class="prizeCon">
+	 	 	<img src="assets/images/prize-useless-bg.png" />
+	 	 	<img src="assets/images/p4.png" class="pNum"/>
+	 	 	<div class="prizeName col_grey">“鲜逢“产品兑换券1份；</div>
+	 	 </div> -->
+ 	 </div>	
+ 	 
+ 	</section>
+ </section>
+ <section class="dial_main">
+ 	<img src="assets/images/bg-dial.png" width="100%" />
+ 	<div class="abs_dial_con">
+ 		<!-- <div class="dial_main"> -->
+ 			<div  id="dial"><img src="assets/images/dial.png" /></div>
+ 			<div class="btn_dial">
+ 				<img src="assets/images/btn-dial.png" />
+ 				<input type="button" class="btn_dial_real"  id="lotteryBtn">
+ 			</div>
+ 		<!-- </div> -->
+ 	</div>
+ 	<div class="chanceNum">您还剩余<span id="number"></span>次抽奖机会</div>
+ </section>
+ <section class="winner_list">
+ 	<div class="img_tit"><img src="assets/images/lottery-list-tit.png" /></div>
+ 	<div class="list_content">
+ 	   <!-- <div class="list_tit"></div>
+ 	   <ul class="list_con">
+ 	   	
+ 	   </ul> -->
+ 	   <table cellpadding="0" cellspacing="0" border="0" class="list_con">
+ 	   	<thead>
+ 	   		<tr>
+ 	   			<th>所获奖品</th>
+ 	   			<th>时间</th>
+ 	   			<th>如何使用</th>
+ 	   		</tr>
+ 	   	</thead>
+ 	   	<tbody>
+ 	   		
+ 	   	</tbody>
+ 	   </table>
+ 	</div>
+ </section>
+</section>
+
+<div id="messdiv" class="dialog_tip" style="display:none;">
+     <div title="关闭窗口" class="js-close">
+          <img src="assets/images/close-tip.png" width="15"/>
+        </div>
+      <div class="messdivCons"></div>
+</div>
+<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js" ></script>
+<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+<script type="text/javascript" src="../assets/js/lib/jQueryRotate.js"></script>
+<script type="text/javascript" src="assets/js/lottery.js" inline></script>
+
+<!-- 统计代码 -->
+	<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>
+</body>

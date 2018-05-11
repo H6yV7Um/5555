@@ -1,0 +1,149 @@
+@charset "UTF-8";
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: inherit;
+  font-weight: inherit; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+input, button, textarea, select {
+  *font-size: 100%; }
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"], input[type="search"], select {
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+textarea {
+  -webkit-appearance: none;
+  outline: 0; }
+
+html, body {
+  margin: 0px;
+  min-height: 100%;
+  font-family: "Microsoft YaHei"; }
+
+html {
+  font-size: 20px; }
+
+img {
+  vertical-align: middle; }
+
+a {
+  text-decoration: none; }
+
+.box {
+  width:88%;
+
+  position: relative;
+  font-family: '微软雅黑';
+    padding: 20px 6%;
+  }
+  .box p {
+    width: 100%;
+    font-size: 0.5rem;
+    color: #000;
+    /* position: absolute;
+    top: 12.5rem;
+    left: 0.8rem; */
+    line-height:180%; }
+  .box .div {
+    width: 100%;
+    font-size: 0.5rem;
+    text-align: center;
+    line-height: 180%;  }
+  .box .award {
+    /* position: absolute;
+    top: 19rem;
+    left: 0.8rem; */
+    color: #eb4197; }
+    .box .award h2 {
+      width: 47%;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      background: #64d1fa;
+      background-size: 100% 100%;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: #000000;
+      margin: 0.5rem auto; }
+  .box .rule {
+    /* position: absolute;
+    top: 25.5rem;
+    left: 0.8rem; */
+    color: #000; }
+    .box .rule h2 {
+      width: 47%;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      background: #eb4197;
+      background-size: 100% 100%;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: #000000;
+      margin: 0.5rem auto; }
+  .box .hint {
+   /*  position: absolute;
+   top: 32.5rem;
+   left: 0.8rem; */
+    color: #000; }
+    .box .hint h2 {
+      width: 47%;
+      height: 1.6rem;
+      line-height: 1.6rem;
+      background: #64d1fa;
+      background-size: 100% 100%;
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: #000000;
+      margin: 0.5rem auto; }
+
+/*# sourceMappingURL=rule.css.map */

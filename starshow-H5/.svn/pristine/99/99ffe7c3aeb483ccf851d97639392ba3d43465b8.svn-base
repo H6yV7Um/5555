@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>星秀盛典海选</title>
+</head>
+
+<body>
+<div class="helpBanner"><img src="images/banner.jpg">
+  <p>和我一起为   “<span></span>”助力赢取  【  星秀盛典入场券】 </p>
+</div>
+<div class="star"></div>
+<p class="clear"></p>
+<div class="rankBtn " id="yqBtn"><img src="images/yqBtn.png"></div>
+<div class="findActivity"> <a href="indexShare.html?type=1" class="fl">查看全部打榜明星</a><a href="rule.html" class="fr">活动规则</a> </div>
+<div class="personal">
+  <dl>
+  </dl>
+</div>
+<div class="other">
+  <div class="otherTit">其它助力的好友</div>
+  <ul>
+  </ul>
+</div>
+<div class="downApp"><a href="http://t.cn/R7COgYb"><img src="images/downLoad.png" class="a-fadeinB"></a></div>
+<img src="images/fenxiang.png" class="st_share">
+<div class="mask"></div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript">
+var server = 1;
+//var host='http://123.57.0.118:5000';
+var host='http://startvshow.com/v2';
+var star_id= location.search.slice(location.search.indexOf("&star_id=") + 10).split("&")[0];
+var uid= location.search.slice(location.search.indexOf("&user_id=") + 9).split("&")[0];
+var jwt_token= location.search.slice(location.search.indexOf("&jwt_token=") + 11).split("&")[0];
+//var q_url="http://star.xingxiu.tv/festival/inviteList?star_id="+star_id+"&uid="+uid+"&returntype=jsonp&callback=?";
+var q_url= host+"/festival/invite?star_id="+star_id+"&user_id="+uid;
+  	getDetail(q_url);
+	function getDetail(a) {
+	$.getJSON(a, function(a) {
+		if (a.code == 200) {
+		  var star="";
+		  star ='<div class="name">'+a.data.star.uname+'</div>';
+		  star +='<div class="info">'+a.data.star.list+' 第<span class="likeNumber">'+a.data.star.grade+'</span>名</div>';
+		  star +='<div class="arrowArea"><span class="arrow-down"></span></div><div class="starPic"><img src='+a.data.star.cover+'></div>';
+		  $(".star").html(star);
+		  var p="";
+		  p ='<dt><img src='+a.data.user.avatar+'></dt>';
+		  p +='<dd><h2>'+a.data.user.uname+'</h2><p>贡献排名：'+a.data.user.grade+'     贡献票数：<span class="likeNum">'+a.data.user.like_num+'</span></p></dd>'
+		  $(".personal dl").html(p);
+		  for (var b = "", c = 0; c < a.data.invite_list.length; c++) {
+				var d = "" == a.data.invite_list[c].avatar ? "images/defaultimage_65x65.png" : a.data.invite_list[c].avatar;
+				b +='<li><span class="userPic"><img src='+a.data.invite_list[c].avatar+'></span><span class="userName">'+a.data.invite_list[c].uname+'</span><span class="date">'+a.data.invite_list[c].ctime+'</span></li>';	
+			}
+			$(".other ul").html(b);
+			$(".helpBanner span").text(a.data.star.uname);
+		}
+	})
+}
+
+$(function(){
+	setTimeout("wx_share()",2000);
+	 $("#yqBtn").click(function(){
+		$(".st_share").show(); 
+		var mh=$(document).height();
+		$(".mask").show();
+		$(".mask").css("height",mh);
+	});
+	$(".mask").click(function(){
+		$(".st_share").hide(); 
+		$(".mask").hide();
+	})		
+})
+</script> 
+<script type="text/javascript" src="js/common.js?v=3"></script>
+<script type="text/javascript">
+    // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // 这里警告框会阻塞当前页面继续加载
+        alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+        // 以下代码是用javascript强行关闭当前页面
+        var opened = window.open('about:blank', '_self');
+        opened.opener = null;
+        opened.close();
+    }
+	
+</script>
+<!-- 统计代码 -->
+<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

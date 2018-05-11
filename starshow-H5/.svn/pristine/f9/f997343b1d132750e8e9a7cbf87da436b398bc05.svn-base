@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <meta charset="UTF-8">
+        <title>lookme官网</title>
+        <link rel="stylesheet" type="text/css" href="../public/css/web.css">
+    </head>
+    <body>
+        <div class="lm_officeweb_wap">
+            <div class="lm_header">
+                <ul class="lm_header_left">
+                    <li><img src="../public/images/5.png" alt=""></li>
+                    <li>Look Me</li>
+                   <!--  <div class="clear"></div> -->
+                </ul>
+                <ul class="lm_header_right">
+                    <li><a href="">首页</a></li>
+                    <li><a href="#001">关于我们 </a></li>
+                    <li><a href="#002" class="three">联系我们</a></li>
+                    <div class="clear"></div>
+                </ul>
+
+            </div>
+            <div class="lm_down">
+                <div class="lm_down_img">
+                    <img src="../public/images/pctop.png">
+                </div>
+                <div class="lm_down_con">
+                    <h2>LookMe</h2>
+                    <h3>最新最时尚的视频直播平台</h3>
+                    <img src="../public/images/web3.png">
+                    <p class="ios"><a href="">苹果下载</a></p>
+                    <p class="phone"><a href="">安卓下载</a></p>
+                </div>
+            </div>
+            <div class="abautus">
+                <a name="001" id="001" >
+                    <h2>关于我们</h2>
+                    <p>LOOKME是由互联网精英团队倾力打造的一款视频直播类软件。LOOKME致力于解放主播，扔掉狭小空间，扔掉模糊杂点画质，打造高清，美颜播放画质，开启全民直播时代。同时为观看者提供评论，点赞，送礼物等互动功能，真正的实现观众与粉丝间的互动。</p>
+                    <h2>特色介绍</h2>
+                    <p> 实时直播 这一刻你就是主角 <br>大咖互动  开启全民直播时代 <br>全面分类  评论点赞嗨翻全场    <br>举起手  定制你的专属直播场 </p>
+                </a>
+            </div>
+            <div class="lm_concat">
+                <div class="lm_concat_img">
+                    <img src="../public/images/webbo.png">
+                </div>
+                <div class="lm_concat_con">
+                   <a name="002" id="002" ></a>
+                    <h2>联系我们</h2>
+                    <!-- <h3>最新最时尚的视频直播平台</h3> -->
+                    <img src="../public/images/logoda.png">
+                    <img src="../public/images/web3.png" class="erweima">
+                    <p class="phone">    联系电话：400-338-28282 </p>
+                    <p>联系地址：北京市朝阳区光华路9号时尚大厦5层 </p>
+                    <p class="belong">  Copyright@2013-2014  LookMe   All rights reserved    京ICP备130</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀广告投放管理平台</title>
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/datepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/pagination/pagination.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../assets/api/css/backstage.css">
+</head>
+<body>
+	<div class="dspHeader"></div>
+	<div class="dspMenu"></div>
+	<div class="dspContainer">
+		<div class="indexList dsp_container">
+		<div class="dsp_tools mt20">
+			<select class="fl" id="sel_adList"></select>
+			<div id="reportrange" class="pull-left dateRange date ml10">  
+		                <span id="searchDateRange"></span>  
+		                <b class="caret"></b>  
+		                <i class="glyphicon glyphicon-calendar fa fa-calendar abs_calendar"></i> 
+		     </div>
+		     <div class="btn_create_search fl" style="display:inline">
+				搜索
+			  </div>
+			<!-- <div class="input-daterange input-group date" id="datepicker">  
+			  	            <input type="text" class="" name="start" id="qBeginTime" />  
+			  	            <span class="input-group-btn">至</span>  
+			  	            <input type="text" class="ml10" name="end" id="qEndTime" />  
+			  	            <i class="glyphicon glyphicon-calendar abs_calendar"></i>
+			  	        </div> -->  
+			
+			<div class="timer_tabs fr" style="display:inline">
+				<span class="cur tab">时</span>
+				<span class="tab">日</span>
+				<span class="tab_disabled">周</span>
+				<span class="tab_disabled">月</span>
+			</div>
+		</div>
+		<div class="cb"></div>
+		<!-- <div class="money_info">
+			<ul>
+				<li>
+					<img src="../assets/images/icon-expend.png">
+					<div class="money_desc">
+						<p>今日消耗</p>
+						<p class="col_orange">
+							￥0.00
+						</p>
+					</div>
+				</li>
+				<li>
+					<img src="../assets/images/icon-balance.png">
+					<div class="money_desc">
+						<p>今日消耗</p>
+						<p class="col_orange">
+							￥0.00
+						</p>
+					</div>
+				</li>
+				<li>
+					<img src="../assets/images/icon-freeze.png">
+					<div class="money_desc">
+						<p>今日消耗</p>
+						<p class="col_orange">
+							￥0.00
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div> -->
+		<div class="dsp_charts mt10">
+			<div class="charts_title">
+				<div class="charts_tit fl">
+					<span class="fb_tit none"></span><span class="curTime none"></span>
+					<!-- <span class="more">更多&gt;</span> -->
+				</div>
+				<select class="fr" id="sel_type">
+					<option pid="1">CPC</option>
+					<option pid="2" selected>CPM</option>
+				</select>
+				
+			</div>
+			<div id="main" class="main" style="height:25rem"></div>
+		</div>
+		<div class="dsp_tools">
+			<!-- <select class="fl">
+					<option>下载报表</option>
+			</select> -->
+		</div>
+		<table class="dsp_table">
+			<thead>
+				<tr>
+					<th>时间</th>
+					<th>计费方式</th>
+					<th>展示次数</th>
+					<th>点击次数</th>
+					<th>单价（元）</th>
+					<th>总花费（元）</th>
+				</tr>
+			</thead>
+			<tbody id="report_list"></tbody>
+			
+		</table>
+		<div class="dsp_pagination">
+			<div class="M-box"></div>
+		</div>
+		</div>
+
+	</div>
+	
+	<input type="hidden" page="report" id="hide_info">
+	<script type="text/javascript" src="../assets/common/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/charts/echarts.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/datepicker/moment.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/datepicker/daterangepicker.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/pagination/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../assets/common/js/common.js"></script>
+	<script type="text/javascript" src="../assets/api/js/dataReport.js"></script>
+		
+</body>
+</html>

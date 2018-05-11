@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>时尚星秀喊你来领奖啦！</title>
+</head>
+
+<body>
+<header>
+  <video src="http://starshow-file.b0.upaiyun.com/videos/csmall.mp4" poster="images/video.jpg"  preload="auto" controls webkit-playsinline style="width: 100%; position: relative; display: inline;"></video>
+</header>
+<section class="logo"> <img src="images/logo.png"> </section>
+<section class="step1">
+  <h2>金猫银猫携手时尚星秀 <br>
+    初秋送豪礼</h2>
+  <section class="formInfo">
+    <input type="tel" placeholder="请输入手机号" class="telephone" maxlength="11" size="11" />
+    <input type="password" placeholder="密码只能为6-14位字母或数字的组合" class="password" maxlength="14"/>
+    <input type="button" value="点击领取" class="subBtn">
+  </section>
+</section>
+<section class="step2">
+ <h2></h2>
+  <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xfdream.soft.starshow">下载时尚星秀领取</a> </section>
+<section class="step3">
+  <h2></h2>
+  <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.xfdream.soft.starshow">下载时尚星秀App</a> </section>
+<div class="introduce">
+  <div class="introduceTit"><img src="images/introduceTit.png"></div>
+  <div class="introduceCon">
+    <p>1.输入手机号码，随机获得时尚星秀提供的礼品；</p>
+    <p><span>2.礼品包括：时尚星秀定制吊坠、诺心糕点优惠券、卡斯兰眼影盘、时尚星秀定制公仔；</span></p>
+    <p><img src="images/gift.png"></p>
+    <p>3.礼品发送到手机号对应的【时尚星秀app】账户内，
+      请用该手机号<span>登陆【时尚星秀app】使用</span>；</p>
+    <p>4.活动只限新用户参与哦，已经参与的用户或者已经注册的用户不能二次参与哦~</p>
+    <p>5.时尚星秀保留法律范围内允许的对活动的解释权。</p>
+  </div>
+</div>
+<div id="telephone" class="dialog_tip" style="display:none;">
+  <div title="关闭窗口" class="js-close"> <span>×</span> </div>
+  <div class="messdivCons">
+    <p>请输入联系电话</p>
+  </div>
+</div>
+<div id="password" class="dialog_tip" style="display:none;">
+  <div title="关闭窗口" class="js-close"> <span>×</span> </div>
+  <div class="messdivCons">
+    <p>密码只能为6-14位字母或数字的组合</p>
+  </div>
+</div>
+<script type="text/javascript" src="js/zepto.min.js"></script> 
+<script type="text/javascript" src="js/tcc.js"></script> 
+<script type="text/javascript" src="js/csmall.js"></script>
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<!-- 统计代码 -->
+<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

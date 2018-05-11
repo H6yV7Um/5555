@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="mobileoptimized" content="0"/>
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="screen-orientation" content="portrait">
+<meta name="browsermode" content="application">
+<link rel="stylesheet" type="text/css" href="css/animations.css">
+<link rel="stylesheet" type="text/css" href="css/wm.css">
+<link rel="stylesheet" type="text/css" href="css/fakeLoader.css">
+<meta name="keywords" content=""/>
+<title>星秀陪你过圣诞</title>
+<script>var gSound = 'https://starshow-file.b0.upaiyun.com/ID/music.mp3';</script>
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background: url(images/bg.jpg) center center;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+}
+</style>
+</head>
+
+<body onLoad="init()">
+<div class="fakeloader"></div>
+<div class="page">
+  <div><img src="images/tree.png" class="tree a-fadeinB "></div>
+  <div><img src="images/logo.png" class="a-rotateinLT logo delay2"> </div>
+  <div><img src="images/video.png" class="a-bounceinT video delay delay4"></div>
+  <div><img src="images/videoIcon.png" class="a-bounceinT video  video2 delay3"></div>
+  <div><a href="video.html"><img src="images/star.gif" class="a-bounceinT starVideo delay3"></a></div>
+  <div><a  href="watch.html"><img src="images/watch.png" class="watch a-fadeinT delay1"></a></div>
+  <div><a  href="Package.html"><img src="images/Package.png" class="Package a-fadeinT delay2"></a></div>
+  <div><a  href="skin.html"><img src="images/skin.png" class="skin a-fadeinT delay3"></a></div>
+  <div><a  href="fashion.html"><img src="images/fashion.png" class="fashion a-fadeinT delay4"></a></div>
+  <div><a  href="Perfume.html"><img src="images/Perfume.png" class="Perfume a-fadeinT delay5"></a></div>
+  <div><a  href="shoes.html"><img src="images/shoes.png" class="shoes a-fadeinT delay6"></a></div>
+  <div><a  href="Makeup.html"><img src="images/Makeup.png" class="Makeup a-fadeinT delay7"></a></div>
+  <div><a  href="GiftBox.html"><img src="images/GiftBox.png" class="GiftBox a-fadeinT delay8"></a></div>
+  <div><a  href="jewels.html"><img src="images/jewels.png" class="jewels a-fadeinT delay9"></a></div>
+  <div><a  href="life.html"><img src="images/life.png" class="life a-fadeinT delay10"></a></div>
+  <div><img src="images/light01.png" class="a-fadein light01"></div>
+  <div><img src="images/light02.png" class="a-fadein light02"></div>
+  <div><img src="images/light03.png" class="a-fadein light03"></div>
+  <div class="star a-fadein delay4"><a href="http://share.xingxiu.tv/starshow5.0/news/share.html?new_id=3945"><img src="images/star.png" ></a></div>
+  
+</div>
+<script type="text/javascript" src="js/zepto.js"></script> 
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript" src="js/ThreeCanvas.js"></script> 
+<script type="text/javascript" src="js/Snow.js"></script> 
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/fakeLoader.min.js"></script>
+<script type="text/javascript">
+$(function(){
+$(".fakeloader").fakeLoader({
+	timeToHide:1200,
+	bgColor:"#e7223e",
+	spinner:"spinner2"
+});
+	setTimeout("wx_share()",2000)
+	//setTimeout(function(){},4000)	
+})
+var pop_up_note_mode = true;
+var note_id = 1;
+
+function id(name) {
+	return document.getElementById(name);
+}
+
+
+function switchsound() {
+	au = id('bgsound');
+	ai = id('sound_image');
+	if (au.paused) {
+		au.play();
+		ai.src = "http://zt.house365.com/project/wh/weixin/web/20141212_weixiu/images/music_note_big.png";
+		pop_up_note_mode = true;
+		popup_note();
+		id("music_txt").innerHTML = "打开";
+		id("music_txt").style.visibility = "visible";
+		setTimeout(function() {
+			id("music_txt").style.visibility = "hidden"
+		}, 2500);
+	} else {
+		pop_up_note_mode = false;
+		au.pause();
+		ai.src = "http://zt.house365.com/project/wh/weixin/web/20141212_weixiu/images/music_note_big.png";
+		id("music_txt").innerHTML = "关闭";
+		id("music_txt").style.visibility = "visible";
+		setTimeout(function() {
+			id("music_txt").style.visibility = "hidden"
+		}, 2500);
+	}
+}
+
+function on_pop_note_end(event) {
+	note = event.target;
+
+	if (note.parentNode == id("note_box")) {
+		id("note_box").removeChild(note);
+		console.log("remove note id " + note.getAttribute("id"));
+	}
+}
+
+function popup_note() {
+	box = id("note_box");
+
+	note = document.createElement("span");
+	note.style.cssText = "visibility:visible;position:absolute;width:15px;height:25px";
+	note.style.left = Math.random() * 20 + 20;
+	note.style.top = "75px";
+	this_node = "music_note_" + note_id;
+	note.setAttribute("ID", this_node);
+	note_id += 1;
+	scale = Math.random() * 0.4 + 0.4;
+	note.style.webkitTransform = "rotate(" + Math.floor(360 * Math.random()) + "deg) scale(" + scale + "," + scale + ")";
+	note.style.webkitTransition = "top 2s ease-in, opacity 2s ease-in, left 2s ease-in";
+	note.addEventListener("webkitTransitionEnd", on_pop_note_end);
+	box.appendChild(note);
+
+	setTimeout("document.getElementById('" + this_node + "').style.left = '0px';", 100);
+	setTimeout("document.getElementById('" + this_node + "').style.top = '0px';", 100);
+	setTimeout("document.getElementById('" + this_node + "').style.opacity = '0';", 100);
+
+	if (pop_up_note_mode) {
+		setTimeout("popup_note()", 600);
+	}
+}
+
+function playbksound() {
+	var audiocontainer = id('audiocontainer');
+	if (audiocontainer != undefined) {
+		audiocontainer.innerHTML = '<audio id="bgsound" loop="loop" autoplay="autoplay"> <source src="' + gSound + '" /> </audio>';
+	}
+
+	var audio = id('bgsound');
+	audio.play();
+
+	sound_div = document.createElement("div");
+	sound_div.setAttribute("ID", "cardsound");
+	sound_div.style.cssText = "position:absolute;right:7%;top:19%;z-index:5000;visibility:visible;";
+	box_htm = "<div id='note_box' style='height:100px;width:44px;position:absolute;left:-20px;top:-80px'></div>";
+	bg_htm = "<img id='sound_image' onclick='switchsound()' src='images/music_note_big.png' class='a-fadeinT delay4'>";
+	txt_htm = "<div id='music_txt' style='color:white;position:absolute;left:-40px;top:30px;width:60px'></div>"
+	sound_div.innerHTML = bg_htm + box_htm + txt_htm;
+	document.body.appendChild(sound_div);
+	setTimeout("popup_note()", 100);
+}
+
+function in_weixin() {
+	var ua = navigator.userAgent.toLowerCase();
+
+	if (ua.match(/MicroMessenger/i) == "micromessenger") {
+		return true;
+	}
+
+	return false;
+}(function() {
+	var onBridgeReady = function() {
+
+			playbksound();
+
+
+		};
+
+	if (document.addEventListener) {
+		document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+	} else if (document.attachEvent) {
+		document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+		document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+	}
+	if (!in_weixin()) {
+		setTimeout("playbksound()", 500);
+		//setTimeout("translateUrl(link)", 1000);
+	}
+})();
+
+	</script>
+<div id="audiocontainer"></div>
+</script>
+<!-- 统计代码 --> 
+<script type="text/javascript" src="../../tj.php"></script> </body>
+</html>

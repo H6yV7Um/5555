@@ -1,0 +1,159 @@
+
+html{color:#000;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,
+textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}caption,th{text-align:left;}
+
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;
+    font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+input[type="button"], input[type="submit"], input[type="reset"],input[type="text"],input[type="search"],select{
+-webkit-appearance: none;
+outline: 0;
+-webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+textarea {-webkit-appearance:none;outline:0;} 
+html,body{ margin:0px;} 
+img{vertical-align: middle}
+a{text-decoration: none;}
+
+.title {
+    width:98%;
+    padding: 15px 0 ;
+    text-align: center;
+    background: url(../images/icon-title.png) no-repeat center left ;
+    background-size:7%;
+    border-bottom: 1px solid #dedede;
+    margin:10px 1%;
+}
+.txt_title{width: 80%; overflow: hidden; 
+    border:none; color: #666; height: 2rem; line-height: 2rem; font-size: 1.3rem}
+.btn-poster{width: 92%; margin: 20px auto 0 auto}
+.btn_upload_poster{ width: 79%; overflow: hidden; margin: 20px auto}
+.btn_upload_poster img{width: 100%}
+.posterArea img{width:100%;}
+.linkArea{width: 100%; overflow: hidden;}
+.linkArea img{width: 100%}
+.container {
+    width: 100%;
+    height: 30rem;
+    background-color: #fff;
+    text-align: left;
+    text-shadow: none;
+    margin:0 auto;
+    font-size:62.5%;
+}
+#textarea1{display: none;}
+.btnList{width: 92%; text-align: center; border-top:1px solid #dedede; padding-top:10px; margin:0 auto;
+}
+.btn_publish{border:none; padding: 5px; font-size: 1rem; color: #666}
+
+
+.dialog_tip{
+    background: #ffffff;
+    text-align: left;
+    border: 1px solid #dedede;
+    font-size: 12px;
+    width: 90%;
+    /* border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px; */
+
+}
+.js-close{
+    background: #fff;
+    float: right;
+    height: 20px;
+    padding: 5px 0 0 10px;
+    color: #000;
+    margin-right: 10px;
+}
+.messdivCons{
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    /* padding:5px 0 10px; */
+} 
+.messdivCons input[type="text"]{border:none;border-bottom:1px solid #dedede; width: 90%; height: 2rem; 
+    margin: 10px auto 0; font-size: 12px;}
+.messdivFoot {text-align: right; padding-bottom:10px; padding-top:10px}
+.messdivFoot input[type="button"]{text-align: center; margin-right: 10px; border:none; padding:5px 10px;}
+.btn_addLink{background: #ff1d3e; color: #fff}
+.btn_addLink_cancel{background: #dedede; color: #666}
+.prevViewCon{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    background: #ffffff
+}
+
+.prevViewCon .icon_back{
+    position: absolute;
+    top:20px;
+    left: 20px;
+    width: 2rem;
+    overflow: hidden;
+}
+.prevViewCon .icon_back img{
+    width: 100%
+}
+/* .prevViewCon .cons{width: 95%; margin: 0 auto; font-size: 1rem;}
+.prevViewCon .cons h1{text-align: center; word-break: break-all; } 
+.prevViewCon .poster {width: 100%; margin: 0}
+.prevViewCon .poster img{width: 100%}*/
+
+/**/
+#BOX_overlay{position: absolute;z-index: 100;top: 0px;left: 0px;background-color:#ccc;filter: alpha(opacity=70);-moz-opacity: 0.7;opacity: 0.7;}
+.js-close{
+    background: #fff;
+    float: right;
+    height: 20px;
+    padding: 5px 0 0 10px;
+    color: #000;
+    margin-right: 10px;
+}
+#tipCon .messdivCons{
+    width: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    padding:20px 0 40px;
+}
+
+.wangEditor-mobile-txt{font-size:0.9rem;}
+.wangEditor-mobile-txt .previmg-container {
+    max-width: 100%;
+    text-align: left;
+    position: relative;
+    min-height: 100px;
+    background: rgba(248,246,246,0.9)  }
+.wangEditor-mobile-txt .previmg-container .info {
+    top: 30%;
+    background-color: #666;
+}
+
+/*media
+     *<320  5s
+     *>414  6plus
+*/
+@media screen and (max-width: 320px) {
+   .container { height:24rem;}
+}
+@media screen and (min-width: 410px) {
+    .container { height:32rem; }
+}

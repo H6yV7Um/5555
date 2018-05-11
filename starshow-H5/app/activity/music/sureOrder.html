@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+<meta name="msapplication-tap-highlight" content="no">
+<link rel="stylesheet" type="text/css" href="css/style.css?v=2018">
+<title>确认订单</title>
+</head>
+
+<body class="grayBg">
+<div class="sureOrder">
+  <h2>为方便您线下兑换纸质票，请输入一下信息</h2>
+  <form action="" method="get">
+    <div class="userInfo">
+      <dl>
+        <dt> 联系人：</dt>
+        <dd>
+          <input type="text" class="name" placeholder="请输入联系人">
+        </dd>
+      </dl>
+      <dl>
+        <dt> 联系电话：</dt>
+        <dd>
+          <input type="text" class="telephone" maxlength="11" size="11" onkeyup='this.value=this.value.replace(/\D/gi,"")' placeholder="请输入联系电话">
+        </dd>
+      </dl>
+    </div>
+  </form>
+</div>
+<div class="paid">
+  <p>一个用户只能购买一张</p>
+</div>
+<div class="btn"><a  href="javascript:;">提交订单</a></div>
+<div id="messdiv" class="dialog_tip" style="display:none;">
+  <div title="关闭窗口" class="js-close"> <span>×</span> </div>
+  <div class="messdivCons">
+    <h2>您有未完成的订单</h2>
+    <p><a  href="javascript:;" class="gopayBtn">去处理</a></p>
+  </div>
+</div>
+<div id="name" class="dialog_tip" style="display:none;">
+  <div title="关闭窗口" class="js-close"> <span>×</span> </div>
+  <div class="messdivCons">
+    <p>请输入联系人</p>
+  </div>
+</div>
+<div id="telephone" class="dialog_tip" style="display:none;">
+  <div title="关闭窗口" class="js-close"> <span>×</span> </div>
+  <div class="messdivCons">
+    <p>请输入联系电话</p>
+  </div>
+</div>
+<script type="text/javascript" src="js/zepto.js?v=2023"></script> 
+<script type="text/javascript" src="js/music.js?v=2025"></script> 
+<script type="text/javascript" src="js/tcc.js"></script> 
+<script type="text/javascript">
+$(".js-close").click(function(){
+  BOX_remove("messdiv");
+  BOX_remove("name");
+  BOX_remove("telephone");
+})
+</script>
+</body>
+</html>

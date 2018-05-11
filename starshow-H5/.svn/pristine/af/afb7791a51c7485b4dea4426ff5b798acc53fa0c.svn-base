@@ -1,0 +1,231 @@
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: inherit;
+  font-weight: inherit; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+input, button, textarea, select {
+  *font-size: 100%; }
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"], input[type="search"], select {
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+textarea {
+  -webkit-appearance: none;
+  outline: 0; }
+
+html, body {
+  margin: 0px;
+  min-height: 100%;
+  font-family: "Microsoft YaHei"; }
+
+html {
+  font-size: 20px;
+  box-sizing: border-box; }
+
+img {
+  vertical-align: middle; }
+
+a {
+  text-decoration: none; }
+
+body {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch; }
+
+.big_box {
+  width: 100%;
+  position: relative; }
+
+.box {
+  width: 100%;
+  height: 100%;
+  /* background: url("../images/ye3_02.png") no-repeat 0 0; */
+  background-size: 100% 100%; }
+  .box .header_box {
+    width: 100%; }
+    .box .header_box .header {
+      width: 100%; }
+      .box .header_box .header .header_img {
+        width: 100%;
+        position: relative; }
+        .box .header_box .header .header_img img {
+          width: 100%; }
+      .box .header_box .header .ul_big {
+              width: 98%;
+    height: 2.7rem;
+    background: url(../images/ye33_02.png) no-repeat 0 0;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1%;
+    margin: 0 auto;
+    position: absolute;
+    top: 15.7rem;
+    left: 0;}
+        .box .header_box .header .ul_big li:nth-child(1) {
+          width: 100%;
+          text-align: left; }
+          .box .header_box .header .ul_big li:nth-child(1) .name {
+            
+            font-size: 1.2rem;
+            color: #000;
+            font-weight: bold;float: left;  }
+          .box .header_box .header .ul_big li:nth-child(1) .school {
+           color: #000;
+    font-size: 0.5rem;
+    float: left;
+margin-left:5px;
+  }
+        .box .header_box .header .ul_big .old_num {
+          width: 28%;
+          font-size: 1.2rem;
+          color: #000;    text-align: right; }
+        .box .header_box .header .ul_big .user_desc {
+             position: absolute;
+	     font-size:12px;
+    bottom: 18px;
+    left: 18px; }
+        .box .header_box .header .ul_big .user_desc span {
+          font-size: 12px;
+          margin-left:5px;}
+sub{
+	      font-size: 1.2rem;
+    color: #ff1d3e;
+    position: absolute;
+    font-weight: bold;
+	  }
+  .box .main {
+    width: 100%; }
+    .box .main p {
+      width: 90%;
+      margin: 1rem auto;
+      margin-top: 4.5rem;
+      font-size: 16px;
+      line-height: 25px;
+      color: #7A8586; }
+    .box .main .main_photo {
+      width: 100%;
+     
+      padding-bottom: 1rem;    overflow: hidden; }
+      .box .main .main_photo h3 {
+        width: 40%;
+        height: 1.6rem;
+        line-height: 1.6rem;
+        background: #78d2fa;
+        background-size: 100% 100%;
+        font-size: 0.7rem;
+        text-align: center;
+        color: #000;
+        font-weight: bold;
+        margin: 20px auto; }
+      .box .main .main_photo ul {
+        width: 98%;
+        
+        margin: 0.3rem 2% 0.3rem 0 ; }
+        .box .main .main_photo ul li {
+             width: 31%;
+    height: 4.65rem;
+    margin: 0.3rem 0 0 2%;
+    float: left;
+    display: inline;}
+          .box .main .main_photo ul li img {
+            width: 100%;
+            height: 100%; }
+    .box .main .main_video {
+      width: 90%;
+      margin: 0 auto; }
+      .box .main .main_video .video {
+        width: 100%; }
+
+footer {
+  width: 100%;
+  height: 5rem;
+ 
+  z-index: 2000; }
+  footer .footer_box {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto; }
+    footer .footer_box div {
+      width: 25%; }
+      footer .footer_box div img {
+        width: 100%; }
+
+.bigImgcon {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000; }
+  .bigImgcon .swiper-container {
+    width: 100%;
+    height: 100%; }
+    .bigImgcon .swiper-container .swiper-slide {
+      text-align: center; }
+
+.upBox {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.8rem; }
+  .upBox .up {
+    width: 5rem;
+    height: 3rem;
+    background: #fff; }
+
+/*# sourceMappingURL=personage.css.map */

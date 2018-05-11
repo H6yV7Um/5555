@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh-CN">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <!--<meta name="apple-itunes-app" content="app-id=903692043" />-->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>店铺首页</title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/js/lib/swiper-3.4.0.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/shophome.css">
+    <script>
+        (function (win, doc) {
+            function change() {
+                doc.documentElement.style.fontSize =
+                    doc.documentElement.clientWidth / 7.5 + "px";
+            }
+            change();
+            win.addEventListener('resize', change, false);
+        })(window, document)
+    </script>
+</head>
+
+<body>
+    <div class="shop-page" style="display:none">
+        <div class="shop-header">
+
+                <div class="header-con-row" style="height:45px;">
+                    <div class="shop-pic">
+                        <img src="" alt="">
+                    </div>
+                    <div class="shop-name"></div>
+                </div>
+                <div class="header-con-clm">
+                    <div class="shop-pic">
+                        <img src="" alt="">
+                    </div>
+                    <div class="shop-name"></div>
+                </div>
+        </div>
+        <div class="blank"></div>
+        <div class="product-area">
+            <ul class="product-list flex-row">
+                <!-- <li class="product-item">
+                    <a href="#">
+                        <div class="img-wrap">
+                            <img src="assets/images/shop.png" alt="">
+                        </div>
+                        <div class="item-info">
+                            <div class="item-name two-line">SANTONI女士鳄鱼皮纹及踝镂空真皮高跟鞋</div>
+                            <div class="item-price">&yen;
+                                <span>123.45</span></div>
+                        </div>
+                    </a>
+                </li> -->
+
+            </ul>
+        </div>
+    </div>
+<section class="loadding">
+    	<div class="spinner">
+		  <img src="assets/images/loadding.gif" height="40" width="40" />
+		</div>
+    </section>
+    <script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="../assets/js/common/bridge2.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/swiper-3.4.0.min.js"></script>
+    <script type="text/javascript" src="assets/js/shophome.js"></script>
+</body>
+
+</html>

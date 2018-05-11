@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>拍卖流程</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div class="process">
+		<ul>
+			<li>
+				<span class="process_nums">1</span>
+				<span>检索喜爱的拍品</span>
+			</li>
+			<li>
+				<span class="process_nums">2</span>
+				<span>缴纳相应的保证金</span>
+			</li>
+			<li>
+				<span class="process_nums">3</span>
+				<span>出价竞拍</span>
+			</li>
+			<li>
+				<span class="process_nums">4</span>
+				<span>竞拍成功</span>
+			</li>
+			<li>
+				<span class="process_nums">5</span>
+				<span>完善资料并支付</span>
+			</li>
+			<li>
+				<span class="process_nums">6</span>
+				<span>卖家发货</span>
+			</li>
+			<li>
+				<span class="process_nums">7</span>
+				<span>买家收货</span>
+			</li>
+			<li>
+				<span class="process_nums">8</span>
+				<span>交易完成</span>
+			</li>
+		</ul>
+		<div class="cb"></div>
+	</div>
+	<div>
+		<h1 class="tc mt20">拍卖流程图</h1>
+		<img src="process.png" width="100%">
+	</div>
+</body>
+</html>

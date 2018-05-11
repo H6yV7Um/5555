@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>美妆即享 奇迹绽放 美颜奇机&4&0&7</title>
+</head>
+
+<body>
+<div class="camera"><img src="images/mlqj_01.jpg"><img src="images/mlqj_02.jpg"><img src="images/mlqj_03.jpg"><img src="images/mlqj_04.jpg"><img src="images/mlqj_05.jpg"><img src="images/mlqj_06.jpg"><img src="images/mlqj_07.jpg"><img src="images/mlqj_08.jpg"><img src="images/mlqj_09.jpg"><img src="images/mlqj_10.jpg"><img src="images/mlqj_11.jpg"><img src="images/mlqj_12.jpg"><img src="images/mlqj_13.jpg"><img src="images/mlqj_14.jpg"><img src="images/mlqj_15.jpg"><img src="images/mlqj_16.jpg"></div>
+</body>
+</html>

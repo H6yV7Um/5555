@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1,user-scalable=no">	
+	<title>校园大使&1&1&8</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css?v=22">
+  <link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css?v=22" />
+</head>
+<body>
+<section class="mrMain" id="js-mrMain" style="display:none">
+<section class="mrBanner">
+	<img src="assets/images/banner.jpg" class="mr_bg"/>
+   <!-- <a class="cere-search">
+      <img src="assets/images/search-bg.png">
+   </a> -->
+	<p class="icon-rule"><a href="rule.html"><img src="assets/images/icon-rule.png" /></a></p>
+	<!-- <div class="banner-desc">已有<span id="joinNumber"></span>人参与</div> -->
+</section>
+<nav class="cereNav">
+		<ul id="js-switchTab-area">
+		<li class="cur"><div>华北</div></li>
+		<li><div>华东</div></li>
+		<li><div>华南</div></li>
+		<li><div>西南</div></li>
+    <li><div>西北</div></li>
+		</ul>
+</nav>
+<!--js-switchTab-sex-->
+ <nav class="cereNavSex">
+    <ul id="js-switchTab">
+      <li class="cur">作品展示</li>
+      <li>排名榜</li>
+    </ul>
+</nav>
+<section class="prodMain listCons" id="con1">
+
+ <section class="class_tit">
+    <div class="img_count">全部作品<span>（共<span class="allNum">0</span>幅）</span></div>
+    <!-- <div class="btn_columns btn_cons" num="3">
+      <span class="cur">最新</span>|<span>最热</span>
+    </div> -->
+  </section>
+ <ul class="prodList">
+  <!-- <li>
+    <div class="prodPoster">
+      <img class="poster" src="assets/images/prod-temp.png" />
+      <div class="poster_zan cur">
+        <img src="assets/images/zan-red.png"  width="26" />
+        <span>90000票</span>
+      </div>
+    </div>
+    <div class="prodInfo">
+      <div class="headPic"><img src="assets/images/headPic-default.png" /></div>
+      <div class="prodCons">
+        <p><span>物理玛丽</span></p>
+        <p><span>2分钟</span></p>
+      </div>
+    </div>
+  </li> -->
+</ul>
+<div class="tc more-rank" id="js-moreRank">点击加载更多...</div>
+</section>
+<section  class="rankingMain listCons" id="con2" style="display:none">
+    <div class="curPersonInfo"></div>
+
+	<ul class="rankList">
+		
+	</ul>
+	<p class="tc more-rank" id="js-moreRank" >点击加载更多...</p>
+</section>
+
+<div id="toAdd" class="btn_add"><img src="assets/images/btn-join.png" /></div>
+<div id="btn_video" class="btn_video"><img src="assets/images/btn-video.png" /></div>
+</section>
+
+<div id="messdiv-tip" class="dialog_tip" style="display:none" >
+  
+  <div class="messdivCons">
+    <h1>登录后，首次观看完视频可获取一次投票机会</h1>
+    <div class="mess_btns">
+      <span id="btn_cancel">取消</span><span id="btn_sure">关闭</span>
+    </div>
+  </div>
+</div>
+<!-- <div id="messdiv" class="dialog_join" style="display:none" >
+   <div title="关闭窗口" class="js-close">
+      <img src="assets/images/live_close.png"  width="20">
+    </div>
+    <div class="messdivCons">
+     
+      
+      
+    </div>
+</div> -->
+<div id="BOX_overlay"></div>
+
+<section class="loadding">
+  <div class="spinner">
+  <img src="assets/images/loadding2.gif" height="80" width="80">
+  </div>
+</section>
+<section class="loadding3" id="videoCon" style="display:none">
+  <div class="video_close" id="video_close"><img src="assets/images/live_close.png" width="30"></div>
+  <div class="spinner2">
+   <video id="adVideo" controls  preload="auto" poster="assets/images/adv-poster.png"  x-webkit-airplay="true" webkit-playsinline="true">
+          <source src="http://starshow-file.b0.upaiyun.com/videos/wfsp.mp4" type="video/mp4" />
+          <p>Your browser does not support the video tag.</p>
+    </video>
+  </div>
+</section>
+<input type="hidden" id="joinStatus" status="0" /> 
+<input type="hidden" id="type" status="detail" /> 
+<!-- test-->
+
+<!-- <div class="test">
+	动态
+	<div id="toDynamics">动态</div>
+    分享2
+    <div id="toShareLimited">分享仅微信和微信朋友圈</div>
+</div> -->
+	<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+  <script type="text/javascript" src="../assets/js/common/common.js"></script>
+  <script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+  <script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="assets/js/common.js?v=11"></script>
+	<script type="text/javascript" src="assets/js/js.js?v=330"></script>
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

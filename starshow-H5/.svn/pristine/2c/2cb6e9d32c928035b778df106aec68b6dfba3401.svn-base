@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>collection Auction international</title>
+	<link rel="stylesheet" type="text/css" href="assets/js/lib/swiper/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cangp.css">
+</head>
+<body>
+
+	<div class="cangp_header"  id="js_header"></div>
+	<div class="cangp_leader">
+		<span><a href="index.html">collection Auction international</a></span>&gt;
+		<span><a href="auctions.html?mt=1">Auction</a></span>&gt;
+		<span class="js_goods_tit"></span>
+	</div>
+	<div class="goodsMain">
+		<div class="cangp_con2">
+			<div class="con2_left2">
+				<div class="goods_focus">
+					<img src="assets/images/defalut_cover.png"  class="goods_banner"/>
+					<div class="js_goods_video"></div>
+					<!--title-->
+					<div class="goods_bg"></div>
+					<div class="goods_tit"></div>
+					<!--pagenation-->
+					<div class="g_pagination">
+						<ul class="js_pagination">
+							<!-- <li>
+								<img src="assets/images/pic2.png" />
+							</li> -->
+							
+						</ul>
+					</div>
+				</div>
+				<!--goods focus end-->
+				<div class="tc mt20 mb20"><a href="auctionCerti.html?mt=4"><img style="width:100%;" src="assets/images/progress2.png" /></a></div>
+				<div class="desc_menu">
+					<ul class="js_tab">
+						<li class="cur">introduce</li>
+						<li>Auction record</li>
+						<li>Service guarantee</li>
+					</ul>
+				</div>
+				<div class="tab_con con1">
+					<div class="friend_tip">
+						<p>Friendship reminder:：<br/>
+						1、Send institutions of enterprise qualification audit, but lots to introduce (text, images, video, etc.) and sale qualification documents (certificate of origin certificate, identification, etc.) are issued by the institutions themselves and upload,All the relevant information of the products shall be borne by the seller on its own<br/>
+2、Most of the items are the only ones，The "7-day return" service is the seller's optional service guarantee,But it's not mandatory,Please take full consideration before bidding.
+					   </p>
+					</div>
+					<div class="coll_params">
+						<h1>商品名称:<span></span></h1>
+						<ul class="mt10">
+							<!--<li>
+								高度:<span>18cm</span>
+							</li>
+							<li>
+								口径:<span>48cm</span>
+							</li>
+							<li>
+								地径:<span>28cm</span>
+							</li>
+							<li>
+								年代:<span>明代</span>
+							</li>
+							<li>
+								品相:<span>18cm</span>
+							</li>-->
+
+
+						</ul>
+					</div>
+					<div class="cb"></div>
+					<div class="collection_con js_collection_con">
+					
+					</div>
+				</div>
+
+				<div class="tab_con con2 offersList" style="display:none">
+					<h1>Auction record(<span class="offers_num"></span>times)</h1>
+					<table>
+						<thead>
+							<tr>
+								<td>state</td>
+								<td>Bidders</td>
+								<td>price</td>
+								<td>time</td>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+				</div>
+				<div class="tab_con con3" style="display:none">
+                <p> Service guarantee</P>
+                <p><span class="about_tit">Delivery agency services and commitments</span></p>
+                <p>The sending agency promises to truthfully describe the product;</p>
+				<p>Send agencies to clinch a deal not to sell, will be carried out in accordance with the rules of ping island's punishment, the top five times the number of users will receive items deposit compensation (auto/home twice as the highest category) as compensation for the bidding success;</p>
+				<p>About freight: after the success of the auction, the sending agency will be responsible for the follow-up of the sales.</p>
+				<p>About auction commission charge: according to the provisions of the auction law of the People's Republic of China, after the success of the bidders in the bidding, should be based on the auction house () the commodity page description of commission agreement, pay the prescribed ratio, amount of commission.</p>
+                <p><span class="about_tit">Auction of basic services</span></p>
+                <p><span class="col_orange">Truthful description commitment</span></p>
+				<p>The sending agency promises to faithfully describe and once the description of the item is not in accordance with the description, the buyer may submit the auction complaint to the auction house after the successful transaction</p>
+				<p><span class="col_orange">Margin guarantee</span></p>
+				<p>To send the auction house to enter the auction to need to pay a higher operating margin, the buyer safeguard
+				<p><span class="col_orange">After-sales service guarantee</span></p>
+The sending agency promises to provide a comprehensive after-sales service, and the buyer may require the auction to step in after the auction and the sale of the auction</p>
+					
+				</div>
+			</div>
+			<div class="con2_right2">
+				<div class="goodsInfo">
+					<h1><span class="priceName"></span><span class="curPrice"></span></h1>
+					<ul>
+						<li>Starting price<span class="startPrice"></span></li>
+						<li>deposit<span class="bail"></span></li>
+						<li>Watched<span class="col_orange watch_num"></span>times</li>
+						<li>Auction record<span class="col_orange offers_num"></span>times</li>
+					</ul>
+					<div class="goods_seller"></div>
+					<div class="tc"><input type="button" value="Pay margin" class="js_dialog btn_pay"></div>
+					<!-- <div class="mentions">Unsuccessful auction of the collection, the deposit will be refunded</div> -->
+				</div>
+				<div class="cangp_tit_left">
+					<span class="title_left"><span class="fb"> </span>EXPERT</span>
+					
+				</div>
+				<ul class="expertMsgList">
+					<!-- <li>
+						<div class="user_header">
+									    		<img src="assets/images/icon-head.png" class="icon_header"/>
+									    		<img src="assets/images/icon-roles1.png"  class="icon_role"/>
+									    		<span class="name">名字</span>
+									    	</div>
+									    	<h1 class="msg_tit">与质细腻</h1>
+									    	<div class="msg_con">
+									    		龙是古代中国灵异动物，在古代龙象征帝王，也用来指至高无典雅返璞归真之韵味，让人心怡神悦，爱不释手
+									    	</div>
+					</li> -->
+					
+				</ul>
+				<div class="cangp_tit_left">
+					<span class="title_left"><span class="fb"> </span> POPULAR COLLECTION</span>
+				</div>
+				<div class="cangp_hot">
+					<div class="swiper-container cangp_list">
+					    <div class="swiper-wrapper"></div>
+					        
+					    <!-- 如果需要分页器 -->
+					    <div class="swiper-pagination"></div>
+					    
+					    <!-- 如果需要导航按钮 -->
+					    <div class="swiper-button-prev"></div>
+					    <div class="swiper-button-next"></div>
+		
+					
+				</div>
+
+
+
+			</div>
+		</div>
+
+	</div>
+	<div class="cb"></div>
+	<div class="tc cangp_bg_white mt20"><img src="assets/images/promise.png" ></div>
+    <div class="cangp_footer" id="js_footer"></div>
+    <input type="hidden" id="hide_cangp" page="goodsDetail">
+	<script type="text/javascript" src="assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/swiper/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/api/common.js"></script>
+	<script type="text/javascript" src="assets/api/cangp.js"></script>
+	</body>
+</html>

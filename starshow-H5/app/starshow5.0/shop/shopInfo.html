@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<!--<meta name="apple-itunes-app" content="app-id=903692043" />-->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>店铺信息</title>
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<style>
+	html,body{
+		font-size: 62.5%
+	}
+	.shopMain{
+		width: 100%;
+		overflow: hidden;
+	}
+	.shopMain ul{
+
+	}
+	.shopMain li{
+		width: 92%;
+		padding:0 4%;
+		line-height: 5rem;
+		font-size: 1.5rem;
+		border-bottom: 1px solid #DCDCDC;
+	}
+	.shopMain li img,.shopMain li span{
+		vertical-align: middle;
+	}
+	.shopMain li img.icon_arraw{
+		width: 10px;
+		margin-left: 10px;
+	}
+	.txt_shopName{
+		vertical-align: middle;
+		border:none;
+		display: none;
+
+	}
+</style>
+</head>
+<body>
+	<div class="shopMain">
+		<ul>
+			<li>
+				<span>店铺logo</span>
+				<img src="" class="shop_cover">
+			</li>
+			<li>
+				<span>店铺名称</span>
+				<div class="fr">
+					<input  class="txt_shopName"/>
+					<span class="shop_name">LV旗舰店</span>
+					<img src="assets/images/icon-arraw-right.png"  class="icon_arraw">
+				</div>
+			</li>
+			<li>
+				<span>店铺名称</span>
+				<div class="fr">
+					<span class="shop_addr">北京西城区</span>
+					<img src="assets/images/icon-arraw-right.png"  class="icon_arraw">
+				</div>
+			</li>
+			<li>
+				<span>退货地址管理</span>
+				<div class="fr">
+					<img src="assets/images/icon-arraw-right.png"  class="icon_arraw">
+				</div>
+			</li>
+		</ul>
+		
+	</div>
+	<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="assets/js/shopInfo.js"></script>
+</body>
+</html>

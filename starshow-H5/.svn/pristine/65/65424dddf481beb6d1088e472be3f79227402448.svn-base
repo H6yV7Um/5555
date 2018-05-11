@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">	
+	<title>单品详情</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/swiper/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css.css">
+</head>
+<body>
+	<a id="btn_download2"><img src="../assets/images/icon/download.png" width="100%" /></a>
+	<div class="c-main c-detail"  style="display:none">
+		<div class="m-header">
+			<!-- <img src="assets/images/banner.png" width="100%" class="player-banner"/> -->
+			<div class="swiper-container">
+			    <div class="swiper-wrapper" id="swiper-wrapper">
+			        <!-- <div class="swiper-slide">Slide 1</div>
+			        <div class="swiper-slide">Slide 2</div>
+			        <div class="swiper-slide">Slide 3</div> -->
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			</div>
+			<!--轮播图-->
+			<div class="pre_times2"  style="display:none"></div>
+	    </div>
+	    <div class="m-user">
+	    	<div class="users">
+	    		<img class="user_head vm" src="assets/images/icon-head.png"/>
+	    		<span class="user_name vm">中国艺术博览会</span>
+	    	</div>
+	    	<div class="btn_ring" style="display:none"><img src="assets/images/btn-ring.png" /></div>
+	    </div>
+	    <div class="goodsInfo_point"></div>
+	    <div class="expertList">
+	    	<div class="fl"><img src="assets/images/jianbao.png"><span>大师鉴证</span></div>
+	    	<div class="fr">
+	    		<ul class="list"></ul>
+	    		<span class="expert_num">0&gt;</span>
+
+	    	</div>
+	    </div>
+	    <div class="goodsInfo">
+	    	<!-- <ul>
+	    		<li>起拍价：<span class="start_price"></span></li>
+	    		<li>保证金：<span class="start_bail"></span></li>
+	    		<li>涨幅：<span class="start_rise"></span></li>
+	    		<li>运费：<span class="start_freight"></span></li>
+	    	</ul> -->
+	    </div>
+	    <div class="auctionDesc">	
+	    	<!--<h1>拍卖参数</h1>-->
+	    	<div id="auction_params"></div>
+	    	<h1>拍卖介绍</h1>
+	    	<div id="auction_con"></div>
+	    </div>
+	    <div class="m-price">
+	    	<h1>出价记录（<span class="price_num">0</span>次）</h1>
+	    	<ul class="lists" id="priceList">
+	    		
+
+	    	</ul>
+	    	<div id="price_more" style="display:none">加载更多</div>
+	    </div>
+	    <div class="detail_footer">
+	    	<div class="fl">
+	    		<a href="../protocol/help.html"><img src="assets/images/icon-help.png" width="20" class="vm"/><span class="vm">帮助</span></a>
+	    	</div>
+	    	<span class="btn_enter">进入拍卖场&gt;</span>
+	    </div>
+	</div>
+	<input type="hidden" id="hide_status" />
+	<section class="init-loadding" >
+    	<div class="spinner">
+		  <img src="../assets/images/loadding.gif" height="80" width="80" />
+		</div>
+    </section>
+<div class="btn_point" id="btn_point"  style="display:none">左滑进入拍卖场</div>
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+<script type="text/javascript" src="../assets/js/lib/swiper/swiper-3.4.0.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="../../applinks/openApp.js"></script>
+<script type="text/javascript" src="../assets/js/lib/hammer.min.js"></script>
+<script type="text/javascript" src="assets/detail.js"></script>
+</body>
+</html>

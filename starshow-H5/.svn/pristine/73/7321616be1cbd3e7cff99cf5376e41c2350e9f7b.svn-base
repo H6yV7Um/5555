@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+<head>
+<meta http-equiv="Content-Type">
+<meta content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title>星榜咖榜 商品兑换汇总</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+<div class="rankRule">
+  <h1>星榜咖榜 商品兑换汇总</h1>
+  <h2>一．粉丝打榜说明</h2>
+  <p>打榜形式：点赞，明星获得的赞数越多，则说明人气越高；<br/>
+    单个账户给同一个明星只能打榜一次，打榜成功后，可通过邀请链接，邀请好友来为明星打榜，打榜的数量同时累积到分享者和该明星下（只记录一次） </p>
+  <h2>二．打榜福利</h2>
+  <p>每个明星详情下有各粉丝拉榜的排名；<br/>
+    粉丝通过为自己（邀请好友）为明星打榜，获得一定数量的赞数后，可去明星详情页面的商品列表中，对应相应的礼品： <br/>
+    参与度高的粉丝还有机会参加线下粉丝见面会等机会； </p>
+  <h2>三．福利领取</h2>
+  <p>为明星打榜所获得的赞数可兑换不同的限量商品，扣除商品对应的数量后，剩余赞数不清零，为明星打榜的总赞数不变，但商品兑换时，以扣除之前已兑换的赞数为准； <br/>
+    选择兑换商品后，填写相关的收货信息，我们会尽快安排发货给您；
+    兑换进度可在【我的】-【订单】-【订单详情】页面查看</p>
+</div>
+</body>
+</html>

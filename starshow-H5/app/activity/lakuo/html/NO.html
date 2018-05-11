@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>欢迎来到拉阔校草！</title>
+    <link rel="stylesheet" href="../css/NO.css" />
+    <script src="../js/rem.js"></script>
+    <script src="../js/zepto.min.js"></script>
+</head>
+<body>
+<div class="box">
+    <div class="banner"><img src="../images/banner_new.jpg" /></div>
+    <div class="banner_di">
+        <div class="main">
+            <div class="mian_img"><img src="../images/pass_03.png" /></div>
+            <div class="sub">审核未通过</div>
+            <p class="fail_reason"></p>
+        </div>
+        <div id="btn_apply" class="ok">报名</div>
+    </div>
+</div>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/common/common.js"></script>
+<script>
+ var jwt_token = commonCla.analyzParams("jwt_token") == undefined ? "": commonCla.analyzParams("jwt_token");
+ $(function(){
+	var url=commonCla.hostBase+"/lakuo/checkStatus?jwt_token="+jwt_token;
+	commonCla.ajaxCommonFun(url,"get",function (ret) {
+		if(ret.code=="200"){
+			$(".fail_reason").html(ret.data.reason)
+		}
+	})
+   $("#btn_apply").click(function(){
+    window.location.href="apply.html?jwt_token="+jwt_token
+   })
+ })
+</script>
+<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

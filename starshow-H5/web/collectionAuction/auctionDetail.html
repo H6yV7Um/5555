@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>藏拍</title>
+	<link rel="stylesheet" type="text/css" href="assets/js/lib/swiper/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cangp.css">
+</head>
+<body>
+	<div class="cangp_header"  id="js_header"></div>
+	<div class="cangp_leader">
+		<span><a href="index.html">首页</a></span>&gt;
+		<span class="js_auctions_tit"></span>
+	</div>
+	<div class="cangp_detail_tit">
+		<div class="d_left">
+			<!-- <div class="imgCon"><img src="assets/images/pic2.png" /></div> -->
+			<div class="swiper-container swiper-container-auction">
+				    <div class="swiper-wrapper" id="js-livesList">
+				        
+				        <!-- <div class="swiper-slide">
+				        	<div class="imgCon"><img src="assets/images/pic2.png" /></div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<div class="imgCon"><img src="assets/images/pic2.png" /></div>
+				        </div> -->
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				    <!-- 如果需要导航按钮 -->
+				    <!-- <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div> -->
+				</div>
+		</div>
+		<div class="d_right" id="js_theme_desc">
+			<span class="auc_mark">专场</span>
+			<h1>国联福尔名家画江南专场</h1>
+			<div class="desc_con1"></div>
+			<div class="desc_con2"></div>
+		</div>
+	</div>
+	<div class="auctions_main auction_detail">
+		<div class="cangp_tit_left" id="js_title">
+			<span class="title_left"><span class="fb">全部拍品 </span>(<span id="c_length"></span>件) / ALL</span>
+			<span class="title_right" id="js_orderRule">
+				<span class="cur">默认排序</span><span>价格排序</span><span>热度排序</span> 
+		    </span>
+		</div>
+		<ul id="js_collections">
+			<!--<li>
+				<div class="imgCon">
+					<img src="assets/images/pic2.png" />
+					<span class="auc_status lost">已流拍</span>
+				</div>
+				<div class="auc_desc">
+					<p>水面卜文华本劣质太，恣意畅快之中</p>
+				    <p class="">送拍机构：社风奢侈品</p>
+				</div>
+
+			</li>-->
+			
+		</ul>
+
+	</div>
+	<div class="tc cangp_bg_white"><img src="assets/images/promise.png" ></div>
+	<div class="cangp_footer" id="js_footer"></div>
+	<input type="hidden" id="hide_cangp" page="auctionDetail">
+    <script type="text/javascript" src="assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/swiper/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/api/common.js"></script>
+	<script type="text/javascript" src="assets/api/cangp.js"></script>
+</body>
+</html>

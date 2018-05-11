@@ -1,0 +1,142 @@
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: inherit;
+  font-weight: inherit; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+input, button, textarea, select {
+  *font-size: 100%; }
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"], input[type="search"], select {
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+textarea {
+  -webkit-appearance: none;
+  outline: 0; }
+
+html, body {
+  margin: 0px;
+  min-height: 100%;
+  font-family: "Microsoft YaHei"; }
+
+html {
+  font-size: 20px; }
+
+img {
+  vertical-align: middle; }
+
+a {
+  text-decoration: none; }
+
+.box {
+  width: 100%; }
+  .box .banner {
+    width: 100%; }
+    .box .banner img {
+      width: 100%; }
+  .box .one {
+    width: 86%;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 1.3rem; }
+    .box .one img {
+      width: 100%; }
+    .box .one .lc {
+      width: 100%;
+      display: flex;
+      justify-content: space-between; }
+      .box .one .lc span {
+        display: block;
+        width: 16%;
+        font-size: 0.05rem; }
+  .box .banner_di {
+    width: 100%;
+    height: 100%;
+    
+    background-size: 100% 100%; }
+  .box .main {
+    width: 100%;
+    padding: 2rem 0; }
+    .box .main .mian_img {
+      width: 29%;
+      margin: 0 auto; }
+      .box .main .mian_img img {
+        width: 100%; }
+    .box .main .sub {
+      font-size: 0.7rem;
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      margin-top: 0.2rem; }
+    .box .main p {
+      width: 52%;
+      font-size: 0.1rem;
+      color: #000;
+      text-align: center;
+      margin: 0.8rem auto; }
+  .box .ok {
+    width: 40%;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    background:#eb4197;
+    background-size: 100% 100%;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin: 0 auto;
+    margin-bottom: 1.9rem;
+    padding: 0.3rem 0;
+    text-align: center; }
+
+/*# sourceMappingURL=OK.css.map */

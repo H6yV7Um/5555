@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>拉阔校草评比大赛</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/rem.js"></script>
+	<script src="js/zepto.min.js"></script>
+	<script src="js/common/common.js"></script>
+</head>
+<body>
+    <main>
+	<!--//加广告改为 5s main_jump 删掉dispaly:none -->
+        <div class="main_img"><img src="images/3s-2.jpg" /></div>
+        <span  class="main_jump" style="dislay:none">
+            跳过广告<span id="totalSecond">5</span>s
+        </span>
+		<audio id="myAudio" src="images/hello.mp3" style="
+	    visibility: hidden;
+	    position: absolute;
+	    bottom: 0;
+	"></audio>
+    </main>
+    <script>
+    var jwt_token = commonCla.analyzParams("jwt_token") == undefined ? "": commonCla.analyzParams("jwt_token");
+     
+    var myAudio=document.getElementById("myAudio");
+    //加广告改为 second =5;
+    var second =0;var t5="";
+    var onBridgeReady=function(){  
+        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {  
+            document.getElementById('myAudio').play();
+        });  
+    }
+    var redirect=function(){
+           $("#totalSecond").html(Number($("#totalSecond").html())-1);
+           //加声音
+            if (second <=1){
+               clearInterval(t5);
+               var ua = navigator.userAgent.toLowerCase();
+               var isA = ua.indexOf("android") > -1;
+               if (isA) {
+                myAudio.play();
+               }
+               var isIph = ua.indexOf("iphone") > -1;
+               if (isIph) {
+                if (typeof WeixinJSBridge === "undefined"){
+                    document.addEventListener("WeixinJSBridgeReady", onBridgeReady , false);    
+                }else{
+                    onBridgeReady();
+                }
+               }
+			   if (!isA || !isIph) {
+                myAudio.play();
+               }
+
+               $(".main_img img").attr("src","images/3s-2.jpg");
+               $(".main_jump").hide();
+              //hello 
+              var timer=2;
+              var t=setInterval(function(){
+                timer--
+                if(timer<=0){
+                clearInterval(t);
+                window.location.href = 'html/ranking.html?jwt_token='+jwt_token;
+                }
+                
+              }, 1000);
+            }else {
+                 //倒计时
+                $('#totalSecond').innerText = timer-1;
+            } 
+           second--
+        }
+    $(function(){
+        $(".main_jump").click(function(){
+          window.location.href="html/ranking.html?jwt_token="+jwt_token;
+        })
+        //加广告改为 1000
+         t5=setInterval("redirect()", 0);
+
+        
+    })
+    </script>
+    <script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

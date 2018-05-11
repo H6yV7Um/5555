@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时尚星秀广告投放管理平台</title>
+    <link rel="stylesheet" type="text/css" href="../assets/common/js/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../assets/api/css/backstage.css">
+    <link rel="stylesheet" type="text/css" href="../assets/common/js/lib/pagination/pagination.css">
+
+</head>
+<body>
+    <div class="dspHeader"></div>
+    <div class="dspMenu"></div>
+    <div class="dspContainer">
+    <div class="message-page indexList dsp_container">
+        <h2 class="mes-title">站内信（<span class="mes-total">0</span>条）</h2>
+        <div class="mes-con">
+            <ul class="mes-list">
+                <!-- <li class="mes-list-item">
+                    <div class="item-head">
+                        <h4 class="notic">广告审核被拒通知<span class="unread"></span></h4>
+                        <span class="time">2019/12/05</span>
+                    </div>
+                    <p>您提交的审核未通，原因是：说的垃圾到的就爱上了的骄傲了大大世纪大道阿斯加德了卡德加安利的拉的大家爱看的骄傲了的骄傲来得及拉大了大洛杉矶的拉动啊</p>
+                </li> -->
+            </ul>
+        </div> 
+        <div class="dsp_pagination">
+            <div class="M-box"></div>
+        </div>
+    </div>
+    </div>
+</body>
+<script type="text/javascript" src="../assets/common/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../assets/common/js/lib/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../assets/common/js/lib/pagination/jquery.pagination.js"></script>
+<script type="text/javascript" src="../assets/common/js/common.js"></script>
+<script type="text/javascript" src="../assets/api/js/message.js"></script>
+</html>

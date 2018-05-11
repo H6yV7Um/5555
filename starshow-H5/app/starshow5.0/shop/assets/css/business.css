@@ -1,0 +1,916 @@
+html {
+    background: #f1f1f1;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+b {
+    font-weight: normal;
+}
+.two-line {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.flex-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+}
+
+.flex-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+}
+
+.business-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    font-size: .3rem;
+}
+
+.business-page .head {
+    width: 100%;
+    background: #FF1D3E;
+    height: 2.45rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .54rem 0 .82rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.business-page .head .title {}
+
+.business-page .head .income {
+    font-family: PingFangSC-Medium;
+    font-size: .48rem;
+    line-height: 42px;
+}
+
+.business-page .function {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .79rem .3rem;
+}
+
+.function .fun-item {
+    width: 3.36rem;
+    height: 3.18rem;
+    border: 1px solid #DCDCDC;
+}
+
+.function .fun-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .75rem 0 0 0;
+}
+
+.function .fun-item .icon {
+    width: 1.06rem;
+    height: 1.06rem;
+    margin-bottom: .1rem;
+}
+
+.function .fun-item .icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.function .fun-item .fun-name {
+    font-size: .36rem;
+}
+
+.apply-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: .3rem;
+    background: #f1f1f1;
+}
+
+.apply-page .order-list a {
+    display: block;
+    width: 100%;
+}
+
+.apply-page .order-item {
+    width: 100%;
+    background: #fff;
+    margin-top: .2rem;
+}
+
+.apply-page .order-item .order-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .3rem .3rem;
+}
+
+.apply-page .order-num {
+    font-family: PingFangSC-Light;
+    font-size: .28rem;
+    color: #000000;
+    letter-spacing: 0.39px;
+}
+
+.apply-page .order-status {
+    font-family: PingFangSC-Light;
+    font-size: .28rem;
+    color: #F5A623;
+}
+
+.apply-page .order-info .product-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.33rem;
+    padding: 0 .3rem;
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.apply-page .product-info .prod-img {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid #F0F0F0;
+    border-radius: 10px;
+    margin-right: .2rem;
+}
+
+.apply-page .product-info .prod-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.apply-page .product-info .prod-des {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 1.8rem;
+    padding: .06rem 0;
+}
+
+.apply-page .product-info .prod-name {
+    letter-spacing: -0.1px;
+    line-height: .46rem;
+}
+
+.apply-page .product-info .prod-class {
+    font-size: .26rem;
+    color: #898989;
+}
+
+.apply-page .product-info .prod-amount {
+    font-size: .22rem;
+    color: #898989;
+}
+
+.apply-page .order-info .order-des {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .26rem .3rem .3rem;
+    font-size: .28rem;
+    color: #000000;
+    letter-spacing: 0.39px;
+}
+
+.apply-page .order-info .order-des .apply-type,
+.apply-page .order-info .order-des .apply-reason {
+    margin-bottom: .1rem;
+}
+
+.apply-page .order-operate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 .3rem .3rem;
+}
+
+.apply-page .order-operate .btn {
+    width: 3.3rem;
+    height: .6rem;
+    text-align: center;
+    line-height: .6rem;
+    border: 1px solid #417505;
+    border-radius: 6px;
+    color: #417505;
+}
+
+.apply-page .order-operate .accept ,.apply-page .order-operate .btn_comfirm{
+    border-color: #EB1010;
+    color: #FF1D3E;
+}
+
+
+/* 申请详情 */
+
+.handle-page {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; */
+    width: 100%;
+    font-size: .3rem;
+    background: #f1f1f1;
+    font-size: .3rem;
+    padding-bottom: 1.4rem;
+}
+
+.handle-page .product-info {
+    background: #fff;
+    /* margin-bottom: 1.4rem; */
+    /* border-bottom: 1px solid #dcdcdc; */
+}
+
+.handle-page .product-info h2 {
+    width: 100%;
+    padding: .28rem 4%;
+    border-bottom: 1px solid #F0F0F0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.handle-page .product {
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.dispute-des {
+    width: 100%;
+    padding: 0 4% .3rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: PingFangSC-Light;
+    font-size: .26rem;
+    color: #626161;
+    letter-spacing: 0.36px;
+    background: #fff;
+}
+
+.dispute-des div {
+    margin-bottom: .13rem;
+}
+
+.dispute-des div:last-child {
+    margin-bottom: 0;
+}
+
+.product {
+    width: 100%;
+    height: 2.4rem;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .3rem;
+    margin-bottom: .2rem;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.product .product-img {
+    width: 1.8rem;
+    height: 1.8rem;
+    background: #eee;
+    border-radius: 10px;
+    border: 1px solid #979797;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.product .product-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.product .product-info {
+    height: 1.7rem;
+    justify-content: space-between;
+    margin-left: .2rem;
+}
+
+.product-name {
+    font-family: PingFangSC-Regular;
+    font-size: .3rem;
+    color: #000000;
+    line-height: .46rem;
+    width: 4rem;
+        height: .9rem;
+    overflow: hidden;
+}
+
+.product-size {
+    font-family: PingFangSC-Light;
+    font-size: .26rem;
+    color: #898989;
+}
+
+.product-price {
+    font-family: PingFangSC-Regular;
+    font-size: .3rem;
+    color: #FF1D3E;
+    line-height: .21rem;
+}
+
+.product-price .amount {
+    font-family: PingFangSC-Light;
+    font-size: .24rem;
+    color: #898989;
+}
+
+.handle-page .tip,
+.handle-page .tip2 {
+    width: 100%;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: .2rem;
+    border-bottom: 1px solid #DCDCDC;
+}
+.handle-page .tip2 p span{
+    float: none;
+}
+.handle-page .tip,
+.returngoods-page .tip {
+    padding: .41rem 4%;
+}
+
+.handle-page .tip p {
+    font-family: PingFangSC-Regular;
+    font-size: .34rem;
+    color: #FF1D3E;
+    letter-spacing: 0.47px;
+    line-height: .48rem;
+}
+
+.handle-page .tip p:nth-child(1) {
+    font-weight: 500;
+}
+
+.handle-page .tip p:nth-child(2) {
+    font-family: PingFangSC-Light;
+    font-size: .28rem;
+    color: #FF1D3E;
+    letter-spacing: 0.39px;
+    line-height: .4rem;
+}
+
+.status-block .tip2 {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.status-block .tip2 p:nth-child(1) {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .3rem 0 .28rem .27rem;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.problem-des {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .2rem .3rem .32rem;
+}
+
+.problem-des h2 {
+    font-family: PingFangSC-Regular;
+    color: #000000;
+    letter-spacing: 0.39px;
+    font-weight: 600;
+}
+
+.problem-des p {
+    font-family: PingFangSC-Light;
+    font-size: .28rem;
+    color: #000000;
+    letter-spacing: 0.39px;
+    line-height: .4rem;
+    text-indent: .56rem;
+    margin-bottom: .28rem;
+}
+
+.problem-des .img-area {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.problem-des .img-area .img-outer {
+    width: 1.65rem;
+    height: 1.65rem;
+    background: #D8D8D8;
+    margin-bottom: .1rem;
+    margin-right: 1%;
+}
+
+.problem-des .img-area .img-outer img {
+    width: 100%;
+    height: 100%;
+}
+
+.problem-des .img-area .img-outer:last-child {
+    margin-bottom: 0;
+}
+
+.handle {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    font-size: .3rem;
+    color: #FFFFFF;
+}
+
+.handle .btn {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background: #898989;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.50);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.50);
+}
+
+.handle .accept,.handle .btn_comfirm  {
+    background: #FF1D3E;
+}
+
+.pic-swiper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+}
+
+.swiper-wrapp,
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+
+/* 发货物流 */
+
+.delivery-page {
+    width: 100%;
+    font-size: .3rem;
+}
+
+.delivery-page .return-address,
+.ordersDetail-page .return-address {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .23rem .3rem .3rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 1px solid #DCDCDC;
+    background: #fff;
+    margin-bottom: .2rem;
+}
+
+.return-address .market-img {
+    width: .4rem;
+    height: .4rem;
+    background: url(../images/marker.png) no-repeat;
+    background-size: .4rem;
+    margin-right: .2rem;
+}
+
+.return-address .return-msg .ads {
+    color: #626161;
+    letter-spacing: 0.39px;
+    font-size: .28rem;
+    margin-top: .09rem;
+}
+
+.return-block .write-delivery {
+    display: block;
+    width: 3.66rem;
+    height: .7rem;
+    ;
+    border: 1px solid #EB1010;
+    border-radius: 6px;
+    margin: 0 auto;
+    font-family: PingFangSC-Regular;
+    color: #FF1D3E;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: .7rem;
+}
+
+.delivery {
+    background: #fff;
+}
+
+.delivery-way,
+.delivery-select,
+.delivery-number {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .3rem;
+    border-top: 1px solid #DCDCDC;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.delivery-number {
+    border-bottom: 1px solid #DCDCDC;
+    margin-bottom: .2rem;
+}
+
+.delivery-way h2,
+.delivery-select h2,
+.delivery-number h2 {
+    font-family: PingFangSC-Regular;
+    font-size: .3rem;
+    color: #000000;
+}
+
+.delivery-number input,
+.delivery-select input {
+    height: 100%;
+    border: none;
+    text-align: right;
+}
+
+.confirm-btn {
+    width: 6.4rem;
+    height: .9rem;
+    margin: 0 auto;
+    background: #FF1D3E;
+    border-radius: 6px;
+    font-family: PingFangSC-Regular;
+    font-size: .3rem;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: .9rem;
+}
+.confirm-btn-dis {
+    width: 6.4rem;
+    height: .9rem;
+    margin: 0 auto;
+    background: #ddd;
+    border-radius: 6px;
+    font-family: PingFangSC-Regular;
+    font-size: .3rem;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: .9rem;
+}
+.reason-select {
+    position: fixed;
+    z-index: 4;
+    background: #FFFFFF;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    z-index: 3;
+    display: none;
+}
+
+.reason-select .reason-area {
+    /* position: absolute; */
+    /* bottom: 0; */
+    width: 100%;
+    height: 8.03rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.reason-select .reason-area .head {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 1.1rem;
+    border-bottom: 1px solid #DCDCDC;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 4%;
+    font-family: PingFangSC-Regular;
+    font-size: .34rem;
+}
+
+.reason-select .close {
+    width: .3rem;
+    height: .3rem;
+    background: url(../images/close.png) no-repeat;
+    background-size: .3rem;
+}
+
+.reason-select .determine {
+    font-size: .32rem;
+}
+
+.reason-select .reason-area .select-area {
+    width: 100%;
+    height: 6.9rem;
+    padding-top: .18rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.reason-select .reason-area .select-area li {
+    width: 100%;
+    padding: .35rem 0;
+    text-align: center;
+    font-family: FZLTXHK--GBK1-0;
+    font-size: .32rem;
+    color: #000000;
+    letter-spacing: 0.44px;
+}
+
+.reason-select .reason-area .select-area li.select {
+    color: #fff;
+    background: #FF1D3E;
+}
+
+.delivery-page .product,
+.ordersDetail-page .product {
+    margin-bottom: 0;
+}
+
+.delivery-page .product:first-child,
+.ordersDetail-page .product:first-child {
+    border-top: 1px solid #DCDCDC;
+}
+
+.delivery-page .product:last-child,
+.ordersDetail-page .product:last-child {
+    margin-bottom: .2rem;
+}
+
+.payment {
+    width: 100%;
+    padding: .34rem .3rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: #fff;
+    border-top: 1px solid #DCDCDC;
+    border-bottom: 1px solid #DCDCDC;
+    font-family: FZLTHJW--GB1-0;
+    font-size: .28rem;
+    color: #000000;
+    margin-bottom: .55rem;
+}
+
+.payment .value {
+    font-family: FZLTHJW--GB1-0;
+    font-size: .3rem;
+    color: #EB1010;
+}
+
+
+/* 订单详情 */
+
+.ordersDetail-page {
+    width: 100%;
+    font-size: .3rem;
+    padding-bottom: 1.4rem;
+}
+
+.payment-item {
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: .23rem .3rem;
+    background: #fff;
+    font-family: PingFangSC-Light;
+    font-size: .28rem;
+    color: #626161;
+    letter-spacing: 0.39px;
+}
+
+.payment-item .item {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: .16rem;
+}
+
+.payment-item .item:last-child {
+    margin-bottom: 0;
+}
+
+.ordersDetail-page .dispute-des {
+    padding-top: .3rem;
+}
+
+.ordersDetail-page .order-status {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .43rem 0 .37rem .43rem;
+    background: #fff;
+    margin-bottom: .2rem;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.ordersDetail-page .order-status .status-icon {
+    width: .7rem;
+    height: .7rem;
+    margin-right: .3rem;
+}
+
+.ordersDetail-page .order-status .status-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.ordersDetail-page .order-status .countdown h2 {
+    font-size: .34rem;
+    color: #000000;
+    letter-spacing: 0.47px;
+}
+
+.ordersDetail-page .order-status .countdown p {
+    font-size: .28rem;
+    color: #898989;
+    letter-spacing: 0.39px;
+}
+
+.ordersDetail-page .return-address {
+    border-top: 1px solid #dcdcdc;
+}
+
+.sweet-alert {
+    width: 55%;
+    margin-left: 15%;
+}
+
+.sweet-alert h2 {
+    font-size: .3rem;
+    margin: 10px auto;
+    line-height: .4rem
+}
+
+.sweet-alert button {
+    background-color: #ff1d3e;
+    padding: 5px 22px;
+    font-size: .3rem;
+    margin: 10px 5px 0 5px;
+}
+
+.sweet-alert p {
+    font-size: .3rem;
+    margin: 10px 0;
+}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+<meta name="msapplication-tap-highlight" content="no">
+<link rel="stylesheet" type="text/css" href="css/style.css?v=2012">
+<title>订单详情</title>
+</head>
+
+<body class="grayBg">
+<div class="orderDetail"> </div>
+<div class="noOrder">
+  <p></p>
+</div>
+<script type="text/javascript" src="js/zepto.js"></script> 
+<script type="text/javascript">
+var analyzUrl = function() {
+    var paramsList = {}
+    var url = window.location.search.split("?")[1];
+    var params = url.split("&");
+    for (var i = 0; i < params.length; i++) {
+        var keyName = params[i].split("=")[0];
+        var value = params[i].split("=")[1];
+        paramsList[keyName] = value;
+    }
+    return paramsList;
+}
+var uid = analyzUrl()["uid"];
+var order_id = analyzUrl()["order_id"];
+var bUrl = 'http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=music_order_detail&uid=' + uid + '&order_id=' + order_id  + '&returntype=jsonp&callback=?';
+getOrderDetail(bUrl)
+function getOrderDetail(a) {
+    $.getJSON(a, 
+    function(a) {
+		var orderInfo = "";
+        var orderList = "";
+        if ("succ" == a.result) {
+            orderInfo = "<div class='orderInfo'><h2>入场兑换码：</h2>";
+            orderInfo += "<p>" + a.info.orderCode + "</p></div>";
+            orderList = "<div class='userInfo'><dl><dt>订单状态：</dt><dd>" + a.info.orderStatus + "</dd></dl>";
+			
+            orderList += "<dl><dt>订单编号：</dt><dd>" + a.info.orderID + "</dd></dl>";
+            orderList += "<dl><dt>活动名称：</dt><dd> 当古典遇上时尚，朱亦兵大提琴演奏分享会</dd></dl>";
+            orderList += "<dl><dt>活动时间：</dt><dd> 19:30-21:00</dd></dl>";
+            orderList += "<dl><dt>活动地点：</dt><dd>北京大隐剧院</dd></dl>";
+            orderList += "<dl><dt>金额：</dt><dd>￥50</dd></dl>";
+            orderList += "<dl><dt>联系人：</dt><dd>" + a.info.name + "</dd></dl>";
+            orderList += "<dl><dt>联系电话：</dt><dd>" + a.info.telephone + "</dd></dl>";
+            orderList += "<dl><dt>客服电话：</dt><dd><a href='tel:010-65895320'>010-65895320</a></dd></dl></div>";
+            $(".orderDetail").prepend(orderInfo + orderList);
+			if(a.info.orderStatus=="已取消"){
+				$(".orderInfo").hide();	
+			}
+
+        } else {
+            $(".noOrder p").text("您还没下过订单哦！")
+        }
+    })
+}
+
+</script>
+</body>
+</html>

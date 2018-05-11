@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>诺心&4&0&7</title>
+	<link rel="stylesheet" type="text/css" href="css/cake.css">
+</head>
+<body>
+	<section class="cakeCons">
+		<h1>恭喜你，获得<span id="award_name"></span>优惠券一张</h1>
+		 <div class="coupons_area">优惠码为：<span id="coupons_num"></span></div>
+		 <div class="desc">请于<a>诺心官网www.lecake.com/微商城/APP</a>上使用</div>
+		 <div class="prod_area">
+		 	<img src="images/nx_02.jpg" width="100%" /><img src="images/nx_03.jpg" width="100%" /><img src="images/nx_04.jpg" width="100%" /><img src="images/nx_05.jpg" width="100%" /><img src="images/nx_06.jpg" width="100%" /><img src="images/nx_07.jpg" width="100%" /><img src="images/nx_08.jpg" width="100%" /><img src="images/nx_09.jpg" width="100%" /><img src="images/nx_10.jpg" width="100%" /><img src="images/nx_11.jpg" width="100%" /><img src="images/nx_12.png" width="100%" />
+		 </div>
+	</section>
+	<script type="text/javascript" src="../../assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/cake.js?v=2"></script>
+</body>
+</html>

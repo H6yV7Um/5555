@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8" />
+		<meta name="apple-itunes-app" content="app-id=903692043" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>马拉松报名</title>
+		<link rel="stylesheet" type="text/css" href="../style/css.css" />
+		<link rel="stylesheet" type="text/css" href="../style/enter.css" />
+	</head>
+
+	<body>
+		<div id="box_enter">
+
+			<div class="contain_enter">
+				<form>
+					<select id="region" name="region">
+						<option value="">请选择参赛地区</option>
+						<option value="1">上海</option>
+						<option value="2">济南</option>
+						<option value="3">成都</option>
+						<option value="4">广州</option>
+						<option value="5">大连</option>
+						<option value="6">北京</option>
+					</select>
+
+					<select id="team" name="team">
+						<option value="">请选择参赛战队</option>
+						<option value="1">自胜队</option>
+						<option value="2">超越队</option>
+						<option value="3">动静队</option>
+					</select>
+
+					<input class="name" name="name" type="text" placeholder="姓名" />
+					<input class="id_card" name="id_card" type="text" placeholder="身份证号" />
+					<input class="mobile" name="mobile" type="text" placeholder="联系方式" />
+
+					<select id="size" name="size">
+						<option value="">请选择队服尺码</option>
+						<option value="1">S</option>
+						<option value="2">M</option>
+						<option value="3">L</option>
+						<option value="4">XL</option>
+						<option value="5">XXL</option>
+					</select>
+
+					<input type="button" value="立即参加" class="btn">
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="../script/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="../script/enter.js"></script>
+	</body>
+
+</html>

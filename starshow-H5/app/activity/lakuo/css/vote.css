@@ -1,0 +1,171 @@
+html {
+  color: #000;
+  background: #FFF; }
+html, body{
+height:100%;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: inherit;
+  font-weight: inherit; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+input, button, textarea, select {
+  *font-size: 100%; }
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"], input[type="search"], select {
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+textarea {
+  -webkit-appearance: none;
+  outline: 0; }
+
+html, body {
+  margin: 0px;
+  height: 100%;
+  font-family: "Microsoft YaHei"; }
+
+html {
+  font-size: 20px; }
+
+img {
+  vertical-align: middle; }
+
+a {
+  text-decoration: none; }
+.votetip{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    color: #000;
+    font-size: 14px;
+    z-index: 9;
+    border: 2px solid #eb4197;
+    width: 50%;
+    margin: auto;
+}
+
+.jump_con{
+position: absolute;
+    height: 4rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+        text-align: center;
+    font-size: 22px;
+    display:none
+}
+.btn_jump{
+  font-size: 24px;  
+background: #eb4197;
+margin-top:20px;
+}
+main {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+ /*  background: url("../images/ye2.png") no-repeat 0 0; */
+  background-size: 100% 100%;
+  position: relative; }
+  main .ul_big {
+    width: 100%;
+    height: 3.2rem;
+    background: url("../images/ye33_02.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem 0.3rem; }
+    main .ul_big li:nth-child(1) {
+      width: 50%;
+      text-align: left; }
+      main .ul_big li:nth-child(1) .name {
+        width: 100%;
+        font-size: 1rem;
+        color: #000; }
+      main .ul_big li:nth-child(1) .school {
+        color: #000;
+        font-size: 0.5rem; }
+    main .ul_big .old_num {
+      width: 34%;
+      font-size: 1.2rem;
+      color: #000;
+      margin-top: 0.2rem; }
+
+.mt {
+  width: 100%;
+  height: 28.4rem;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: none; }
+
+.sy {
+  width: 8.5rem;
+  height: 6rem;
+  line-height: 6rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  background: #fff;
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 6.5rem;
+  position: absolute;
+  top: 3rem;
+  left: 4rem;
+  z-index: 2000; }
+
+/*# sourceMappingURL=vote.css.map */

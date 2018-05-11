@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="zh-CN">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <!--<meta name="apple-itunes-app" content="app-id=903692043" />-->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>我是商家</title>
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/business.css">
+    <script>
+        (function (win, doc) {
+            function change() {
+                doc.documentElement.style.fontSize =
+                    doc.documentElement.clientWidth / 7.5 + "px";
+            }
+            change();
+            win.addEventListener('resize', change, false);
+        })(window, document)
+    </script>
+</head>
+
+<body>
+    <div class="business-page">
+        <div class="head">
+            <div class="title">总收入（元）</div>
+            <div class="income"></div>
+        </div>
+        <div class="function">
+            <div class="order-manage fun-item">
+                <a href="orderList.html">
+                    <div class="icon"><img src="../assets/images/manage.png"></div>
+                    <div class="fun-name">订单管理</div>
+                </a>
+            </div>
+            <div class="dispute-apply fun-item">
+                <a href="disputeApply.html">
+                    <div class="icon">
+                        <img src="../assets/images/apply.png">
+                    </div>
+                    <div class="fun-name">售后申请</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../../assets/js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="../../assets/js/common/bridge.js"></script>
+
+    <script type="text/javascript" src="../assets/js/business.js"></script>
+</body>
+
+</html>

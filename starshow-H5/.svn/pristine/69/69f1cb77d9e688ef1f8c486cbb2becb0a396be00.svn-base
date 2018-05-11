@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+  <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>时尚星秀-全明星直播间</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+  <link type="text/css" href="assets/css/video-js.css" rel="stylesheet">
+  <!-- <link href="assets/jcountdown/jcountdown.css" rel="stylesheet" type="text/css"> -->
+  <link rel="stylesheet" type="text/css" href="assets/css/css.css">
+  
+</head>
+<body>
+  
+  <!-- <section class="liveRadioMain" style="height:100%"> -->
+      
+  		<section class="vedioCons">
+        <div class="video-par">
+          <div class="ad_area_main" style="display:none">
+          <div title="关闭窗口" class="js-close2">
+          <img src="assets/images/close-tip.png" width="15" />
+         </div>
+         <div class="ad_area"></div>
+        </div>
+          <div id="player"  class="video">
+          </div>
+        </div>
+  			<div class="vedio_title" style="display:none">
+          <div class="overBox"></div>
+          <img src="" class="vedio_title_bg"/>
+          <div class="userDesc">
+            <img src="" class="uHead"/><br/>
+            <span class="uName"></span>
+          </div>
+          <ul class="videoInfo">
+            <li>
+              <p class="see_num"></p>
+              <p class="desc">观看人数</p>
+            </li>
+            <li>
+               <p class="video_time"></p>
+               <p class="desc">播放时长</p>
+            </li>
+          </ul>
+          <h1></h1>
+        </div>
+        <!--发布视频用户信息-->
+        <div class="typeInfo">
+          <div class="type-pic"><img src=""/></div>
+          <div class="type-desc">
+            <p class="type-desc-main"></p>
+            <p class="tag_label"></p>
+          </div>
+		      <span class='toAppConcern'><a class="app_link">关注</a></span>
+          <div class="cb"></div>
+          <!-- <img src="assets/images/icon-arraw-red.png" height="20" width="25" class="icon-arrow" /> -->
+        </div>
+         <!--发布视频用户信息 end-->
+        <!-- 
+                <div class="vedio_time"></div> -->
+        <section class="descInfo">
+        <div class="desc_part1">
+          <span id="watchNum">0</span>人
+        </div>
+        <div class="desc_part2">
+          <div class="starNum">
+    		  <span></span>
+    		  <img src="assets/images/verlive_xingbi.png" />
+    		  </div>
+          <ul>
+           <!-- <li class="head-pic">
+             <img src="assets/images/head.png">
+             <div class="markclown"><img src="assets/images/crown1.png"></div>
+           </li> -->
+          </ul>
+        </div>
+        
+      </section>
+      <!-- <div class="desc_part3" >  
+          <img src="assets/images/icon-like.png" id="btn-zan"/><span></span>
+        </div>
+      <div class="heart_area" >
+              <div class="heart1 heart">
+              <img src="assets/images/zan.png"/>
+              
+              </div>
+                  <div class="heart2 heart">
+                  <img src="assets/images/zan.png"/>
+            
+              </div>
+                  <div class="heart3 heart">
+                  <img src="assets/images/zan.png"/>
+      
+              </div>
+                  <div class="heart4 heart">
+                  <img src="assets/images/zan.png"/>
+                 
+              </div>
+                  <div class="heart5 heart">
+                  <img src="assets/images/zan.png"/>
+      
+              </div>
+      </div> -->
+      <div class="msgCons" id="con1">
+            <!-- <a href="http://t.cn/R7COgYb"><img src="assets/images/cheat.png" width="100%"></a> -->
+            <ul class="msgList" id="js-msgList">
+             </ul>
+            <!-- <div class="toMsgArea">
+             <img src="assets/images/send-msg.png"/>
+            </div> -->
+        </div>
+        <div class="btn_list"><a  class="app_link">进入客户端参与互动</a>
+          <!--<div class="chat"><a  class="app_link"><img src="assets/images/liaotian.png" /></a></div>
+          <div class="gift"><a  class="app_link"><img src="assets/images/liwu.png" /></a></div>
+          <div class="msg"><a  class="app_link"><img src="assets/images/xiaoxi.png" /></a></div>-->
+        </div>
+  		</section>
+      
+      
+  	    <section class="tabsMain">
+  	    	
+  	    	<section class="tabCons" id="con2">
+  	    		<div class="shortDesc">
+  	    			<h1>
+  	    				<span class="tv-title"></span>
+                        <!-- <img src="assets/images/icon_title.png" class="icon_title"/> -->
+  	    			</h1>
+  	    			<div class="tit_desc">
+  	    				<span id="seeNum"></span>
+  	    				<span id="tit_desc_info" class="ml10"></span>
+  	    			</div>
+  	    		</div>
+
+  	    		<div class="rcdLiveVedio">
+  	    			
+              <div class="vedioList-title"><img src="assets/images/recommand-title.png" ></div>
+  	    			<ul class="vedioList">
+  	    				
+  	    			</ul>
+  	    		</div>
+  	    	</section>   
+  	    	
+  	    </section>
+
+
+ <!--  </section> -->
+<div id="messdiv" class="dialog_tip" style="display:none;">
+     <div title="关闭窗口" class="js-close">
+        <span>×</span>
+    </div>
+    <div class="messdivCons"></div>
+    <div class="dialogFooter">
+      <div class="btn_dialog"><a class="app_link">去下载</a></div>
+      <div class="btn_dialog" id="btn_cancel">取消</div>
+    </div>
+</div>
+
+<input type="hidden" id="share_info" content="" cover="" shareUrl="" />
+<input type="hidden" id="tvStatus" status="" hls="" cover />
+<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+
+<script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js" charset="utf-8"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="../../applinks/openApp.js"></script>
+<script type="text/javascript" src="assets/js/js.js?v=1"></script>
+<script src=""></script>
+<!-- 统计代码 -->
+<!--  <script type="text/javascript" src="../../tj.php"></script>-->
+<script type="text/javascript" src="http://share.xingxiu.tv/tj.php"></script>
+</body>
+</html>

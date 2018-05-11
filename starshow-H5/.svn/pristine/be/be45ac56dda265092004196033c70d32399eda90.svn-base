@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>security deposit</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div class="helps mt20">
+		Q: what is a security deposit? <br />
+A: in order to maintain the legal rights and interests of both parties, the user must pay A certain amount of money as A security deposit to participate in the bidding. <br />
+Q: why should I set up a security deposit? <br />
+A: the deposit is designed to prevent buyers from malicious bidding to disrupt the auction market, or late payment after winning the bid. <br />
+Q: how will the buyer pay the deposit? <br />
+A: after the registration is successful, select any of the items in the production field, click "advance margin" and pay your deposit according to the system process. You can also pay a deposit in advance to facilitate your participation in the auction<br />
+Q: penalty for deposit: <br />
+A: 1. After the successful auction, a transaction order record of "pending payment" is produced，Your security deposit will be frozen before the closing of the transaction<br />
+2. After the auction, the no winning users deposit will no longer be frozen<br />
+Note: if the buyer fails to complete the payment within 72 hours, the system will automatically close the transaction and the deposit will be deducted and not returned.<br />
+	</div>
+</body>
+</html>

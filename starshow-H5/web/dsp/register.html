@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" style="background: #f5f5f5;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册-时尚星秀广告投放平台</title>
+    <link rel="stylesheet" type="text/css" href="assets/common/js/lib/sweetAlert/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="assets/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/api/css/index.css">
+</head>
+<body style="background: #f5f5f5;">
+    <div id="header-wrap">
+        <div class="header w">
+            <div class="h-left">
+                <h1 class="logo">
+                    <a href="index.html"><img src="assets/images/logo.png" alt="starshow"></a>
+                </h1>
+                <h1 class="title">广告投放</h1>
+            </div> 
+            <a href="javascript:void(0);" class="goto-login">已有账号？去登录</a>     
+        </div>
+    </div>
+    <div id="loginBox" class="js-loginBox" style="display: none;"></div>
+    <div id="reg-wrap">
+        <div class="reg-slogan">简单几步开通广告主账号，获得更精准的用户</div>
+        <div class="reg-mian w">
+            <!-- <div class="reg-step">
+                <ul class="step-list">
+                    <li class="step1 active">
+                        <div class="number">1</div>
+                        <p>填写注册信息</p>
+                    </li>
+                    <li class="step2">
+                        <div class="number">2</div>
+                        <p>提交企业资质</p>
+                    </li>
+                    <li class="step3">
+                        <div class="number">3</div>
+                        <p>广告审核投放</p>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="reg-con">
+                <div class="success-alert" style="display:none;"><img src="assets/images/sucs.png">注册成功</div>
+                <div class="reg-step-tab">
+                    <div class="reg-info" style="display: block;">
+                        <form id="form1" method="get" action="">
+                            <ul class="info-form reg-form">
+                                <li>
+                                    <i class="cp-name"></i>
+                                    <input type="text" id="cpName" name="cpName" class="input-text" placeholder="用户名" />
+                                    <p class="error-info"></p>
+                                </li>
+                                <li>
+                                    <i class="password"></i>
+                                    <input type="password" id="password" name="password" class="input-text" placeholder="设置密码" />
+                                    <p class="error-info"></p>
+                                </li>
+                                <li>
+                                    <i class="con_pwd"></i>
+                                    <input type="password" id="conPwd" name="conPwd" class="input-text" placeholder="确认密码" />
+                                    <p class="error-info"></p>
+                                </li>
+                                <li>
+                                    <i class="name"></i>
+                                    <input type="text" id="name" name="name" class="input-text" placeholder="联系人" />
+                                    <p class="error-info"></p>
+                                </li>
+                                <li>
+                                    <i class="tel"></i>
+                                    <input type="text" id="regtel" name="tel" class="input-tel" placeholder="手机号" />
+                                    <p class="error-info"></p>
+                                </li>
+                                <li class="inspect readonly">
+                                    <input type="text" id="regCode" name="validateCode" class="input-text" placeholder="验证码" />
+                                    <button type="button" id="getRegCode" class="xx-btn blue">获取验证码</button>
+                                    <p class="error-info"></p>
+                                </li>
+                            </ul>
+                            <div class="reg-protocol">
+                                <input id="reg-check" type="checkbox" checked="checked" name="agreement" id="agreement" required />
+                                <label for="agreement">我已阅读并同意</label>
+                                <a id="openAgreement" href="protocol.html">《时尚星秀广告推广协议》</a>
+                                <p class="error-info"></p>
+                            </div>
+                            <span id="register-btn" class="xx-btn blue">完成注册</span>
+                            <!-- <span id="register-btn" class="xx-btn blue">完成注册</span>             -->
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="assets/common/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+<script type="text/javascript" src="assets/common/js/common.js"></script>
+<script type="text/javascript" src="assets/api/js/index.js"></script>
+<script type="text/javascript" src="assets/api/js/register.js"></script>
+</html>

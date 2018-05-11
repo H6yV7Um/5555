@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/animation.css">
+<link rel="stylesheet" type="text/css" href="css/touchTouch.css">
+<title>星秀杯纹身大师挑战赛复赛阶段——详情页</title>
+</head>
+
+<body>
+
+<div class="YLlightbox detail">
+  <ul></ul>
+</div>
+<!--
+<div class="rankState" onClick="like()">帮TA打榜</div>
+<div class="yq"><a href="">邀请好友帮Ta打榜</a></div>  -->
+<div class="rankSuc">冲榜成功，(づ￣ 3￣)づ</div>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/YLlightbox.js"></script> 
+<script type="text/javascript">
+var id = location.search.slice(location.search.indexOf("&id=") + 4).split("&")[0];
+var uid= location.search.slice(location.search.indexOf("&uid=") + 6).split("&")[0];
+var q_url="http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=getMastersCupWorks&id="+id+"&uid="+uid+"&returntype=jsonp&callback=?";
+  	getDetail(q_url);
+	function getDetail(a) {
+	$.getJSON(a, function(a) {
+		var k="";
+		if ("succ" == a.result) {
+			for (var b = "", c = 0; c < a.info.length; c++) {
+				var d = "" == a.info[c].avatar ? "images/defaultimage_65x65.png" : a.info[c].avatar;
+				
+				if(a.info[c].video!=''){
+					console.log(d), b += "<li><a href="+a.info[c].video+"><img src="+a.info[c].thumb+"></a></li>";
+				}else{
+					console.log(d), b += "<li><a href='"+a.info[c].thumb2+"' rel='YLlightbox'><img src='"+a.info[c].thumb+"'></a></li>";
+				}
+			}
+			if($.cookie("star_masterSemi_"+id)==null){
+				$(".yq a").attr("href","share.html?id="+id+"&uid="+uid+"&avatar="+a.avatar);
+			}else{
+				$(".rankState").hide();
+				$(".yq").show();
+				$(".yq a").attr("href","share.html?id="+id+"&uid="+uid+"&avatar="+a.avatar);
+			}
+			$(".detail ul ").append(b);
+			
+		}
+	})
+}
+function like() {
+        //var lurl="http://star.xingxiu.tv/master/doDigg?server=1&id="+id+"&uid="+uid+"&returntype=jsonp&callback=?";
+		var lurl = "http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=doMastersCupDigg&uid="+uid+"&id="+id+"&returntype=jsonp&callback=?";
+        $.ajax({
+            url : lurl,
+            dataType : 'json',
+           // data: { uid: uid},
+            type : 'get',
+            global : false,
+            success : function(data) {
+                var v = data.result;
+                if('succ' == v){
+					$(".rankSuc").show();
+					$(".rankSuc").fadeOut(1000);
+					$(".rankState").hide();
+					$(".yq").show();
+					//window.location = "share.html?&uid="+uid+"&id="+id+"";
+					$.cookie('star_masterSemi_'+id, id, { expires: 30 }); 
+					$(".yq a").attr("href","share.html?id="+id+"&uid="+uid+"&avatar="+a.avatar);
+                } else{
+					//window.location = "share.html?uid="+uid+"&id="+id+"";
+					$(".yq a").attr("href","share.html?id="+id+"&uid="+uid+"&avatar="+a.avatar);
+                }
+            }
+        });
+    }
+	
+</script>
+</body>
+</html>

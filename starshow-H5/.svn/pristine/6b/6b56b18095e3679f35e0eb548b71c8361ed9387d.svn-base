@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀广告投放管理平台</title>
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/datepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/datepicker/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../assets/api/css/backstage.css">
+</head>
+<body>
+	<div class="dspHeader"></div>
+	<div class="dspMenu"></div>
+	<div class="dspContainer">
+		<div class="spreadCreat">
+		<div class="dsp_nav">
+			<span>推广管理</span>&gt;<span>创建广告</span>
+		</div>
+		<div class="creat_process">
+			<ul>
+				<li class="cur">
+					<div class="process_num">1</div>
+					<div class="process_desc">设置投放目的</div>
+				</li>
+				<li>
+					<div class="process_num">2</div>
+					<div class="process_desc">完善投放计划</div>
+				</li>
+				<li>
+					<div class="process_num">3</div>
+					<div class="process_desc">创建广告创意</div>
+				</li>
+			</ul>
+		</div>
+
+
+		<div class="stypes" id="stype1">
+			<h1 class="dsp_tit">广告名称</h1>
+			<div>
+				<input type="text" class="txt_con w100P" id="txt_adv_name" placeHolder="命名一个广告标题，方便区分广告">
+			</div>
+			<h1 class="dsp_tit">投放目的</h1>
+			<div class="dsp_tabs" id="js_stype1_type">
+				<div class="tab">原生文章</div>
+				<div class="tab">原生视频</div>
+				<div class="tab cur">落地页</div>
+				<div class="tab">无</div>
+			</div>
+			<div class="tabsCons">
+				<div class="tabCon" id="tabCon1" style="display:none">
+					<h1 class="dsp_tit">文章标题</h1>
+					<input type="text" class="txt_con w100P" id="txt_article_tit" placeHolder="时尚星秀-让你更时尚，让你更闪耀！">
+					<h1 class="dsp_tit">文章内容</h1>
+					<script id="editor" type="text/plain" style="width:100%;height:500px;"></script>
+
+
+				</div>
+
+				<div class="tabCon" id="tabCon2" style="display:none">
+					<h1 class="dsp_tit">视频标题</h1>
+					<input type="text" class="txt_con w100P" id="txt_video_tit" placeHolder="时尚星秀-让你更时尚，让你更闪耀！">
+					<h1 class="dsp_tit">上传视频</h1>
+					<div class="upload_area">
+						<form enctype="multipart/form-data" id="videoForm">
+						 <input type="file" id="videoFile" name="UploadName"  multiple="multiple" accept="video/*">
+						</form>
+						<div class="look js_look" style="display:none">
+						 <video class="uploadVideo" preload="auto" controls src="" height="100%"></video>
+						</div>
+						<span class="del-upload"></span>
+						<div class="js_upload_con upload_con">
+							<h2>点击上传</h2>
+							<p>为保证正常播放，请上传MP4格式视频<br/>视频小于100M,时长小于10分钟</p>
+						</div>
+						
+					</div>
+				</div>
+				<div class="tabCon" id="tabCon3" >
+					<h1 class="dsp_tit">落地页标题</h1>
+					<input type="text" class="txt_con w100P" id="txt_link_tit" placeHolder="时尚星秀-让你更时尚，让你更闪耀！">
+					<h1 class="dsp_tit">链接地址</h1>
+					<input type="text" class="txt_con w100P" id="txt_link" placeHolder="https:">
+				</div>
+				<div class="tabCon" id="tabCon4" style="display:none">
+					<h1 class="dsp_tit">广告标题</h1>
+					<input type="text" class="txt_con w100P" id="txt_wu_tit" placeHolder="时尚星秀-让你更时尚，让你更闪耀！">
+				</div>
+			</div>
+			<div class="btn_list">
+				<input type="button" class="btn_blue btn_preview" value="预览落地效果"/>
+				<input type="button" class="btn_blue btn_next" value="去设置广告计划"/>
+			</div>
+			
+		</div>
+		<div class="stypes" id="stype2" style="display:none">
+			<h1 class="dsp_tit">广告版位</h1>
+			<div class="dsp_tabs tab_type2 js_adv_platform">
+				<div class="tab cur">移动平台</div>
+				<div class="tab">PC平台</div>
+			</div>
+			<div class="tabsCons">
+				<div class="tabCon" id="tabCon1" style="">
+					<div class="fl adv_info">
+						<table class="dsp_table js_adv_location" id="js_adv_mobile">
+						<tr>
+							<th>广告版位</th>
+							<th>创意形式</th>
+							<th>描述</th>
+							<th>日均曝</th>
+						</tr>
+						<tr class="tab cur">
+							<td>移动开屏</td>
+							<td>1242X1900单图/视频</td>
+							<td>app启动页面</td>
+							<td>350万</td>
+						</tr>
+						<tr class="tab">
+							<td>banner</td>
+							<td>750X563单图</td>
+							<td>推荐banner位置</td>
+							<td>350万</td>
+						</tr>
+						<tr class="tab">
+							<td>首页信息流</td>
+							<td>单图/组图/视频</td>
+							<td>首页推荐列表</td>
+							<td>350万</td>
+						</tr>
+						<tr class="tab">
+							<td>时尚/明星banner</td>
+							<td>750X563单图</td>
+							<td>时尚/明星banner位置</td>
+							<td>350万</td>
+						</tr>
+						<tr class="tab">
+							<td>新闻底部插件</td>
+							<td>750X300单图</td>
+							<td>头条详情页底部</td>
+							<td>350万</td>
+						</tr>
+						<tr class="tab">
+							<td>视频播放前</td>
+							<td>750X422视频（5s-15s）</td>
+							<td>视频播放前</td>
+							<td>350万</td>
+						</tr>
+						
+					</table>
+					</div>
+					<div class="adv_Pic fr">
+						<img class="abs_icon" src="../assets/images/icon-arraw.png" height="19" width="17">
+						<img src="../assets/images/adv_tu01.png" width="185">
+					</div>
+				</div>
+				<div class="tabCon" id="tabCon2" style="display:none">
+					<div class="fl adv_info">
+						<table class="dsp_table js_adv_location" id="js_adv_pc">
+						<tr >
+							<th>广告版位</th>
+							<th>创意形式</th>
+							<th>描述</th>
+							<th>日均曝</th>
+						</tr>
+						
+						<tr class="cur tab">
+							<td>首页信息流</td>
+							<td>300X1000单图</td>
+							<td>首页列表</td>
+							<td>350万</td>
+						</tr>
+						<tr class="tab">
+							<td>新闻详情推荐</td>
+							<td>300X225单图</td>
+							<td>头条详情页侧部</td>
+							<td>350万</td>
+						</tr>
+						<tr class="tab">
+							<td>视频详情推荐</td>
+							<td>300x1000单图</td>
+							<td>视频详情页底部</td>
+							<td>350万</td>
+						</tr>
+						<tr class="tab">
+							<td>直播详情推荐</td>
+							<td>300x1000单图</td>
+							<td>直播详情页底部</td>
+							<td>350万</td>
+						</tr>
+						
+						
+					</table>
+					</div>
+					<div class="adv_Pic fr">
+						<img class="abs_icon" src="../assets/images/icon-arraw.png" height="19" width="17">
+						<img src="../assets/images/adv_tu_pc01.png"  width="300" style="margin-top:40px;">
+					</div>
+				</div>
+			</div>
+			<div class="orient_con" style="display:none">
+				<h1 class="dsp_tit">定向</h1>
+				<div>
+					<input type="checkbox" id="check_all" /><span>全选</span>
+				</div>
+				<div class="orient_list">
+					<input type="checkbox" orientId="1527337" name="orient"/><span>星秀报告栏目</span>
+					<input type="checkbox" orientId="2346386" name="orient"/><span>拉阔校草栏目</span>
+					<input type="checkbox" orientId="1593317" name="orient"/><span>双面派栏目</span>
+					<input type="checkbox" orientId="7" name="orient"/><span>星访谈栏目</span>
+					<input type="checkbox" orientId="3320702" name="orient"/><span>主角栏目</span>
+					<input type="checkbox" orientId="3196221" name="orient"/><span>逛吃逛吃栏目</span>
+				</div>
+			</div>
+			<h1 class="dsp_tit">预算和出价</h1>
+			<h2 class="dsp_tit2">日限额</h2>
+			<input type="text" class="txt_con w100P" id="txt_DailyLimit" placeHolder="RMB:请输入价格">
+			<h2 class="dsp_tit2">预计投放日期</h2>
+			<div class="input-group date form_date col-md-5" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                <input class="form-control" id="txt_BeginDate" size="16" type="text" value="" readonly placeholder="开始日期">
+            </div>
+            <span class="mark_blank">——</span>
+            <div class="input-group date form_date col-md-5" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+            		<span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                    <input class="form-control"  id="txt_EndDate" size="16" type="text" value="" readonly placeholder="结束日期">	
+           </div>
+            <div class="cb"></div>
+			<h2 class="dsp_tit2 ">预计投放时间段</h2>
+			<div class="input-group date form_time col-md-5" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+				<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                <input class="form-control" size="16" id="txt_beginTime" type="text" value="" readonly>
+            </div>
+            <span class="mark_blank">——</span> 
+            <div class="input-group date form_time col-md-5" data-date="" data-date-format="hh:ii" data-link-field="dtp_input3" data-link-format="hh:ii">
+            	<span class="input-group-addon"><span class="glyphicon glyphicon-time"></span></span>
+                <input class="form-control" size="16" id="txt_endTime" type="text" value="" readonly>
+            </div>
+			<!-- <input class="txt_con w30p" placeholder="开始时间">   <span class="mark_blank">——</span>  <input class="txt_con w30p" placeholder="结束时间"> -->
+			<div class="cb"></div>
+			<h2 class="dsp_tit2">付费方式</h2>
+			<div class="dsp_tabs tab_type2 js_adv_PaymentType">
+				<div class="tab cur">CPC</div>
+				<div class="tab">CPM</div>
+			</div>
+			<div class="cb"></div>
+			<h2 class="dsp_tit2">单价</h2>
+			<input type="text" class="txt_con w100P" id="txt_single_price" placeHolder="RMB:请输入价格">
+
+			<div class="btn_list">
+				<input type="button" class="btn_blue btn_creat_adv" value="创建广告创意"/>
+				
+			</div>
+
+		</div>
+		<div class="stypes" id="stype3" style="display:none">
+			
+			<div class="fl putIn_type">
+				<h1 class="dsp_tit">投放形式</h1>
+				<div class="dsp_tabs js_adv_imgType">
+					<div class="tab cur">小图</div>
+					<div class="tab">大图</div>
+					<div class="tab">组图</div>
+				</div>
+				<div class="cb"></div>
+				<h1 class="dsp_tit" style="display:none">展示类型</h1>
+				<div class="dsp_tabs js_adv_display" style="display:none">
+					<div class="tab cur">图片</div>
+					<div class="tab">视频</div>
+				</div>
+				<h1 class="dsp_tit cb">展示图片</h1>
+				<div class="upload_area" style="display:none" id="app_video">
+					<form enctype="multipart/form-data" id="videoForm2">
+					 <input type="file" id="videoFile2" name="UploadName"  multiple="multiple" accept="video/*">
+					</form>
+					<div class="look js_look" style="display:none">
+					 <video class="uploadVideo" preload="auto" controls src="" height="100%"></video>
+					</div>
+					<span class="del-upload"></span>
+					<div class="js_upload_con upload_con">
+						<h2>点击上传</h2>
+						<p>为保证正常播放，请上传MP4格式视频<br/>视频小于100M,时长小于10分钟</p>
+					</div>
+					
+				</div>
+				<!-- <div class="upload_area">
+					<h2>点击上传或拖拽到此处</h2>
+					<p>为保证正常播放，时长小于10分钟</p>
+				</div> -->
+				<ul class="uploads">
+					<li>
+						<div class="upload_area">
+							<form enctype="multipart/form-data" id="imgsForm1">
+							 <input type="file" id="imgFile1" name="UploadName"  multiple="multiple" accept="image/*">
+							</form>
+							<div class="look js_look" style="display:none"></div>
+							<span class="del-upload" style="display:none"></span>
+							<div class="js_upload_con upload_con">
+								<h2>点击上传</h2>
+								<p>图片比例：4:3  建议尺寸：750x563<br/>图片大小：小于1M</p>
+							</div>
+							
+						</div>
+					</li>
+					<li>
+						<div class="upload_area">
+							<form enctype="multipart/form-data" id="imgsForm2">
+							 <input type="file" id="imgFile2" name="UploadName"  multiple="multiple" accept="image/*">
+							</form>
+							<div class="look js_look" style="display:none"></div>
+							<span class="del-upload" style="display:none"></span>
+							<div class="js_upload_con upload_con">
+								<h2>点击上传</h2>
+								<p>图片比例：4:3  建议尺寸：750x563<br/>图片大小：小于1M</p>
+							</div>
+							
+						</div>
+					</li>
+					<li>
+						<div class="upload_area">
+							<form enctype="multipart/form-data" id="imgsForm3">
+							 <input type="file" id="imgFile3" name="UploadName"  multiple="multiple" accept="image/*">
+							</form>
+							<div class="look js_look" style="display:none"></div>
+							<span class="del-upload" style="display:none"></span>
+							<div class="js_upload_con upload_con">
+								<h2>点击上传</h2>
+								<p>图片比例：4:3  建议尺寸：750x563<br/>图片大小：小于1M</p>
+							</div>
+							
+						</div>
+					</li>
+				</ul>
+				<h2 class="dsp_tit2">广告来源</h2>
+			    <input type="text" class="txt_con w100P" id="txt_adv_source" placeHolder="此广告由XXXX提供">
+
+			</div>
+			<div class="fr putIn_type_preview">
+				<h1 class="dsp_tit">预览效果</h1>
+				<img src="../assets/images/putIn01.png" width="150px"/>
+			</div>
+			<div class="cb"></div>
+			<div class="btn_list">
+				<input type="button" class="btn_blue btn_creat_Finish" value="提交审核"/>
+				
+			</div>
+		</div>
+		
+
+
+	</div>
+	</div>
+	
+	<div id="messdiv" class="dialog_tip" style="display:none;">
+		<div title="关闭窗口" class="js-close">
+		        	<span>×</span>
+		        </div> 
+        <img src="../assets/images/pb_01.png" width="100%">
+	    <div class="messdivCons">
+
+	    </div>
+	    <img src="../assets/images/pb_03.png" width="100%">
+	</div>
+	<input type="hidden" id="hide_info">
+	<script type="text/javascript" src="../assets/common/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" charset="utf-8" src="../assets/common/js/lib/ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../assets/common/js/lib/ueditor/ueditor.all.min.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="../assets/common/js/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+    <script type="text/javascript" src="../assets/common/js/lib/datepicker/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="../assets/common/js/lib/datepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script type="text/javascript" src="../assets/common/js/common.js"></script>
+	<script type="text/javascript" src="../assets/api/js/spreadCreat.js"></script>
+
+</body>
+</html>

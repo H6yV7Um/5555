@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no, email=no">
+<title>订单详情</title>
+<link rel="stylesheet" type="text/css" href="../public/css/body.css?v=201603181534">
+</head>
+<body class="addcolor">
+<div class="st_orderD_warp">
+  <div class="st_orderD_where">
+    <p class="orderD_title">中国廊坊国际纹身艺术节</p>
+    <p class="orderD_where">廊坊国际会展中心</p>
+    <div class="orderD_time">
+      <ul>
+        <li class="orderD_time_img"></li>
+        <li class="orderD_time_d">
+          <!--<p>2016-03-02  10:00-22:00 </p>
+          <p>2016-03-03  10:00-22:00 </p>
+          <p>2016-03-04  10:00-22:00 </p>-->
+        </li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+  </div>
+  <div class="st_orderD_qrCode"> <img src="../public/images/bodyer.png" alt="" class="bg_img"> <img src="../public/images/er.png" alt="" class="erweima"> </div>
+  <div class="st_orderD_con">
+    <p class="orderD_con_bianhao"></p>
+    <p class="orderD_con_bianzong"></p>
+    <p class="orderD_con_sum"></p>
+    <p class="orderD_con_money"></p>
+  </div>
+  <div class="st_orderD_phone">
+    <p><a href="tel:010-65872725">010-65872725</a></p>
+  </div>
+</div>
+<script type="text/javascript" src="../public/js/zepto.js"></script> 
+<script type="text/javascript" src="../public/js/bodyart.js?v=201603181534"></script> 
+<script src="../public/js/jweixin-1.0.0.js"></script> 
+<!--<script src="../public/js/common.js"></script>--> 
+<script type="text/javascript">
+        window.onload=function(){
+            var t_urlpath="http://testapi.xingxiu.tv/";
+            var o_urlpath="http://api.xingxiu.tv/";
+            var order_id = location.search.replace(/\?order_id=(\d+).*/,'$1');
+            var uid = location.search.slice(location.search.indexOf("&uid") + 5).split("&")[0];
+             // var uid="114655";
+             // var order_id="10001"
+             console.log(order_id+'        '+uid);
+            var dUrl=o_urlpath+'index.php?app=mobile&mod=Activity&act=tattoo_order_detail&uid='+uid+'&order_id='+order_id+'&t='+Math.random()*1000+'&returntype=jsonp&callback=?'
+            getOrderDetail(dUrl);
+        }
+        </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀-让你更时尚，让你更闪耀！</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"  />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body>
+ <div class="xingx_mains">
+  <!--头部-->
+  <div class="xingx_header"></div>
+  <!--内容-->
+    <div class="xingx_cons mt60">
+    	<div class="xingx_crumb">
+    			时尚星秀&gt;头条&gt;头条详情
+    	</div>
+    	<div class="fl news_details">
+    		
+    		<!-- <img class="head_pic" src="assets/images/bannerDefault.png" /> -->
+        <div class="arti_tit"></div> 
+    		<div class="user_info">
+    			<div class="user_desc">
+    				<img src="assets/images/icon-head.png" class="fl head_pic"/>
+    				<div class="fl user_name">
+    					<p>...</p>
+    					<p>...</p>
+    				</div>
+    			</div>
+    			<div class="share_plat">
+    				<div class="share_con share_sina"><img src="assets/images/icon/icon-sina2.png" /></div>
+    				<div class="share_con qr">
+    					<img src="assets/images/icon/icon-wechat2.png" />
+    					<div class="tips">
+    						<script type="text/javascript">/* 2017/05/16 14:36 */var _qrContent='',_qrLogo='',_qrWidth=50,_qrHeight=50,_qrType = 'auto';if(!_qrContent) var _qrContent =escape(document.location.href);document.write(unescape("%3Cscript src='http://qrcode.leipi.org/js.html?qw="+_qrWidth+"&qh="+_qrHeight+"&qt="+_qrType+"&qc="+escape(_qrContent)+"&ql="+escape(_qrLogo)+"' type='text/javascript'%3E%3C/script%3E"));</script>
+    					</div>
+    				</div>
+    				
+    				<div class="share_con share_qq"><img src="assets/images/icon/icon-qq.png" /></div>
+    			</div>
+    			<div class="likes">
+    				<p><img src="assets/images/icon/icon-see.png"  /><span class="watch_num">0</span></p>
+            <p><img src="assets/images/icon/icon-like.png" /><span class="like_num">0</span></p>
+    			</div>
+    		</div>
+    		<div class="articles">
+    			<!-- <div class="arti_tit"></div> -->
+    			<div class="content"></div>
+    		</div>
+    		<div class="labels">
+    			<span class="fl">标签：</span><div class="labels_con"></div>
+    		</div>
+    	</div>
+    	<div class="fr news_adv">
+    		<div class="tc mt20"><img src="assets/images/icon/f-guesslike.gif" /></div>
+            <!--<div data-widget="plista_widget_infeed2"></div>-->
+            <div id="js-recomment"></div>
+    	</div>
+    </div>
+
+    <input type="hidden" id="hide_info" pageType="news" />
+ 	<!--尾部-->
+  <div class="xingx_footer" >
+    <div class="xingx_footer_con" id="xingx_footer"></div>
+  </div>
+  
+ </div>
+
+ <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+ <script type="text/javascript" src="assets/js/common.js"></script>
+ <script type="text/javascript" src="assets/js/js.js"></script>
+ <script type="text/javascript" src="//g.alicdn.com/mtb/lib-applink/0.3.4/??callApp.js,linksdk.js"></script>
+ <script type="text/javascript">
+   /* (function(c){var g,s='script',w=window,n=c.name||'PLISTA';if(!w[n]){w[n]=c;g=w.document.getElementsByTagName(s)[0];s=w.document.createElement(s);s.async=true;s.type='text/javascript';s.src=(w.location.protocol==='https:'?'https:':'http:')+'//static'+(c.origin?'-'+c.origin:'')+'.plista.com/async'+(c.name?'/'+c.name:'')+'.js';g.parentNode.insertBefore(s,g);}
+    }({
+        "publickey": "530e0503202b995561f9febf",
+        "origin": "cn"
+    }));*/
+</script>
+<script type="text/javascript">
+/*alert($("#share_info").attr("new_id"))*/
+ window.BC_SDK = BCSDK_AppLink.init({
+  appkey : '24602349', //必填，输入百川应用的appkey
+  backURL: 'tbopen7663://', //必填，默认为空字符串，applink的tips的回跳url， 设置能在手机淘宝里面调回你自己应用的url，格式为`tbopen${appkey}`。
+  openApp: true, //非必填，默认为true，非必填，是否唤起客户端，设置false，只会做H5跳转。
+  linkKey: 'TB', //非必填，默认为TB, 唤起手淘(TB)/天猫(TM)。
+  isNeedDownload: false, //非必填，默认为false, 没有app的情况下跳转目标h5页面还是下载页, 默认跳转目标h5页面。
+  isDefaultRedirect: true, //选填, 没有唤起app的情况下是否默认跳转, 默认true。
+  params:{
+     pid: "mm_122511581_24602349_83026078"
+  }, //非必填，带给applink协议的扩展参数,用户自定义参数也传在这里, 如scm、pvid、pid、subpid、e、unionId等业务参数会放到这里。
+  trackParams:{}, //非必填，ybhpss的映射对象，传入这里的参数会被拼为ybhpss字符串带到协议上。   
+  timeout: 1000 // 非必填，默认跳转(目标h5页/下载页)的延时时长。
+});
+
+$("body").on("click",".prodCon",function(){
+  var prodlink=$(this).attr("prodlink");
+   window.BC_SDK.goTaoke({
+          tkUrl : prodlink,
+          params : {
+            pid: "mm_122511581_24602349_83026078", // 淘客必填
+          }
+        });
+     
+})
+</script>
+
+</body>
+</html>

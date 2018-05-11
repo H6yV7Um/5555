@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <title>打星榜</title>
+    <link rel="stylesheet" type="text/css" href="../assets/js/lib/sweetAlert/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="ranking.css">
+    <script src="../assets/js/lib/rem.js"></script>
+</head>
+
+<body>
+    <section class="pageMain" id="rankMain" style="display: none;">
+        <a id="btn_download"><img src="../assets/images/download.png" width="100%" /></a>
+        <!--打星榜头-->
+        <section class="rankCons">
+            <header>
+                <div class="star-pic"><img src="" alt=""></div>
+                <div class="star-info">
+                    <div class="star-name">annay</div>
+                    <div class="rank-info">
+                        <p class="amount">打榜指数：<span>1234</span></p>
+                        <p class="devote">粉丝贡献：<span>1234</span>次</p>
+                    </div>
+                </div>
+            </header>
+            <!-- 打榜滚动 -->
+            <section class="rank-scroll-outer">
+                <div class="rank-scroll">
+                    <ul>
+                        <!-- <li class="scroll-item">
+                            <div class="scroll-user-pic">
+                                <img src="" alt="">
+                            </div>
+                            <p class="scroll-user-name">小兔子刚刚为童菲打榜</p>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="rank-btn">为TA打榜</div>
+            </section>
+            <!-- 打榜排名列表 -->
+            <section class="rank-list">
+                <ul>
+                    <!-- <li>
+                        <div class="rank-num">1</div>
+                        <div class="user-pic">
+                            <img src="../assets/images/roles/roles_3.png" alt="">
+                        </div>
+                        <div class="user-name">杨洋</div>
+                        <div class="vote">贡献
+                            <span>1234</span>次</div>
+                    </li> -->
+                </ul>
+                <div class="no-data">
+                    暂无更多数据啦~
+                </div>
+            </section>
+        </section>
+
+    </section>
+    <!--加载-->
+    <section class="loadding">
+        <div class="spinner">
+            <img src="../assets/images/loadding.gif" height="40" width="40" />
+        </div>
+    </section>
+
+
+    <input type="hidden" id="share_info" />
+    <input type="hidden" iShare="true" id="hide_source" />
+    <script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../applinks/openApp.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/echo.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+
+    <script type="text/javascript" src="ranking.js"></script>
+
+
+</body>
+
+</html>

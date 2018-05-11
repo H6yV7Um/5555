@@ -1,0 +1,238 @@
+body {margin: 0;padding: 0;-webkit-font-smoothing: antialiased;/*font-family: SourceHanSansCN-Light;*/font-family: "Microsoft YaHei"}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, span {margin: 0;padding: 0}
+h1, h2, h3, h4, h5, h6, input, textarea, select, button strong {font-size: 100%;font-weight: normal;}
+div, p, ul, ol, li {margin: 0;padding: 0;}
+li {list-style: none}
+ul {list-style: none;}
+html, body {font-size: 62.5%;}
+/*@font-face { font-family: SourceHanSansCN-Light; src: url(../js/SourceHanSansCN-Light.otf); }*/
+.head {height: 28px;padding: 6px 15px;background: #f8f8f8;border: 1px solid #dfdfdf}
+.clear {clear: both}
+.share {width: 100%;height: auto;}
+.share h1 {padding: 10px 0;font-size: 2rem;color: #000; text-align:center; font-weight:bold}
+.ctime {height: 21px;text-align: center;font-size: 12px;padding-bottom: 10px}
+.share .share_vedio_content video {width: 100%;height: auto;margin: 0;padding: 0;/*position: absolute;*/}
+.share_video_title {font-size: 1.2rem;color: #000;padding: 0.8rem;padding-bottom: 0.8em;padding-top: 0;}
+.share_video_title h2 {font-size: 1.4rem;line-height: 150%;padding-bottom: 0.3em;color: #191717; text-align:center; word-wrap:break-word }
+.share_video_title_p, .share_title p {font-size: 1.4rem;color: #ff1d3e;font-weight: lighter;}
+.share_video_title_p .clickicon {display: inline-block;width: 20px;height: 18px;background: url(../images/dianzanicon.png) no-repeat center center;/* background-size: 80% 80%;  */vertical-align: middle;margin-right: 0.2em;}
+.share_video_title_p.share_active .activeIcon {display: inline-block;width: 20px;height: 18px;background: url(../images/activezanicon.png) no-repeat center center;vertical-align: middle;position: absolute;opacity: 0;}
+.share_title {width:72%;margin: 0 auto;border: 1px solid #ff1e3e;padding: 15px 5px;color: #ff1e3e; position: relative;}
+.share_title_sum {position: absolute;left: 16%;top: 15%;}
+.share_list {margin-bottom: 80px; clear:both}
+.share_list.mb0 {margin-bottom: 0;}
+.share_title_sum h2 {font-size: 1.6rem; font-weight:bold}
+.share_title_sum, .share_list_detail {float: right;}
+.share_list_detail {top:10px;position: absolute;left: 39%;width: 60%; height: 100%}
+.share_list_detail strong {font-weight: lighter;font-size: 1.4rem;color: #838383;width: 60%;padding-left: 5px}
+.share_list_li {padding: 0.8em;position: relative;}
+.share_list_li a {text-decoration: none;display: block}
+.share_list_li .righticon {display: inline-block;width: 10px;height: 49px;background: url(../images/riiconz.png) no-repeat center center;/*background-size: 80% 80%; */ vertical-align: middle;float: right;margin-top: 8%;}
+.share_list_img {width: 36%;vertical-align: middle; position:relative}
+.share_list_detail h3 {line-height: 2rem; font-size: 1.6rem;color: #000;width: 100%;overflow: hidden; word-wrap:break-word}
+.share_list_detail h4 {font-size: 1.2rem;color: #444;margin-top: 0.5rem;width: 100%;overflow: hidden;height: 60px;line-height: 20px;}
+.share_list_detail h6 span{float:left;}
+.share_list_look em {display: inline-block;width: 15px;height: 13px; background: url(../images/lookicon.png) no-repeat center center;/*background-size: 80% 80%;  */vertical-align: middle;margin-right: 0.2rem;background-size:15px 13px; float:left; margin-top:3px}
+.share_list_like em {display: inline-block;width: 15px;height: 13px;background: url(../images/likeicon.png) no-repeat center center;/* background-size: 80% 80%;  */vertical-align: middle;background-size:15px 13px;float:left; margin-top:3px}
+.flo_down {position: fixed;bottom: 0px;background: #fff;width: 94%;margin-left: 0.5em;height: 74px;background: url('../images/download.png') no-repeat;background-size: 100% 100%;}
+.flo_down span {font-size: 1.3rem;padding: 0 0.5em;display: inline-block;}
+.flo_down img {vertical-align: middle;}
+.share_video_title_p.share_active .clickicon {background: url('../images/activezanicon.png') no-repeat;/* margin-top: 0.1rem;*/}
+.share_list_like {margin-left: 16%;}
+/**/
+@media screen and (max-width: 320px) {
+.share_list_detail {line-height: 1.3rem;position: absolute;left: 37%;top: 15px;width: 58%;font-size: 0.65rem}
+.share_list_detail h4 {}}
+@media screen and (max-width: 375px) and (min-width: 321px) {
+.share_list_detail h4 {}}
+@media screen and (min-width: 610px) {
+.flo_down {width: 97.5%;}}
+/*.share_video_title_p .activeIcon{display: inline-block;
+    width: 20px;
+    height: 18px;
+    background: url() no-repeat center center;
+    vertical-align: middle;
+    position: absolute;}*/
+/*.share_video_title_p.share_active .activeIcon{-webkit-animation:zan-animate 1.5s;animation:zan-animate 1.5s;}*/
+.share_list_look img, .share_list_like img {margin-right: 0.2rem;}
+.poster {/*background: url(../images/songjia.png) no-repeat;*/width: 100%;height: 75%;/*height: 180px;*//*background-size:100% 100%;
+    background-repeat: no-repeat;*/}
+.share_vedio_content {position: relative;}
+/*点赞效果2016、2、17*/
+
+.share_video_title_p.share_active .ranksum_zan_icon em {display: inline-block;width: 20px;height: 18px;background: url(../images/activezanicon.png) no-repeat center center;/* background-size: 80% 80%;  */vertical-align: middle;position: absolute;opacity: 0;/*z-index: 99;*/}
+.share_video_title_p.share_active .ranksum_zan_icon {background: url(../images/activezanicon.png) no-repeat center center;position: relative;/*background-size: 60%;*/}
+.share_video_title_p .ranksum_zan_icon {display: inline-block;width: 20px;height: 18px;background: url(../images/dianzanicon.png) no-repeat center center;/* background-size: 60%;  */vertical-align: middle;margin-right: 4px;position: relative;}
+.share_video_title_p.share_active .ranksum_zan_icon em {-webkit-animation: zan-animate 1.5s;animation: zan-animate 1.5s;}
+/*动画效果*/
+@-webkit-keyframes zan-animate {
+ 0% {
+ -webkit-transform: scale(1.2, 1.2);
+ transform: scale(1.2, 1.2);
+ opacity: 1;
+ top: -1rem;
+ display: inline-block;
+/* z-index: 99;*/}
+   /* 10% {
+        -webkit-transform: scale(1.4,1.4);
+        transform: scale(1.4, 1.4);
+        opacity: 1;
+        top: -2.5rem;
+        display: inline-block;
+        z-index: 99;
+    }
+    15% {
+        -webkit-transform: scale(1.6,1.6);
+        transform: scale(1.6, 1.6);
+        opacity: 1;
+        top: -3rem;
+        display: inline-block;
+        z-index: 99;
+    }*/
+    25% {
+ -webkit-transform: scale(1.8, 1.8);
+ transform: scale(1.8, 1.8);
+ opacity: .6;
+ top: -3.5rem;}
+ 50% {
+ -webkit-transform: scale(2.2, 2.2);
+ transform: scale(2.2, 2.2);
+ opacity: .4;
+ top: -4.5rem;}
+ 75% {
+ -webkit-transform: scale(2.5, 2.5);
+ transform: scale(2.5, 2.5);
+ opacity: .2;
+ top: -5rem;}
+ 100% {
+ -webkit-transform: scale(3.2, 3.2);
+ transform: scale(3.2, 3.2);
+ opacity: 0;
+ top: -6rem;
+/* display: none;*/}}
+.downApp {position: fixed;bottom: 0;left: 0;width: 100%}
+.downApp img {width: 100%;display: block;}
+.a-fadeinB {-webkit-animation: 5s ease-out backwards;-moz-animation: 5s ease-out backwards;-ms-animation: 5s ease-out backwards;animation: 5s ease-out backwards;}
+.a-fadeinB {-webkit-animation-name: fadeinB;-moz-animation-name: fadeinB;-ms-animation-name: fadeinB;animation-name: fadeinB;}
+/* 淡入-从下 */
+@-webkit-keyframes fadeinB {
+ 0% {
+opacity:0;
+-webkit-transform:translateY(100px);}
+ 100% {
+opacity:1;
+-webkit-transform:translateY(0);}}
+@-moz-keyframes fadeinB {
+ 0% {
+opacity:0;
+-moz-transform:translateY(100px);}
+ 100% {
+opacity:1;
+-moz-transform:translateY(0);}}
+@-ms-keyframes fadeinB {
+ 0% {
+opacity:0;
+-ms-transform:translateY(100px);}
+ 100% {
+opacity:1;
+-ms-transform:translateY(0);}}
+@keyframes fadeinB {
+ 0% {
+opacity:0;
+transform:translateY(100px);}
+ 100% {
+opacity:1;
+transform:translateY(0);}}
+/*动态分享 start*/
+.dynamic {}
+.dynamicTit {width: 92%;margin: 1rem auto 0;overflow: hidden}
+.userPic {width: 8%;float: left;}
+.userPic img {width: 100%;display: block;border-radius: 100%}
+.userInfo {float: left;margin-left: 3%;display: inline-block;width: 60%;}
+.userInfo h2 {font-size: 1.5rem;color: #000}
+.userInfo p {font-size: 1.1rem;color: #757575;}
+.userlike {float: right;width: 23%;}
+.likeIcon {width: 20px;display: inline-block;margin-right: 5%}
+.likeIcon img {width: 100%;display: inline-block;}
+.likeNum {font-size: 1.3rem;}
+.dynamicContent {color: #000;font-size: 1.3rem;line-height: 2rem;width: 92%;margin: 1rem auto 0;}
+.dynamicContent span {color: #ff1d3e;}
+.share_info {font-size: 1.4rem;line-height: 2rem;color: #838383; text-align:center}
+.pr10 {padding-right: 10px;}
+.share_list_detail h6 {
+        /* margin-top: 5px; */
+    position: absolute;
+    width: 100%;
+    bottom: 25px;
+}
+.shareName {width: 13%;}
+.shareName img {width: 100%;border-radius: 100%;display: block}
+
+.grayBg{background:#f3f3f3;}
+.notFound{margin:40% auto 0; text-align:center; overflow:hidden;}
+.notFound i{width:150px; margin:0 auto; display:block}
+.notFound i img{width:100%; display:block}
+.notFound p{font-size:1.8rem; color:#666; margin-top:20px; font-family:"Microsoft YaHei"}
+.share_video_title_p {overflow:hidden; width:60%; margin:20px auto 0}
+
+.newLike{background:url(../images/newLike.png) no-repeat; background-size:35px 35px; width:35px; height:35px; display:block; margin:0 auto}
+
+
+
+.follow {position:absolute; right:5px; top:0; line-height:68px;}
+.follow a{color:#ff1d3e; font-size:1.4rem; text-decoration:none}
+.icon-arrow{position:  absolute; bottom: -8px; left: 0; right: 0;margin: auto; text-align: center;}
+.vedioList-title{width: 92%;margin: 3rem auto 2rem auto;overflow: hidden;}
+.vedioList-title img{width: 100%}
+.share_video_title_p{overflow:hidden; text-align:center}
+.share_video_title_p  p{line-height:30px;}
+.share_video_title_p  p span{color:#000; }
+
+.share_active i{background:url(../images/likeActive.png) no-repeat; background-size:32px 32px; }
+
+
+
+#sharelist li.pcur .nowPlay{position:absolute;background-color:rgba(0,0,0,0.2); width:100%; top:0; left:0; font-size:1.2rem; text-align:center; color:#FFF; height:100%}
+#sharelist li.pcur .nowPlay p{height:20px; line-height:20px; position:absolute; top:50%; margin-top:-10px; width:100%; text-align:center} 
+#sharelist li.pcur .nowPlay p i{background:url(../images/nowPlay.png) no-repeat; width:8px; height:10px; display:inline-block; background-size:8px 10px; margin-left:5px}
+.share_list_img img{width:100%; display:block;}
+
+#BOX_overlay {position: absolute;z-index: 100;top: 0px;left: 0px;background-color: #ccc;filter: alpha(opacity=70);-moz-opacity: 0.7;opacity: 0.7;}
+.dialog_tip {background: #fff;text-align: left;border: 1px solid #dedede;font-size: 12px;width: 20rem;border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;-o-border-radius: 10px;}
+
+.messdivCons {width: 100%;overflow: hidden;font-size: 1.3rem;color: #000;text-align: center;padding: 20px 0;}
+
+.operate{border-top:1px solid #999; width:100%}
+.operate a{width:50%; height:30px; line-height:30px; text-decoration:none; text-align:center; border-right:1px solid #999; box-sizing:border-box; -moz-box-sizing:border-box; display:block; font-size:1.4rem; color:#999; float:left}
+.operate a.goDown{color:#F00; border:0}
+
+
+.live_info{width: 100%; height:5rem; overflow: hidden; position: relative;border-bottom:1px solid #dedede;margin-top:5px;padding-bottom:5px; }
+.live_info .star_info{width: 40%; height: 4rem;position: absolute; left: 2%; overflow: hidden;}
+.live_info .star_info ul{min-height: 1000px;}
+.live_info .star_info li{width:100%; overflow:hidden; height:4rem;}
+.live_info .star_info .head_pic{ width:40px; border-radius: 50%;}
+.live_info .star_info .star_desc{ width:45%; overflow: hidden; margin-top:5px;margin-left:5px;font-size:1.2rem }
+.live_info .star_info .star_name{color: #ff1d3e; font-size:1.2rem;}
+.live_info .icon_info{position: absolute; left: 34%; width: 12%}
+.icon-arraw{height: 4rem; float: left; vertical-align: middle;line-height: 4rem;}
+.font-vertical{writing-mode:lr-tb ; font-size: 1rem; color: #000; float: left;width:1.5rem;}
+.staffList{width: 50%; overflow: scroll; position: absolute; left: 50%;}
+.staffList ul{min-width: 10000px; }
+.staffList li{float: left; display: inline-block;text-align: center;    margin-right: 10px;}
+.staffList li .head_pic{ width: 30px; border-radius: 50%;}
+.staff_name{text-align:center}
+
+.fl{float:left;}
+.none{display:none}
+.back{
+    width: 30px; 
+    height: 30px;
+    line-height:30px;
+    color: #ffffff;
+    border-radius: 50%;  
+    text-align: center;
+    background: #680662;
+    -webkit-text-size-adjust:none; 
+    font-size:1rem;
+}

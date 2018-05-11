@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+  <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>时尚星秀-全明星直播间&0&1&8</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/css.css">
+  
+</head>
+<body>
+  <section class="liveRadioMain">
+  	<section class="PortraitCon">
+  		<section class="vedioCons">
+        <div class="ad_area_main" style="display:none">
+          <div title="关闭窗口" class="js-close2">
+          <img src="assets/images/close-tip.png" width="15" />
+         </div>
+         <div class="ad_area"></div>
+        </div>
+  			<div class="vedio_title">
+          <img src=""/>
+          <h1></h1>
+        </div>
+        <div class="video" style="display:none">
+          
+           <!-- <video id="tvLive" class="video-js vjs-default-skin" controls autoplay  preload="auto" width="100%" height="260" 
+                     data-setup='{}' webkit-playsinline style="width: 100%; height: 100%; position: relative; display: inline;">
+            <source src="" type="application/x-mpegURL">
+                     </video> -->
+           <div id="player" >
+             <script type="text/javascript" charset="utf-8" src="../assets/js/lib/letv/bcloud.js"></script>
+          </div>
+        </div>
+  			<div class="vedio_time"></div>
+        <div  class="countdown d-countdown"  id="countdown" style="display:none"></div>
+  		</section>
+  		
+  		<!-- <section class="descInfo2">
+              <div  class="countdown"  id="countdown" style="display:none"></div>
+        <div class="desc_part1">
+          <span id="watchNum">0</span>人在看
+        </div>
+        <ul class="desc_part2">
+         <li class="head-pic">
+                 <img src="assets/images/head.png">
+                 <div class="markclown"><img src="assets/images/crown1.png"></div>
+               </li>
+        </ul>
+        <div class="desc_part3" >
+          <img src="assets/images/icon-like.png" id="btn-zan"/><span></span>
+        </div>
+      </section> -->
+      <section class="live_info"  style="display:none">
+        <div class="star_info">
+          <ul>
+            
+          </ul>
+        </div>
+        <div class="icon_info">
+          <div class="icon-arraw"><img src="assets/images/icon-mark.png" height="100%"></div>
+        </div>
+        <div class="staffList">
+          <ul>
+           <!-- <li> 
+              <div class="box viewport-flip" title="点击翻面">
+                 <img class="list flip out head_pic" src="assets/images/head.png" />
+                 <div class="list flip back">大咖</div>
+              </div>
+              <p class="staff_name">ketty</p>
+            </li> -->
+          </ul>
+        </div>
+      </section>
+  		<ul class="liveRadioTab">
+  			<li class="cur">聊天</li>
+  			<li>简介</li>
+  		</ul>
+  	    <section class="tabsMain">
+  	    	<div class="tabCons" id="con1">
+  	    		<!-- <a href="http://t.cn/R7COgYb"><img src="assets/images/cheat.png" width="100%"></a> -->
+            <ul class="msgList" id="js-msgList">
+             </ul>
+            <div class="toMsgArea">
+             <img src="assets/images/send-msg.png"/>
+            </div>
+  	    	</div>
+  	    	<section class="tabCons" id="con2" style="display:none">
+  	    		<div class="shortDesc">
+  	    			<h1>
+  	    				<span class="tv-title"></span>
+                        <!-- <img src="assets/images/icon_title.png" class="icon_title"/> -->
+  	    			</h1>
+  	    			<div class="tit_desc">
+  	    				<span id="seeNum"></span>
+  	    				<span id="tit_desc_info" class="ml10"></span>
+  	    			</div>
+  	    		</div>
+            <ul class="share_like" >
+              <li>
+                <img src="assets/images/icon-like.png" id="btn-zan"/><span></span>
+              </li>
+              <li>
+                <img src="assets/images/icon-share.png" id="btn-share"/><span>分享</span>
+              </li>
+              
+            </ul>
+
+  	    		<div class="rcdLiveVedio">
+  	    			<div class="typeInfo">
+  	    				<div class="type-pic"><img src=""/></div>
+  	    				<div class="type-desc">
+  	    					<p class="type-desc-main"></p>
+  	    					<p>已有<span id="orderNum"></span>人关注</p>
+
+                 <span class='toAppConcern'><a>关注+</a></span>
+  	    				</div>
+                <div class="cb"></div>
+                <img src="assets/images/icon-arraw-red.png" height="20" width="25" class="icon-arrow" />
+  	    			</div>
+              <div class="vedioList-title"><img src="assets/images/recommand-title.png" ></div>
+  	    			<ul class="vedioList">
+  	    				
+  	    			</ul>
+  	    		</div>
+  	    	</section>   
+  	    	
+  	    </section>
+  	</section>
+
+  	<section class="horizontalCon">
+  		
+  	</section>
+  </section>
+<div id="messdiv" class="dialog_tip" style="display:none;">
+     <div title="关闭窗口" class="js-close">
+        <span>×</span>
+    </div>
+    <div class="messdivCons"></div>
+    <div class="dialogFooter">
+      <div class="btn_dialog"><a href="http://t.cn/R7COgYb">去下载</a></div>
+      <div class="btn_dialog" id="btn_cancel">取消</div>
+    </div>
+</div>
+
+<input type="hidden" id="share_info" content="" cover="" shareUrl="" />
+<input type="hidden" id="tvStatus" status="" hls="" cover />
+<input type="hidden" id="isShare" isShare="false"/>
+
+<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+<script src="assets/js/jquery-1.8.2.min.js"></script>
+<!-- <script src="assets/jcountdown/jquery.jcountdown.min.js"></script> -->
+<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="assets/js/letv/blive.js"></script>
+<script type="text/javascript" src="assets/js-v2/js.js?v=5"></script>
+
+<!-- <script src="assets/js/video.min.js"></script>
+<script src="assets/js/videojs-contrib-hls.min.js"></script>
+ -->
+<script src=""></script>
+<script>
+  $("#tvLive").attr("style","");
+</script>
+<!-- 统计代码 -->
+<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

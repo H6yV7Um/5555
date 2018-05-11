@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <title>中国国际时装周</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script>
+        (function (win, doc) {
+            function change() {
+                doc.documentElement.style.fontSize =
+                    doc.documentElement.clientWidth / 7.5 + "px";
+            }
+            change();
+            win.addEventListener('resize', change, false);
+        })(window, document)
+    </script>
+</head>
+
+<body>
+    <div class="fashion-page">
+        <header>
+            <div class="swiper-container" id="banner">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">
+                        <div class="img-outer"><img src="" alt=""></div>
+                    </div> -->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </header>
+        <section>
+            <h2>全部视频</h2>
+            <ul class="video-list">
+                <!-- <li class="video-item">
+                    <div class="img-outer"><img src="" alt=""></div>
+                    <div class="video-name">时装周时装周时装周时装周时装周时装周时装周时装周</div>
+                </li> -->
+            </ul>
+            <div class="no-data" style="display:none;">暂无更多数据了</div>
+        </section>
+    </div>
+    <input type="hidden" id="share_info" page="share"/>
+    <script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/swiper.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common/bridge2.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <!-- 统计代码 -->
+    <script type="text/javascript" src="../../tj.php"></script>
+</body>
+
+</html>

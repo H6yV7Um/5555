@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>藏品认购协议</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+<div class="protocol">
+	<h1 class="tc">《藏品认购协议》 </h1>
+<p>甲方：藏拍国际拍卖（北京）有限公司 <br />
+  地址：北京市朝阳区光华路9号3号楼16层1602-1室 <br />
+  电话：010-65872723</p> 
+<div > 
+  <p id="js_buyer">
+   <!-- 地址： <br />
+   电话： <br />
+   身份证号码：<br /> -->
+   </p>
+</div>
+<p>双方经友好协商，就甲方出售<u id="collectionName"></u>予乙方相关事宜签署如下协议，以资双方共同信守。
+</p>
+<h2>第一条  交易标的 </h2>
+<p>甲方同意将其有权处置的拍卖品（下称“该拍卖品”）出售予乙方，乙方同意购买。 </p>
+<p>该拍卖品名称、数量及质地规格列明于拍卖品详情明细。乙方缴纳保证金进行拍卖金竞拍则认为乙方认同拍卖品详情中的描述、瑕疵等问题。 <br /></p>
+<h2>第二条 价格、支付方式与交付验收 </h2>
+<ol>
+  <li>2.1该拍卖品交易价格为<u id="capitalPrice">  </u>人民币（RMB<u id="rmbPrice">       </u>）。于本合同签署之日，乙方应向甲方支付该拍卖品全额共计<u id="buyerPrice"> </u>人民币，于金额全额到账之时本合同生效。 </li>
+</ol>
+<ol>
+  <li>2.2 甲方应自本合同生效之日起【60】日内将该拍卖品发运，该拍卖品到达与乙方确定定交付地点（甲方在该拍卖品发运之前将与乙方确定交付地点，以最后短信通知为准）后，双方应立即组织验收。该拍卖品运抵指定交付地点后风险转移至乙方。。 </li>
+</ol>
+<ol>
+  <li>2.3 该拍卖品的每一件拍卖品的验收应进行拍照（正视、后视、底视等照片，具体按甲方要求）并由双方代表在照片背面签字，每一件拍卖品验收后双方应签署该拍卖品验收确认单和《藏拍认购合同》。该《藏拍认购合同》作为该拍卖品已交付乙方并符合合同要求的凭证。</li>
+</ol>
+<ol>
+  <li>2.4 乙方应向甲方支付的所有款项均应支付至甲方书面指定的银行账户。  </li>
+  <li>2.5 乙方在支付尾款后，应保证自己通讯设备畅通能被联络到，否则，因无法联系到乙方而造成交易逾期的行为，甲方不负责任。 </li>
+</ol>
+
+<h2>第三条  保密 </h2>
+  未经对方书面同意，任何一方不得将本协议任何内容或在本协议洽商、签署及履行过程中所知悉的对方的应予保密的信息（如：商业秘密、技术秘密及依据法律及行业惯例应予保密的其他信息）披露给任何第三方。 </p>
+<h2>第四条  不可抗力</h2>
+  如任一方因不可抗力未能履行本协议，则该方在不可抗力影响的范围内免责。不可抗力是指不能预见、不能避免并不能克服的情形，如：火灾、地震、洪水、瘟疫、战争、社会动乱等等。 </p>
+<h2>第五条  其他 </h2>
+ <p>1、本协议适用中华人民共和国法律并据此进行解释。 <br/> 
+2、  中标人全额支付购买价款后，即获得拍卖标的的所有权。<br/>
+3、  因本协议而引起的任何争议，各方应友好协商解决。解决不成的，任何一方均可向甲方住所地法院提起诉讼解决。<br/>
+4、  本协议一式二份、双方各执一份，具同等法律效力。</p>
+
+</div>
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript">
+function changeNumMoneyToChinese(money) {
+  var cnNums = new Array("零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖"); //汉字的数字
+  var cnIntRadice = new Array("", "拾", "佰", "仟"); //基本单位
+  var cnIntUnits = new Array("", "万", "亿", "兆"); //对应整数部分扩展单位
+  var cnDecUnits = new Array("角", "分", "毫", "厘"); //对应小数部分单位
+  var cnInteger = "整"; //整数金额时后面跟的字符
+  var cnIntLast = "元"; //整型完以后的单位
+  var maxNum = 999999999999999.9999; //最大处理的数字
+  var IntegerNum; //金额整数部分
+  var DecimalNum; //金额小数部分
+  var ChineseStr = ""; //输出的中文金额字符串
+  var parts; //分离金额后用的数组，预定义
+  if (money == "") {
+    return "";
+  }
+  money = parseFloat(money);
+  if (money >= maxNum) {
+    alert('超出最大处理数字');
+    return "";
+  }
+  if (money == 0) {
+    ChineseStr = cnNums[0] + cnIntLast + cnInteger;
+    return ChineseStr;
+  }
+  money = money.toString(); //转换为字符串
+  if (money.indexOf(".") == -1) {
+    IntegerNum = money;
+    DecimalNum = '';
+  } else {
+    parts = money.split(".");
+    IntegerNum = parts[0];
+    DecimalNum = parts[1].substr(0, 4);
+  }
+  if (parseInt(IntegerNum, 10) > 0) { //获取整型部分转换
+    var zeroCount = 0;
+    var IntLen = IntegerNum.length;
+    for (var i = 0; i < IntLen; i++) {
+      var n = IntegerNum.substr(i, 1);
+      var p = IntLen - i - 1;
+      var q = p / 4;
+      var m = p % 4;
+      if (n == "0") {
+        zeroCount++;
+      } else {
+        if (zeroCount > 0) {
+          ChineseStr += cnNums[0];
+        }
+        zeroCount = 0; //归零
+        ChineseStr += cnNums[parseInt(n)] + cnIntRadice[m];
+      }
+      if (m == 0 && zeroCount < 4) {
+        ChineseStr += cnIntUnits[q];
+      }
+    }
+    ChineseStr += cnIntLast;
+    //整型部分处理完毕
+  }
+  if (DecimalNum != '') { //小数部分
+    var decLen = DecimalNum.length;
+    for (var i = 0; i < decLen; i++) {
+      var n = DecimalNum.substr(i, 1);
+      if (n != '0') {
+        ChineseStr += cnNums[Number(n)] + cnDecUnits[i];
+      }
+    }
+  }
+  if (ChineseStr == '') {
+    ChineseStr += cnNums[0] + cnIntLast + cnInteger;
+  } else if (DecimalNum == '') {
+    ChineseStr += cnInteger;
+  }
+  return ChineseStr;
+
+}
+//changeNumMoneyToChinese(19876.234)
+var initData=function(ret){
+	var cName=decodeURI(commonCla.analyzParams("name"));
+	var m=commonCla.analyzParams("m");
+	var token=commonCla.analyzParams("token");
+	$("#collectionName").html(" "+cName+" ");
+	$("#buyerPrice").html(" "+m+" ");
+	$("#rmbPrice").html(" "+m+" ");
+	$("#capitalPrice").html(" "+changeNumMoneyToChinese(m)+" ");
+
+}
+var getBuyCertiData=function(){
+	initData();
+	//00未实名 1实名
+	var isReal=commonCla.analyzParams("real");
+	var url=commonCla.hostBase+"/user/real?token="+commonCla.analyzParams("token");
+	if(isReal!=0){
+		commonCla.ajaxCommonFun(url,"get",function(ret,textStatus,request){
+			if(textStatus=="success"){
+              
+                var buyerInfo='乙方：'+ret.real_name+
+                              ' <br />地址：'+ret.address+
+                              ' <br />电话：'+ret.mobile+
+                              ' <br />身份证号码：'+ret.id_card+' <br />';
+                $("#js_buyer").html(buyerInfo);
+			}
+
+		})
+	}else{
+    var buyerInfo='乙方：<br />地址：<br />电话：<br />身份证号码：<br />';
+     $("#js_buyer").html(buyerInfo);
+  }
+}
+$(function(){
+  getBuyCertiData();
+})
+</script>
+</body>
+</html>

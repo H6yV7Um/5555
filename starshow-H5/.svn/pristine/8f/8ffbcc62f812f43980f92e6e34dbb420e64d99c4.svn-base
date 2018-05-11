@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no" />
+    <title>图集详情</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/study.css">
+    <script>
+        (function (win, doc) {
+            function change() {
+                doc.documentElement.style.fontSize =
+                    doc.documentElement.clientWidth / 7.5 + "px";
+            }
+            change();
+            win.addEventListener('resize', change, false);
+        })(window, document)
+    </script>
+</head>
+
+<body>
+    <!--查看详情-->
+    <div class="starShow_main learn-detail">
+        <div class="photo">
+            <!-- 图片 -->
+            <div class="swiper-container pic-swiper-container" id="pic-swiper">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">
+                        <div class="pic-wrap" style="background:black;">
+                            <img src="1" alt="">
+                        </div>
+                    </div>-->
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <!-- 查看大图 -->
+            <div class="swiper-container view-swiper-container" id="pic-view">
+                <div class="swiper-wrapper">
+                    
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- 视频 -->
+        <div class="player">
+
+            <video id="video" preload="matedata" controls="controls" webkit-playsinline playsinline x-webkit-airplay="allow" x5-video-player-type="h5"
+                x5-video-player-fullscreen="true" style="width: 100%; height: 100%; position: relative; display: inline;">
+            </video>
+        </div>
+        <div class="pic-info">
+            <div class="pic-title"></div>
+            <div class="pic-des">
+                <img class="user-head" src="" alt="">
+                <div class="user-name"></div>
+                <div class="time"></div>
+                <div class="read"><span></span> · 阅读</div>
+            </div>
+            <div class="pic-operate" id="btn_download1">
+                <div class="like">喜欢</div>
+                <div class="collect">收藏</div>
+                <div class="share">分享</div>
+            </div>
+        </div>
+        <!-- 瀑布流 -->
+        <div class="recommend">
+            <h2 class="title">以下为您推荐的内容</h2>
+        </div>
+        <ul id="container">
+            <li></li>
+            <li></li>
+            <!-- <div class="item-box">
+                <div class="item-box-inner">
+                    <a class="pic">
+                        <img src="images/1.jpg" />
+                    </a>
+                    <div class="item-des">
+                        <div class="title">羽绒服不能穿时髦？你穿的不对羽绒服不能穿时髦？你穿的不对</div>
+                        <div class="user">
+                            <img class="user-head" src="" alt="">
+                            <div class="user-left">
+                                <div class="user-name">时尚芭莎</div>
+                                <div class="read">113 · 阅读</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="item-box-inner">
+                    <div class="pic">
+                        <img src="images/2.jpg" />
+                    </div>
+                    <div class="item-des">
+                        <div class="title">羽绒服不能穿时髦？你穿的不对羽绒服不能穿时髦？你穿的不对</div>
+                        <div class="user">
+                            <img class="user-head" src="" alt="">
+                            <div class="user-left">
+                                <div class="user-name">时尚芭莎</div>
+                                <div class="read">113 · 阅读</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </ul>
+    </div>
+    <section class="loadding">
+        <div class="spinner">
+            <img src="images/loadding.gif" height="40" width="40" />
+        </div>
+    </section>
+    <input type="hidden" id="share_info" />
+    <script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="../../applinks/openApp.js"></script>
+    <script type="text/javascript" src="../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>    
+    <script type="text/javascript" src="js/study.js"></script>
+    
+</body>
+
+</html>

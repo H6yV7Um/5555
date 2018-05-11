@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>欢迎来到拉阔校草！</title>
+    <link rel="stylesheet" href="../css/put.css" />
+    <script src="../js/rem.js"></script>
+
+</head>
+<body>
+
+<div class="box">
+    <div class="banner"><img src="../images/banner_new.jpg" /></div>
+    <div class="banner_di">
+        <div class="one">
+            <img src="../images/baoming_03.png" />
+            <div class="lc">
+                <span >基本资料</span><span >上传照片</span><span>等待审核</span>
+            </div>
+        </div>
+        <div class="main">
+            <div class="di"><img src="../images/baoming2_03.png" /></div>
+            <p>点击上传你的照片</p>
+        </div>
+    </div>
+</div>
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/common/bridge.js"></script>
+<script src="../js/common/common.js"></script>
+<script>
+    var jwt_token = commonCla.analyzParams("jwt_token") == undefined ?"": commonCla.analyzParams("jwt_token");
+    //设置WebViewJavascriptBridge通信回调方法--相对应js中
+    setupWebViewJavascriptBridge(function(bridge) {
+     //注册js回调方法
+     bridge.registerHandler('javascriptHandler', function(data, responseCallback) {
+         if (isIphone()) {} else {
+             var data = eval("(" + data + ")");
+         }
+         if (data.nextStep == '1') { //登录
+             if (get_token() == "") {
+                login_token = data.jwt_token;
+                window.location.href = "put.html?jwt_token=" + data.jwt_token;
+             }
+
+         }else if (data.nextStep == '8') {
+             shareActivity();
+         }
+         else if(data.nextStep=="2"){
+             $.ajax({
+                 url:commonCla.hostBase+"/lakuo/signUp?jwt_token="+jwt_token,
+                 type:"POST",
+                 dataType:"json",
+                 data:{
+                     "step":2,
+                     "jwt_token":data.jwt_token
+                 },
+//                    jsonpCallback:"fun",//服务器返回执行的方法名
+                 success:function(ret){
+                     if(ret.code==200){
+                         alert("上传成功！")
+                         window.location.href = "check.html?jwt_token=" +jwt_token;
+                     }else{
+                         alert(ret.code+","+ret.error);
+                     }
+                 },error:function(error){
+                     console.log(error);
+                 }
+             });
+             //window.location.href = "check.html?jwt_token=" + data.jwt_token;
+         }
+     })
+     //调取客户端方法
+     if (isIphone()) {} else {
+     bridge.init(function(message, responseCallback) {
+     var data = {
+     'Javascript Responds': 'Wee!'
+     }
+     responseCallback(data)
+     })
+     }
+     //交互方法
+     clientInter(bridge);
+
+     })
+
+    var clientInter=function(bridge){
+        $(".di").click(function(e){
+            if(jwt_token=="" || jwt_token==undefined){
+                alert(jwt_token+"1")
+                e.preventDefault()
+                setBridgeCallHandler(bridge, {
+                    'action': '1',
+                    'nextStep': '1'
+                })
+            }else{
+                uploadCommon("0",bridge)
+            }
+        })
+
+
+        //客户端协议
+        var uploadCommon=function(joinStatus,bridge){
+            var params= {
+                'action': '9',
+                'nextStep': '2',
+                'activityType':'10',
+                'picTitle':'上传作品',
+                'videoTitle':'上传作品',
+                'works_status':"2",
+                'picBtnCon':"完成",
+                'videoBtnCon':"完成",
+                'videoDuration':'60',
+                'status':'imgAndTv'//imgAndTv TV  img
+            }
+            if(joinStatus=="0" || joinStatus=="1"){
+                // e.preventDefault()
+                setBridgeCallHandler(bridge,params)
+            }else{
+                swal_tip("您已经报过名");
+            }
+        }
+    }
+
+
+
+
+
+
+</script>
+<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

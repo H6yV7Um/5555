@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>数据分析</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/da.css">
+
+
+</head>
+<body>
+<a class="app_link"><img src="assets/images/down-bg.png" width="100%"></a>
+<section class="da_main">
+	<header class="da_header">
+		<ul>
+			<li class="cur" num="7">近7日</li>
+			<li num="30">近30日</li>
+		</ul>
+	</header>
+	<section class="daCharts">
+		<div id="main" class="main" style="height:25rem"></div>
+	</section>
+	<section class="da_date">
+		<div class="s-container">
+            <div class="s-wrapper">
+                <div class="s-slide"></div>
+            </div>
+            <div class="btn-next btn-disabled"></div>
+            <div class="btn-prev"></div>
+       </div>
+		<p class="da_tips">因数据核算，每日24点产出昨日数据</p>
+	</section>
+</section>
+    
+    <div id="messdiv" class="dialog_tip" style="display:none;">
+		 <div title="关闭窗口" class="js-close">
+        	<span>×</span>
+        </div>
+	    <div class="messdivCons"></div>
+	</div>
+	<div id="BOX_overlay"></div>
+	
+	<div class="star_detail_info" id="star_info"  style="display:none;">
+
+	</div>
+
+	<input type="hidden" id="hide_da" />
+	<!--<script type="text/javascript" src="assets/js/zepto.min.js"></script>-->
+    <script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="../assets/js/common/common.js"></script>
+    <script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+
+	<script type="text/javascript" src="assets/js/charts/echarts.min.js"></script>
+	<script type="text/javascript" src="../../applinks/openApp.js"></script>
+	<script src="assets/js/da.js"></script>
+	 <script>
+	 //打开app
+     $(".app_link").click(function() {
+      var params = {
+      	"type":commonCla.analyzParams("type")==undefined?"1": commonCla.analyzParams("type")
+      };
+	  openApp_obj('cooperation', params);
+     });
+	</script>
+	
+</body>
+</html>

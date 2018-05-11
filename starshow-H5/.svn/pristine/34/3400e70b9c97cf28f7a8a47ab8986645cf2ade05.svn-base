@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <meta charset="UTF-8">
+          <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+          <meta name="apple-mobile-web-app-capable" content="yes">
+          <meta name="format-detection" content="telephone=no, email=no">
+        <title>订单详情</title>
+        <link rel="stylesheet" type="text/css" href="../public/css/body.css?v=201603181534">
+    </head>
+    <body class="addcolor">
+        <div class="st_buyD_warp">
+           <div class="st_buyD_top">
+            <div class="st_buyD_img">
+                <img src="../public/images/body4.png">
+            </div>
+                <div class="st_buyD_top_mark"></div>
+                <div class="st_buyD_top_text">
+                    <h3>2016年中国廊坊国际纹身艺术节</h3>
+                    <p>05.28——05.30廊坊国际会展中心</p>
+                </div>
+            </div>
+            <div class="st_buyD_con">
+                <ul class="st_buyD_con_piao">
+                    <li class="active Tageskarte" typeId="1">单日票</li>
+                    <li class="passTickets" typeId="2">通票</li>
+                    <div class="clear"></div>
+                </ul>
+                <h3>参加时间</h3>
+                <ul class="st_buyD_con_time">
+                    <li class="active" date="1">
+                        <p>2016-05-28</p>
+                        <p>星期六</p>
+                    </li>
+                    <li date="2">
+                        <p>2016-05-29</p>
+                        <p>星期日</p>
+                    </li>
+                    <li date="3">
+                        <p>2016-05-30</p>
+                        <p>星期一</p>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+              
+                <!--<h3>购买数量</h3>-->
+                <ul class="st_buyD_con_sum" style="display:none">
+                    <li class="minus">
+                        <img src="../public/images/bodyjian.png">
+                    </li>
+                    <li class="buySum">1</li>
+                    <li class="plus">
+                        <img src="../public/images/bodyjia.png">
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+				
+                <h6>单个订单目前只支持购买1张</h6>
+				
+            </div>
+            <div class="st_sum">
+                <p class="st_sum_one">80</p>
+                <a >提交订单</a>
+            </div>
+           
+        </div>
+    
+        <script type="text/javascript" src="../public/js/jquery1.9.1.js"></script>
+        <script type="text/javascript" src="../public/js/zepto.js"></script>
+        <script type="text/javascript" src="../public/js/bodyart.js?v=201603131421"></script>
+        <script src="../public/js/jweixin-1.0.0.js"></script>
+        <script type="text/javascript">
+        window.onload=function(){
+           var w=document.body.clientWidth||document.documentElement.clientWidth;
+            $('.st_buyD_img').css('width',w);
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,343 @@
+html {
+  color: #000;
+  background: #FFF; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: inherit;
+  font-weight: inherit; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+input, button, textarea, select {
+  *font-size: 100%; }
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"], input[type="search"], select {
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+textarea {
+  -webkit-appearance: none;
+  outline: 0; }
+
+html, body {
+  margin: 0px;
+  height: 100%;
+  font-family: "Microsoft YaHei"; }
+
+html {
+  font-size: 20px; }
+
+img {
+  vertical-align: middle; }
+
+a {
+  text-decoration: none; }
+
+Element {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.main {
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+  background: #f4fafc;
+  background-size: 100% 100%;
+  color: red; }
+  .main .winBox {
+    width: 100%;
+    height:1.5rem;
+    overflow: hidden;
+    position: relative;
+    background: #64d1fa;
+    background-size: 100% 100%; }
+  .main .scroll {
+    min-width:200px;
+    position: absolute;
+    left: 0rem;
+    top: 0rem; }
+  .main .scroll li {
+    float: left;
+    display:inline;
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #333;
+    margin-left: 20px; }
+
+#projects {
+  background-color: #ef4036; }
+
+.project {
+  position: absolute;
+  right: 6.8rem;
+  bottom: 7rem;
+  margin: 0 0 0.75rem 0.75rem; }
+
+.project {
+  float: left;
+  width: 3rem;
+  height: 4rem; }
+.error_tips{
+  font-size: 12px;
+  color: #ff1d3e;
+}
+.grid {
+  width: 100%;
+  margin: 0 auto;
+  position: relative; }
+
+div.projects {
+  height: 17rem; }
+
+div.projects {
+  float: left;
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0; }
+
+div.projects .controls {
+  position: absolute;
+  left: 5.5rem;
+  top: 5.2rem; }
+
+div.projects .controls {
+  float: left;
+  width: 4rem;
+  height: 5rem; }
+
+.controls .mask {
+  float: left;
+  position: relative;
+  background: url(../images/fanpai_12.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  width: 5rem;
+  height: 3.8rem;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 1.3rem;
+  color: #000; }
+
+.project.ani0 {
+  right: 12rem;
+  bottom: 12.5rem; }
+
+.project.ani1 {
+  right: 6.9rem;
+  bottom: 12.5rem; }
+
+.project.ani2 {
+  right: 1.8rem;
+  bottom: 12.5rem; }
+
+.project.ani3 {
+  right: 12rem;
+  bottom: 6.9rem; }
+
+.project.ani4 {
+  right: 1.8rem;
+  bottom: 6.9rem; }
+
+.project.ani5 {
+  right: 12rem;
+  bottom: 1.2rem; }
+
+.project.ani6 {
+  right: 6.9rem;
+  bottom: 1.2rem; }
+
+.project.ani7 {
+  right: 1.8rem;
+  bottom: 1.2rem; }
+
+.project .front {
+  background: url(../images/fanpai_05.png) no-repeat;
+  background-size: 100% 100%;
+  display: table; }
+.project .back, .project .front {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3.8rem;
+  height: 5.2rem;
+  padding: 0 0.8rem;
+  text-align: center; }
+.project .back, .project .front {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.project .back {
+  background: url(../images/fanpai_07.png) no-repeat;
+  background-size: 100% 100%;  padding: 0 ;}
+ 
+  .project .back .prize {
+    width: 90%;
+    position: absolute;
+    top: 0rem;
+    left: 0.2rem;
+    padding-top: 0.4rem; }
+    .project .back .prize .prize_img {
+      width: 100%;
+      margin: 0.1rem auto; }
+      .project .back .prize_img img {
+        width: 100%; }
+    .project .back .prize p {
+      width: 100%;
+      margin: 0 auto;
+      color: #fff;
+      font-size:12px; }
+
+
+
+.project, .project .back, .project .front, .socials a, .transform_holder .back, .transform_holder .front, .transform_holder .transform {
+  -webkit-transition: all 1s cubic-bezier(0.98, -0.1, 0.1, 100);
+  -moz-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -ms-transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.project {
+  -webkit-perspective: 3000;
+  -moz-perspective: 2000;
+  -o-perspective: 3000;
+  perspective: 3000;
+  -ms-transform: perspective(20rem);
+  -moz-transform: perspective(20rem);
+  -ms-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d; }
+
+.project .back, .project .front {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+.project .front {
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg); }
+
+.project .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.project.hover .front {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+.project.hover .back {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg); }
+
+.footer {
+  width: 100%;
+  text-align: center;
+  color: #000;
+  font-size: 0.6rem;
+  line-height: 1rem; }
+  .footer .chance {
+    width: 100%; }
+    .footer .chance a {
+      color: #088ac4;
+      font-size: 1rem;
+      font-weight: bold; }
+  .footer .vote {
+    width: 25%;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    background:#64d1fa;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    color: #000;
+    font-weight: bold;
+    margin-top:0; }
+  .footer .fx {
+    width: 25%;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    background:#64d1fa;
+    background-size: 100% 100%;
+    margin: 0 auto;
+    color: #000;
+    font-weight: bold;
+    margin-top:0; }
+  .footer .guize {
+    font-size: 0.8rem; }
+    .footer .guize a {
+      color: #088ac4;
+      font-size: 0.8rem;
+      font-weight: bold; }
+  .footer .s {
+    color: #86205A;
+    font-size: 0.6rem; }
+    .footer .s span {
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #EB3870; }
+  .footer .fxgz {
+    margin-bottom: 0.7rem; }
+
+/*# sourceMappingURL=fanpai.css.map */

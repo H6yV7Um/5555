@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/reg.css"/>
+<title>时尚星秀 让你更时尚 让你更闪耀</title>
+</head>
+
+<body>
+<!--head start-->
+<div class="header w">
+  <div class="app"><img src="images/app.png" width="94" height="121" /></div>
+  <div class="weix"><img src="images/weix.png" width="94" height="121" /></div>
+  <div class="logo fl"><a href="index.html"><img src="images/logo.png" width="404" height="150" alt="时尚星秀 让你更时尚 让你更闪耀" title="时尚星秀 让你更时尚 让你更闪耀" /></a></div>
+  <div class="fr">
+    <div class="welcome-info"><span></span><img src="images/user.png" /></div>
+  </div>
+  <div class="share"> <a href="javascript:;" title="扫一扫 关注StarShow微信公众号"><i class="iweix"></i></a> <a  href="http://weibo.com/trendstarshow?refer_flag=1001030101_&is_all=1" title="关注新浪微博" target="_blank"><i class="sina"></i> </a><a href="javascript:;" title="扫码下载"><i class="iapp"></i> </a></div>
+</div>
+<div class="clear"></div>
+
+<!--注册开始-->
+<div class="w blank">
+  <div class="reg">
+    <form action="" method="post" name="form1" id="form1">
+      <dl>
+        <dt class="f14 b">帐户基本信息</dt>
+        <dd><span class="title">用户名：</span>
+          <input class="reg_input" name="t_UserName" id="t_UserName" onblur="checkusername(this.value);" type="text" />
+          <span id="t_UserNameTip" class="onshow"></span></dd>
+          <dd><span class="title">真实姓名：</span>
+          <input class="reg_input" name="t_UserRealName" id="t_UserRealName" onblur="checkusername(this.value);" type="text" />
+          <span id="t_UserRealNameTip" class="onshow"></span></dd>
+        <dd><span class="title">身份证号：</span>
+          <input class="reg_input" name='iptCard' type='text' id='iptCard' onblur="return checktheform();" />
+          <span id="iptCardTip" class="onshow"></span></dd>
+        <dd><span class="title">登录密码：</span>
+          <input class="reg_input" onblur="return checkpasswd(this);" id="t_UserPass" name="t_UserPass" type="password"/>
+          <span id="t_UserPassTip" class="onshow"></span> </dd>
+        <dd id="passstrength"><span class="title">密码强度：</span><em></em><em></em><em></em> </dd>
+        <dd><span class="title">确认录密码：</span>
+          <input onblur="checkdoublepassword();" class="reg_input" type="password" id="t_RePass" name="t_RePass"/>
+          <span id="t_RePassTip" class="onshow"></span></dd>
+        <dd><span class="title">电子邮箱：</span>
+          <input class="reg_input" name="t_Email" type="text" id="t_Email" onblur="checkemail(this.value)" />
+          <span id="t_EmailTip" class="onshow"></span></dd>
+      </dl>
+      <div class="recharge"><img src="images/recharge.jpg" /></div>
+      <dl>
+        <dd><span class="title">验证码：</span>
+          <input id="t_CheckCode" class="reg_input_pic" name="t_CheckCode" type="text" maxlength="4" />
+          <img class="img" src="images/eee.jpg" width="60" height="30" /></dd>
+      </dl>
+      <div class="f_reg_but">
+        <p class="agree">
+          <input type="checkbox" checked="checked" />
+          我已阅读并同意 <a href="privacy.html">服务协议</a></p>
+        <input id="button" name="button" type="submit" value="免费注册" class="r_button"/>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="jumpTo"><span id="jumpTo">5</span>秒后自动跳转到首页</div>
+<div class="mask"></div>
+<!--注册结束--> 
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script> 
+<script src="js/formValidator_min.js" type="text/javascript" charset="UTF-8"></script> 
+<script src="js/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script> 
+<script type="text/javascript">
+$('#t_UserPass').keyup(function (e)
+{
+    var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).*$", "g");
+    var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+    var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+    if (false == enoughRegex.test($(this).val()))
+    {
+       // $('#passstrength').html('More Characters');
+    }
+    else if (strongRegex.test($(this).val()))
+    {
+       $("#passstrength em:eq(2)").addClass("em3")
+    }
+    else if (mediumRegex.test($(this).val()))
+    {
+       $("#passstrength em:eq(1)").addClass("em2")
+    }
+    else
+    {
+        $("#passstrength em:eq(0)").addClass("em1")
+    }
+    return true;
+}
+);
+function countDown(secs,surl){
+ //alert(surl);
+ var jumpTo = document.getElementById('jumpTo');
+ jumpTo.innerHTML=secs;
+ if(--secs>0){
+  setTimeout("countDown("+secs+",'"+surl+"')",1000);
+ }
+ else
+ { 
+  location.href=surl;
+ }
+}
+
+
+$(function(){
+	$.formValidator.initConfig({
+		formid: "form1",
+		debug: false,
+		submitonce: false,
+		onerror: function(msg, obj, errorlist) {
+			alert(msg);
+		},
+		onsuccess: function() {
+	
+			var userName=$("#t_UserName").val();
+			localStorage.setItem( 'userName', userName );
+			$(".jumpTo").show();
+			$(".mask").show();
+			countDown(5,'index.html');
+			return false
+		}
+	});
+	$("#t_UserName").formValidator({onshow:"5-10个字符",onfocus:"5-10个字符",oncorrect:"该用户名可以注册"}).inputValidator({min:5,max:10,onerror:"输入有误"}).regexValidator({regexp:"username",datatype:"enum",onerror:"格式有误"});
+	$("#t_UserRealName").formValidator({onshow:"2-10个字符",onfocus:"2-10个字符",oncorrect:"通过"}).inputValidator({min:2,max:10,onerror:"输入有误"}).regexValidator({regexp:"username",datatype:"enum",onerror:"格式有误"});
+	$("#iptNickName").formValidator({onshow:"至少4个字符",onfocus:"至少4个字符",oncorrect:"通过"}).inputValidator({min:4,empty:{leftempty:false,rightempty:false,emptyerror:"输入有误"},onerror:"输入有误"});
+	$("#t_UserPass").formValidator({onshow:"至少6个字符",onfocus:"至少6个字符",oncorrect:"密码合法"}).inputValidator({min:6,empty:{leftempty:false,rightempty:false,emptyerror:"输入有误"},onerror:"输入有误"});
+	$("#t_RePass").formValidator({onshow:"请再次输入密码",onfocus:"请再次输入密码",oncorrect:"密码一致"}).inputValidator({min:6,empty:{leftempty:false,rightempty:false,emptyerror:"输入有误"},onerror:"输入有误"}).compareValidator({desid:"t_UserPass",operateor:"=",onerror:"密码不一致"});	
+	$("#iptName").formValidator({onshow:"至少4个字符",onfocus:"至少4个字符",oncorrect:"通过"}).inputValidator({min:4,empty:{leftempty:false,rightempty:false,emptyerror:"输入有误"},onerror:"输入有误"});
+	$("#iptCard").formValidator({onshow:"15或18位的身份证",onfocus:"15或18位的身份证",oncorrect:"输入正确"}).functionValidator({fun:isCardID});
+	$("#t_Email").formValidator({onshow:"6-100个字符",onfocus:"6-100个字符",oncorrect:"恭喜你,你输对了",defaultvalue:"@"}).inputValidator({min:6,max:100,onerror:"长度非法"}).regexValidator({regexp:"^([\\w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([\\w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$",onerror:"格式不正确"});
+});
+function test1(obj)
+{
+	if(obj.value=="全角字符当做1个长度")
+	{
+		$.formValidator.getInitConfig("1").wideword = false;
+		obj.value = "全角字符当做2个长度";
+	}
+	else
+	{
+		$.formValidator.getInitConfig("1").wideword = true;
+		obj.value = "全角字符当做1个长度";
+	}
+	
+}
+
+</script>
+<p class="clear"></p>
+<!--底部-->
+<div class=" footer mt30">
+  <div class="w"> <i></i>
+    <div class="footerInfo">
+      <dl>
+        <a href="about.html">
+        <dt>关于我们 </dt>
+        <dd>About us</dd>
+        </a>
+      </dl>
+      <dl>
+        <a href="partner.html">
+        <dt> 合作伙伴 </dt>
+        <dd>Parterner</dd>
+        </a>
+      </dl>
+      <dl>
+        <a href="contact.html">
+        <dt> 联系我们</dt>
+        <dd> Contact us</dd>
+        </a>
+      </dl>
+      <dl>
+        <a href="join.html">
+        <dt> 加入我们</dt>
+        <dd> Join us</dd>
+        </a>
+      </dl>
+      <dl>
+        <a href="privacy.html">
+        <dt> 用户协议</dt>
+        <dd> User </dd>
+        </a>
+      </dl>
+      <dl class="last">
+        <a href="###">
+        <dt>版权信息 </dt>
+        <dd> Copyright</dd>
+        </a>
+      </dl>
+    </div>
+    <p class="mt30">集团站点：</p>
+    <p><a href="http://www.trendsgroup.com.cn/" target="_blank" class="clp">时尚网 </a>/<a href="http://www.cosmopolitan.com.cn/" target="_blank">cosmopolitan中文网</a>/<a href="http://www.bazaar.com.cn/" target="_blank">时尚芭莎</a>/<a href="http://enrz.com/" target="_blank">男人装</a>/<a href="http://www.robbreport.cn/" target="_blank">罗博报告</a>/<a href="http://www.bazaarjewelrychina.com/" target="_blank">芭莎珠宝</a>/<a href="http://www.ccbride.com/" target="_blank"> 时尚新娘 </a>/<a href="http://www.nationalgeographic.com.cn/travel/" target="_blank">时尚旅游</a>/<a href="http://www.nationalgeographic.com.cn/" target="_blank">华夏地理</a>/<a href="http://www.trendscar.com.cn/" target="_blank">时尚座驾</a>/<a href="http://www.mhtrends.com.cn/master/?Main/index.html" target="_blank">时尚健康.男士</a>/<a href="http://www.trendshome.cn/" target="_blank">时尚家居</a></p>
+    <p class="mt30">© Copyright  2016  北京时尚星秀影视文化传媒有限公司 京ICP备16014546号-1 </p>
+  </div>
+</div>
+</body>
+</html>

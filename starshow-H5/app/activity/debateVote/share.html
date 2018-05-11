@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>《双面派》直播辩论投票活动</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css" />
+</head>
+<body>
+	<a href="http://t.cn/R7COgYb" id="btn_down"><img src="assets/images/down-bg.png"  width="100%" /></a> 
+	<section class="debateMain">
+		<header class="debateHeader">
+			<div class="banners">
+				<img src="assets/images/banner.jpg" class="bg_banner"/>
+				<div class="videos_pre">
+				  <video controls autopaly preload="auto" poster="assets/images/banner.jpg" ></video>
+				</div>
+				<div class="conter_area">
+			  		<img src="assets/images/font01.png" class="couter_font">
+			  		<div class="time_show" id="time_show">
+			  			<!-- <span>30</span>:<span>22</span>:<span>66</span> -->
+			  		</div>
+			  	</div>
+			</div>
+			<div class="videos"  style="display:none">
+				<div id="player" ></div>
+			</div>
+		</header>
+		<section class="debateCons">
+			<div class="debate_votes">
+				<h1>风水兴三代，星座毁一生？</h1>
+				<div class="debate_progress">
+					<span class="debate_sides col_yellow">正</span>
+					<div class="progress_con">
+						<div class="lines line_reds"></div>
+						<div class="lines line_yellow"></div>
+						<img src="assets/images/vs.png" class="vs"/>
+					</div>
+					<span class="debate_sides col_red">反</span>
+				</div>
+				<ul class="progress_desc">
+					<li>
+						正方：“星座说”<span class="col_blue">靠谱</span>
+					</li>
+					<li>
+						“星座说”<span class="col_blue">不靠谱</span>：反方
+					</li>
+				</ul>
+				<ul class="vote_btns" style="display:none">
+					<li>
+						<div class="btn_vote vote_zheng js-vote" sideId="1">
+							<p class="f1">正<p>
+							<p class="f2">投票</p>
+						</div>
+						<p class="vote_num">0</p>
+					</li>
+					<li>
+						<div class="btn_vote vote_fan js-vote" sideId="2">
+							<p class="f1">反<p>
+							<p class="f2">投票</p>
+						</div>
+						<p class="vote_num">0</p>
+					</li>
+				</ul>
+			</div>
+			<!-- <div class="awardCon">
+				<p class="award_tit"><img src="assets/images/award-tit.png" /></p>
+				<ul class="awards">
+					<li><img src="assets/images/award1.png" /></li>
+					<li><img src="assets/images/award2.png" /></li>
+				</ul>
+				<div class="winList">
+					<img src="assets/images/award-bg.png" />
+					<ul class="list">
+					  <li class="n1">
+						<span class="name">大大 </span>
+						<span class="name">15851721643 </span>
+						<span>一等奖</span>
+					   </li>
+					  <li>
+						<span class="name">奋斗少年 </span>
+						<span class="name">15506518520 </span>
+						<span>二等奖</span>
+					   </li>
+					   <li>
+						<span class="name">沙皮狗的忧伤 </span>
+						<span class="name">17737525830 </span>
+						<span>二等奖</span>
+					   </li>
+					   <li>
+						<span class="name">女孩爱上电吉他 </span>
+						<span class="name">15340671728 </span>
+						<span>二等奖</span>
+					   </li>
+					   <li>
+						<span class="name">woli花花 </span>
+						<span class="name">132004956789 </span>
+						<span>二等奖</span>
+					   </li>
+					   <li>
+						<span class="name">热爱与癫狂biu </span>
+						<span class="name">18993430008 </span>
+						<span>二等奖</span>
+					   </li>
+					</ul>
+				</div> -->
+			</div>
+			<div class="vote_rules">
+				<h2>●活动介绍</h2>
+				<p>你的星座靠谱吗？你的星座被黑过吗？是否用星座去看待人和事呢？第五期双面派辩论“星座说”是否靠谱。天空将答案隐藏起来。双面派为你揭晓！</p>
+				<!-- <h2 class="line">●活动奖励</h2>
+				<p>参与投票的网友，我们从中抽取五位幸运观众赠送杨幂亲笔签名照或稻草人真皮钱包。</p> -->
+				<h2 class="line">●投票规则</h2>
+				<div> 1、下载并登陆【时尚星秀】APP，进入活动页面，为自己支持的观点投票。<br/>
+					  2、每位用户每天可以为自己支持的观点投出宝贵一票<br/>
+					  3、可以将活动分享给好友，一起为本话题助力<br/>
+
+				</div>
+				<h2 class="line">●温馨提示：</h2>
+  				<div>活动最终解释权归时尚星秀所有。</div>
+			</div>
+		</section>
+
+	</section>
+	<input type="hidden" id="hide_info" />
+	<div id="messdiv" class="dialog_tip" style="display:none;">
+	     <div title="关闭窗口" class="js-close">
+	          <img src="assets/images/close.png"/>
+	        </div>
+	      <div class="messdivCons">
+	      	<p class="mt10 dialog-tit"><img src="assets/images/dialog-tit.png" ></p>
+	      	<div class="success_tip">投票成功</div>
+	        <div class="phoneCon">
+	        	<p>留下您的联系方式，中奖后电话通知</p>
+	        	<input type="text" class="txt_phone" placeHolder="电话号码"/> 
+				<div class="error_tips"></div>
+	        	<input type="button" class="btn_saveNum" id="js-save" value="确认"/>
+	        </div>
+	      </div>
+	      <div class="tips" style="display:none"></div>
+	</div>
+	<div id="BOX_overlay"></div>
+	<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/letv/blive.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/letv/bcloud.js"></script>
+
+	<script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>	

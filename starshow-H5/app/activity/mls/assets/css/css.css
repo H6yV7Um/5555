@@ -1,0 +1,403 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,
+textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0; vertical-align: middle;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;
+	font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+input[type="button"], input[type="submit"], input[type="reset"],input[type="text"],input[type="search"],select{
+-webkit-appearance: none;outline: 0;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+*{-webkit-appearance: none;outline: 0;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+textarea {-webkit-appearance:none;outline:0;} 
+html,body{ margin:0px; height:100%;font-family: "Microsoft Yahei"}
+.none{display:none}
+.vm{vertical-align: middle;}
+html {font-size: 62.5%;}
+img{vertical-align: middle}
+.mt10{margin-top:10px;}
+.mt20{margin-top:20px;}
+.lh200{line-height:200%}
+.ml5{margin-left: 5px;}
+.col_red{color: #f00}
+.tl{text-align: left;}
+.mt3{margin-top: 3rem;}
+.fl{float: left; display: inline;}
+.fr{float: right;display: inline;}
+.fb{font-weight: bold;}
+.col_red{color: #ff1d3e}
+.tc{
+  text-align: center;
+}
+
+header{
+  width:100%;
+  position: relative;
+}
+header .bg_banner{
+  width: 100%;
+}
+header .icon_rules{
+  width:16%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.mls_main{
+  width: 100%;
+  overflow: hidden;
+}
+.teams{
+  width:100%;
+  overflow: hidden;
+}
+.teams li{
+  width:100%;
+  position: relative;
+  overflow: hidden;
+  min-height:8rem;
+}
+.teams_num{
+  position: absolute;
+  width:2.5rem;
+  right: 10px;
+  top:0;
+}
+.bg_teams{
+  width: 100%
+}
+.teams_abs{
+  position: absolute;
+  width:100%;
+      bottom: 0;
+}
+.mls_stars_con{
+  width:54%;
+  float: left;
+  display: inline;
+  position: relative;
+}
+
+.mls_stars_con .mls_stars{
+  width:100%;
+}
+.mls_stars_con .teams_name{
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width:43%;
+}
+.mls_ball_main{
+  position: absolute;
+  width:35%;
+  right:0;
+  height: 100%;
+  color:#f9ece1;
+  font-size: 0.9rem;
+
+}
+
+.ball_cons{
+   height: 100%;
+}
+.ball_desc{
+  width:43%;
+  position: absolute;
+  right:0;
+  bottom:2.9rem;
+  text-align: center;
+}
+.team_remarks{
+  position: absolute;
+  bottom:0.8rem;
+  left:0.5rem;
+  width:100%;
+    margin-left:0.8rem;
+}
+.team_remarks div{
+  /* display: inline; 
+  height: 2rem;*/
+}
+/* .team_remarks div:first-child{
+    margin-right: 5%;
+}
+.team_remarks div:last-child{
+    margin-left: 5%;
+} */
+.mls_ball_main span{
+  color: #fff;
+  font-size:1.3rem;
+  font-weight: bold;
+  margin-left: 5px;
+}
+/*ball  css*/
+.r_out {width:90px; height:90px; 
+   position: relative;
+   margin-top:8px;
+   margin-left:10px;
+ }
+ .out_bg{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 2
+ }
+.r_out p {
+  position:absolute; 
+  bottom:-50px; color:#000;
+  text-align:center; 
+  margin:0 auto; 
+  width:100%; 
+  font-size:16px; 
+  line-height:1.5; 
+  font-weight:bold;
+  
+ }
+.r_in {width:100%; height:100%; 
+   /* border:5px solid #fff;  */
+   border-radius:50%; 
+  -webkit-border-radius:50%; 
+  -moz-border-radius:50%; 
+  -ms_border-radius:50%; 
+  overflow:hidden; 
+  position:absolute;
+  top:0;
+  -webkit-transform:rotate(0deg);
+
+}
+.c1{
+  background: #00c06b
+}
+.r_c {width:100%; height:100%; position:absolute; bottom:0; left:0; height:0;}
+.teams_dj {background:#c16111;}
+.teams_zs {background:#c89a0e;}
+.teams_cy {background:#0071c1;}
+.r_num {color:#404040; 
+ line-height:1; font-weight:bold; position:absolute; top:50%; 
+ margin-top:-1.3rem; 
+ text-align:center; 
+ width:100%;
+ z-index: 10
+}
+.btn_zan{
+  width:2.6rem;
+   
+}
+.zan_moves{
+  -webkit-animation:moves 2s infinite linear;
+   -moz-animation:moves 2s infinite linear;
+   -o-animation:moves 2s infinite linear;
+   animation:moves 2s infinite linear;
+}
+.teams_style2 .mls_ball_main{
+  left:0;
+}
+.teams_style2 .mls_stars_con{
+  float: right;
+}
+.teams_style2 .team_remarks{
+  right: 0;
+  left: 0.5rem;
+  text-align: left;
+  margin-left:4rem;
+}
+.teams_style2 .r_out{
+    float: left;
+    margin-left: 4rem;
+}
+.teams_style2 .ball_desc{
+   left:0;
+}
+.teams_style2 .ball_shadow{
+  text-align: right;
+  margin-right: -5px;
+}
+.teams_style2 .teams_num{
+  left: 10px;
+}
+
+.history_con{
+      width: 96%;
+    padding: 0 2% 10px 2%;
+  position: relative;
+  margin:5rem auto;
+  background: #ffffff;
+}
+.history_con:first-child{
+  margin-top:0;
+}
+.history_con .icon_adr{
+  width:11.9rem;
+  position: absolute;
+  top:-5rem;
+  right:0;
+}
+.history_con ul{
+  color: #ffffff;
+  font-size: 1.4rem;
+  height: 4rem;
+  line-height: 4rem;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.history_con ul.score_title{
+  color: #404040;
+  font-size: 1.2rem;
+  height: 3rem;
+  line-height: 3rem;
+  background: #ffffff;
+  margin-top: 0
+}
+.history_con ul.dj{
+  background: #e36d0b
+}
+.history_con ul.zs{
+  background: #c89a0e
+}
+.history_con ul.cy{
+  background: #0071c1
+}
+.history_con li{
+  float: left;
+  display: inline;
+  text-align: center;
+  width:16%;
+  
+}
+.history_con li:nth-child(2){
+  width:36%;
+}
+
+.rules_main{
+  width:90%;
+  margin:20px auto;
+  color: #3d3d3d;
+  line-height:2rem;
+}
+.rules_main h1{
+   font-size: 1.6rem;
+   font-weight: bold;
+}
+.rules_main h2{
+   font-size: 1.5rem;
+   font-weight: bold;
+   margin:15px 0 5px 0;
+}
+.rules_main h3{
+font-size: 1.5rem;
+}
+.rules_main p{
+   font-size: 1.3rem;
+}
+
+/*tcc*/
+.dialog_tip{
+    background: #fff;
+    text-align: left;
+    border: 1px solid #dedede;
+    font-size: 12px;
+    width:80%;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+.js-close{
+    background: #fff;
+    float: right;
+    height: 20px;
+    padding: 5px 0 0 10px;
+    color: #000;
+    margin-right: 10px;
+    font-size:1.4rem;
+}
+.messdivCons{
+    width: 90%;
+    overflow: hidden;
+    font-size: 1.3rem;
+    color: #000;
+    text-align: center;
+    padding: 10px 0 30px;
+    margin:0 auto;
+}
+.js-close{
+    background: #fff;
+    float: right;
+    height: 20px;
+    padding: 5px 0 0 10px;
+    color: #000;
+    margin-right: 10px;
+    font-size:1.4rem;
+}
+.btn_get{
+   width: 50%;
+   background: #ff1d3e;
+   color: #ffffff;
+   text-align: center;
+   line-height: 3rem;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   text-decoration: none;
+   margin-top: 20px;
+   display:inline-block
+}
+.no-data{
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  margin:20px 0;
+  font-weight: bold;
+}
+@-webkit-keyframes moves {
+    0%{
+        
+       -moz-transform:scale(1,1);  
+        -webkit-transform:scale(1,1);  
+        -o-transform:scale(1,1);  
+    }
+    50%{
+      -moz-transform:scale(1.2,1.2);  
+        -webkit-transform:scale(1.2,1.2);  
+        -o-transform:scale(1.2,1.2); 
+    }
+    100%{
+       -moz-transform:scale(1,1);  
+      -webkit-transform:scale(1,1);  
+      -o-transform:scale(1,1);  
+    }
+}
+@media screen and (max-width: 320px) {
+  .r_out {
+   width:70px; height:70px; 
+   margin-left: 10px;
+   margin-top: 8px
+  }
+  .ball_desc{bottom:3rem;}
+  .team_remarks{margin-left:0.5rem;}
+  .teams_style2 .team_remarks{margin-left:3rem;}
+  /* .team_remarks div:first-child{
+    margin-right: 2%;
+  }
+  .team_remarks div:last-child{
+      margin-left: 2%;
+  } */
+}
+@media screen and (min-width: 410px) {
+   	.r_out {width:90px; height:90px;margin-left: 10px;margin-top: 14px}
+    .ball_desc{bottom:4rem; }
+    .r_num {margin-top:-1.5rem;}
+    .btn_zan{width:3rem;}
+}

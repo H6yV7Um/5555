@@ -1,0 +1,35 @@
+#detail_box {
+	height: 100%;
+	width: 100%;
+}
+header {
+	background: #000;
+}
+.detail_one {
+	padding: 0 28px;
+}
+.one_h {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+.one_a {
+	font-size: 16px;
+	line-height: 25px;
+	font-family: "微软雅黑";
+	margin-bottom: 25px;
+}
+h1 {
+	font-size: 20px;
+	font-weight: bold;
+}
+img {
+	max-width: 7%;
+}
+.ig {
+	max-width: 4%;
+}
+.one_b {
+	overflow: hidden;
+}

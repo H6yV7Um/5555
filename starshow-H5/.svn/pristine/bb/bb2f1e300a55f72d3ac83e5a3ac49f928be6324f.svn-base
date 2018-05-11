@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>星秀圣诞护肤</title>
+</head>
+
+<body>
+
+<!--护肤-->
+<section class="wrap" id="skin"> <img src="images/skin_01.jpg"><img src="images/skin_02.jpg"><img src="images/skin_03.jpg"><img src="images/skin_04.jpg"><img src="images/skin_05.jpg"><img src="images/skin_06.jpg"><img src="images/skin_07.jpg"><img src="images/skin_08.jpg"><img src="images/skin_09.jpg"><img src="images/skin_10.jpg"><img src="images/skin_11.jpg"><img src="images/skin_12.jpg"><img src="images/skin_13.jpg">
+  <div class="btn btn01"><a href="###" class="mt16"><img src="images/Movie_G.png"></a><a href="http://cn.fresh.com/cn/zodiac_oval_soaps
+" class="mt8"><img src="images/link_Red.png"></a> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=4334&Hyperlink=1
+"><img src="images/detail.png"></a></div>
+  <div class="btn btn02"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=3835&Hyperlink=1
+"><img src="images/detail.png"></a><a href="###"><img src="images/Link_G.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn03"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=4322&Hyperlink=1
+"><img src="images/detail.png"></a><a href="http://www.banilacoshop.com/cn/main/main.do
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn04"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=4313&Hyperlink=1
+"><img src="images/detail.png"></a><a href="http://www.innisfree.cn/Main.do?smtid=482128556z1hs4zrp0wz8jz0zMjQw
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn05"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=4401&Hyperlink=1
+"><img src="images/detail.png"></a><a href="http://www.loccitane.cn/%E7%B9%81%E8%8A%B1%E7%82%AB%E8%88%9E-%E5%A4%A9%E7%84%B6-%E6%8A%A4%E8%82%A4%E5%93%81,90,2,35144,0.htm
+
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn06"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=4265&Hyperlink=1
+"><img src="images/detail.png"></a><a href="###"><img src="images/Link_G.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn07"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=4165&Hyperlink=1
+"><img src="images/detail.png"></a><a href="http://www.biotherm.com.cn/category/new/
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn08"><a href="###"><img src="images/Movie_G.png"></a>  <a href="http://www.kiehls.com.cn/on/demandware.store/Sites-kiehls-cn-Site/zh_CN/Default-Start?utm_source=baidu_pc_bz_bw&utm_medium=cpc&utm_content=tittle&utm_campaign=E_kls_bz_201606
+"><img src="images/link_Red.png"></a><a href="http://share.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=4174&Hyperlink=1
+"><img src="images/detail.png"></a></div>
+<div class="subNav">
+    <ul>
+      <li><a href="Perfume.html">圣诞香氛</a></li>
+      <li><a href="shoes.html">圣诞鞋履</a></li>
+      <li><a href="fashion.html">圣诞时装</a></li>
+      <li><a href="watch.html">圣诞腕表</a></li>
+      <li><a href="GiftBox.html">圣诞礼盒</a></li>
+      <li><a href="jewels.html">圣诞珠宝</a></li>
+      <li><a href="skin.html">圣诞护肤</a></li>
+      <li><a href="Makeup.html">圣诞美妆</a></li>
+      <li><a href="Package.html">圣诞包包</a></li>
+      <li><a href="life.html">圣诞party </a></li>
+    </ul>
+  </div>
+  <div class="closeBtn"><img src="images/closeBtn.png"></div>
+  <div class="add"><img src="images/add.png"</div>
+</section>
+<script src="js/zepto.js" type="text/javascript"></script> 
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript">
+$(".add").click(function(){
+	$(".subNav").show()
+	$(".add").hide();
+})
+$(".closeBtn").click(function(){
+	$(".subNav").hide()
+	$(".add").show();
+})
+setTimeout("wx_share()",2000)
+</script>
+<!-- 统计代码 --> 
+<script type="text/javascript" src="../../tj.php"></script> </body>
+</html>

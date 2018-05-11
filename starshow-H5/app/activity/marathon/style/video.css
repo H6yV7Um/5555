@@ -1,0 +1,54 @@
+body {
+	height: 100%;
+}
+#video_back {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	background: #0a5b9b;
+}
+.content,.data_list {
+	margin: 0 1.2rem;
+}
+.tit_f,.tit_e {
+	color: #FFFFFF;
+	height: 4rem;
+	line-height: 4rem;
+}
+.tit_f {
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+.tit_e {
+	font-size: 1.2rem;
+	background: url(../images/arrow-1_03.png) no-repeat -8px 16px;
+	padding-left: 20px;
+}
+ul {
+	overflow: hidden;
+}
+li {
+	width: 47%;
+	height: 47%;
+	float: left;
+	margin-right: 6%;
+	margin-bottom: 3%;
+}
+ul li a {
+	display: block;
+}
+
+ul li a img {
+	display: block;
+}
+#dot {
+	display: none;
+	height: 100%;
+}
+.swiper-container {
+	width: 100%;
+}
+.swiper-wrapper {
+	margin-top: 50%;
+}

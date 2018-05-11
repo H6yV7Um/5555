@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>帮偶像打榜，赢取偶像赠送的限量好礼</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body>
+<a href="http://t.cn/R7COgYb"><img src="assets/images/down-bg.png" width="100%"></a>
+   <section class="crecmonyMain" id="js-crecmonyMain">
+	<header class="cereHeader mt10">
+		<div class="cere-info">
+			<div class="fl"><img src="assets/images/starShowLogo.png" /></div>
+			<div class="fr">
+				<p>当前参与人数</p>
+			    <p class="col_red">500</p>
+			</div>
+		</div>
+		<div class="cere-search" id="js-search">
+			<img src="assets/images/search_bg.png" />
+		</div>
+	</header>
+	<nav class="cereNav mt10">
+		<ul id="js-switchTab">
+			<!-- <li class="cur">演员榜</li>
+			<li>歌手榜</li> -->
+		</ul>
+	</nav>
+	<section class="cereBanner ">
+		<img src="" id="top-banner"/>
+		<div class="bannerTip">
+		  <img src="assets/images/top-tip.png" />
+		  <p class="userName"><img src="assets/images/icon-arrow-left.png" ><span></span></p>
+		  <p class="c1">当前参与人数</p>
+		  <div class="joinNumber">
+		  	<div id="number"></div>
+		  	<img src="assets/images/icon-star.png" />
+		  </div>
+		</div>
+		
+		<p class="icon-rule"><a href="http://testshare.xingxiu.tv/rankRule/index.html"><img src="assets/images/icon-rule.png"></a></p>
+	</section>
+	<section class="cereNav2">
+		<div class="fl" id="cereNav2_tit">排行榜</div>
+		<ul id="js-switchTab-time" class="fr">
+			<li class="cur">日</li>
+			<li>周</li>
+			<li>月</li>
+		</ul>
+	</section>
+    <section class="rankingMain">
+		<ul class="rankCon" id="js-rankContainer"></ul>
+		<p class="tc more-rank" id="js-moreRank" style="display:none">点击加载更多...</p>
+		
+     </section>
+    </section> 
+    <!--search main-->
+    <section class="searchMain" id="js-searchMain" style="display:none">
+    	<section class="searchTitle">
+	     <form action="javascript:return true;" class="searchForm">
+		    <input type="search" name="search" class="txt_search" id="js-txt_search" placeholder="搜索明星" >
+		</form>
+	     <input type="button" class="btn_cancel" id="js-btn_cancel" value="取消"/>
+	    </section>
+	    <ul id="js-searchList">
+	    	<!-- <li class="curPersonInfo searchPersonInfo">
+	    				    <p class="head-pic"><img src="assets/images/headPic-default.png"></p>
+	    					<div class="user-info">
+	    						<div>当前用户</div>
+	    						<div class="col_grey f13">排名第23</div>
+	    					</div>
+	    					<div class="follow-num">
+	    						<span id="followNum">23.4万</span>
+	    						<img src="assets/images/icon-heart.png">
+	    					</div>
+	    				</li> -->
+	    </ul>
+	    
+
+    </section>
+    <div id="messdiv" class="dialog_tip" style="display:none;">
+		 <div title="关闭窗口" class="js-close">
+        	<span>×</span>
+        </div>
+	    <div class="messdivCons"></div>
+	</div>
+	<div id="BOX_overlay"></div>
+	<script type="text/javascript" src="assets/js/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/js/starCeremonyShare.js"></script>
+	<script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+</body>
+</html>

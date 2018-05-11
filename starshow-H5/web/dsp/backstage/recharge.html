@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀广告投放管理平台</title>
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/datepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../assets/api/css/backstage.css">
+</head>
+<body>
+	<div class="dspHeader"></div>
+	<div class="dspMenu"></div>
+	<div class="dspContainer">
+		<div class="rechargeMain dsp_container">
+		<div class="recharge_header">
+				<p>账户余额：<span id="js_Account" class="recharge_monery"></span></p>
+				<p>冻结金额：<span id="js_FreezAmount" class="recharge_monery"></span></p>
+			</div>
+			<div class="recharge_cons">
+				<h1>充值金额</h1>
+				<input type="text" class="txt_con w420px" placeholder="RMB：请输入金额" id="recharge_total">
+				<div class="radioList">
+					 <input type="radio" name="recharge" value="1" class="vm" />
+					<img src="../assets/images/icon-wx.png" height="32" width="36" class="vm">微信 
+					<input type="radio" name="recharge" value="2" checked="checked"  class="vm"/>
+					<img src="../assets/images/icon-zfb.png" height="32" width="32">支付宝
+				</div>
+				<div>
+					<input type="button" class="btn_blue btn_topay" value="去充值">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<script type="text/javascript" src="../assets/common/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/common.js"></script>
+	<script type="text/javascript" src="../assets/api/js/recharge.js"></script>
+</body>
+</html>

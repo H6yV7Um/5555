@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>2107时装周专题&0&1&8</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css" />
+</head>
+<body>
+<section class="fw_dMain">
+	<header>
+		<img src="assets/images/d_top_banner.png"/>
+		<div class="fw_desc">
+			<!-- 凯特·莫斯 (Kate Moss) 再次出镜演绎，摄影师Sølve Sundsbø掌镜拍摄，温暖的日光洒下，映出舞动的树影，慵懒的身姿徜徉在柔软的沙发上，显得自在随性。显得自在随性。 -->
+		</div>
+	</header>
+	<nav class="brands">
+		<ul>
+			<!-- <li><img src="assets/images/brands01.png" />
+					      <img src="assets/images/arraw.png" class="icon_choose none" />
+			</li>
+			<li><img src="assets/images/brands01.png" />
+			              <img src="assets/images/arraw.png" class="icon_choose" />
+			</li>
+			<li><img src="assets/images/brands01.png" />
+			             <img src="assets/images/arraw.png" class="icon_choose none" />
+			</li> -->
+		</ul>
+		<div class="line"></div>
+	</nav>
+	<section class="brands_cons">
+		<!-- <h2>直播回顾</h2>
+		<div class="vedio_con">
+			<video width="100%" loop="loop"  controls="controls">
+				　　<source type="video/mp4" src="assets/images/Tai.mp4" -webkit-playsinline=true>
+				</video>
+		</div>
+		<h2>热门视频</h2>
+		<ul class="vedio_list">
+			<li>
+				<video width="100%" loop="loop"  controls="controls">
+				　　<source type="video/mp4" src="assets/images/Tai.mp4" -webkit-playsinline=true>
+				</video>
+			</li>
+			<li>
+				<video width="100%" loop="loop" controls="controls">
+				　　<source type="video/mp4" src="assets/images/Tai.mp4" -webkit-playsinline=true>
+				</video>
+			</li>
+		</ul>
+		<div class="fw_news">
+			<h2>相关头条</h2>
+			<ul class="vedioList">
+			  <li>
+				 <a href="http://testshare.xingxiu.tv/starshow5.0/video/share.html?id=252">
+				 	<div class="vedioCover"><img src="https://starshow-pic.b0.upaiyun.com/videos/1/1467877302.png"></div>
+				<div class="vedioDesc">
+					<h2>Etro 2016 春夏时装秀</h2>
+					<ul class="activity">
+						<li><img src="assets/images/icon-eye.jpg"><span class="ml5">41026</span></li>
+						<li><img src="assets/images/icon-heart.jpg"><span class="ml5">6092</span></li>
+				   </ul>
+				</div>
+			  </a>
+			</li>
+		</ul>
+		</div> -->
+	</section>
+</section>
+<input type="hidden" id="hideInfo" />
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js" ></script>
+<script type="text/javascript" src="../assets/js/common/bridge.js" ></script>
+
+<script type="text/javascript" src="assets/js/main.js?v=1" inline></script>
+
+</body>
+</html>

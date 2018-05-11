@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no, email=no">
+<title>确认订单</title>
+<link rel="stylesheet" type="text/css" href="../public/css/body.css?v=201603181535">
+</head>
+<body class="addcolor">
+<div class="st_orderC_warp">
+  <div class="st_orderC_where">
+    <p>请在<span id="now"></span>分内完成支付，过期请重新购买。</p>
+    <div class="st_where_img"> <img src="../public/images/body3.png">
+      <div>
+        <h2>中国廊坊国际纹身艺术节</h2>
+        <p>廊坊国际会展中心</p>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="st_orderC_detail">
+    <ul>
+      <li>
+        <label>单价：</label>
+        <span class="money"></span> </li>
+      <li>
+        <label>数量：</label>
+        <span class="sum"></span> </li>
+      <li>
+        <label>购买票种:</label>
+        <span class="piaoClass"></span> </li>
+      <li>
+        <label class="time">活动时间：</label>
+        <div class="time_list"> </div>
+      </li>
+    </ul>
+  </div>
+  <div class="st_orderC_pay">
+    <p></p>
+    <ul>
+      <li type="wechatpay" class="active">
+        <label class="weixin">微信支付</label>
+        <span></span> </li>
+      <li type="alipay">
+        <label class="zhifubao">支付宝支付</label>
+        <span></span> </li>
+    </ul>
+    <h6>如支付遇到问题，请联系客服：&nbsp&nbsp<a href="tel:65895559">65895559</a>转306</h6>
+  </div>
+  <div class="st_orderC_gopay">
+    <p class="gocancel">取消订单</p>
+    <p class="gopay">去支付</p>
+  </div>
+</div>
+<script type="text/javascript" src="../public/js/zepto.js"></script> 
+<script type="text/javascript" src="../public/js/bodyart.js?v=201603181728"></script> 
+<script src="../public/js/jweixin-1.0.0.js"></script> 
+<script src="../public/js/common.js"></script> 
+<script type="text/javascript">
+        
+        window.onload=function(){
+            var t_urlpath="http://testapi.xingxiu.tv/";
+            var o_urlpath="http://api.xingxiu.tv/";
+            var order_id = location.search.replace(/\?order_id=(\d+).*/,'$1');
+            console.log(order_id);
+            var uid = location.search.slice(location.search.indexOf("&uid") + 5).split("&")[0];
+            // var uid="114655";
+            // var order_id="10001";
+            console.log(order_id+'====+'+uid);
+            var bUrl=o_urlpath+'index.php?app=mobile&mod=Activity&act=tattoo_order&uid='+uid+'&order_id='+order_id+'&t='+Math.random()*1000+'&returntype=jsonp&callback=?';
+            getConfirmInfo(bUrl);
+        }
+        </script>
+</body>
+</html>

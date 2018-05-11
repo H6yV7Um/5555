@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀-让你更时尚，让你更闪耀！</title>
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"  />
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper-3.4.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">	
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body>
+ <div class="xingx_mains">
+ 	<!--头部-->
+    <div class="xingx_header"></div>
+ 	<!--内容-->
+ 	<div class="xingx_cons mt60">
+ 		<div class="xingx_crumb">
+    			<span id="crumb_name">榜单</span>&gt;明星详情
+    	</div>
+        <div class="personal">
+        	<div class="personal_header">
+        		<img src="assets/images/icon-head.png" class="p_header" />
+        		<div class="p_desc">
+        			<h1>...</h1>
+        			<p>职业：<span class="p_job"></span><br/>
+					   地区：<span class="p_nation"></span>
+        			</p>
+        			<ul id="js-influenceCon">
+        				<li>
+        					<p><img src="assets/images/icon/icon-dian-grey.png" height="6" width="6" >&nbsp;<span>星秀平台影响力</span></p>
+                            <div class="influ_desc">
+                               <p class="rank">NO.<span id="js_rank"></span></p>
+                               <p class="data"><span class="influences"></span><span class="trend"></span></p>
+                            </div>
+        					
+        				</li>
+        				<li>
+                            <p><img src="assets/images/icon/icon-dian-grey.png" height="6" width="6" >&nbsp;<span>最高影响力：</span><span class="plat_name"></span></p>
+                            <div class="influ_desc">
+                               <p class="rank">NO.<span id="js_rank_high"></span></p>
+                               <p class="data"><span class="influences"></span><span class="trend"></span></p>
+                            </div>
+                        </li>
+        			</ul>
+        		</div>
+        	</div>
+            <div class="personal_cons">
+            	<ul class="personal_tit" id="js_person_tab">
+            		<li class="cur">明星主页
+                      <img class="icon_cur" src="assets/images/icon/icon-bottom-dist.png" />
+            		</li>
+            		<li>基本资料
+                      <img class="icon_cur" src="assets/images/icon/icon-bottom-dist.png" style="display:none" />
+            		</li>
+            		<li>相关资讯
+            			<img class="icon_cur" src="assets/images/icon/icon-bottom-dist.png" style="display:none" />
+            		</li>
+            		<li>主要作品
+                      <img class="icon_cur" src="assets/images/icon/icon-bottom-dist.png" style="display:none" />
+            		</li>
+            		<li>获奖记录
+            			<img class="icon_cur" src="assets/images/icon/icon-bottom-dist.png"  style="display:none"/>
+            		</li>
+            	</ul>
+            	<div class="cb"></div>
+            	<div class="personal_content" id="con1">
+            		<div class="person_desc">
+            			<span class="person_desc_con">... </span><span class="col_blue" id="js_more_desc">更多&gt;</span>
+            			
+            			<input type="hidden">
+            		</div>
+            		<div class="type_tit mt30">
+            			<div class="type_name">头条资讯</div>
+            			<span class="fr" curId="0">更多&gt;</span>
+            		</div>
+            		<div class="xingx_list list4">
+			 			<ul id="js-newsList"></ul>
+			 		</div>
+                    <div class="type_tit mt30">
+                        <div class="type_name">视频资讯</div>
+                        <span class="fr" curId="1">更多&gt;</span>
+                    </div>
+                    <div class="xingx_list list4">
+                        <ul id="js-videoList"></ul>
+                    </div>
+                    <div class="type_tit mt30">
+                        <div class="type_name">直播资讯</div>
+                        <span class="fr"  curId="2">更多&gt;</span>
+                    </div>
+                    <div class="xingx_list list4">
+                        <ul id="js-liveList"></ul>
+                    </div>
+                    <div class="type_tit mt30">
+                        <div class="type_name">图集</div>
+                        <span class="fr" curId="3">更多&gt;</span>
+                    </div>
+                    <div class="xingx_list list4">
+                        <ul id="js-picList"></ul>
+                    </div>
+
+            	</div>
+            	<div class="personal_content" id="con2" style="display:none">
+            		<div class="type_tit mt30">
+            			<div class="type_name">基本资料</div>
+            		</div>
+                    <div class="base_desc" id="js-baseDesc">
+                        
+                    </div>
+            		<div class="type_tit mt30">
+            			<div class="type_name">青涩出道</div>
+            		</div>
+                    <div class="base_desc" id="js-experience">
+                        
+                    </div>
+            	</div>
+            	<div class="personal_content" id="con3" style="display:none">
+            		<ul class="info_type">
+            			<li class="cur" type="news">头条资讯</li>
+            			<li type="video">视频资讯</li>
+            			<li type="live">直播回放</li>
+            			<li type="pic">图集资讯</li>
+            		</ul>
+            		<div class="xingx_list list4">
+                        <ul id="js-news-all">
+                          <div class="tc moreData">点击加载更多数据...</div>
+                        </ul> 
+                        <ul id="js-video-all" style="display:none">
+                          <div class="tc moreData">点击加载更多数据...</div>
+                        </ul> 
+                        <ul id="js-live-all" style="display:none">
+                          <div class="tc moreData">点击加载更多数据...</div>
+                        </ul> 
+                        <ul id="js-pic-all" style="display:none">
+                           <div class="tc moreData">点击加载更多数据...</div>
+                        </ul>     
+                    </div>
+
+            	</div>
+            	<div class="personal_content" id="con4" style="display:none">
+            		<ul class="info_type" id="js-works-tit">
+            			<li class="cur">头条资讯</li>
+            			<li>视频资讯</li>
+            			<li>直播回放</li>
+            			<li>图集资讯</li>
+            		</ul>
+            		<div class="info_list" id="js-works-list">
+                        
+                    </div>
+            	</div>
+            	<div class="personal_content" id="con5" style="display:none">
+            		获奖记录
+            	</div>
+
+
+
+
+            </div>
+        </div>
+
+
+	</div>
+ 	<!--尾部-->
+    <div class="xingx_footer" >
+        <div class="xingx_footer_con" id="xingx_footer"></div>
+    </div>
+
+ </div>
+ <input type="hidden" id="hide_info" pageType="boardDetail" />
+ <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+ <script type="text/javascript" src="assets/js/swiper-3.4.0.min.js"></script>
+ <script type="text/javascript" src="assets/js/common.js"></script>
+ <script type="text/javascript" src="assets/js/js.js"></script>
+</body>
+</html>

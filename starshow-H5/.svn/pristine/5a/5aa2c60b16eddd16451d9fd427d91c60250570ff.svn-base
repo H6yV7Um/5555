@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>星秀圣诞礼盒</title>
+</head>
+
+<body>
+
+<!--礼盒-->
+<section class="wrap" id="GiftBox"> <img src="images/GiftBox_01.jpg"><img src="images/GiftBox_02.jpg"><img src="images/GiftBox_03.jpg"><img src="images/GiftBox_04.jpg"><img src="images/GiftBox_05.jpg"><img src="images/GiftBox_06.jpg"><img src="images/GiftBox_07.jpg"><img src="images/GiftBox_08.jpg"><img src="images/GiftBox_09.jpg"><img src="images/GiftBox_10.jpg"><img src="images/GiftBox_11.jpg"><img src="images/GiftBox_12.jpg"><img src="images/GiftBox_13.jpg"><img src="images/GiftBox_14.jpg"><img src="images/GiftBox_15.jpg"><img src="images/GiftBox_16.jpg"><img src="images/GiftBox_17.jpg"><img src="images/GiftBox_18.jpg">
+  <div class="btn btn01"><a href="###"><img src="images/Movie_G.png"></a><a href="http://www.esteelauder.com.cn/offer?cm_mmc=baidubrandzone-_-biaoti-_-biaoti-_-1
+"><img src="images/link_Red.png"></a> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4269&Hyperlink=1
+"><img src="images/detail.png"></a></div>
+  <div class="btn btn02"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4255&Hyperlink=1
+"><img src="images/detail.png"></a><a href="http://cn.caudalie.com/exclusive/specials/holidays-sets/vp-serum-be-set.html
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn03"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4185&Hyperlink=1
+"><img src="images/detail.png"></a><a href="http://www.clarisonic.cn/clarisonic/_zh/_cn/landingpage/happy/index.aspx
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn04"> <a href="###"><img src="images/Movie_G.png"></a> <a href="###"><img src="images/Link_G.png"></a><a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4267&Hyperlink=1
+"><img src="images/detail.png"></a></div>
+  <div class="btn btn05"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=3833&Hyperlink=1
+"><img src="images/detail.png"></a><a href="http://www.laneige.com/cn/zh/shop/main.do
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn06"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4296&Hyperlink=1
+"><img src="images/detail.png"></a><a href="http://www.origins.com.cn/orset
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn07"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4257&Hyperlink=1
+"><img src="images/detail.png"></a><a href="https://detail.tmall.com/item.htm?spm=a1z10.1-b-s.w5003-15492798878.4.m3Fd7L&id=542582432740&scene=taobao_shop
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn08"><a href="http://starshow-file.b0.upaiyun.com/videos/362fad52a60fdba6cf5ae5bb0ebe7499.mp4"><img src="images/Movie_Red.png"></a>  <a href="http://www.lamer.com.cn/holiday
+"><img src="images/link_Red.png"></a><a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4318&Hyperlink=1
+"><img src="images/detail.png"></a></div>
+  <div class="btn btn09"><a href="###"><img src="images/Movie_G.png"></a> <a href="http://www.iope.com/cn/zh/shop/shop/prod/shop_prod_promotion_event.do
+"><img src="images/link_Red.png"></a> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4268&Hyperlink=1
+"><img src="images/detail.png"></a></div>
+  <div class="btn btn10"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4402&Hyperlink=1
+"><img src="images/detail.png"></a><a href="https://kerastase.tmall.com/
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn11"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4505
+"><img src="images/detail.png"></a><a href="http://www.helenarubinstein.cn/helena-rubinstein/_zh/_cn/gift/gift.aspx
+"><img src="images/link_Red.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+  <div class="btn btn12"> <a href="http://share.xingxiu.tv/starshow5.0/news/v5/share.html?new_id=4504
+"><img src="images/detail.png"></a><a href="###"><img src="images/Link_G.png"></a><a href="###"><img src="images/Movie_G.png"></a> </div>
+<div class="subNav">
+    <ul>
+      <li><a href="Perfume.html">圣诞香氛</a></li>
+      <li><a href="shoes.html">圣诞鞋履</a></li>
+      <li><a href="fashion.html">圣诞时装</a></li>
+      <li><a href="watch.html">圣诞腕表</a></li>
+      <li><a href="GiftBox.html">圣诞礼盒</a></li>
+      <li><a href="jewels.html">圣诞珠宝</a></li>
+      <li><a href="skin.html">圣诞护肤</a></li>
+      <li><a href="Makeup.html">圣诞美妆</a></li>
+      <li><a href="Package.html">圣诞包包</a></li>
+      <li><a href="life.html">圣诞party </a></li>
+    </ul>
+  </div>
+  <div class="closeBtn"><img src="images/closeBtn.png"></div>
+  <div class="add"><img src="images/add.png"</div>
+</section>
+<script src="js/zepto.js" type="text/javascript"></script> 
+<script type="text/javascript" src="js/jweixin-1.0.0.js"></script> 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript">
+$(".add").click(function(){
+	$(".subNav").show()
+	$(".add").hide();
+})
+$(".closeBtn").click(function(){
+	$(".subNav").hide()
+	$(".add").show();
+})
+setTimeout("wx_share()",2000)
+</script>
+<!-- 统计代码 --> 
+<script type="text/javascript" src="../../tj.php"></script> </body>
+</html>

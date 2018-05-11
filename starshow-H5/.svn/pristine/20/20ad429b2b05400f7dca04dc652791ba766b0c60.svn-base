@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>年夜饭星菜单</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/nyf.css" />
+</head>
+<body>
+		<section class="rules_main">
+		  <h1>《年夜饭星菜单》投票活动规则</h1>
+		  <img src="assets/images/rule01.png" width="100%">
+		  <h2>一.	活动介绍</h2>
+		  <p>2017年时尚星秀评选地区年夜饭星菜单，为你喜欢的菜品投票，每个地区票选出投票数最高的菜品，形成年夜饭星菜单，更有你喜欢的iDOL为你喜爱的菜品站台，快来参与我们的年夜饭星菜单吧！</p>
+		  <h2>二．奖项设置</h2>
+		  <p class="fb">1.用户参与《年夜饭星菜单》投票活动，将有机会获得如下奖品：</p>
+		  <p>【签到有礼】<br>
+				用户登录时尚星秀“年夜饭星菜单“活动页面，每日参与任意投票1次即视为签到成功。<br>
+				累计签到1日获得真的APP1800元现金礼券；<br>
+				累计签到2日获得百度外卖年夜饭优惠礼券；<br>
+				累计签到3日获得简理财提供的价值6000元新年压岁钱；<br>
+				累计签到5日获得美颜奇机提供美丽新年面膜兑换券；<br>
+				累计签到7日获得OMCAT瑜伽空间提供身体健康100元瑜伽代金券；<br>
+				累计签到9日获得我买网提供的财源滚滚来网易定制水礼券；<br>
+				【幸运抽奖】<br>
+				用户登录时尚星秀“年夜饭星菜单“活动页面进行投票、为明星年夜饭星菜单菜品投票的用户就有机会成为新年的幸运儿，获得由时尚星秀寄送的新年大礼、实现你的新年愿望，幸运抽奖礼品如下：<br>
+				未来科技大奖：完美幻境360全景相机<br>
+				珠光宝气大奖：时尚星秀定制金项链<br>
+				吃货定制大奖：“真的”APP提供的精美礼品＆三只松鼠零食。<br>
+		  </p>
+		  <h2>三.	投票规则</h2>
+		  <p>1.	每个ID号码每天在为你喜爱的菜品进行投票，每个投票板块有3次投票机会，可对同一对象重复投票。
+<br>2.	每个ID号码每日在任一活动模块成功投票一次，即视为当日签到成功。<br>3. 每个ID号码每成功为星菜单菜品投票成功，就有机会获得幸运抽奖资格。<br/>4.	还可以分享到微信里为自己地区的菜品投票哦~
+		    </p>
+		  <h2>四.	活动时间</h2>
+		  <p>《年夜饭星菜单》活动时间： <br/>
+		  <span class="fb">2017年1月18日-2017年1月28日；</span> </p>
+		  <p>结果公布时间：<br/>
+          <span class="fb">幸运抽奖的奖品将于2月4日以后统一发送给中奖者</span> </p>
+		  <h2>五、注意事项</h2>
+		  <p>1.	请详细了解各品牌奖品的使用、兑换规则，并在截止日期前完成使用；<br>
+		2.	时尚星秀对本次活动拥有最终解释权。
+		</p>
+		  
+	</section>
+	
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../tj.php"></script>
+</body>
+</html>

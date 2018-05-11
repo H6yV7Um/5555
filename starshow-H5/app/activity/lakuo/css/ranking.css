@@ -1,0 +1,345 @@
+html {
+  color: #000;
+  background: #FFF;
+  overflow-y: scroll; }
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, optgroup {
+  font-style: inherit;
+  font-weight: inherit; }
+
+del, ins {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: baseline; }
+
+sub {
+  vertical-align: baseline; }
+
+legend {
+  color: #000; }
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit; }
+
+input, button, textarea, select {
+  *font-size: 100%; }
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="text"], input[type="search"], select {
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent; }
+
+textarea {
+  -webkit-appearance: none;
+  outline: 0; }
+
+html, body {
+  margin: 0px;
+  height: 100%;
+  font-family: "Microsoft YaHei";  }
+
+html {
+  font-size: 20px; }
+
+img {
+  vertical-align: middle; }
+
+a {
+  text-decoration: none; }
+
+.main_art {
+width: 100%;
+/* background: #051F26; */
+position: relative; }
+.main_art .art_banner {
+width: 100%; }
+.main_art .art_banner img {
+width: 100%; }
+.main_art .art_rule {
+
+display: block;
+line-height: 1.7rem;
+text-align: center;
+background-size: 100% 100%;
+position: absolute;
+top:10px;
+left: -0.4rem;
+font-size: 0.7rem;
+color: #000;
+font-weight: bold; }
+.main_art .art_music {
+width: 100%; }
+.main_art .art_music .musicPlay {
+width: 15%;
+position: absolute;
+bottom: 2.6rem;
+right: 0.6rem; }
+.main_art .art_music .musicPlay img {
+width: 100%; }
+.atl_tab {
+width: 90%; 
+margin:0 auto;
+}
+.atl_tab div {
+width: 45%;
+height: 2rem;
+line-height: 1.8rem;
+font-size: 0.7rem;
+text-align: center;
+float: left;
+border: 2px solid #eb4197;
+margin: 20px 2.5%;
+display: inline;
+box-sizing:border-box;
+font-weight: bold
+}
+
+.atl_tab .toColor {
+
+border: 2px solid #64d1fa
+}
+
+.main {
+  width: 100%;    overflow: hidden; }
+  .main .beijing_03 {
+    width: 100%; }
+    .main .beijing_03 img {
+      width: 100%; }
+  .main .old {
+    width: 100%;
+     }
+    .main .old .ul_big {
+      width: 90%;
+      padding: 0.5rem 0;
+      margin: 0 auto; }
+      .main .old .ul_big .a {
+        width: 100%;
+        display: block;
+        display: flex;
+        justify-content: space-between; }
+      .main .old .ul_big .old_img {
+        width: 18%; }
+        .main .old .ul_big .old_img img {
+          width: 100%; }
+      .main .old .ul_big .old_message {
+        width: 45%; }
+        .main .old .ul_big .old_message ul {
+          width: 100%;
+          line-height: 0.9rem;
+          position: relative; }
+          .main .old .ul_big .old_message ul li:nth-child(1) {
+            width: 100%;
+            color: #000;
+            font-size: 1rem;
+            font-weight: bold}
+          .main .old .ul_big .old_message ul li:nth-child(2) {
+            width: 100%;
+            color: #000;
+            font-size: 0.5rem; }
+          .main .old .ul_big .old_message ul li:nth-child(3) {
+            width: 100%;
+            color: #000;
+            font-size: 0.5rem; }
+      .main .old .ul_big .old_num {
+            width: 32%;
+            font-size: 1.2rem;
+            /* line-height: 2.2rem; */
+            color: #000;
+            text-align: right;
+            background: #64d1fa;
+            display: inline;
+            height: 1.5rem;
+            text-align: center;}
+        .main .old .ul_big .old_num img {
+          width: 10%; }
+    .main .old .xian {
+      width: 100%;
+      height: 0.02rem;
+      margin-top: -0.2rem; }
+      .main .old .xian img {
+        width: 100%;
+        display: block; }
+  .main .new {
+    width: 100%;
+    
+    margin-bottom: 3.2rem; }
+    .main .new .ul_big {
+      width: 90%;
+      padding: 0.5rem 0;
+      margin: 0 auto; }
+      .main .new .ul_big .a {
+        width: 100%;
+        display: block;
+        display: flex;
+        justify-content: space-between; }
+      .main .new .ul_big .old_img {
+        width: 18%; }
+        .main .new .ul_big .old_img img {
+          width: 100%; }
+      .main .new .ul_big .old_message {
+        width: 50%; }
+        .main .new .ul_big .old_message ul {
+          width: 100%;
+          line-height: 0.9rem;
+          position: relative; }
+          .main .new .ul_big .old_message ul li:nth-child(1) {
+            width: 100%;
+            color: #000;
+            font-size: 1rem; }
+          .main .new .ul_big .old_message ul li:nth-child(2) {
+            width: 100%;
+            color: #000;
+            font-size: 0.5rem; }
+          .main .new .ul_big .old_message ul li:nth-child(3) {
+            width: 100%;
+            color: #000;
+            font-size: 0.5rem; }
+      .main .new .ul_big .old_num {
+       width: 27%;
+            font-size: 1.2rem;
+            /* line-height: 2.2rem; */
+            color: #000;
+            text-align: right;
+            background: #64d1fa;
+            display: inline;
+            height: 1.5rem;
+            text-align: center;}
+        .main .new .ul_big .old_num img {
+          width: 10%; }
+    .main .new .xian {
+      width: 100%;
+      height: 0.02rem;
+      margin-top: -0.2rem; }
+      .main .new .xian img {
+        width: 100%;
+        display: block; }
+
+.footer_box {
+  width: 100%;
+  height: 2rem;
+  background: #FFF;
+  /* box-shadow: 0rem 0rem 2rem 1rem #13010D; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000; }
+  .footer_box .footer {
+    width: 90%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-between; }
+    .footer_box .footer a {
+      width: 30%;
+      height: 1.3rem;
+      display: block;
+      color: #000;
+      font-weight: bold;
+      font-size: 0.7rem;
+      text-align: center;
+      line-height: 1.2rem; }
+    .footer_box .footer #btn_vote {
+      background: #eb4197;
+      /* background: url("../images/red (2).png") no-repeat 0 0;
+       background-size: 100% 100%; */ }
+    .footer_box .footer #btn_apple,
+    .footer_box .footer #btn_ok,.footer_box .footer #btn_fail,.footer_box .footer #btn_check {
+      background: #64d1fa}
+    .footer_box .footer #btn_overturn {
+      background:#64d1fa }
+    .footer_box .footer #overturn_num {
+      position: absolute;
+      top: -0.2rem;
+      right: -0.2rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      line-height: 0.8rem;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 0.6rem;
+      color: #fff;
+      background: #FD1F40; }
+
+.div {
+  width: 100%;
+border-bottom: 1px solid #088bbb;
+ /*  background: url("../images/1_02.png") no-repeat 0 0;
+ background-size: 100% 100%;
+ border-bottom: 0.1rem solid #942357;  */
+}
+
+.js_div {
+  border-bottom: none;
+ /*  border-top: 0.1rem solid #942357;  */}
+
+/*# sourceMappingURL=ranking.css.map */
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.55, 1.5, 1.55);
+    transform: scale3d(1.55, 1.5, 1.55);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.55, 1.5, 1.55);
+    transform: scale3d(1.55, 1.5, 1.55);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation: pulse  2s infinite;
+  animation: pulse 2s infinite;
+}

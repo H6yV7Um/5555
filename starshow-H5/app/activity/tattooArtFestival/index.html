@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no, email=no">
+<title>年轻就要不降噪</title>
+<link rel="stylesheet" type="text/css" href="public/css/body.css">
+</head>
+<body>
+<div class="st_ba_warp">
+  <div class="st_ba_top"> <img src="public/images/bodytop.png">
+    <!-- <p>我的订单</p> -->
+  </div>
+  <!-- <div class="st_ba_zao">
+                <img src="../public/images/zao.png">
+            </div> -->
+  <div class="st_ba_money">
+    <h2>现场价格</h2>
+    <p class="st_ba_our">RMB:<img src="public/images/bodycurrent.png"></p>
+    <h2 class="c_color">APP价格</h2>
+    <p class="st_ba_current">RMB: 单日80-三日120</p>
+    <p class="canyu">已有<span></span>参与</p>
+  </div>
+  <div class="st_ba_address">
+    <p>活动时间：2016-05-28至2016-05-30 </p>
+    <p>活动地址：廊坊国际会展中心</p>
+    <p>票种：单日票和通票</p>
+  </div>
+  <div class="st_ba_jieshao">
+    <ul>
+      <li class="line">&nbsp&nbsp</li>
+      <li>中国·廊坊纹身艺术节购票流程</li>
+      <li class="line">&nbsp&nbsp</li>
+      <div class="clear"></div>
+    </ul>
+    <p>
+
+一、	活动简介：<br/>
+
+中国·廊坊纹身艺术节正式拉开帷幕，届时将有上百位在纹身艺术界享誉海内外的大师级资深人士亲临现场助阵。上千名纹身模特现场展示，数以万计的绚丽优秀的纹身作品大展。2016年中国（廊坊）国际纹身艺术节正式拉开帷幕，届时将有上百位在纹身艺术界享誉海内外的大师级资深人士亲临现场助阵。上千名纹身模特现场展示，数以万计的绚丽优秀的纹身作品大展。<br/>
+
+二、购买流程<br/>
+1、	下载【时尚星秀】app，通过首页活动图或者消息功能模块的活动板块，进入购买页面；<br/>
+2、	点击【购票参与】选择想要购买的票种（单日票或者通票）点击【提交订单】后，确认订单信息及价格，选择支付方式进行购买；<br/>
+温馨提示：目前单个订单只支持购买一张票，需要购买多张票的用户需要多次购买；<br/>
+3、	支付成功后将看到您购买的票的兑换二维码；<br/>
+
+三、	兑换流程<br/>
+1、	在活动购买页面右上角点击【我的订单】按钮，可查看到您购买的所有订单，点击相应的订单，可查看到该订单对应的换票二维码；<br/>
+2、	活动当天凭手机上的二维码到【大麦自助取票机】扫描兑换纸质票，即可入场，活动现场会有换票工作人员帮助操作；<br/>
+
+祝您购票愉快，若有问题请联系我们客服: 010-65872725
+
+</p>
+  </div>
+  <div class="kefu"> 客服电话: <a href="tel:010-65872725">010-65872725</a></div>
+  <!--  <div class="st_ba_join"> <img src="../public/images/body2.png"> </div> -->
+</div>
+<script type="text/javascript" src="public/js/zepto.js"></script> 
+<script type="text/javascript" src="public/js/bodyart.js"></script>
+<script type="text/javascript">
+$.ajax({
+            url : 'http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=tattoo_user_visit&returntype=jsonp&callback=?',
+            dataType : 'json',
+            type : 'get',
+            global : false,
+            success : function(data) {
+				$(".canyu span").html(data.info);
+            }
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta charset="utf-8" />
+		<meta name="apple-itunes-app" content="app-id=903692043" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>赛事回顾</title>
+		<link rel="stylesheet" type="text/css" href="../style/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../style/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../style/video.css"/>
+	</head>
+	<body>
+		<div id="video_back">
+			<div class="content">
+				<p class="tit_f">赛事回顾</p>
+				<video id="video" controls="controls"  webkit-playsinline="" style="width: 100%; height: 100%; position: relative; display: inline;" src="https://starshow-file.b0.upaiyun.com/videos/normal.mp4"> </video>
+			</div>
+			<div class="data_list">
+				<p class="tit_e">精彩瞬间</p>
+				<ul>
+					<li><img src="https://starshow-pic.b0.upaiyun.com/activity/up/4c321da.jpg" width="100%"/></li>
+					<li style="margin-right: 0; "><img src="https://starshow-pic.b0.upaiyun.com/activity/up/c2c6372.jpg" width="100%"/></li>
+					<li><img src="https://starshow-pic.b0.upaiyun.com/activity/up/961b490.jpg" width="100%"/></li>
+					<li style="margin-right: 0;"><img src="https://starshow-pic.b0.upaiyun.com/activity/up/e29a805.jpg" width="100%"/></li>
+					<li><img src="https://starshow-pic.b0.upaiyun.com/activity/up/93f1062.jpg" width="100%"/></li>
+					<li style="margin-right: 0;"><img src="https://starshow-pic.b0.upaiyun.com/activity/up/b40fe02.png" width="100%"/></li>
+					<li><img src="https://starshow-pic.b0.upaiyun.com/activity/up/f39535a.png" width="100%"/></li>
+				</ul>
+			</div>
+		</div>
+		<div id="dot">
+			<p class="XXX" style="text-align: right;height: 16px;"><img src="../images/mlsX.png"/></p>
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="https://starshow-pic.b0.upaiyun.com/activity/up/4c321da.jpg" width="100%"/></div>
+			        <div class="swiper-slide"><img src="https://starshow-pic.b0.upaiyun.com/activity/up/c2c6372.jpg" width="100%"/></div>
+			        <div class="swiper-slide"><img src="https://starshow-pic.b0.upaiyun.com/activity/up/961b490.jpg" width="100%"/></div>
+			        <div class="swiper-slide"><img src="https://starshow-pic.b0.upaiyun.com/activity/up/e29a805.jpg" width="100%"/></div>
+			        <div class="swiper-slide"><img src="https://starshow-pic.b0.upaiyun.com/activity/up/93f1062.jpg" width="100%"/></div>
+			        <div class="swiper-slide"><img src="https://starshow-pic.b0.upaiyun.com/activity/up/b40fe02.png" width="100%"/></div>
+			        <div class="swiper-slide"><img src="https://starshow-pic.b0.upaiyun.com/activity/up/f39535a.png" width="100%"/></div>
+			    </div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../script/jquery-1.11.3.js" ></script>
+		<script type="text/javascript" src="../script/swiper.min.js" ></script>
+		<script type="text/javascript">
+			var num
+			$("li").on("click",function(){
+				$("#video_back").css("display","none");
+				$("#dot").css("display","block")
+				$("body").css("background","black")
+				num = $(this).index();
+				var mySwiper = new Swiper ('.swiper-container', {
+					direction:"horizontal",
+					initialSlide:num,
+				})
+			})
+			$(".XXX").on("click",function(){
+				$("#dot").css("display","none")
+				$("#video_back").css("display","block")
+			})
+		</script>
+		
+	</body>
+</html>

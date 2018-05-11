@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta name="robots" content="index,follow" />
+	<title>拉阔校草评比大赛</title>
+	<link rel="stylesheet" href="../css/swiper-3.4.0.min.css" />
+	<link rel="stylesheet" href="../css/personage.css" />
+	<script src="../js/rem.js"></script>
+	<style>
+		html,body{
+			height:100%;
+		}
+		.bigImgcon{
+			position:fixed;
+			width:100%;
+			height:100%;
+			background: #000000;
+			z-index: 1000;
+			left:0;
+			top:0;
+			box-sizing: border-box;
+			padding:4rem 0;
+			display: none;
+
+		}
+
+		.bigImgcon img{
+			width:100%;
+		}
+		.bigImgcon  .btn_close_img{
+			width:30px;
+		
+			position: absolute;
+			left:10px;
+			top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+<div class="big_box">
+	<div class="box" id="jsBox">
+		<!--<div class="header_box">-->
+			<!--<div class="header">-->
+				<!--<div class="header_img"><img src="../images/xiao.png" /></div>-->
+				<!--<ul class="ul_big">-->
+					<!--<li>-->
+						<!--<div class="name">杨洋&nbsp;<sub style="font-size: 12px;color: #53BED9;">&nbsp;21岁</sub></div>-->
+						<!--<div class="school">麻省理工大学</div>-->
+					<!--</li>-->
+					<!--<li class="old_num">59031<sub style="color: #97A4AC;font-size: 0.2rem">票</sub></li>-->
+				<!--</ul>-->
+			<!--</div>-->
+		<!--</div>-->
+
+		<!--<div class="main">-->
+			<!--<p>校草就是指学校里大家公认的男生，这个说法起源于台湾学生的流行语，指在校门口卖香草的，引申为一个学校中最帅的男生，成为国民校草的必备共同点便是符合...</p>-->
+			<!--<div class="main_video">-->
+				<!--<h3>相关视频</h3>-->
+				<!--<div class="video">-->
+					<!--<video src="movie.mp4" width="320" height="240" controls></video>-->
+					<!--<div class="beiImg"><img src="../images/xiaocao_27.png" /></div>-->
+					<!--<div class="open"><img src="../images/open.png" /></div>-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="main_photo">-->
+				<!--<ul>-->
+					<!--<li><img src="../images/xiaocao_02.png" /></li>-->
+					<!--<li><img src="../images/xiaocao_03.png" /></li>-->
+					<!--<li><img src="../images/xiaocao_04.png" /></li>-->
+
+					<!--<li><img src="../images/xiaocao_02.png" /></li>-->
+					<!--<li><img src="../images/xiaocao_03.png" /></li>-->
+					<!--<li><img src="../images/xiaocao_04.png" /></li>-->
+
+					<!--<li><img src="../images/xiaocao_02.png" /></li>-->
+					<!--<li><img src="../images/xiaocao_03.png" /></li>-->
+					<!--<li><img src="../images/xiaocao_04.png" /></li>-->
+				<!--</ul>-->
+			<!--</div>-->
+		<!--</div>-->
+	</div>
+
+</div>
+	
+
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/swiper-3.4.0.min.js"></script>
+<script src="../js/common/common.js"></script>
+<script src="../js/common/bridge.js"></script>
+<script>
+var login_token="";
+       //获取url中的参数
+		function getUrlParam(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+			var r = window.location.search.substr(1).match(reg); //匹配目标参数
+			if(r != null) return unescape(r[2]);
+			return null; //返回参数值
+		}
+       //活动分享
+       var shareActivity=function(){
+           setBridgeCallHandler(bridge, {
+               'action': '3',
+               'share': {
+                   'share_url':commonCla.shareUrlBase+"/activity/lakuo/html/share.html",
+                   'title': "我在参加拉阔校草评比大赛，快来帮我拉票",
+                   'content': "只为寻找优秀的你，为传统文化代言，关注时尚星秀，拉阔校草评比大赛更多精彩为你呈现！",
+                   'cover': "https://starshow-pic.b0.upaiyun.com/lakuo/logo.jpg!250x250"
+               }
+           })
+       }
+		//接收URL中的参数listId
+		var id = getUrlParam('listId');
+		var type =getUrlParam('type');
+		var listIndex =getUrlParam('index');
+
+
+       var jwt_token = commonCla.analyzParams("jwt_token") == undefined ?login_token: commonCla.analyzParams("jwt_token");
+       //设置WebViewJavascriptBridge通信回调方法--相对应js中
+       setupWebViewJavascriptBridge(function(bridge) {
+           //注册js回调方法
+           bridge.registerHandler('javascriptHandler', function(data, responseCallback) {
+               if (isIphone()) {} else {
+                   var data = eval("(" + data + ")");
+               }
+               if (data.nextStep == '1') { //登录
+                       login_token = data.jwt_token;
+                       window.location.href = "personage.html?jwt_token=" + data.jwt_token;
+
+               }else if(data.nextStep == '4'){
+                if(jwt_token==""){
+			    	login_token=data.jwt_token;
+					jwt_token=data.jwt_token
+					tovote();
+                  /*var btnType =$("#vote").attr('data-type');
+                  var listId=commonCla.analyzParams("listId");
+                  var index=commonCla.analyzParams("index");
+                  var type=commonCla.analyzParams("type");
+                  window.location.href='personage.html?listId='+listId+'&type='+type+'&index='+index+'&jwt_token='+data.jwt_token;*/
+
+                }
+      			   }else if(data.nextStep == '5'){
+      			        var btnType =$("#next").attr('data-type');
+                         window.location.href='vote.html?jwt_token='+ data.jwt_token+'&listId='+id+'&btnType='+btnType+'&type='+type+'&listIndex='+listIndex+'';
+      			   }else if (data.nextStep == '8') {
+                         shareActivity();
+               }
+
+           })
+           //调取客户端方法
+           if (isIphone()) {} else {
+               bridge.init(function(message, responseCallback) {
+                   var data = {
+                       'Javascript Responds': 'Wee!'
+                   }
+                   responseCallback(data)
+               })
+           }
+           //交互方法
+           //登录
+           $("body").on("click",".js_link",function(e) {
+		    var nextStepNum=5
+		     if($(this).attr("id")=="vote"){
+			    nextStepNum=4
+			 }
+               if(jwt_token=="" || jwt_token==undefined){
+                   e.preventDefault()
+                   setBridgeCallHandler(bridge, {
+                       'action': '1',
+                       'nextStep': nextStepNum
+                   })
+                  
+               }else{
+                   if($(this).attr("id")=="vote"){
+                       tovote();
+
+				   }else{
+                       var btnType =$(this).attr('data-type');
+                       window.location.href='vote.html?jwt_token='+ jwt_token+'&listId='+id+'&btnType='+btnType+'&type='+type+'&listIndex='+listIndex+'';
+				   }
+
+               }
+
+           })
+       })
+
+        $.ajax({
+            url: commonCla.hostBase+"/lakuo/"+id,
+            dataType: "json",
+            type: "GET",
+            success: function(res) {
+                // console.log(res);
+
+                if(res.code == 200) {
+                    //根据id获取详情数据
+                    var str = ""
+                    // console.log(res)
+                    // console.log(id)
+                    if(res.data.id==id) {
+                        var str1 = ""
+                        for(var i=0;i<res.data.photos.length;i++){
+                            str1 += '<li><img src='+res.data.photos[i]+'!250x250 /></li>'
+                        }
+                        var str2 = ""
+                        for(var i=0;i<res.data.photos.length;i++){
+                            str2 += '<div class="swiper-slide"><img src='+res.data.photos[i]+'!750x0 /></div>'
+                        }
+                        console.log(res.data)
+						var iShow="";
+						if(res.data.video=="" || res.data.video==null|| res.data.video=="null"){
+						  iShow='style="display:none"'
+						}
+                        str += '<div class="box">'
+                            +'<div class="header_box">'
+                            + '<div class="header">'
+                            + '<div class="header_img"><img src="' + res.data.user.head_pic.replace('250x250','640x640') + '" /></div>'
+                            + '<ul class="ul_big">'
+                            + '<li>'
+                           + '<div class="name">' + res.data.name + '</div>' + '<div class="school">&nbsp;<sub style="font-size: 12px">&nbsp;'
+                            + res.data.age + '岁</sub><p>' + res.data.school + '</p></div>' + '</li>'
+                            + '<li class="old_num">' + res.data.like_num + '<img src="../images/ye1_5.png" style="width:15%"></li>'
+                            +'<li class="user_desc"><span>血型：'+res.data.blood+' |</span><span>星座：'+res.data.constellation+' |</span><span>身高：'+res.data.height+'</span></li>'
+							+ '</ul>'
+                            + '</div>'
+                            + '<div class="main">'
+                            + '<p>' + res.data.intro + '</p>'
+                            + '<div class="main_video" '+iShow+'>'
+                            + '<div class="video">'
+                            + '<div class="beiImg" style="margin: 0 auto"><video controls poster="https://starshow-pic.b0.upaiyun.com/lakuo/video1.jpg" src="' + res.data.video + '" width="100%" ></video></div>'
+                            + '</div>'
+                            + '</div>'
+                            + '<div class="main_photo">'
+                            + '<h3>相关照片</h3>'
+                            + '<ul id="ul">'+str1
+                            +'</ul>' +
+                            '</div>'
+                            + '</div>'
+                            +'<div class="bigImgcon">'
+								+'<img src="../images/close.png" class="btn_close_img"/>'
+									+'<div class="swiper-container" id="bigImgcon">'
+										+'<div class="swiper-wrapper" id="js_imgList">'+str2
+										+'</div>'
+									+'</div>'
+								+'</div>'
+                            + '</div>'+
+							'<footer>'+
+	'	<div class="footer_box">'+
+			'<div id="next" class="js_link" data-type="cancel"><img src="../images/pass_03.png" class="next" /></div>'+
+			'<div id="vote" class="js_link" data-type="sure"><img src="../images/baoming3_07.png" class="vote" /></div>'+
+		'</div>'+
+
+	'</footer>'
+                    }
+                    $(".big_box").html("").html(str)
+                    //console.log(str)
+                }
+
+            },
+            error: function(error) {
+                console.log(error)
+            }
+        })
+
+
+
+    //投票
+    function getElemensByClassName(className) { // 通过class获取
+        var classArr = new Array();
+        var tags = document.getElementsByTagName("*"); //获取所有节点
+        for(var item in tags) {
+            if(tags[item].nodeType == 1) {
+                if(tags[item].getAttribute("class") == className) {
+                    classArr.push(tags[item]); //收集class匹配的节点
+                }
+            }
+        }
+        return classArr;
+    }
+
+    function delete_FF(element) { // 在FireFox中删除子节点为空的元素
+        var childs = element.childNodes;
+        for(var i = 0; i < childs.length; i++) {
+            var pattern = /\s/; //模式匹配，内容为空
+            if(childs[i].nodeName == "#text" && pattern.test(childs[i].nodeValue)) { //处理
+                //alert(childs[i].nodeName);
+                element.removeChild(childs[i]); //删除FF中获取的空节点
+            }
+        }
+    }
+//vote
+        var tovote=function() {
+            var id =commonCla.analyzParams("listId");
+            $.ajax({
+                url:commonCla.hostBase+"/lakuo?jwt_token="+jwt_token,
+                type:"post",
+                dataType:"json",
+				data:{"id":id},
+                success:function(data){
+                    if(data.code==200){
+                        var data=data['data'];
+                        alert("投票成功");
+							var listId=commonCla.analyzParams("listId");//列表id
+						var index=commonCla.analyzParams("index");//
+					var type=commonCla.analyzParams("type");
+					var listIndex=commonCla.analyzParams("listIndex");
+					
+					var btnType =$(this).attr('data-type');
+                   window.location.href='vote.html?jwt_token='+ jwt_token+'&listId='+id+'&btnType='+btnType+'&type='+type+'&listIndex='+listIndex+'';
+                    }else{
+                       alert(data.error);
+                    }
+                },error:function(error){
+                    console.log(error);
+                }
+
+            });
+        }
+    window.onload = function() {
+        /*var persons = getElemensByClassName("ul_big");
+        //  alert(persons);
+        for(var item in persons) { //遍历所有person，为它们绑定投票事件
+            (function(_item) { //匿名函数传入item, 防止因作用域问题导致item总为最后一个
+                delete_FF(persons[_item]); //出去FF中空行代表的子节点
+                persons[_item].setAttribute("id", "person" + (parseInt(_item) + 1)); //赋上id
+
+                var childs = persons[_item].childNodes;
+                for(var i = 0; i < childs.length; i++) {
+                    //alert(childs[i].nodeName);
+                    if(childs[i].nodeName == "BUTTON") { //点击按钮投票
+                        var oButton = childs[i];
+                    }
+                    if(childs[i].nodeName == "P") { //投票结果更新
+                        var oP = childs[i];
+                        var oSpan = oP.getElementsByTagName("span")[0];
+                    }
+                }
+                if(oButton != null) {
+                    oButton.onclick = function() { //事件绑定
+                        var num = oSpan.innerHTML; //获取票数
+                        oSpan.innerHTML = (++num); //票数更新
+                        // 这时一般我们可能就需要把这个票数num传送给服务器保存，更新时也是和服务器中的num同步
+                        this.setAttribute("disabled", "true"); // 一般只能投票一次的吧
+                        alert("投票成功，谢谢您的支持");
+                    };
+                }
+            })(item); // 传入各项person
+        }*/
+        
+        //点击图片
+        $('.big_box').on('click','li',function(){
+            //获取当前点击li的索引
+            var index = $(this).index()
+            console.log(index)
+
+            //初始化swiper
+            var  bigImgconSwiper = new Swiper("#bigImgcon",{
+                initialSlide:index,
+                observer:true,
+                observeParents:true,
+//                onDoubleTap:function(){
+//                    $(".bigImgcon").hide();
+//                    $(".header").show();
+//                    $(".main").show();
+//                    $("footer").show();
+//                }
+
+            })
+            $(".bigImgcon").show();
+            $(".header").hide();
+            $(".main").hide();
+            $("footer").hide();
+        });
+
+        //关闭
+        $("body").on("click",".btn_close_img",function () {
+            $(".bigImgcon").hide();
+            $(".header").show();
+            $(".main").show();
+            $("footer").show();
+        })
+
+        
+    };
+
+
+</script>
+</body>
+<script type="text/javascript" src="../../../tj.php"></script>
+</html>

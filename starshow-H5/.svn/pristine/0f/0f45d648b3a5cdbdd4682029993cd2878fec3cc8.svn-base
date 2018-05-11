@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="robots" content="index,follow"/>
+    <title>拉阔校草拼比大赛</title>
+        <style type="text/css">
+/*tcc*/
+            #BOX_overlay{position: absolute;z-index: 100;top: 0px;left: 0px;background-color:#ccc;filter: alpha(opacity=70);-moz-opacity: 0.7;opacity: 0.7;}
+            .dialog_tip{
+                background: #fff;
+                text-align: left;
+                border: 1px solid #dedede;
+                font-size: 12px;
+                width: 90%;
+                border-radius: 10px;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -o-border-radius: 10px;
+
+            }
+            .js-close{
+                background: #fff;
+                float: right;
+                height: 20px;
+                padding: 5px 0 0 10px;
+                color: #000;
+                margin-right: 10px;
+                font-size:14px;
+            }
+            .messdivCons{
+                   width: 95%;
+				    overflow: hidden;
+				    font-size: 13px;
+				    color: #000;
+				    text-align: center;
+				    /* */
+				    margin: 0 auto;
+					 padding: 20px 0;
+            }
+            .phoneCon .txt_phone,.phoneCon .txt_adr{
+                  width: 100%; 
+                  border: none;
+                  height:25px;
+                  line-height: 25px;
+                  background: #f7f7f7;
+                  margin-top: 10px;
+                  border-radius:5px;
+                  padding-left:15px;
+
+                }
+				.phoneCon .txt_adr{
+				  height:60px;
+				}
+                .btn_saveNum{
+                    width: 50%;
+                    border: none;
+                    height: 30px;
+                    line-height: 30px;
+                    background: #ff1d3e;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    color: #ffffff;
+                }
+                .error_tips{
+                    text-align: left;
+                    margin-left: 5px;
+                    margin-top: 5px;
+                    color: #ff1d3e;
+                }
+    </style>
+    <link rel="stylesheet" href="../css/fanpai.css" />
+    <script src="../js/rem.js"></script>
+</head>
+<body>
+<div class="main">
+	<div class="box">
+	  <div class="winBox">
+		    <ul class="scroll">
+		      	<!-- <li>恭喜用户XXX刚刚抽中iphone8一部</li>
+                                <li>恭喜用户XXX刚刚抽中iphone8一部</li>
+                                <li>恭喜用户XXX刚刚抽中iphone8一部</li>
+                                <li>恭喜用户XXX刚刚抽中iphone8一部</li>
+                                <li>恭喜用户XXX刚刚抽中iphone8一部</li>
+                                <li>恭喜用户XXX刚刚抽中iphone8一部</li>
+                                <li>恭喜用户XXX刚刚抽中iphone8一部</li>
+                                <li>恭喜用户XXX刚刚抽中iphone8一部</li> -->
+		    </ul>
+		</div>
+	</div>
+
+	<!--//翻牌-->
+	<div id="projects">
+		<div class="grid">
+			<div class="projects">
+				<div class="project ">
+					<div class="mask">
+						<div class="back">
+                            <div class="prize_img"><img src="../images/prize2_01.png" /></div>
+						</div>
+						<div class="front"></div>
+					</div>
+				</div>
+				<div class="project ">
+					<div class="mask">
+						<div class="back">
+                            <div class="prize_img"><img src="../images/prize2_03.png" /></div>
+							<!-- <div class="prize">
+                                <div class="prize_img"><img src="../images/prize2_01.png" /></div>
+                                <p>Jarre Aerobull蓝牙音响</p>
+                            </div -->
+						</div>
+						<div class="front"></div>
+					</div>
+				</div>
+				<div class="project ">
+					<div class="mask">
+						<div class="back">
+                            <div class="prize_img"><img src="../images/prize2_02.png" /></div>
+							<!-- <div class="prize">
+                                <div class="prize_img"><img src="../images/prize_03.png" /></div>
+                                <p>Beats</p>
+                            </div> -->
+						</div>
+						<div class="front"></div>
+					</div>
+				</div>
+				<div class="project ">
+					<div class="mask">
+						<div class="back">
+                            <div class="prize_img"><img src="../images/prize2_04.png" /></div>
+							<!-- <div class="prize">
+                                <div class="prize_img"><img src="../images/prize_04.png" /></div>
+                                <p>iphone无线耳机</p>
+                            </div> -->
+						</div>
+						<div class="front"></div>
+					</div>
+				</div>
+				<div class="project ">
+					<div class="mask">
+						<div class="back">
+                            <div class="prize_img"><img src="../images/prize2_05.png" /></div>
+							<!-- <div class="prize">
+                                <div class="prize_img"><img src="../images/prize_05.png" /></div>
+                                <p>爱马仕香水</p>
+                            </div> -->
+						</div>
+						<div class="front"></div>
+					</div>
+				</div>
+				<div class="project ">
+					<div class="mask">
+						<div class="back">
+                            <div class="prize_img"><img src="../images/prize2_07.png" /></div>
+							<!-- <div class="prize">
+                                <div class="prize_img"><img src="../images/prize_06.png" /></div>
+                                <p>尚课电影主题KTV500元代金券</p>
+                            </div> -->
+						</div>
+						<div class="front"></div>
+					</div>
+				</div>
+				<div class="project ">
+					<div class="mask">
+						<div class="back">
+                            <div class="prize_img"><img src="../images/prize2_08.png" /></div>
+							<!-- <div class="prize">
+                                <div class="prize_img"><img src="../images/prize_07.png" /></div>
+                                <p>闪电客滑板车</p>
+                            </div> -->
+						</div>
+						<div class="front"></div>
+					</div>
+				</div>
+				<div class="project ">
+					<div class="mask">
+						<div class="back">
+                            <div class="prize_img"><img src="../images/prize2_06.png" /></div>
+							<!-- <div class="prize">
+                                <div class="prize_img"><img src="../images/prize_08.png" /></div>
+                                <p>还差一点点哦</p>
+                            </div> -->
+						</div>
+						<div class="front"></div>
+					</div>
+				</div>
+				
+				<div class="controls">
+					<div class="mask xipai">点击<br />洗牌</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="chance">您还有<a class="playnum"></a>次翻牌机会</div>
+		<div class="vote">投票</div>
+		<div class="guize">投票<a>3</a>次获得<a>1次</a>翻牌机会</div>
+		<div class="s">今天还剩<span class="sednum">6</span>次投票</div>
+		<div class="fx">分享</div>
+		<div class="fxgz">分享活动获得<a>1次</a>翻牌机会</div>
+	</div>
+</div>
+<div id="messdiv" class="dialog_tip" style="display:none;">
+         <div title="关闭窗口" class="js-close">
+             <img src="../images/close.png" style=" width: 25px;">
+            </div>
+          <div class="messdivCons">
+            <div class="phoneCon">
+                <p>留下您的电话号码和地址</p>
+				<input type="text" class="txt_phone" id="txt_name" placeHolder="姓名"/> 
+                <div class="error_tips"></div>
+                <input type="text" class="txt_phone" id="txt_phone" placeHolder="电话号码"/>
+                 <div class="error_tips"></div>
+                <textarea class="txt_adr" id="txt_adr" placeholder="地址"></textarea>
+                <div class="error_tips"></div>
+                <input type="button" class="btn_saveNum" id="js-save" value="确认"/>
+                
+            </div>
+          </div>
+          <div class="tips" style="display:none"></div>
+    </div>
+    <div id="BOX_overlay"></div>
+<script src="../js/zepto.min.js"></script>
+<script src="../js/fanpai.js"></script>
+<script src="../js/hammer.min.js"></script>
+<script src="../js/common/common.js"></script>
+<script src="../js/common/bridge.js"></script>
+<link rel="stylesheet" type="text/css" href="../js/common/sweet-alert.css">
+<script type="text/javascript" src="../js/common/sweet-alert.min.js"></script>
+<script type="text/javascript">
+    var jwt_token = commonCla.analyzParams("jwt_token") == undefined ? "": commonCla.analyzParams("jwt_token");
+    //设置WebViewJavascriptBridge通信回调方法--相对应js中
+    setupWebViewJavascriptBridge(function(bridge) {
+        //注册js回调方法
+        bridge.registerHandler('javascriptHandler', function(data, responseCallback) {
+            if (isIphone()) {} else {
+                var data = eval("(" + data + ")");
+            }
+            if (data.nextStep == '1') { //登录
+				window.location.href = "fanpai.html?jwt_token=" + data.jwt_token;
+
+            }else if (data.nextStep == '8') {
+                shareActivity();
+            }
+
+        })
+        //调取客户端方法
+        if (isIphone()) {} else {
+            bridge.init(function(message, responseCallback) {
+                var data = {
+                    'Javascript Responds': 'Wee!'
+                }
+                responseCallback(data)
+            })
+        }
+        //交互方法
+        //点击翻牌登录
+        $('.controls').click(function(e){
+            if(jwt_token=="" || jwt_token==undefined){
+                e.preventDefault()
+                setBridgeCallHandler(bridge, {
+                    'action': '1',
+                    'nextStep': '1'
+                })
+            }else{
+                if($(this).hasClass('show')){
+                    $(this).removeClass('show');
+                    subMove();
+                    setTimeout(function () {
+                        addMove();
+                    },1000)
+
+                }else{
+                    $(this).addClass('show');
+                    	subMove();
+                    setTimeout(function () {
+                        addMove();
+                    },800)
+                }
+                $(".project").removeClass("hover")
+            }
+
+        })
+        //$('.controls').trigger('click');
+		addMove2();
+        setTimeout(function () {
+			subMove2();
+        },3200)
+
+
+        //活动分享
+        var shareActivity=function(){
+            setBridgeCallHandler(bridge, {
+                'action': '3',
+                'share': {
+                    'share_url':commonCla.shareUrlBase+"/activity/lakuo/indexShare.html",
+                    'title': "我在参加拉阔校草评比大赛，快来帮我拉票",
+                    'content': "只为寻找优秀的你，为传统文化代言，关注时尚星秀，拉阔校草评比大赛更多精彩为你呈现！",
+                    'cover':"https://starshow-pic.b0.upaiyun.com/lakuo/logo.jpg!250x250"
+                }
+            })
+        }
+        $(".fx").click(function () {
+            shareActivity()
+            $.ajax({
+                url:commonCla.hostBase+"/lakuo/shareVote?jwt_token="+jwt_token,
+                type:"get",
+                dataType:"json",
+                success:function(data){
+                    if(data.code==200){
+                        var data=data['data'];
+                        $(".fxgz").html(data)
+//                        alert("当天投票剩余"+data['vote_num']+"次数");
+
+                    }else{
+                        console.log(data.code+","+data.error);
+                    }
+                },error:function(error){
+                    console.log(error);
+                }
+
+            });
+        })
+    })
+	var scrollNum=0
+	function goLeft(width) {
+        //750是根据你给的尺寸，可变的
+        if (scrollNum == -(width-210)) {
+            scrollNum = 0;
+        }
+        scrollNum -= 1;
+        $(".scroll").css({
+            left: scrollNum,
+			width:width+40
+        })
+    }
+
+    //翻牌次数
+    $.ajax({
+        url:commonCla.hostBase+"/lakuo/rewardNum?jwt_token="+jwt_token,
+        type:"get",
+        dataType:"json",
+        success:function(data){
+            console.log(data);
+            if(data.code==200){
+                var data=data['data'];
+                $(".playnum").text(data['reward_num']);
+                $('.sednum').text(data['vote_num']);
+                var logs=data.reward_log;
+                if(logs.length>0){
+                    var logHtml=""
+                    for (var i = 0; i < logs.length; i++) {
+                        logHtml+='<li>恭喜用户'+logs[i].user.name+'刚刚抽中'+logs[i].reward+'</li>'
+                    };
+                     $(".winBox ul").html(logHtml);
+					 
+					 var width=Number($(".scroll li").length*320);
+					 $(".winBox ul").css("width",width);
+					 
+			        //设置滚动速度
+			        var timer = setInterval(function(){goLeft(width)}, 20);
+                }
+            }
+        }
+    });
+
+
+    var $btn = $('.project');
+    var isture = 0;
+    //翻牌
+    $btn.click(function() {
+        var isPass=true;
+        $('.project').each(function(index,item){
+            if($(item).hasClass("hover")){
+                isPass=false;
+                alert("洗牌后才能继续翻牌哦~");
+                return;
+            }
+           /* setTimeout(function(){
+                $(item).addClass('ani'+ index);
+            },index*300);*/
+        })
+        if(isPass==false){
+            return;
+        }
+        var num =parseInt($(".playnum").text());
+        num--;
+        if(num<0){
+            num=0;
+            alert("您没有抽奖机会了");
+            return ;
+
+        }else {
+            var thi=$(this)
+            $.ajax({
+                url:commonCla.hostBase+"/lakuo/reward?jwt_token="+jwt_token,
+                type:"post",
+                dataType:"json",
+                success: function(data){
+                    if(data.code==200){
+                        console.log(data);
+                        var data=data['data'];
+                        var prize=data['prize'];
+                        var prizeImg=data['id']
+                        var reward_num=data['reward_num'];
+                        thi.addClass("hover");
+						if($(".playnum").html()>0){
+						 $(".playnum").html(Number($(".playnum").html())-1);
+						}
+						
+                        //thi.find(".prize p").html(prize);
+                        //thi.find('.playnum').text(reward_num);
+                        thi.find("img").attr("src","../images/prize2_0"+data['id']+".png");
+
+                        if(data['id']!=8){
+						    alert("恭喜您，抽中"+prize+"请填写详细地址领取")
+                            $("#js-save").attr("logId",data['reward_log_id'])
+                            tcc.BOX_show("messdiv");
+							var reviewTop=$("#messdiv").css("top").split("px")[0]-80+"px";
+							$("#messdiv").css("top",reviewTop)
+						}
+                    }else{
+                        alert(data.error);
+                    }
+                }
+            });
+        }
+
+    });
+$(".js-close").click(function(){
+  tcc.BOX_remove("messdiv")
+})
+
+
+  $("#js-save").click(function(){
+    $(".error_tips").html("");
+    var name=$("#txt_name").val();
+    var mobile=$("#txt_phone").val();
+    var adr=$("#txt_adr").val();
+
+    if(name==""){
+        $("#txt_name").next(".error_tips").html("请输入名字");
+        return;
+    }else if(mobile==""){
+        $("#txt_phone").next(".error_tips").html("请输入手机号码");
+         return;
+    }else if(!(/^1[34578]\d{9}$/.test(mobile))){
+        $("#txt_phone").next(".error_tips").html("请输入正确手机号码");
+         return;
+    }else if(adr==""){
+        $("#txt_adr").next(".error_tips").html("请输入地址");
+         return;
+    }
+    var reward_log_id=$(this).attr("logId");
+    addUserInfo(reward_log_id)
+    })
+
+    var addUserInfo=function(reward_log_id){
+      var url=commonCla.hostBase+"/lakuo/saveReward?jwt_token="+jwt_token;
+      var name=$("#txt_name").val();
+      var mobile=$("#txt_phone").val();
+      var adr=$("#txt_adr").val();
+	  reward_log_id=reward_log_id==undefined?"1":reward_log_id
+      var params={
+        "jwt_token":jwt_token,
+        "reward_log_id":reward_log_id,
+        "name":name,
+        "mobile":mobile,
+        "address":adr
+      }
+      commonCla.ajaxCommonFun(url,"post",function(ret){
+        if(ret.code=="200"){
+            alert("提交成功");
+            tcc.BOX_remove("messdiv");
+
+        }else{
+            alert(ret.error);
+            tcc.BOX_remove("messdiv");
+        }
+
+      },params)
+    }
+
+    //OPEN
+    function addMove(){
+        $('.project').each(function(index,item){
+            setTimeout(function(){
+                $(item).addClass('ani'+ index);
+            },index*300);
+        })
+    }
+	function addMove2(){
+        $('.project').each(function(index,item){
+            setTimeout(function(){
+                $(item).addClass('ani'+ index);
+            },index*300);
+			$(item).addClass("hover");
+        })
+    }
+    //close
+    function subMove(){
+        $('.project').each(function(index,item){
+            $(item).removeClass('ani'+ index);
+			$(item).removeClass("hover");
+        })
+    }
+    //close
+    function subMove2(){
+        $('.project').each(function(index,item){
+            //$(item).removeClass('ani'+ index);
+			$(item).removeClass("hover");
+        })
+    }
+
+
+
+
+    var rotateFunc = function(awards, angle, text) {
+        isture = true;
+        $btn.stopRotate();
+        $btn.rotate({
+            angle: 0,
+            duration: 4000, //旋转时间
+            animateTo: angle + 1440, //让它根据得出来的结果加上1440度旋转
+            callback: function() {
+                isture = false; // 标志为 执行完毕
+                alert(text);
+            }
+        });
+    };
+    $(function() {
+
+        
+        //投票
+        $(".vote").click(function(){
+            window.location.href = "vote.html?jwt_token=" +jwt_token;
+        })
+
+    })
+</script>
+<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

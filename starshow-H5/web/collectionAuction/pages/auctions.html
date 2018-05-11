@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>藏拍</title>
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/swiper/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/cangp.css">
+</head>
+<body>
+	<div class="cangp_header"  id="js_header"></div>
+	<div class="cangp_menu2">
+		<ul class="js-changeMenu">
+			<!-- <li>全部</li> -->
+		</ul>
+		<!-- <div class="cangp_tit_left" id="js_title"><span class="title_left">书画</span></div> -->
+	</div>
+
+	<div class="auctions_main auction_index">
+		<div class="cangp_tit_left" id="js_title">
+			<span class="title_left"><span id="auctions_tit" class="fb">全部拍品 </span>(<span id="auctions_num"></span>件) </span>
+			<span class="title_right js-changeType">
+				<span class="cur" sid="4">全部拍品</span><span sid="1">拍卖中</span><span sid="0">预展中</span>
+				<span sid="2">已成交</span><span sid="3">已流拍</span> 
+		    </span>
+		</div>
+		<ul class="js_paipinList">
+			<!-- <li>
+				<div class="imgCon">
+					<img src="../assets/images/pic2.png" />
+					<span class="auc_status">拍卖中</span>
+				</div>
+				<div class="auc_desc">
+					<p>水面卜文华本劣质太，恣意畅快之中</p>
+				    <p class="">送拍机构：社风奢侈品</p>
+				</div>
+			
+			</li> -->
+			
+		</ul>
+		<div class="cb"></div>
+		<div class="btn_more" id="js_btn_more">加载更多</div>
+
+	</div>
+	<!-- <div class="left_menu">
+		<ul>
+			<li class="cur">全部拍品</li>
+			<li>拍卖中</li>
+			<li>预展中</li>
+			<li>已成交</li>
+			<li>已流拍</li>
+		</ul>
+	</div> -->
+	<div class="cangp_footer" id="js_footer"></div>
+    <input type="hidden" id="hide_cangp" page="auctions">
+    <script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/swiper/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/api/common.js"></script>
+	<script type="text/javascript" src="../assets/api/cangp.js"></script>
+</body>
+</html>

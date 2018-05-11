@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<!--<meta name="apple-itunes-app" content="app-id=903692043" />-->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>确认订单</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="assets/css/order.css">
+</head>
+<body>
+	<div class="orderMian">
+		<div class="order_location">
+			<div calss="hasAdr">
+				<!-- <div class="user_infos">
+					<img src="assets/images/icon-location.png" class="icon_loc">
+					<span class="loc_name">苏苏苏</span>
+					<span class="loc_phone">15819898983</span>
+				</div>
+				<div class="loc_infos">
+					地址：北京市朝阳区金桐西路时尚大厦16层
+				</div> -->
+			</div>
+			<div class="noAdr" style="display:none">+请选择地址</div>
+			<img src="assets/images/icon-arraw-right.png" class="btn_chooseAdr">
+		</div>
+
+		<div class="prod_infos">
+			<img src="assets/images/prod01.png" class="order_prodCover">
+			<div class="o_prod_desc">
+				<p class="o_prod_tit">018年LV新品包包</p>
+				<p class="o_prod_choose">颜色分类：中号</p>
+				<p class="o_prod_price"><span class="js_prod_price">￥1000</span><span class="prod_num">x1</span></p>
+			</div>
+		</div>
+
+		<div class="order_price">
+			<div class="o_prod_price">
+				<div>商品价</div>
+				<div class="js_price01">￥1000</div>
+			</div>
+			<div class="o_freight">
+				<div>+运费</div>
+				<div class="js_price02">￥10.0</div>
+			</div>
+			<div class="o_real_price">
+				<div>实际付款</div>
+				<div class="js_price03 col_red">￥1010</div>
+			</div>
+			
+		</div>
+
+		
+	</div>
+	<div class="order_confirm">
+		<div>合计金额：<span class="all_price">￥58.00</span></div>
+		<input type="button" class="btn_confirm" value="确认订单"/>
+	</div>
+	<div class="order_pay">
+		<div class="pay_tit">
+			<img src="assets/images/icon-close.png" class="icon_close">
+			<h1>确认支付</h1>
+		</div>
+		
+		<div class="pay_type">
+			<p><span>支付金额</span><span>2345元</span></p>
+			<div  class="type_list">
+				<h2>支付方式</h2>
+				<div>
+					<img src="assets/images/icon-wx.png" ><span>微信支付</span>
+					<img src="assets/images/icon-zfb.png" ><span>支付宝</span>
+				</div>
+
+				
+			</div>
+		</div>
+		<div class="btn_sure">确定</div>
+	</div>
+	<div class="addressCon">
+		<div class="pay_tit">
+			<img src="assets/images/icon-arraw-left.png"  class="icon_back"/>
+			<h1>选择收货地址</h1>
+			<span class="icon_manage">管理</span>
+		</div>
+		<ul class="adrList firm_ardList">
+			<!-- <li>
+					<div class="user_infos">
+						<img src="assets/images/icon-location.png"  class="icon_loc">
+						<span class="loc_name">苏苏苏</span>
+						<span class="loc_phone">15819898983</span>
+						<div class="loc_infos">
+							地址：北京市朝阳区金桐西路时尚大厦16层
+						</div>
+					</div>
+					
+					<div class="btn_lists">
+						<div class="defalt_adr">
+							<img src="assets/images/icon-checked.png" /><span>默认地址</span>
+						</div>
+						<div class="btns">
+							<p><img src="assets/images/icon-edit.png" ><span>编辑</span></p>
+							<p><img src="assets/images/icon-del.png"><span>删除</span></p>
+						</div>
+					</div>
+				
+			</li>
+			<li>
+					<div class="user_infos">
+						<img src="assets/images/icon-location.png"  class="icon_loc">
+						<span class="loc_name">苏苏苏</span>
+						<span class="loc_phone">15819898983</span>
+						<div class="loc_infos">
+							地址：北京市朝阳区金桐西路时尚大厦16层
+						</div>
+					</div>
+					
+					<div class="btn_lists">
+						<div class="defalt_adr">
+							<img src="assets/images/icon-circle.png" /><span>默认地址</span>
+						</div>
+					</div>
+				
+			</li> -->
+		</ul>
+		<div class="btn_createAdr">+新建地址</div>
+	</div>
+	<div class="bg_overflow"></div>
+
+	<input id="hide_info" type="hidden" source="firm"/>
+	<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/js/order.js"></script>
+</body>
+</html>

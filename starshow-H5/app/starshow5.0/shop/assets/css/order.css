@@ -1,0 +1,498 @@
+html,body{
+	font-size: 62.5%
+}
+.col_red{
+	color: #ff1d3e
+}
+.orderMian{
+    width: 100%;
+    min-height: 100%;
+    background: #f1f1f1;
+    overflow: hidden;
+}
+.order_location{
+	overflow: hidden;
+	background: #fff;
+	margin: 20px auto;
+	padding: 15px 4%;
+	border-top: 1px solid #DCDCDC;
+	border-bottom: 1px solid #DCDCDC;
+	position: relative;
+}
+.user_infos{
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+.user_infos .icon_loc{
+	width: 25px;
+	vertical-align: middle;
+}
+.user_infos .loc_phone{
+	margin-left: 10px;
+	letter-spacing: 0.42px;
+}
+.loc_infos{
+	margin-left: 30px;
+	font-size: 1.4rem;
+	color: #626161;
+	letter-spacing: 0.39px;
+	font-weight: normal;
+}
+.btn_chooseAdr{
+	position: absolute;
+	width: 12px;
+	height: auto;
+	top:0;
+	bottom: 0;
+	margin: auto;
+	right: 3%;
+}
+.prod_infos{
+	width: 92%;
+	background: #fff;
+	overflow: hidden;
+	padding: 10px 4%;
+	position: relative;
+	margin: 20px auto;
+}
+.order_prodCover{
+	width: 24%;
+	float: left;
+	display: inline;
+	border-radius: 10px;
+	border: 1px solid #979797;
+	box-sizing:border-box;
+}
+.o_prod_desc{
+	float: right;
+	display: inline;
+	width: 72%;
+	display: flex;
+	flex-direction: column;
+}
+.o_prod_tit{
+	font-size: 1.5rem;
+	color: #000000;
+	line-height: 2rem;
+	height: 2rem;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap; 
+	
+}
+.o_prod_choose{
+	font-size: 1.3rem;
+	color: #898989;
+}
+.prod_infos .o_prod_price{
+	font-size: 1.5rem;
+	color: #FF1D3E;
+	position: absolute;
+	bottom: 10px;
+}
+.prod_infos .o_prod_price .prod_num{
+	font-size: 1.3rem;
+	color: #898989;
+}
+
+.order_price{
+	width: 92%;
+	background: #fff;
+	overflow: hidden;
+	padding: 10px 4%;
+	font-size: 1.4rem;
+	letter-spacing: 0.39px;
+}
+.order_price > div{
+	display: flex;
+	justify-content: space-between;
+} 
+.o_prod_price,.o_freight{
+	color: #626161;
+}
+
+.o_real_price{
+	margin-top: 20px;
+}
+.order_confirm{
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0 3px 6px 0 rgba(0,0,0,0.50);
+}
+.order_confirm > div{
+	float: left;
+	display: inline;
+	width: 64%;
+	font-size: 1.4rem;
+	color: #626161;
+	text-align: right;
+	line-height: 4rem;
+}
+.order_confirm > div .all_price{
+	color: #ff1d3e
+}
+.btn_confirm{
+	background: #FF1D3E;
+	width:34%;
+	height: 4rem;
+	color: #ffffff;
+	text-align: center;
+	line-height: 4rem;
+	border: none;
+	float: right;
+	font-size: 1.5rem
+
+}
+.btn_createAdr{
+	background: #FF1D3E;
+	display: block;
+	width:80%;
+	height: 4rem;
+	color: #ffffff;
+	text-align: center;
+	line-height: 4rem;
+	border: none;
+	font-size: 1.5rem;
+	margin: 20px auto;
+
+}
+/*address list*/
+.adrMain{
+	 width: 100%;
+    min-height: 100%;
+    background: #f1f1f1;
+    overflow: hidden;
+}
+.adrList{
+	width: 100%;
+}
+.adrList li {
+	width: 100%;
+	border-bottom: 1px solid #EAEAEA;
+	background: #fff;
+	margin-top: 20px;
+
+
+}
+.adrList li .user_infos,.adrList li .btn_lists{
+	width: 92%;
+	padding: 20px 4%; 
+	overflow: hidden;
+}
+.adrList li .user_infos .loc_infos{
+	font-weight: normal;
+	color: #898989;
+}
+.adrList li .btn_lists{
+	border-top: 1px solid #EAEAEA;
+	font-size: 1.4rem;
+	color: #898989;
+}
+.btn_lists .defalt_adr{
+	float: left;
+	display: inline;
+}
+.defalt_adr img,.btns img{
+	vertical-align: middle;
+	width: 20px;
+	margin-right: 5px;
+}
+.defalt_adr span,.btns span{
+	vertical-align: middle;
+}
+
+.btn_lists .btns{
+	float: right;
+	color: #898989;
+}
+.btns p{
+	display: inline;
+}
+.order_pay{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 4;
+	background: #fff;
+	display: none;
+}
+.pay_tit {
+	position: relative;
+	border-bottom: 1px solid #D8D8D8;
+	padding: 2rem 0;
+}
+.pay_tit .icon_close{
+	position: absolute;
+    left: 20px;
+    width: 1.5rem;
+    height:auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.pay_tit h1{
+	font-size: 1.7rem;
+	text-align: center;
+}
+.order_pay h2{
+	font-size: 1.7rem;
+}
+.pay_type{
+	width: 90%;
+	margin: 0 5%;
+}
+.pay_type img{
+	width: 50%
+}
+.pay_type p{
+	border-bottom: 1px solid #D8D8D8;
+	font-size: 1.5rem;
+	overflow: hidden;
+	padding:2rem 0
+}
+.pay_type p span:first-child{
+	float: left;
+	color: #898989;
+}
+.pay_type p span:last-child{
+	float: right;
+}
+.type_list {
+	width: 100%;
+	margin: 2rem auto;
+	font-size: 1.5rem; 
+	color: #13BF07;
+}
+.type_list h2{
+	color: #898989;
+	font-size: 1.5rem;
+
+}
+.type_list img{
+	width: 50px;
+	vertical-align: middle;
+
+}
+.type_list div img:nth-child(3){
+	margin-left: 50px;
+}
+.type_list div span:nth-child(4){
+	color: #209BDD;
+}
+ .type_list div{
+ 	margin: 30px 0
+ }
+.btn_sure{
+	width: 90%;
+	height: 4rem;
+	color: #fff;
+	text-align: center;
+	font-size: 1.5rem;
+	background: #FF1D3E;
+	border-radius: 6px;
+	line-height: 4rem;
+	margin:20px auto;
+	letter-spacing: 20px;
+}
+.addressCon{
+	position: absolute;
+	height: 100%;
+	
+	bottom: 0;
+	margin:auto;
+	width: 100%;
+	background: #f1f1f1;
+	display: none;
+}
+.addressCon .pay_tit{
+	background: #fff;
+	padding: 1rem 0
+}
+.addressCon .pay_tit .icon_back{
+	position: absolute;
+    left: 20px;
+    width: 1.5rem;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.icon_manage{
+	position: absolute;
+    right: 20px;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+/*order detail*/
+.o_detail_main{
+	width: 100%;
+	min-height: 100%;
+	background: #f1f1f1;
+	overflow: hidden;
+	padding-bottom: 4.5rem;
+
+}
+.od_status_main{
+	position: relative;
+}
+.icon_order_status{
+	width: 15%;
+}
+.od_status{
+	position: absolute;
+	left: 20%;
+	height: 4rem;
+	line-height: 2rem;
+	font-size: 1.5rem;
+	top:0;
+	bottom: 0;
+	margin:auto;
+
+}
+.od_status h1{
+	font-weight: bold
+}
+.od_status p{
+	font-size: 1.4rem;
+	color: #898989;
+	letter-spacing: 0.39px;
+}
+.od_order_con{
+	width: 92%;
+	padding: 15px 4%;
+	background: #FFFFFF;
+	border-bottom: 1px solid #DCDCDC;
+	border-top: 1px solid #DCDCDC;
+	margin-bottom: 20px;
+}
+.od_prod_list{
+	width: 100%;
+	padding: 0
+}
+.od_prod_list li{
+	border-bottom: 1px solid #DCDCDC;
+	position: relative;
+}
+.od_prod_list li:last-child{
+	border-bottom: 0
+}
+.od_prod_list li .btn_afterSale{
+	position: absolute;
+	right: 10px;
+	bottom:10px;
+	padding: 5px 15px;
+	background: #F0F0F0;
+	border: 1px solid #DCDCDC;
+	border-radius: 30px;
+	font-size: 1.3rem;
+	color: #000000;
+}
+.od_order_info{
+	font-size: 1.3rem;
+	color: #626161;
+	letter-spacing: 0.36px;
+	line-height: 2rem;
+	margin-bottom: 0;
+}
+.noAdr{
+	font-size: 1.6rem;
+	/* text-align: center; */
+}
+.btnsCon{
+	 display: -webkit-flex;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0px auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background:#fff;
+}
+.btnsCon div{
+	width:50%;
+	text-align: center;
+	line-height: 4.5rem;
+	color: #fff;
+	font-size: 1.5rem;
+	height: 4.5rem;
+}
+.btnsCon div.w100p{
+	width:100%;
+	
+}
+.btnsCon div.w80p{
+	width:80%;
+	
+}
+.btnsCon div.w20p{
+	width:20%;
+	
+}
+.btnsCon div.bg_grey{
+	background: #898989
+}
+.btnsCon div.bg_grey2{
+	background: #ddd
+}
+.btnsCon div.bg_white{
+	background: #fff;
+	color:#000;
+}
+
+.btnsCon div.bg_red{
+	background: #ff1d3e
+}
+.btnsCon div.bg_yellow{
+	background:#FA8817
+}
+
+.payment{
+    display: flex;
+    align-content: space-around;
+    width: 100%;
+}
+.payment p{
+	width:50%;
+}
+.payment p span:last-child{
+ 	float:none;
+}
+.payment p:last-child span{
+	color:#209BDD
+}
+.payment p i.icon-wx{
+	background: url(../images/icon-wx.png) no-repeat;
+	background-size: contain;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.payment p i.icon-zfb{
+	background: url(../images/icon-zfb.png) no-repeat;
+	background-size: contain;
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.payment p.sel i.icon-wx{
+	background: url(../images/icon-wx-sel.png) no-repeat;
+	background-size: contain;
+}
+.payment p.sel i.icon-zfb{
+	background: url(../images/icon-zfb-sel.png) no-repeat;
+	background-size: contain;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>2017秋冬四大时装周专题&0&1&8</title>
+  <link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css" />
+</head>
+<body>
+<section class="fw_main">
+  <header>
+  	<img src="assets/images/top_banner.jpg" width="100%"/>
+  </header>
+  <section class="fw_list">
+  	<h1>2017秋冬四大时装周专题</h1>
+  	<div  class="fw_list_con">
+  		<ul>
+  			<li><a href="detail.html?id=7">
+  				<img src="https://starshow-pic.b0.upaiyun.com/news/undefined/1486637482.jpg" />
+  				<p>纽约时装周</p></a>
+  			</li>
+  			<li><a href="detail.html?id=9">
+  				<img src="https://starshow-pic.b0.upaiyun.com/news/undefined/1487586704.jpg" />
+  				<p>伦敦时装周</p>
+  			</li>
+  			<li><a href="detail.html?id=10">
+  				<img src="https://starshow-pic.b0.upaiyun.com/news/undefined/1487820992.jpg" />
+  				<p>米兰时装周</p></a>
+  			</li>
+  			<li><a href="detail.html?id=11">
+  				<img src="https://starshow-pic.b0.upaiyun.com/news/undefined/1488270418.jpg" />
+  				<p>巴黎时装周</p></a>
+  			</li>
+  		</ul>
+
+  	</div>
+  </section>
+</section>
+<!-- <div id="tempOpen">打开测试</div> -->
+<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js" ></script>
+<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+<script type="text/javascript" src="assets/js/main.js?v=1" inline></script>
+<!-- 统计代码 -->
+<!-- <script type="text/javascript" src="../../tj.php"></script>-->
+</body>
+</html>

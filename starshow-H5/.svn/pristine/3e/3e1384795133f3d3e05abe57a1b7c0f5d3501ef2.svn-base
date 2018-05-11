@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>星榜平台打榜规则</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+    <link rel="stylesheet" type="text/css" href="ranking.css">
+    <style>
+        html{
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+     <div class="rule-page">
+         <dl>
+            <dt>一、星榜单简介</dt>
+            <dd>星榜数据致力于打造中国最权威的明星榜单，榜单以真实数据为依据，通过专业的计分规则和多样的参与机制对明影响力进行综合排名，除参与的明星按照多维度分别划分对比外，我们融合了明星在各个不同社交平台的影响力，做到最全面最权威的真实明星影响力榜单。</dd>
+        </dl>
+        <dl>
+            <dt>二．上榜明星（大咖）范围</dt>
+            <dd>• 入驻星榜平台的明星和大咖</dd>
+            <dd>• 可通过平台邀请成为明星或大咖，也可主动联系我们，让我们更快的认识你及你的才能。</dd> 
+        </dl>
+        <dl>
+            <dt>三、打榜周期及影响力构成</dt>
+            <dd>打榜周期：目前榜单以自然日为单位，记录每周明星影响力及涨幅变化。周期为每日的0:00开始累积数据，每周日23:59截止统计，然后进入下一周的计分周期。</dd> 
+        </dl>
+        <dl>
+            <dt>四、粉丝打榜说明</dt>
+            <dd>• 目前除星榜平台榜单外，其他平台（包含：微信、新浪微博、Facebook、Instagram）都以数据联通的形式做排名，用户可通过各个不同平台为明星增加影响力。</dd>
+            <dd>• 星榜平台的打榜形式：</dd>
+            <dd>点赞，明星获得的赞数越多，则说明人气越高；</dd>
+            <dd>单个账户给同一个明星只能打榜五次，打榜成功后，可通过邀请链接，邀请好友来为明星打榜，打榜的数量将累计在该明星下</dd>
+        </dl>
+        <dl>
+            <dt>五、打榜福利</dt>
+            <dd>• 每个明星详情下有各粉丝打榜的排名； 前99位粉丝才有露脸机会哟</dd>
+            <dd>• 参与度高的粉丝还有机会参加线下粉丝见面会等机会；</dd>
+            <dd>• 更多粉丝福利正在筹备ing，请期待！</dd>
+        </dl>
+     </div>
+
+</body>
+</html>

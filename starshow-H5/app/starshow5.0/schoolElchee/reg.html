@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+	<title>报名参赛</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+  	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body>
+	
+	<section class="regMain">
+		<header>
+			<ul>
+				<li class="pass">
+					<p>完善基本信息</p>
+					<div class="stepNum">1</div>
+				</li>
+				<li>
+					<p>上传作品</p>
+					<div class="stepNum">2</div>
+				</li>
+				<li>
+					<p>完成</p>
+					<div class="stepNum">3</div>
+				</li>
+			</ul>
+		</header>
+		<section class="regCons">
+		 <div class="regTerm regContent">
+		 <ul>
+		  <li>
+		  	<span>真实姓名：</span>
+		  	<input type='text' value='' id="txt_name"  class='txt_con' maxlength="9"/>
+		  	<p class="errorTip"></p>
+		  </li>
+		  <li>
+		  	<span>性别：</span>
+		  	<select  class='txt_con' id="txt_sex">
+		  		<option>男</option>
+		  		<option>女</option>
+		  	</select>
+		  </li>
+		  <li>
+		  	<span>赛区：</span>
+		  	<select  class='txt_con' id="txt_area">
+		  		<option id="1">华北</option>
+		  		<option id="2">华东</option>
+		  		<option id="3">华南</option>
+		  		<option id="4">西南</option>
+		  		<option id="5">西北</option>
+		  	</select>
+		  	<p class="errorTip"></p>
+		  </li>
+		  <li>
+		  	<span>学校：</span>
+		  	<input type='text' value='' id="txt_school"  class='txt_con'/>
+		  	<p class="errorTip"></p>
+		  </li>
+		  <li>
+		  	<span>年纪：</span>
+		  	<input type='text' value='' id="txt_age"  class='txt_con'/>
+		  	<p class="errorTip"></p>
+		  </li>
+		  <li>
+		  	<span>手机号码：</span>
+		  	<input type="text" value='' id="txt_mobile"  class='txt_con' placeholder='方便我们第一时间联系您'/>
+		  	<p class="errorTip"></p>
+		  </li>
+		  <li>
+		  	<span>图形码：</span>
+		  	<input type="text" value='' id="txt_yzm_pic"  class='txt_con'/>
+		  	<img id="pic_yzm" class="pic_yzm" src="assets/images/reg.png"  />
+		  	<p class="errorTip"></p>
+		  </li>
+		  <li>
+		  	<span>验证码：</span>
+		  	<input type="text" value='' id="txt_yzm_msg"  class='txt_con'/>
+		  	<input type="button" value="点击获取" class="btn_sendMsg" id="btn_sendMsg"/>
+		  	<!-- <img id="pic_yzm" src="assets/images/reg.png" width="40" /> -->
+		  	<p class="errorTip"></p>
+		  </li>
+		 </ul>
+          <p class="mt10 tc">
+          	<input type='button' class="btn_upload" id="toUpload" value='确认'>
+          </p> 
+          </div>
+          <div class="uploadCon regContent tc" style="display:none">
+          	<input type='button' class="btn_upload" id="toUploadVideo" value='上传作品'>
+          </div>
+         <div class="resultCon regContent tc" style="display:none">
+         	<img src="assets/images/success.png" width="60" />
+         	<h1>申请已提交</h1>
+         	<input type='button' class="btn_upload" id="toBack" value='完成'>
+         </div>
+		</section>
+		  
+	</section>
+	<input type="hidden" id="categoryId"> 
+	<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="assets/js/reg.js" charset="UTF-8"></script>
+</body>

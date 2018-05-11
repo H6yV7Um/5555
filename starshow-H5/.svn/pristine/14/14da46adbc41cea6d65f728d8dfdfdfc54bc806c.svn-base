@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<title>加入我们</title>
+</head>
+
+<body>
+<!--head start-->
+<div class="header w">
+  <div class="app"><img src="images/app.png" width="94" height="121" /></div>
+  <div class="weix"><img src="images/weix.png" width="94" height="121" /></div>
+  <div class="logo fl"><a href="index.html"><img src="images/logo.png" width="404" height="150" alt="时尚星秀 让你更时尚 让你更闪耀" title="时尚星秀 让你更时尚 让你更闪耀" /></a></div>
+  <div class="fr">
+    <div class="welcome-info"><span></span><img src="images/user.png" /></div>
+    <div class="login_info"><a href="regist.html" class="registBtn goRegist">注册</a>/<a href="###" class="loginBtn regist_btn">登录</a></div>
+  </div>
+  <div class="share"> <a href="javascript:;" title="扫一扫 关注StarShow微信公众号"><i class="iweix"></i></a> <a  href="http://weibo.com/trendstarshow?refer_flag=1001030101_&is_all=1" title="关注新浪微博" target="_blank"><i class="sina"></i> </a><a href="javascript:;" title="扫码下载"><i class="iapp"></i> </a></div>
+</div>
+<div class="clear"></div>
+<!--nav start-->
+<div class="w menu">
+  <div class="nav fl"><a href="index.html" title="演出剧目" class="cur">演出剧目</a><a href="festival.html" title="星秀盛典">星秀盛典</a><a href="about.html" title="关于我们">关于我们</a> <a href="contact.html"> 联系我们</a> </div>
+</div>
+<!--head end-->
+<div class="clear"></div>
+<div class="w">
+ <!--注册-->
+  <div class="regist hide">
+    <div class="registTit">登陆时尚星秀，开启潮流之旅<span class="close">X</span></div>
+    <div class="registCon hide" id="regist">
+      <dl>
+        <dt>账号：</dt>
+        <dd>
+          <input type="text" placeholder="请输入用户名" />
+        </dd>
+      </dl>
+      <dl>
+        <dt>密码：</dt>
+        <dd>
+          <input type="password" placeholder="6~14位字母、数字的组合" />
+        </dd>
+      </dl>
+      <dl>
+        <dt>验证码：</dt>
+        <dd>
+          <input type="text" placeholder="请输入验证码" />
+          <img src="images/code.jpg" class="fr" /></dd>
+      </dl>
+      <p class="agree">
+        <input type="checkbox" />
+        <a href="privacy.html">我同意《时尚星秀用户协议》</a><a href="###" class="fr regist_btn">立即登陆</a></p>
+      <a href="regist.html" class="btn regist_btn">立即注册</a> </div>
+    <!--登录-->
+    <div class="registCon hide" id="login">
+      <dl>
+        <dt>账号：</dt>
+        <dd>
+          <input type="text" placeholder="请输入用户名"  class="userPhone" />
+        </dd>
+      </dl>
+      <dl>
+        <dt>密码：</dt>
+        <dd>
+          <input type="password" placeholder="请输入密码" />
+        </dd>
+      </dl>
+      <p class="agree">
+        <input type="checkbox" />
+        <a href="privacy.html">记住我</a><span class="fr"><a href="###" class="findPwd" >找回密码</a>|<a href="regist.html" class="goRegist">立即注册</a></span></p>
+      <a href="###" class="btn sureLogin">登陆</a> </div>
+    <!--找回密码-->
+    <div class="registCon hide" id="findPwd">
+      <dl>
+        <dt>设置新密码：</dt>
+        <dd>
+          <input type="password" placeholder="6~14位字母、数字的组合" />
+        </dd>
+      </dl>
+      <dl>
+        <dt>再次确认密码：</dt>
+        <dd>
+          <input type="password" placeholder="请输入密码" />
+        </dd>
+      </dl>
+      <a href="###" class="btn regist_btn">设置成功去登陆</a> </div>
+  </div>
+  <div class="left fl"> <a  href="about.html" class="first">关于我们</a> <a  href="partner.html">合作伙伴</a> <a  href="contact.html" >联系我们</a> <a  href="join.html"  class="cur">加入我们</a> <a  href="privacy.html">用户协议</a> <a  href="###">版权信息</a> </div>
+  <div class="right join fl">
+    <h2 class="mt30">时尚星秀招贤纳士，请发送简历至：yanghuanshu@trends.com.cn</h2>
+    <h2>资深美容编辑</h2>
+    <h3>岗位职责：</h3>
+    <p> 1.负责美容类栏目的日常维护与建设；</p>
+    <p> 2.负责公司线上、线下活动，专题策划、组织、拍摄执行、监测总结；  </p>
+    <p>3.新媒体传播创意，传播形式的策划与营销；</p>
+    <p>4.公司主办的活动策划方案的撰写；</p>
+    <p>5.维护与各大品牌的关系，保持良好的合作关系，同时开拓新的资源。</p>
+    <h3>任职要求：</h3>
+    <p>1.3-5年工作经验，在时尚类杂志有工作经历者优先，资源丰富者优先； </p>
+    <p>2.本科及以上学历，编辑、新闻、中文、策划等相关专业优先；</p>
+    <p>3. 热爱美妆、时尚等圈子，具备职业敏感度，能够及时提出创意性推广方案；</p>
+    <p>4. 文笔流畅，具备时尚类美容选题策划、甄选和鉴赏力，有较强文字编辑能力；</p>
+    <p>5. 熟悉互联网运作模式；</p>
+    <p>6. 熟练使用Photoshop,office系列办公软件；</p>
+    <p>7. 有良好的沟通能力和团队精神；</p>
+    <h2>Android高级开发工程师</h2>
+    <h3>岗位职责：</h3>
+    <p>1.参与或者独立承担Android平台上产品的设计、实现、测试及功能维护; </p>
+    <p>2.参与产品的产品需求文档及原型设计评审，对可行性及方案优化进行评估;</p>
+    <p>3.参与或者独立完成应用系统架构设计、总体设计及概要设计;</p>
+    <p>4.根据项目需要快速学习并掌握相关新技术;</p>
+    <p>5.与项目人员沟通配合，与团队中其他成员交流相关信息.</p>
+    <h3>任职要求：</h3>
+    <p>1.3年以上Android开发经验; </p>
+    <p>2.良好的编码习惯，熟悉常用算法和数据结构；</p>
+    <p>3.精通Android开发平台及框架原理，精通Android的基本组件使用；</p>
+    <p>4.熟悉Android下网络编程，网络数据传输，JSON数据传输。</p>
+    <p>5.熟悉加密算法，熟悉Android下的数据安全传输技术。</p>
+    <p>6.熟练使用多种常用设计模式，良好架构设计能力和文档撰写能力；</p>
+    <p>7.有过视频开发经验，动画开发经验者优先</p>
+    <h2>生活编辑</h2>
+    <h3>任职要求：</h3>
+    <p>3年以上生活类编辑工作经验；</p>
+    <p>具备良好的选题策划和制作能力，文字功底扎实；</p>
+    <p>擅长生活类选题策划及人物专访；</p>
+    <p>具备组织协调拍摄的能力；</p>
+    <p> 具备良好的敬业和团队协作精神</p>
+    <p>社会资源广泛，尤其在高端生活方式方面资源丰富，并具备拓展资源的能力；</p>
+    <p>有时尚敏感度，能抓住时尚话题。</p>
+  </div>
+</div>
+<p class="clear"></p>
+<!--底部-->
+<div class=" footer">
+  <div class="w"> <i></i>
+    <div class="footerInfo">
+      <dl>
+        <a href="about.html">
+        <dt>关于我们 </dt>
+        <dd>About us</dd>
+        </a>
+      </dl>
+      <dl>
+        <a href="partner.html">
+        <dt> 合作伙伴 </dt>
+        <dd>Parterner</dd>
+        </a>
+      </dl>
+      <dl>
+        <a href="contact.html">
+        <dt> 联系我们</dt>
+        <dd> Contact us</dd>
+        </a>
+      </dl>
+      <dl>
+        <a href="join.html">
+        <dt> 加入我们</dt>
+        <dd> Join us</dd>
+        </a>
+      </dl>
+      <dl>
+        <a href="privacy.html">
+        <dt> 用户协议</dt>
+        <dd> User </dd>
+        </a>
+      </dl>
+      <dl class="last">
+        <a href="###">
+        <dt>版权信息 </dt>
+        <dd> Copyright</dd>
+        </a>
+      </dl>
+    </div>
+    <p class="mt30">集团站点：</p>
+   <p><a href="http://www.trendsgroup.com.cn/" target="_blank" class="clp">时尚网 </a>/<a href="http://www.cosmopolitan.com.cn/" target="_blank">cosmopolitan中文网</a>/<a href="http://www.bazaar.com.cn/" target="_blank">时尚芭莎</a>/<a href="http://enrz.com/" target="_blank">男人装</a>/<a href="http://www.robbreport.cn/" target="_blank">罗博报告</a>/<a href="http://www.bazaarjewelrychina.com/" target="_blank">芭莎珠宝</a>/<a href="http://www.ccbride.com/" target="_blank"> 时尚新娘 </a>/<a href="http://www.nationalgeographic.com.cn/travel/" target="_blank">时尚旅游</a>/<a href="http://www.nationalgeographic.com.cn/" target="_blank">华夏地理</a>/<a href="http://www.trendscar.com.cn/" target="_blank">时尚座驾</a>/<a href="http://www.mhtrends.com.cn/master/?Main/index.html" target="_blank">时尚健康.男士</a>/<a href="http://www.trendshome.cn/" target="_blank">时尚家居</a></p>
+    <p class="mt30">© Copyright  2016  北京时尚星秀影视文化传媒有限公司 京ICP备16014546号-1 </p>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script> 
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>

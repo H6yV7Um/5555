@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀-让你更时尚，让你更闪耀！</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"  />
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper-3.4.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">	
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body>
+ <div class="xingx_mains">
+ 	<!--头部-->
+ 	<div class="xingx_header">
+ 		<div class="xingx_content">
+ 		<a href="/"><img src="assets/images/logo.png" width="137" class="icon_logo" /></a>
+ 		<div class="xingx_menus">
+ 		  <ul class="xingx_nav">
+ 		  	<!-- <li><a>头条</a></li>
+ 		  	<li><a>视频</a></li>
+ 		  	<li><a>直播</a></li>
+ 		  	<li><a>美图</a></li>
+ 		  	<li><a>榜单</a></li>
+ 		  	<li><a>星秀盛典</a></li> -->
+ 		  </ul>
+
+ 		  <div class="xingx_other">
+ 		  	<div class="xingx_link"><a target="_blank" href="downLoad.html">|<span>手机APP</span>|</a><a href="about.html"><span>关于我们</span>|</a></div>
+	        <div class="xingx_search">
+	          <input type="text" class="txt_search" id="txt_search"/>
+	        </div>
+ 		  </div>
+ 		  <!-- <div class="xings_menu_child">
+ 		   			  
+ 		   </div> -->
+ 		</div>
+ 		<div class="platList">
+ 			<div class="c1"><img src="assets/images/icon/icon-xingxiu.png" height="30" width="30">
+              <div class="tips"><img src="assets/images/app.png" /></div>
+ 			</div>
+ 			<a class="fr" href="http://weibo.com/trendstarshow?refer_flag=1001030101_&is_all=1"><img src="assets/images/icon/icon-sina.png" height="30" width="30"></a>
+ 			<div class="c2"><img src="assets/images/icon/icon-wechat.png" height="30" width="30">
+             <div class="tips"><img src="assets/images/weix.png" /></div>
+ 			</div>
+ 		</div>
+ 	  </div>
+ 	</div>
+ 	<!--内容-->
+ 	<div class="xingx_cons mt60">
+ 		<div class="xingx_con1">
+ 			<div class="fl">
+ 				<div class="swiper-container swiper-container-top">
+				    <div class="swiper-wrapper" id="js-focusList">
+				        
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				    
+				    <!-- 如果需要导航按钮 -->
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>
+				    
+				    <!-- 如果需要滚动条 -->
+				</div>
+ 			</div>
+ 			<div class="fr">
+ 			  <div class="adv_con1" style="display:none">
+ 			  	<div data-widget="plista_widget_infeed2"></div>
+ 			  </div>
+ 			  <div class="adv_con2"> <a href="downLoad.html"><img src="assets/images/pic/down-big.png" width="100%"/></a>
+ 			  </div>
+ 			</div>
+ 		</div>
+ 		<!--con1 end-->
+ 		<div class="cb"></div>
+ 		<div class="xingx_tit mt30">
+ 			<!-- <img src="assets/images/icon/tit05.png" class="fl" /> -->
+ 			<span class="fl" >时尚头条<span class="col_red">Fashion Headlines</span></span>
+ 			<div class="fr">
+ 				<a href="newsList.html?dtype=all&menuTag=0-0">
+ 					<span class="vm">更多</span>
+ 					<img src="assets/images/icon/icon-right.png" width="8" class="vm" />
+ 				</a>
+ 			</div>
+ 		</div>
+ 		<div class="xingx_list">
+ 			<ul id="js-newsList">
+ 				<!-- <li>
+ 					<img src="assets/images/pic/02.png" />	
+ 					<div class="activity">
+ 						<p>标题标题标题标题标题标题</p>
+ 						<span>2分钟</span>
+ 						<div class="fr">
+ 							<img src="assets/images/icon/icon-like.png" />
+ 							<span class="like_num">9999</span>
+ 							<img src="assets/images/icon/icon-see.png" />
+ 							<span  class="watch_num">9999</span>
+ 						</div>
+ 					</div>
+ 				</li>-->
+ 			</ul>
+ 		</div>
+ 		<div class="cb"></div>
+ 		<div class="xingx_tit mt30">
+ 			<span class="fl" >热门视频<span class="col_red">Hot Video</span></span>
+ 			<!-- <img src="assets/images/icon/tit04.png" class="fl" /> -->
+ 			<div class="fr">
+ 				<a href="videoList.html?dtype=all&menuTag=1-0">
+ 					<span class="vm">更多</span>
+ 					<img src="assets/images/icon/icon-right.png" width="8" class="vm" />
+ 				</a>
+ 			</div>
+ 		</div>
+ 		<div class="xingx_list xingx_list_video">
+ 			<ul  id="js-videoList">
+ 				<!-- <li>
+ 					<img src="assets/images/pic/02.png" />	
+ 					<div class="activity">
+ 						<p><img class="icon-play" src="assets/images/icon/icon-play.png" height="26" width="26"><span class="vm">标题标题标题标题标题标题</span></p>
+ 						<span>2分钟</span>
+ 						<div class="fr">
+ 							<img src="assets/images/icon/icon-like.png" />
+ 							<span class="like_num">9999</span>
+ 							<img src="assets/images/icon/icon-see.png" />
+ 							<span  class="watch_num">9999</span>
+ 						</div>
+ 					</div>
+ 				</li> -->
+ 			</ul>
+ 		</div>
+ 		<div class="cb"></div>
+ 		<div class="tc mt10 adv_con3"><img src="assets/images/pic/adv01.jpg" /></div>
+ 		<div class="xingx_tit mt30">
+ 			<span class="fl" >热门直播<span class="col_red">Hot Live</span></span>
+ 			<!-- <img src="assets/images/icon/tit03.png" class="fl" /> -->
+ 			<div class="fr">
+ 				<a href="liveList.html?tagid=2238&dtype=0&menuTag=2-">
+ 					<span class="vm">更多</span>
+ 					<img src="assets/images/icon/icon-right.png" width="8" class="vm" />
+ 				</a>
+ 			</div>
+ 		</div>
+ 		<div class="xingx_list xingx_list_video xingx_list_live">
+ 			<ul id="js-livesList">
+ 				<!-- <li>
+ 					<img src="assets/images/pic/02.png" />	
+ 					<div class="activity">
+ 						<p><img class="icon-play" src="assets/images/icon/icon-play.png" height="26" width="26"><span class="vm">标题标题标题标题标题标题</span></p>
+ 						<span>2分钟</span>
+ 						<div class="fr">
+ 							<img src="assets/images/icon/icon-like.png" />
+ 							<span class="like_num">9999</span>
+ 							<img src="assets/images/icon/icon-see.png" />
+ 							<span  class="watch_num">9999</span>
+ 						</div>
+ 					</div>
+ 				</li> -->
+ 				
+ 			</ul>
+ 		</div>
+        <div class="xingx_tit mt30">
+        	<span class="fl" >今日榜单<span class="col_red">List Toady</span></span>
+ 			<!-- <img src="assets/images/icon/tit02.png" class="fl" /> -->
+ 			<div class="fr">
+ 				<a href="billboard.html?menuTag=4-">
+ 					<span class="vm">更多</span>
+ 					<img src="assets/images/icon/icon-right.png" width="8" class="vm" />
+ 				</a>
+ 			</div>
+ 		</div>
+        <div class="xingx_rank mt30">
+	    	<div class="swiper-container swiper-container-rank">
+				    <div class="swiper-wrapper" id="js-rankList">
+				       <!--  <div class="swiper-slide">
+				       	<div class="rankCon">
+				       		<img src="assets/images/pic/02.png" />
+				       		<div class="bg">杨幂</div>
+				       		<div class="icon_num col_1"></div>
+				       		<span class="num">1</span>
+				       	</div>
+				       </div> -->
+				       
+				    </div>
+				    
+				    <!-- 如果需要导航按钮
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div> -->
+				    
+				  
+				</div>
+        </div>
+        <div class="cb"></div>
+        <div class="xingx_tit xingx_tit2  mt30">
+ 			<img src="assets/images/icon/tit01.png" />
+ 		</div>
+ 		<div class="pic mt30">
+ 			<div class="pic_tit">
+ 				<div class="fl">
+ 					<a href="picList.html?tagid=2243&dtype=0&menuTag=3-1"><img src="assets/images/icon/f_01.png" /></a>
+ 					<a href="picList.html?tagid=2253&dtype=0&menuTag=3-2"><img src="assets/images/icon/f_02.png" /></a>
+ 					<a href="picList.html?tagid=2241&dtype=0&menuTag=3-3"><img src="assets/images/icon/f_03.png" /></a>
+ 				</div>
+ 				<div class="fr">
+ 					<a href="picList.html?tagid=2244&dtype=0&menuTag=3-4"><img src="assets/images/icon/f_04.png" /></a>
+ 					<a href="picList.html?tagid=2254&dtype=0&menuTag=3-5"><img src="assets/images/icon/f_05.png" /></a>
+ 					<a href="picList.html?tagid=2242&dtype=0&menuTag=3-6"><img src="assets/images/icon/f_06.png" /></a>
+ 				</div>
+ 			</div>
+ 			<div class="cb"></div>
+ 			<div class="swiper-container featured">
+			    <div class="swiper-wrapper"  id="js-picList"> 
+			    	<!-- <div class="swiper-slide">
+			    		<img src="assets/images/pic/01.png"  />
+			    	</div>> -->
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <!-- <div class="swiper-pagination"></div> -->
+			    <!-- 如果需要导航按钮 -->
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>
+					   
+			</div>
+
+ 		</div>
+
+ 	</div>
+ 	<!--尾部-->
+ 	<div class="xingx_footer" >
+ 		<div class="xingx_footer_con" id="xingx_footer"></div>
+ 	</div>
+
+ </div>
+ <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+ <script type="text/javascript" src="assets/js/swiper-3.4.0.min.js"></script>
+ <script type="text/javascript" src="assets/js/common.js"></script>
+<script type="text/javascript">
+(function(c){var g,s='script',w=window,n=c.name||'PLISTA';if(!w[n]){w[n]=c;g=w.document.getElementsByTagName(s)[0];s=w.document.createElement(s);s.async=true;s.type='text/javascript';s.src=(w.location.protocol==='https:'?'https:':'http:')+'//static'+(c.origin?'-'+c.origin:'')+'.plista.com/async'+(c.name?'/'+c.name:'')+'.js';g.parentNode.insertBefore(s,g);}
+}({
+    "publickey": "530e0503202b995561f9febf",
+    "origin": "cn"
+}));
+</script>
+ <script type="text/javascript" src="assets/js/index1.0.js"></script>
+ <script src="https://s11.cnzz.com/z_stat.php?id=1260324667&web_id=1260324667" language="JavaScript"></script>
+</body>
+</html>

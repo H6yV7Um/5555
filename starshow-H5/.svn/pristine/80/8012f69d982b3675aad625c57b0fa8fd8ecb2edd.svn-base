@@ -1,0 +1,39 @@
+#box_enter {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+}
+.contain_enter {
+	width: 100%;
+	height: 100%;
+	background: #065890;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 18px;
+}
+select,input {
+	height: 36px;
+	background: #00adee;
+	color: #fff;
+	margin: 5px 0;
+	width: 85%;
+	border-radius: 10px;
+	border: none;
+	padding-left: 6px;
+}
+.btn {
+	background: #f90;
+}
+::-webkit-input-placeholder {
+	color: #fff;
+}
+:-moz-placeholder {
+	color: #fff;
+}
+::-moz-placeholder {
+	color: #fff;
+}
+:-ms-input-placeholder {
+	color: #fff;
+}

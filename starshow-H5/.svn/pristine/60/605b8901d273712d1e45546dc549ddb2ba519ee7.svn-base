@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <meta charset="UTF-8">
+          <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+          <meta name="apple-mobile-web-app-capable" content="yes">
+          <meta name="format-detection" content="telephone=no, email=no">
+        <title>直播分享页面</title>
+        <link rel="stylesheet" type="text/css" href="../public/css/common.css">
+    </head>
+    <body>
+        <div class="lookme_warp">
+            <div class="lm_live_top">
+                <div class="lm_live_bgimg">
+                   <img src="../public/images/8.png">
+                </div>
+                <div class="lm_live_talk">
+                   <!-- <img src="{{asset('assets/images/9.png') }}"> -->
+                   <p>我是"<span class="lm_live_talk_span"></span>"，我在LOOKE直播，等你来哦！</p>
+                </div>
+                
+            </div>
+            <div class="lm_list">
+                <div class="lm_list_top">
+                    <ul class="lm_list_top_title">
+                        <li class="line">&nbsp</li>
+                        <li>
+                            <p>更多热门视频</p>
+                            <p>HOT VIDEOS</p>
+                        </li>
+                        <li class="line">&nbsp&nbsp</li>
+                        <div class="clear"></div>
+                    </ul>
+                    <ul class="lm_list_contain">
+                        <!-- <li class="lm_list_li">
+                            <a href="">
+                                <img src="../public/images/3.png">
+                            </a>
+                        </li>
+                       
+                     -->
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </div>
+        
+  <div class="downlaad a-fadeinB"> <img src="../public/images/5.png" >
+                <p>下载“LOOKME”APP,参与更多互动！</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="../public/js/zepto.js"></script>
+        <script type="text/javascript" src="../public/js/app.js"></script>
+        <script type="text/javascript">
+        window.onload=function(){
+        var url_path="http://123.57.0.118";//location.search
+        var t_url="http://lookme.xingxiu.tv"
+        // var a='http://testshare.xingxiu.tv/lookme/v/live/index.html?id=553&image=http://lookme-pic.b0.upaiyun.com/2016/0304/15/1457077615.jpg';
+        console.log(location.search+'location.search');
+        var did = location.search.replace(/\?id=(\d+).*/,'$1');
+       // console.log(did+'===did');
+        var img = location.search.slice(location.search.indexOf("&image=") + 7).split("&")[0];
+        $('.lm_live_bgimg img').attr('src',img);
+        // var did="488"
+        var vUrl= t_url+'/liveShareApi/'+did+'&returntype=jsonp&callback=?';
+           getLiveShare(vUrl);
+	 $(".downlaad").click(function(){
+			var ua = navigator.userAgent.toLowerCase();	
+			  if (/iphone|ipad|ipod/.test(ua)) {
+				window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.showstar.lookme";	
+			  } else if (/android/.test(ua)) {
+				window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.showstar.lookme";	
+			  }				
+		})
+}
+
+</script>
+</body>
+</html>

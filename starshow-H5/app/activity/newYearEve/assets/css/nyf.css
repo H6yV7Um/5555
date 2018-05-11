@@ -1,0 +1,518 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,
+textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0; vertical-align: middle;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;
+	font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+input[type="button"], input[type="submit"], input[type="reset"],input[type="text"],input[type="search"],select{
+-webkit-appearance: none;
+outline: 0;
+-webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+*{
+	-webkit-appearance: none;
+outline: 0;
+-webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+textarea {-webkit-appearance:none;outline:0;} 
+html,body{ margin:0px; height:100%;font-family: "Microsoft Yahei"}
+.none{display:none}
+.vm{vertical-align: middle;}
+html {font-size: 62.5%;}
+img{vertical-align: middle}
+.mt10{margin-top:10px;}
+.lh200{line-height:200%}
+.ml5{margin-left: 5px;}
+.col_red{color: #f00}
+.tl{text-align: left;}
+.mt3{
+	margin-top: 3rem;
+}
+.fl{float: left; display: inline;}
+.fr{float: right;display: inline;}
+.fb{font-weight: bold;}
+.col_red{color: #ff1d3e}
+
+
+
+
+
+.nyf_main{
+	background: url(../images/bg.png) repeat;
+	background-size: contain;
+}
+header{
+	width:100%;
+	position: relative;
+}
+.icon_rule {
+    position: absolute;
+    bottom:3rem;
+    right:8.5rem;
+     width:17%
+}
+.region_list{
+	width: 82%;
+	margin:0 auto;
+	overflow: hidden;
+}
+.region_list li{
+	float: left;
+	display: inline;
+	width:40%;
+	margin:10px 5%;
+}
+.region_list li img{
+	width: 100%
+}
+
+/*region dialog*/
+.messRegion{
+  position: absolute;
+  width:85%;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.messRegion .btn_closeRegion{
+	width:30px;
+	height: 30px;
+	position: absolute;
+	bottom:0px;
+	left:0;
+	right:0;
+	margin:auto;
+	z-index: 1
+}
+.region_main{
+	position: relative;
+	width:100%;
+	min-height: 350px;
+  overflow: hidden;
+}
+.region_main #region_bg{
+       width:100%;
+}
+.region_main .abs_cons{
+	position: absolute;
+	top:120px;
+	overflow: hidden;
+	    width: 100%;
+}
+.region_main  .abs_cons .info-tip{
+	width:96%;
+	line-height: 1.8rem;
+	background: #b10e18;
+	color: #ffffff;
+	font-size: 1rem;
+	padding:5px 2%;
+	text-align: center;
+	height:3.6rem;
+}
+.small_font{
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+.pName{
+	font-weight: bold;
+}
+
+.dishList{
+	width:94%;
+	overflow: hidden;
+    margin:10px auto;
+    /* height: 18rem;
+    overflow: scroll; */
+}
+.dishList li{
+	    float: left;
+	    display: inline;
+	    width: 30%;
+	    margin: 5px 1.65%;
+	   text-align: center;
+}
+.dishList li .icon_pic{
+    border: 3px solid #efb161;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    width: 65px;
+    height:65px;
+   position: relative;
+   margin: 0 auto;
+}
+.dishList li img{ width:100%;}
+.dishList li .slected{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    left: 0;
+}
+.dish_name{
+	font-size: 1.2rem;
+	color: #000000
+}
+.like_num{
+	color: #fff;
+	font-size: 1rem;
+}
+.activity_desc{margin-top: 10px;}
+.nodata{width:100%; text-align:center;font-size:1.4rem; color:#ffffff;margin-top:30px;}
+/*tcc*/
+#BOX_overlay{position: absolute;z-index: 100;top: 0px;left: 0px;background-color:#050405;filter: alpha(opacity=70);-moz-opacity: 0.7;opacity: 0.7;}
+.dialog_tip{
+    background: #fff;
+    text-align: left;
+    border: 1px solid #dedede;
+    font-size: 12px;
+    width:80%;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+.js-close{
+    background: #fff;
+    float: right;
+    height: 20px;
+    padding: 5px 0 0 10px;
+    color: #000;
+    margin-right: 10px;
+    font-size:1.4rem;
+}
+
+.jion_main{
+	width:76%;
+	margin:30px auto 20px auto;
+}
+.jion_main p{
+	text-align: center;
+	color: #bbbbbb;
+	font-size: 1.2rem;
+}
+.jion_main table{
+ margin-top:10px;
+}
+.jion_main td label{
+	font-size: 1.4rem;
+	color: #000000;
+}
+.jion_main td {
+	line-height:3rem;
+	vertical-align: top;
+	position: relative;
+}
+.tip_error{
+	position: absolute;
+	bottom: -1.5rem;
+	font-size: 1rem;
+	color: #ff1d3e;
+}
+.txt_con{
+    width:100%;
+	border:none;
+	border-bottom: 1px solid #000;
+	line-height: 1.3rem;
+	border-radius: 0;
+}
+.btn_joinSure{
+   width: 50%;
+   background: #ff1d3e;
+   color: #ffffff;
+   text-align: center;
+   line-height: 3rem;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   text-decoration: none;
+   margin-top: 20px;
+   display:inline-block;
+   border:none
+}
+.js-close-join{
+	 background: #fff;
+    float: right;
+    height: 20px;
+    padding: 5px 0 0 10px;
+    color: #000;
+    margin-right: 10px;
+    font-size:1.4rem;
+}
+/*rule*/
+.rules_main{width:94%; margin:0 auto; padding-bottom:50px; font-family:"Microsoft YaHei"}
+.rules_main h1{font-size:2rem; text-align:center; line-height:5rem;font-weight: bold;}
+.rules_main h2{font-size:1.6rem; line-height:3rem;font-weight: bold; color:#ff1d3e;margin:10px 0}
+.rules_main p{font-size:1.4rem; line-height:2.4rem;margin-top: 10px;}
+.rules_main h3{font-weight:100;font-weight: bold;}
+.rules_main h3 span{color:#ff1d3e;}
+.icon_prizes{
+    width:3.5rem;
+    position: fixed;
+    bottom: 1rem;
+    right:1.5rem;
+    z-index:5
+}
+.icon_prizes img{width:100%}
+.icon_prizes .prize_num{
+	width:1.8rem;
+	height:1.8rem;
+	line-height: 1.8rem;
+	border-radius: 50%;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	-o-border-radius:50%;
+	position: absolute;
+	top: -2rem;
+	right:-10px;
+	background: #f00;
+	text-align: center;
+	color: #ffffff
+}
+
+/*lottery.html*/
+.lottery_main{
+	width:100%;
+	overflow: hidden;
+	position: relative;
+}
+.lottery_main img{
+	width: 100%
+}
+.checkIn_award{
+	width:100%;
+	position: relative;
+}
+.checkIn_award .abs_cons{
+	position: absolute;
+	top:0;
+	width:100%;
+}
+.btn_get{
+   width: 50%;
+   background: #ff1d3e;
+   color: #ffffff;
+   text-align: center;
+   line-height: 3rem;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   text-decoration: none;
+   margin-top: 20px;
+   display:inline-block
+}
+.js_signPrizes {
+	width:70%;
+	    margin: 0 auto;
+}
+.js_signPrizes li{
+	float: left;
+	display: inline;
+	width:44%;
+	margin: 5px 3%
+}
+
+.join_con{
+	width:100%;
+	overflow: hidden;
+	position: relative;
+}
+.join_con .abs_con{
+	position: absolute;
+	top:0;
+	width: 100%;
+	text-align:center
+}
+.btn_area {
+	width:120px;
+	margin:5px auto;
+}
+.prize_tip{
+     color:#ffffff;
+     font-size:1.2rem;
+}
+.prize_tip span{
+     color:#f5d744
+}
+.dialog_join{
+	position: absolute;
+    z-index: 999; 
+    left: 0;
+    right: 0;
+    margin:auto; 
+    bottom: -100px;
+     background: #fff;
+    text-align: left;
+    border: 1px solid #dedede;
+    font-size: 12px;
+    width:80%;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+.dialog_tip{
+    background: #fff;
+    text-align: left;
+    border: 1px solid #dedede;
+    font-size: 12px;
+    width:80%;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+.js-close{
+    background: #fff;
+    float: right;
+    height: 20px;
+    padding: 5px 0 0 10px;
+    color: #000;
+    margin-right: 10px;
+    font-size:1.4rem;
+}
+.messdivCons{
+    width: 90%;
+    overflow: hidden;
+    font-size: 1.3rem;
+    color: #000;
+    text-align: center;
+    padding: 10px 0 30px;
+    margin:0 auto;
+}
+#BOX_shade{
+	top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    background: #000;
+    opacity: 0.5;
+    position: absolute;
+}
+.overMain{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+      background: #af0102;
+}
+.overMain_share{
+  width: 100%;
+  height: 92.3%;
+  overflow: hidden;
+  background: #af0102;
+  position:relative;
+}
+.overMain .bg{
+ width:100%;
+}
+.dish_list{
+    width: 80%;
+    position: absolute;
+    padding: 0 10%;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    background: rgba(142,27,20,0.8);
+    z-index: 3
+}
+.dish_list img{
+  width:100%;
+
+}
+.dish_list .icon_list_tit{
+     width: 40%;
+    display: block;
+    margin: 17.5% auto 5% auto;
+
+}
+.dish_list ul{
+    height: 60%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -o-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+}
+.dish_list li{
+  margin-bottom:10px;
+}
+.icon_rule_end{
+    position: absolute;
+    top: 23rem;
+    width: 18%;
+    left: 20px;
+    z-index: 2
+}
+.icon_list{
+    position: absolute;
+    top: 23rem;
+    width: 18%;
+    right: 20px;
+    z-index:2
+}
+.dish_list .icon_close_end{
+    width: 20%;
+    text-align: center;
+    margin: 10% auto;
+    display: block;
+    z-index:2
+}
+.icon_desk{
+  width:90%;
+  position: absolute;
+  top:23rem;
+  display: block;
+    margin: auto;
+    left: 0;
+    right: 0
+}
+.overMain_share .icon_desk{
+  width:82%;
+  top:22rem;
+}
+/*over*/
+
+/*media
+	 *<320  5s
+	 *>414  6plus
+*/
+@media screen and (max-width: 320px) {
+   .dishList li .icon_pic{width: 55px; height:55px;}
+   .region_main .abs_cons{top:90px;}
+   .icon_rule_end,.icon_desk,.icon_list{ top:20rem;}
+   .overMain_share .icon_desk{top:19rem}
+   .dishList {margin: 8px auto;}
+   .icon_rule {
+	    position: absolute;
+	    bottom:2.5rem;
+	    right:7.2rem;
+	}
+   
+}
+@media screen and (min-width: 410px) {
+   .region_main .abs_cons{top:150px;}
+   .dishList {margin: 10px auto;}
+   .dishList li .icon_pic{width: 70px; height:70px;}
+   .icon_rule_end,.icon_desk,.icon_list{ top:26rem;}
+   .overMain_share .icon_desk{top:25rem}
+   .icon_rule {
+	    position: absolute;
+	    bottom:3.5rem;
+	    right:9.5rem;
+	}
+   	
+}

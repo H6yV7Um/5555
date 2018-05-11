@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀广告投放管理平台</title>
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/datepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../assets/common/js/lib/pagination/pagination.css">
+	<link rel="stylesheet" type="text/css" href="../assets/api/css/backstage.css">
+</head>
+<body>
+	<div class="dspHeader"></div>
+	<div class="dspMenu"></div>
+	<div class="dspContainer">
+     <div class="indexList dsp_container">
+		<div class="dsp_loginInfo mt20">
+			<span class="fl">上一次登录时间：<span class="time UpdatedAt_time"></span></span>
+			<span class="col_blue fr" id="toRecharge"><a href="recharge.html?mt=3">充值</a></span>
+		</div>
+		<div class="cb"></div>
+		<div class="money_info">
+			<ul>
+				<li>
+					<img src="../assets/images/icon-expend.png">
+					<div class="money_desc">
+						<p>今日消耗</p>
+						<p class="col_orange">
+							￥<span id="js_UseAmount"></span>
+						</p>
+					</div>
+				</li>
+				<li>
+					<img src="../assets/images/icon-balance.png">
+					<div class="money_desc">
+						<p>账户余额</p>
+						<p class="col_green">
+							￥<span id="js_Account"></span>
+						</p>
+					</div>
+				</li>
+				<li>
+					<img src="../assets/images/icon-canuse.png">
+					<div class="money_desc">
+						<p>可用余额</p>
+						<p class="col_blue">
+							￥<span id="js_canUse"></span>
+						</p>
+					</div>
+				</li>
+				<li>
+					<img src="../assets/images/icon-freeze.png">
+					<div class="money_desc">
+						<p>冻结资金</p>
+						<p class="col_red">
+							￥<span id="js_FreezAmount"></span>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="dsp_tools mt20">
+			<div class="timer_tabs fl" style="display:inline">
+				<span class="cur" urlmark="accountjournal">广告消耗</span><span urlmark="account">充值记录</span>
+			</div>
+			<div class="pull-right btn_create_search" style="display:inline">搜索</div>
+			<div id="reportrange" class="pull-right dateRange date">  
+                        <span id="searchDateRange"></span>  
+                        <b class="caret"></b>  
+                        <i class="glyphicon glyphicon-calendar fa fa-calendar abs_calendar"></i> 
+             </div>
+             
+			<!-- <div class="input-daterange input-group date" id="datepicker">  
+			  	            <input type="text" class="" name="start" id="qBeginTime" />  
+			  	            <span class="input-group-btn">至</span>  
+			  	            <input type="text" class="ml10" name="end" id="qEndTime" />  
+			  	            <i class="glyphicon glyphicon-calendar abs_calendar"></i>
+			</div> -->  
+			
+			
+		</div>
+		<div class="tables_cons">
+			<table class="dsp_table"  id="money_tableCon"></table>
+			<div class="dsp_pagination">
+				<div class="M-box"></div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript" src="../assets/common/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/datepicker/moment.js"></script>
+	<script type="text/javascript" src="../assets/common/js/lib/datepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="../assets/common/js/lib/pagination/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../assets/common/js/common.js"></script>
+	<script type="text/javascript" src="../assets/api/js/money.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<meta name="referrer" content="never">
+	<title>News details</title>
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	
+</head>
+<body  class="body_color"> 
+    <section class="pageMain" id="newsMain" style="display:none">
+    <a id="btn_download2"><img src="../assets/images/icon/download.png" width="100%" /></a>
+	   <!--新闻内容-->
+	<section class="newCons"></section>
+	<!--自己的推荐-->
+	<section class="rcmdCons" style="display:none">
+		<div class="channelTitle">
+			<span><em class="fb">HEADLINE</em> recommend</span>
+		</div>
+		<ul class="rcmdList mt10">
+			
+			<!-- <li>
+				<div class="imgArea"><a href=""><img src="assets/images/img03.jpg" /></a></div>
+				<div class="descArea">
+					<a href="">
+					<h1>新星盛典—鹿晗专访</h1>
+					<p>重要度绝不亚于一件珠宝不亚于重要度绝不亚于</p>
+					<article class="activityList">
+						<section>
+							<img src="assets/images/icon-eye.jpg" />
+							<span>10000</span>
+						</section>
+					    <section>
+					    	<img src="assets/images/icon-heart.jpg"  />
+							<span>10000</span>
+					    </section>
+					    <section>
+					    	<img src="assets/images/icon-msg.jpg" />
+							<span>10000</span>
+					    </section>
+					</article>
+					</a>
+				</div>
+			</li> -->
+		</ul>
+		<div class="cb"></div>
+		<!--plista推荐-->
+		<!-- <div data-widget="plista_widget_webApp"></div> -->
+	</section>
+	
+	<!--商品-->
+	<section class="prod_rcmdCons"  style="display:none">
+		<ul></ul>
+	</section>
+	<!--评论-->
+	<section class="cmt_short" style="background: rgb(255, 255, 255);">
+		<div class="channelTitle">
+			<span><em class="fb">All comments</em></span>
+			<!-- <div class="line"></div> -->
+	    </div>
+	    <a name="comment"></a>
+	    <ul class="cmt_list"></ul>
+	    <div class="btn_more"><p class="js_btn_down">Go to the app to see more reviews</p></div>
+	</section>
+	
+    <div clas="" style="height:4.7rem"></div>
+
+	<input type="hidden" id="share_info" />
+    </section> 
+    <!-- 缓冲 -->
+    <section class="loadding">
+    	<div class="spinner">
+		  <img src="../assets/images/loadding.gif" height="80" width="80" />
+		</div>
+    </section>
+    <!-- 尾部 -->
+    <section class="news_nav" id="news_nav" style="display:none">
+			<div class="news_msg">
+				<div class="btn_txtMsg">Post a comment...</div>
+			     <!-- <input type="text" class="txtMsg" placeholder="Post a comment...">
+			     				<input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg"> -->
+			</div>
+			<ul class="icons">
+				<li id="btn-toMsg">
+					   	<img src="../assets/images/icon/icon-eye-like.png" />
+						<div class="num_area" id="watch_num">0</div>
+				</li>
+				<li id="zanArea">
+					<img src="../assets/images/icon/btn_zan_dis_cross.png" class="zan" />
+					<div class="num_area" id="like_num">0</div>
+				</li>
+				<li><a href="#comment">
+					<img src="../assets/images/icon/btn_msg_cross.png" class="msg" />
+					<div class="num_area msg_num">0</div>
+					</a>
+				</li>
+		
+			</ul>
+			<div class="fr"></div>
+	</section>
+
+
+     <section class="toMsg md-modal">
+		<div class="msgHeader">
+			<input class="btn_cancel" type="button" value="cancel"/>
+			<input class="btn_msgSend" type="button" value="publish" id="btn_sendMsg"/>
+		</div>
+		<!-- <input class="txtMsg"  placeholder="Post a comment..." /> -->
+		<textarea  class="txtMsg" placeholder="Post a comment..."  autofocus></textarea>
+	</section>
+    <div class="md-overlay"></div>
+	<div id="msg_overlay" style="display:none"></div>
+	<input type="hidden" id="hide_source" source="news"  stype="" iShare="true"/>
+	<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/echo.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+	<script type="text/javascript" src="../comments/comments.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="../../applinks/openApp.js"></script>
+
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<script type="text/javascript">
+		/*$("#newsMain").on("click", ".btn_more", function() {
+			var paramsArr = new Array();
+			paramsArr['id'] = commonCla.analyzParams("new_id");
+			paramsArr['user_id'] = $("#share_info").attr("user_id");
+			paramsArr['url'] = "http://testshare.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=" + paramsArr['id'];
+	     	openApp('news', paramsArr);
+		});
+		// 头条商品
+		$("#newsMain").on("click", "section .prodCon", function() {
+			var paramsArr = new Array();
+				paramsArr['id'] =commonCla.analyzParams("new_id");
+				paramsArr['user_id'] = $("#share_info").attr("user_id");
+				paramsArr['url'] = "https://lookmetv.com/starshow5.0/news2.0/detail.html?new_id=" + paramsArr['id'];
+			openApp('news', paramsArr);
+		});
+		$("#btn_download2").bind("click", function() {
+		var paramsArr = new Array();
+		paramsArr['id'] = commonCla.analyzParams("new_id");
+		paramsArr['user_id'] = $("#share_info").attr("user_id");
+		paramsArr['url'] = "http://testshare.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=" + paramsArr['id'];
+	    openApp('news', paramsArr);
+	  });*/
+	</script>
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

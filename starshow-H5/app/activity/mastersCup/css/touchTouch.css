@@ -1,0 +1,383 @@
+/* The gallery overlay */
+
+#galleryOverlay {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 100000;
+	background-color: #222;
+	background-color: rgba(0,0,0,0.8);
+	overflow: hidden;
+	display: none;
+	-moz-transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+}
+/* This class will trigger the animation */
+
+#galleryOverlay.visible {
+	opacity: 1;
+}
+#gallerySlider {
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	white-space: nowrap;
+	position: absolute;
+	-moz-transition: left 0.4s ease;
+	-webkit-transition: left 0.4s ease;
+	transition: left 0.4s ease;
+}
+#gallerySlider:before {
+	content: "";
+	width: 35px;
+	height: 35px;
+	background-image: url('../images/live_close.png');
+	display: inline-block;
+	background-size: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 10000;
+}
+#gallerySlider1:before {
+	content: "";
+	width: 35px;
+	height: 35px;
+	background-image: url('../images/live_close.png');
+	display: inline-block;
+	background-size: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 10000;
+}
+#gallerySlider .placeholder {
+	background: url("preloader.gif") no-repeat center center;
+	height: 100%;
+	line-height: 1px;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+}
+/* The before element moves the
+ * image halfway from the top */
+
+#gallerySlider .placeholder:before {
+	content: "";
+	display: inline-block;
+	height: 50%;
+	width: 1px;
+	margin-right: -1px;
+}
+#gallerySlider .placeholder img {
+	display: inline-block;
+	max-height: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}
+#gallerySlider.rightSpring {
+	-moz-animation: rightSpring 0.3s;
+	-webkit-animation: rightSpring 0.3s;
+}
+#gallerySlider.leftSpring {
+	-moz-animation: leftSpring 0.3s;
+	-webkit-animation: leftSpring 0.3s;
+}
+
+/* Firefox Keyframe Animations */
+
+@-moz-keyframes rightSpring {
+ 0% {
+margin-left:0;
+}
+ 50% {
+margin-left:-30px;
+}
+ 100% {
+margin-left:0;
+}
+}
+ @-moz-keyframes leftSpring {
+ 0% {
+margin-left:0;
+}
+ 50% {
+margin-left:30px;
+}
+ 100% {
+margin-left:0;
+}
+}
+
+/* Safari and Chrome Keyframe Animations */
+
+@-webkit-keyframes rightSpring {
+ 0% {
+margin-left:0;
+}
+ 50% {
+margin-left:-30px;
+}
+ 100% {
+margin-left:0;
+}
+}
+ @-webkit-keyframes leftSpring {
+ 0% {
+margin-left:0;
+}
+ 50% {
+margin-left:30px;
+}
+ 100% {
+margin-left:0;
+}
+}
+/* Arrows */
+
+#prevArrow, #nextArrow {
+	border: none;
+	text-decoration: none;
+	background: url('arrows.png') no-repeat;
+	opacity: 0.5;
+	cursor: pointer;
+	position: absolute;
+	width: 43px;
+	height: 58px;
+	top: 50%;
+	margin-top: -29px;
+	-moz-transition: opacity 0.2s ease;
+	-webkit-transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease;
+}
+#prevArrow:hover, #nextArrow:hover {
+	opacity: 1;
+}
+#prevArrow {
+	background-position: left top;
+	left: 40px;
+}
+#nextArrow {
+	background-position: right top;
+	right: 40px;
+}
+/* The gallery overlay */
+
+#galleryOverlay1 {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 100000;
+	background-color: #222;
+	background-color: rgba(0,0,0,0.8);
+	overflow: hidden;
+	display: none;
+	-moz-transition: opacity 1s ease;
+	-webkit-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+}
+/* This class will trigger the animation */
+
+#galleryOverlay1.visible {
+	opacity: 1;
+}
+#gallerySlider1 {
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: 100%;
+	white-space: nowrap;
+	position: absolute;
+	-moz-transition: left 0.4s ease;
+	-webkit-transition: left 0.4s ease;
+	transition: left 0.4s ease;
+}
+#gallerySlider1 .placeholder {
+	background: url("preloader.gif") no-repeat center center;
+	height: 100%;
+	line-height: 1px;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+}
+/* The before element moves the
+ * image halfway from the top */
+
+#gallerySlider1 .placeholder:before {
+	content: "";
+	display: inline-block;
+	height: 50%;
+	width: 1px;
+	margin-right: -1px;
+}
+#gallerySlider1 .placeholder img {
+	display: inline-block;
+	max-height: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}
+#gallerySlider1.rightSpring {
+	-moz-animation: rightSpring 0.3s;
+	-webkit-animation: rightSpring 0.3s;
+}
+#gallerySlider1.leftSpring {
+	-moz-animation: leftSpring 0.3s;
+	-webkit-animation: leftSpring 0.3s;
+}
+
+/* Firefox Keyframe Animations */
+
+@-moz-keyframes rightSpring {
+ 0% {
+margin-left:0;
+}
+ 50% {
+margin-left:-30px;
+}
+ 100% {
+margin-left:0;
+}
+}
+ @-moz-keyframes leftSpring {
+ 0% {
+margin-left:0;
+}
+ 50% {
+margin-left:30px;
+}
+ 100% {
+margin-left:0;
+}
+}
+
+/* Safari and Chrome Keyframe Animations */
+
+@-webkit-keyframes rightSpring {
+ 0% {
+margin-left:0;
+}
+ 50% {
+margin-left:-30px;
+}
+ 100% {
+margin-left:0;
+}
+}
+ @-webkit-keyframes leftSpring {
+ 0% {
+margin-left:0;
+}
+ 50% {
+margin-left:30px;
+}
+ 100% {
+margin-left:0;
+}
+}
+/* Arrows */
+
+#prevArrow1, #nextArrow1 {
+	border: none;
+	text-decoration: none;
+	background: url('arrows.png') no-repeat;
+	opacity: 0.5;
+	cursor: pointer;
+	position: absolute;
+	width: 43px;
+	height: 58px;
+	top: 50%;
+	margin-top: -29px;
+	-moz-transition: opacity 0.2s ease;
+	-webkit-transition: opacity 0.2s ease;
+	transition: opacity 0.2s ease;
+}
+#prevArrow1:hover, #nextArrow1:hover {
+	opacity: 1;
+}
+#prevArrow1 {
+	background-position: left top;
+	left: 40px;
+}
+#nextArrow1 {
+	background-position: right top;
+	right: 40px;
+}
+
+.slider div p {
+	color: #1c1c1c;
+	position: absolute;
+	bottom: -55px;
+	font-family: Raleway;
+	font-size: 16px;
+}
+.slider {
+	-webkit-animation: animation ease 1s;
+	animation-delay: .8s;
+	animation-fill-mode: backwards;
+	margin: 0 auto;
+	height: 340px;
+	width: 240px;
+	top: 30px;
+
+	perspective: 1000px;
+	transition: ease-in-out .2s;/*-webkit-transform:rotateX(45deg);
+        -webkit-transform-style:preserve-3d;
+        position:absolute;*/
+}
+/*.slider:active{ -webkit-transform:rotateZ(10deg);}*/
+.slide img {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	-webkit-user-drag: none;
+	user-drag: none;
+	-moz-user-drag: none;
+	
+}
+.slide a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+}
+.pAlbum {
+	-webkit-user-select: none;
+	user-select: none;
+	-moz-user-select: none;
+	position: absolute;
+	height: 280px;
+	width: 70%;
+	box-shadow: 0 10px 30px 0 rgba(0,0,0,0.3);
+	background: #fcfcfc;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	text-align: center;
+	/*overflow:hidden;*/
+       /* border:12px white solid;*/
+	box-sizing: border-box;
+	/*border-bottom:55px white solid;*/
+	border-radius: 5px;
+	left:13%;
+}
+
+.transition {
+	-webkit-transition: cubic-bezier(0, 1.95, .49, .73) .4s;
+	-moz-transition: cubic-bezier(0, 1.95, .49, .73) .4s;
+	transition: cubic-bezier(0, 1.95, .49, .73) .4s;
+}
+.htmleaf-content1.htmleaf-content {
+	margin-top: 0;
+}
+#thumbs {
+	width: 100%;
+}

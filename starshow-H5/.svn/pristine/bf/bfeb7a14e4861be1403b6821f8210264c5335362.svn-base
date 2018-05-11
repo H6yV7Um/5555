@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>藏拍</title>
+	<link rel="stylesheet" type="text/css" href="assets/js/lib/swiper/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cangp.css">
+</head>
+<body>
+
+	<div class="cangp_header"  id="js_header"></div>
+	<div class="newsDetail">
+		<div class="cangp_con2">
+		<div class="con2_left">
+			<div class="news_banner_con">
+				<img src="assets/images/defalut_cover.png"  height="629" width="837" class="new_banner">
+				<div class="news_tit_con"><div class="news_tit"></div></div>
+			</div>
+			
+			<div class="user_main">
+				<div class="user_header fl">
+		    		<img src="assets/images/icon-head.png" class="icon_header"/>
+		    		<img src="assets/images/icon-roles1.png"  class="icon_role"/>
+		    		<span class="name"></span>
+		    	</div>
+		    	<span class="timer fl"></span>
+			</div>
+			<div class="content_main">
+				
+			</div>
+		</div>
+		<div class="con2_right">
+			   <div class="cangp_tit_left">
+					<span class="title_left"><span class="fb">更多资讯 </span>/ NEWS</span>
+					<!-- <span class="title_right">更多&gt;</span> -->
+				</div>
+				<div class="newsCon">
+					<div class="tw_one" id="js_news_more_top">
+						<!-- <div class="imgCon"><img src="assets/images/pic2.png" /></div>
+						<div class="tw_one_desc">雾里看天珠：天珠的神奇</div> -->
+					</div>
+					<ul class="news_list" id="js_newsList">
+						<!-- <li>雾里看天珠：天珠的神奇</li> -->
+						
+					</ul>
+				</div>
+				<div class="cangp_tit_left">
+					<span class="title_left"><span class="fb">热门藏品 </span>/ HOT</span>
+					<!-- <span class="title_right">更多&gt;</span> -->
+				</div>
+				<ul class="cangp_list" id="js_hotCollList">
+					<!-- <li>
+						<div class="tw_one">
+							<div class="imgCon"><img src="assets/images/pic2.png" /></div>
+							<div class="tw_one_desc">雾里看天珠：天珠的神奇</div>
+						</div>
+						<div class="prices">
+							<span class="i-price">￥4445</span>
+							<input type="button" class="btn_tojoin" value="参与竞拍">
+						</div>
+					</li> -->
+					
+				</ul>
+			</div>
+	</div>
+	</div>
+    <div class="cangp_footer" id="js_footer"></div>
+    <input type="hidden" id="hide_cangp" page="newsDetail">
+	<script type="text/javascript" src="assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/swiper/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/api/common.js"></script>
+	<script type="text/javascript" src="assets/api/cangp.js"></script>
+	</body>
+</html>

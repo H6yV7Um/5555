@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>微视频大赛</title>
+    <link rel="stylesheet" href="css/common/sweet-alert.css" />    
+    <link rel="stylesheet" href="css/common/base.css" />
+    <link rel="stylesheet" href="css/common/border.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/rem.js"></script>
+</head>
+<body>
+    <a href="http://t.cn/R7COgYb" id="btn_down"><img src="images/down-bg.png"  width="100%" /></a> 
+    <div class="banner">
+        <img src="images/banner.jpg">
+        <a class="rule" href="rules.html">规则</a>
+    </div>
+    <form  class="search"  onsubmit="return false;">
+        <input type="search" class="search-area" placeholder="请搜索您感兴趣的内容">
+    </form>
+    <div class="video">
+        <div class="video-title">
+            <a href="#" class="all"> 
+                全部视频
+                <span>(<em class="js-total"></em>个)</span>
+            </a>
+            <div class="popular">
+                人气
+                <span class="srot-arrows"><img src="images/sort-arrows.png" alt=""></span>
+            </div>
+        </div>
+        <ul class="video-list js-video-list">
+            <!-- <li class="video-item">
+                <div class="video-img-outer">
+                    <img src="images/video-img.png">
+                    <a class="play-btn" href="#"></a>
+                </div>
+                <div class="video-info border">
+                    <div class="left">
+                        <p class="video-name">热血励志短片《抉择》</p>
+                        <p class="video-des">张小四 <span class="author-school">北京电影学院</span></p>
+                    </div>
+                    <div class="right">
+                        <div class="support"><img src="images/heart.png"></div>
+                        <div class="support-num">1234</div>
+                    </div>
+                </div>
+            </li> -->
+        </ul>
+        <div class="load"></div>
+    </div>
+    <div id="alert" style="display:none">
+        <div title="关闭窗口" class="js-close">
+            <span>×</span>
+        </div>
+        <div class="messdivCons"></div>
+    </div>
+    <div id="mask"></div>
+    <input type="hidden" name="share-page" id="share" value="share"/>    
+
+    <script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+    <script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/common/jweixin-1.0.0.js"></script>
+    <script src="js/common/common.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>

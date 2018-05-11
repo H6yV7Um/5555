@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>欢迎来到拉阔校草！</title>
+    <link rel="stylesheet" href="../css/apply.css" />
+    <script src="../js/rem.js"></script>
+	<style type="text/css">
+    	.disabled{ background:#666 !important;}
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="banner"><img src="../images/banner_new.jpg" /></div>
+    <div class="banner_di">
+        <div class="one">
+            <img src="../images/baoming_03.png" />
+            <div class="lc">
+                <span >基本资料</span><span>上传照片</span><span >等待审核</span>
+            </div>
+        </div>
+
+    <div class="form">
+            <div id="divbox">
+                <div class="di"><span>姓名</span><input type="text" name="username" id="username"  /><div class="error_tips"></div></div>
+                <div class="di">证件号码&ensp;&ensp;<input type="text" name="icard" id="icard" /><div class="error_tips"></div></div>
+                <div class="di diqu"><span>所在地区</span>
+                    <select id="locationn">
+                        <option value="" selected> </option>
+						<option>北京</option>
+                        <option>天津</option>
+                        <option>河北</option>
+                        <option>山西</option>
+						<option>内蒙古</option>
+						<option>辽宁</option>
+						<option>吉林</option>
+						<option>黑龙江</option>
+						<option>大连</option>
+						<option>上海</option>
+						<option>江苏</option>
+						<option>浙江</option>
+						<option>安徽</option>
+						<option>福建</option>
+						<option>江西</option>
+						<option>山东</option>
+						<option>宁波</option>
+						<option>厦门</option>
+						<option>青岛</option>
+						<option>河南</option>
+						<option>湖北</option>
+						<option>湖南</option>
+						<option>广东</option>
+						<option>广西</option>
+						<option>海南</option>
+						<option>深圳</option>
+						<option>重庆</option>
+						<option>四川</option>
+						<option>贵州</option>
+						<option>云南</option>
+						<option>西藏</option>
+						<option>陕西</option>
+						<option>甘肃</option>
+						<option>青海</option>
+						<option>宁夏</option>
+						<option>新疆</option>
+                    </select>
+                    <div class="error_tips"></div>
+                </div>
+                <div class="di"><span>所属院校</span><input type="text" name="school" id="school" /><div class="error_tips"></div></div>
+                <div class="di"><span>身高</span><input type="text" name="height" id="heightt" style="width: 10%"/>cm<div class="error_tips"></div></div>
+                <div class="di diqu"><span>星座</span>
+                    <select id="constellation">
+                        <option value="1" selected> </option>
+                        <option value="白羊座">白羊座</option>
+                        <option value="金牛座">金牛座</option>
+                        <option value="双子座">双子座</option>
+                        <option value="巨蟹座">巨蟹座</option>
+                        <option value="狮子座">狮子座</option>
+                        <option value="处女座">处女座</option>
+                        <option value="天秤座">天秤座</option>
+                        <option value="天蝎座">天蝎座</option>
+                        <option value="射手座">射手座</option>
+                        <option value="摩羯座">摩羯座</option>
+                        <option value="水瓶座">水瓶座</option>
+                        <option value="双鱼座">双鱼座</option>
+                    </select>
+                    <div class="error_tips"></div>
+                </div>
+                <div class="di diqu"><span>血型</span>
+                    <select id="blood">
+                        <option value="1" selected> </option>
+                        <option value="A">A型</option>
+                        <option value="B">B型</option>
+                        <option value="O">O型</option>
+                        <option value="AB">AB型</option>
+                    </select>
+                    <div class="error_tips"></div>
+                </div>
+                <div class="di jianjie"><span>个人简介</span><textarea name="intro" cols="30" rows="6" wrap="" id="intro"></textarea><div class="error_tips"></div></div>
+                <div class="di tel"><span>手机号码</span><input type="text" name="mobile" id="mobile" /><div class="error_tips"></div></div>
+                <div class="di picture_code"><span>图形验证码</span><input type="text" name="picture_code" id="picture_code" style="width: 30%" /><a id="tuyz" href="javascript:;"></a>
+                <div class="error_tips"></div>
+                </div>
+                <div class="di tishi"><span>验证码</span>
+                	<input type="text" name="sms_token" id="verify_code" /><a id="yanz">获取验证码</a>
+                    <div class="error_tips"></div>
+                </div>
+                <div class="btn"><input  type="button" value="下一步" name="button" id="button" /></div>
+            </div>
+        <!--</form>-->
+    </div>
+    </div>
+</div>
+
+<script src="../js/zepto.min.js"></script>
+<script src="../js/common/common.js"></script>
+<!--<script src="../js/common/bridge.js"></script>-->
+<script>
+ //信息是否完善，提交下一步
+  var jwt_token = commonCla.analyzParams("jwt_token") == undefined ? "": commonCla.analyzParams("jwt_token");
+
+  var validate=function(){
+     var username=$("#username").val();
+	  var mobile=$("#mobile").val();
+	  var icard=$("#icard").val();
+	  var locationn=$("#locationn").val();
+	  var school=$("#school").val();
+	  var heightt=$("#heightt").val();
+	  var constellation=$("#constellation").val();
+	  var blood=$("#blood").val();
+	  var intro=$("#intro").val();
+	  var picture_code=$("#picture_code").val();
+      //sms_token
+	  var sms_token=$("#mobile").val();
+	  var username=$("#username").val();
+	  //短信验证码
+	  var verify_code=$("#verify_code").val();
+    $(".error_tips").html("");
+
+    var reg_name = /^[\u4e00-\u9fff\w]{1,10}$/;
+    if (username == "") {
+        $("#username").next("error_tips").html("昵称不能为空");
+        return false;
+    }else if (!reg_name.test(username)) {
+        $("#username").next("error_tips").html('昵称格式不符合要求');
+         return false;
+    }
+    //18位身份证 并且是男性别
+    var str = $("#icard").val().substr(6,4);
+    var reg_icard = /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{2}[13579][0-9Xx]$/;
+    if(reg_icard.test(icard) == false || str<1957 || str>2001) {
+        $("#icard").next("error_tips").html("身份证号不正确！");
+        return false;
+    }
+    //obile
+    var reg_mobile = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+    if (!reg_mobile.test(mobile)) {
+        $("#mobile").next("error_tips").html("手机号格式不符合要求");
+        return false;
+    }
+    //loaction
+    if ($("#locationn").text() == "") {
+         $("#locationn").next("error_tips").html("地区不能为空") ;
+         return false;
+    }
+    //school
+    var reg_school = /^[\u4e00-\u9fff\w]{1,20}$/;
+    if (school== "") {
+        $("#school").next("error_tips").html('学校不能为空');
+        return false;
+    }
+    else if (!reg_school.test($("#school").val())) {
+        $("#school").next("error_tips").html('学校格式不符合要求');
+        return false;
+    }
+    //height
+    var reg_height=/^[0-9]{2,3}$/g
+    if (heightt == "") {
+        $("#heightt").next("error_tips").html("身高不能为空") ;
+        return false;
+    }
+    else if(!reg_height.test(heightt)){
+         $("#heightt").next("error_tips").html("身高有误");
+         return false;
+    }
+    //constellation
+     if (constellation == "1") {
+         $("#constellation").next("error_tips").html("星座不能为空") ;
+         return false;
+     }
+     //blood
+      if (blood == "1") {
+        $("#blood").next("error_tips").html("血型不能为空") ;
+        return false;
+      }
+     //简介
+      var reg_intro =/[`~!@#\$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]]/im;
+        if ($("#intro").val() == "") {
+            $("#intro").next("error_tips").html('不能为空');
+            return false;
+        }else if($("#intro").val().length>100){
+            $("#intro").next("error_tips").html('字数不能超过100个');
+            return false;
+        } else if (reg_intro.test($("#intro").val())) {
+            $("#intro").next("error_tips").html('简介不能输入特殊字符');
+            return false;
+        }
+        //短信验证码
+        if(verify_code == ""){
+            $("#verify_code").next().next("error_tips").html('请输入短信验证码');
+            return false;
+         }
+        //picture_code
+         //图片验证码是否填写
+         if(picture_code==""){
+               $("#picture_code").next().next("error_tips").html('请输入图片验证码');
+               return false;
+         }
+
+         return true;
+
+  }
+    $(function(){	
+		//获取图片验证
+		getImgMark();
+		function getImgMark(){
+			$.ajax({
+                url:commonCla.hostBase+"/v11/sms/getPictureCode",
+                type:"get",
+                dataType:"json",
+                success:function(res){
+					if(res.code==200) {
+                        var data=res['data'];
+						var img ='<img style="width: 3rem;height: 1rem " src='+data+'>';
+						$('#tuyz').html(img);
+                    }
+                },error:function(error){
+                    console.log("错误信息！");
+
+                }
+            });
+		}
+        $("#tuyz").click(function(){
+            getImgMark();
+        })
+        //timer处理函数
+            $('#yanz').click(function(){
+                var _this =$(this);
+                if(_this.hasClass("disabled")){
+                    return false;
+                }else{
+                    
+                    var reg = /^(0|86|17951)?(13[0-9]|15[012356789]|17[678]|18[0-9]|14[57])[0-9]{8}$/;
+                    if($("#mobile").val()!="" && reg.test($("#mobile").val())){
+                         _this.addClass('disabled');
+                        $.ajax({
+                            url: commonCla.hostBase+"/v11/sms/verifyCode",
+                            type: "POST",
+                            dataType: "json",
+                            data:{
+                                mobile:$("#mobile").val(),
+                                type:"lakuo",
+                                sms_token:$("#mobile").val(),
+                                picture_url:$('#tuyz').find("img").attr("src"),
+                                picture_code:$("#picture_code").val()
+                            },success: function(data) {
+                                if(data.code==200){
+                                    var time =120;
+                                    var timer= setInterval(function(){
+                                        time--;
+                                        if(time<0){
+                                            _this.removeClass('disabled').text("获取验证码");
+                                            clearInterval(timer);
+                                            return false;
+                                        }else{
+                                            _this.text("重新获取"+time+"s");
+                                        }
+                                    },1000);
+                                }else{
+                                    alert(data.error);
+                                     _this.removeClass('disabled').text("获取验证码");
+                                }
+                                
+                            }
+                        });
+                    }else{
+                        alert("请输入正确的手机号码")
+                    }
+                }
+            });
+       
+        $("#button").click(function(){
+		  var username=$("#username").val();
+		  var mobile=$("#mobile").val();
+		  var icard=$("#icard").val();
+		  var locationn=$("#locationn").val();
+		  var school=$("#school").val();
+		  var heightt=$("#heightt").val();
+		  var constellation=$("#constellation").val();
+		  var blood=$("#blood").val();
+		  var intro=$("#intro").val();
+		  var picture_code=$("#picture_code").val();
+		  var sms_token=$("#mobile").val();
+		  var username=$("#username").val();
+		  var verify_code=$("#verify_code").val();
+            if(!validate()){
+                return;
+            }
+                $.ajax({
+                    url:commonCla.hostBase+"/lakuo/signUp?jwt_token="+jwt_token,
+                    type:"POST",
+                    dataType:"json",
+                    data:{
+                        name:username,
+                        mobile:mobile,
+                        icard:icard,
+                        location:locationn,
+                        school:school,
+                        intro:intro,
+                        sms_token:sms_token,
+                        verify_code:verify_code,
+                        constellation:constellation,
+                        blood:blood,
+                        height:heightt,
+//                       jwt_token:jwt_token
+                    },
+//                    jsonpCallback:"fun",//服务器返回执行的方法名
+                    success:function(data){
+                        if(data.code==200){
+                            //alert("信息已完善！")
+                            window.location.href = "put.html?jwt_token=" +jwt_token;
+                        }else{
+                            alert(data.error);
+                        }
+                    },error:function(error){
+                        console.log(error);
+                    }
+                });
+
+           
+        })
+    })
+    </script>
+<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

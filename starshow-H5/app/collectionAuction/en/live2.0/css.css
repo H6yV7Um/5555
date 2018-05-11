@@ -1,0 +1,929 @@
+html,body{
+	font-size: 62.5%
+}
+img{
+	    vertical-align: middle;
+}
+#counter5s {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 80px;
+    color: #e6b817;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    height: 80px;
+    font-family: 宋体;
+}
+
+.tr{
+	text-align: right;
+}
+.vl-main{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	display: -webkit-flex; /* Safari */
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+.vl_player_main{
+	width: 100%;
+	flex:93;
+	-webkit-flex:93;
+	
+
+}
+.col_red{
+	color: #EB1010;
+}
+.user-name-red{
+	color: #EB1010;
+}
+.col_green{
+	color: #3a9b4d;
+}
+.col_yellow{
+	color: #F34609;
+}
+.msg_area .msgList li .video-sms-text div.bgRed{
+	background: #EB1010;
+	color: #fff
+}
+.pre_times2{
+	margin:auto;
+	font-size: 1.3rem;
+	color: #ffffff;
+	position: absolute;
+	bottom:50px;
+	padding: 5px 10px;
+	background: rgba(235,15,15,0.70);
+	    z-index: 2;
+
+}
+/*
+*横竖公共
+*/
+.vl_player_main .icon_num{
+	width:15px;
+	vertical-align: middle;
+}
+.player_times{
+	position: absolute;
+	background: #fff;
+	/* color: #ffffff; */
+	bottom: 0;
+	right: 0;
+	padding: 10px 5%;
+	width: 90%;
+}
+.player_times span{
+	margin:0 5px;
+}
+.player_ver .prev_bg{
+	width: auto;
+	height: 100%;
+}
+/*
+*竖屏
+*ver
+*/
+.player_ver {
+	width: 100%;
+	background: rgba(0,0,0,0.75);
+	
+}
+.player_ver .player_times{
+	display:none
+
+}
+.player_ver  .prod_info{
+  width: 250px;
+  position: absolute;
+  top:15px;
+  left: 20px;
+  background: rgba(7,7,7,0.50);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index:1
+}
+.player_ver  .prod_info .prod_pics{
+	width: 34%;
+	overflow: hidden;
+}
+.player_ver  .prod_info .prod_pics img{
+	width: 100%
+}
+.player_ver  .prod_info .prod_desc{
+    color: #fff;
+	position: absolute;
+	left: 36%;
+	width:66%;
+	top:0;
+	bottom: 0;
+	margin:auto;
+	overflow: hidden;
+	line-height: 2rem;
+	height: 4rem;
+}
+.player_ver  .prod_info .prod_desc p{
+	margin-left:5px;
+	font-size: 1.2rem;
+}
+.player_ver  .prod_info .prod_desc p.prod_others{
+	font-size: 1rem
+}
+.player_ver  .msg_cons{
+    width: 90%;
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    z-index: 1;
+    bottom: 100px;
+    margin: auto;
+}
+
+
+.player_ver  .msg_cons .lead_man{
+	display: inline-block;
+	background: rgba(243,70,9,0.8);
+	min-width:110px;
+	min-height: 3rem;
+	padding:4px 0;
+	border-radius:3px;
+}
+.player_ver  .msg_cons .lead_man div{
+	float: left;
+	display: inline
+}
+.player_ver  .msg_cons .lead_man .man_header{
+	width:32px;
+	margin-top:1.5px;
+	margin-left: 10px;
+	
+}
+.player_ver  .msg_cons .lead_man .man_header img{
+	width: 85%;
+	border-radius: 50%;
+	border:1px solid #f1f1f1;
+
+}
+.player_ver  .msg_cons .lead_man .man_info{
+	color: #fff;
+	margin-left: 10px;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-right: 10px;
+	margin-top:1px;
+}
+.player_ver  .msg_cons .lead_man .icon_leader{
+	width: 1rem;
+	float: right;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1rem;
+	color: #FF7007;
+	background: #EDD60D;
+	height: 2rem;
+	line-height:2rem;
+	margin-top: 0.3rem;
+	padding:2px 0
+}
+.player_ver  .player_main{
+	background: rgba(0,0,0,0.75);
+	height: 100%;
+	overflow:hidden;
+}
+.player_ver  .player_main .player{
+	height: 100%;
+	background: #000;
+	overflow: hidden;
+
+}
+.player_ver  .msg_area{
+	height:100%;
+	color: #fff;
+	/* 使之可以滚动 */
+	overflow-y: scroll;
+	/* 增加该属性，可以增加弹性，是滑动更加顺畅 */
+	-webkit-overflow-scrolling: touch;  
+}
+.player_ver .msg_area .msgList {
+	width: 100%;
+	font-size: 1.2rem
+}
+.player_ver  .prod_info .prod_pics .prod_nums{
+	position: absolute;
+	bottom:5px;
+	left:40px;
+	color: #ffffff
+}
+/*
+*横屏
+*cross
+*/
+
+.player_cross {
+	width:100%;
+	position: relative;
+	background: #f1f1f1;
+	
+}
+.player_cross  .vl_player_main{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+	-webkit-flex-direction: column;
+}
+.player_cross  .player_main{
+	background: rgba(0,0,0,0.75);
+	min-height:200px;
+	flex:40;
+	position: relative;
+	overflow: hidden;
+
+}
+.player_cross .player_times{
+	font-size:1.4rem;
+	line-height:22px;
+	line-height:22px;
+}
+.player_cross .player_times div p{
+	font-size:1.5rem;
+
+}
+.player_cross .player_times div p:last-child{
+	font-size:1.2rem;
+	line-height:22px;
+	color: #6EBC1F;
+}
+.player_cross  .prod_info{
+	width: 90%;
+	padding: 10px 5%;
+	overflow: hidden;
+	background: #fff;
+	position: relative;
+	flex:10;
+
+}
+.player_cross  .prod_info .prod_pics{
+	width: 24%;
+	overflow: hidden;
+	position: relative;
+	min-height: 4rem;
+	background: #999
+}
+.player_cross  .prod_info .prod_pics img{
+	width: 100%;
+}
+.player_cross  .prod_info .prod_pics .prod_nums{
+	position: absolute;
+	bottom:5px;
+	right:5px;
+	color: #ffffff
+}
+.player_cross  .prod_info .prod_desc{
+	position: absolute;
+	left: 26%;
+	width:66%;
+	top:0;
+	bottom: 0;
+	margin:auto;
+	overflow: hidden;
+	line-height: 2rem;
+	height: 4rem;
+}
+.player_cross  .prod_info .prod_desc p{
+	margin-left:5px;
+	font-size: 1.2rem;
+}
+.player_cross  .prod_info .prod_desc p.prod_others{
+	font-size: 1rem
+}
+.player_cross  .prod_info .prod_desc p.prod_others img{
+	visibility: hidden;
+}
+.player_cross  .prod_info .prod_desc p.prod_others .watch_num:after{
+  content: "online"
+}
+.player_cross  .msg_cons{
+  width: 100%;
+  background: #f1f1f1;
+  text-align: center;
+  position: relative;
+  flex:50;
+  /* bottom:26px;
+  left: 10px; */
+}
+.player_cross  .msg_cons .lead_man{
+	display: inline-block;
+	overflow: hidden;
+	background: #787878;
+	min-width:110px;
+	border-radius: 5px;
+	height: 4rem;
+	position: relative;
+	margin-top: 10px;
+
+
+}
+.player_cross  .msg_cons .lead_man div{
+	float: left;
+	display: inline
+}
+.player_cross  .msg_cons .lead_man .man_header{
+	width:32px;
+	line-height:4rem;
+	margin-left: 10px;
+}
+.player_cross  .msg_cons .lead_man .man_header img{
+	width: 100%;
+	border-radius: 50%;
+}
+.player_cross  .msg_cons .lead_man .man_info{
+	color: #fff;
+	margin-left: 10px;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-right: 10px;
+	text-align: left;
+	margin-top: 5px;
+}
+.player_cross  .msg_cons .lead_man .man_info .man_price{
+	margin-left: 26px;
+	color:#F8E81C;
+}
+.player_cross  .msg_cons .lead_man .icon_leader{
+	/*width:2rem;*/
+	font-size: 1rem;
+	color: #fff;
+	background: #eb1010;
+	height: 1rem;
+	line-height:1rem;
+	margin-top: 0.5rem;
+	padding:0.2rem 0;
+	position: absolute;
+	top:17px;
+	left:50px;
+}
+.player_cross  .msg_area{
+	/* 使之可以滚动 */
+	overflow-y: scroll;
+	/* 增加该属性，可以增加弹性，是滑动更加顺畅 */
+	-webkit-overflow-scrolling: touch;  
+	position: absolute;
+	top:5rem;
+	bottom: 0;
+	left:0;
+	right: 0;
+	margin: auto
+}
+.player_cross .msg_area .msgList {
+	width: 90%;
+	margin:0 auto;
+	font-size: 1.2rem
+}
+/*
+*公共
+*/
+
+.msg_area .msgList li{
+  text-align: left;
+  margin-top: 10px;
+}
+.msg_area .msgList li .video-sms-text div{
+	display: inline-block;
+	background: #ffffff;
+	border-radius: 5px;
+	padding: 5px;
+	color: #000
+}
+.msg_area .msgList li  .presenter{
+	background: #ec5252;
+	color: #ffffff
+}
+/*
+*footer
+*/
+.vl_footer li{
+	flex:1;
+	-webkit-flex:1;
+	text-align: center;
+	line-height: 40px;
+}
+.vl_footer li:first-child img{
+	width:40px;
+}
+.vl_footer li:last-child{
+	flex: 3;
+	-webkit-flex: 3;
+	text-align: right;
+	margin-right: 10px;
+}
+.vl_footer .btn_price{
+	display: inline-block;
+	width:40px;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+	background:#EB1010;
+	text-align: center;
+	color: #fff;
+	font-size: 1.4rem;
+	border-radius:3px;
+}
+.vl_footer  .btn_down{
+	width:170px;
+	height: 40px;
+	display: inline-block;
+}
+
+.vl_footer .btn_comment{
+	width:40px;
+	height: 40px;
+	display: inline-block;
+	background-size:contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.vl_footer .btn_zan{
+	width:40px;
+	height: 40px;
+	background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+	display: none;
+
+}
+.player_ver  .vl_footer{
+	width: 100%;
+	position: absolute;
+	flex: 0;
+	-webkit-flex:0;
+	bottom: 0;
+}
+.player_ver .vl_footer ul{
+	display: flex;
+	display: -webkit-flex; /* Safari */
+	width: 100%;
+}
+.player_ver .vl_footer .btn_comment{
+	background-image: url(../assets/images/icon/btn_msg_ver.png);
+	
+}
+
+.player_ver  .btn_down{
+	background-image: url(../assets/images/icon/btn-download.png);
+	background-repeat: no-repeat;
+	background-size:contain;
+}
+
+.player_cross .vl_footer {
+	width: 100%;
+    -flex:7;
+	-moz-flex:7;
+	-webkit-flex:7;
+    position: relative;
+    background: #fff;
+}
+.player_cross .vl_footer ul{
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.player_cross .vl_footer .btn_price{
+	display: inline-block;
+}
+.player_cross .vl_footer ul>li:first-child{
+	display: none;
+}
+.player_cross .vl_footer .btn_comment{
+	background-image: url(../assets/images/icon/btn_msg_cross.png);
+	background-size:80% 80%;
+}
+
+.player_cross .vl_footer  .btn_down:after{
+	content: "打开藏拍，看直播拍卖>";
+	font-family: FZLTXHK--GBK1-0;
+	font-size: 1.5rem;
+	color: #EB1010;
+	letter-spacing: 0.41px;
+}
+
+
+
+.btn_msg{
+	background: #EB1010;
+    border-radius: 6px;/
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    vertical-align: middle;
+    display: inline-block;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0 10px;
+}
+.btn_point{
+	position: fixed;
+	width: 1.2rem;
+	font-size: 1.2rem;
+	right:0;
+	bottom:150px;
+	display: inline-block;
+	padding: 5px 2px 5px 5px;
+	/* height: 12rem; */
+	background: rgba(0,0,0,0.40);
+	border-radius: 8px 0 0 8px;
+	color: #ffffff;
+	z-index: 2;
+	line-height: 1.2rem;
+}
+/*
+*普通直播
+*/
+.player_cross .users .icon_role{
+  width: 15px;
+  position: absolute;
+  bottom:0px;
+  left:30px;
+  }
+.vl_users{
+	width: 95%;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: none;
+}
+.vl_users .man_header {
+	position: relative;
+}
+
+.vl_users .users_ver{
+   position: absolute;
+    background: rgba(7,7,7,0.50);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1;
+}
+.vl_users .users_ver> div{
+	float: left;
+	display: inline
+}
+.vl_users .man_header{
+	width:32px;
+	line-height:4rem;
+	margin-left: 10px;
+}
+.vl_users  .man_header .icon_role{
+  width: 15px;
+  position: absolute;
+  bottom:5px;
+  right: 0
+}
+.vl_users .man_header img{
+	width: 100%;
+	border-radius: 50%;
+}
+.vl_users .man_info{
+	color: #fff;
+	margin-left: 10px;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-right: 10px;
+	text-align: left;
+	margin-top: 5px;
+}
+.vl_users  .btn_down{
+	width:160px;
+	height: 40px;
+	display: inline-block;
+	float: right;
+	margin-top:3px;
+}
+.vl_desc{
+	display: none;
+	flex:10;
+	width:94%;
+	padding:0 3%;
+	line-height: 1.9rem;
+	font-size: 1.4rem;
+	/* 使之可以滚动 */
+	overflow-y: scroll;
+	/* 增加该属性，可以增加弹性，是滑动更加顺畅 */
+	-webkit-overflow-scrolling: touch; 
+	background: #FFFFFF;
+	border-bottom: 1px solid #DCDCDC;
+	margin-bottom: 10px;
+}
+.vl_tabs{
+	width: 100%;
+	overflow: hidden;
+	display: none;
+	flex:10;
+	-webkit-flex:10;
+	position: relative;
+	font-size: 1.5rem;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	border-top:1px solid #dcdcdc;
+	border-bottom:1px solid #dcdcdc;
+	background: #ffffff
+}
+.vl_tabs .users,.vl_tabs .tabs{
+	position: absolute;
+	top:0;
+	bottom:0;
+	margin:auto;
+	height: 30px;
+	line-height: 30px
+}
+.vl_tabs .users{
+  left: right: 0;
+}
+.vl_tabs .users .user_head{
+	width:32px;
+	line-height:32px;
+	margin-left: 10px;
+	border-radius: 50%;
+}
+
+.vl_tabs .users .user_name{
+	color: #000;
+	margin-left:5px;
+	font-size:1.5rem;
+}
+.vl_tabs .tabs {
+	height: 100%;
+	line-height:  100%;
+	right: 10px;
+	
+}
+.vl_tabs .tabs li{
+	float: left;
+    display: inline;
+    text-align: center;
+    width: 34px;
+    margin:0 10px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #fff;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.vl_tabs .tabs li.cur{
+	border-bottom: 5px solid #EB1010;
+
+}
+/*
+*recommend
+*/
+.recommend {
+	flex: 40;
+	width: 90%;
+	background: #ffffff;
+	padding: 0 5%;
+	/* 使之可以滚动 */
+	overflow-y: scroll;
+	/* 增加该属性，可以增加弹性，是滑动更加顺畅 */
+	-webkit-overflow-scrolling: touch;  
+}
+.recommend h1{
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+.recommend li{
+	width: 100%;
+	margin:10px auto;
+	position: relative;
+	overflow: hidden;
+}
+.recommend li a{
+	color: #000;
+	text-decoration: none;
+}
+.recommend .recomm_cover{
+	width: 45%;
+	/*width: 120px;
+	height: 80px;*/
+	float: left;
+}
+.recommend  .label_status{
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  padding: 5px 10px;
+  color: #Fff;
+  top:10px;
+  font-size:1rem;
+}
+.recommend  .label_status.living{
+	background: #F5A623;
+}
+.recommend  .label_status.preview{
+	background: rgba(235,16,16,0.70);
+}
+.recommend  .label_status.replay{
+	background: rgba(137,137,137,0.80);
+}
+.recommend .recomm_prod_desc{
+	height: 100%;
+	left: 50%;
+	font-size: 1.4rem;
+	position: relative;
+	overflow: hidden;
+	bottom: 0;
+	position: absolute;
+	width: 50%;
+	/* box-sizing: content-box; */
+}
+.recommend .recomm_prod_desc div img{
+   width: 15px;
+   margin-right:5px;
+}
+
+.recommend .recomm_prod_desc .recomm_title{
+	margin-top: 5px;
+}
+
+.recommend .recomm_prod_desc .re_like_num{
+	
+	position: absolute;
+	bottom:5px;
+	left:0;
+	font-size: 1.2rem;
+	color: #898989;
+}
+.recommend .recomm_prod_desc .re_watch_num{
+	position: absolute;
+	bottom:5px;
+	right: 0;
+	font-size: 1.2rem;
+	color: #898989;
+}
+.ordi_player{
+
+}
+.ordi_player .vl_tabs,.ordi_player .vl_desc,.ordi_player  .vl_users{
+	display: block;
+}
+.ordi_player .msg_cons {
+	flex:40;
+}
+
+
+
+
+.ordi_player .vl_footer .btn_price,
+.ordi_player .btn_point,
+.ordi_player .prod_info,
+.ordi_player .msg_cons .lead_man{
+	display: none;
+}
+
+.ordi_player .msg_cons .msg_area{
+	top:0;
+}
+
+
+
+.ordi_player.player_cross .vl_footer .btn_zan{
+	    background-image: url(../assets/images/icon/btn_zan_dis_cross.png);
+	    background-size: 30px 30px;
+	    display: inline-block;
+	    padding-left: 70px;
+	    font-size: 1.4rem;
+	    padding-top: 5px;
+}
+.ordi_player.player_ver .vl_footer .btn_zan{
+	background-image: url(../assets/images/icon/btn_zan_ver.png);
+    display: inline-block;
+}
+/*
+*结束
+*/
+.player_ended{
+	width: 100%;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.9);
+	z-index: 3;
+	color: #F8B31C; 
+}
+.player_ended h1{
+	position: absolute;
+	top:-30%;
+	height: 30px;
+	line-height: 30px;
+	font-size:23px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	margin:auto;
+
+}
+
+.player_ended .ended_info{
+	width: 60%;
+	height: 30px;
+	margin:0 auto;
+	display: flex;
+	position: absolute;
+	top:40px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin:auto;
+	font-size: 15px;
+}
+.player_ended .ended_info p{
+	flex:1;
+	text-align: center;
+}
+.player_ended .ended_info img{
+	width: 25px;
+	vertical-align: middle;
+}
+.player_ended .ended_info span{
+	vertical-align: middle;
+	margin-left:3px;
+}
+
+.player_ended .end_btns{
+	position: absolute;
+	top:30%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin:auto;
+	display: flex;
+	color: #fff;
+	height: 90px;
+	font-size: 14px
+}
+.player_ended .end_btns .end_btn{
+	width: 60px;
+	overflow: hidden;
+	flex:1;
+}
+.player_ended .end_btns .end_btn img{
+	width: 50px;
+}
+.player_ended .icon_close{
+	float: right;
+	width: 20px;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+.player_cross .player_ended h1{
+	top:-50%;
+}
+.player_cross .end_btns{
+	top:50%;
+}
+/*
+*播放器
+*/
+.player_main .vcp-error-tips {
+    position: absolute;
+    z-index: 1001;
+    width: 100%;
+    height: 4.5em;
+    left: 0;
+    top: 50%;
+    color: #EB1010;
+    margin-top: -2.25em;
+    text-align: center;
+    display: none;
+    font-size: 1.4rem;
+    background: rgba(0,0,0,0.4);
+    line-height: 4.5rem;
+    /* border-radius: 15px; */
+}
+@media screen and (max-width: 320px) {
+  /* .player_ver  .prod_info{
+  	  width: 78%;
+  	} */
+
+}
+@media screen and (min-width: 410px) {
+   /* 	.player_ver  .prod_info{
+   	  width: 64%;
+   	} */
+}

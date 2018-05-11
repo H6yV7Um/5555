@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no,email=no" name="format-detection">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>星秀杯纹身大师挑战赛复赛阶段</title>
+</head>
+
+<body>
+<header class="head">
+  <div class="banner"><img src="images/banner.jpg"></div>
+  <div class="headInfo">
+    <div class="avatar"><img src="images/onepage-headp.jpg"></div>
+    <h2></h2>
+  </div>
+  <nav id="carousel">
+    <ul>
+      <li class="cur">传统大组</li>
+      <li>传统小组</li>
+      <li>欧美大组</li>
+      <li>欧美小组</li>
+      <li>school组</li>
+      <li>图腾及点刺组</li>
+    </ul>
+  </nav>
+  <div class="profileBtn"><a href="http://share.xingxiu.tv/activity/MasterCup_rule.html">活动简介</a></div>
+</header>
+<p class="clear"></p>
+<section class="tab">
+  <p></p>
+  <ul>
+    <li class="cur">复赛晋级</li>
+    <li>当前排行</li>
+  </ul>
+</section>
+<section class="tab-con">
+  <div class="list">
+    <div class="list01"></div>
+    <div class="tit"><img src="images/tit.png"> </div>
+    <div class="list02"></div>
+  </div>
+  <div class="rank"></div>
+</section>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript" src="js/cookie.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script> 
+<script type="text/javascript">
+	var uid = location.search.slice(location.search.indexOf("&uid=") + 6).split("&")[0];
+	var cid = location.search.slice(location.search.indexOf("&cid=") + 5).split("&")[0];
+	var q_url = "http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=getSemiFinalList&cid=" + cid + "&uid=" + uid + "&returntype=jsonp&callback=?";
+	var qt_url = "http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=getSemiFinalOtherList&cid=" + cid + "&uid=" + uid + "&returntype=jsonp&callback=?";
+	getDetail(q_url);
+	getOther(qt_url);
+	function getDetail(a) {
+		$.getJSON(a, function(a) {
+			if (a.result == "succ") {
+				var b = ""
+				for (var i = 0; i < a.info.length; i++) {
+					var d = "" == a.info[i].avatar ? "images/onepage-headp.jpg" : a.info[i].avatar;
+					b = '<dl><dt><a href="detail.html?uid=' + a.info[i].uid + '&id=' + a.info[i].id + '">';
+					b += '<img src=' + a.info[i].thumb + '></a>';
+					if($.cookie("star_masterSemi_"+a.info[i].id)!=null){
+						//if (a.info[i].is_digg == 0) {
+							//b += '<span  class="like unlike" onclick=like(this,' + a.info[i].id + ')><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+							b += '<span  class="like"><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+						} else {
+							b += '<span  class="like unlike" onclick=like(this,' + a.info[i].id + ')><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+							//b += '<span  class="like"><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+						}
+					b += '<dd><div class="fl headPic"><img src=' + d + '></div>';
+					b += '<div class="fl listInfo"><h2>' + a.info[i].uname + '</h2>';
+					b += '<p>共' + a.info[i].works_num + '张 </p></div>';
+					b += '</dd></dl>';
+					$(".list01").append(b);
+
+				}
+			}
+		})
+	}
+
+	function getOther(a) {
+		$.getJSON(a, function(a) {
+			if (a.result == "succ") {
+				var b = ""
+				for (var i = 0; i < a.info.length; i++) {
+					var d = "" == a.info[i].avatar ? "images/onepage-headp.jpg" : a.info[i].avatar;
+					b = '<dl><dt><a href="detail.html?uid=' + a.info[i].uid + '&id=' + a.info[i].id + '">';
+					b += '<img src=' + a.info[i].thumb + '></a>';
+					if($.cookie("star_masterSemi_"+a.info[i].id)!=null){
+						//if (a.info[i].is_digg == 0) {
+							//b += '<span  class="like unlike" onclick=like(this,' + a.info[i].id + ')><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+							b += '<span  class="like"><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+						} else {
+							b += '<span  class="like unlike" onclick=like(this,' + a.info[i].id + ')><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+							//b += '<span  class="like"><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+						}
+					b += '<dd><div class="fl headPic"><img src=' + d + '></div>';
+					b += '<div class="fl listInfo"><h2>' + a.info[i].uname + '</h2>';
+					b += '<p>共' + a.info[i].works_num + '张 </p></div>';
+					b += '</dd></dl>';
+					$(".list02").append(b);
+				}
+			}
+		})
+	}
+	var t_url = "http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=getSemiFinalRank&cid=1&uid=" + uid + "&returntype=jsonp&callback=?";
+	getTop(t_url);
+
+	function getTop(a) {
+		$.getJSON(a, function(a) {
+			if ("succ" == a.result) {
+				for (var b = "", c = 0; c < a.info.length; c++) {
+					var d = "" == a.info[c].avatar ? "images/onepage-headp.jpg" : a.info[c].avatar;
+					console.log(d), b += '<a href="detail.html?uid=' + a.info[c].uid + '&id=' + a.info[c].id + '"><dl><dt><span class="rankGrade">'+a.info[c].grade+'</span><span class="rankImg"><img src=' + d + '></span><span class="rankName">' + a.info[c].uname + '</span></dt><dd><i></i>' + a.info[c].digg_count + '</dd></dl></a>';
+
+				}
+				$(".avatar img").attr("src",a.info[0].avatar);
+				$(".headInfo h2").text(a.info[0].uname);
+				
+				$(".rank").append(b);
+				$(".rank dl:lt(3) .rankGrade").hide();
+				$(".rank dl:eq(0) dt").append("<div class='number1'></div>");
+				$(".rank dl:eq(1) dt").append("<div class='number2'></div>");
+				$(".rank dl:eq(2) dt").append("<div class='number3'></div>");
+			}
+		})
+	}
+	$("#carousel li").click(function() {
+		$(this).addClass("cur").siblings().removeClass("cur");
+		var curNav = $(this).index() + 1;
+		var q_url = "http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=getSemiFinalList&cid=" + curNav + "&uid=" + uid + "&returntype=jsonp&callback=?";
+		var qt_url = "http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=getSemiFinalOtherList&cid=" + curNav + "&uid=" + uid + "&returntype=jsonp&callback=?";
+		getDetail(q_url);
+		getOther(qt_url);
+
+		function getDetail(a) {
+			$.getJSON(a, function(a) {
+				if ("succ" == a.result) {
+					$(".list01").html("");
+					var b = ""
+					for (var i = 0; i < a.info.length; i++) {
+						var d = "" == a.info[i].avatar ? "images/onepage-headp.jpg" : a.info[i].avatar;
+						b = '<dl><dt><a href="detail.html?uid=' + a.info[i].uid + '&id=' + a.info[i].id + '">';
+						b += '<img src=' + a.info[i].thumb + '></a>';
+						if($.cookie("star_masterSemi_"+a.info[i].id)!=null){
+						//if (a.info[i].is_digg == 0) {
+							//b += '<span  class="like unlike" onclick=like(this,' + a.info[i].id + ')><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+							b += '<span  class="like"><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+						} else {
+							b += '<span  class="like unlike" onclick=like(this,' + a.info[i].id + ')><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+							//b += '<span  class="like"><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+						}
+						b += '<dd><div class="fl headPic"><img src=' + d + '></div>';
+						b += '<div class="fl listInfo"><h2>' + a.info[i].uname + '</h2>';
+						b += '<p>共' + a.info[i].works_num + '张 </p></div>';
+						b += '</dd></dl>';
+						
+						$(".list01").append(b);
+						$(".list01 dl:odd").addClass("odd");
+					}
+				}
+			})
+		}
+
+		function getOther(a) {
+			$.getJSON(a, function(a) {
+				if (a.result == "succ") {
+					$(".list02").html("");
+					var b = ""
+					for (var i = 0; i < a.info.length; i++) {
+						var d = "" == a.info[i].avatar ? "images/onepage-headp.jpg" : a.info[i].avatar;
+						b = '<dl><dt><a href="detail.html?uid=' + a.info[i].uid + '&id=' + a.info[i].id + '">';
+						b += '<img src=' + a.info[i].thumb + '></a>';
+						if($.cookie("star_masterSemi_"+a.info[i].id)!=null){
+						//if (a.info[i].is_digg == 0) {
+							//b += '<span  class="like unlike" onclick=like(this,' + a.info[i].id + ')><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+							b += '<span  class="like"><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+						} else {
+							b += '<span  class="like unlike" onclick=like(this,' + a.info[i].id + ')><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+							//b += '<span  class="like"><i></i><b>' + a.info[i].digg_count + '</b></span></dt>';
+						}
+						b += '<dd><div class="fl headPic"><img src=' + d + '></div>';
+						b += '<div class="fl listInfo"><h2>' + a.info[i].uname + '</h2>';
+						b += '<p>共' + a.info[i].works_num + '张 </p></div>';
+						b += '</dd></dl>';
+						$(".list02").append(b);
+						$(".list02 dl:odd").addClass("odd");
+					}
+				}
+			})
+		}
+
+		var t_url = "http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=getSemiFinalRank&cid=" + curNav + "&uid=" + uid + "&returntype=jsonp&callback=?";
+		getTop(t_url);
+
+		function getTop(a) {
+			$.getJSON(a, function(a) {
+				if ("succ" == a.result) {
+					for (var b = "", c = 0; c < a.info.length; c++) {
+						var d = "" == a.info[c].avatar ? "images/onepage-headp.jpg" : a.info[c].avatar;
+						console.log(d), b += '<a href="detail.html?uid=' + a.info[c].uid + '&id=' + a.info[c].id + '"><dl><dt><span  class="rankGrade">'+a.info[c].grade+'</span><span class="rankImg"><img src=' + d + '></span><span class="rankName">' + a.info[c].uname + '</span></dt><dd><i></i>' + a.info[c].digg_count + '</dd></dl></a>';
+					}
+					$(".avatar img").attr("src",a.info[0].avatar);
+					$(".headInfo h2").text(a.info[0].uname);
+					$(".rank").html("");
+					$(".rank").append(b);
+					$(".rank dl:lt(3) .rankGrade").hide();
+					$(".rank dl:eq(0) dt").append("<div class='number1'></div>");
+					$(".rank dl:eq(1) dt").append("<div class='number2'></div>");
+					$(".rank dl:eq(2) dt").append("<div class='number3'></div>");
+
+				}
+			})
+		}
+	});
+
+
+
+function like(obj, id) {
+		$(obj).removeClass("unlike");
+		var num = $(obj).find("b").text();
+		num++;
+		$(obj).find("b").text(num);
+		$(obj).removeAttr("onclick");
+		var like_url = "http://api.xingxiu.tv/index.php?app=mobile&mod=Activity&act=doMastersCupDigg&uid="+uid+"&id="+id+"&returntype=jsonp&callback=?";
+		getlike(like_url);	
+		$.cookie('star_masterSemi_'+id, id, { expires: 30 }); 
+}
+function getlike(a){
+	var json = $.getJSON(a, function(a) {
+		if ("succ" == a.result) {
+			$(this).removeClass("unlike");
+		}else{
+			
+		}
+	});
+	return json;		
+}
+
+
+ 	
+
+/*帮他打榜*/
+window.addEventListener('load', function() {
+	var $carousel = document.getElementById('carousel'),
+		$ul = $carousel.querySelector('ul'),
+		liArray = $carousel.querySelectorAll('li'),
+		liNum = liArray.length;
+	$ul.style.width = (liArray[0].clientWidth + 10) * 6 + "px";
+	var carousel = new iScroll("carousel", {
+		hScrollbar: false,
+		vScrollbar: false
+	});
+$(function() {
+		$(".rank dl:lt(3)").find(".rankGrade").hide();
+		$(".rank dl:eq(0) dt").append("<div class='number1'></div>");
+		$(".rank dl:eq(1) dt").append("<div class='number2'></div>");
+		$(".rank dl:eq(2) dt").append("<div class='number3'></div>");
+		$(".list01 dl:odd").addClass("odd");
+		$(".list02 dl:odd").addClass("odd");
+		$(".list dt span").click(function() {
+			//$(this).addClass("unlike");	
+		});
+		$(".tab li").click(function() {
+			$(".list01 dl:odd").addClass("odd");
+			$(".list02 dl:odd").addClass("odd");
+			$(".rank dl:first dt").append("<div class='number1'></div>");
+			$(".rank dl:eq(1) dt").append("<div class='number2'></div>");
+			$(".rank dl:eq(2) dt").append("<div class='number3'></div>");
+			$(this).addClass("cur").siblings().removeClass("cur");
+			var ind = $(this).index();
+			$(".tab-con > div").eq(ind).show().siblings().hide();
+			if (ind == 1) {
+				$(".tab p").animate({
+					left: "55%"
+				});
+			} else {
+				$(".tab p").animate({
+					left: "5%"
+				});
+			}
+		});
+		$(".rank dl:lt(3)").addClass("bgred");
+	});
+});
+if (cid == 2) {
+	$("#carousel li:eq(1)").addClass("cur").siblings().removeClass("cur");
+} else if (cid == 3) {
+	$("#carousel li:eq(2)").addClass("cur").siblings().removeClass("cur");
+} else if (cid == 4) {
+	$("#carousel li:eq(3)").addClass("cur").siblings().removeClass("cur");
+} else if (cid == 5) {
+	$("#carousel li:eq(4)").addClass("cur").siblings().removeClass("cur");
+} else if (cid == 6) {
+	$("#carousel li:eq(5)").addClass("cur").siblings().removeClass("cur");
+}
+</script>
+</body>
+</html>

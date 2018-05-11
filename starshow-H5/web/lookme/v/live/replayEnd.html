@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <meta charset="UTF-8">
+          <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+          <meta name="apple-mobile-web-app-capable" content="yes">
+          <meta name="format-detection" content="telephone=no, email=no">
+        <title>回播结束</title>
+        <link rel="stylesheet" type="text/css" href="../public/css/common.css">
+    </head>
+    <body>
+        <div class="lookme_warp">
+            <div class="lookme_top">
+                <div class="lookme_bgimg">
+                   <img src="../public/images/4.png">
+                </div>
+                <div class="lookme_mark"></div>
+                <div class="lookme_contain">
+                    <div class="lm_title">
+                        <img src="../public/images/zhanweitu.png">
+                    </div>
+                    <p class="lm_who"></p>
+                    <p class="lm_where"></p>
+                    <div class="lm_like">
+                        <span>观看<span class="lm_like_l">4657</span></span>
+                        <span>喜欢<span class="lm_like_r">23345</span></span>
+                    </div>
+                    <div class="lm_time"><span>00:21:49</span></div>
+                    <div class="lm_agin"><a href="">再看一遍</a></div>
+                </div>
+                <div class="idio"></div>
+            </div>
+            <div class="lm_list">
+                <div class="lm_list_top">
+                    <ul class="lm_list_top_title">
+                        <li class="line">&nbsp</li>
+                        <li>
+                            <p>更多热门视频</p>
+                            <p>HOT VIDEOS</p>
+                        </li>
+                        <li class="line">&nbsp&nbsp</li>
+                        <div class="clear"></div>
+                    </ul>
+                    <ul class="lm_list_contain">
+                        <!-- <li class="lm_list_li">
+                            <img src="../public/images/3.png">
+                        </li>
+                        <li class="lm_list_li">
+                            <img src="../public/images/3.png">
+                        </li>
+                        <li class="lm_list_li">
+                            <img src="../public/images/3.png">
+                        </li>
+                       <li class="lm_list_li">
+                            <img src="../public/images/3.png">
+                        </li>
+                       <li class="lm_list_li">
+                            <img src="../public/images/3.png">
+                        </li>
+                       <li class="lm_list_li">
+                            <img src="../public/images/3.png">
+                        </li>
+                         <li class="lm_list_li">
+                            <img src="../public/images/3.png">
+                        </li>
+                         <li class="lm_list_li">
+                            <img src="../public/images/3.png">
+                        </li> -->
+        <div class="clear"></div>
+      </ul>
+    </div>
+  </div>
+  <div class="downlaad a-fadeinB"> <img src="../public/images/5.png">
+    <p>下载“LOOKME”APP,参与更多互动！</p>
+  </div>
+</div>
+<script type="text/javascript" src="../public/js/zepto.js"></script> 
+<script type="text/javascript" src="../public/js/app.js"></script> 
+<script type="text/javascript">
+        var w=document.documentElement.clientWidth||document.body.clientWidth;
+        $('.lookme_top').css('height',w);
+        var url_path="http://123.57.0.118";
+        var t_url="http://lookme.xingxiu.tv"
+        var did = location.search.replace(/\?id=(\d+).*/,'$1');
+        // var did="256"
+        var vUrl= t_url+'/liveShareApi/'+did+'&returntype=jsonp&callback=?';
+        getReplayEnd(vUrl);
+		$(".downlaad").click(function(){
+			var ua = navigator.userAgent.toLowerCase();	
+			  if (/iphone|ipad|ipod/.test(ua)) {
+				window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.showstar.lookme";	
+			  } else if (/android/.test(ua)) {
+				window.location.href="http://a.app.qq.com/o/simple.jsp?pkgname=com.showstar.lookme";	
+			  }				
+		})
+        </script>
+    </body>
+</html>

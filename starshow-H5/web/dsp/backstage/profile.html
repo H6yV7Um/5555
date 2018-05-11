@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时尚星秀广告投放管理平台</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../assets/common/js/lib/bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="../assets/common/js/lib/sweetAlert/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="../assets/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../assets/api/css/index.css">
+</head>
+<body>
+    <div class="dspHeader"></div>
+    <div class="dspMenu"></div>
+    <div class="dspContainer">
+    <div class="account-wrap">
+        <div class="accountTab">
+            <ul>
+                <li class="active">账号管理</li>
+                <li>修改密码</li>
+            </ul>
+        </div>
+        <div class="reject-reason" style="display:none">
+            <div class="reason">
+                <h5>审核失败</h5>
+                <p></p>
+            </div>
+        </div>
+        <div class="tab-con">
+            <!-- 资质 -->
+            <div class="profile tab">
+                <!-- 提交资质 -->
+                <div class="submit-info" style="display: none;">
+                    <div id="form2">
+                        <ul>
+                            <li class="cp-type row">
+                                <div class="lable">企业类型</div>
+                                <div class="select-outer">
+                                    <span class="small-arrow"></span>
+                                    <select class="cp-type-select">
+                                        <option value="1">大陆企业</option>
+                                        <option value="2">大陆个体工商户</option>
+                                        <option value="3">大陆事业单位</option>
+                                        <option value="4">民办非企业</option>
+                                        <option value="5">机关、企、事业单位</option>
+                                        <option value="6">香港企业</option>
+                                        <option value="7">法律服务</option>
+                                        <option value="8">学校</option>
+                                    </select>
+                                </div>
+                                <p class="error-info"></p>
+                            </li>
+                            <li class="operate-img">
+                                <div class="lable">营业执照</div>
+                                <div class="image-box">
+                                    <div class="upload_area">
+                                        <p>
+                                            <span>点击上传</span>jpg/png,小于1M</p>
+                                        <form id="businessLicense" enctype="multipart/form-data">
+                                            <input type="file" id="business" name="UploadName"  multiple="multiple" accept="image/*">
+                                        </form>
+                                        <!-- <div class="look" style="display:none">
+                                            <img src="" alt="">
+                                        </div>
+                                        <span class="del-img" style="display:none"></span> -->
+                                    </div>
+                                </div>
+                                <p class="error-info"></p>
+                            </li>
+                            <li class="cp-name">
+                                <div class="lable">公司全称</div>
+                                <input type="text" id="CompanyName" name="cp-name" required="required" class="input-text"
+                                    placeholder="请输入公司全称" />
+                                <p class="error-info"></p>
+                            </li>
+                            <li class="social-code">
+                                <div class="lable">统一社会信用代码</div>
+                                <input type="text" id="CreditCode" name="social-code" required="required" class="input-text" placeholder="无统一信用代码可填写组织机构代码"
+                                />
+                                <p class="error-info"></p>
+                            </li>
+                            <li class="industry-type row">
+                                <div class="lable">行业类型</div>
+                                <div class="select-outer">
+                                    <span class="small-arrow"></span>
+                                    <select class="industry-select">
+                                        <option value="1">自媒体推广</option>
+                                        <option value="2">电脑硬件办公</option>
+                                        <option value="3">手机数码</option>
+                                        <option value="4">家用电器</option>
+                                        <option value="5">网络服务</option>
+                                        <option value="6">教育培训</option>
+                                        <option value="7">房地产</option>
+                                        <option value="8">旅游在宿</option>
+                                        <option value="9">商业零售</option>
+                                        <option value="10">食品饮料</option>
+                                        <option value="11">家庭日用品</option>
+                                        <option value="12">化妆护理</option>
+                                        <option value="13">母婴护理</option>
+                                        <option value="14">家居建材</option>
+                                        <option value="15">奢侈品</option>
+                                        <option value="16">服装鞋帽</option>
+                                        <option value="17">箱包饰品</option>
+                                        <option value="18">生活服务</option>
+                                        <option value="19">通讯服务</option>
+                                        <option value="20">运动休闲娱乐</option>
+                                        <option value="21">面向企业类</option>
+                                        <option value="22">政府组织类</option>
+                                    </select>
+                                </div>
+                                <p class="error-info"></p>
+                            </li>
+                            <li class="prove-img">
+                                <div class="lable">资质证明</div>
+                                <div class="image-box">
+                                    <div class="upload_area">
+                                        <p>
+                                            <span>点击上传</span>jpg/png,小于1M</p>
+                                        <form id="Certificate1" enctype="multipart/form-data">
+                                            <input type="file" id="prove1" name="UploadName" multiple="multiple" accept="image/*">
+                                        </form>
+                                    </div>
+                                    <div class="upload_area">
+                                        <p>
+                                            <span>点击上传</span>jpg/png,小于1M</p>
+                                        <form id="Certificate2" enctype="multipart/form-data">
+                                            <input type="file" id="prove2" name="UploadName" multiple="multiple" accept="image/*">
+                                        </form>
+                                    </div>
+                                    <div class="upload_area">
+                                        <p>
+                                            <span>点击上传</span>jpg/png,小于1M</p>
+                                        <form id="Certificate3" enctype="multipart/form-data">
+                                            <input type="file" id="prove3" name="UploadName" multiple="multiple" accept="image/*">
+                                        </form>
+                                    </div>
+                                    <div class="upload_area">
+                                        <p>
+                                            <span>点击上传</span>jpg/png,小于1M</p>
+                                        <form id="Certificate4" enctype="multipart/form-data">
+                                            <input type="file" id="prove4" name="UploadName" multiple="multiple" accept="image/*">
+                                        </form>
+                                    </div>
+                                </div>
+                                <p class="add">当前行业需要补充网络文化经营许可证和演出
+                                    <a class="watchProfile" href="help.html?mt=5&profile=3">查看全部行业资质要求</a>
+                                </p>
+                                <p class="error-info">请上传资质证明</p>
+                            </li>
+                            <li class="legal-person">
+                                <div class="lable">公司法人</div>
+                                <input type="text" id="LegalPerson" name="legal-person" required="required" class="input-text"
+                                    placeholder="请输入法人名称" />
+                                <p class="error-info">请输入法人名称</p>
+                            </li>
+                            <li class="id-number">
+                                <div class="lable">法人身份证号码</div>
+                                <input type="text" id="IdNumber" name="id-number" required="required" class="input-text" placeholder="请输入身份证号码" />
+                                <p class="error-info"></p>
+                            </li>
+                            <li class="idcard-img">
+                                <div class="lable">身份证明</div>
+                                <div class="image-box">
+                                    <div class="upload_area">
+                                        <p>
+                                            <span>身份证正面照</span>jpg/png,小于1M</p>
+                                        <form id="identity1" enctype="multipart/form-data">
+                                            <input type="file" id="idcard1" name="UploadName" multiple="multiple" accept="image/*">
+                                        </form>
+                                    </div>
+                                    <div class="upload_area">
+                                        <p>
+                                            <span>身份证背面照</span>jpg/png,小于1M</p>
+                                        <form id="identity2" enctype="multipart/form-data">
+                                            <input type="file" id="idcard2" name="UploadName" multiple="multiple" accept="image/*">
+                                        </form>
+                                    </div>
+                                    <div class="upload_area">
+                                        <p>
+                                            <span>法人手持身份证照</span>jpg/png,小于1M</p>
+                                        <form id="identity3" enctype="multipart/form-data">
+                                            <input type="file" id="idcard3" name="UploadName" multiple="multiple" accept="image/*">
+                                        </form>
+                                    </div>
+                                </div>
+                                <p class="error-info"></p>
+                            </li>
+                        </ul>
+                        <a id="submit-profile" href="javascript:void(0);" class="xx-btn blue">提交资质</a>
+                    </div>
+                </div>
+                <!-- 审核中 -->
+                <div class="submit-review" style="display: none;">
+                    <p class="ok"></p>
+                    <p>已提交审核</p>
+                    <p>请耐心等待，我们会在三个工作日内完成审核</p>
+                </div>
+                <!-- 获取资质 -->
+                <div class="user-info" style="display: none;">
+                    <div class="cp-type info-item ">
+                        <h5>企业类型：</h5><p></p>
+                    </div>
+                    <div class="businessLicense info-item">
+                        <h5>营业执照：</h5>
+                        <p>
+                            <div class="img-box">
+                                <img src="">
+                            </div>
+                        </p>
+                    </div>
+                    <div class="cp-name info-item">
+                        <h5>公司全称：</h5>
+                        <p></p>
+                    </div>
+                    <div class="creditCode info-item">
+                        <h5>社会统一信用代码：</h5>
+                        <p></p>
+                    </div>
+                    <div class="industry info-item">
+                        <h5>行业类型：</h5>
+                        <p></p>
+                    </div>
+                    <div class="certificate info-item">
+                        <h5>资质证明：</h5>
+                        <div class="img-area">
+                            <!-- <div class="img-box">
+                                <img src="http://starshow-dsp.test.upcdn.net/profile/business_license/png_1513058297.png">
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="legal-person info-item">
+                        <h5>公司法人：</h5>
+                        <p></p>
+                    </div>
+                    <div class="id-number info-item">
+                        <h5>法人身份证号码：</h5>
+                        <p></p>
+                    </div>
+                    <div class="idcard-img info-item">
+                        <h5>照片证明：</h5>
+                        <div class="img-area">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 修改密码 -->
+            <div class="reset-pasword tab" style="display:none;">
+                <div class="reset-form">
+                    <ul>
+                        <li class="old-pas">
+                            <div class="lable">输入旧密码</div>
+                            <input type="password" id="oldPas" name="old-pas" required="required" class="input-text" placeholder="6-14位，数字或字母组合" />
+                            <p class="error-info"></p>
+                        </li>
+                        <li class="new-pas">
+                            <div class="lable">设置新密码</div>
+                            <input type="password" id="newPas" name="new-pas" required="required" class="input-text" placeholder="6-14位，数字或字母组合" />
+                            <p class="error-info"></p>
+                        </li>
+                        <li class="con-new-pas">
+                            <div class="lable">再次新密码</div>
+                            <input type="password" id="conPas" name="old-pas" required="required" class="input-text" placeholder="6-14位，数字或字母组合" />
+                            <p class="error-info"></p>
+                        </li>
+                        <li class="mobie">
+                            <div class="lable">输入手机号</div>
+                            <input type="text" id="tel" name="tel" required="required" class="input-tel" placeholder="请输入手机号" />
+                            <p class="error-info"></p>
+                        </li>
+                        <li class="inspect readonly">
+                            <div class="lable">短信验证码</div>
+                            <input type="text" id="validateCode" name="validateCode" class="input-code" placeholder="验证码" />
+                            <button type="button" id="getValidateCode" class="xx-btn blue" timer="0" disabled>获取验证码</button>
+                            <p class="error-info"></p>
+                        </li>
+                    </ul>
+                    <a id="modify" href="javascript:void(0);" class="xx-btn blue">确认修改</a>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</body>
+<script type="text/javascript" src="../assets/common/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+<script type="text/javascript" src="../assets/common/js/common.js"></script>
+<script type="text/javascript" src="../assets/api/js/profile.js"></script>
+</html>

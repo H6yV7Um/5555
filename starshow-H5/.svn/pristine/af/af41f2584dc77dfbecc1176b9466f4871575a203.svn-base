@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀-让你更时尚，让你更闪耀！</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/lib/scroller/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/fw.css">
+</head>
+<body>
+	<!--头部-->
+ 	 <div class="xingx_mains"><div class="xingx_header"></div></div>
+	<div class="activity_main">
+      <img src="assets/images/fw/banner.jpg" height="690" width="1000" />
+      <div class="fw_con1">
+      	<div class="fw_con1_cover">
+      		<div class="swiper-container swiper-container-covers">
+				    <div class="swiper-wrapper" id="js-newsCoverList">
+				        <!-- <div class="swiper-slide">
+				        	<div class="imgCon"><img src="assets/images/fw/cover-default.png" /></div>
+				        </div>
+				        <div class="swiper-slide">
+				        	<div class="imgCon"><img src="assets/images/fw/cover-default.png" /></div>
+				        </div> -->
+				        
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				    <!-- 如果需要导航按钮 -->
+				    <div class="swiper-button-prev"></div>
+				    <div class="swiper-button-next"></div>
+				</div>
+      	</div>
+      	<!--cover end-->
+      	<div class="curNew">
+      		<div class="curNew_con">
+      			<h1 class="new_title"></h1>
+	      		<div class="new_desc"></div>
+      		</div>
+      		<div class="btn_more js_btn_more"><a><img src="assets/images/fw/more.png" height="25" width="73"></a></div>
+      	</div>
+      </div>
+      <!--con1 end-->
+       <div class="fw_con2">
+		<div class="con2_main">
+			<div class="con2_left">
+				<div class="swiper-container swiper-container-videos">
+				    <ul class="swiper-wrapper js_change_video" id="js_change_video">
+				        
+				    </ul>
+				</div>
+				<div class="btn_top"></div>
+				<div class="btn_bottom"></div>
+				<!-- <ul class="js_change_video">
+					<li class="cur"><div class="line"></div></li>
+					<li class=""><div class="line"></div></li>
+					<li class=""><div class="line"></div></li>
+					<li class=""><div class="line"></div></li>
+				</ul> -->
+			</div>
+			<div class="con2_right">
+				<div class="video_con">
+					<div class="video_bg" id="js_video_bg">
+						<img src="assets/images/fw/v-cover_default.jpg"  class="video_cover"/>
+						<img src="assets/images/fw/btn-play.png"  class="btn_player"/>
+					</div>
+					<!-- <div class="myVideo">
+						<div id="player"></div>
+					</div> -->
+					<video class="myVideo" preload="auto" controls webkit-playsinline="" playsinline="" x-webkit-airplay="allow" src="https://starshow-file.b0.upaiyun.com/lives/5c94f50266c066f4ca2caf5399147ec6.mp4"  style="display:none"></video>
+				</div>
+			</div>
+		</div>		
+       </div>
+       <!--con2 end-->
+       <div class="fw_con3">
+       	<div class="new_cover">
+       		<a><img src="assets/images/fw/pic3.jpg"></a>
+       	</div>
+       	<div class="brandList">
+       		<div class="scroller content_3">
+       			<ul></ul>
+       		</div>
+       		
+       	</div>
+       </div>
+       <!--con3 end-->
+       <div class="fw_con4">
+       	<img src="assets/images/fw/live-tit.png" />
+       	<div class="swiper-container">
+		    <div class="swiper-wrapper" id="js-livesList">
+		        <!-- <div class="swiper-slide">
+		        	<div class="imgCon"><img src="assets/images/fw/cover-default.png" /></div>
+		        </div>
+		        <div class="swiper-slide">
+		        	<div class="imgCon"><img src="assets/images/fw/cover-default.png" /></div>
+		        </div> -->
+		        
+		    </div>
+		
+		</div>
+       </div>
+
+	</div>
+
+	<div class="cangp_footer" id="js_footer"></div>
+
+	<script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="assets/js/swiper-3.4.0.min.js"></script>
+	 <script type="text/javascript" charset="utf-8" src="assets/js/blive.js"></script>
+
+	<script type="text/javascript" src="assets/lib/scroller/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+	<script type="text/javascript" src="assets/js/fw.js"></script>
+</body>
+</html>

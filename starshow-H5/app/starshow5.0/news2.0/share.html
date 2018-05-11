@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>明星详情</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/echo.css">
+	
+	<style type="text/css">
+        .rcmdCons .plista_widget_webApp .plistaHl{display: none;}
+	</style>
+	<script>
+	  //声明_czc对象:
+	  var _czc = _czc || [];
+	  //绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+	  _czc.push(["_setAccount", "1258627559"]);
+  </script>
+</head>
+<body class="body_color2"> 
+    <section class="pageMain" id="newsMain" style="display:none">
+    <a id="btn_download2"><img src="assets/images/down-bg.png" width="100%" /></a>
+	<section class="newCons">
+		<!-- <section class="news_title">
+			<img src="" width="100%"/>assets/images/topbanner.jpg
+		</section>
+		<div class="div-title">
+			<div class="tip-area">
+				<img src="assets/images/icon-tip.png" height="37" width="37" class="tip-pic"/>
+				<img src="assets/images/icon-role.png" height="12" width="12" class="icon_roles"  />
+				<span></span>
+			</div>
+			<img src="assets/images/btn_bot.png" width="6%" />
+		</div>
+		<div class="mt10 channel_info">
+			<P id="content-title-en"></P>
+			<P id="content-title"></P>
+			<div><span id="curTime"></span></div>
+		</div>
+		内容
+		        <section id="newContent" class="newContent"></section>
+		        标签
+		        <h3 class="labelTit" style="display:none">相关标签：</h3>
+		<ul class="labelsCon"></ul>
+		<div class="f14r tr mr10 col_grey">浏览 <span id="watch_num" >0</span></div> -->
+
+	</section>
+	<!--自己的推荐-->
+	<section class="rcmdCons">
+		<div class="channelTitle">
+			<span><em class="fb">HEADLINE</em> 头条推荐</span>
+		</div>
+		<ul class="rcmdList mt10">
+			
+			<!-- <li>
+				<div class="imgArea"><a href=""><img src="assets/images/img03.jpg" /></a></div>
+				<div class="descArea">
+					<a href="">
+					<h1>新星盛典—鹿晗专访</h1>
+					<p>重要度绝不亚于一件珠宝不亚于重要度绝不亚于</p>
+					<article class="activityList">
+						<section>
+							<img src="assets/images/icon-eye.jpg" />
+							<span>10000</span>
+						</section>
+					    <section>
+					    	<img src="assets/images/icon-heart.jpg"  />
+							<span>10000</span>
+					    </section>
+					    <section>
+					    	<img src="assets/images/icon-msg.jpg" />
+							<span>10000</span>
+					    </section>
+					</article>
+					</a>
+				</div>
+			</li> -->
+		</ul>
+		<div class="cb"></div>
+		<!--推荐-->
+		<div data-widget="plista_widget_webApp"></div>
+	</section>
+	
+	<!--二期内容-->
+	<section class="prod_rcmdCons"  style="display:none">
+		<!-- <p class="mt15"><img src="assets/images/ad_tit.png" ></p> -->
+		<ul></ul>
+	</section>
+	<!--评论-->
+	<section class="cmt_short" style="background: rgb(255, 255, 255);">
+		<div class="channelTitle tc title-type2">
+			<span><em class="fb">COMMENT</em>评论</span>
+			<div class="line"></div>
+	    </div>
+	    <a name="comment"></a>
+	    <ul class="cmt_list"></ul>
+	    <div class="btn_more"><p>去时尚星秀APP查看更多评论</p></div>
+	</section>
+	
+    <div clas="" style="height:4.7rem"></div>
+	<!-- <div id="messdiv" class="dialog_tip" style="display:none;">
+		 <div title="关闭窗口" class="js-close">
+	        	<span>×</span>
+	        </div>
+	    <div class="messdivCons"></div>
+	</div>
+	<div id="BOX_overlay"></div> -->
+	<input type="hidden" id="share_info" />
+    </section> 
+    <section class="loadding">
+    	<div class="spinner">
+		  <img src="assets/images/loadding2.gif" height="40" width="40" />
+		</div>
+    </section>
+    <section class="news_nav" id="news_nav" style="display:none">
+			<div class="news_msg">
+			     <input type="text" class="txtMsg" placeholder="快来评论">
+				<input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg">
+			</div>
+			<ul class="icons">
+				<li>
+					<a href="#comment"><p id="btn-toMsg"><img src="assets/images/icon-nav-msg.png" /></a>
+					<div class="numArea" id="comment_num" style="display:none"></div></a></p>
+				</li>
+				<li id="zanArea">
+					<img src="assets/images/icon-nav-zan.png" class="zan" />
+					<div class="numArea" id="like_num" style="display:none"></div>
+				</li>
+		
+			</ul>
+			<div class="fr"></div>
+	</section>
+	<div id="msg_overlay" style="display:none"></div>
+	<script type="text/javascript" src="../assets/js/lib/zepto.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js?v=1"></script>
+	<script type="text/javascript" src="../assets/js/lib/echo.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="../../../applinks/openApp.js"></script>
+	<script type="text/javascript" src="assets/js/main.js?v=1"></script>
+	<script type="text/javascript">
+		$("#newsMain").on("click", ".btn_more", function() {
+			var paramsArr = new Array();
+			paramsArr['id'] = commonCla.analyzParams("new_id");
+			paramsArr['user_id'] = $("#share_info").attr("user_id");
+			paramsArr['url'] = "http://testshare.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=" + paramsArr['id'];
+	     	openApp('news', paramsArr);
+		});
+		// 头条商品
+		$("#newsMain").on("click", "section .prodCon", function() {
+			var paramsArr = new Array();
+				paramsArr['id'] =commonCla.analyzParams("new_id");
+				paramsArr['user_id'] = $("#share_info").attr("user_id");
+				paramsArr['url'] = "https://lookmetv.com/starshow5.0/news2.0/detail.html?new_id=" + paramsArr['id'];
+			openApp('news', paramsArr);
+		});
+		$("#btn_download2").bind("click", function() {
+		var paramsArr = new Array();
+		paramsArr['id'] = commonCla.analyzParams("new_id");
+		paramsArr['user_id'] = $("#share_info").attr("user_id");
+		paramsArr['url'] = "http://testshare.xingxiu.tv/starshow5.0/news/v5/detail.html?new_id=" + paramsArr['id'];
+	    openApp('news', paramsArr);
+	  });
+	</script>
+	<!--统计-->
+ 	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258627559'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1258627559' type='text/javascript'%3E%3C/script%3E"));</script>
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

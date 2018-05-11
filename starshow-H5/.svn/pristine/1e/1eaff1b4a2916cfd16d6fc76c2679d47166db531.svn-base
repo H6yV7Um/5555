@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>#思美人# 签名福利等你来拿！</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body> 
+    <section class="zero_main"> 
+    		<a href="http://t.cn/R7COgYb" id="btn_down">
+    <img src="assets/images/down-bg.png"  width="100%" />
+    </a>  
+    <section id="newContent" class="newContent">
+    	<div class="zero_con1">
+		他曾是<br/>
+《雪花女神龙》中清傲诡谲的欧阳明日，<br/>
+《古剑奇谭》中温文尔雅的欧阳少恭<br/>
+《烽火佳人》中冷面杀手周霆琛<br/>而这一次他是《思美人》中传奇悲情的楚怀王，游兮乐兮，观美人兮<br/>
+      <span class="fb">他，是乔振宇</span>
+	</div>
+	<img class="" src="assets/images/c1.jpg"  width="100%" />
+	
+	<div class="zero_con1">
+		她曾是<br/>
+《神雕侠侣》中可萌可御的李莫愁，<br/>
+《重生之名流巨星》中个性爽朗的柳艺，<br/>
+《新边城浪子》中武林第一美女马芳铃，<br/>
+而这一次她是《思美人》中敢爱敢恨的莫愁女<br/>
+      <span class="fb">她，是张馨予</span>
+	</div>
+    <img class="" src="assets/images/c2.jpg"  width="100%" />
+    <p class="zero_c2">“思美人兮心若香，思美人兮月苍凉“
+随着《思美人》的热播，剧中角色扮演者本人也再度走进大家视野，受到了越来越多的小伙伴喜爱，端午小长假到来之际，星姐为大家准备了<span style="color:#3491d9">#思美人# 主题惊喜福利</span>只要按规则参与互动，即<span style="color:#de1717">有机会获得#楚怀王# 乔振宇、#莫愁女#张馨予的签名照噢</span>
+</p>
+    <img class="" src="assets/images/award2.png"  width="100%" />
+    <img class="" src="assets/images/c3.gif"  width="100%" />
+    </section>
+
+	<!--评论-->
+	<section class="cmtArea">
+		<div class="channelTitle">
+			<a name="firstAnchor"><span><em class="fb">HCOMMENT</em>评论</span></a>
+		</div>
+		<ul class="cmt_list"></ul>
+		<p id="js-getMoreComment" class="tc">点击加载更多</p>
+		
+	</section>
+</section> 
+	<div class="sendMsg">
+		<input type="text" class="txtMsg" placeHolder="添加评论..."/>
+		<input type="button" class="btn_msgSend" value="发表" id="btn_sendMsg"/> 
+       </div>
+	<div id="messdiv" class="dialog_tip" style="display:none;">
+		 <div title="关闭窗口" class="js-close">
+        	<span>×</span>
+        </div>
+	    <div class="messdivCons"></div>
+	</div>
+	<div id="BOX_overlay"></div>
+	<div id="msg_overlay" style="display: none;"></div>
+	<input type="hidden" id="hide_total" /> 
+	<!--评论 end-->
+	<input type="hidden" id="hide_newInfo" />
+	<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/js/common/bridge.js"></script>
+
+	<script type="text/javascript" src="assets/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="assets/js/common.js"></script>
+	<script type="text/javascript" src="assets/js/zeroRange.js"></script>
+	<!-- 统计代码 -->
+	<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+/*! starshow 2016-03-25 */
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  /* font-family: lanhei;*/
+  color: #000;
+  -webkit-text-size-adjust: none;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif, "宋体";
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td,
+span {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+button strong {
+  font-size: 100%;
+  font-weight: normal;
+}
+div,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+ul {
+  list-style: none;
+}
+.clear {
+  clear: both;
+}
+.st_rank_top {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-size: 17px;
+  color: #fff;
+}
+.st_rank_top .st_rank_img {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 375px;
+}
+.st_rank_top .st_rank_img img {
+  width: 100%;
+}
+.st_rank_top .st_rank_mark {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  bottom: 4px;
+}
+.st_rank_top .st_rank_con {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 13px;
+}
+.st_rank_top .st_rank_con h3 {
+  font-size: 12px;
+}
+.st_rank_top .st_rank_con h4 {
+  font-size: 12px;
+}
+.st_rank_top .st_rank_con h3:before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-image: url('../images/star.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: -4px;
+  margin-right: 5px;
+}
+.st_rank_top .st_rank_geshu {
+  position: absolute;
+  right: 10px;
+  bottom: 13px;
+  font-size: 14px;
+  text-align: center;
+  width: 20%;
+}
+.st_rank_top .st_rank_geshu p {
+  background-image: url(../images/Ranking_red.png);
+  width: 21px;
+  height: 30px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* text-align: center; */
+  margin: 0 auto;
+}
+.st_rank_detail {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.st_rank_detail p {
+  line-height: 24px;
+}
+.st_rank_detail h2 {
+  padding-bottom: 16px;
+}
+.st_rank_detail h2 span {
+  font-size: 16px;
+  color: #eb6877;
+  font-weight: 800;
+}
+.st_rank_detail img {
+  width: 30%;
+}
+.st_rank_detail .st_prize {
+  height: 40px;
+  line-height: 40px;
+  background: #eb6877;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 60px;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.st_rank_detail .st_prize a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  display: inherit;
+}
+.st_rank_detail .st_prize a span {
+  font-size: 14px;
+  padding: 0 5px;
+  font-weight: 800;
+}
+.st_rank_detail p:nth-child(3) {
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.st_rank_detail p:nth-child(3) img {
+  vertical-align: middle;
+  width: 76px;
+  padding: 0 5px;
+}
+.st_rank_detail p:nth-child(4) {
+  line-height: 23px;
+  color: #444;
+}
+.st_rank_detail p:nth-child(5) {
+  line-height: 23px;
+  color: #444;
+}
+.st_rank_detail p:nth-child(6) {
+  color: #eb6877;
+}
+.st_rank_list {
+  background-color: #f4f4f4;
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+.st_rank_list h2 {
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+  font-size: 14px;
+  padding-left: 15px;
+  color: #444;
+}
+.st_rank_list li {
+  height: 55px;
+  line-height: 55px;
+  font-size: 13px;
+  padding-left: 15px;
+}
+.st_rank_list li span:nth-child(3) {
+  font-size: 11px;
+  color: #888;
+  display: inline-block;
+  width: 36%;
+  float: right;
+  margin-right: 20px;
+  text-align: right;
+}
+.st_rank_list li img {
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.st_rank_list li:nth-child(2n+2) {
+  background-color: #fff;
+}
+.down {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #eb6877;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+.down a {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  display: inherit;
+}
+.st_mark {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 5;
+  opacity: 0.7;
+  display: none;
+}
+.st_share {
+  position: absolute;
+  top: 0;
+  left: 44%;
+  width: 52%;
+  z-index: 10;
+  display: none;
+}
+.st_peize_list li {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  height: 222px;
+  font-size: 13px;
+  color: #888;
+  border-bottom: 1px solid #acacac;
+}
+.st_peize_list li p {
+  text-align: right;
+  line-height: 30px;
+  margin-right: 7px;
+}
+.st_peize_list li p:after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-image: url('../images/ren.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: -5px;
+  margin-left: 5px;
+}
+.st_peize_list li h2 {
+  color: #000;
+  font-size: 15px;
+  padding-left: 15px;
+  padding-top: 18px;
+}
+.st_peize_list li h3 {
+  padding-left: 15px;
+  line-height: 19px;
+}
+.st_peize_list li img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+.st_peize_list li:nth-child(2n+1) {
+  border-right: 1px solid #acacac;
+}
+@media screen and (min-width: 410px) {
+  .st_peize_list li {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .st_peize_list li {
+    height: 203px;
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <title>欢迎来到拉阔校草！</title>
+    <link rel="stylesheet" href="../css/OK.css" />
+    <script src="../js/rem.js"></script>
+
+</head>
+<body>
+<div class="box">
+    <div class="banner"><img src="../images/banner_new.jpg" /></div>
+    <div class="banner_di">
+        <div class="main">
+            <div class="mian_img"><img src="../images/baoming3_07.png" /></div>
+            <div class="sub">审核通过</div>
+            <p>我们将与你电话联络档期，<br/>请保持电话畅通。</p>
+        </div>
+        <div class="ok">完成</div>
+    </div>
+</div>
+<script type="text/javascript" src="../../../tj.php"></script>
+</body>
+</html>

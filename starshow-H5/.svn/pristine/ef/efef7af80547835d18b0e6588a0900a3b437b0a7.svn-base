@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>collection Auction international</title>
+	<link rel="stylesheet" type="text/css" href="assets/js/lib/swiper/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cangp.css">
+</head>
+<body>
+	<div class="cangp_header"  id="js_header"></div>
+	<div class="cangp_leader">
+		<span><a href="index.html">collection Auction international</a></span>&gt;
+		<span><a href="expertLive.html?mt=2">Experts&live</a></span>&gt;
+		<span class="js_live_tit"></span>
+	</div>
+    <div class="expert_main">
+    	<div class="player" id="experts_player">
+    		
+    	</div>
+		<div class="col_grey cla_tips">免责声明：本内容可能转载自其它媒体，转载目的在于传递更多信息，并不代表本网赞同其观点和对其真实性负责。 如因作品内容、版权和其它问题需要同本网联系的，请在30日内进行。</div>
+    	<div class="cangp_tit_left" id="js_title">
+			<span class="title_left"><span class="fb"> </span> MORE</span>
+			
+		</div>
+		<ul class="expert_liveList">
+			<!-- <li>
+				<div class="imgCon">
+					<img src="assets/images/pic2.png" />
+					<span class="auc_status">拍卖中</span>
+				</div>
+				<div class="auc_desc">
+					<p>水面卜文华本劣质太，恣意畅快之中</p>
+				    <div class="btn_list">
+				    	<div class="user_header fl">
+				    		<img src="assets/images/icon-head.png" class="icon_header"/>
+				    		<img src="assets/images/icon-roles1.png"  class="icon_role"/>
+				    		<span class="name">名字</span>
+				    	</div>
+				    	<div class="watch_num fr">观看1234次</div>
+				    </div>
+				</div>
+			
+			</li> -->
+			
+
+		</ul>
+		
+		<!--END-->
+
+
+    </div>
+    
+    <div class="cangp_footer" id="js_footer"></div>
+    <input type="hidden" id="hide_cangp" page="expertDetail">
+	<script type="text/javascript" src="assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/swiper/swiper-3.4.0.min.js"></script>
+	<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js" charset="utf-8"></script>
+
+	<script type="text/javascript" src="assets/js/lib/webim/webim.js"></script>
+	<script type="text/javascript" src="assets/js/lib/webim/json2.js"></script>
+	<script type="text/javascript" src="https://tls.qcloud.com/libs/api.min.js"></script>
+	<script type="text/javascript" src="assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/api/common.js"></script>
+	<script type="text/javascript" src="assets/api/cangp.js"></script>
+</body>
+</html>

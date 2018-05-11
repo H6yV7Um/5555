@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <meta charset="UTF-8">
+          <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+          <meta name="apple-mobile-web-app-capable" content="yes">
+          <meta name="format-detection" content="telephone=no, email=no">
+        <title>活动详情页</title>
+        <link rel="stylesheet" type="text/css" href="../public/css/body.css?v=201603181534">
+    </head>
+    <body>
+        <div class="st_myorder_warp">
+            <ul>
+              <!--   <li>
+                    <ul class="st_myorder_inner">
+                        <li class="list_l"><img src="../public/images/body3.png"></li>
+                        <li class="list_r">
+                            <h3>时尚纹身艺术展 <span>已支付</span></h3>
+                            <p><label>数量：</label>通票3张 </p>
+                            <p><label>金额：</label>222</p>
+                            <p><label>地址：</label>北京市海淀区五棵松体育馆北京市海淀区五棵松体育馆</p>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                </li>
+                 <li>
+                    <a href="">
+                         <ul class="st_myorder_inner">
+                        <li class="list_l"><img src="../public/images/body3.png"></li>
+                        <li class="list_r">
+                            <h3>时尚纹身艺术展 <span>待支付</span></h3>
+                            <p><label>数量：</label>通票3张 </p>
+                            <p><label>金额：</label>22222222</p>
+                            <p><label>地址：</label>北京市海淀区五棵松体育馆北京市海淀区五棵松体育馆</p>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                    </a>
+                   
+                </li> -->
+            </ul>
+        </div>
+    
+        <script type="text/javascript" src="../public/js/zepto.js"></script>
+        <script type="text/javascript" src="../public/js/bodyart.js?v=201603181534"></script>
+        <script src="../public/js/jweixin-1.0.0.js"></script>
+         <script src="../public/js/common.js"></script>
+        <script type="text/javascript">
+        window.onload=function(){
+            var t_urlpath="http://testapi.xingxiu.tv/";
+            var o_urlpath="http://api.xingxiu.tv/";
+            // var order_id = location.search.replace(/\?order_id=(\d+).*/,'$1');
+            var uid = location.search.slice(location.search.indexOf("&uid") + 5).split("&")[0];
+            console.log(uid);
+            //var uid="114655";
+            var lUrl=o_urlpath+'index.php?app=mobile&mod=Activity&act=tattoo_order_list&uid='+uid+'&t='+Math.random()*1000+'&returntype=jsonp&callback=?'
+            getTicketList(lUrl);
+        }
+        </script>
+    </body>
+</html>

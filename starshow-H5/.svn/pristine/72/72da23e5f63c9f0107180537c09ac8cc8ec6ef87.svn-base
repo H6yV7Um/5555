@@ -1,0 +1,32 @@
+#score {
+	height: 100%;
+	width: 100%;
+}
+input {
+	height: 40px;
+	width: 100%;
+	background: #666;
+	color: #fff;
+	text-align: center;
+	border: none;
+}
+::-webkit-input-placeholder {
+	color: #fff;
+}
+:-moz-placeholder {
+	color: #fff;
+}
+::-moz-placeholder {
+	color: #fff;
+}
+:-ms-input-placeholder {
+	color: #fff;
+}
+#btn {
+	width: 25%;
+	text-align: center;
+	margin-left: 38%;
+}
+#score_end {
+	display: none;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+	<title>Price increase rules</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/echo.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div class="helps mt20">
+		<p>When the auction is sold, the auction will be made according to the corresponding markup. <br/><span class="col_grey">Namely: when buying a house, the price must equal to at least the current price of the auction. <br />
+		Namely: system automatic ladder pricing; </span></p>
+		<p class="col_red">Note: the price of the buyer can be higher than the current price of the auction, and the system will automatically adjust the markup in accordance with the new current price. </p>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="mt20">
+			<tr align="center">
+				<td>Current price</td>
+				<td>Fare increase</td>
+			</tr>
+			<tr align="center">
+				<td>0</td>
+				<td>10</td>
+			</tr>
+			<tr align="center">
+				<td>100</td>
+				<td>20</td>
+			</tr>
+			<tr align="center">
+				<td>500</td>
+				<td>50</td>
+			</tr>
+			<tr align="center">
+				<td>1000</td>
+				<td>100</td>
+			</tr>
+			<tr align="center">
+				<td>5000</td>
+				<td>200</td>
+			</tr>
+			<tr align="center">
+				<td>10000</td>
+				<td>500</td>
+			</tr>
+			<tr align="center">
+				<td>50000</td>
+				<td>1000</td>
+			</tr>
+			<tr align="center">
+				<td>100000</td>
+				<td>10000</td>
+			</tr>
+			<tr align="center">
+				<td>1000000</td>
+				<td>100000</td>
+			</tr>
+</table>
+	</div>
+</body>
+</html>

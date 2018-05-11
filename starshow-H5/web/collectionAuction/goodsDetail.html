@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>藏拍</title>
+	<link rel="stylesheet" type="text/css" href="assets/js/lib/swiper/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/cangp.css">
+</head>
+<body>
+
+	<div class="cangp_header"  id="js_header"></div>
+	<div class="cangp_leader">
+		<span><a href="index.html">藏拍</a></span>&gt;
+		<span><a href="auctions.html?mt=1">精品拍卖</a></span>&gt;
+		<span class="js_goods_tit"></span>
+	</div>
+	<div class="goodsMain">
+		<div class="cangp_con2">
+			<div class="con2_left2">
+				<div class="goods_focus">
+					<img src="assets/images/defalut_cover.png"  class="goods_banner"/>
+					<div class="js_goods_video"></div>
+					<!--title-->
+					<div class="goods_bg"></div>
+					<div class="goods_tit"></div>
+					<!--pagenation-->
+					<div class="g_pagination">
+						<ul class="js_pagination">
+							<!-- <li>
+								<img src="assets/images/pic2.png" />
+							</li> -->
+							
+						</ul>
+					</div>
+				</div>
+				<!--goods focus end-->
+				<div class="tc mt20 mb20"><a href="auctionCerti.html?mt=4"><img src="assets/images/progress2.png" /></a></div>
+				<div class="desc_menu">
+					<ul class="js_tab">
+						<li class="cur">藏品介绍</li>
+						<li>出价记录</li>
+						<li>服务保障</li>
+					</ul>
+				</div>
+				<div class="tab_con con1">
+					<div class="friend_tip">
+						<p>友情提醒：<br/>
+						1、真伪：送拍机构的企业资质已审核，但拍品介绍（图片、文字、视频等）及拍品资质文件（来源证明、鉴定证书等）均由机构自行发布并上传，所有拍品相关信息由送拍机构自行承担相应担保责任；<br/>
+						2、售后：拍品多为孤品性质类商品，“7天退货”服务为卖家可选服务保障，不强制送拍机构提供，竞拍前请充分考虑；
+					   </p>
+					</div>
+					<div class="coll_params">
+						<h1>商品名称:<span></span></h1>
+						<ul class="mt10">
+							<!--<li>
+								高度:<span>18cm</span>
+							</li>
+							<li>
+								口径:<span>48cm</span>
+							</li>
+							<li>
+								地径:<span>28cm</span>
+							</li>
+							<li>
+								年代:<span>明代</span>
+							</li>
+							<li>
+								品相:<span>18cm</span>
+							</li>-->
+
+
+						</ul>
+					</div>
+					<div class="cb"></div>
+					<div class="collection_con js_collection_con">
+					
+					</div>
+				</div>
+
+				<div class="tab_con con2 offersList" style="display:none">
+					<h1>出价记录(<span class="offers_num"></span>次)</h1>
+					<table>
+						<thead>
+							<tr>
+								<td>状态</td>
+								<td>竞拍人</td>
+								<td>价格</td>
+								<td>时间</td>
+							</tr>
+						</thead>
+						<tbody>
+							
+						</tbody>
+					</table>
+				</div>
+				<div class="tab_con con3" style="display:none">
+					<p>服务保障 </p>
+					<p><span class="about_tit">送拍机构服务及承诺 </span></p>
+					<p>送拍机构承诺如实描述拍品； </p>
+					<p>送拍机构成交不卖，则将按照平台方规则进行惩罚，用户将获得拍品保证金最高五倍的赔偿（汽车/房产品类最高一倍）作为赔付给竞买成功人； </p>
+					<p>关于运费：竞拍成功后，由送拍机构负责拍品后续交易之相关事宜。 </p>
+					<p>关于拍卖行佣金收取：依据《中华人民共和国拍卖法》的规定，竞买人在竞拍成功后，需根据拍卖行约定（商品页面描述佣金额），缴纳约定比例、数额的佣金。 </p>
+					<p><span class="about_tit">拍卖会基础服务</span></p>
+					<p><span class="col_orange">如实描述承诺</span> <br />
+					  送拍机构承诺如实描述，一旦发现描述不符的拍品，买家可在交易成功后指定期限内向拍卖会投诉送拍机构 </p>
+					<p><span class="col_orange">保证金保障 </span><br />
+					  送拍机构入驻拍卖会需缴纳较高的经营保证金，买家维权有保障 </p>
+					<p><span class="col_orange">售后服务保障 </span><br />
+					  送拍机构承诺提供全面的售后服务，买家在竞拍过程中及竞拍成功后，如遇售中或售后问题，可以要求拍卖会介入</p>
+				</div>
+			</div>
+			<div class="con2_right2">
+				<div class="goodsInfo">
+					<h1><span class="priceName"></span><span class="curPrice"></span></h1>
+					<ul>
+						<li>起拍价<span class="startPrice"></span></li>
+						<li>保证金<span class="bail"></span></li>
+						<li>围观<span class="col_orange watch_num"></span>次</li>
+						<li>出价<span class="col_orange offers_num"></span>次</li>
+					</ul>
+					<div class="goods_seller"></div>
+					<div class="tc"><input type="button" value="预交保证金" class="js_dialog btn_pay"></div>
+					<!-- <div class="mentions">未能成功拍下藏品，保证金则在拍卖结束后退还</div> -->
+				</div>
+				<div class="cangp_tit_left">
+					<span class="title_left"><span class="fb">专家鉴定 </span>/ EXPERT</span>
+					
+				</div>
+				<ul class="expertMsgList">
+					<!-- <li>
+						<div class="user_header">
+									    		<img src="assets/images/icon-head.png" class="icon_header"/>
+									    		<img src="assets/images/icon-roles1.png"  class="icon_role"/>
+									    		<span class="name">名字</span>
+									    	</div>
+									    	<h1 class="msg_tit">与质细腻</h1>
+									    	<div class="msg_con">
+									    		龙是古代中国灵异动物，在古代龙象征帝王，也用来指至高无典雅返璞归真之韵味，让人心怡神悦，爱不释手
+									    	</div>
+					</li> -->
+					
+				</ul>
+				<div class="cangp_tit_left">
+					<span class="title_left"><span class="fb">热门藏品 </span>/ HOT</span>
+				</div>
+				<div class="cangp_hot">
+					<div class="swiper-container cangp_list">
+					    <div class="swiper-wrapper"></div>
+					        
+					    <!-- 如果需要分页器 -->
+					    <div class="swiper-pagination"></div>
+					    
+					    <!-- 如果需要导航按钮 -->
+					    <div class="swiper-button-prev"></div>
+					    <div class="swiper-button-next"></div>
+		
+					
+				</div>
+
+
+
+			</div>
+		</div>
+
+	</div>
+	<div class="cb"></div>
+	<div class="tc cangp_bg_white mt20"><img src="assets/images/promise.png" ></div>
+    <div class="cangp_footer" id="js_footer"></div>
+    <input type="hidden" id="hide_cangp" page="goodsDetail">
+	<script type="text/javascript" src="assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/swiper/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript" src="assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="assets/js/common/common.js"></script>
+	<script type="text/javascript" src="assets/api/common.js"></script>
+	<script type="text/javascript" src="assets/api/cangp.js"></script>
+	</body>
+</html>

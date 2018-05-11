@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时尚星秀-让你更时尚，让你更闪耀！</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"  />
+	<link rel="stylesheet" type="text/css" href="assets/css/common.css">	
+	<link rel="stylesheet" type="text/css" href="assets/css/css.css">
+</head>
+<body>
+ <div class="xingx_mains">
+ 	<!--头部-->
+  <div class="xingx_header"></div>
+ 	<!--内容-->
+ 	<div class="xingx_cons mt60">
+ 		<div class="xingx_crumb">
+    			头条&gt;专题详情
+    	</div>
+    	<div class="theme_main">
+    		<div class="theme_header">
+         <img src="assets/images/bannerDefault.png" class="fl theme_cover" id="js-themeCover"/>  
+         <div class="fl theme_desc">
+           <h1>....</h1>
+           <div class="desc_con">...</div>
+           <div class="icon_list">
+             <img src="assets/images/icon/icon-see.png" width="15"/><span class="theme_watch" id="js-watch">0</span>
+             <div class="share_plat">
+              <div class="share_con share_sina"><img src="assets/images/icon/icon-sina2.png" /></div>
+              <div class="share_con qr">
+                <img src="assets/images/icon/icon-wechat2.png" />
+                <div class="tips">
+                  <script type="text/javascript">/* 2017/05/16 14:36 */var _qrContent='',_qrLogo='',_qrWidth=100,_qrHeight=100,_qrType = 'auto';if(!_qrContent) var _qrContent =escape(document.location.href);document.write(unescape("%3Cscript src='http://qrcode.leipi.org/js.html?qw="+_qrWidth+"&qh="+_qrHeight+"&qt="+_qrType+"&qc="+escape(_qrContent)+"&ql="+escape(_qrLogo)+"' type='text/javascript'%3E%3C/script%3E"));</script>
+                </div>
+              </div>
+              <div class="share_con share_qq"><img src="assets/images/icon/icon-qq.png" /></div>
+            </div>
+           </div>
+         </div>
+        </div>
+        <div class="typeList">
+          <ul  id="js-theme-tit">
+            <li class="cur" type="news">头条资讯<img class="icon_cur" src="assets/images/icon/icon-bottom-dist.png"></li>
+            <li type="videos">视频资讯<img class="icon_cur" src="assets/images/icon/icon-bottom-dist.png" style="display:none"></li>
+            <li  type="lives">直播<img class="icon_cur" src="assets/images/icon/icon-bottom-dist.png" style="display:none"></li>
+            
+          </ul>
+        </div>
+        <div class="theme_lists xingx_list list4">
+          <ul class="lists" id="theme_list1">
+            
+          </ul>
+          <ul class="lists" id="theme_list2" style="display:none">
+            
+          </ul>
+          <ul class="lists" id="theme_list3" style="display:none">
+            
+          </ul>
+          <div class="moreData" style="display:none">暂无数据</div>
+        </div>
+
+    	</div>
+	</div>
+ 	<!--尾部-->
+  <div class="xingx_footer" >
+    <div class="xingx_footer_con" id="xingx_footer"></div>
+  </div>
+
+ </div>
+ <input type="hidden" id="hide_info" pageType="theme" />
+ <script type="text/javascript" src="assets/js/jquery-1.8.2.min.js"></script>
+ <script type="text/javascript" src="assets/js/common.js"></script>
+ <script type="text/javascript" src="assets/js/js.js"></script>
+</body>
+</html>

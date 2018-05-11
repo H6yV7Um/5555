@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时尚星秀广告投放平台</title>
+    <link rel="stylesheet" type="text/css" href="assets/common/js/lib/sweetAlert/sweet-alert.css">
+    <link rel="stylesheet" type="text/css" href="assets/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/api/css/index.css">
+</head>
+<body>
+    <div id="headBox"></div>
+    <div id="loginBox" class="js-loginBox" style="display: none;"></div>
+    <div id="custom-banner">
+        <div>
+            <form id="info-box">
+                <h2>留下您的联系方式</h2>
+                <p>我们会给您配备专业营销人员与您联系</p>
+                <ul class="info-form custom-form">
+                    <li>
+                        <i class="cp-name"></i>
+                        <input type="text" id="custom-company" name="cpName" class="input-text"
+                            placeholder="个体或企业名称" />
+                        <p class="error-info">请输入正确的企业或个体名称</p>
+                    </li>
+                    <li>
+                        <i class="name"></i>
+                        <input type="text" id="custom-name" name="name" class="input-text"
+                            placeholder="联系人" />
+                        <p class="error-info">联系人</p>
+                    </li>
+                    <li>
+                        <i class="tel"></i>
+                        <input type="text" id="custom-tel" name="tel" class="input-tel" placeholder="手机号"
+                        />
+                        <p class="error-info">请填写正确的联系人手机号码</p>
+                    </li>
+                    <li class="inspect readonly">
+                        <input type="text" id="custom-validateCode" name="validateCode" class="tc-input-text noborder"
+                            placeholder="验证码" />
+                        <button type="button" id="getCustomCode" class="xx-btn blue" disabled>获取验证码</button>
+                        <p class="error-info">请输入正确的验证码</p>
+                    </li>
+                </ul>
+                <span id="custom-submit" type="submit" class="xx-btn blue">确定</span>
+            </form>
+        </div>
+    </div>
+    <div id="cooperation">
+        <div class="cooperation">
+            <h2 class="coop-media">合作媒体</h2>
+            <div class="connect-pic">
+                <a href="http://www.aili.com/" target="_blank">
+                    <img src="assets/images/logo/c-08.png" width="235" height="93">
+                </a>
+                <a href="http://www.iqiyi.com/" target="_blank">
+                    <img src="assets/images/logo/c-09.png" width="235" height="93">
+                </a>
+                <a href="http://www.youku.com/" target="_blank">
+                    <img src="assets/images/logo/c-10.png" width="235" height="93">
+                </a>
+                <a href="https://v.qq.com/" target="_blank">
+                    <img src="assets/images/logo/c-11.png" width="235" height="93">
+                </a>
+                <a href="http://www.baofeng.com/" target="_blank">
+                    <img src="assets/images/logo/c-12.png" width="235" height="93">
+                </a>
+                <a href="http://www.onlylady.com/" target="_blank">
+                    <img src="assets/images/logo/c-13.png" width="235" height="93">
+                </a>
+                <a href="http://www.btime.com/btv" target="_blank">
+                    <img src="assets/images/logo/c-14.png" width="235" height="93">
+                </a>
+                <a href="http://life.chinanews.com/" target="_blank">
+                    <img src="assets/images/logo/c-15.png" width="235" height="93">
+                </a>
+                <a href="http://fashion.sina.com.cn/" target="_blank">
+                    <img src="assets/images/logo/1-16.png" width="235" height="93">
+                </a>
+                <a href="http://www.tudou.com/" target="_blank">
+                    <img src="assets/images/logo/1-17.png" width="235" height="93">
+                </a>
+                <a href="http://lady.qq.com/emo/emotio.shtml" target="_blank">
+                    <img src="assets/images/logo/c-18.png" width="235" height="93">
+                </a>
+                <a href="https://www.myzaker.com/" target="_blank">
+                    <img src="assets/images/logo/c-19.png" width="235" height="93">
+                </a>
+                <a href="http://fashion.sohu.com/" target="_blank">
+                    <img src="assets/images/logo/c-20.png" width="235" height="93">
+                </a>
+                <a href="http://www.meipai.com/" target="_blank">
+                    <img src="assets/images/logo/c-21.png" width="235" height="93">
+                </a>
+                <a href="http://ent.ifeng.com/" target="_blank">
+                    <img src="assets/images/logo/c-23.png" width="235" height="93">
+                </a>
+                <a href="https://www.yidianzixun.com/" target="_blank">
+                    <img src="assets/images/logo/c-24.png" width="235" height="93">
+                </a>
+                <a href="http://www.mojing.cn/" target="_blank">
+                    <img src="assets/images/logo/c-25.png" width="235" height="93">
+                </a>
+                <a href="https://www.bilibili.com/" target="_blank">
+                    <img src="assets/images/logo/c-26.png" width="235" height="93">
+                </a>
+                <a href="https://www.toutiao.com/" target="_blank">
+                    <img src="assets/images/logo/c-27.png" width="235" height="93">
+                </a>
+                <a href="http://www.yoka.com/" target="_blank">
+                    <img src="assets/images/logo/c-28.png" width="235" height="93">
+                </a>
+                <a href="http://www.xinhuanet.com/" target="_blank">
+                    <img src="assets/images/logo/c-29.png" width="235" height="93">
+                </a>
+                <a href="javascript:;">
+                    <img src="assets/images/logo/wangyi.png">
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div id="footBox"></div>
+</body>
+<script type="text/javascript" src="assets/common/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+<script type="text/javascript" src="assets/common/js/common.js"></script>
+<script type="text/javascript" src="assets/api/js/index.js"></script>
+<script type="text/javascript" src="assets/api/js/custom.js"></script>
+</html>

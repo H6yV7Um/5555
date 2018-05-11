@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时尚星秀广告投放平台</title>
+    <link rel="stylesheet" type="text/css" href="assets/common/css/common.css">
+    <link rel="stylesheet" type="text/css" href="assets/api/css/index.css">
+</head>
+
+<body>
+    <div id="headBox"></div>
+    <div id="loginBox" class="js-loginBox" style="display: none;"></div>
+    <div id="scene-wrap">
+        <!-- 1 -->
+        <div class="scene-bg">
+            <div class="scene-item w">
+                <div class="scene-pic scene-mob">
+                    <div class="scene-paper"><img src="assets/images/scene/s1-2.jpg" width="100%" height="100%"></div>
+                    <div class="s1-1"><img src="assets/images/scene/s1-1.gif" width="144px"></div>
+                    <div class="s1-3"><video src="assets/video/zuizhong.mp4" width="100%" autoplay="autoplay" loop="loop" data-video="0"></video></div>
+                </div>
+                <div class="scene-text">
+                    <h2>1.闪屏广告</h2>
+                    <p>当用户打开时尚星秀客户端时，您的广告将以全屏形态第一时间抢鲜触达用户的强曝光广告位。</p>
+                    <p>展示类型：图片、视频、动画</p>
+                    <p>跳转：原生头条、原生视频、落地页、无点击</p>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="scene-bg">
+            <div class="scene-item scene-ban w pic-right">
+                <div class="scene-pic scene-mob">
+                    <div class="scene-paper">
+                        <div class="paper-box">
+                            <div class="img-outer">
+                                <img class="click2" src="assets/images/scene/s2.jpg" />     
+                            </div>
+                            <img class="click-btn clickBtn2" src="assets/images/click.png" alt="">    
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <h2>2.banner位广告</h2>
+                    <p>当用户打开时尚星秀客户端时，您的广告将以主推荐位展示，曝光率仅次于启动页。</p>
+                    <p>展示类型：图片</p>
+                    <p>跳转：原生头条、原生视频、落地页、无跳转</p>
+                </div>
+            </div>
+        </div>
+        <!-- 3  -->
+        <div class="scene-bg">
+            <div class="scene-item scene-tj w">
+                <div class="scene-pic scene-mob">
+                    <div class="scene-paper" style="background-image:url(assets/images/scene/s3-1.png);">
+                        <div class="mask"></div>
+                        <div>
+                            <div class="bg-decor">
+                                <div class="bg-shade"></div>
+                                <div class="bg-capt">
+                                    <img src="assets/images/scene/s3-2.jpg">
+                                </div>
+                            </div>
+                            <div class="bg-decor"  style=" background:red;">
+                                <div class="bg-shade"></div>
+                                <div class="bg-capt">
+                                    <img src="assets/images/scene/s3-3.jpg">
+                                </div>
+                            </div>              
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <h2>3.首页信息流广告</h2>
+                    <p>根据展现重点选择多种类型来吸引用户注意，从信息流中脱颖而出。</p>
+                    <p>展示类型：单图、视频、组图</p>
+                    <p>跳转：原生头条、原生视频、落地页、无跳转</p>
+                </div>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="scene-bg">
+            <div class="scene-item scene-nq w pic-right">
+                <div class="scene-pic scene-mob">
+                    <div class="scene-paper">
+                        <div class="paper-box">
+                            <div class="img-outer">
+                                <img class="click2" src="assets/images/scene/s4.jpg" />
+                            </div>
+                            <img class="click-btn clickBtn2" src="assets/images/click.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <h2>4.详情底部插件广告</h2>
+                    <p>展现在文章详情页的广告，适宜影响喜爱消费娱乐内容，处于认知放松状态的目标受众。</p>
+                    <p>展示类型：图片，动画</p>
+                    <p>跳转：无跳转、落地页</p>
+                </div>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="scene-bg">
+            <div class="scene-item scene-sp w">
+                <div class="scene-pic scene-mob">
+                    <div class="scene-paper">
+                        <div class="paper-box">
+                            <div class="img-outer">
+                                <img class="click2" src="assets/images/scene/s5.jpg" />
+                            </div>
+                            <img class="click-btn clickBtn2" src="assets/images/click.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <h2>5.原生视频</h2>
+                    <p>最大限度融合原生视频，提高用户点击率，亦可定制</p>
+                    <p>展示类型：图片、动图</p>
+                    <p>跳转：原生视频页面</p>
+                </div>
+            </div>
+        </div>
+        <!-- 6 -->
+        <div class="scene-bg">
+            <div class="scene-item scene-tp w pic-right">
+                <div class="scene-pic scene-mob">
+                    <div class="scene-paper">
+                        <div class="paper-box">
+                            <div class="img-outer">
+                                <img class="click2" src="assets/images/scene/s6.jpg" />
+                            </div>
+                            <img class="click-btn clickBtn2" src="assets/images/click.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <h2>6.视频贴片</h2>
+                    <p>穿插在视频播放中，增加广告曝光率和点击率。</p>
+                    <p>展示类型：图片、动图</p>
+                    <p>跳转：无跳转、落地页</p>
+                </div>
+            </div>
+        </div>
+        <!-- 7 -->
+        <div class="scene-bg">
+            <div class="scene-item scene-hd w">
+                <div class="scene-pic scene-mob">
+                    <div class="scene-paper">
+                        <div class="paper-box">
+                            <div class="img-outer">
+                                <img class="click2" src="assets/images/scene/s7.jpg" />
+                            </div>
+                            <img class="click-btn clickBtn2" src="assets/images/click.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <h2>7.活动定制策划</h2>
+                    <p>时尚星秀致力于将<b>明星时尚</b>与<b>IP活动</b>紧密结合，打造最具影响力的强IP项目。先后成功运营“时尚星秀年度人物盛典”、“向上马拉松中国公开赛”等IP活动，共计吸引<b>近200位明星大咖、近万名粉丝</b>及运动爱好者参与其中，线上线下全面推广，影响用户年轻、健康、时尚的生活态度。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 8 -->
+        <div class="scene-bg">
+            <div class="scene-item scene-pcbg w pic-right">
+                <div class="scene-pic scene-pc">
+                    <div class="scene-paper" style="background-image:url(assets/images/scene/s8-1.png);">
+                        <div class="mask"></div>
+                        <div>
+                            <div class="bg-decor">
+                                <div class="bg-shade"></div>
+                                <div class="bg-capt">
+                                    <img src="assets/images/scene/s8-2.jpg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <h2>8.网站banner广告</h2>
+                    <p>广告占据首尔核心流量位，用户浏览时占据用户高注意力浓度。</p>
+                    <p>展示类型：图片，动画</p>
+                    <p>跳转：原生视频、原生文章、落地页、无跳转</p>
+                </div>
+            </div>
+        </div>
+        <!-- 9 -->
+        <div class="scene-bg">
+            <div class="scene-item scene-sy w">
+                <div class="scene-pic scene-pc">
+                    <div class="scene-paper" style="background-image:url(assets/images/scene/s9-1.png);">
+                        <div class="mask"></div>
+                        <div>
+                            <div class="bg-decor">
+                                <div class="bg-shade"></div>
+                                <div class="bg-capt">
+                                    <img src="assets/images/scene/s10-2.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <h2>9.PC首页信息流广告</h2>
+                    <p>广告位于视频推荐内容下方，通过大图形式更直观的展现广告内容，同时获得用户更多注意力。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 10 -->
+        <div class="scene-bg">
+            <div class="scene-item scene-pclive w pic-right">
+                <div class="scene-pic scene-pc">
+                    <div class="scene-paper" style="background-image:url(assets/images/scene/s10-1.png);">
+                        <div class="mask"></div>
+                        <div>
+                            <div class="bg-decor">
+                                <div class="bg-shade"></div>
+                                <div class="bg-capt">
+                                    <img src="assets/images/scene/s10-2.png">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scene-text">
+                    <h2>10.PC视频/直播详情</h2>
+                    <p>广告位于视频推荐详情页内容上方，适宜影响喜爱消费娱乐内容，处于认知放松状态的目标受众。</p>
+                </div>
+            </div>
+        </div>
+        <!-- 11 -->
+        <div class="scene-bg">
+            <div class="scene-item scene-zz w">
+                <div class="scene-pic scene-magazine">
+                    <img src="assets/images/scene/s11.jpg" width="457">
+                </div>
+                <div class="scene-text">
+                    <h2>11.刊例发行</h2>
+                    <p>传统纸媒式宣传，适合品牌认知推广。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footBox"></div>
+</body>
+<script type="text/javascript" src="assets/common/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="assets/common/js/lib/sweetAlert/sweet-alert.min.js"></script>
+<script type="text/javascript" src="assets/common/js/common.js"></script>
+<script type="text/javascript" src="assets/api/js/index.js"></script>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+                //获取页面滚走的距离
+            var sTop = $(document).scrollTop();
+                var index = 0;
+                $(".scene-bg").each(function () {
+                    if (($(this).offset().top - sTop) < $(this).height() / 2) {
+                        index = $(this).index();
+                    }
+                
+                })
+            $(".scene-item").eq(index).addClass("action")
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<meta name="apple-itunes-app" content="app-id=903692043" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>奖品兑换</title>
+<link rel="stylesheet" type="text/css" href="../public/css/rank.css">
+</head>
+<body>
+<div class="st_peize_list">
+  <ul>
+  </ul>
+  <div class="clear"></div>
+</div>
+<script src="../public/js/zepto.js"></script> 
+<script src="../public/js/rank.js"></script> 
+<script src="../public/js/jweixin-1.0.0.js"></script> 
+<script src="../public/js/common.js"></script> 
+<script type="text/javascript">
+      $(function(){
+        var p_url=host+"/prize"
+        getPrize(p_url);
+      })
+     </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=">
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, maximum-scale=1">	
+    <meta name="format-detection" content="telephone=no" />
+		<title>向上马拉松</title>
+		<link rel="stylesheet" type="text/css" href="style/css.css"/>
+		<link rel="stylesheet" type="text/css" href="style/index.css"/>
+	</head>
+	
+	<body>
+		<div id="marathon_box">
+			<div class="section">
+				<div class="banner">
+					<div class="banner_in01"><img src="images/my-1.png" width="100%"></div>
+					<div class="banner_in02"><img src="images/mls_02.png" width="100%"/></div>
+					<div class="detail"><img src="images/mls_03.png" width="100%"/></div>
+					<div class="banner_in03"><img src="images/mls_04.png" width="100%"/></div>
+					<div class="banner_enter"><img src="images/mls_05.png" width="100%"/></div>
+					<div class="banner_in04"><img src="images/mls_06.png" width="100%"/></div>
+					<div class="banner_score"><img src="images/mls_07.png" width="100%"/></div>
+					<div class="banner_in05"><img src="images/mls_08.png" width="100%"/></div>
+					<div class="banner_video"><img src="images/mls_09.png" width="100%"/></div>
+					<div class="banner_"><img src="images/mls-11_02.png" width="100%"/></div>
+				</div>
+				
+			</div>
+		</div>
+		<script type="text/javascript" src="script/jquery-1.11.3.js"></script>
+		<script type="text/javascript">
+			$(".detail").on("click",function(){
+    			location.href='views/detail.html';
+			});
+			$(".banner_enter").on("click",function(){
+    			location.href='views/enter.html';
+			});
+			$(".banner_score").on("click",function(){
+    			location.href='views/score.html';
+			});
+			$(".banner_video").on("click",function(){
+				location.href='views/video.html';
+			});
+		</script>
+	</body>
+</html>

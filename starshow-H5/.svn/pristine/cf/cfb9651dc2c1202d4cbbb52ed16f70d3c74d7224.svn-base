@@ -1,0 +1,174 @@
+@charset "utf-8";
+html{color:#000;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,
+textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;
+  font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+input[type="button"], input[type="submit"], input[type="reset"],input[type="text"],input[type="search"],select{
+  -webkit-appearance: none;
+  outline: 0;
+  -webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+textarea {-webkit-appearance:none;outline:0;}
+html,body{ margin:0px; min-height:100%;font-family: "Microsoft YaHei"}
+
+html {font-size: 20px;}
+img{vertical-align: middle}
+a{text-decoration: none;}
+
+.box{
+  width: 100%;
+  .banner{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  .one{
+    width: 86%;
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 1.3rem;
+    img{
+      width: 100%;
+    }
+    .lc{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      span{
+        display: block;
+        width: 16%;
+        font-size: 0.05rem;
+      }
+    }
+  }
+  .banner_di{
+    width: 100%;
+    height: 100%;
+    background: url("../images/baoming.png") no-repeat 0 0;
+    background-size: 100% 100%;
+  }
+  .form{
+    width: 86%;
+    margin: 0 auto;
+    font-size: 0.6rem;
+    color: #85205A;
+
+    .di{
+      width: 100%;
+      height: 1.2rem;
+      line-height: 1.2rem;
+      margin-top: 0.7rem;
+      border: 0.12rem solid #4D173A;
+      -webkit-box-shadow: #666 0px 0px 0.2rem;
+      -moz-box-shadow: #666 0px 0px 0.2rem;
+      box-shadow: #666 0px 0px 0.2rem;
+      text-indent: 0.5rem;
+    }
+    input{
+      width: 70%;
+      height: 1rem;
+      background: none;
+      border: none;
+      color: #999;
+    }
+    .diqu{
+      width: 100%;
+      select{
+        width: 70%;
+        background: url("../images/baoming_07.png") no-repeat 8.8rem 0.2rem;
+        background-size: 9%;
+        opacity: 0.5;
+        border: none;
+        color: #999;
+        option{
+          background: rgba(62,143,164,.3);
+          border: 0.12rem solid #104E5A;
+          -webkit-box-shadow: #666 0px 0px 10px;
+          -moz-box-shadow: #666 0px 0px 10px;
+          box-shadow: #666 0px 0px 10px;
+
+        }
+      }
+    }
+
+    .jianjie{
+      height: 5.2rem;
+      #intro{
+        background: none;
+        border: none;
+        color: #999;
+      }
+    }
+    .tel{
+      width: 100%;
+      input{
+        width: 50%;
+      }
+    }
+
+    #sms_token{
+      width: 30%;
+
+    }
+
+    .btn{
+      width: 45%;
+      margin: 1rem auto;
+      input{
+        text-indent: 0;
+        width: 100%;
+        height: 1.6rem;
+        background: url("../images/baoming_14.png") no-repeat 0 0;
+        background-size: 100% 100%;
+        border: none;
+        color: #000;
+        font-weight: bold;
+        font-size: 0.7rem;
+      }
+    }
+
+  }
+}
+.tishi{
+  position: relative;
+  #yanz{
+    display: block;
+    width: 25%;
+    position: absolute;
+    top: 0.15rem;
+    right: 0.4rem;
+    height: 0.9rem;
+    line-height: 0.8rem;
+    background: url("../images/baoming_11.png") no-repeat 0 0;
+    background-size: 100% 100%;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.4rem;
+    text-align: center;
+    text-indent: 0;
+  }
+}
+.picture_code{
+  position: relative;
+  #tuyz{
+    display: block;
+    width: 25%;
+    position: absolute;
+    top: -0.1rem;
+    right: 0.4rem;
+    height: 0.9rem;
+
+  }
+}

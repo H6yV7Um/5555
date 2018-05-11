@@ -1,0 +1,256 @@
+html{color:#000;background:#FFF;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,
+textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var,optgroup{font-style:inherit;font-weight:inherit;}
+del,ins{text-decoration:none;}li{list-style:none;}caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;
+	font-weight:inherit;}
+input,button,textarea,select{*font-size:100%;}
+input[type="button"], input[type="submit"], input[type="reset"],input[type="text"],input[type="search"],select{
+-webkit-appearance: none;
+outline: 0;
+-webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+textarea {-webkit-appearance:none;outline:0;} 
+html,body{ margin:0px; min-height:100%;} 
+/*channel */
+html {font-size: 62.5%;}
+img{vertical-align: middle}
+a{text-decoration: none;}
+
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+.bc{margin-left:0;margin-right:0;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.cb{clear:both;}
+.cl{clear:left;}
+.mt10{margin-top: 10px;}
+.f13{font-size: 1.3rem}
+
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.vm{verticle-align:middle;}
+.pr{position:relative;}
+.pa{position:absolute;}
+.abs-right{position:absolute;right:0}
+.zoom{zoom:1;}
+.hidden{visiility:hidden;}
+.none{display:none;}
+.fb{font-weight: bold;}
+.cb{clear: both; width: 100%;}
+.col_grey{color: #595959}
+.col_red{color: #ff1c3e}
+.hide{display: none;}
+.body_color{background: #f3f3f3}
+
+.cereHeader{width: 100%; overflow: hidden;}
+.cereHeader .cere-info{width:37%; margin-left:4%; float: left;}
+.cereHeader .cere-info .fl{width: 22.19%;}
+.cereHeader .cere-info .fl img{width: 100%}
+.cereHeader .cere-info .fr{width: 76%; font-size: 1.2rem;}
+.cereHeader .cere-search{width:55%; margin-right:4%; float: right;}
+.cereHeader .cere-search img{width: 100%}
+
+.cereBanner{width: 100%; position: relative;margin-top: -1px;}
+.cereBanner img{width: 100%}
+.cereBanner .icon-rule{ position: absolute;top:10px; right: 0; width: 20%}
+
+
+.cereNav{width: 100%; overflow: hidden; background: #ff1c3e}
+.cereNav ul{border-bottom: 1px solid #ded8d9; width: 100%; overflow: hidden;}
+.cereNav li{width:20%;float: left; display: inline-block;
+           font-size: 1.5rem; line-height:3rem; text-align: center; border-bottom: 1px solid #ff1c3e;
+
+ }
+.cereNav li.cur{ border-bottom:1px solid #ffffff; color: #ffffff}
+.cereNav li:first-child{margin-left: 0}
+.cereNav li:last-child{margin-right: 0}
+
+.cereNav2{width: 100%; overflow: hidden;border-bottom: 1px solid #ded8d9;}
+.cereNav2 .fl{width: 45%; line-height:3rem;margin-left: 5%;}
+.cereNav2 ul{ width: 45%; overflow: hidden; text-align: right;}
+.cereNav2 li{width:29%;float: left; display: inline-block;
+            margin-left:3.2%; margin-right:3.2%;font-size: 1.5rem; line-height:3rem; text-align: center;
+
+ }
+.cereNav2 li.cur{  color: #ff1c3e}
+.cereNav2 li:first-child{margin-left: 0}
+.cereNav2 li:last-child{margin-right: 0}
+
+.bannerTip{width:35%; overflow: hidden; position: absolute;top:2.2rem; left:5%}
+.bannerTip .c1{font-size:1.2rem; line-height: 25px; color: #ffffff }
+.userName {margin-top: 20px; width: 100%;vertical-align: middle;}
+.userName img{width: 12px;}
+.userName span{font-size:1.5rem; color: #ffffff; font-weight: bold; vertical-align: middle;
+    margin-left: 5px;}
+.joinNumber{width: 100%; overflow: hidden; padding-top: 10px;}
+.joinNumber #number{border:1px solid #c4353b; border-radius: 5px;-moz-border-radius: 5px;-webkit-border-radius: 5px;
+  padding: 5px 10px; color: #c4353b; margin-right: 0px;font-size: 1.6rem;vertical-align: middle;
+   float: left; display: inline-block; margin-right: 5px;
+
+}
+.joinNumber img{width: 20px; vertical-align: middle; float: left; margin-top: 5px;}
+
+.rankingMain{width: 100%}
+.rankCon{width: 100%; overflow: hidden; font-family: "Microsoft Yahei"}
+.rankCon li {width: 100%; overflow: hidden; position: relative;
+	          border-bottom: 1px solid #eeeeee; font-size:1.5rem;line-height:7rem }
+.rankCon a{color: #000000; width: 100%; display:block;line-height:7rem}
+.rankCon a:visited{color: #000000;}
+.rankCon a:hover{color: #000000;}
+.rankCon li.tops{background: #fff9fa}
+.rankCon li p{ float: left; display: inline;margin-right: 4%;overflow: hidden;}
+.rankCon li p img{width: 100%;height: 100%;}
+.rankCon li .rank-num{width:8%; position: absolute; left: 0; text-align: center;}
+.rankCon li .follow-num{float: right; text-align: right;width:30%; margin-right: 6%; color: #ea3e45}
+.rankCon li .follow-num img{width:20px}
+.rankCon li .rank-topsNum{width: 8%; position: absolute;right: 35%}
+.rankCon li .rank-topsNum img{width: 60%}
+.rankCon li .head-pic{width: 13%; margin-left:8%;width:4.8rem; height: 4.8rem;  margin-top:8px; border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%;}
+.rankCon li .head-pic img{vertical-align: top}
+.rankCon li.tops .head-pic{width: 16%; margin-left:5%;width:6rem; height: 6rem;}
+.rankCon li.tops .follow-num{font-weight: bold;}
+
+.cereDetailBanner {position: relative; font-family: "Microsoft Yahei"}
+.cereDetailBanner .bg img{width: 100%;}
+.cereDetailBanner .bannerDesc{width: 100%;height:5rem; overflow: hidden; position: absolute; bottom: 0; background: rgba(0,0,0,0.5);
+text-align: center;color: #ffffff;padding-top:1rem;}
+.cereDetailBanner .bannerDesc p{line-height: 22px;}
+.cereDetailBanner .bannerDesc .typeTitle{font-size: 1.7rem; font-weight: bold;}
+.cereDetailBanner .bannerDesc .rankDesc img{width:15px;}
+.cereDetailBanner .bannerDesc .heartNumber{position: absolute; right: 20px;top:1rem;  }
+.cereDetailBanner .bannerDesc .heartNumber img{width:30px;}
+
+.curPersonInfo  {line-height:7rem;font-size:1.5rem; border-bottom: 1px solid #eeeeee; overflow: hidden; }
+.curPersonInfo  p{ float: left; display: inline;margin-right: 4%;overflow: hidden;}
+.curPersonInfo  p img{width: 100%}
+.curPersonInfo .user-info{line-height:2.5rem; width: 35%; float: left; margin-top:15px;}
+.curPersonInfo .head-pic{width: 16%; margin-left:5%;width:6rem; height: 6rem;margin-top:5px; border-radius: 50%;-moz-border-radius: 50%;-webkit-border-radius: 50%; border: 1px solid #dedede;}
+.curPersonInfo .head-pic img{vertical-align: top}
+.curPersonInfo .follow-num{float: right; text-align: right;width:25%; margin-right: 6%; color: #3b9a15;font-weight: bold}
+.curPersonInfo .follow-num img{width:20px}
+
+.pd5rem{padding-bottom: 5rem}
+.cereFooter{width:49.5%; height:5rem;line-height:5rem; background: #ff1537; font-size: 1.6rem;  bottom: 0;
+color:#fff; text-align: center;position: fixed; font-family: "Microsoft Yahei"; border:0;}
+.cereFooter.disabled{background: #dedede;}
+#letFriendHit{right: 0}
+.cereFooter a{color: #ffffff; text-decoration: none;display: block;width: 100%;}
+.searchMain{width: 100%; overflow: hidden; /* background: #f3f3f3;  */position: absolute; }
+.searchMain a{color: #000}
+.searchTitle{width: 100%; overflow: hidden; background: #000000; padding:10px 0}
+.searchForm{width:75%; margin-left: 6%; float: left;  }
+.txt_search{width:100%;height:3rem; line-height: 3rem; border-radius: 20px ;-webkit-border-radius:20px;-moz-border-radius:20px;-o-border-radius:20px; border:none;
+background: url(../images/icon-search.png) no-repeat #ffffff 4% ;background-size:20px 20px;padding-left: 
+35px; }
+.btn_cancel{border:none; color: #ffffff; background: none;margin-top: 10px; margin-left: 10px; font-size: 1.5rem}
+
+
+.searchPersonInfo{background: #ffffff}
+.searchPersonInfo .follow-num{color: #ea3e45 }
+
+
+.more-rank{line-height: 5rem; height: 5rem; color: #666}
+/*tcc*/
+.dialogFooter{
+  width: 100%; overflow: hidden;
+}
+.dialogFooter .btn_dialog{
+  width: 50%; height: 3rem; line-height: 3rem; text-align: center; float: left; display: inline; font-size: 1.4rem;
+}
+.dialogFooter .btn_dialog a{text-decoration: none;color: #ff1d3e}
+
+/*loading*/
+.spinner {
+  margin:30px auto;
+  width: 150px;
+  text-align: center;
+
+}
+ 
+.spinner > div {
+  width: 10px;
+  height: 10px;
+  background-color: #dedede;
+ 
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+ 
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+ 
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+ 
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+ 
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+  	transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+#BOX_overlay{position: absolute;z-index: 100;top: 0px;left: 0px;background-color:#ccc;filter: alpha(opacity=70);-moz-opacity: 0.7;opacity: 0.7;}
+.dialog_tip{
+    background: #fff;
+    text-align: left;
+    border: 1px solid #dedede;
+    font-size: 12px;
+    width: 20rem;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+
+}
+.js-close{
+    background: #fff;
+    float: right;
+    height: 20px;
+    padding: 5px 0 0 10px;
+    color: #000;
+    margin-right: 10px;
+}
+.messdivCons{
+    width: 100%;
+    overflow: hidden;
+    font-size: 1.3rem;
+    color: #000;
+    text-align: center;
+    padding:20px 0 40px;
+}
+/*media
+	 *<320  5s
+	 *>414  6plus
+*/
+@media screen and (max-width: 320px) {
+   
+}
+@media screen and (min-width: 410px) {
+	
+}

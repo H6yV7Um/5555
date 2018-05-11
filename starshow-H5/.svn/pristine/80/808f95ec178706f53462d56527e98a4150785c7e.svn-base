@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<!--<meta name="apple-itunes-app" content="app-id=903692043" />-->
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>时尚星秀——让你更时尚，让你更闪耀！</title>
+
+<link rel="stylesheet" type="text/css" href="../assets/js/lib/swiper-3.4.0.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/sweet-alert.css">
+<link rel="stylesheet" type="text/css" href="assets/css/common.css">
+<link rel="stylesheet" type="text/css" href="assets/css/product.css">
+</head>
+<body>
+	<div class="prod_main_pic js_main_pic" >
+		<img class="img-default" style="display:none;position:  absolute; top: 0;" src="assets/images/img-default.png" width="100%" />
+		<div class="swiper-container">
+		    <div class="swiper-wrapper js-mainPic">
+		      <!--   <div class="swiper-slide"><img src="assets/images/prod01.png" width="100%"></div>
+		      <div class="swiper-slide">Slide 2</div>
+		      <div class="swiper-slide">Slide 3</div> -->
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="prod_detail js_detail"  style="display:none">
+		<div class="prod_info">
+			<div class="prod_tit">
+				<h1>SANTONI女士鳄鱼皮纹及踝镂空真皮高跟鞋踝镂空真皮高跟鞋</h1>
+				<h2><span class="js_sales_num"></span>个小伙伴已经入手!你还等什么？</h2>
+			</div>
+			<div class="prod_price">
+				<div class="sale_price">
+					<span class="col_red">￥</span><span class="sale_price_num col_red">12345</span>
+					(<span class="prod_freight">免运费</span>)
+				</div>
+				<div class="real_price">
+					<span class="col_grey">￥</span><span class="real_price_num">58399</span>
+					<span class="prod_discount col_red">3.8折</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="prod_desc">
+			
+			<div class="btn_choose">
+				<span>请您选择尺寸</span>
+				<div class="btn_right"><img src="assets/images/icon-arraw-bot.png" /></div>
+			</div>
+
+			<ul class="prod_tabs js_prod_tabs">
+				<li>
+					<div class="tab_title">
+						<span class="fl">商品介绍</span>
+						<img src="assets/images/icon-arraw-bot.png" class="fr icon_arraw">
+					</div>
+					<div class="tab_con prod_desc_con">
+						皮鞋品牌排名之世界十大皮鞋品牌Denadeyi Medici是意大利一个最显赫的制鞋子家族，由Denadeyi开创，至今已经170多年了。从最初对意大利贵族设计皮鞋，设计融合了意大利贵族的奢华与浪漫，对艺术的独特见解，使他的设计从满了浪漫的艺术气息　　久而久之，Denadeyi名声鹊起，他以“Veilisr”为名，中文名为“维力斯”，创办了一家专为绅士们量身定制的手工皮鞋店。　经历近百年的潮流更迭，Veilisr手工皮鞋兼具时尚与贵族气质，使Veilisr手工皮鞋绽放国际手工皮鞋品牌的光芒，成为欧洲绅士们争相追捧的流行元件！
+
+					</div>
+				</li>
+				<li>
+					<div class="tab_title">
+						<span class="fl">参数规格</span>
+						<img src="assets/images/icon-arraw-bot.png" class="fr icon_arraw">
+					</div>
+					<div class="tab_con" >
+						<!-- <div class="info_con">
+							<h1>类型</h1>
+							<p>丝绸100%</p>
+							<p>丝绸100%</p>
+							<p>丝绸100%</p>
+							<p>丝绸100%</p>
+						</div>
+						 -->
+					</div>
+				</li>
+				<li>
+					<div class="tab_title">
+						<span class="fl">包装售后</span>
+						<img src="assets/images/icon-arraw-bot.png" class="fr icon_arraw">
+					</div>
+					<div class="tab_con" ></div>
+				</li>
+			</ul>
+		</div>
+		<!--店铺信息-->
+		<div class="shopInfo">
+			<img src="assets/images/prod01.png" class="shop_cover"  width="50px">
+			<p><span>V旗舰店</span><img src="assets/images/icon-toshop.png" width="20px"/><p>
+		</div>
+		<!--更多推荐-->
+		<div class="recommd_tit"><div class="line"></div><span>更多推荐内容</span></div>
+		<ul class="rec_list">
+			<!-- <li>
+				<img src="assets/images/prod01.png" class="rec_cover"/>
+				<p class="rec_tit">EVER UGG 漆皮几何时尚新款皮鞋</p>
+				<p class="rec_price">￥<span class="js_rec_price">123.45</span></p>
+			</li>
+			<li>
+				<img src="assets/images/prod01.png" class="rec_cover"/>
+				<p class="rec_tit">EVER UGG 漆皮几何时尚新款皮鞋</p>
+				<p class="rec_price">￥<span class="js_rec_price">123.45</span></p>
+			</li>
+			<li>
+				<img src="assets/images/prod01.png" class="rec_cover"/>
+				<p class="rec_tit">EVER UGG 漆皮几何时尚新款皮鞋</p>
+				<p class="rec_price">￥<span class="js_rec_price">123.45</span></p>
+			</li>
+			<li>
+				<img src="assets/images/prod01.png" class="rec_cover"/>
+				<p class="rec_tit">EVER UGG 漆皮几何时尚新款皮鞋</p>
+				<p class="rec_price">￥<span class="js_rec_price">123.45</span></p>
+			</li> -->
+		</ul>
+		
+
+	</div>
+	<div class="buyerList">
+			<ul>
+				<li>
+					<img src="assets/images/apply.png" /><span>最新订单来自XXXX 6秒前</span>
+				</li>
+				<li>
+					<img src="assets/images/apply.png" /><span>最新订单来自XXXX 5秒前</span>
+				</li>
+			</ul>
+		</div>
+	<div class="prod_params">
+		<div class="params_title">
+			<div class="params_cover"><img src="assets/images/prod01.png"></div>
+			<div class="params_desc">
+				<div class="param_price">
+					<span class="col_red">￥</span><span class="sale_price_num col_red">12345</span>
+					<span class="col_grey">￥</span><span class="real_price_num">58399</span>
+				</div>
+				<div class="js_chose_noParam">请选择：规格</div>
+				<div class="param_choose js_chose"></div>
+			</div>
+		</div>
+		<!--参数-->
+		<div class="params_cons">
+		    <div class="paramScroll">
+			<div class="type_lists">
+				<!-- <h1>颜色</h1>
+				<div class="param_lists">
+					<span class="cur">红色</span><span>灰色</span><span>黑色</span>
+				</div>
+				<h1>颜色</h1>
+				<div class="param_lists">
+					<span class="cur">红色</span><span>灰色</span><span>黑色</span>
+				</div> -->
+			</div>
+
+			<div class="buy_num">
+				<h1>购买数量</h1>
+				<div class="buy_buttons">
+					<span>-</span><input type="text" class="txt_buyNum" value="1"/></ins><span>+</span>
+				</div>
+			</div>
+			</div>
+			<!-- <input type="button" class="btn_sure" value="确定"> -->
+			<div class="btn_sure js_addCar_sure">确定</div>
+		</div>
+
+	</div>
+	<ul class="btnList" style="display:none">
+				<li class="js_addCar">加入购物车</li>
+				<li class="js_toBuy">立即购买</li>
+			</ul>
+	<div class="bg_overflow" id="bg_overflow"></div>
+	<section class="loadding">
+    	<div class="spinner">
+		  <img src="assets/images/loadding.gif" height="40" width="40" />
+		</div>
+    </section>
+	<input type="hidden"  id="hide_info" source="detail"/><!--detail-->
+	<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/sweet-alert.min.js"></script>
+	<script type="text/javascript" src="../../applinks/openApp.js"></script>
+	<script type="text/javascript" src="../assets/js/common/common.js"></script>
+	<script type="text/javascript" src="../assets/js/common/bridge2.js"></script>
+	<script type="text/javascript" src="../assets/js/lib/swiper-3.4.0.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/product.js"></script>
+</body>
+</html>

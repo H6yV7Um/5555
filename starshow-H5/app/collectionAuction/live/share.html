@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">	
+	<title>直播</title>
+	<link rel="stylesheet" type="text/css" href="../assets/js/lib/sweetAlert/sweet-alert.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/common.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<!--player_ver player_cross ordi_player-->
+	<div id="js-vl-main" class="vl-main player_ver" style="display:none">
+		<!--播放区-->
+		<div class="vl_player_main ">
+			<!--播放区-->
+			<div class="player_main">
+				<div class="player">
+					<div class="player_times" style="display:none"></div>
+					<div id="id_test_video" style="width:100%; height:100%;"></div>
+				</div>
+				<!--结束-->
+				<div id="js_player_ended" class="player_ended" style="display:none">
+				  <img id="js_icon_close" class="icon_close" src="../assets/images/icon/icon_close_white.png" style="display:none">
+				  <h1>直播结束</h1>
+				  <div class="ended_info">
+				  	<p>
+				  		<img src="../assets/images/icon/icon-eye2.png">
+				  		<span class="watch_num">0</span>
+				  	</p>
+				  	<p>
+				  		<img src="../assets/images/icon/icon-zan2.png">
+				  		<span class="like_num">0</span>
+				  	</p>
+				  </div>
+				 <div class="end_btns" style="display:none">
+				 	 <div class="end_btn tc">
+					  	<img src="../assets/images/icon/btn_replay.png" >
+					  	<p>重播</p>
+					  </div>
+				 </div>
+				</div>
+			</div>
+			<!--普通直播简介-->
+			<!-- <div class="vl_desc" id="js_vl_desc">
+				
+			</div> -->
+			<!--普通直播切换-->
+			<div class="vl_tabs">
+				<div class="users">
+					<img  class="user_head js_users_head" src="images/icon-head.png">
+					<span class="js_users_name"></span>
+					<img src="../assets/images/roles/roles_1.png" class="icon_role">
+				</div>
+				<ul class="tabs" id="js_tab">
+				 <li class="cur">聊天</li>
+				 <li>推荐</li>		
+				</ul>
+			</div>
+			<!--用户-->
+			<div class="vl_users">
+				<div class="users_ver">
+					<div class="man_header">
+						<img src="images/icon-head.png" class="js_users_head">
+						<img src="../assets/images/roles/roles_1.png" class="icon_role">
+					</div>
+					<div class="man_info">
+						<p class="man_name js_users_name">..</p>
+						<p><span class="follow_num" id="user-icon-fans">0</span>人在线</p>
+					</div>
+				</div>
+				<div class="btn_down js_btn_down" style="display:none"></div>
+			</div>
+			<!--拍品信息模块  多个或单个-->
+			<div class="prod_info">
+				<div class="prod_pics">
+					<img src="images/prod.png">
+					<div class="prod_nums">
+						<span class="cur_num">0</span>/
+						<span class="all_num">0</span>
+					</div>
+				</div>
+				<div class="prod_desc">
+					<p>起拍价：<span class="js_initPrice">2000</span></p>
+					<p class="prod_others">共<span class="col_yellow sale_num">0</span>次出价 
+						<!-- <img src="images/kanguo.png" class="vm icon_num ml10"> -->
+						<span class="watch_num ml10">0</span>
+					</p>
+
+				</div>
+			</div>
+			<!--聊天-->
+			<div class="msg_cons js-tabCon">
+				<div class="lead_man">
+					<div class="man_header"><img src="images/icon-head.png"></div>
+					<div class="man_info">
+						<p class="man_name">...</p>
+						<p class="man_price">￥0</p>
+					</div>
+					<div class="icon_leader">领先</div>
+				</div>
+				<!--msgList-->
+				<div class="msg_area">
+					<!-- <div class="lead_man">
+					<div class="man_header"><img src="images/icon-head.png"></div>
+					<div class="man_info">
+						<p class="man_name">...</p>
+						<p class="man_price">￥0</p>
+					</div>
+					<div class="icon_leader">领先</div>
+									</div> -->
+					
+					<ul class="msgList" id="video_sms_list">
+						<!-- <li>
+							<div>
+								<span class="col_red">雯雯</span>：<span>评论评论评论</span>
+							</div>
+						</li>
+						<li>
+							<div class="presenter">
+								<span>主持人</span>：<span>评论评论评论</span>
+							</div>
+							
+						</li>
+						<li>
+							<div>
+								<span class="col_red">雯雯</span>：<span class="col_red">￥1200</span>
+							</div>
+						</li> -->
+					</ul>
+				</div>
+				
+				
+			</div>
+			<!--推荐-->
+			<div class="recommend js-tabCon" style="display:none">
+				<h1>更多精彩推荐</h1>
+				<ul class="recomm_list">
+					<!-- <li>
+						<img class="recomm_cover" src="images/prod.png">
+						<span class="label_status col_red"></span>
+						<div class="recomm_prod_desc">
+							<div class="recomm_title">标题标题标题标题标题标题标题</div>
+							<div class="re_like_num "></div>
+							<div class="re_watch_num"><span class="follow_num">2333</span>人关注</div>
+						</div>
+					</li>
+					<li>
+						<img class="recomm_cover" src="images/prod.png">
+						<div class="recomm_prod_desc">
+							<div class="recomm_title">标题标题标题标题标题标题标题</div>
+							<div class="label_status col_green">预热</div>
+							<div class="follows"><span class="follow_num">2333</span>人关注</div>
+						</div>
+					</li> -->
+
+				</ul>
+			</div>
+			
+		</div>
+		<!--消息区-->
+		<div class="vl_footer" id="video-discuss-tool">
+			<ul>
+				<li><div class="btn_comment js_btn_down"></div></li>
+				<li><div class="btn_zan"></div><div class="btn_price js_btn_down">出价</div></li>
+				<li class="tr"><div class="btn_down js_btn_down"></div></li>
+			</ul>
+		</div>
+
+		<!--跳转按钮-->
+		<div class="btn_point" id="btn_point">右滑动查看全部拍品</div>
+	</div>
+	<section class="init-loadding">
+    	<div class="spinner">
+		  <img src="../assets/images/loadding.gif" height="80" width="80" />
+		</div>
+    </section>
+	<section id="counter5s" style="display:none">5</section>
+<script type="text/javascript" src="../assets/js/lib/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="../assets/js/common/common.js"></script>
+<script type="text/javascript" src="../assets/js/lib/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../assets/js/lib/sweetAlert/sweet-alert.min.js"></script>
+<script src="//imgcache.qq.com/open/qcloud/video/vcplayer/TcPlayer-2.2.0.js" charset="utf-8"></script>
+
+<script type="text/javascript" src="../assets/js/lib/webim/webim.js"></script>
+<script type="text/javascript" src="../assets/js/lib/webim/json2.js"></script>
+
+<script type="text/javascript" src="../assets/js/lib/hammer.min.js"></script>
+<script type="text/javascript" src="get_history_msg.js"></script>
+<script type="text/javascript" src="wechat.js"></script>
+<script type="text/javascript" src="js.js"></script>
+<script type="text/javascript">
+
+ 
+</script>
+<script type="text/javascript">
+/*去掉iphone手机滑动默认行为*/
+/*$('body').on('touchmove', function (event) {
+    event.preventDefault();
+});*/
+	
+</script>
+</body>
+</html>
