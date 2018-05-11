@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*1、ajax基础(局部刷新)
+        2、ajax分页
+        3、ajax瀑布流
+        4、ajax三级联动
+        4、ajax运动轮播图
+        5、贪吃蛇
+        6、五子棋*/
+
+
+
+
+        function ajaxRequest02(){
+            var _ajax=createXMLHttpRequest();
+            if(_ajax) {
+                _ajax.onreadystatechange = function () {
+                    if (_ajax.readyState == 4) {
+                        document.getElementById("demo").innerHTML=(_ajax.responseText);
+                    }
+                }
+                _ajax.open("post", "head.html", true);
+                //第一个参数打开远程连接的方式
+                //第二个参数表示远程服务器地址
+                //第三个参数表示异步(true)还是同步(false);
+                _ajax.send(null);
+            }
+        }
+
+        window.onload=function(){
+            ajaxRequest01();
+            ajaxRequest02();
+        }
+    </script>
+</head>
+<body>
+<!--<a href="http://www.sina.com" target="iframe">sina</a>
+<a href="http://www.sohu.com" target="iframe">sohu</a>
+<iframe src="http://www.baidu.com" frameborder="0" name="iframe"></iframe>-->
+<a href="http://download.firefox.com.cn/releases/firefox/48.0/zh-CN/Firefox-latest.dmg">trtrtrt</a>
+<div id="demo"></div>
+
+
+
+</body>
+</html>

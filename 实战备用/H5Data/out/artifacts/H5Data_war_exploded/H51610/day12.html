@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto; position:relative;}
+        .blinds{ width:800px; height:0px;
+            overflow:hidden; background-image:url(../H51612/images/img1.jpg);
+            position:absolute; left:0px;
+        }
+    </style>
+    <script type="text/javascript">
+        function fn(){
+            var x=0;
+            for(var i=1,m=1,n=1;i<=100;i++,n++){
+                document.write(i);
+                if(n==m){
+                    m++;
+                    n=0;
+                    document.write("<br/>");
+                }
+            }
+        }
+        //fn();
+
+
+
+
+
+
+        function demo(){
+            return 10;
+        }
+        function fn(){
+            return demo();
+        }
+        //alert(fn());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function execBlinds(){
+            var _timer=0;
+            var _h=0;
+            var _blinds=document.getElementsByTagName("body")[0].getElementsByTagName("div");
+            function exec(){
+                window.clearTimeout(_timer);
+                _h+=3;
+                if(_h>15){
+                    return;
+                }
+                for(var i=0;i<_blinds.length;i++){
+                    _blinds[i].style.height=_h+"px";
+                }
+                _timer=window.setTimeout(exec,200);
+            }
+            exec();
+        }
+        function createBlinds(){
+            var _div=null;
+            var _body=document.getElementsByTagName("body")[0];
+            for(var i=0;i<27;i++){
+                _div=document.createElement("div");
+                _div.className="blinds";
+                _div.style.backgroundPosition="0px "+(-i*15)+"px";
+                _div.style.top=i*15+"px";
+                _body.appendChild(_div);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function createItem(u_name,_message){
+            var _div=document.createElement("div");
+            _div.className="item";
+            var _img=document.createElement("img");
+            _img.src="";
+            _img.style.width=40+"px";
+            _img.style.height="40px";
+            var _span=document.createElement("span");
+            _span.innerHTML="<a href=\"#\">"+u_name+"</a>"+_message;
+            _div.appendChild(_img);
+            _div.appendChild(_span);
+            document.getElementById("history").appendChild(_div);
+        }
+
+        function createInput(){
+            var _name=document.createElement("input");
+            _name.type="text"
+            _name.id="name";
+            var _message=document.createElement("textarea");
+            _message.id="message";
+            var _submit=document.createElement("input");
+            _submit.type="button";
+            _submit.value="发布";
+            _submit.id="submit";
+            _submit.onclick=function(){
+                createItem(document.getElementById("name").value,document.getElementById("message").value);
+            }
+            document.getElementById("control").appendChild(_name);
+            document.getElementById("control").appendChild(_message);
+            document.getElementById("control").appendChild(_submit);
+        }
+        window.onload=function(){
+//            createBlinds();//创建百叶窗节点
+//            execBlinds();//执行百叶窗动画
+
+
+
+
+
+
+            createInput();
+        }
+
+    </script>
+</head>
+<body>
+<div id="history"></div>
+<div id="control"></div>
+
+
+
+
+DAY11 事件
+•	了解什么是event对象
+•	它是事件绑定中的一个隐藏的参数，可以通过arguments[0]来获取
+btn.onclick = function (e) {
+alert(arguments[0]); //Event，事件对象
+};
+•	也可以叫事件源对象，这里面包含了关于这次单击事件的相关信息
+alert(event.button);
+//如果当前event是鼠标事件，则会有一个button属性，它是一个数字
+0代表鼠标按下了左键 ||  1代表按下了滚轮  ||  2代表按下了右键
+•	不过老版本的IE并没有遵守W3C的规范，它的button属性含义如下
+1鼠标左键 2鼠标右键 3左右同时按 4滚轮 5左键加滚轮 6右键加滚轮 7三个同时
+•	目前IE11.0版本，无兼容性问题
+•	掌握event对象的获取
+•	在W3C标准中，直接在函数中声明该参数即可
+btn.onclick = function(event) {
+//这里就可以使用了
+};
+•	兼容性写法，支持老版本的IE
+var evt = event ? event : window.event;
+var evt = event || window.event;
+•	掌握事件冒泡的概念，如何阻止事件冒泡
+•	事件从子节点向上依次传递给父节点
+•	阻止事件冒泡的方法
+event.stopPropagation();
+event.cancelBubble=true;//IE的方式
+•	鼠标事件中获取鼠标的位置
+event.offsetX; //相对于事件源对象的偏移量,也就是元素坐标，相对坐标
+event.clientX; //在可视区域的位置，也就是浏览器坐标
+event.screenX; //整个屏幕坐标
+•	获取鼠标在页面的绝对位置
+event.clientX + document.documentElement.scrollLeft || document.body.scrollLeft;
+event.clientY+ document.documentElement.scrollTop || document.body.scrollTop;
+•	案例：显示光标位置/ 鼠标跟随效果 / 贴吧
+•	键盘事件获取用户按键方法 keyCode
+•	在keydown事件中，我们可以通过键码来判断用户按下了哪个键
+event.keyCode || event.which
+alert(evt.which); //老IE不支持
+•	使用编码值还原字符
+String.fromCharCode(code)
+•	键盘的其他属性 ctrlKey\shiftKey\altKey
+•	判断ctrl、shift、alt键是否被按下
+if(code == 13 && event.ctrlKey) {
+//发送消息
+}
+•	在输入框中使用ctrl+enter键模拟消息的发送
+•	在textarea中，获取或者更改标签内容，应使用value属性，除IE浏览器外， 当对textarea标签的value赋值以后，会导致innerHTML失效.
+•	作业：
+•	模拟select下拉菜单
+•	鼠标跟随一串效果
+=====================================================
+DAY12拖拽效果
+•	阻止右键菜单
+document.oncontextmenu = function(){
+alert("右键被按下");
+return false;
+}
+•	自定义右键菜单
+•	阻止超链接的默认行为
+evt.preventDefault(); //非IE
+evt.returnValue = false;   //IE
+•	拖拽的原理讲解
+•	三个事件 (onmousedown\onmousemove\onmouseup)
+•	拖拽思路
+•	给目标元素添加onmousedown事件，拖拽的前提是在目标元素按下鼠标左键
+•	当onmousedown发生以后，此刻给document添加onmousemove事件，意味着此刻鼠标在网页的移动都将改变目标元素的位置
+•	在onmousemove事件中，设定目标元素的left和top， 公式 目标元素的left = 鼠标的clientX – （鼠标和元素的横坐标差，即offsetX） 目标元素的top = 鼠标的clientY– （鼠标和元素的纵坐标差，即offsetY）
+•	当onmousedown发生以后，此刻给document添加onmouseup事件，意味着此刻鼠标在网页的任意位置松开鼠标，都会放弃拖拽的效果
+•	在onmouseup事件中，取消document的onmousemove事件即可。
+•	事件监听器target.addEventListener("click", fun, false);
+•	可以绑定多个函数在一个对象上
+•	执行顺序按照绑定的顺序来
+•	第三个参数是否使用捕捉(反向冒泡)，默认false，为冒泡
+•	IE的事件监听器
+•	target.attachEvent("onclick",fun);
+•	执行顺序按照绑定的反序
+•	编写函数封装，解决addEventListener和attachEvent
+=====================================================
+
+</body>
+</html>

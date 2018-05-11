@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>register</title>
+		<link rel="stylesheet" type="text/css" href="css/index_01.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/ajax.js"></script>
+	</head>
+	<body>
+		<div style="background: #fafafa;">
+			<div style="margin: 0 auto;height: 70px;width: 100%;">
+				<div style="background: url(img/1.jpg) no-repeat center;width: 100%;cursor: pointer;height: 70px;"></div>
+			</div>
+		</div>
+		<div id="header" style="width: 1000px;">
+			<span class="log" style="margin-right: 0;">
+				<a><img src="img/log.png"></a>
+			</span>
+			<span class="re_welcome">欢迎注册</span>
+			<div class="already_login">已注册，请 <a href="login.html">登录&gt;</a></div>
+		</div>
+		<div class="nc-login-layout">
+			<div class="zcTitle">
+	        	<ul>
+	            	<li class="current">个人用户注册</li>
+	           		<!--  <li>企业用户注册</li>  --> 
+	       		 </ul>
+    		</div>
+    		<div class="nc-login">
+    			<div class="nc-login-content">
+    				<form action="index.php?act=login&op=usersave" method="post" id="register_form">
+    					<input type="hidden" name="formhash" value="r5S6w76dRfKOPzHy9gMvZkMNFn4MkIz"/>
+    					<div class="cBox">
+            				<input placeholder="手机号码" type="text" id="user_name"  class="text tip input-40" title="请输入11位手机号">
+            			<!--	<i class="" style="display: inline;"></i>-->
+            				<label for="user_name" class="error1" style="display: ;"></label>
+    					</div>
+    					<div class="cBox">
+            				<input placeholder="设置密码" type="password" id="password" name="password" class="text tip input-40" title="6-20位字符，可由英文、数字及标点符号组成">
+            				<!--<i class="error" style="display: inline;"></i>-->
+            				<label for="password" class="error2" style="display: ;"></label>
+    					</div>
+    					<div class="short">
+                    		<input type="text" placeholder="验证码" name="captcha" class="text w148 fl tip" id="captcha" maxlength="4" size="10" title="请输入验证码">
+                		<!--	<i class="" style="display: inline;"></i>-->
+                    		<img src="https://login.mmloo.com/index.php?act=seccode&amp;op=makecode&amp;nchash=b825ff84" title="" name="codeimage" border="0" id="codeimage" class="fl mt8"> <a href="javascript:void(0);" class="fl mt10" onclick="javascript:document.getElementById('codeimage').src='https://login.mmloo.com/index.php?act=seccode&amp;op=makecode&amp;nchash=b825ff84&amp;t=' + Math.random();">看不清，换一张</a>
+       						<label for="captcha" class="error3" style="display: ;"></label>
+    					</div>
+       					<div class="short">
+              				<input placeholder="短信验证码" type="text" id="seccode" maxlength="6" name="seccode" class="text tip cap w148" title="请输入短信验证码">
+              				<!--<i class="error" style="display: inline;"></i>-->
+               				<input type="button" class="reget" id="reget" value="获取短信验证码" onclick="sendMessage()">
+           					<label for="seccode" class="error4" ></label>
+       					</div>
+           				<div class="cBox">
+              				<input placeholder="好友推荐码(非必填)" type="text" id="tuijianma" name="tuijianma" class="text tip input-40" title="请输入好友推荐码">
+           				</div>
+           				<div>
+            				<input name="agree" type="checkbox" class="vm ml5" id="clause" value="1" checked="checked">
+            				<span for="clause" class="ml5">阅读并同意<a href="" target="_blank" class="agreement" title="阅读并同意">服务协议</a></span>
+           					<input type="button" id="Submit" value="" class="submit" title="立即注册">
+       					</div>
+    				</form>
+    			</div>
+    		</div>
+		</div>
+		<div class="footer ">
+			<span class="to_top "><a href=" " class="back_to_top ">返回顶部</a></span>
+			<ul>
+				<li>
+					<a style=" ">电脑节|</a><a style=" ">年货节|</a><a style=" ">批发商城|</a><a style=" ">合作及洽谈|</a><a style=" ">联系我们|</a><a style=" ">关于米米乐商城|</a><a style=" ">商家登陆|</a><a style=" ">开店协议|</a><a style=" ">商家入驻|</a><a style=" ">手机版|</a><a style=" ">友情链接|</a><a style="color: red; ">招聘英才</a><a style=" ">米商|</a><a style=" ">8.8包邮</a>
+				</li>
+				<li>© 2016 米米乐商城 www.mmloo.com 版权所有  蜀ICP备06015925号-1</li>
+			</ul>
+		</div>
+		<div class="footerend ">
+			<span>
+				<a id="___szfw_logo___ ">
+					<img src="http://www.mmloo.com/shop/templates/default/images/cxlogo.png " height="47px "/>
+				</a>
+			</span>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/ajax.js" ></script>
+<script>
+/*手机*/
+$(function() {
+	$("#user_name")[0].onblur = function() {
+		var num1 = $("#user_name")[0].value;
+		var reg = /^((13\d)|(14\d)|(15\d)|(18\d)|(17\d))(\d{8})$/;
+
+		rel1 = reg.test(num1);
+		if(rel1 == true) {
+			$(".error1")[0].innerHTML = "手机号码符合要求";
+
+		} else {
+			$(".error1")[0].innerHTML = "请输入正确的手机号码！！！";
+		}
+	}
+//密码
+	$("#password")[0].onblur = function() {
+		var num2 = $("#password")[0].value;
+		var reg2 = /^[\w.]{6,20}$/;
+		rel2 = reg2.test(num2);
+		if(rel2 == true) {
+			$(".error2")[0].innerHTML = "密码输入符合要求";
+
+		} else {
+			$(".error2")[0].innerHTML = "6-20位字符,可由英文、数字及标点符号组成";
+		}
+	}
+	
+
+	$("#Submit").click(function() {
+        if(typeof(rel2)=="undefined"||typeof(rel1)=="undefined"){
+        	alert("用户名和密码不能为空")
+        }
+		if(rel2 && rel1 == true) {
+			
+			var num1 = $("#user_name")[0].value;
+			var num2 = $("#password")[0].value;
+			//要考虑cookie为空
+			_regist = document.cookie;
+
+			if(/regist=/.test(_regist)) {
+
+				var _cart = JSON.parse(cookie.getCookie("regist"))
+
+				var _cookie = "regist={";
+				if(!_cart[num1]) {
+
+					for(var k in _cart) {
+						_cookie += "\"" + k + "\":" + '"' + _cart[k] + '"' + ",";
+
+					}
+					_cookie += "\"" + num1 + "\":" + '"' + num2 + '"' + ",";
+                   	alert("注册成功!");
+                   	
+				} else {
+					alert("您的账户已经注册过了！");
+					
+				}
+				_cookie = _cookie.substring(0, _cookie.lastIndexOf(","));
+				_cookie += "}";
+				document.cookie = _cookie;
+			
+			} else {
+				alert("注册成功!")
+				document.cookie = "regist={\"" + num1 + "\":" + '"' + num2 + '"' + "}";
+				
+			}
+
+		}
+		else{
+			alert("注册失败！");
+		}
+		window.location.href = "login.html"
+	})
+	
+})
+</script>

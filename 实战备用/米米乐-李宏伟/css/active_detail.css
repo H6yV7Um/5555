@@ -1,0 +1,11 @@
+#wrp_02 .nav .nav_menu li a{
+	color: #393333;
+	text-decoration: none;
+}
+#wrp_02 .nav .nav_menu li a:hover{
+	text-decoration: none;
+    color: #D4121B;
+}
+.classical_d{
+	display: none;
+}

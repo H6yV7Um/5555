@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="header">
+			<div class="content">
+				<div class="tag">
+					<img alt="" src="images/icon_01.jpg" class="l_icon">
+					<span>全部商品分类</span>
+					<img alt="" src="images/icon_02.jpg" class="r_icon">
+				</div>
+				<div class="nav" id="nav"><a href="/products.html?n=13">小家电</a><a href="/products.html?n=15">个人用品</a><a href="/products.html?n=5">美容护理</a><a href="/products.html?n=57">手机/配件</a><a href="/products.html?n=58">电脑/配件</a><a href="/products.html?n=59">平板电脑</a><a href="/products.html?n=9">农副</a><a href="/products.html?n=87">九东汽车商城</a></div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="main">
+    <img alt="" src="images/top.jpg" class="panel_top">
+    <div class="pics">
+        <div class="title">
+            <span id="pics_title">奔腾电动剃须刀Povos/奔腾 PS5200</span>
+        </div>
+        <div class="img">
+            <img alt="" src="http://backstage.jiudon.com/UploadFiles/Images/Folder_20151107/f_201511071624047070.jpg" id="current">
+            <div class="hand" style="display: none; left: 186.5px; top: 68px;"></div>
+        </div>
+        <div class="images" id="images">
+        	<span style="margin-left: 0px;"><img class="img1" alt="" src="http://backstage.jiudon.com/UploadFiles/Images/Folder_20151107/f_201511071624042402.jpg"></span>
+        	<span><img class="img2" alt="" src="http://backstage.jiudon.com/UploadFiles/Images/Folder_20151107/f_201511071624047070.jpg"></span>
+        </div>
+    </div>
+    <div class="expand" style="display: none;"><img alt="" src="http://backstage.jiudon.com/UploadFiles/Images/Folder_20151107/f_201511071624047070.jpg" style="margin: -68px 0px 0px 200px;"></div>
+    <div class="option">
+        <div class="title" id="option_title">Povos/奔腾 PS5200 电动剃须刀往复单刀头直插式充电</div>
+        <div class="info">
+            <span class="carriage">温馨提示：九东商城，消费聚财；</span>
+            <span class="price_tag">商城价：</span><span class="price" id="price">¥69.00</span>
+            <span class="number" id="product_num">商品编码：2015117161432127</span>
+        </div>
+        <div class="treasure">
+            <span class="treasure_tag">商城积分价 =</span><span class="treasure_price" id="treasure_price">¥69.00</span>
+            <span class="treasure_num" id="treasure_num">可使用商城积分：<span id="treasure">0.0</span></span>
+        </div>
+        <div class="parameters" id="parameters" style="display: none;">
+            <p class="customer">
+                <span class="result_tag">选项:</span>
+                <span class="result" id="result"><span id="param_01"></span><span id="param_02"></span><span id="param_03"></span><span id="param_04"></span></span>
+            </p>
+            <p class="node" id="node"></p>
+            <p class="config" id="config"></p>
+        </div>
+        <div class="total">
+            <span>购买数量：</span>
+            <input type="text" id="sum" value="1">
+        </div>
+        <div class="operator">
+            <img alt="" src="images/buy.jpg" id="buy">
+            <img alt="" src="images/join.jpg" id="cart">
+        </div>
+    </div>
+    <div class="match" id="match"></div>
+    <img alt="" src="images/bottom.jpg" class="panel_bottom">
+</div>
+	</body>
+</html>
+<script>
+	$(function(){
+		
+		$.get("Json/product.json",function(data){
+			console.log(data);
+			var i = cookie.getCookie("name");
+		     console.log(i);
+			//console.log(data)
+			//console.log(data[i])
+			$("#current")[0].src="images/" +data[i]["picurl_0"];
+			$("#treasure_price")[0].innerHTML = data[i]["p_011"]
+			$(".expand img")[0].src = "images/" +data[i]["picurl_0"];
+			
+			
+			$("#pics_title")[0].innerHTML = data[i]["p1"]
+			$(".img1")[0].src ="images/" +data[i]["picurl_0"]
+			$(".img2")[0].src ="images/" +data[i]["picurl_0"]
+			$("#price")[0].innerHTML = data[i]["p_011"]
+		},"json")
+		
+		
+		/*  放大镜   */
+		
+		$(".img").mouseenter(function(){
+			$(".hand").css("display","block");
+			$(".expand").css("display","block");
+			$(".img img").mousemove(function(e){
+				var X,Y;
+				X = e.pageX-$(this).offset().left-($(".hand").width()/2);
+				
+				Y = e.pageY-$(this).offset().top-($(".hand").height()/2);
+				console.log(X)
+				console.log(Y)
+				if(X < 0){
+					X=0;
+				}else if(X > 350){
+					X=350;
+				}
+				if( Y < 0){
+					Y=0;
+				}else if(Y > 350){
+					Y=350;
+				}
+				$(".hand").css({"left":X+"px","top":Y+"px"});
+				$(".expand img").css({"left":-X*2+"px","top":-Y*2+"px"});
+			})
+		
+		})
+		$(".img").mouseleave(function(){
+		$(".hand").css("display","none");
+		$(".expand").css("display","none");
+		})
+		/*切换图片*/
+		$("#images span").mouseenter(function(){
+			$(this).addClass("current").siblings().removeClass("current");
+			$(this).parents(".pics").find(".img img")[0].src=$(this).find("img")[0].src;
+			//console.log($(this).find("img")[0])
+			//console.log($(".levelB img")[0])
+					
+		})
+	
+	
+	
+	
+	
+	
+	
+	
+	})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

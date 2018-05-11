@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" defer>
+        function regexCall(){
+            var a="abc12345";
+            //alert("\w+");
+            var _r="ab";
+            var _reg=new RegExp("["+_r+"]+"+_r,"gi");//声明正则表达式的第二种方式;new RegExp();
+            //alert(a.match(_reg));
+
+            var _str="    jkjkjkj 145667l adfdl l1245656  ";
+//            var _r=["\\s+","\\d+"];
+//            for(var i=0;i<_r.length;i++){
+//                _reg=new RegExp(_r[i],"gi");
+//                _str=_str.replace(_reg,"");
+//            }
+            //alert(_str);
+
+
+
+
+
+
+            var _reg=/\w+/g;
+            //console.log(_reg.exec(_str));
+            _reg.lastIndex=0;
+            //alert(_str.search(_reg));
+
+            var _str="industry";
+            //alert(_str.match(/industr(?:y|ies)/g));
+//            console.log(/industr(?:y|ies)/g.exec(_str));
+//            console.log(/industr(y|ies)/g.exec(_str));
+
+
+            var _win="2000windows";
+            var _reg=/windows(?=95|98|NT|2000)/;
+            var _reg=/(?<=95|98|NT|2000)windows/;
+            //var _reg=new RegExp("(\\?<=95|98|NT|2000)windows");
+            alert(_win.match(_reg));
+
+
+
+
+
+
+
+            //var _str="   abc   xjkjk  sjkjk ";
+            //alert(_str.length);
+            //alert(_str.replace(/(^\s+)|(\s+$)/g,"").length);
+        }
+        regexCall();
+
+
+        window.onload=function(){
+//            var _input=document.getElementsByTagName("input")[0];
+//            _input.onchange=function(){
+//                //var _reg=;
+//                if(!/^\w{6,20}$/g.test(this.value)){
+//                    document.getElementsByTagName("span")[0].innerText="用户名不合法";
+//                }else{
+//                    document.getElementsByTagName("span")[0].innerText="";
+//                }
+//            }
+            var _f=0;
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" value="abc"/>
+<span style="color:red;"></span>
+</body>
+</html>

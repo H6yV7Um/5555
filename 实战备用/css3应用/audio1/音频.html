@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.11.3.js"></script>
+	</head>
+	<body>
+		<audio id="aud" controls="controls">
+			<source src="Beyond-海阔天空.mp3"></source>
+		</audio><br />
+		<input type="button" value="播放" />
+		<input type="button" value="下一曲" />
+		<div id="txt">
+			
+		</div>
+		<textarea id="gc" style="display: none;">
+			[00:00.31]海阔天空-Beyond
+			[00:18.51]今天我寒夜里看雪飘过
+			[00:25.16]怀着冷却了的心窝飘远方
+			[00:30.92]风雨里追赶
+			[00:33.74]雾里分不清影踪
+			[00:36.66]天空海阔你与我
+			[00:39.94]可会变(谁没在变)
+			[00:43.61]多少次迎着冷眼与嘲笑
+			[00:49.87]从没有放弃过心中的理想
+			[00:55.71]一刹那恍惚
+			[00:58.85]若有所失的感觉
+			[01:01.64]不知不觉已变淡
+			[01:05.00]心里爱(谁明白我)
+			[01:08.75]原谅我这一生不羁放纵爱自由
+			[01:15.91]也会怕有一天会跌倒 哦NO
+			[01:21.81]背弃了理想谁人都可以
+			[01:28.04]哪会怕有一天只你共我
+			[01:42.76]今天我寒夜里看雪飘过
+			[01:49.18]怀着冷却了的心窝飘远方
+			[01:54.89]风雨里追赶
+			[01:57.96]雾里分不清影踪
+			[02:01.47]天空海阔你与我可会变
+			[02:05.37](谁没在变)
+			[02:07.96]原谅我这一生不羁放纵爱自由
+			[02:15.11]也会怕有一天会跌倒 哦NO
+			[02:21.08]背弃了理想谁人都可以
+			[02:27.57]哪会怕有一天只你共我
+			[02:32.28]哦 yeah
+			[03:08.63]仍然自由自我
+			[03:11.75]永远高唱我歌
+			[03:14.76]走遍千里
+			[03:19.62]原谅我这一生不羁放纵爱自由
+			[03:26.51]也会怕有一天会跌倒
+			[03:31.04]哦NO
+			[03:32.78]背弃了理想谁人都可以
+			[03:39.18]哪会怕有一天只你共我
+			[03:45.57]被弃了理想谁人都可以
+			[03:51.73]哪会怕有一天只你共我
+			[03:56.29]哦yeah
+			[03:57.35]原谅我这一生不羁放纵爱自由
+			[04:02.57]哦yeah
+			[04:04.25]也会怕有一天会跌倒哦
+			[04:10.18]背弃了理想谁人都可以
+			[04:16.64]哪会怕有一天只你共我
+		</textarea>
+	
+		
+		
+		<script>
+			var aud=document.getElementById("aud")
+			var btn=document.getElementsByTagName("input")
+			var gequ=document.getElementById("gc")
+			var txt=document.getElementById("txt")
+			var source=document.getElementsByTagName("source")[0]
+			btn[0].onclick=function(){
+				if(aud.paused){
+					aud.play()
+					this.value="暂停"
+				}else{
+					aud.pause()
+					this.value="播放"
+				}
+			}
+			var gc=gequ.value
+			var gcarr=gc.split("[")
+			var str=''
+			for(var i=1;i<gcarr.length;i++){
+				var arrG=gcarr[i].split("]")
+				
+				var time=arrG[0].split(".")
+				
+				var times=time[0].split(":")
+				
+				var s=times[0]*60+times[1]*1
+				//console.log(s)
+				str+='<p id="n'+s+'">'+arrG[1]+'</p>'
+			}
+			txt.innerHTML=str
+			aud.addEventListener("timeupdate",function(){
+				var timers=parseInt(aud.currentTime)
+				console.log(timers)
+				if(document.getElementById("n"+timers)){
+					document.getElementById("n"+timers).style.color="red"
+				}
+				
+			})
+			btn[1].onclick=function(){
+				oplay()
+			}
+			
+			var num=0;
+			function oplay(){
+				$.ajax({
+					url:"audio.json",
+					success:function(data){
+						console.log(data[num].geming)
+						source.src=data[num].geming
+						aud.load()
+						aud.autoplay="autoplay"
+						num++;
+					}
+				})
+			}
+		</script>
+	</body>
+</html>

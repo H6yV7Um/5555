@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        table{ border:solid 1px #eee;}
+        td,th{ border:solid 1px #eee;}
+    </style>
+    <script type="text/javascript" src="javascript/Cookie.js"></script>
+    <script type="text/javascript" src="javascript/Ajax.js"></script>
+    <script type="text/javascript">
+        function writeToPage(_tmp,_comment,_fee,_num,_key){
+//            <td>序号</td>
+//            <td>name</td>
+//            <td>price</td>
+//            <td>img</td>
+//            <td>comment</td>
+//            <td>operator</td>
+//            <td>total</td>
+            var _tr="";
+            _tr="<tr>";
+            _tr+="<td>"+_tmp[0]+"</td>";
+            _tr+="<td>"+_tmp[1]+"</td>";
+            _tr+="<td>"+_fee+"</td>";
+            _tr+="<td>"+_tmp[2]+"</td>";
+            _tr+="<td>"+_comment+"</td>";
+            _tr+="<td><span class=\""+_key+"\">-</span><input type=\"text\" value=\""+_num+"\" class=\""+_key+"\" /><span class=\""+_key+"\">+</span></td>";
+            _tr+="<td>"+_fee*_num+"</td>";
+            _tr+="<td><span class=\""+_key+"\">删除</span></td>";
+            _tr+="</tr>"
+            document.getElementsByTagName("tbody")[0].innerHTML+=_tr;
+
+        }
+        function dealCookieArray(cookie,data,_tmp,key){
+            var _comment="",_fee=0.0,_num=0;
+            for(var i=0;i<cookie.length;i++){
+                for(var n=0;n<cookie[i].length;n++){
+                    _num=cookie[i][0];
+                    _comment+=cookie[i][n]+",";
+                    for(var k in data){
+                        if(data[k][cookie[i][n]]){////cookie[i][1]=="yellow"
+                            _fee+=data[k][cookie[i][n]];
+                            break;
+                        }
+                    }
+                }
+                writeToPage(_tmp,_comment,_fee,_num,key);
+                _fee=0;
+                _num=0;
+                _comment="";
+            }
+        }
+        function matchData(data,cookie){
+            var _tmp=[];
+            var _sort=1;
+            for(var c in cookie){
+                for(var k in data){
+                    if(k===c){
+//                        <td>序号</td>
+//                        <td>name</td>
+//                        <td>price</td>
+//                        <td>img</td>
+//                        <td>operator</td>
+//                        <td>total</td>
+                        _tmp.push(_sort++);
+                        _tmp.push(data[k]["name"]);
+                        //_tmp.push(data[k]["price"]);
+                        _tmp.push(data[k]["images"][0]);
+                        dealCookieArray(cookie[c],data[k]["attr"],_tmp,k);
+                        break;
+                    }
+                }
+            }
+        }
+        function bindEvent(){
+            var _tr=document.getElementsByTagName("tr");
+            for(var i=1;i<_tr.length; i++){
+                for(var n=0;n<_tr[i].children[5].children.length;n++){
+                    if(_tr[i].children[5].children[n].innerHTML=="-"){
+                        (function(x,y){
+                            _tr[x].children[5].children[y].onclick=function(){
+                                var _operator=new CookieOperator();
+                                var _tmp=_tr[x].children[4].innerHTML.replace(/\,$/g,"").split(",");
+                                var _data=_operator.dealNum(_operator.read("cart"),_tmp,this.className);
+                                _operator.save(_data);
+                                loadFromProduct();
+                            }
+                        })(i,n);
+                    }else if(_tr[i].children[5].children[n].innerHTML=="+"){
+                        (function(x,y){
+                            _tr[x].children[5].children[y].onclick=function(){
+                                var _operator=new CookieOperator();
+                                var _tmp=_tr[x].children[4].innerHTML.replace(/\,$/g,"").split(",");
+                                _operator.save(_operator.compareData(_operator.read("cart"),_tmp,this.className));
+                                loadFromProduct();
+                            }
+                        })(i,n);
+                    }else{
+                        (function(x,y){
+                            _tr[x].children[5].children[y].onchange=function(){
+                                var _operator = new CookieOperator();
+                                var _tmp=_tr[x].children[4].innerHTML.replace(/\,$/g,"").split(",");
+                                var data = _operator.read("cart");
+                                data=_operator.compareData(data,_tmp,this.className,parseInt(this.value),false);
+                                _operator.save(data);
+                                loadFromProduct();
+                            }
+                        })(i,n);
+                    }
+                }
+                (function(x){
+                    _tr[i].children[7].children[0].onclick=function(){
+                        var _tmp=_tr[x].children[4].innerHTML.replace(/\,$/g,"").split(",");
+                        var _operator = new CookieOperator();
+                        var data = _operator.read("cart");
+                        data=_operator.deleteArray(data,_tmp,this.className);
+                        _operator.save(data);
+                    }
+                })(i);
+            }
+        }
+        function loadFromProduct(){
+            ajaxRequest("post","javascript/product.json",true,null,function(data){
+                var _data=JSON.parse(data);
+                var _cookie=new CookieOperator().read("cart");
+                matchData(_data,_cookie);
+                bindEvent();
+            });
+        }
+        window.onload=function(){
+            loadFromProduct();
+        }
+    </script>
+</head>
+<body>
+<div>
+    <table cellpadding="1px" cellspacing="2px">
+        <thead>
+            <tr>
+                <td>序号</td>
+                <td>name</td>
+                <td>price</td>
+                <td>img</td>
+                <td>comment</td>
+                <td>operator</td>
+                <td>total</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

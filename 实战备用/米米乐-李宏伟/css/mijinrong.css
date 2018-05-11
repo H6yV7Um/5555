@@ -1,0 +1,67 @@
+.mifHead{
+	width: 100%;
+	padding: 20px 0;
+}
+.mifTitle{
+	width: 1200px;
+	margin: 0 auto;
+}
+.mifTitle .mifLogo{
+	float: left;
+	padding-right:10px ;
+	margin-bottom: 5px;
+}
+.mifTitle ul li.current{
+	color: #0066CC;
+	font-weight: bold;
+}
+.mifTitle ul li{
+	float: left;
+	margin: 10px 20px;
+	cursor: pointer;
+	font-size: 20px;
+}
+.mifTitle ul li:hover {
+    color: #0066CC;
+}
+.mifBodyList li div {
+    clear: both;
+    width: 100%;
+}
+.mifBody1 {
+    clear: both;
+    width: 100%;
+    height: 450px;
+    background: url(../img/fmi_01.jpg);
+    background-position: center;
+}
+.mifContent div.mif_n1 {
+    height: 218px;
+    background: url(../img/fmi_02.jpg);
+    background-position: center;
+}
+.mifContent div.mif_n2 {
+    height: 457px;
+    background: url(../img/fmi_03.jpg);
+    background-position: center;
+}
+.mifContent div.mif_n3 {
+    height: 156px;
+    background: url(../img/fmi_04.jpg);
+    background-position: center;
+}
+.mifContent div.mif_n4 {
+    height: 340px;
+    background: url(../img/fmi_05.jpg);
+    background-position: center;
+}
+.mifContent div.mif_n5 {
+    height: 340px;
+    background: url(../img/fmi_06.jpg);
+    background-position: center;
+}
+.mifContent div.mif_n6 {
+    height: 340px;
+    background: url(../img/fmi_07.jpg);
+    background-position: center;
+}

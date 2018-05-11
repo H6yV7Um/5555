@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Javascript/jquery.js"></script>
+    <script type="text/javascript">
+//        $.post("Http://localhost:8088/url/Scope",null,function(data,textStatus){
+//            if(textStatus=="success"){
+//                alert(data);
+//            }
+//        });
+
+        function callback(_obj){
+            console.log(_obj);
+        }
+        var _script=document.createElement("script");
+        _script.type="text/javascript";
+        _script.src="Javascript/callback.txt";
+        $("head")[0].appendChild(_script);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

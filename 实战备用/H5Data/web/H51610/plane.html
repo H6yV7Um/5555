@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto; text-align:center;}
+        #container{ width:500px; height:100%; position:relative; margin:0 auto;}
+        .plane{ display:block; width:50px; height:50px; overflow:hidden; background-color:#555; position:absolute;}
+        .bullet{ display:block; width:4px; height:6px; overflow:hidden; background-color:#000; position:absolute;}
+    </style>
+    <script type="text/javascript">
+
+        function Planes(_stage){
+            this.height=document.body.clientHeight||document.documentElement.clientHeight;
+            this.bullets=[];
+            this.plane=document.createElement("span");
+            this.plane.className="plane";
+            this.plane.style.left=Math.floor(Math.random()*500)+"px";
+            this.plane.style.top=0+"px";
+            this.timer=0;
+            _stage.appendChild(this.plane);
+            this.fighting=function(){
+                var _bullet=null;
+                var _self=this;
+                function start(){
+                    window.clearTimeout(_self.timer);
+                    _bullet=document.createElement("span");
+                    _bullet.className="bullet";
+                    _bullet.style.left=parseInt(_self.plane.style.left)+23+"px";
+                    _bullet.style.top=parseInt(_self.plane.style.top)+44+"px";
+                    _self.bullets.push(_bullet);
+                    _stage.appendChild(_bullet);
+                    for(var i=0;i<_self.bullets.length;i++){
+                        _self.bullets[i].style.top=parseInt(_self.bullets[i].style.top)+10+"px";
+                        if(parseInt(_self.bullets[i].style.top)>_self.height){
+                            //console.log(_self.bullets[i]);
+                            _stage.removeChild(_self.bullets[i]);
+                            _self.bullets.splice(i,1);
+                            i--;
+                        }
+                    }
+                    _self.plane.style.top=parseInt(_self.plane.style.top)+5+"px";
+                    if(_self.plane!=null) {
+                        if (parseInt(_self.plane.style.top) > _self.height) {
+                            _stage.removeChild(_self.plane);
+                            _self.plane = null;
+                            return;
+                        }
+                    }
+                    _self.timer=window.setTimeout(start,200);
+                }
+                start();
+                return this;
+            }
+            this.fly=function(){
+                var _self=this;
+                document.onmousedown=function(){
+                    _stage.onmousemove=function(e){
+                        var e=e||window.event;
+                        _self.self.style.left=e.clientX-25+"px";
+                        _self.self.style.top=e.clientY-25+"px";
+                    }
+                }
+                document.onmouseup=function(){
+                    _stage.onmousemove=null;
+                }
+                return this;
+            }
+        }
+
+
+        function Plane(_stage,_other){
+            this.height=document.body.clientHeight||document.documentElement.clientHeight;
+            this.bullets=[];
+            this.self=document.createElement("span");
+            this.self.className="plane";
+            this.self.style.left="225px";
+            this.self.style.top=this.height-50+"px";
+            _stage.style.height=this.height-6+"px";
+            _stage.style.border="solid 3px #f1f1f1";
+            _stage.appendChild(this.self);
+            this.fighting=function(){
+                var _bullet=null;
+                var _timer=0;
+                var _self=this;
+                function start(){
+                    window.clearTimeout(_timer);
+                    _bullet=document.createElement("span");
+                    _bullet.className="bullet";
+                    _bullet.style.left=parseInt(_self.self.style.left)+23+"px";
+                    _bullet.style.top=parseInt(_self.self.style.top)+"px";
+                    _self.bullets.push(_bullet);
+                    _stage.appendChild(_bullet);
+                    for(var i=0;i<_self.bullets.length;i++){
+                        _self.bullets[i].style.top=parseInt(_self.bullets[i].style.top)-10+"px";
+                        if(parseInt(_self.bullets[i].style.top)<0){
+                            //console.log(_self.bullets[i]);
+                            _stage.removeChild(_self.bullets[i]);
+                            _self.bullets.splice(i,1);
+                            i--;
+                        }
+                    }
+                    //checkPosition(_self,_other,_stage);
+                    _timer=window.setTimeout(start,200);
+                }
+                start();
+            }
+            this.fly=function(){
+                var _self=this;
+                document.onmousedown=function(){
+                    _stage.onmousemove=function(e){
+                        var e=e||window.event;
+                        //if(e.clientX>)
+                        _self.self.style.left=e.clientX-25+"px";
+                        _self.self.style.top=e.clientY-25+"px";
+                    }
+                }
+                document.onmouseup=function(){
+                    _stage.onmousemove=null;
+                }
+                return this;
+            }
+        }
+
+
+
+        function checkPosition(_mine,_other,_stage){
+            for(var i=0;i<_mine.bullets.length;i++){
+                if(parseInt(_mine.bullets[i].style.top)<=parseInt(_other.plane.style.top)+50){
+                    window.clearTimeout(_other.timer);
+                    _stage.removeChild(_other.plane);
+                    _bullets=_bullets.concat(_other.bullets);
+                }
+            }
+        }
+
+
+
+        var _bullets=[];
+
+        window.onload=function(){
+            var _stage=document.getElementById("container");
+
+
+            var _other=[];
+            var _timer=0;
+            function createPlanes(){
+                window.clearTimeout(_timer);
+                _other.push(new Planes(_stage).fly().fighting());
+                _timer=window.setTimeout(createPlanes,3000);
+            }
+            createPlanes();
+
+            var _mine=new Plane(_stage,_other);
+            _mine.fly().fighting();
+
+        }
+    </script>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>

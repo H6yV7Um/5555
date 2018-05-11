@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+
+//        function dealData(data){
+//            console.log(data);
+//        }
+        $(document).ready(function(){
+            //$("#demo").load("head.html");
+            mainLinkjson();
+        });
+
+        function mainLinkjson(){
+//            $.getJSON("index.json",function(data){
+//                console.log(data);
+//            });
+            console.log($.getJSON("index.json",function(d){
+                alert("ok");
+            }));
+        }
+    </script>
+<body>
+<ul id="main_list"></ul>
+</body>
+</html>

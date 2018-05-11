@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>list-page</title>
+		<link rel="stylesheet" type="text/css" href="css/index_01.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/listing.css"/>
+		<script src="js/jquery-1.11.3.js"></script>
+	</head>
+	<body>
+		<!--导航-->
+		<div id="wrp_01">
+			<div id="pub_top">
+				<div class="user">
+					<span class="ml20">
+						<a href="login.html">登录</a>
+					</span>
+					<span class="ml20">
+						<a>注册</a>
+					</span>
+				</div>
+				<div class="menu">
+					<div class="menu_car">
+						<dl class="my_car">
+							<div class="goods_num">0</div>
+							<dt class="car_text">
+								<span></span>
+								购物车
+								<em>0</em>
+								件
+								<i class="arrow"></i>
+							</dt>
+							<dd style="width: 348px; top: 30px;">
+								<div class="sub_title">
+									<h4>最新加入的商品</h4>
+								</div>
+								<div class="goods_box">
+									<div class="car_goods">
+										<img class="loading" src="img/loading.gif" />
+									</div>
+								</div>
+								<div class="checkout">
+									<span class="total_goods">
+										共<strong>0</strong>种商品
+									</span>
+									<a>结算购物车中的商品</a>
+
+								</div>
+							</dd>
+
+						</dl>
+						<dl class>
+							<dt>
+								<a>用户中心</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>商品收藏</a>
+									</li>
+									<li>
+										<a>店铺收藏</a>
+									</li>
+									<li>
+										<a>米米乐收藏</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a>我的订单</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>待付款订单</a>
+									</li>
+									<li>
+										<a>待确认订单</a>
+									</li>
+									<li>
+										<a>待评价交易</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a>客户服务</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>帮助中心</a>
+									</li>
+									<li>
+										<a>售后服务</a>
+									</li>
+									<li>
+										<a>客服中心</a>
+									</li>
+									<li>
+										<a>在线客服</a>
+									</li>
+									<li>
+										<a>QQ客服</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt style="width: 90px;">
+								<em class="wang"></em>
+								<a>网站导航</a>
+								<i></i>
+							</dt>
+							<dd style="width: 102px;">
+								<ul>
+									<li style="width: 102px;">
+										<a>导购频道</a>
+									</li>
+
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="background: #fafafa;">
+			<div style="margin: 0 auto;height: 70px;width: 100%;">
+				<div style="background: url(img/1.jpg) no-repeat center;width: 100%;cursor: pointer;height: 70px;"></div>
+			</div>
+		</div>
+
+		<div id="header">
+			<span class="log">
+				<a><img src="img/log.png"></a>
+			</span>
+			<div class="ipt_bar">
+				<form class="search_form">
+					<input type="hidden" class="search" />
+					<input type="text" class="s_text" placeholder="搜索 家居生活 试试^.^" />
+					<input type="submit" value="搜索" class="s_submit" />
+				</form>
+				<div class="keyword">
+					<ul>
+						<li>
+							<a style="color: #c81623;">iphone7</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">台湾美食</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">8.8包邮</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">手机热卖</a>
+						</li>
+						<li>
+							<a>魅蓝</a>
+						</li>
+						<li>
+							<a>iphone6</a>
+						</li>
+						<li>
+							<a>得力</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header_menu">
+				<ul>
+					<li>
+
+						<a class="fir">
+							<i></i> 认证包邮
+						</a>
+					</li>
+					<li>
+
+						<a class="sec">
+							<i></i> 认证包邮
+						</a>
+					</li>
+					<li>
+
+						<a class="thir">
+							<i></i> 认证包邮
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--导航     end-->
+
+		<div id="wrp_02">
+  			<div class="nav">
+				<div class="all_case">
+					<div class="title_all">
+						<h3>
+							<a>
+								<i class="classical"></i>
+								所有商品分类
+							</a>
+						</h3>
+						<i class="arrow"></i>
+					</div>
+		
+					<div class="classical_d" style="">
+						<ul class="category">
+							
+							<!--<li><div class="_class"><span class="_img"><img src="img/05.jpg" /></span><h2 style="color: #fff;"><a>手机</a>
+								<span>/</span><a>数码</a></h2></div><div class="sub_class" style="display:;"><div class="sub_left"><div class="shouji">
+								<span></span><h1><a>手机数码</a></h1></div><dl><dt><a>手机通讯</a><span class="arrow"></span></dt><dd><a>Iphone</a>
+								<a>三星</a><a>小米</a><a>魅族</a><a>华为</a></a><a>诺基亚</a><a>联想</a><a>HTC</a></a><a>中兴</a><a>索尼</a><a>乐视</a></a><a>其他</a><a>微软</a>
+								<a>华为儿童定位手表</a></dd></dl>
+							</li>-->			
+						
+						</ul>
+					</div>
+				</div>
+				<ul class="nav_menu">
+					<li>
+						<a style="color:#D4121B;">首页</a>
+					</li>
+					<li>
+						<a>米活动</a>
+					</li>
+					<li>
+						<a>乐社区</a>
+					</li>
+					<li>
+						<a>商家入驻</a>
+					</li>
+					<li>
+						<a>8.8天天抢</a>
+					</li>
+					<li>
+						<a>团购</a>
+					</li>
+					<li>
+						<a>米金融 </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="nch-breadcrumb-layout">
+		    <div class="nch-breadcrumb wrapper">
+		      	<div class="breadBox">
+		      		<i class="icon-home"><img src="img/shouy.png"></i>
+		       		<span><a href="">首页</a></span><span class="arrow">&gt;</span>
+		       		<span>电脑办公</span>
+		    	</div>
+      		</div>
+		</div>
+		<div class="nch-container wrapper">
+			<div class="left">
+				<div class="nch-module nch-module-style02">
+					<div class="title">
+        				<h3>分类筛选</h3>
+      				</div>
+      				<div class="content">
+      					<ul id="files" class="tree" role="tree">
+      						<li role="treeitem" aria-expanded="true"><i class="tree-parent" tabindex="0"></i><a href="" class="selected" rel="nofollow">电脑办公</a>
+		                        <ul role="group" class="">
+		                            <li role="treeitem" aria-expanded="true"><i class="tree-parent" tabindex="-1"></i><a href="" rel="nofollow">电脑整机</a>
+		                                <ul role="group" class="">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">电脑配件</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">服务器/工作站</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">显示器</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">一体机</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">台式机</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">笔记本</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">平板电脑</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">IPAD</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">surface</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">国产平板</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">网络设备</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">3G上网</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">路由器</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">移动支付</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">办公设备</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">刷卡机</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">打印机</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">多功能一体机</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">投影仪</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">外设产品</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">移动硬盘</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">键鼠套装</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">U盘</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">电脑包</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">服务产品</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">电脑软件</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">办公耗材</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">硒鼓</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">办公文具</a></li>
+		                                  </ul>
+		                              </li>
+		                         </ul>
+                      		</li>
+		      				<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">手机数码</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">手机通讯</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">IPhone</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">三星</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">小米</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">魅族</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">华为</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">诺基亚</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">联想</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">HTC</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">中兴</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">索尼</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">乐视</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">其他</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">微软</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">儿童定位手表</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">手机配件</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">贴膜</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">手机保护壳</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">电池</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">手机耳机</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">充电器/数据线</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">手机存储卡</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">移动电源</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">配件</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">摄影摄像</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">单反相机</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">数码配件</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">闪光灯</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">智能设备</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">智能手表</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">影音娱乐</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">耳机耳麦</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">音箱</a></li>
+		                                </ul>
+		                            </li>
+		                         </ul>
+		                     </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">食品酒饮</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">进口食品</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">进口酒</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">进口乳制品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">进口零食</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">进口粮油</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">进口调料</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">进口冲调</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">酒饮</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">白酒</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">红酒</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">保健养身酒</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">功能饮料</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">果酒</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">粮油</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">米面粗粮</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">罐头榨菜</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">调味</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">方便食品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">油</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">有机绿色</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">休闲</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">膨化</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">冲调</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">糖果</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">坚果</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">蜜饯</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">肉脯</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">零食</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">茶叶</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">绿茶</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">花草茶</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">花果茶</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">铁观音</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">乌龙</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">其他茶</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">红茶</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">特产</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">熟食特产</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">干货特产</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">腌腊特产</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">季节特色</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">粽子</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">月饼</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">保健食品</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">保健品</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">日用百货</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">厨具</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">烹饪锅具</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">厨房配件</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">水具酒具</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">餐具</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">茶具/咖啡具</a></li>
+		                                 </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">生活日用</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">收纳用品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">浴室用品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">缝纫/针织用品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">净化除味</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">清洁用品</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">纸品湿巾</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">衣物清洁</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">清洁工具</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">家庭清洁</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">一次性用品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">驱虫用品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">计生用品</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">宠物生活</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">宠物主粮</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">家居日用</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">礼品</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">礼品卡</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+                      		</li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">服装鞋帽</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">眼镜</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">太阳镜</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">反辐射眼镜</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">箱包</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">女包</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">男包</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">行李箱</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">背包</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">童装</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">儿童上装</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">男鞋</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">男士单鞋</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">女鞋</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">女士休闲鞋</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">女士靴子</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">女士单鞋</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">女装</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">女士上衣</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">女士外衣</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">女士套装</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">女袜</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">女士裙装</a></li>
+		                                </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">男装</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">男袜</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">男士上衣</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">男士裤装</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">母婴玩具</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">奶粉</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">婴儿奶粉</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">尿裤湿巾</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">婴儿尿裤</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">拉拉裤</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">成人尿裤</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">湿巾</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">洗护用品</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">宝宝护肤</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">宝宝洗浴</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">洗衣液</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">肥皂</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">日常护理</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">喂养用品</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">奶瓶奶嘴</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">吸奶器</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">牙胶安抚</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">暖奶消毒</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">水壶水杯</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">玩具乐器</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">芭比娃娃类玩具</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">DIY玩具</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">寝具服饰</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">婴儿鞋帽袜</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">家居床品</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">妈妈专区</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">妈咪包</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">背婴带</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">待产新生</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">防辐射服</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">家居生活</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">生活服务</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">餐饮</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">婚纱摄影</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">儿童摄影</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">写真</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">驾校</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">鲜花</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">空气净化</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">家纺</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">被子</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">家居</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">卧室家具</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">客厅家具</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">餐厅家具</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">书房家具</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">储物家具</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">灯具</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">台灯</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">LED灯</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">家装建材</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">灯饰照明</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">五金家电</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">墙地面材料</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">个护美妆</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">魅力彩妆</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">底妆</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">眼部</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">唇部</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">美甲</a></li>
+		                                </ul>
+		                             </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">洗发护发</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">洗发</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">护发</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">染发</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">造型</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">套装</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">香水SPA</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">香薰精油</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">身体护肤</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">沐浴</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">润肤</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">手足</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">口腔护理</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">牙膏/牙粉</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">女性护理</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">卫生巾</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">私密护理</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">面部护肤</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">清洁</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">护肤</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">面膜</a></li>
+		                                </ul>
+		                            </li>
+		                          </ul>
+		                      </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">运动健康</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">运动户外</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">骑行运动</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">体育用品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">户外装备</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">垂钓用品</a></li>
+		                                  </ul>
+		                              </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">营养保健</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">传统滋补</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">家庭测量仪</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">急救卫生</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">成人用品</a></li>
+		                                  </ul>
+		                              </li>
+		                          </ul>
+		                      </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">家用电器</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">大家电</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">冰箱</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">洗衣机</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">生活电器</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">净化器</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">挂烫机/熨斗</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">加湿器</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">口腔护理</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">厨房电器</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">电压力锅</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">其他厨房电器</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+                      		</li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="">生鲜食品</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="">生鲜食品</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">水果</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">蔬菜</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">禽蛋</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">鲜肉</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">加工类肉食</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">冻品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">全国可售生鲜</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">汽车用品</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">4S店</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">车</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">车载电器</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">行车记录仪</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">汽车装饰</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">脚垫</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">座垫</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">座套</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">功能小件</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">图书音像</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">少儿</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">3-6岁</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">7-10岁</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">11-14岁</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">儿童文学</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">绘本</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">科普</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">教育</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">中小学教辅</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">考试</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">文艺</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">小说</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">文学</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">青春文学</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">传记</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">动漫</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">摄影</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">经管励志</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">金融与投资</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">励志与成功</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">人文社科</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">历史</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">心理学</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">政治军事</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">国学古籍</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">哲学宗教</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">文化</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">生活</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">家教与育儿</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">健身保健</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">旅游地图</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">期刊杂志</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">期刊</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">杂志</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="">时尚钟表</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="">表</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">儿童表</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="">珠宝首饰</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="">其他珠宝</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">时尚饰品</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">玉石银饰</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">彩宝珍珠</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">天然木饰</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="">旅游娱乐</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="">旅游</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">四川旅游</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">国内旅游</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="">出境旅游</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      						<li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">服务市场</a>
+		                        <ul role="group" class="tree-group-collapsed">
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">店铺营销</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">广告投放</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">店铺装修</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">店铺模板</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">详情页模板</a></li>
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">定制装修</a></li>
+		                                </ul>
+		                            </li>
+		                            <li role="treeitem" aria-expanded="false"><i class="tree-parent tree-parent-collapsed" tabindex="-1"></i><a href="" rel="nofollow">运营服务</a>
+		                                <ul role="group" class="tree-group-collapsed">
+		                                    <li class="tree-parent tree-parent-collapsed" role="treeitem"><i tabindex="-1"></i><a href="" rel="nofollow">整体托管</a></li>
+		                                </ul>
+		                            </li>
+		                        </ul>
+		                    </li>
+      					</ul>
+      				</div>
+				</div>
+				<!--商品推广-->
+				<div nctype="booth_goods" class="nch-module" style="">
+					<div class="title">
+						<h3>推广商品</h3></div>
+					<div class="content" nc_type="current_display_mode">
+						<ul class="nch-booth-list squares">
+							<li nctype_goods="72594" nctype_store="205">
+								<div class="goods-pic">
+									<a href="" target="_blank" title="usb网线网卡转换器转接头2.0接口"><img src="img/cha.jpg" title="usb网线网卡转换器转接头2.0接口" alt="usb网线网卡转换器转接头2.0接口"></a>
+								</div>
+								<div class="goods-name">
+									<a href="" target="_blank" title="usb网线网卡转换器安装简便，一插即用：采用最流行的USB接口，无需拆机">usb网线网卡转换器转接头2.0接口</a>
+								</div>
+								<div class="goods-price" title="商品价格：¥30.00">¥30.00</div>
+							</li>
+							<li nctype_goods="70869" nctype_store="205">
+								<div class="goods-pic">
+									<a href="" target="_blank" title="TP-LINK TL-SF1005+ 5口百兆交换机 白色"><img src="img/jiao.jpg" title="TP-LINK TL-SF1005+ 5口百兆交换机 白色" alt="TP-LINK TL-SF1005+ 5口百兆交换机 白色"></a>
+								</div>
+								<div class="goods-name">
+									<a href="" target="_blank" title="专门为家庭或中小企业搭建百兆局域网络设计。 24小时内发货">TP-LINK TL-SF1005+ 5口百兆交换机 白色</a>
+								</div>
+								<div class="goods-price" title="商品价格：¥88.00">¥88.00</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--展位-->
+				<div class="nch-module-sidebar"> 
+					<a href="" target="_blank" rel="nofollow"><img style="width:200px;height:350px" border="0" src="img/zhan.jpg" alt="戴尔(DELL)灵越 飞匣3000系列Ins15C-4528L 15.6英寸笔记本电脑"></a>
+					<div class="clear"></div>
+    			</div>
+    			<div class="nch-module nch-module-style03">
+      				<div class="title">
+        				<h3>最近浏览</h3>
+				    </div>
+					<div class="content"></div>
+    			</div>
+			</div>
+			<div class="right">
+				<div class="shop_con_list" id="main-nav-holder">
+					<nav class="sort-bar" id="sort-bar">
+						<div class="pagination"><ul><li><span>上一页</span></li><li><a class="demo" href=""><span>下一页</span></a></li></ul></div>
+						<div class="nch-sortbar-array"> 排序方式：
+					        <ul>
+					            <li class="selected"><a href="" title="默认排序">默认</a></li>
+					            <li><a href="" title="点击按销量从高到低排序">销量<i></i></a></li>
+					            <li><a href="" title="点击按人气从高到低排序">人气<i></i></a></li>
+					            <li class="jiage"><a href="" title="点击按价格从低到高排序">价格<i></i></a></li>
+					        </ul>
+				        </div>
+				        <div class="nch-sortbar-owner">商品类型： <span><a href="" class="selected"><i></i>全部</a></span> <span><a href=""><i></i>商城自营</a></span> <span><a href=""><i></i>商家加盟</a></span> </div>
+					</nav>
+					<!--商品列表-->
+					<div>
+						<div class="squares" nc_type="current_display_mode">
+							<ul class="list_pic">
+								<li class="item">
+									<div class="goods-content" nctype_goods=" 154256" nctype_store="1">
+										<div class="goods-pic">
+											<a class="w_1" target="_blank" title="苹果Apple MacBook Pro 笔记本电脑 Retina显示屏 MJLT2MK9P2CH/A 15英寸">
+                   								<img src="img/ph01.jpg" title="苹果Apple MacBook Pro 笔记本电脑 Retina显示屏 MJLT2MK9P2CH/A 15英寸" alt="苹果Apple MacBook Pro 笔记本电脑 Retina显示屏 MJLT2MK9P2CH/A 15英寸">
+               								</a>
+										</div>
+										<div class="goods-info" style="top: 230px;">
+											<div class="goods-pic-scroll-show">
+                        						<ul>
+                                          			<li class="selected"><a href=""><img src="img/ui01.jpg"></a></li>
+                                					<li class=""><a href=""><img src="img/ui02.jpg"></a></li>	
+                           						 	<li class=""><a href=""><img src="img/ui03.jpg"></a></li>		
+                            	                    <li><a href=""><img src="img/ui04.jpg"></a></li>        
+                                 				</ul>
+                            				</div>
+	                                        <div class="goods-name"><a href="" target="_blank" title="">苹果Apple MacBook Pro 笔记本电脑 Retina显示屏 MJLT2MK9P2CH/A 15英寸<em></em></a></div>            
+	                                		<div class="goods-price"<em class="sale-price" title="商城价：¥17888.00">1.78万</em><em class="market-price" title="市场价：¥17988.00">1.79万</em>
+												<span class="raty" data-score="5" title="很满意" style="width: 80px;"><img src="img/xing.png" alt="1" title="很满意">&nbsp;<img src="img/xing.png" alt="2" title="很满意">&nbsp;<img src="img/xing.png" alt="3" title="很满意">&nbsp;<img src="img/xing.png" alt="4" title="很满意">&nbsp;<img src="img/xing.png" alt="5" title="很满意"><input type="hidden" name="score" value="5" readonly="readonly"></span>
+											 </div>
+											<div class="sell-stat">
+											    <ul>
+											        <li style="display:none;"><a href="" target="_blank" class="status">0</a><p>商品销量</p></li>
+											        <li><a href="" target="_blank">0</a><p>用户评论</p></li>
+											        <li><a target="_blank" href=""><img border="0" src="img/q_01.jpg" style=" vertical-align: middle;"> </a><p>在线客服</p></li>
+											        <li><em member_id="1"><a class="chat chat_offline" title="在线联系" href="">离线</a>&nbsp;</em><p>在线客服</p></li>
+											    </ul>
+											</div>                       
+                                            <div class="store">
+                    							<a href="" title="官方店铺" class="name">官方店铺</a>
+                    						</div>            
+                               				<div class="add-cart">
+                      							<a href="" nctype="add_cart"><i class="icon-shopping-cart"></i>加入购物车</a>
+                    						</div>
+                            
+                                       
+                      
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script>
+	$(function(){
+		$.get("json/my.json",function(data){
+			console.log(data)
+			var _html = ""
+			for(var k in data) {
+				console.log(k)
+				_html += '<li class="firli "><div class="_class "><span class="_img "><img src="img/'+data[k]['picurl']+'" width="100% "></span><h2 style="color: #fff; "><a>' + data[k]["name2"] + '</a></h2><div class="sub_class" style="display:none;"><div class="sub_left"><div class="shouji"><span></span><h1><a>'+data[k]["phone"]+'</a></h1></div>'
+					
+						for(var k2 in data[k]["title"]){
+							_html += '<dl><dt><a>'+data[k]["title"][k2]["case1"]+'</a><span class="arrow">&gt</span></dt><dd>';
+							for(var k3 in data[k]["title"][k2]["case2"]){
+								_html += '<a>'+data[k]["title"][k2]["case2"][k3]["name"]+'</a>'
+							}
+							_html += '</dd></dl>'
+						}
+						
+				_html+='</div></li>';
+			}
+			
+			$(".category ").html(_html);
+		},"json")
+		
+		
+		$(".title_all").hover(function(){
+			$('.classical_d').show()
+			$(".firli").find("sub_class").show()
+		},function(){
+			$('.classical_d').find("sub_class").hide()
+			$(".firli").hide()
+		
+		})	
+			
+		/*left下拉	*/
+		// 单行显示更多
+		$('.tree-parent').click(function(){
+			$(this)
+		})
+		
+		
+		
+		 $(".goods-content").mouseenter(function () {
+                $(this).children(".goods-info").stop(true).animate({
+                    
+                    top: 180
+                },500);
+            }).mouseleave(function () {
+                $(this).children(".goods-info").animate({
+                    
+                    top: 230
+                },500);
+            });
+
+
+		$(".goods-pic-scroll-show li").mouseenter(function(){
+			
+		$(this).addClass("selected").siblings().removeClass("selected");
+			$(".w_1 img")[0].src=$(this).find("img")[0].src;
+			//console.log($(this).find("img")[0])
+			//console.log($(".squares .goods-pic img")[0])
+		})
+	
+		$.get("json/list.json ",function(data){
+				var oUl = document.getElementById("list_pic ");
+				var aData = eval(data);
+				//console.log(aData)
+				oUl.innerHTML = " "
+				for(var i = 0;i < aData.length;i++){
+					var oLi = document.createElement('li');
+					oLi.innerHTML = '<div class="goods-content" nctype_goods=" 154256" nctype_store="1"><div class="goods-pic"><a class="w_1" target="_blank" title="苹果Apple MacBook Pro 笔记本电脑 Retina显示屏 MJLT2MK9P2CH/A 15英寸">
+					</a></div><div class="goods-info" style="top: 230px;"><div class="goods-pic-scroll-show"><ul><li class="selected"><a href=""><img src="img/ui01.jpg"></a></li>
+                    <li class=""><a href=""><img src="img/ui02.jpg"></a></li><li class=""><a href=""><img src="img/ui03.jpg"></a></li><li><a href=""><img src="img/ui04.jpg"></a></li>        
+                    </ul></div><div class="goods-name"><a href="" target="_blank" title="">苹果Apple MacBook Pro 笔记本电脑 Retina显示屏 MJLT2MK9P2CH/A 15英寸<em></em></a></div>            
+	                <div class="goods-price"<em class="sale-price" title="商城价：¥17888.00">1.78万</em><em class="market-price" title="市场价：¥17988.00">1.79万</em>
+					<span class="raty" data-score="5" title="很满意" style="width: 80px;"><img src="img/xing.png" alt="1" title="很满意">&nbsp;<img src="img/xing.png" alt="2" title="很满意">&nbsp;<img src="img/xing.png" alt="3" title="很满意">&nbsp;<img src="img/xing.png" alt="4" title="很满意">&nbsp;<img src="img/xing.png" alt="5" title="很满意"><input type="hidden" name="score" value="5" readonly="readonly"></span>
+					</div><div class="sell-stat"><ul><li style="display:none;"><a href="" target="_blank" class="status">0</a><p>商品销量</p></li><li><a href="" target="_blank">0</a><p>用户评论</p></li>
+					<li><a target="_blank" href=""><img border="0" src="img/q_01.jpg" style="vertical-align: middle;"></a><p>在线客服</p></li><li><em member_id="1"><a class="chat chat_offline" title="在线联系" href="">离线</a>&nbsp;</em><p>在线客服</p></li>
+					</ul></div><div class="store"><a href="" title="官方店铺" class="name">官方店铺</a></div><div class="add-cart"><a href="" nctype="add_cart"><i class="icon-shopping-cart"></i>加入购物车</a>
+                    </div></div></div>'
+					
+					oUl.appendChild(oLi)
+				}
+		})
+	})	
+	
+</script>

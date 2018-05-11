@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var _allowed=0;
+            var _user={}
+            $("#account").blur(function(){
+                if(/\w{6,20}/g.test($(this).val())){
+                    //alert("right");
+                    _allowed++;
+                }else{
+                    alert("error");
+                }
+            });
+
+
+
+            $("#regist").click(function(){
+                if(_allowed==1){
+                    var _date=new Date();
+                    _user[""+_date.getYear()+(_date.getMonth()+1)+_date.getDate()+_date.getHours()]={
+                        "account":$("#account").val(),
+                        "mobile":$("#mobile").val(),
+                        "password":$("#pwd1").val()
+                    }
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+<span>用户名:</span><input type="text" id="account"/>
+<span>手机号:</span><input type="text" id="mobile"/>
+<span>邮箱账号:</span><input type="text" id="mail"/>
+<span>密码:</span><input type="text" id="pwd1"/>
+<span>确认密码:</span><input type="text" id="pwd2"/>
+<input type="button" id="regist" value="注册"/>
+</body>
+</html>

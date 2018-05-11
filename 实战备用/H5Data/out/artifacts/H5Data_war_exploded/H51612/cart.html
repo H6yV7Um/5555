@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Javascript/jquery.js"></script>
+    <script type="text/javascript">
+
+
+
+        var _category={
+            "10001":{
+                "name":"家电",
+                "url":"test.html",
+                "icon":"",
+                "sort":"",
+                "hot":"",//表示热门分类
+                "disabled":1,//0:不可用,1:正常显示状态
+                "children":{
+                    "1000110001":{
+                        "name":"大家电",
+                        "url":"test.html",
+                        "icon":"",
+                        "sort":"",
+                        "hot":"",
+                        "disabled":1,
+                        "children":{
+
+                        }
+                    }
+                }
+            },
+            "10002":{
+                "name":"服装",
+                "url":"test.html",
+                "icon":"",
+                "sort":2,
+                "hot":"",
+                "disabled":1
+            },
+            "10003":{
+                "name":"数码",
+                "url":"test.html",
+                "icon":"",
+                "sort":1,
+                "hot":"",
+                "disabled":0
+            }
+        }
+
+
+        $(document).ready(function(){
+            function readCategory(){
+                var _link="";
+                for(var key in _category){
+                    if(_category[key]["disabled"]==1){
+                        _link+="<a href=\""+_category[key]["url"]+"?id="+key+"\">"+_category[key]["name"]+"</a>";
+                    }
+                }
+                $("#category").html(_link);
+            }
+            readCategory();
+
+            
+
+        });
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <div id="category"></div>
+    <div id="products"></div>
+</body>
+</html>

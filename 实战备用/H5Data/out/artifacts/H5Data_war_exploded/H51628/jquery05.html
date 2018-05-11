@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            /*$("div:first").on("click",function(e){
+                var e=e||window.event;
+                alert("div");
+            });
+            $("div:first").on("click",function(e){
+                var e=e||window.event;
+                alert("second");
+            });*/
+
+
+
+//            function demo(e){
+//                e=e||window.event;
+//                alert(e.target);
+//            }
+//            $("div")[0].onclick=function(e){
+//                demo(e);
+//                alert("second");
+//                $("div")[0].onclick=null;
+//            }
+
+
+
+
+            /*$("div")[0].on=function(_type,data,callback){
+                this[_type]=function(e){
+                    e.data={foo:"demo"};
+                    callback(e);
+                }
+            }
+            $("div")[0].on("onclick",{foo:"demo"},function(e){
+                alert(e.data.foo);
+            });*/
+
+
+
+
+
+
+
+
+
+
+//            function fn1(){
+//                alert("fn1");
+//            }
+//            $("div").on("click",fn1);
+//
+//            function fn2(){
+//                alert("fn2");
+//            }
+//            $("div").on("click",fn2);
+//            $("div").off("click");
+
+
+//            function on(_type,_elem,fn){
+//                $("body")[0].onclick=function(e){
+//                    console.log(e.target);
+//                    e.target.onclick=fn;
+//                    $(e.target)[0].onclick();
+//                }
+//            }
+//            on("click","div",function(){
+//                alert("ok");
+//            });
+//            $("body").append("<div style='width:100px; height:100px; margin-top:10px; background-color:yellow;'></div>");
+
+//            $("body").on("click", "div", function(){
+//                console.log(this);
+//            });
+//            $("body").on("click","div",function(){
+//                console.log(this);
+//            });
+
+
+
+
+
+//            $("div").bind({
+//                click:function(){$(this).slideToggle();},
+//                mouseover:function(){$(this).css("background-color","red");},
+//                mouseout:function(){$(this).css("background-color","#FFFFFF");}
+//            });
+
+
+
+
+//            $("div").click(function (event, a, b) {
+//                // 一个普通的点击事件时，a和b是undefined类型
+//                // 如果用下面的语句触发，那么a指向"foo",而b指向"bar"
+//                alert("tip");
+//              return 10000;
+//            });
+//
+//            $("span").click(function(){
+//                $("div").trigger("click", ["foo", "bar"])
+//            });
+
+
+
+
+
+
+            /*$("#old").click(function(){
+                $("input").trigger("focus");
+            });
+            $("#new").click(function(){
+                $("input").triggerHandler("focus");
+            });
+            $("input").focus(function(){
+                $("<span>Focused!</span>").appendTo("body").fadeOut(1000);
+            });*/
+
+
+
+
+//            $("div").delegate("button","click",function(){
+//                $("p").slideToggle();
+//            });
+//            $("div").append("<p style='width:100px; height:100px;'></p>");
+
+
+
+
+//            $("div").hover(
+//                function () {
+//                    $(this).css("background-color","yellow");
+//                },
+//                function () {
+//                    $(this).css("background-color","red");
+//                }
+//            );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//            function hover(_elem,fn1,fn2){
+//                _elem.onmouseover=fn1;
+//                _elem.onmouseout=fn2;
+//            }
+//            hover($("div")[0],function(){
+//                $(this).css("background-color","yellow");
+//            },function () {
+//                $(this).css("background-color","red");
+//            });
+
+
+
+
+
+
+
+
+
+
+
+
+//            $("p").focusin(function() {
+//                $(this).find("span").css('display','inline').fadeOut(1000);
+//            });
+//            $("p").focusout(function() {
+//                $(this).find("span").css('display','inline').fadeIn(1000);
+//            });
+
+
+
+            window.onresize=function(){
+                console.log("resize");
+            }
+            //$("div")[0].onresize
+//            var _body=document.getElementsByTagName("body")[0];
+//            _body.onselect=function(){
+//
+//            }
+//            _body.onselectstart
+            document.onselectstart=function(){
+                return false;
+            };
+            document.oncontextmenu=function(){
+                return false;
+            }
+        });
+    </script>
+</head>
+<body>
+<span style="display:block; width:100px; height:100px; background-color:#fff;"></span>
+<div style="width:100px; height:100px; background-color:red;"></div>
+
+
+
+
+<button id="old">.trigger("focus")</button>
+<button id="new">.triggerHandler("focus")</button><br/><br/>
+<input type="text" value="To Be Focused"/>
+
+
+
+
+
+<div style="background-color:red">
+    <p>这是一个段落。</p>
+    <button>请点击这里</button>
+</div>
+
+
+
+
+
+<p><input type="text" /> <span>focusout fire</span></p>
+<p><input type="password" /> <span>focusout fire</span></p>
+</body>
+</html>

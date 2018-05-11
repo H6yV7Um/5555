@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto; text-align:center;}
+        #container{ border:solid 5px #000; width:800px; height:400px;
+            overflow: hidden; position:relative;}
+        #container div{ width:100%; height:40px; overflow:hidden; position:absolute; left:0px; background-image:url(../H51612/images/img1.jpg);}
+    </style>
+    <script type="text/javascript">
+        function createDiv(n){
+            var _div=null;
+            var _container=document.getElementById("container");
+            for(var i=0;i<n;i++){
+                _div=document.createElement("div");
+                _div.style.top=i*40+"px";
+                _div.style.backgroundPosition="0px "+(-i*40)+"px";
+                _container.appendChild(_div);
+            }
+        }
+        function blinds(){
+            createDiv(10);
+            var _timer=0;
+            var _height=40;
+            var _list=document.getElementById("container").getElementsByTagName("div");
+            function exec(){
+                window.clearTimeout(_timer);
+                _height-=2;
+                for(var i=0;i<_list.length;i++){
+                    _list[i].style.height=_height+"px";
+                }
+                if(_height>0) {
+                    _timer = window.setTimeout(exec, 100);
+                }
+            }
+            exec();
+        }
+        window.onload=function(){
+            blinds();
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+
+</div>
+</body>
+</html>

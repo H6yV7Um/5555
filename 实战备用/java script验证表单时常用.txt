@@ -1,0 +1,150 @@
+-----------------2 -----------------------
+
+java script验证表单时常用：  
+
+"^-[0-9]*[1-9][0-9]*$"　　//负整数   
+
+"^-?//d+$"　　　　//整数   
+
+"^//d+(//.//d+)?$"　　//非负浮点数（正浮点数 + 0）   
+
+"^(([0-9]+//.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*//.[0-9]+)|([0-9]*[1-9][0-9]*))$"　　//正浮点数   
+
+"^((-//d+(//.//d+)?)|(0+(//.0+)?))$"　　//非正浮点数（负浮点数 + 0）   
+
+"^(-(([0-9]+//.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*//.[0-9]+)|([0-9]*[1-9][0-9]*)))$"　　//负浮点数   
+
+"^(-?//d+)(//.//d+)?$"　　//浮点数   
+
+"^[A-Za-z]+$"　　//由26个英文字母组成的字符串   
+
+"^[A-Z]+$"　　//由26个英文字母的大写组成的字符串   
+
+"^[a-z]+$"　　//由26个英文字母的小写组成的字符串   
+
+"^[A-Za-z0-9]+$"　　//由数字和26个英文字母组成的字符串   
+
+"^//w+$"　　//由数字、26个英文字母或者下划线组成的字符串   
+
+"^[//w-]+(//.[//w-]+)*@[//w-]+(//.[//w-]+)+$"　　　　//email地址   
+
+"^[a-zA-z]+://(//w+(-//w+)*)(//.(//w+(-//w+)*))*(//?//S*)?$"　　//url    
+
+应用实例
+
+用户名：
+/^[a-zA-Z]{1}([a-zA-Z0-9]|[_]){4,19}$/
+
+无符号字符串：
+/^[^/s]{1}[^-_/~!@#/$%/^&/*/./(/)/[/]/{/}<>/?/////'/"]*$/
+
+Email：
+/^/w+([-+.]/w+)*@/w+([-.]//w+)*/./w+([-.]/w+)*$/
+
+电话号码：
+/^((/(/d{3}/))|(/d{3}/-))?(/(0/d{2,3}/)|0/d{2,3}-)?[1-9]/d{6,7}$/
+
+手机号码：
+/^((/(/d{3}/))|(/d{3}/-))?13/d{9}$/
+
+URL：
+/^http:////[A-Za-z0-9]+/.[A-Za-z0-9]+[//=/?%/-&_~`@[/]/':+!]*([^<>/"/"])*$/
+
+身份证：
+/^/d{15}(/d{2}[A-Za-z0-9])?$/
+
+货币：
+/^/d+(/./d+)?$/
+
+数字：
+/^/d+$/
+
+邮政编码：
+/^[1-9]/d{5}$/
+
+QQ：
+/^[1-9]/d{4,8}$/
+
+整数：
+/^[-/+]?/d+$/
+
+实数：
+/^[-/+]?/d+(/./d+)?$/
+
+英文：
+/^[A-Za-z]+$/
+
+中文
+/^[/u0391-/uFFE5]+$/
+
+密码（必须含有大写字母、小写字母、标点、数字中的至少两种。呵呵，这个比较变态吧～）
+/^(([A-Z]*|[a-z]*|/d*|[-_/~!@#/$%/^&/*/./(/)/[/]/{/}<>/?/////'/"]*)|.{0,5})$|/s/
+
+利用正则表达式限制网页表单里的文本框输入内容：  
+
+用 正则表达式限制只能输入中文：onkeyup="value="/value.replace(/["^/u4E00-/u9FA5]/g,’’)" onbeforepaste="clipboardData.setData(’text’,clipboardData.getData(’text’).replace(/[^/u4E00-/u9FA5]/g,’’))"  
+
+用 正则表达式限制只能输入全角字符： onkeyup="value="/value.replace(/["^/uFF00-/uFFFF]/g,’’)" onbeforepaste="clipboardData.setData(’text’,clipboardData.getData(’text’).replace(/[^/uFF00-/uFFFF]/g,’’))"  
+
+用 正则表达式限制只能输入数字：onkeyup="value="/value.replace(/["^/d]/g,’’) "onbeforepaste="clipboardData.setData(’text’,clipboardData.getData(’text’).replace(/[^/d]/g,’’))"  
+
+用 正则表达式限制只能输入数字和英文：onkeyup="value="/value.replace(/[/W]/g,"’’) "onbeforepaste="clipboardData.setData(’text’,clipboardData.getData(’text’).replace(/[^/d]/g,’’))"
+
+
+<script language="java script">
+
+//去左空格;
+function ltrim(s){
+     return s.replace( /^//s*/, "");
+}
+//去右空格;
+function rtrim(s){
+     return s.replace( ///s*$/, "");
+}
+//去左右空格;
+function trim(s){
+     return rtrim(ltrim(s));
+}
+//是否为空值;
+function IsEmpty(_str){
+     var tmp_str = trim(_str);
+     return tmp_str.length == 0;
+}
+//是否有效的Email;
+function IsMail(_str){
+     var tmp_str = trim(_str);
+     var pattern = /^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*$/;
+     return pattern.test(tmp_str);
+}
+//是否有效的数字;
+function IsNumber(_str){
+     var tmp_str = trim(_str);
+     var pattern = /^[0-9]/;
+     return pattern.test(tmp_str);
+}
+//是否有效的颜色值;
+function IsColor(color){
+     var temp=color;
+     if (temp=="") return true;
+     if (temp.length!=7) return false;
+     return (temp.search(///#[a-fA-F0-9]{6}/) != -1);
+}
+//是否有效的链接;
+function IsURL(url){
+     var sTemp;
+     var b=true;
+     sTemp=url.substring(0,7);
+     sTemp=sTemp.toUpperCase();
+     if ((sTemp!="http://") target="_blank"   ... #124;|(url.length<10)){
+         b=false;
+     }
+     return b;
+}
+//是否有效的手机号码;
+function IsMobile(_str){
+     var tmp_str = trim(_str);
+     var pattern = /13//d{9}/;
+     return pattern.test(tmp_str);
+}
+
+</script>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ position:relative; margin:0px; width:100%; height:100%;}
+        #head{ background-color:red; width:10px; height:10px; position:absolute; left:0px;
+            top:0px; right:0px; bottom:0px; z-index:1;}
+        .body{ background-color:darkred; width:10px; height:10px; position:absolute;
+            left:0px; top:0px; z-index:0;}
+    </style>
+    <script type="text/javascript">
+        function createFood(){
+            var _food=document.createElement("div");
+            var _width=document.documentElement.clientWidth;
+            var _height=document.documentElement.clientHeight;
+            _food.style.left=Math.floor((_width*Math.random())/10)*10+"px";
+            _food.style.top=Math.floor((_height*Math.random())/10)*10+"px";
+            _food.style.backgroundColor="red";
+            _food.className="body";
+            document.getElementsByTagName("body")[0].appendChild(_food);
+        }
+        function moveBody(){
+            var _body=document.getElementsByTagName("body")[0];
+            for(var i=_body.children.length-2;i>=1;i--){
+                _body.children[i].style.left=_body.children[i-1].style.left;
+                _body.children[i].style.top=_body.children[i-1].style.top;
+                //console.log(_body.children[i].style.left);
+            }
+        }
+        window.onload=function(){
+            createFood();
+
+        }
+        function moveSnake(_cmd){
+            var _head=document.getElementById("head");
+            var _key = "";
+            var _left=0,_top=0;
+            if (_cmd == 37 || _cmd == 39) {
+                _key = "left";
+            } else {
+                _key = "top";
+            }
+            function start() {
+                window.clearTimeout(_timer);
+                _left = parseInt((_head.currentStyle || window.getComputedStyle(_head, null))["left"].replace("px", ""));
+                _top = parseInt((_head.currentStyle || window.getComputedStyle(_head, null))["top"].replace("px", ""));
+                if (_cmd == 37 || _cmd == 38) {
+                    _head.style[_key] = parseInt((_head.currentStyle || window.getComputedStyle(_head, null))[_key].replace("px", "")) - 10 + "px";
+                } else {
+                    _head.style[_key] = parseInt((_head.currentStyle || window.getComputedStyle(_head, null))[_key].replace("px", "")) + 10 + "px";
+                }
+                moveBody();
+                _timer=window.setTimeout(start,200);
+            }
+            start();
+        }
+        var _timer=0;
+        window.onkeydown=function(e){
+            window.clearTimeout(_timer);
+            var e=e||window.event;
+            if(e.keyCode>=37 && e.keyCode<=40) {
+                moveSnake(e.keyCode);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="head"></div>
+    <div class="body" style="left:-10px; top:0px;"></div>
+    <div class="body" style="left:-20px; top:0px;"></div>
+    <div class="body" style="left:-30px; top:0px;"></div>
+    <div class="body" style="left:-40px; top:0px;"></div>
+</body>
+</html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index_01.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/N_index.css"/>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/ajax.js"></script>
+	</head>
+	<body>
+		<!--导航-->
+		<div id="wrp_01">
+			<div id="pub_top">
+				<div class="user">
+					<span class="ml20">
+						<a href="login.html">登录</a>
+					</span>
+					<span class="ml20">
+						<a href="register.html">注册</a>
+					</span>
+				</div>
+				<div class="menu">
+					<div class="menu_car">
+						<dl class="my_car">
+							<div class="goods_num">0</div>
+							<dt class="car_text">
+								<span></span>
+								购物车
+								<em>0</em>
+								件
+								<i class="arrow"></i>
+							</dt>
+							<dd style="width: 348px; top: 30px;">
+								<div class="sub_title">
+									<h4>最新加入的商品</h4>
+								</div>
+								<div class="goods_box">
+									<div class="car_goods">
+										<img class="loading" src="img/loading.gif" />
+									</div>
+								</div>
+								<div class="checkout">
+									<span class="total_goods">
+										共<strong>0</strong>种商品
+									</span>
+									<a>结算购物车中的商品</a>
+
+								</div>
+							</dd>
+
+						</dl>
+						<dl class>
+							<dt>
+								<a>用户中心</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>商品收藏</a>
+									</li>
+									<li>
+										<a>店铺收藏</a>
+									</li>
+									<li>
+										<a>米米乐收藏</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a>我的订单</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>待付款订单</a>
+									</li>
+									<li>
+										<a>待确认订单</a>
+									</li>
+									<li>
+										<a>待评价交易</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a>客户服务</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>帮助中心</a>
+									</li>
+									<li>
+										<a>售后服务</a>
+									</li>
+									<li>
+										<a>客服中心</a>
+									</li>
+									<li>
+										<a>在线客服</a>
+									</li>
+									<li>
+										<a>QQ客服</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt style="width: 90px;">
+								<em class="wang"></em>
+								<a>网站导航</a>
+								<i></i>
+							</dt>
+							<dd style="width: 102px;">
+								<ul>
+									<li style="width: 102px;">
+										<a>导购频道</a>
+									</li>
+
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="background: #fafafa;">
+			<div style="margin: 0 auto;height: 70px;width: 100%;">
+				<div style="background: url(img/1.jpg) no-repeat center;width: 100%;cursor: pointer;height: 70px;"></div>
+			</div>
+		</div>
+
+		<div id="header">
+			<span class="log">
+				<a><img src="img/log.png"></a>
+			</span>
+			<div class="ipt_bar">
+				<form class="search_form">
+					<input type="hidden" class="search" />
+					<input type="text" class="s_text" placeholder="搜索 家居生活 试试^.^" />
+					<input type="submit" value="搜索" class="s_submit" />
+				</form>
+				<div class="keyword">
+					<ul>
+						<li>
+							<a style="color: #c81623;">iphone7</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">台湾美食</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">8.8包邮</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">手机热卖</a>
+						</li>
+						<li>
+							<a>魅蓝</a>
+						</li>
+						<li>
+							<a>iphone6</a>
+						</li>
+						<li>
+							<a>得力</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header_menu">
+				<ul>
+					<li>
+
+						<a class="fir">
+							<i></i> 认证包邮
+						</a>
+					</li>
+					<li>
+
+						<a class="sec">
+							<i></i> 认证包邮
+						</a>
+					</li>
+					<li>
+
+						<a class="thir">
+							<i></i> 认证包邮
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--右边侧栏-->
+		<div class="r-sider-bar">
+			<div class="sider-wrap">
+				<ul class="sevice">
+					<li>
+                		<span><img src="img/zhankai.png" alt=""></span>
+                		<a href="" class="zhankai dis">联系客服</a>
+            		</li>
+            		<li id="user-cart">
+               		 	<span><img src="img/cart.png" alt=""></span>
+            		</li>
+            		<li id="user-history">
+                		<span><img src="img/history.png" alt=""></span>
+					</li>
+					<li class="erweima">
+                		<span><img src="img/erweima1.png" alt=""></span>
+                		<div class="dis"><img src="img/erweima.png" alt=""></div>
+            		</li>
+				</ul>
+				<div class="sider-gotop">
+            		<span><img src="img/t_top.png" alt=""></span>
+            			TOP
+            		<a href="#" class="zhankai dis">返回顶部</a>
+        		</div>
+			</div>
+		</div>
+		<!--导航     end-->
+
+		<div id="wrp_02">
+  			<div class="nav">
+				<div class="all_case">
+					<div class="title_all">
+						<h3>
+							<a>
+								<i class="classical"></i>
+								所有商品分类
+							</a>
+						</h3>
+						<i class="arrow"></i>
+					</div>
+		
+					<div class="classical_d" style="">
+						<ul class="category">
+							
+							<!--<li><div class="_class"><span class="_img"><img src="img/05.jpg" /></span><h2 style="color: #fff;"><a>手机</a>
+								<span>/</span><a>数码</a></h2></div><div class="sub_class" style="display:;"><div class="sub_left"><div class="shouji">
+								<span></span><h1><a>手机数码</a></h1></div><dl><dt><a>手机通讯</a><span class="arrow"></span></dt><dd><a>Iphone</a>
+								<a>三星</a><a>小米</a><a>魅族</a><a>华为</a></a><a>诺基亚</a><a>联想</a><a>HTC</a></a><a>中兴</a><a>索尼</a><a>乐视</a></a><a>其他</a><a>微软</a>
+								<a>华为儿童定位手表</a></dd></dl>
+							</li>-->			
+						
+						</ul>
+					</div>
+				</div>
+				<ul class="nav_menu">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a style="color:#D4121B;">米活动</a>
+					</li>
+					<li>
+						<a>乐社区</a>
+					</li>
+					<li>
+						<a>商家入驻</a>
+					</li>
+					<li>
+						<a>8.8天天抢</a>
+					</li>
+					<li>
+						<a>团购</a>
+					</li>
+					<li>
+						<a href="mijinrong.html">米金融 </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	<!--	menu_banner-->
+	<div class="menu_banner">
+		<!--菜单-->
+		<ul class="menu_sec">
+			<div class="top_title">
+				<h2>电脑办公</h2>
+			</div>
+			<li class="even">
+				<dl class="nav_menu">
+					<dt><a href="">电脑整装</a></dt>
+					<dd><a href="">电脑配件</a>&nbsp;<a href="">服务器/工作站</a>&nbsp;</dd>
+				</dl>
+			</li>
+			<li class="">
+				<dl class="nav_menu">
+					<dt><a href="">平板电脑</a></dt>
+					<dd><a href="">电脑配件</a>&nbsp;<a href="">服务器/工作站</a>&nbsp;</dd>
+				</dl>
+			</li>
+			<li class="even">
+				<dl class="nav_menu">
+					<dt><a href="">网络设备</a></dt>
+					<dd><a href="">电脑配件</a>&nbsp;<a href="">服务器/工作站</a>&nbsp;</dd>
+				</dl>
+			</li>
+			<li class="">
+				<dl class="nav_menu">
+					<dt><a href="">办公设备</a></dt>
+					<dd><a href="">电脑配件</a>&nbsp;<a href="">服务器/工作站</a>&nbsp;</dd>
+				</dl>
+			</li>
+			<li class="even">
+				<dl class="nav_menu">
+					<dt><a href="">外设产品</a></dt>
+					<dd><a href="">电脑配件</a>&nbsp;<a href="">服务器/工作站</a>&nbsp;</dd>
+				</dl>
+			</li>
+		</ul>
+	<!--	轮播-->
+	<div class="secondary_banner">
+		<ul class="banner_img" style="margin: 0px; padding: 0px; list-style: none; overflow: hidden;">
+			<li style="position: absolute; z-index: ; opacity: 1;">
+				<a href="" target="_blank"><img title="电脑最高直降1200" src="http://www.mmloo.com/data/upload/shop/editor/web-2-5-5.jpg?910" alt="" width="1000px" height="360px"></a>
+			</li>
+			<li class="" style="position: absolute; opacity: 1; z-index:8 ;">
+				<a href="" target="_blank"><img title="校采大行动" src="http://www.mmloo.com/data/upload/shop/editor/web-2-5-4.jpg?512" alt="" width="1000px" height="360px"></a>
+			</li>
+			<li class="" style="position: absolute; opacity: 1; z-index: 8;">
+				<a href="" target="_blank"><img title="苹果Apple MacBook Air" src="http://www.mmloo.com/data/upload/shop/editor/web-2-5-2.jpg?655" alt="" width="1000px" height="360px"></a>
+			</li>
+			<li class="" style="position: absolute; opacity: 1; z-index:8 ;">
+				<a href="" target="_blank"><img title="http://www.mmloo.com/shop/item-146138.html" src="http://www.mmloo.com/data/upload/shop/editor/web-2-5-3.jpg?138" alt="" width="1000px" height="360px"></a>
+			</li>
+			<li style="position: absolute; opacity: 0.747729; z-index:8 ;" class="active">
+				<a href="" target="_blank"><img title="天天特价" src="http://www.mmloo.com/data/upload/shop/editor/web-2-5-1.jpg?966" alt="" width="1000px" height="360px"></a>
+			</li>
+			<li style="position: absolute; opacity: 1; z-index:8 ;" class="">
+				<a href="" target="_blank"><img title="批发超市" src="http://www.mmloo.com/data/upload/shop/editor/web-2-5-6.jpg?857" alt="" width="1000px" height="360px"></a>
+			</li>
+		</ul>
+		<ul class="banner_btn">
+			<li>1</li>
+			<li >2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+		<div class="arr pre">&lt;</div>
+		<div class="arr next">&gt;</div>
+	</div>
+	</div>
+<!--	商品-->
+	<div class="new_goods">
+		<div class="goods_type">
+			<h2><a href="#">戴尔笔记本</a></h2>
+		</div>
+		<div class="goods_content" id="goods_content">
+			
+			<!--<dl class="dlll">
+				<dt class="pic">
+	                <a href="" target="_blank">
+	                    <img src="http://www.mmloo.com/data/upload/shop/store/goods/1/2015/02/1_04784372980539288_240.jpg" alt="">
+	                </a>
+            	</dt>
+            	<dd class="pic_name"><a href="" target="_blank">戴尔（DELL） V5480-3328SS 14英寸笔记本（i3-4005U 4G 500G+8G GT830M 2G独显 Win8 银色）</a></dd>
+				<dd class="pic_word"><a href="" target="_blank"></a></dd>
+				<dd class="pic_price"><em>￥3369.00</em>
+					<a href="javascript:void(0);" nctype="add_cart" data-param="{goods_id:63833}" class="cart_button" style="overflow: hidden; width: 36px;">
+                    	<div class="add_change"></div>
+                    	<div class="add_cont">加入购物车</div>
+                	</a>
+				</dd>
+			</dl>-->
+			
+		</div>
+		<div class="goods_type">
+			<h2><a href="#">联想笔记本</a></h2>
+		</div>
+		<div class="goods_content" id="goods_content1">
+		</div>
+		<div class="goods_type">
+			<h2><a href="#">联想一体机</a></h2>
+		</div>
+		<div class="goods_content" id="goods_content2">
+		</div>
+		<div class="goods_type">
+			<h2><a href="#">华硕电脑</a></h2>
+		</div>
+		<div class="goods_content" id="goods_content3">
+		</div>
+		<div class="goods_type">
+			<h2><a href="#">华硕炫彩笔记本</a></h2>
+		</div>
+		<div class="goods_content" id="goods_content4">
+		</div>
+	</div>
+	<div class="wrapper_out">
+			<div class="wrapper clear" style="width: 1200px;">
+				<div style="float: left; ">
+					<ul>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+					</ul>
+				</div>
+				<div style="float:right;height:230px;width:410px;background:white;margin-right:0px;">
+					<table>
+						<tbody>
+						<tr>
+						<td>
+					  		<div class="kefu">
+					     		<div class="con">
+					        		<dl>
+					        			<dt style="font-weight:bold;font-size:16px;">客服中心</dt>
+					        			<dd class="tel">&nbsp;&nbsp;&nbsp;&nbsp;4006-780-781</dd>
+					        			<dd>E-mail：mmloo@mmloo.com</dd>
+					        			<dd>四川省成都市新南路亚华大厦六楼</dd>
+					        			<dd><a rel="nofollow" href=""><img alt="QQ" src="img/qq.gif  " style="vertical-align: middle;">4006780781</a></dd>
+					        		</dl>
+				        		</div> 
+					  		</div>
+					  	</td>
+					  	<td>
+					  		<div class="microinfo">
+					     		<dl class="mic">
+									<dt><a href="">关于米米乐商城</a></dt>
+									<dt><img width="80" height="80" title="米米乐微信公众号" alt="米米乐微信公众号" src="img/qmi.png"><br>
+										<div style="margin-top:3px;">手机下单更优惠</div>
+										<div style="margin-top:3px;">快乐网购 轻松拥有</div>
+									</dt>
+				         		</dl>
+					  		</div>
+					  	</td>	
+						</tr>
+		  				</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="footer ">
+			<span class="to_top "><a href=" " class="back_to_top ">返回顶部</a></span>
+			<ul>
+				<li>
+					<a style=" ">电脑节|</a><a style=" ">年货节|</a><a style=" ">批发商城|</a><a style=" ">合作及洽谈|</a><a style=" ">联系我们|</a><a style=" ">关于米米乐商城|</a><a style=" ">商家登陆|</a><a style=" ">开店协议|</a><a style=" ">商家入驻|</a><a style=" ">手机版|</a><a style=" ">友情链接|</a><a style="color: red; ">招聘英才</a><a style=" ">米商|</a><a style=" ">8.8包邮</a>
+				</li>
+				<li>© 2016 米米乐商城 www.mmloo.com 版权所有  蜀ICP备06015925号-1</li>
+			</ul>
+		</div>
+		<div class="footerend ">
+			<span>
+				<a id="___szfw_logo___ ">
+					<img src="http://www.mmloo.com/shop/templates/default/images/cxlogo.png " height="47px "/>
+				</a>
+			</span>
+		</div>	
+<body>
+</html>
+<script>
+	$(function(){
+		$.get("json/my.json",function(data){
+			console.log(data)
+			var _html = ""
+			for(var k in data) {
+				console.log(k)
+				_html += '<li class="firli"><div class="_class "><span class="_img "><img src="img/'+data[k]['picurl']+'" width="100% "></span><h2 style="color: #fff; "><a>' + data[k]["name2"] + '</a></h2><div class="sub_class" style="display:none; top:'+data[k]["Top"]+'"><div class="sub_left"><div class="shouji"><span></span><h1><a>'+data[k]["phone"]+'</a></h1></div>'
+					
+						for(var k2 in data[k]["title"]){
+							console.log(k2)
+							_html += '<dl><dt><a>'+data[k]["title"][k2]["case1"]+'</a><span class="arrow">&gt</span></dt><dd>';
+							for(var k3 in data[k]["title"][k2]["case2"]){
+								_html += '<a>'+data[k]["title"][k2]["case2"][k3]["name"]+'</a>'
+							}
+							_html += '</dd></dl>'
+						}
+						
+				_html+='</div></li>';
+			}
+			
+			$(".category ").html(_html);
+		},"json")
+		
+	/*二级菜单	*/
+		$(".all_case").hover(function(){
+			$('.classical_d').show();
+			$(".firli").each(function(){
+				$(".firli").hover(function(){
+					$(this).find(".sub_class").show();	
+				},function(){
+					$(this).find(".sub_class").hide()	
+				})
+			})
+		
+		},function(){
+			$('.classical_d').hide()
+		})
+		
+		
+	/*	轮播*/
+	var time = setInterval(Carculer,3000);
+			var index = 0;
+			function Carculer(){
+				$(".banner_btn li").eq(index).addClass("active").siblings().removeClass("active");
+				
+				$(".banner_img li").eq( index ).animate({"left":0},500,function(){
+					
+					$(this).css("z-index",8).siblings().css({"left":1000,"z-index":10});
+					
+				})
+				index++;
+				if (index==6) {
+					index=0;
+				}
+			}
+			
+			function CarculerPre(){
+				$(".banner_btn li").eq(index).addClass("active").siblings().removeClass("active");
+				
+				$(".banner_img li").eq( index ).animate({"left":0},500,function(){
+					
+					$(this).css("z-index",8).siblings().css({"left":1000,"z-index":10});
+					
+				})
+				index--;
+				if (index==0) {
+					index=6;
+				}
+			}
+			$(".banner_btn li").mouseenter(function(){
+				clearInterval(time);
+				index = $(this).index();
+				Carculer();
+			})
+			$(".banner_btn li").mouseleave(function(){
+				time = setInterval(Carculer,3000);
+			})
+			$(".secondary_banner").mouseenter(function(){
+				clearInterval(time);
+				$(".pre").show()
+				$(".next").show()
+			})
+			$(".secondary_banner").mouseleave(function(){
+				time = setInterval(Carculer,3000);
+				$(".pre").hide()
+				$(".next").hide()
+			})
+			$(".pre").click(function(){
+				clearInterval(time);
+				 CarculerPre()
+			})
+			$(".next").click(function(){
+				clearInterval(time);
+				 Carculer()
+			})
+	
+		/*动态加载dl	*/
+		$.get("json/product.json",function(data){
+			var oDl = document.getElementById("goods_content");
+			var aData = eval(data);
+			console.log(aData)
+			oDl.innerHTML = ""
+			for(var i=0;i<aData.length;i++){
+				var odl = document.createElement("dl");
+				odl.innerHTML = '<dl class="dlll"><dt class="pic"><a href="" target="_blank"><img src="img/'+aData[i]['picurl_0']+'" alt=""></a></dt><dd class="pic_name"><a href="" target="_blank">'+aData[i]['p1']+'</a></dd><dd class="pic_word"><a href="" target="_blank"></a></dd><dd class="pic_price"><em>￥'+aData[i]['p_01']+'</em><a href="javascript:void(0);" nctype="add_cart" data-param="{goods_id:63833}" class="cart_button" style="overflow: hidden; width: 36px;"><div class="add_change"></div><div class="add_cont">加入购物车</div></a></dd></dl>'
+				odl.index = i;
+				oDl.appendChild(odl)
+				odl.onclick=function(){
+							index=this.index;
+							var dDate = new Date();
+			         		dDate.setDate(dDate.getDate() + 7);
+			         		document.cookie = "name" + "=" + index + "; expires=" + dDate;
+
+							$(this).find("a")[0].href="listing.html";
+							
+						}
+			}
+		},"json")
+		$.get("json/product.json",function(data){
+			var oDl1 = document.getElementById("goods_content1");
+			var aData = eval(data);
+			console.log(aData)
+			oDl1.innerHTML = ""
+			for(var i=0;i<aData.length;i++){
+				var odl = document.createElement("dl");
+				odl.innerHTML = '<dl class="dlll"><dt class="pic"><a href="" target="_blank"><img src="img/'+aData[i]['picurl_0']+'" alt=""></a></dt><dd class="pic_name"><a href="" target="_blank">'+aData[i]['p1']+'</a></dd><dd class="pic_word"><a href="" target="_blank"></a></dd><dd class="pic_price"><em>￥'+aData[i]['p_01']+'</em><a href="javascript:void(0);" nctype="add_cart" data-param="{goods_id:63833}" class="cart_button" style="overflow: hidden; width: 36px;"><div class="add_change"></div><div class="add_cont">加入购物车</div></a></dd></dl>'
+				odl.index = i;
+				oDl1.appendChild(odl)
+				odl.onclick=function(){
+							index=this.index;
+							var dDate = new Date();
+			         		dDate.setDate(dDate.getDate() + 7);
+			         		document.cookie = "name" + "=" + index + "; expires=" + dDate;
+
+							$(this).find("a")[0].href="listing.html";
+							
+						}
+			}
+		},"json")
+		$.get("json/product.json",function(data){
+			var oDl2 = document.getElementById("goods_content2");
+			var aData = eval(data);
+			console.log(aData)
+			oDl2.innerHTML = ""
+			for(var i=0;i<aData.length;i++){
+				var odl = document.createElement("dl");
+				odl.innerHTML = '<dl class="dlll"><dt class="pic"><a href="" target="_blank"><img src="img/'+aData[i]['picurl_0']+'" alt=""></a></dt><dd class="pic_name"><a href="" target="_blank">'+aData[i]['p1']+'</a></dd><dd class="pic_word"><a href="" target="_blank"></a></dd><dd class="pic_price"><em>￥'+aData[i]['p_01']+'</em><a href="javascript:void(0);" nctype="add_cart" data-param="{goods_id:63833}" class="cart_button" style="overflow: hidden; width: 36px;"><div class="add_change"></div><div class="add_cont">加入购物车</div></a></dd></dl>'
+				odl.index = i;
+				oDl2.appendChild(odl)
+				odl.onclick=function(){
+							index=this.index;
+							var dDate = new Date();
+			         		dDate.setDate(dDate.getDate() + 7);
+			         		document.cookie = "name" + "=" + id + "; expires=" + dDate;
+
+							$(this).find("a")[0].href="listing.html";
+							
+						}
+			}
+		},"json")
+		$.get("json/product.json",function(data){
+			var oDl3 = document.getElementById("goods_content3");
+			var aData = eval(data);
+			console.log(aData)
+			oDl3.innerHTML = ""
+			for(var i=0;i<aData.length;i++){
+				var odl = document.createElement("dl");
+				odl.innerHTML = '<dl class="dlll"><dt class="pic"><a href="" target="_blank"><img src="img/'+aData[i]['picurl_0']+'" alt=""></a></dt><dd class="pic_name"><a href="" target="_blank">'+aData[i]['p1']+'</a></dd><dd class="pic_word"><a href="" target="_blank"></a></dd><dd class="pic_price"><em>￥'+aData[i]['p_01']+'</em><a href="javascript:void(0);" nctype="add_cart" data-param="{goods_id:63833}" class="cart_button" style="overflow: hidden; width: 36px;"><div class="add_change"></div><div class="add_cont">加入购物车</div></a></dd></dl>'
+				odl.index = i
+				oDl3.appendChild(odl)
+				odl.onclick=function(){
+							index=this.index;
+							var dDate = new Date();
+			         		dDate.setDate(dDate.getDate() + 7);
+			         		document.cookie = "name" + "=" + index + "; expires=" + dDate;
+
+							$(this).find("a")[0].href="listing.html";
+							
+						}
+			}
+		},"json")
+		$.get("json/product.json",function(data){
+			var oDl4 = document.getElementById("goods_content4");
+			var aData = eval(data);
+			console.log(aData)
+			oDl4.innerHTML = ""
+			for(var i=0;i<aData.length;i++){
+				var odl = document.createElement("dl");
+				odl.innerHTML = '<dl class="dlll"><dt class="pic"><a href="" target="_blank"><img src="img/'+aData[i]['picurl_0']+'" alt=""></a></dt><dd class="pic_name"><a href="" target="_blank">'+aData[i]['p1']+'</a></dd><dd class="pic_word"><a href="" target="_blank"></a></dd><dd class="pic_price"><em>￥'+aData[i]['p_01']+'</em><a href="javascript:void(0);" nctype="add_cart" data-param="{goods_id:63833}" class="cart_button" style="overflow: hidden; width: 36px;"><div class="add_change"></div><div class="add_cont">加入购物车</div></a></dd></dl>'
+				odl.index = i
+				oDl4.appendChild(odl)
+				odl.onclick=function(){
+							index=this.index;
+							var dDate = new Date();
+			         		dDate.setDate(dDate.getDate() + 7);
+			         		document.cookie = "name" + "=" + index + "; expires=" + dDate;
+
+							$(this).find("a")[0].href="listing.html";
+							
+						}
+			}
+		},"json")
+		
+		$(".menu_sec").find("li").click(function(){
+			window.location.href = "listing.html"
+		})
+})		
+</script>

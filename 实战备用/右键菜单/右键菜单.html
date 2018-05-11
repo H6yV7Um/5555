@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#box{
+			width: 200px;
+			line-height: 40px;
+			border: solid 2px #03ccbb;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display:none;
+		}
+		#box.active{
+			display: block;
+		}
+		#box li{
+			border-top: solid 2px #03ccbb;
+			margin-top: -2px;
+			text-align: center;
+			color: #000;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+		</style>
+		<script>
+			window.onload = function(){
+				var oBox = document.getElementById("box");
+				var aLi = oBox.getElementsByTagName("li");
+				var maxX = (document.documentElement.clientWidth || document.body.clientWidth) - oBox.clientWidth;
+				var maxY = (document.documentElement.clientHeight || document.body.clientHeight) - oBox.clientHeight;
+				oBox.onmousedown = function(e){
+					 e = e || event;
+					var nX = e.offsetX;
+					var nY = e.offsetY;
+				
+				document.onmousemove = function(e){
+					e = e || event;
+					var nLeft = e.clientX - nX;
+					var nTop = e.clientY - nY;
+					if(nLeft<0){
+						nLeft = 0;
+					}else if(nLeft>maxX){
+						nLeft = maxX;
+					}
+					if(nTop<0){
+						nTop = 0;
+					}else if(nTop>maxY){
+						nTop = maxY;
+					}
+					oBox.style.left =  nLeft +"px"
+					oBox.style.top = nTop+"px"
+				}
+				}
+				oBox.onmouseup = function(e){
+					 e = e || event;
+					document.onmousemove = null
+					document.onmousedown = null
+				}
+				for(var i = 0;i < aLi.length;i++){
+					aLi[i].style.background = aLi[i].getAttribute("mycolor")
+					aLi[0].onclick = function(){
+					window.open("数组取重.html")
+				}
+				aLi[1].onclick =function(){
+					window.open("表单验证.html")
+				}
+				aLi[2].onclick = function(){
+					window.open("个性标签.html")
+				}
+				aLi[3].onclick = function(){
+					window.open("轮播图切换.html")
+				}
+					
+				}
+				document.oncontextmenu = function(e){
+					e = e || event
+					oBox.className = "active"
+					oBox.style.left = e.clientX+"px"
+					oBox.style.top = e.clientY+"px"
+					
+					return false
+				}
+				
+				
+			}
+		</script> 
+	</head>
+	<body>
+		<ul id="box">
+			<li mycolor ="red" >数组取重</li>
+			<li mycolor ="#F90">表单验证</li>
+			<li mycolor ="green">个性签名</li>
+			<li mycolor ="blue">图前轮播</li>
+			
+		</ul>
+	</body>
+</html>
+

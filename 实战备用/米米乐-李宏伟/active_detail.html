@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index_01.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/active_detail.css"/>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/ajax.js"></script>
+	</head>
+	<body>
+		<!--导航-->
+		<div id="wrp_01">
+			<div id="pub_top">
+				<div class="user">
+					<span class="ml20">
+						<a href="login.html">登录</a>
+					</span>
+					<span class="ml20">
+						<a href="register.html">注册</a>
+					</span>
+				</div>
+				<div class="menu">
+					<div class="menu_car">
+						<dl class="my_car">
+							<div class="goods_num">0</div>
+							<dt class="car_text">
+								<span></span>
+								购物车
+								<em>0</em>
+								件
+								<i class="arrow"></i>
+							</dt>
+							<dd style="width: 348px; top: 30px;">
+								<div class="sub_title">
+									<h4>最新加入的商品</h4>
+								</div>
+								<div class="goods_box">
+									<div class="car_goods">
+										<img class="loading" src="img/loading.gif" />
+									</div>
+								</div>
+								<div class="checkout">
+									<span class="total_goods">
+										共<strong>0</strong>种商品
+									</span>
+									<a>结算购物车中的商品</a>
+
+								</div>
+							</dd>
+
+						</dl>
+						<dl class>
+							<dt>
+								<a>用户中心</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>商品收藏</a>
+									</li>
+									<li>
+										<a>店铺收藏</a>
+									</li>
+									<li>
+										<a>米米乐收藏</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a>我的订单</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>待付款订单</a>
+									</li>
+									<li>
+										<a>待确认订单</a>
+									</li>
+									<li>
+										<a>待评价交易</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a>客户服务</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>帮助中心</a>
+									</li>
+									<li>
+										<a>售后服务</a>
+									</li>
+									<li>
+										<a>客服中心</a>
+									</li>
+									<li>
+										<a>在线客服</a>
+									</li>
+									<li>
+										<a>QQ客服</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt style="width: 90px;">
+								<em class="wang"></em>
+								<a>网站导航</a>
+								<i></i>
+							</dt>
+							<dd style="width: 102px;">
+								<ul>
+									<li style="width: 102px;">
+										<a>导购频道</a>
+									</li>
+
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="background: #fafafa;">
+			<div style="margin: 0 auto;height: 70px;width: 100%;">
+				<div style="background: url(img/1.jpg) no-repeat center;width: 100%;cursor: pointer;height: 70px;"></div>
+			</div>
+		</div>
+
+		<div id="header">
+			<span class="log">
+				<a><img src="img/log.png"></a>
+			</span>
+			<div class="ipt_bar">
+				<form class="search_form">
+					<input type="hidden" class="search" />
+					<input type="text" class="s_text" placeholder="搜索 家居生活 试试^.^" />
+					<input type="submit" value="搜索" class="s_submit" />
+				</form>
+				<div class="keyword">
+					<ul>
+						<li>
+							<a style="color: #c81623;">iphone7</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">台湾美食</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">8.8包邮</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">手机热卖</a>
+						</li>
+						<li>
+							<a>魅蓝</a>
+						</li>
+						<li>
+							<a>iphone6</a>
+						</li>
+						<li>
+							<a>得力</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header_menu">
+				<ul>
+					<li>
+
+						<a class="fir">
+							<i></i> 认证包邮
+						</a>
+					</li>
+					<li>
+
+						<a class="sec">
+							<i></i> 认证包邮
+						</a>
+					</li>
+					<li>
+
+						<a class="thir">
+							<i></i> 认证包邮
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--右边侧栏-->
+		<div class="r-sider-bar">
+			<div class="sider-wrap">
+				<ul class="sevice">
+					<li>
+                		<span><img src="img/zhankai.png" alt=""></span>
+                		<a href="" class="zhankai dis">联系客服</a>
+            		</li>
+            		<li id="user-cart">
+               		 	<span><img src="img/cart.png" alt=""></span>
+            		</li>
+            		<li id="user-history">
+                		<span><img src="img/history.png" alt=""></span>
+					</li>
+					<li class="erweima">
+                		<span><img src="img/erweima1.png" alt=""></span>
+                		<div class="dis"><img src="img/erweima.png" alt=""></div>
+            		</li>
+				</ul>
+				<div class="sider-gotop">
+            		<span><img src="img/t_top.png" alt=""></span>
+            			TOP
+            		<a href="#" class="zhankai dis">返回顶部</a>
+        		</div>
+			</div>
+		</div>
+		<!--导航     end-->
+		
+		<div id="wrp_02">
+  			<div class="nav">
+				<div class="all_case">
+					<div class="title_all">
+						<h3>
+							<a>
+								<i class="classical"></i>
+								所有商品分类
+							</a>
+						</h3>
+						<i class="arrow"></i>
+					</div>
+		
+					<div class="classical_d" style="">
+						<ul class="category">
+							
+							<!--<li><div class="_class"><span class="_img"><img src="img/05.jpg" /></span><h2 style="color: #fff;"><a>手机</a>
+								<span>/</span><a>数码</a></h2></div><div class="sub_class" style="display:;"><div class="sub_left"><div class="shouji">
+								<span></span><h1><a>手机数码</a></h1></div><dl><dt><a>手机通讯</a><span class="arrow"></span></dt><dd><a>Iphone</a>
+								<a>三星</a><a>小米</a><a>魅族</a><a>华为</a></a><a>诺基亚</a><a>联想</a><a>HTC</a></a><a>中兴</a><a>索尼</a><a>乐视</a></a><a>其他</a><a>微软</a>
+								<a>华为儿童定位手表</a></dd></dl>
+							</li>-->			
+						
+						</ul>
+					</div>
+				</div>
+				<ul class="nav_menu">
+					<li>
+						<a style="color:#D4121B;" href="index.html">首页</a>
+					</li>
+					<li>
+						<a>米活动</a>
+					</li>
+					<li>
+						<a>乐社区</a>
+					</li>
+					<li>
+						<a>商家入驻</a>
+					</li>
+					<li>
+						<a>8.8天天抢</a>
+					</li>
+					<li>
+						<a>团购</a>
+					</li>
+					<li>
+						<a>米金融 </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+	<!--	头部图开始         -->
+	<div class="bank" style="width:100%;text-align:center;margin:0px auto;">
+		<div class="banner" style="text-align:center; height:829px;margin:0px auto;background:url(img/bkg01.jpg) no-repeat scroll center top;"></div>
+		<!--	头部图end         -->
+		<!--	主图开始         -->
+		<div class="img">
+			<img src="img/bkg02.jpg" />
+			<img src="img/bkg03.jpg" />
+			<img src="img/bkg04.jpg" border="0"/>
+		</div>
+		<map name="Map" id="Map">
+			<area shape="rect" coords="230,623,1036,908" href="" target="_blank">
+		</map>
+	</div>
+	<!-- 主图结束 -->
+	<div style="padding-top:20px;display: block;text-align:center;"><a href="http://www.mmloo.com/shop/activity-1325.html" target="_blank" rel="nofollow"><img style="width:1200px;height:70px" border="0" src="img/bkg05.jpg" alt="iPhone 7"></a></div>
+	<div id="shareLink" style="width:1200px;margin: 0 auto ;">
+		<a href="#"><img src="img/tupian.jpg"></a>
+	</div>
+	<div class="wrapper_out">
+			<div class="wrapper clear" style="width: 1200px;">
+				<div style="float: left; ">
+					<ul>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+					</ul>
+				</div>
+				<div style="float:right;height:230px;width:410px;background:white;margin-right:0px;">
+					<table>
+						<tbody>
+						<tr>
+						<td>
+					  		<div class="kefu">
+					     		<div class="con">
+					        		<dl>
+					        			<dt style="font-weight:bold;font-size:16px;">客服中心</dt>
+					        			<dd class="tel">&nbsp;&nbsp;&nbsp;&nbsp;4006-780-781</dd>
+					        			<dd>E-mail：mmloo@mmloo.com</dd>
+					        			<dd>四川省成都市新南路亚华大厦六楼</dd>
+					        			<dd><a rel="nofollow" href=""><img alt="QQ" src="img/qq.gif  " style="vertical-align: middle;">4006780781</a></dd>
+					        		</dl>
+				        		</div> 
+					  		</div>
+					  	</td>
+					  	<td>
+					  		<div class="microinfo">
+					     		<dl class="mic">
+									<dt><a href="">关于米米乐商城</a></dt>
+									<dt><img width="80" height="80" title="米米乐微信公众号" alt="米米乐微信公众号" src="img/qmi.png"><br>
+										<div style="margin-top:3px;">手机下单更优惠</div>
+										<div style="margin-top:3px;">快乐网购 轻松拥有</div>
+									</dt>
+				         		</dl>
+					  		</div>
+					  	</td>	
+						</tr>
+		  				</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<div class="wrapperFriendly " style="position: relative; ">
+			<span><a href=" ">网上商城</a></span><span><a href=" ">免费信息发布</a></span><span><a href=" ">客栈网</a></span><span><a href=" ">乐天代购</a></span><span><a href=" ">蛋糕网上订购</a></span><span><a href=" ">吃喝玩乐</a></span><span><a href=" ">网上数码商城</a></span><span><a href=" ">1688批发网</a></span><span><a href=" ">深圳童装批发</a></span><span><a href=" ">中国皮革网</a></span><span><a href=" ">户外装备</a></span><span><a href=" ">饰品批发</a></span><span><a href=" ">惠爱你</a></span><span><a href=" ">网上订花</a></span><span><a href=" ">美容加盟</a></span><span><a href=" ">户外用品</a></span><span><a href=" ">外贸童装批发网</a></span><span><a href=" ">礼品册</a></span><span><a href=" ">促销活动</a></span><span><a href=" ">日日顺净水商城</a></span><span><a href=" ">舒华跑步机</a></span><span><a href=" ">冰柜</a></span><span><a href=" ">制造资源</a></span><span><a href=" ">整体衣柜</a></span><span><a href=" ">仪器仪表世界网</a></span><span><a href=" ">LED</a></span><span><a href=" ">中国供应商</a></span><span><a href=" ">十大品牌</a></span><span><a href=" ">触摸屏网与液晶网</a></span><span><a href=" ">洛阳分类信息</a></span><span><a href=" ">前进商务网</a></span><span><a href=" ">牛商网</a></span><a href=" ">大连房产网</a></span><a href=" ">洁具</a></span><a href=" ">白酒代理</a></span>
+			<a href=" ">百川网</a></span><a href=" ">石家庄房产网</a></span><a href=" ">1688货源网</a></span><a href=" ">酒价格</a></span><a href=" ">童装代理</a></span><a href=" ">内增高鞋</a></span><a href=" ">珠宝店加盟</a></span><a href=" ">砭石</a></span><a href=" ">拼客网</a></span><a href=" ">微商代理货源网</a></span><a href=" ">别墅图片大全</a></span><a href=" ">隐形眼镜</a></span><a href=" ">中国环保设备网</a></span><a href=" ">化妆品代理网</a></span><a href=" ">商祺网</a></span><a href=" ">兼职网</a></span><a href=" ">连锁加盟网</a></span><a href=" ">楚天运动频道</a></span>
+		</div>
+		<div class="footer ">
+			<span class="to_top "><a href=" " class="back_to_top ">返回顶部</a></span>
+			<ul>
+				<li>
+					<a style=" ">电脑节|</a><a style=" ">年货节|</a><a style=" ">批发商城|</a><a style=" ">合作及洽谈|</a><a style=" ">联系我们|</a><a style=" ">关于米米乐商城|</a><a style=" ">商家登陆|</a><a style=" ">开店协议|</a><a style=" ">商家入驻|</a><a style=" ">手机版|</a><a style=" ">友情链接|</a><a style="color: red; ">招聘英才</a><a style=" ">米商|</a><a style=" ">8.8包邮</a>
+				</li>
+				<li>© 2016 米米乐商城 www.mmloo.com 版权所有  蜀ICP备06015925号-1</li>
+			</ul>
+		</div>
+		<div class="footerend ">
+			<span>
+				<a id="___szfw_logo___ ">
+					<img src="http://www.mmloo.com/shop/templates/default/images/cxlogo.png " height="47px "/>
+				</a>
+			</span>
+		</div>
+	
+	
+	</body>
+</html>
+<script>
+	$(function(){
+		$.get("json/my.json",function(data){
+			//console.log(data)
+			var _html = ""
+			for(var k in data) {
+				//console.log(k)
+				_html += '<li class="firli"><div class="_class "><span class="_img "><img src="img/'+data[k]['picurl']+'" width="100% "></span><h2 style="color: #fff; "><a>' + data[k]["name2"] + '</a></h2><div class="sub_class" style="display:none; top:'+data[k]["Top"]+'"><div class="sub_left"><div class="shouji"><span></span><h1><a>'+data[k]["phone"]+'</a></h1></div>'
+					
+						for(var k2 in data[k]["title"]){
+							//console.log(k2)
+							_html += '<dl><dt><a>'+data[k]["title"][k2]["case1"]+'</a><span class="arrow">&gt</span></dt><dd>';
+							for(var k3 in data[k]["title"][k2]["case2"]){
+								_html += '<a>'+data[k]["title"][k2]["case2"][k3]["name"]+'</a>'
+							}
+							_html += '</dd></dl>'
+						}
+						
+				_html+='</div></li>';
+			}
+			
+			$(".category ").html(_html);
+		},"json")
+		
+	/*二级菜单	*/
+		$(".all_case").hover(function(){
+			$('.classical_d').show();
+			$(".firli").each(function(){
+				$(".firli").hover(function(){
+					$(this).find(".sub_class").show();	
+				},function(){
+					$(this).find(".sub_class").hide()	
+				})
+			})
+		
+		},function(){
+			$('.classical_d').hide()
+		})
+		
+		
+		
+		
+		
+		
+		
+	})
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

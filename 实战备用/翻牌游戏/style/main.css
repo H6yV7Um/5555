@@ -1,0 +1,18 @@
+.poker{ width: 100px; height: 150px; position: relative;float: left;}
+.poker div{
+	width: 100%; height: 100%; position: absolute; top: 0px; left: 0px;
+	backface-visibility:hidden;
+	-webkit-backface-visibility:hidden;
+	transition: all .33s;
+	
+}
+.poker .back{ background: #900; }
+.poker .face{ background: #33BBCC;}
+.poker .b{transform: rotateY(180deg);}
+.poker .f{transform: rotateY(0deg);}
+.poker .back.ba{ background: #900;}
+.poker .back.bb{ background: #666;}
+.poker .back.bc{ background: #0086B3;}
+.poker .back.bd{ background: #660066;}
+
+.clearBoth:after{ content: "."; width: 0px; height: 0; overflow: hidden; font-size: 1px; clear: both; visibility: hidden;}

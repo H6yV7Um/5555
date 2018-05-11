@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #container{ width:800px; height:405px; overflow:hidden; border:solid 3px #ccc; position:relative;}
+        #container div{ background-color:#000; height:405px; width:0px; position:absolute;}
+    </style>
+    <script type="text/javascript">
+//        function main(){
+//            var i=1;
+//            return function(n){
+//                i=n;
+//                for(var m=1;m<=i;m++){
+//                    document.write(m+"*"+i+"="+m*i);
+//                }
+//                document.write("<br/>");
+//            }
+//        }
+//        function testTable() {
+//            var fn = main();
+//            for (var k = 1; k < 10; k++) {
+//                fn(k);
+//            }
+//        }
+
+
+
+
+
+        //json格式的数据
+        /*function objFn() {
+            var _obj = {};//_obj=new Object();
+            _obj.age = 10;
+            _obj.tall = 10;
+            _obj.weight = 10;
+            _obj.sex = 10;
+            _obj.leg={
+                "length":90,
+                "walk":function(){
+                    console.log("walking");
+                }
+            };
+            _obj.run=function(){
+                alert("run");
+            };
+            _obj.eat=function(){
+                alert("eat");
+            }
+            console.log(_obj);
+//            for(var k in _obj){
+//                alert(k);
+//            }
+            _obj.leg.walk();
+        }
+        objFn();
+
+        function objectFn(){
+            var _obj={//字面量方式声明对象
+              "name":"tom",
+                "leg":{
+                    "length":90,
+                    "walk":function(){
+                        alert("walking");
+                    }
+                },
+                "tall":180
+            };
+            _obj.leg.walk();
+            console.log(_obj);
+        }
+        objectFn();
+
+*/
+
+        window.onload=function(){
+            var _blinds={
+                "div":document.getElementById("container"),
+                "player":function(){
+                    var _div=null;
+                    for(var i=0;i<20;i++){
+                        _div=document.createElement("div");
+                        _div.className="blinds";
+                        _div.style.backgroundPosition="0px "+(-i*20)+"px";
+                        _div.style.top=0+"px";
+                        _div.style.left=i*40+"px";
+                        this.div.appendChild(_div);
+                    }
+                    this.action();
+                },
+                "action":function(){
+                    var _timer=0;
+                    var _width=0;
+                    var _target=this;
+                    function expand(){
+                        //console.log(this)
+                        window.clearTimeout(_timer);
+                        _width+=5;
+                        for(var i=0;i<_target.div.children.length;i++){
+                            _target.div.children[i].style.width=_width+"px";
+                        }
+                        if(_width<40) {
+                            _timer = window.setTimeout(expand, 100);
+                        }
+                    }
+                    expand();
+                }
+            };
+            _blinds.player();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        window.onload=function() {
+//            document.getElementsByTagName("div")[0].xyz = 1000;
+//            alert(document.getElementsByTagName("div")[0].xyz);
+//        }
+
+//        function fn(){
+//            alert(abc);
+//        }
+//        fn.abc=1000;
+//        alert(fn.abc);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+<div id="container"></div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        //prototype:原型属性指向对象基类(在没有认为改动的情况下)的指针。只有函数才拥有该属性,普通对象不具备该属性;
+//        function People(){
+//            var money=10000000;//私有属性不能被实例化。
+//            this.name="zhangsan";//实例属性
+//            this.weight="150";
+//        }
+        //        console.log(People.prototype);//有指向的
+        //        console.log(_p.prototype);//undefined
+//        People.prototype.sex="man";//对象的原型属性,给People的原型属性添加自定义属性。
+//        var _p=new People();
+//        console.log(_p.sex);
+
+
+
+
+
+//        var _str="aaabc";
+//        var _temp=new String("aaabc");
+//        console.log(_temp);
+//        _str.replace("a","z");
+
+
+
+
+
+        //原型属性添加自定义方法到js库中的对象的prototype属性下。
+//        String.prototype.replaceAll=replaceAll;
+//        function replaceAll(_old,_new){
+//            var _tmp=this;
+//            while(_tmp.indexOf(_old)>=0){
+//                _tmp=_tmp.replace(_old,_new);
+//            }
+//            return _tmp;
+//        }
+//        console.log(_str.replaceAll("a","z"));
+//
+//
+//        var _new="xxxxxxyyyyyyywwww";
+//        console.log(_new.replaceAll("xx","ab"));
+
+
+
+
+        function People(){
+            this.head=1;
+            this.arm=2;
+            this.finger=10;
+            this.leg=2;
+        }
+        People.prototype.sex="man";
+        function Parents(){
+            this.tall=180;
+            this.money=100000000;
+        }
+        function Children(){
+            this.pro="program";
+        }
+        Parents.prototype=new People();
+        var _p=new Parents();
+        alert(_p.head);
+        Children.prototype=new Parents();
+        var _c=new Children();
+        alert(_c.sex);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

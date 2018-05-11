@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        img{boder:none; float:left; width:510px;}
+        #slider{ width:660px; height:334px; margin:0 auto; overflow:hidden; margin-top:100px;}
+        #slider span{ display:block; width:30px; height:334px; overflow:hidden; float:left;}
+    </style>
+    <script type="text/javascript">
+
+        function resetWidth(){
+            var width=0;
+            var timer=0;
+            var f=0;
+            var slider=document.getElementById("slider");
+            var target=null;
+            function reset() {
+                window.clearTimeout(timer);
+                var sum=0;
+                for (var i = 0; i < slider.children.length; i++) {
+                    if (slider.children[i] !== target) {
+                        width = parseInt((slider.children[i].currentStyle || window.getComputedStyle(slider.children[i], null))["width"]);
+                        if (width > 30) {
+                            slider.children[i].style.width = width - 10 + "px";
+                        }
+                        sum += parseInt((slider.children[i].currentStyle || window.getComputedStyle(slider.children[i], null))["width"]);
+                    }
+                }
+                target.style.width=660-sum+"px";
+                if(660-sum<510){
+                    window.setTimeout(reset, 30);
+                }
+            }
+            function boundEvent(){
+                for(var i=0;i<slider.children.length;i++){
+                    slider.children[i].onmouseover=function(){
+                        window.clearTimeout(timer);
+                        target=this;
+                        f=0;
+                        reset();
+                    }
+                }
+            }
+            boundEvent();
+        }
+
+        function createImages(n){
+            var list="";
+            for(var i=1;i<=n;i++){
+                if(i<n){
+                    list+="<span><img alt=\"\" src=\"img/0"+i+".jpg\"/></span>";
+                }else{
+                    list+="<span style=\" width:500px;\"><img alt=\"\" src=\"img/0"+i+".jpg\"/></span>";
+                }
+            }
+            document.getElementById("slider").innerHTML=list;
+            resetWidth();
+        }
+        window.onload=function(){
+            createImages(6);
+        }
+    </script>
+</head>
+<body>
+    <div id="slider">
+
+    </div>
+</body>
+</html>

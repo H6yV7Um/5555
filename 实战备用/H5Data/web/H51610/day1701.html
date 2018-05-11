@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        #root{ width:150px; height:600px; overflow:hidden; float:left; background-color:#f1f1f1;}
+        #root a{ display:block; width:100%; text-indent:10px; height:25px; line-height:25px; text-decoration:none; color:#555;}
+        #nodes{ width:800px; height:598px; border:solid 1px #ccc; border-left:none; background-color:#fff; float:left;}
+        #nodes span#parent{ display:block; width:100%; height:auto; min-height:25px;}
+        #nodes #parent a{ display:block; width:100px; height:25px; overflow:hidden; line-height:25px; text-align:left; text-indent:10px; color:#555; float:left;}
+    </style>
+    <script type="text/javascript" src="javascript/Ajax.js"></script>
+    <script type="text/javascript">
+
+
+        function nodesReader(_identify,_category){
+            var _nodes=document.getElementById("nodes");
+            var a_list="";
+            for(var key in _category[_identify]["children"]){
+                a_list+="<span id=\"parent\">";
+                a_list+="<a href=\""+_category[_identify]["children"][key]["url"]+"?id="+key+"\">"+_category[_identify]["children"][key]["name"]+"</a>";
+                for(var p in _category[_identify]["children"][key]["children"]){
+                    a_list+="<a href=\""+_category[_identify]["children"][key]["children"][p]["url"]+"?id="+p+"\">"+_category[_identify]["children"][key]["children"][p]["name"]+"</a>";;
+                }
+                a_list+="</span>";
+            }
+            _nodes.innerHTML=a_list;
+            a_list=null;
+        }
+        function dataReader(_category){
+            var a_list="";
+            for(var key in _category){
+                a_list+="<a href=\""+_category[key]["url"]+"?id="+key+"\">"+_category[key]["name"]+"</a>";
+            }
+            var _root=document.getElementById("root");
+            _root.innerHTML=a_list;
+            a_list=null;
+            for(var i=0;i<_root.children.length;i++){
+                _root.children[i].onmouseover=function(){
+                    nodesReader(this.href.match(/id=\d+/)[0].replace("id=",""),_category);
+                }
+            }
+        }
+        window.onload=function(){
+            ajaxRequest("post","javascript/category.json",null,function(data){
+                var _category=JSON.parse(data);
+                console.log(_category);
+                dataReader(_category);
+            },true);
+        }
+    </script>
+</head>
+<body>
+<div id="root"></div>
+<div id="nodes"></div>
+</body>
+</html>

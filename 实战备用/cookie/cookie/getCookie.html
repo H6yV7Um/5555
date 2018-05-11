@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+	/*存储cookie
+		var dDate = new Date();
+		dDate.setDate(dDate.getDate()+7);
+		document.cookie = "nLeft=100; expires="+dDate;
+		document.cookie = "nTop=100; expires="+dDate;
+	*/
+	var aCookie = document.cookie.split("; ");
+
+	for(var i=0; i<aCookie.length; i++){
+		var aCook = aCookie[i].split('=');
+		if(aCook[0] == "x"){
+			alert(aCook[1]);
+		}
+	}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        .root{ width:800px; height:200px; overflow:scroll; margin:0 auto;}
+        .node{ width:3200px; height:200px; overflow:hidden; float:left;}
+        .node img{ float:left; border:none; width:400px; height:200px;}
+    </style>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+
+
+
+//        function demo(){
+//            return 10;
+//        }
+//        var _demo=demo()+10;
+//        demo();
+        function scrollLeft(){
+            var _timer=0;
+            var _root=$("#root");
+            var _left=0;
+            function exec(){
+                window.clearTimeout(_timer);
+                _root.scrollLeft(_left+=10);
+                if(_root.scrollLeft()>=2400){
+                    _root.scrollLeft(0);
+					
+                }
+				
+                $("p").text( "scrollLeft:" + $("#root").scrollLeft());
+                _timer=window.setTimeout(exec,50);
+            }
+            exec();
+        }
+
+
+        function createImage(){
+            var _images="";
+            for(var i=0;i<6;i++){
+                _images += "<img alt=\"\" src=\"../H51612/images/img" + (i + 1) + ".jpg\"/>";
+            }
+            _images += "<img alt=\"\" src=\"../H51612/images/img1.jpg\"/>";
+            _images += "<img alt=\"\" src=\"../H51612/images/img2.jpg\"/>";
+            $("#node").html(_images);
+            scrollLeft();
+        }
+        $(document).ready(function(){
+            createImage();
+        });
+    </script>
+</head>
+<body>
+    <div id="root" class="root">
+        <div id="node" class="node"></div>
+    </div>
+    <p>2nd Paragraph</p>
+</body>
+</html>

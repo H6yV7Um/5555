@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        .root{ width:800px; height:200px; overflow:scroll; margin:0 auto; position:relative;}
+        .node{ width:3200px; height:200px; overflow:hidden; position:absolute; top:0px; left:0px;}
+        .node img{ float:left; border:none; width:400px; height:200px;}
+    </style>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+
+
+
+        var _l=0;
+        function sl(){
+            $("#node").animate({"left":(_l-=400)+"px"},200,function(){
+                _l=_l<=-2400?0:_l;
+                window.setTimeout(sl,3000);
+            });
+            $("#node").stop(true,true);
+        }
+
+        function createImage(){
+            var _images="";
+            for(var i=0;i<6;i++){
+                _images += "<img alt=\"\" src=\"../H51612/images/img" + (i + 1) + ".jpg\"/>";
+            }
+            _images += "<img alt=\"\" src=\"../H51612/images/img1.jpg\"/>";
+            _images += "<img alt=\"\" src=\"../H51612/images/img2.jpg\"/>";
+            $("#node").html(_images);
+            sl();
+        }
+        $(document).ready(function(){
+            createImage();
+        });
+    </script>
+</head>
+<body>
+<div id="root" class="root">
+    <div id="node" class="node"></div>
+</div>
+<p>2nd Paragraph</p>
+</body>
+</html>

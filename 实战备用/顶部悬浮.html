@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<style>
+	*{
+		margin:0;
+		padding:0;
+	}
+	hr{
+		margin:100px 0;
+	}
+	#nav{
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:35px;
+		background:#03ccbb;
+	}
+	.box{
+		width:200px;
+		height:200px;
+		overflow:scroll;
+		background:red;
+		margin-top:200px;
+	}
+	.box p{
+		height:1000px;
+		position:relative;
+	}
+	.box p span{
+		width:100%;
+		height:20px;
+		background:#000;
+		position:absolute;
+		left:0;
+		top:0;
+	}
+</style>
+<body style="height:10000px;">
+<div id="nav"></div>
+<hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>
+<!--
+<div class="box">
+	<p>
+		<span></span>
+	</p>
+</div>
+-->
+</body>
+<script>
+window.onscroll=function(){
+	//scrollHeight
+	var nScroll = document.documentElement.scrollTop || document.body.scrollTop;
+	nav.style.top = nScroll+"px";
+}
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="javascript/Ajax.js"></script>
+    <script type="text/javascript">
+        function productsReader(){
+            var _identify=window.location.href.match(/id=\d+/g)[0].replace(/id=/,"");
+            var _reg=new RegExp("\^"+_identify);
+            //_reg.compile("\^"+_identify);
+            ajaxRequest("post","javascript/products.json",null,function(data){
+                var _data=JSON.parse(data);
+                var _list="";
+                for(var key in _data){
+                    if(_reg.test(_data[key]["categoryID"])){
+                        _list+=_data[key]["name"];
+                    }
+                }
+                document.getElementsByTagName("body")[0].innerHTML=_list;
+            },true);
+        }
+        window.onload=function(){
+            productsReader();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

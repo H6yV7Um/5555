@@ -1,0 +1,220 @@
+[
+{
+  "category":[
+    {
+      "id":1,
+      "title":"九东百货商城",
+      "icon":"",
+      "sort":0,
+      "display":0,
+      "description":"",
+      "cmd":0,
+      "url":"",
+      "parent":0,
+      "children":[
+        {
+          "id": 2,
+          "title": "电器",
+          "icon": "",        
+          "sort": 0,    
+          "display": 0,
+          "description": "",
+  
+          "cmd": 0,
+        
+          "url":"",
+          "parent":1,
+          "children":[
+                        {
+                          "title":"大家电",
+                          "url":""
+                        },
+                        {
+                          "title":"小家电",
+                          "url":""
+                        },
+                        {
+                          "title":"厨房电器",
+                          "url":""
+                        },
+                        {
+                          "title":"个人用品",
+                          "url":""
+                        },
+                        {
+                          "title":"其他电器",
+                          "url":""
+                        }
+                     ]
+                     
+        },
+        
+      
+        {
+          "id": 4,
+          "title": "家装",
+          "icon": "",      
+          "sort": 0,        
+          "display": 0,       
+          "description": "",       
+          "cmd": 0,
+          "url":"",
+          "parent":1,
+          "children": [
+                        {
+                          "title":"床上用品",
+                          "url":""
+                        },
+                        {
+                          "title":"日用品",
+                          "url":""
+                        },
+                        {
+                          "title":"餐具",
+                          "url":""
+                        },
+                        {
+                          "title":"茶具",
+                          "url":""
+                        },
+                        {
+                          "title":"洁具",
+                          "url":""
+                        },
+                        {
+                          "title":"宠物用品",
+                          "url":""
+                        },
+                        {
+                          "title":"腰带",
+                          "url":""
+                        }
+                     ] 
+        }
+      ]
+    },
+
+    {
+      "id":5,
+      "title":"九东汽车商城",
+      "icon":"",
+      "sort":0,
+      "display":0,
+      "description":"",
+      "cmd":0,
+      "url":"",
+      "parent":0,
+      "children":[
+        {
+          "id": 6,
+          "title": "轿车",
+          "icon": "",
+          "sort": 0,
+          "display": 0,
+          "description": "",
+          "cmd": 0,
+          "url":"",
+          "parent":5,
+          "children": {}
+        },
+        {
+          "id": 7,
+          "title": "城市SUV",
+          "icon": "",
+          "sort": 0,
+          "display": 0,
+          "description": "",
+          "cmd": 0,
+          "url":"",
+          "parent":5,
+          "children": {}
+        },
+        {
+          "id": 8,
+          "title": "商务车",
+          "icon": "",
+          "sort": 0,
+          "display": 0,
+          "description": "",
+          "cmd": 0,
+          "url":"",
+          "parent":5,
+          "children": {}
+        },
+        {
+          "id": 8,
+          "title": "客车",
+          "icon": "",      
+          "sort": 0,
+
+          "display": 0,
+          "description": "",
+          "cmd": 0,
+          "url":"",
+          "parent":5,
+          "children": {}
+        },
+        {
+          "id": 8,
+          "title": "房车",
+          "icon": "",
+    
+          "sort": 0,
+      
+          "display": 0,
+        
+          "description": "",
+       
+          "cmd": 0,
+        
+          "url":"",
+          "parent":5,
+          "children": {}
+        },
+        {
+          "id": 8,
+          "title": "跑车",
+          "icon": "",
+        
+          "sort": 0,
+      
+          "display": 0,
+ 
+          "description": "",
+          "cmd": 0,
+          "url":"",
+          "parent":5,
+          "children": {}
+        },
+        {
+          "id": 8,
+          "title": "货车",
+          "icon": "",
+       
+          "sort": 0,
+       
+          "display": 0,
+          "description": "",
+          "cmd": 0,
+          "url":"",
+          "parent":5,
+          "children": {}
+        },
+        {
+          "id": 8,
+          "title": "越野",
+          "icon": "",
+          "sort": 0,
+          "display": 0,
+          "description": "",
+          "cmd": 0,
+
+          "url":"",
+          "parent":5,
+          "children": {}
+        }
+      ]
+    }
+  ]
+}
+]

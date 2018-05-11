@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.11.3.js"></script>
+		<style type="text/css" id="style">
+			*{padding: 0;margin: 0;}
+			ul,li{
+				list-style: none;
+			}
+			#box{
+				width: 800px;
+				height: 360px;
+				margin: 50px auto;
+				perspective:800px;
+				perspective-origin: right;
+			}
+			.list{
+				width: 800px;
+				height: 360px;
+			}
+			.list li{
+				width: 10px;
+				height: 360px;
+				position: relative;
+				float: left;
+				transform-style: preserve-3d;
+				transform: rotateX(0deg);
+				transform-origin: center center -180px;
+			}
+			.list li a{
+				display: block;
+				width: 10px;
+				height: 360px;
+				position: absolute;
+				
+			}
+			.list li a:nth-child(1){
+				background: url(img/01.jpg);
+			}
+			.list li a:nth-child(2){
+				background: url(img/02.jpg);
+				top: -360px;
+				transform: rotateX(90deg);
+				transform-origin: bottom;
+			}
+			.list li a:nth-child(3){
+				background: url(img/03.jpg);
+				transform: translateZ(-360px) rotateX(180deg);
+			}
+			.list li a:nth-child(4){
+				background: url(img/04.jpg);
+				top: 360px;
+				transform: rotateX(-90deg);
+				transform-origin: top;
+			}
+			.btn li{
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: #abcdef;
+				text-align: center;
+				line-height: 30px;
+				float: left;
+				cursor: pointer;
+			}
+			.list li:nth-child(1) a{
+				background-position: 0 0;
+			}
+			.list li:nth-child(2) a{
+				background-position: -80px 0;
+			}
+			.list li:nth-child(3) a{
+				background-position: -160px 0;
+			}
+			.list li:nth-child(4) a{
+				background-position: -240px 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul class="list">
+				<li>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+				</li>
+				
+			</ul>
+			<ul class="btn">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		<script>
+			var num=80;
+			var str=''
+			var stylestr=''
+			for(var i=0;i<num;i++){
+				str+='<li><a href=""></a><a href=""></a><a href=""></a><a href=""></a></li>'
+				stylestr+='.list li:nth-child('+(i+1)+') a{background-position: -'+(i*10)+'px 0;}'
+			}
+			$(".list").html(str)
+			$("#style").append(stylestr)
+			$(".btn").on("click","li",function(){
+				var _index=$(this).index()
+				
+				for(var i=0;i<num;i++){
+					$(".list li").eq(i).css("transition","all "+(200+i*50)+"ms")
+					$(".list li").css("transform","rotateX("+_index*90+"deg)")
+				}
+				
+			})
+			
+		</script>
+	</body>
+</html>

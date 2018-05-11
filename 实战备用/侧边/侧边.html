@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="jquery-1.11.1.js"></script>
+    <style>
+    
+    *{
+    	margin:0;
+    	padding:0;
+    	
+    }
+    #right{
+    	position:fixed;
+    	right:1px;
+    	top:250px;
+    }    
+    li{
+    	list-style:none; 
+    	width:35px;
+    	height:35px;
+    	border-radius: 3px 0px 0px 3px;
+      background-color: #7a6e6e;
+      position: relative;
+ 			text-align: center;
+ 			line-height: 35px;
+ 			margin: 1px;
+ 			margin-right: 0; 
+    }
+    li:hover{
+    	cursor:pointer;
+      /*鼠标变成小手*/
+    }
+    li i{
+    	    width: 34px;
+			    margin-left: 1px;
+			    position: relative;
+			    z-index: 12;
+			    background-color: #7a6e6e;
+			    color:#fff;
+    }
+    .activeLi{
+    	background:red;  	
+    }
+    .s{
+    	    width: 62px;
+			    height: 35px;
+			    line-height: 35px;
+			    color: #fff;
+			    text-align: center;
+			    font-family: "微软雅黑";
+			    position: absolute;
+			    z-index: -1;
+			    left: 0px;
+			    top: 0;
+			    background-color: #7a6e6e;
+			    text-align: center;
+			    border-radius: 3px 0px 0px 3px;		    
+    }
+    em{
+    	font-size: 13px;
+    }
+    
+     </style>
+    
+  </head>
+  <body>
+ 
+      <div id="right">
+	    	<ul>
+  	    		<li>
+  	        	<i class="">国</i>
+              <em class="s">我的关注</em>     	
+  	    		</li>
+  	    		<li>
+  	        	<i class="">庆</i>
+              <em class="s">京东会员</em>   	
+  	    		</li>
+  	    		<li>
+  	        	<i class="">快</i>
+              <em class="s">购物车</em>  	       	
+  	    		</li>
+  	    		<li>
+  	        	<i class="">乐</i>
+              <em class="s">我的足迹</em>    	
+  	    		</li>
+  	    		<li>
+  	        	<i class="">哈</i>
+              <em class="s">返回顶部</em>  	
+  	    		</li>
+	    	</ul>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+	 
+	 $(function(){
+	 		$("#right ul li").mouseenter(function(){
+	 			 $(this).addClass("activeLi")
+	 			 			  .find("i")
+	 			 			  .addClass("activeLi")
+	 			 			  
+	 			 			  .css("border-radius",0);
+	 			 			  
+	 			 $(this).find(".s").css("background","red").stop().animate({"left":-62},500);
+	 		})
+	 		
+	 		$("#right ul li").mouseleave(function(){
+	 			 $(this).removeClass("activeLi")
+	 			 			  .find("i")
+	 			 			  .removeClass("activeLi")
+	 			 			  
+	 			 			  .css("border-radius","3px 0 0 3px");
+	 			 			  
+	 			 $(this).find(".s").css("background","#7a6e6e").stop().animate({"left":0},500);
+	 		})
+	 		
+	 		$("#right ul li").last().click(function(){
+	 			 $(document).scrollTop(0);
+	 		})
+	 })
+</script>

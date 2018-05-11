@@ -1,0 +1,48 @@
+﻿<style>
+	*{
+		margin:0;
+		padding:0;
+		font-family:"微软雅黑";
+	}
+	hr{
+		margin:100px 0;
+	}
+	#backTop{
+		width:45px;
+		height:45px;
+		font-size:16px;
+		position:fixed;
+		right:10px;
+		bottom:10px;
+		border-radius:3px;
+		background:#03ccbb;
+		text-align:center;
+		color:#FFF;
+		cursor:pointer;
+		display:none;
+	}
+</style>
+<body>
+	<div id="backTop">返回顶部</div>
+	<hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>
+</body>
+
+<script>
+	window.onscroll=function(){
+		var nScroll = document.documentElement.scrollTop || document.body.scrollTop;
+		if(nScroll >= 900){
+			backTop.style.display = "block";
+		}else{
+			backTop.style.display = "none";
+		}
+	}
+	backTop.onclick=function(){
+		var timer = setInterval(function(){
+			var nScroll = document.documentElement.scrollTop || document.body.scrollTop;
+			if(nScroll <= 0){
+				clearInterval(timer);
+			}
+			scrollBy(0, -100);
+		},30);
+	}
+</script>

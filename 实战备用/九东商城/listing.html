@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/listing.css"/>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/ajax.js"></script>
+		<title></title>
+	
+	</head>
+	<body>
+		<div class="header">
+			<div class="content">
+				<div class="tag">
+					<img alt="" src="images/icon_01.jpg" class="l_icon">
+					<span>全部商品分类</span>
+					<img alt="" src="images/icon_02.jpg" class="r_icon">
+				</div>
+				<div class="nav" id="nav"><a href="/products.html?n=13">小家电</a><a href="/products.html?n=15">个人用品</a><a href="/products.html?n=5">美容护理</a><a href="/products.html?n=57">手机/配件</a><a href="/products.html?n=58">电脑/配件</a><a href="/products.html?n=59">平板电脑</a><a href="/products.html?n=9">农副</a><a href="/products.html?n=87">九东汽车商城</a></div>
+			</div>
+		</div>
+		
+		
+		<div class="main">
+			<div class="stage">
+				<ul class="products" id="products">
+					<li style="margin-left:0px;"><a href="/detail.html?n=1755" class="img"><img alt="" src="http://backstage.jiudon.com/UploadFiles/Images/Folder_20151107/f_201511071624042402.jpg"></a><a href="/detail.html?n=1755" class="price">RMB：69.00</a><a href="/detail.html?n=1755" class="name">奔腾电动剃须刀Povos/奔腾 PS5200</a><a href="/detail.html?n=1755" class="score">可用商城积分：0.00</a><span class="operator"><input type="button" id="buy_1755" class="cart" value="加入购物车"><input type="button" id="collection_1755" class="buy" value="立即购买"></span></li>
+				</ul>
+			</div>
+		</div>
+		<div id="btn">
+				<a id="fir" href="#">首页</a>
+				<a id="up" href="#">上一页</a>
+				<!-- <a href="">1</a> -->
+				<a id="down" href="#">下一页</a>
+				<a id="last" href="#">尾页</a>
+
+		</div>
+	</body>
+</html>
+<script>
+ $(function(){
+ 	
+ 
+	$.get("Json/product.json",function(data){
+		//console.log(data)
+		var oUl = document.getElementById("products");
+				var aData = eval(data);
+				//console.log(oUl);
+				
+				oUl.innerHTML = " "
+				for(var i = 0;i < aData.length;i++){
+					var oLi = document.createElement('li');
+					oLi.innerHTML = '<a href="" class="img"><img alt="" src="images/'+aData[i]['picurl_0']+'" ></a><a href="" class="price">'+aData[i]['p_01']+'</a><a href="" class="name">'+aData[i]['p1']+'</a><a href="/detail.html?n=1755" class="score">'+aData[i]['p2']+'</a><span class="operator"><input type="button" id="buy_1755" class="cart" value="加入购物车"><input type="button" id="collection_1755" class="buy" value="立即购买"></span>'
+					oLi.id=i;
+					//console.log(oLi.id)
+					oUl.appendChild(oLi);
+					//存入cookie 
+					
+						oLi.onclick=function(){
+							id=this.id;
+							var dDate = new Date();
+			         		dDate.setDate(dDate.getDate() + 14);
+			         		document.cookie = "name" + "=" + id + "; expires=" + dDate;
+							$(this).find("a")[0].href="detail.html";
+						}
+				}
+				
+				
+				
+				
+				
+	},"json")
+})	
+	
+var oBox = document.getElementById("box");
+				var oUl = document.getElementsByTagName("ul");
+				var vH = document.documentElement.clientHeight;
+				//最小高度
+				function min_height(oUl){
+					var HT = oUl[0].offsetHeight;
+					var index = 0;
+					for(var i =0 ;i < oUl.length;i++){
+
+						if(oUl[i].offsetHeight<HT){
+							
+							HT = oUl[i].offsetHeight;
+							index = i;
+						}
+					}
+					return index;
+				}
+				//加载图片
+				function jiazai(){
+					for(var i = 1 ;i < 15;i++ ){
+						var oLi = document.createElement("li");
+						var oImg = document.createElement("img");
+						oImg.src = "images/" + i + ".jpg";
+						oLi.appendChild(oImg);	
+						oUl[min_height(oUl)].appendChild(oLi);
+					}
+				}
+				jiazai();
+				//滚动
+				document.onscroll = function(){
+					var sH = document.documentElement.scrollTop ||document.body.scrollTop;
+					console.log(document.body.scrollHeight + ":" + document.body.offsetHeight + ":" + (sH + vH));
+					if(sH + vH >= document.body.scrollHeight * 0.8){
+						jiazai();
+					}
+				};	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>

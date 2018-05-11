@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+        }
+        .imgwrap img {
+            width: 200px;
+            height: 200px;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="imgwrap">
+        <img src="images/bigbig.jpg" >
+    </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $(".imgwrap").mouseenter(function () {
+                $(this).children("img").stop(true).animate({
+                   
+                   
+                   
+                    marginTop: -25
+                },500);
+            }).mouseleave(function () {
+                $(this).children("img").animate({
+
+                    marginTop: 0
+                },500);
+            });
+        });
+    </script>
+</body>
+</html>

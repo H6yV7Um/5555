@@ -1,0 +1,247 @@
+.classical_d{
+	display: none;
+}
+.menu_banner{
+	width: 1200px;
+	margin: 0 auto;
+	height: 360px;
+}
+.menu_sec {
+    display: block; 
+    width: 211px;
+    border-left: 1px solid #F0F0F0;
+    height: 360px;
+}
+.menu_sec .top_title {
+    height: 60px;
+}
+.top_title h2 {
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fa7c7d;
+    padding-left: 20px;
+    display: inline;
+    _position: relative;
+    _top: 20px;
+}
+.menu_sec li.even {
+    background: #F0F0F0;
+}
+.menu_sec li {
+    height: 58px;
+    line-height: 50px;
+    z-index: 3;
+    position: relative;
+    text-align: left;
+    padding-left: 29px;
+    border: 1px solid white;
+    z-index: 10;
+    width: 180px;
+}
+.nav_menu dt {
+    position: absolute;
+    width: 184px;
+    font-size: 15px;
+    font-weight: bold;
+    top: -5px;
+    font-family: "微软雅黑";
+}
+.index-new a {
+    color: #555;
+}
+.nav_menu dd {
+    position: absolute;
+    width: 184px;
+    top: 12px;
+}
+.nav_menu dd a {
+    color: #B4B4B4;
+}
+.secondary_banner {
+    width: 987px;
+    height: 360px;
+    position: relative;
+    top: -360px;
+    left: 212px;
+    z-index: 9;
+}
+.secondary_banner {
+    width: 986px;
+    height: 360px;
+    position: relative;
+    top: -360px;
+    left: 212px;
+    z-index: 9;
+    overflow: hidden;
+}
+
+.secondary_banner .banner_img li {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 987px;
+    height: 360px;
+    overflow: hidden;
+    float: left;
+}
+.secondary_banner .banner_img img {
+    width: 1000px;
+    height: 360px;
+}
+.secondary_banner .banner_btn {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    z-index: 11;
+}
+
+.secondary_banner .banner_btn li{
+    padding: 2px 8px;
+    border: 1px solid #CCC;
+    margin-left: 2px;
+    color: red;
+    font-size: 12px;
+    float: left;
+    cursor: pointer;
+}
+.secondary_banner .banner_btn li.active{
+	background: red;
+	color: white;
+}
+.secondary_banner .pre {
+    left: 0;
+}
+.secondary_banner .arr {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #000000;
+    color: #ffffff;
+    top: 45%;
+    z-index: 11;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    display: none;
+    opacity: 0.3;
+    border-radius: 25px;
+}
+.secondary_banner .next {
+    right: 0px;
+}
+.new_goods{
+	width: 1200px;
+	margin: 0 auto;
+	border-top: 5px solid #f0f0f0;
+	margin-top: 10px;
+}
+.goods_type{
+	height: 45px;
+	line-height: 45px;
+	background: #FAFAFA;
+	overflow: hidden;
+}
+.goods_type h2{
+	float: left;
+	font-size: 15px;
+	font-weight: bold;
+	padding-left: 10px;
+}
+.new_goods .goods_content{
+	border-left: 1px solid #F0F0F0;
+	margin-left: 1px;
+	overflow: hidden;
+}
+.new_goods .dlll {
+    float: left;
+    padding: 9px 9px 14px 9px;
+    border-width: 1px 1px 1px 0px;
+    border-color: #F0F0F0;
+    border-style: solid;
+    width: 220px;
+    overflow: hidden;
+    height: 310px;
+}
+.new_goods .pic img{
+    width: 220px;
+    height: 220px;
+}
+.new_goods .pic_name {
+    height: 32px;
+    overflow: hidden;
+    font-family: Tahoma,Geneva,sans-serif;
+    line-height: 16px;
+}
+.new_goods .pic_name a {
+    color: #555;
+}
+.new_goods .pic_word {
+    height: 37px;
+    overflow: hidden;
+}
+.new_goods .pic_price {
+    height: 20px;
+}
+.new_goods .pic_price .add_change {
+    color: #ffffff;
+    background: url(../img/addd.png);
+    float: right;
+    line-height: 36px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+}
+.new_goods .pic_price em {
+    color: #FB3648;
+    font-size: 20px;
+    float: left;
+    max-width: 110px;
+}
+.new_goods .pic_price .cart_button {
+    float: right;
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    position: relative;
+    top: -8px;
+    background: #ED5951;
+}
+.new_goods .dlll:hover {
+    border: 1px solid red;
+    padding: 9px 9px 14px 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

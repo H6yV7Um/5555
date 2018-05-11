@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        img{border:none;}
+        .opacity{ margin:0 auto; width:782px; height:auto; border:solid 5px #000; overflow:hidden;}
+        .main{ float:left; width:782px; height:326px; overflow:hidden;}
+        .main img{ width:100%; height:100%; float:left;}
+
+        .pic{ width:100%; height:70px; overflow:hidden; float:left;}
+        .pic img{ float:left; margin-left:5px; margin-top:5px; display:inline; height:60px;}
+        .pic img.first{ margin-left:0px;}
+    </style>
+    <script type="text/javascript">
+        function ChangeOpacity(_main,_pic){
+            this.timer=0;
+            this.main=document.getElementById(_main).getElementsByTagName("img")[0];
+            this.list=null;
+            this.attr=(function(){
+                var _attr=[];
+                for(var i=0;i<5;i++){
+                    _attr[i]="../H51610/images/_0"+(i+1)+".jpg";
+                }
+                return _attr;
+            })();
+            this.co=function(){
+                var _self=this;
+                var _opacity=0.3;
+                function start(){
+                    window.clearTimeout(_self.timer);
+                    _opacity+=0.01;
+                    if(_self.main.style.filter) {
+                        _self.main.style.filter = "alpha(opactiy=" + _opacity + ")";
+                    }else{
+                        _self.main.style.opacity=_opacity;
+                    }
+                    if(_opacity<1) {
+                        _self.timer = window.setTimeout(start, 30);
+                    }
+                }
+                start();
+            }
+            this.boundEvent=function(){
+                var _self=this;
+                _self.list=document.getElementById(_pic).getElementsByTagName("img");
+                for(var i=0;i<this.list.length;i++){
+                    (function(n){
+                        _self.list[i].onmouseover=function(){
+                            _self.main.src=this.src;
+                            _self.main.style.opacity=0.3;
+                            _self.co();
+                        }
+                    })(i);
+                }
+            }
+            this.createImage=function(n){
+                var _imgs="";
+                for(var i=0;i<n;i++){
+                    _imgs+="<img alt=\"\" src=\""+this.attr[i]+"\"/>";
+                }
+                document.getElementById(_pic).innerHTML=_imgs;
+                this.boundEvent();
+            }
+        }
+        window.onload=function(){
+            new ChangeOpacity("main1","pic1").createImage(5);
+            new ChangeOpacity("main2","pic2").createImage(5);
+        }
+    </script>
+</head>
+<body>
+<div class="opacity">
+    <div id="main1" class="main">
+        <img alt="" src="../H51610/images/_01.jpg"/>
+    </div>
+    <div id="pic1" class="pic"></div>
+</div>
+
+<div class="opacity">
+    <div id="main2" class="main">
+        <img alt="" src="../H51610/images/_01.jpg"/>
+    </div>
+    <div id="pic2" class="pic"></div>
+</div>
+</body>
+</html>

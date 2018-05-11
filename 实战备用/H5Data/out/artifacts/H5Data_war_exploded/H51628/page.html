@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        #container{ width:1000px; height:200px; overflow:hidden; margin:0 auto;}
+        #container span{ display:block; width:172px; height:172px; padding:3px; border:solid 1px #ccc; float:left; margin:10px; display:inline;}
+        #container span img{ width:172px; height:172px; border:none; float:left;}
+
+        #button{ width:1000px; height:40px; margin:0 auto; overflow:hidden;}
+        #button span.root{ display:block; width:180px; height:40px; overflow:hidden; margin:0 auto;}
+        #button span span{ display:block; width:28px; height:28px; overflow:hidden; border:solid 1px #ccc; float:left; margin-left:5px; display:inline; line-height:30px; font-size:13px; color:#555; text-align:center; cursor:pointer;}
+    </style>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript" src="../H51610/javascript/Ajax.js"></script>
+    <script type="text/javascript">
+        function dealData(data,_s,_e){
+            var _container=document.getElementById("container");
+            for(var i=_s;i<_e && i<data["images"].length;i++){
+                var _span=null,_img=null;
+                for(var i=_s;i<_e;i++){
+                    _span=document.createElement("span");
+                    _img=document.createElement("img");
+                    _img.src="../H51610/waterfall/"+data["images"][i]+".jpg";
+                    _span.appendChild(_img);
+                    _container.appendChild(_span);
+                }
+            }
+        }
+        function loadImage(_s,_e){
+            ajaxRequest("post","../H51610/javascript/waterfall.json",null,function(data){
+                dealData(JSON.parse(data),_s,_e);
+            },true);
+        }
+
+
+
+
+
+
+
+//        function click(fn){
+//            var _list=this.get();
+//            for(var i=0;i<_list.length;i++){
+//                _list[i].onclick=fn;
+//            }
+//        }
+//        var _test=$(".root span");
+//        _test.click2=click;
+//        _test.click2(function(){
+//            alert(this.innerText);
+//        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function boundEvent(_root){
+            for(var i=0;i<_root.children.length;i++){
+                _root.children[i].onclick=function(){
+                    var _container=document.getElementById("container");
+                    _container.innerHTML="";
+                    var _s=(parseInt(this.innerText)-1)*5;
+                    var _e=parseInt(this.innerText)*5;
+                    loadImage(_s,_e);
+                    //changeButtonText(_root,this);
+                }
+            }
+        }
+
+        function pushButton(n){
+            var _span=null;
+            var _root=document.createElement("span");
+            _root.className="root";
+            var _button=document.getElementById("button");
+            _button.appendChild(_root);
+            for(var i=0;i<n;i++){
+                _span=document.createElement("span");
+                _span.innerText=i+1;
+                _root.appendChild(_span);
+            }
+            boundEvent(_root);
+        }
+
+
+        window.onload=function(){
+            var _s=0,_e=5;
+            loadImage(_s,_e);
+            pushButton(5);
+
+
+//            function click(fn){
+//                var _list=this.get();
+//                for(var i=0;i<_list.length;i++){
+//                    _list[i].onclick=fn;
+//                }
+//            }
+//            var _test=$(".root span");
+//            _test.click2=click;
+//            _test.click2(function(){
+//                alert(this.innerText);
+//            });
+//
+//
+//            var _obj=new Object();
+//            _obj.fn=function(){
+//                alert(this);
+//                function demo(){
+//                    this;
+//                }
+//                demo();
+//            }
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+
+</div>
+<div id="button"></div>
+</body>
+</html>

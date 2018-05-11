@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #demo{ width:800px; height:400px; background-color:red; position:relative;}
+        #demo span{
+            display:block;
+            width:800px;
+            height:40px; overflow:hidden; position:absolute; left:0px; background-image:url(../../H51612/images/img1.jpg);}
+    </style>
+    <script type="text/javascript" src="../../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        //jQuery.noConflict();
+        //$=null;
+
+        function showBlinds(){
+            var _timer=0;
+            var _height=40;
+            var _width=800;
+            function start(){
+                window.clearTimeout(_timer);
+                $("span").css({
+                    "height":_height+"px",
+                    "width":_width+"px"
+                });
+                _height-=5;
+                _width-=100;
+                if(_height>=0) {
+                    _timer = window.setTimeout(start, 200);
+                }
+            }
+//            var _list=document.getElementsByTagName("span");
+//            function start(){
+//                window.clearTimeout(_timer);
+//                for(var i=0;i<_list.length;i++){
+//                    _list[i].style.height=_height+"px";
+//                }
+//                _height-=5;
+//                if(_height>=0) {
+//                    _timer = window.setTimeout(start, 200);
+//                }
+//            }
+            start();
+        }
+        function createBlinds(){
+            var _html="";
+            for(var i=0;i<10;i++){
+                _html+="<span style=\"top:"+i*40+"px; background-position:0px "+(-i*40)+"px;\"></span>";
+            }
+            $("#demo").html(_html);
+            showBlinds();
+        }
+
+
+
+
+
+        function checkLine(){
+            console.log("foo\\:bar");
+        }
+        $(document).ready(function(){//此方法是文档加载完成以后,
+            // 不关心多媒体文件是否加载完成,也就是说dom元素加载完成就可以开始
+            //执行function回调函数的内容;
+            //window.onload:需要等待网页全部加载完成;
+            //所以ready方法比window.onload方法更快
+            //console.log($("span.demo").html("123455"));
+            //alert($(".demo").text());//$("#demo")返回的是jquery对象
+            //alert(document.getElementById("demo").innerHTML);
+
+
+//            $("#demo").click(function(){
+//                console.log($(this));
+//            });
+
+
+
+
+
+            //createBlinds();
+
+
+
+
+
+
+            //checkLine();
+
+
+
+            //$("div:not(#demo)");
+            //console.log($(".demo:lang(abc)"));
+
+
+
+
+            $("#test").animate({
+                width:"500px",
+                height:"500px"
+            },1000);
+
+
+        });
+
+
+
+    </script>
+</head>
+<div id="test" style="width:10px; height:10px; overflow:hidden; background-color:red;"></div>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function regexp(){
+            var _str="abcdeaaajkjkjkj";
+//            while(_str.indexOf("a")>=0){
+//                _str=_str.replace("a","z");
+//            }
+
+            //替换字符
+            _str=_str.replace(/a/g,"z");
+            //alert(_str);
+
+
+
+
+            var _str="abce1234abce56";
+            var _reg=/abce/;//正则表达式的写法,/......../
+            //alert(_str.match(_reg));//match方法的返回值:数组类型的元素集合;没有匹配结果的时候返回null
+            //alert(_str.split(/1234/));//split方法的参数可以是字符串类型分割符,也可以是符合某个规则的正则表达式
+
+
+
+
+
+            var _str="artyy6";
+            var _reg=/^ar{2}t+y{2}6$/g;
+            //alert(_reg.test(_str));//test方法返回值为boolean类型。符合条件则返回true,否则返回false;
+            //test方法是正则表达式对象的方法。
+
+
+            var _str="abc%xyz 123 --- 567";
+            //alert(_str.match(/\d{1,2}/g));
+            //alert(_str.replace(/\s+/g,"h"));
+            //alert(_str.replace(/\W/," "));
+            //alert(_str.match(/\D/g));
+            //alert(_str.match(/\w\b/g));
+            //alert(_str.replace(/./g,""));
+
+
+
+
+            var _str="fylvBBBnm%,vbnm090897878,";
+//            var _reg=/[a-zA-Z0-9%]+/g;
+//            alert(_str.match(_reg));
+
+            var _reg=/([a-z]+)([A-Z]+)([a-z]+)/g;
+            //alert(_str.match(_reg));
+
+
+
+
+
+
+
+//            var _m="18101165981";
+//            var _reg=/^1[34578]\d{9}$/g;
+//            if(_reg.test(_m)){
+//                alert("手机号正确");
+//            }else{
+//                alert("error");
+//            }
+
+
+        }
+        regexp();
+
+        window.onload=function(){
+            var _pwd=document.getElementById("pwd");
+            _pwd.onchange=function(){
+                var _reg=/^[a-zA-Z0-9!@#\$%\^&\*\(\)]{6,12}$/g;
+                if(_reg.test(_pwd.value)){
+                    alert(this.value);
+                    alert("right");
+                }else{
+                    alert("error");
+                }
+            }
+            //zongyadong@gmail.com
+            //zongyadong@163.com
+            //zongyadong@sina.com.cn
+            //zongyadong_@sina.com.cn
+            //1181390996@qq.com
+            //zongyadong@sina-xx.com.cn
+            var _reg=/^\w+@[a-z0-9-]+(\.[a-z]+)+$/gi;
+            alert(_reg.test("zongyadong@sina-xx.com.cn"));
+            /^[1-9]\d{16}([1-9X])$/g
+            //
+
+
+
+            var _str=" ab    ad d re   sd re   ";
+            var _reg=/(^\s+)(\s+$)(\s{2,})/g;
+
+            alert(_str.replace(_reg,""));
+
+
+            var foo=1;
+            function bar(){
+                //function foo(){}
+                foo=10;
+                return;
+                //function foo(){}//这行是原来的,函数表达式提升后到bar()下面一行,所以foo=10是讲函数foo指针重新赋值为10,bar()下面一行的foo是局部变量,与全局变量不冲突。
+            }
+            //bar();
+            //alert(foo);//此处打印的是全局变量
+
+
+            var a=0;
+            function xx(){
+                a=10;
+                return;
+            }
+            //xx();
+            //alert(a+"xxx");
+
+
+            var _reg=/[12][0-9]{3}-([0][0-9])|(1[012])-([012][0-9])|(3[01])/g;
+            var _reg=/\d{4}((-|\/)\d{1,2}){2}/g;
+
+
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <input type="password" id="pwd"/>
+</body>
+</html>

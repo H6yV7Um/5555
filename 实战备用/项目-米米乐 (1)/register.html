@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>register</title>
+		<link rel="stylesheet" type="text/css" href="css/index_01.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+	</head>
+	<body>
+		<div style="background: #fafafa;">
+			<div style="margin: 0 auto;height: 70px;width: 100%;">
+				<div style="background: url(img/1.jpg) no-repeat center;width: 100%;cursor: pointer;height: 70px;"></div>
+			</div>
+		</div>
+		<div id="header" style="width: 1000px;">
+			<span class="log" style="margin-right: 0;">
+				<a><img src="img/log.png"></a>
+			</span>
+			<span class="re_welcome">欢迎注册</span>
+			<div class="already_login">已注册，请 <a href="">登录&gt;</a></div>
+		</div>
+		<div class="nc-login-layout">
+			<div class="zcTitle">
+	        	<ul>
+	            	<li class="current">个人用户注册</li>
+	           		<!--  <li>企业用户注册</li>  --> 
+	       		 </ul>
+    		</div>
+    		<div class="nc-login">
+    			<div class="nc-login-content">
+    				<form action="index.php?act=login&op=usersave" method="post" id="register_form">
+    					<input type="hidden" name="formhash" value="r5S6w76dRfKOPzHy9gMvZkMNFn4MkIz"/>
+    					<div class="cBox">
+            				<input placeholder="手机号码" type="text" id="user_name" name="user_name" class="text tip input-40" title="请输入11位手机号">
+            				<i></i>
+    					</div>
+    					<div class="cBox">
+            				<input placeholder="设置密码" type="password" id="password" name="password" class="text tip input-40" title="6-20位字符，可由英文、数字及标点符号组成">
+            				<i></i>
+    					</div>
+    					<div class="short">
+                    		<input type="text" placeholder="验证码" name="captcha" class="text w148 fl tip" id="captcha" maxlength="4" size="10" title="请输入验证码">
+                			<i></i>
+                    		<img src="https://login.mmloo.com/index.php?act=seccode&amp;op=makecode&amp;nchash=b825ff84" title="" name="codeimage" border="0" id="codeimage" class="fl mt8"> <a href="javascript:void(0);" class="fl mt10" onclick="javascript:document.getElementById('codeimage').src='https://login.mmloo.com/index.php?act=seccode&amp;op=makecode&amp;nchash=b825ff84&amp;t=' + Math.random();">看不清，换一张</a>
+       					</div>
+       					<div class="short">
+              				<input placeholder="短信验证码" type="text" id="seccode" maxlength="6" name="seccode" class="text tip cap w148" title="请输入短信验证码">
+              				<i></i>
+               				<input type="button" class="reget" id="reget" value="获取短信验证码" onclick="sendMessage()">
+           				</div>
+           				<div class="cBox">
+              				<input placeholder="好友推荐码(非必填)" type="text" id="tuijianma" name="tuijianma" class="text tip input-40" title="请输入好友推荐码">
+           				</div>
+           				<div>
+            				<input name="agree" type="checkbox" class="vm ml5" id="clause" value="1" checked="checked">
+            				<span for="clause" class="ml5">阅读并同意<a href="" target="_blank" class="agreement" title="阅读并同意">服务协议</a></span>
+           					<input type="button" id="Submit" value="" class="submit" title="立即注册">
+       					</div>
+    				</form>
+    			</div>
+    		</div>
+		</div>
+		<div class="footer ">
+			<span class="to_top "><a href=" " class="back_to_top ">返回顶部</a></span>
+			<ul>
+				<li>
+					<a style=" ">电脑节|</a><a style=" ">年货节|</a><a style=" ">批发商城|</a><a style=" ">合作及洽谈|</a><a style=" ">联系我们|</a><a style=" ">关于米米乐商城|</a><a style=" ">商家登陆|</a><a style=" ">开店协议|</a><a style=" ">商家入驻|</a><a style=" ">手机版|</a><a style=" ">友情链接|</a><a style="color: red; ">招聘英才</a><a style=" ">米商|</a><a style=" ">8.8包邮</a>
+				</li>
+				<li>© 2016 米米乐商城 www.mmloo.com 版权所有  蜀ICP备06015925号-1</li>
+			</ul>
+		</div>
+		<div class="footerend ">
+			<span>
+				<a id="___szfw_logo___ ">
+					<img src="http://www.mmloo.com/shop/templates/default/images/cxlogo.png " height="47px "/>
+				</a>
+			</span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .focused {
+            background: #abcdef;
+        }
+    </style>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        $==jQuery;
+        //jQuery.noConflict();//$与其他框架发生冲突时,自毙的一种方式。
+        /*$(document).ready(function(){//在页面当中可以出现多个$(document).ready();方法
+            //只需要网页的HTML标签元素加载完成以后便可以触发该事件。
+//            console.log(jQuery("body"));
+//            console.log($("body"));
+//            var abc=jQuery;
+//            console.log(abc("body"));
+        });*/
+
+        /*window.onload=function(){//在页面当中window.onload只能出现一次。
+            //如果出现多次后面的window.onload会覆盖前面的window.onload事件;
+            //要等待网页上所有元素以及图片等多多媒体文件全部加载完成以后才可以触发window.onload事件。
+//            console.log(jQuery("body"));
+//            console.log($("body"));
+//            var abc=jQuery;
+//            console.log(abc("body"));
+            provinceEvent(function(){
+
+            });
+        }*/
+
+
+
+
+
+
+
+
+
+
+
+//        function getAttr(){
+//            if(arguments.length>1){
+//                document.getElementsByTagName("div")[0].setAttribute(arguments[0],arguments[1]);
+//            }else{
+//                return document.getElementsByTagName("div")[0].getAttribute(arguments[0]);
+//            }
+//        }
+        function result(_arr){
+            var _tag=null;
+            var _obj=null;
+            for(var i=0;i<_arr.length;i++){
+                if(_arr[i].indexOf(" ")>0){
+                    _tag=_arr[i].split(" ");
+                    for(var n=0;n<_tag.length;n++){
+                        if(/^#/.test(_tag[0])){
+                            _obj=document.getElementById(_tag[0].replace("#",""));
+                        }else if(/^\./.test(_tag[0])){
+                            _obj=document.getElementsByClassName(_tag[0].replace(".",""));
+                        }
+                    }
+                }
+            }
+            return
+        }
+        function selector(_s){
+            var _arr=null;
+            if(_s.indexOf(",")>=0){
+                _arr=_s.split(",");
+                result(_arr);
+            }else{
+
+            }
+        }
+        function demo(){
+//            console.log($("#demo>span"));
+//            console.log($("#demo .demo"));
+//            console.log($("#demo span.demo"));
+//
+//            console.log($("div.demo span,#demo span"));
+//            console.log($("div.demo span.demo,#demo span.demo"));
+//
+//            console.log($("#demo span p span span"));
+//            console.log($("#form~input"));
+//            console.log($("form"));
+            //console.log($("ul li:first-of-type"));
+            ///$("div").attr("attr","demo");
+//            console.log($("div").attr("attr"));
+
+//            $("div").prop("id","demo");
+            //delete $("div")[0]["attr"];
+//            $("div").removeProp("id");
+            //console.log($("div").prop("attr"));
+
+            /*$("div").addClass("demo div");
+            $("div").removeClass(function(){
+                var _arr=["demo","div","abc"];
+                return _arr[1];
+            });*/
+            function toggleClass(_name){
+                if($("div")[0].className==_name){
+                    $("div").removeClass(_name);
+                }else{
+                    $("div").addClass(_name);
+                }
+            }
+            //console.log($("div").html("<div><span></span></div>"));
+//            function attr(_key,_value){
+//                if(_value instanceof Function){
+//                    $("div")[0].setAttribute(_key,_value());
+//                }else{
+//                    $("div")[0].setAttribute(_key,_value);
+//                }
+//            }
+//            function fn(){
+//                return "demo";
+//            }
+//            console.log($("div").toggleClass(function(index,_class,_boolean){
+//                console.log(index+","+_class+","+_boolean);
+//                return "abc";
+//            }));
+//            $("div").html(function(){
+//                return 12345;
+//            });
+//            console.log($($("div")[0]));
+//            $("div").click(function(){
+//                $(this);
+//            });
+        }
+
+        $(document).ready(function(){
+//            var _demo=document.getElementById("demo");//返回的是原生元素节点对象;
+//            $("#demo");//返回值是jquery对象,并不是原生的div元素节点对象;
+//            document.getElementById("demo").style.border="solid 10px #000";
+//            $("#demo").css("border","solid 10px red");
+//
+//            console.log($(".demo"));
+//            console.log(_demo);
+
+            demo();
+
+        });
+
+    </script>
+</head>
+<body>
+<div class="demo div"><span>iuiuiui</span></div>
+<input type="text" value="aooooo"/>
+</body>
+</html>

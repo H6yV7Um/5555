@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播图</title>
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<script src="js/jquery_1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			#scroll_box {
+				width: 100%;
+				height: 408px;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			#scroll_box li {
+				float: left;
+				width: 100%;
+			}
+			
+			#scroll_box li a {
+				display: block;
+				width: 100%;
+				height: 408px;
+				overflow: hidden;
+				background: url(img/01.jpg) no-repeat center center;
+			}
+			
+			#scroll_box .slider-nav {
+				width: 800px;
+				position: relative;
+				margin: 0 auto;
+				top: -5px;
+			}
+			
+			#scroll_box .slider-nav a {
+				float: left;
+				width: 100px;
+				height: 5px;
+				margin-right: 1px;
+				background: #404449;
+				cursor: pointer;
+				opacity: 0.7;
+				fiter: alpha(opacity=70);
+			}
+			
+			#scroll_box .slider-nav a.cur,
+			#scroll_box .slider-nav a:hover {
+				background: #ff2d54;
+			}
+			
+			#scroll_box .btn {
+				position: absolute;
+				width: 40px;
+				height: 80px;
+				background: rgba(0, 0, 0, .5);
+				color: white;
+				text-align: center;
+				line-height: 80px;
+				cursor: pointer;
+				font-size: 40px;
+				top: 50%;
+				margin-top: -40px;
+			}
+			
+			#prev {
+				left: 10%;
+				top: 50%;
+				margin-top: -40px;
+			}
+			
+			#next {
+				right: 10%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="scroll_box">
+			<ul class="clearfix">
+				<!--<li><a href=""></a></li>-->
+			</ul>
+			<div class="slider-nav clearfix">
+				<!--<a></a>-->
+			</div>
+			<div id="prev" class="btn">&lt;</div>
+			<div id="next" class="btn">&gt;</div>
+		</div>
+		<script>
+			$.get("scrollImg.json",function(data){
+				$.each(data,function(index,value){
+					$("<li><a href='' style='background:url("+value+") no-repeat center center'></a></li>").appendTo($("#scroll_box ul"));
+					$("<a>").appendTo($(".slider-nav"));
+				})
+				var $ul = $("#scroll_box ul");
+				$("#scroll_box li:first-child").clone().appendTo($("#scroll_box ul"));
+				var $li = $("#scroll_box li");
+				var len = $li.length;
+				var perWidth = $li.outerWidth();
+				$ul.css("width",perWidth*len);
+				$li.css("width",perWidth);
+				$(".slider-nav a").css("width",$(".slider-nav").outerWidth()/(len-1)-1);
+				$(".slider-nav a").eq(0).addClass("cur");
+				var i = 0;
+				var timer = setInterval(move,3000);
+				function move(){
+					i++;
+					
+					if(i==-1){
+					i=len-2;
+					$ul.css("margin-left",-perWidth*(len-1));
+						}
+					if(i==len-1){
+						$(".slider-nav a").eq(0).addClass("cur").siblings().removeClass();
+						
+					}
+					if(i == len){
+						i = 1;
+
+						$("#scroll_box ul").css("margin-left",0);	
+					}
+					
+					$ul.stop().animate({"margin-left":-perWidth*i});
+					$(".slider-nav a").eq(i).addClass("cur").siblings().removeClass();
+				}
+				$("#prev").click(function(){
+					clearInterval(timer);
+					move();
+					timer = setInterval(move,3000);
+				});
+				$("#next").click(function(){
+					clearInterval(timer);
+					i = i - 2;
+					move();
+					timer = setInterval(move,3000);
+				})
+				$(".slider-nav a").hover(function(){
+				clearInterval(timer);
+					i = $(this).index()-1;
+					move()
+				},function(){
+					timer = setInterval(move,3000);
+				})
+			})
+		</script>
+	</body>
+
+</html>

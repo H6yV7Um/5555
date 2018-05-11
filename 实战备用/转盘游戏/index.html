@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 500px;
+				height: 500px;
+				margin: 20px auto;
+				/*border: 10px solid #c00;*/
+				position: relative;
+			}
+			/*#box:hover{
+				transform: rotate(300deg);
+			}*/
+			.imgj_box{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				transition:all ease 2s;
+			}
+			.imgj_box img{
+				width: 100%;
+				height: 100%;
+			}
+			.arrow{
+				width: 10px;
+				height: 50px;
+				background: #c00;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-left: -5px;
+			}
+			.start{
+				width: 100px;
+				height: 100px;
+				background: #ccc;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -50px;
+				margin-top: -50px;
+				border-radius: 50%;
+				opacity: 0.3;
+			}
+			
+			
+			#box2{
+				width: 500px;
+				height: 500px;
+				margin: 0px auto;
+				/*border: 10px solid #c00;*/
+				position: relative;
+			}
+			#content{
+				width: 100%;
+				height: 100%;
+				transition: all 2s; 
+			}
+			.start2{
+				width: 100px;
+				height: 100px;
+				background: #900;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -50px;
+				margin-top: -50px;
+				border-radius: 50%;
+				color:#fff;
+				text-align: center;
+				line-height: 100px;
+				font-size: 40px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div id="box">
+			<div class="imgj_box">
+				<img src="img/timg.jpg"/>
+			</div>
+			<div class="arrow">
+				
+			</div>
+			<div class="start">
+				
+			</div>
+		</div>
+		<div id="box2">
+			<div id="content">
+				
+			</div>
+			<div class="start2">
+				开始
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+//		var lotteryChoise=[{deg:0,name:"一等奖"},
+//			{deg:36,name:"谢谢"},
+//			{deg:36*2,name:"二等奖"},
+//			{deg:36*3,name:"谢谢"},
+//			{deg:36*4,name:"三等奖"},
+//			{deg:36*5,name:"谢谢"},
+//			{deg:36*6,name:"四等奖"},
+//			{deg:36*7,name:"谢谢"},
+//			{deg:36*8,name:"五等奖"},
+//			{deg:36*9,name:"谢谢"},
+//		]
+//			
+//		$(".start").on("click",function(){
+//			var rollnum = roll();
+//			var thisdeg = parseInt(rollnum.deg)+720;
+//			console.log(rollnum.name);
+//			$(".imgj_box").css("transform","rotate("+thisdeg+"deg)");
+//		})
+//		
+//		
+//		
+//		function roll(){
+//			var index = parseInt(Math.random()*10);
+//			console.log(index);
+//			if(index){
+//				return lotteryChoise[index];
+//			}
+//			return roll();
+//		}
+		var lotteryCho=[
+			{name:"iphone6",id:0},
+			{name:"1元",id:1},
+			{name:"ipad4",id:2},
+			{name:"66元代金券",id:3},
+			{name:"10元",id:4},
+			{name:"榨汁机",id:5},
+			{name:"5元",id:6},
+			{name:"辣条",id:7},
+			{name:"一袋小浣熊",id:8}
+		]
+		
+		function Lottery(opt){
+			this.config={
+				targetBox:null,
+				canvastarget:null,
+				lotteryChoise:null,
+				startBtn:null //开始转动的盒子
+			};
+			
+			$.extend(this.config,opt);
+			this.canvasEL = null;
+			this.cxt = null;
+			this.degInterval=0;
+			
+			this._create();
+			this.addevent();
+			
+		};
+		Lottery.prototype={
+			_create:function(){
+				var that=this;
+				var canEL = document.createElement("canvas");
+				var cxt = canEL.getContext("2d");
+				//每块区域的大小，即每个奖项的面积
+				var degInterval = 360/this.config.lotteryChoise.length;
+				//指针的旋转角度
+				var wizardDeg = degInterval/2+90;
+				
+				if(this.config.targetBox){
+					//设置画布长宽,不能用css去设置宽高，因为画布会变形，要设置画布的宽高属性
+					canEL.width = this.config.targetBox.width();
+					canEL.height = this.config.targetBox.height();
+					this.config.targetBox.css({"position":"relative"});
+					
+					//创建指针
+					var wizardEL =$("<div>");//指针
+					wizardEL.css({
+						"position":"absolute",
+						"top":"0",
+						"left":"50%",
+						"width":"10px",
+						"height":"50px",
+						"margin-left":"-5px",
+						"background":"#000",
+						
+						//以物所在位置的左上角为原点来计算距离的rotate时的圆心
+						"transformOrigin":"5px "+canEL.height/2+"px",
+						"transform":"rotate("+wizardDeg+"deg)"
+					})
+					
+					console.log(degInterval);
+					this.config.targetBox.css("transform","rotate("+(270-degInterval/2)+"deg)");
+					this.config.startBtn.css("transform","rotate(-"+(270-degInterval/2)+"deg)")
+					this.config.canvastarget.append(canEL);
+					this.config.targetBox.append(wizardEL);
+					
+					
+				}
+				this.canvasEL = canEL;
+				this.cxt = cxt;
+				
+				$.each(this.config.lotteryChoise,function(i,r){
+					r.thisdeg = i*degInterval;
+					//绘制转盘
+					that.createChoise(r.thisdeg,degInterval);
+				})
+				console.log(this.config.lotteryChoise)
+				$.each(this.config.lotteryChoise,function(i,r){
+					//写入文字
+					that.createChoiseText(r.thisdeg,degInterval,r.name);
+				})
+//				console.log(this.canvasEL.width)
+				
+			},
+			
+			
+			
+			createChoise:function(actdeg,deg){
+				//求半径
+				var r=this.canvasEL.width/2;
+				var degC = Math.PI/180;
+				
+				var degACT = actdeg*degC;//将开始时的角度转弧度
+				this.cxt.fillStyle = this.getColor();
+//				console.log(this.cxt.fillStyle)
+				this.cxt.beginPath();
+				this.cxt.moveTo(r,r);
+				//连接到圆心
+				this.cxt.lineTo(r,r);
+				
+				//(圆心x,圆心y,半径r,起始角度,结束角度)
+				this.cxt.arc(r,r,r,degACT,deg*degC+degACT);
+				this.cxt.closePath();
+				this.cxt.fill();
+			},
+			createChoiseText:function(actdeg,deg,text){
+				var r=this.canvasEL.width/2;
+				var degC = Math.PI/180;
+				var degACT = actdeg*degC;
+				
+				//保存当前环境的状态，锁定画布
+				this.cxt.save();
+				
+				//从新开始路径，相当于换了个画笔，若没有开始路径与结束路径，填充颜色的时候会把之前的颜色覆盖掉
+				this.cxt.beginPath();
+				//设置字体样式
+				this.cxt.font="28px 微软雅黑";
+				//设置字体颜色
+				this.cxt.fillStyle="#000000";
+				//将旋转中心挪到画布中心
+				this.cxt.translate(r,r);
+				
+				//锁定画布后在画布上所画的路径进行旋转，旋转度数为degACT+deg/2*degC（跟扇形一样）
+				this.cxt.rotate(deg/2*degC+degACT+0.1);
+				
+				//写入文字
+				this.cxt.fillText(text,80,0);
+				
+				this.cxt.closePath();
+				this.cxt.restore();
+				//返回之前保存过的路径状态和属性
+			},
+			getColor:function(){
+				var color="#";
+				var str = "0123456789abcdef";
+				for(var i=0;i<6;i++){
+					color+=str[Math.floor(Math.random()*15)];
+				}
+				return color;
+			},
+			addevent:function(){
+				var that=this;
+				this.config.startBtn.bind("click",function(){
+					that.move();
+					
+				})
+			},
+			
+			
+			move:function(){
+				
+				
+				var rnum =this.rollnum();
+				var rDeg = (360-rnum.thisdeg)+720;
+				console.log(rnum);
+				console.log(rDeg);
+				console.log(rnum.name);
+				this.config.canvastarget.css("transform","rotate("+rDeg+"deg)");
+				 
+			},
+			rollnum:function(){
+				console.log(this.config.lotteryChoise.length)
+				var index=Math.floor(Math.random()*this.config.lotteryChoise.length)
+				console.log(index);
+				if(index){
+					return this.config.lotteryChoise[index];
+				}
+				return this.rollnum();
+			}
+			
+		}
+		
+		
+		
+		var mylottery = new Lottery({
+			targetBox:$("#box2"),
+			canvastarget:$("#content"),
+			lotteryChoise:lotteryCho,
+			startBtn:$("#box2 .start2")
+		})
+		
+		
+	</script>
+</html>

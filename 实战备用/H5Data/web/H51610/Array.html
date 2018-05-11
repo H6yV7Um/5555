@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        div{ width:100%; height:30px; line-height:30px; text-align:center;}
+        div span{ line-height:30px; font-size:13px; color:#555;}
+    </style>
+    <script type="text/javascript">
+        function arrayReturn(){
+            var _arr=[8,5,0,3,1];
+            _arr[2]=10;
+            return _arr;
+        }
+
+        function arrayVoid(_arr){//接收实参所传递过来的值的变量就叫形参
+            _arr[2]=1000;
+        }
+
+
+        function variable(a){//a==0;
+            a=1000;//a被重新赋值==1000;
+
+        }
+
+        function arrayMain(){
+            var arr_01=arrayReturn();
+            console.log(arr_01);
+
+            var arr_02=[8,5,0,3,1];
+            arrayVoid(arr_02);
+            console.log(arr_02);
+
+            arr_02=arrayVoid(arr_02);
+            console.log(arr_02);
+
+
+            var a=0;
+            variable(a);
+            console.log(a);
+        }
+        //arrayMain();
+        //以上学习堆内存,和栈内存的知识
+
+
+
+
+
+
+
+
+
+
+
+        //alert(2||3);
+        //(!0&&1);
+        //alert(0||2);
+
+        //alert(Boolean(-1));
+        //alert(Boolean(10000));
+
+//        if(2){
+//            alert("ok");
+//        }
+
+
+
+
+//        function fn(i){
+//            if(i==1){
+//                return i;
+//            }
+//            return i*fn(i-1);
+//        }
+//        fn(5);
+//
+//
+//
+//
+//
+//        function printNumber(n){
+//            if(n>100){
+//                return;
+//            }
+//            document.write(n);
+//            printNumber(n+1);
+//        }
+//        printNumber(0);
+
+
+
+
+
+
+
+
+
+
+        function fn(){
+            //console.log(arguments[3]);
+            //var _arr=arguments[3];
+            for(var i=0;i<arguments[3].length;i++){
+                document.write(arguments[3][i]);
+            }
+            alert(arguments[6]);
+            arguments[6]();//利用指针调用的函数叫回调函数;
+        }
+
+
+
+
+        //2+3=5;
+        function value(){
+            alert("ok");
+            return 10;
+        }
+        //alert(value);
+        function mainFn(){
+            var abc=1000;
+            fn(abc,true,2+3,new Array(2,3,5,6,8),[10,20,30],value(),value);//实参可以为任意类型数据
+        }
+        mainFn();
+
+
+
+
+//        function fn(n){
+//            alert(n);
+//            return fn;
+//        }
+        //fn(100)(99)(98)(97);//函数的链式调用
+
+        //alert(fn(99));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function printDiamond(){
+            for(var y=-8;y<=8;y++){//控制打印多少行
+                for(var x=-8;x<=8;x++){//控制打印多少列
+                    if(Math.abs(y)+Math.abs(x)<=8){
+                        document.write("<span style='color:red'>*</span>");
+                    }else{
+                        document.write("<span>*</span>");
+                    }
+                }
+                document.write("<br/>");
+            }
+        }
+
+        //printDiamond();
+
+
+
+
+
+
+
+
+
+
+
+
+        function tableFn(){
+            for(var i=1;i<=9;i++){
+                document.write("<div>");
+                for(var n=1;n<=i;n++){
+                    if(i%2!=0 && (i+1)/2==n){
+                        document.write("<span style=\"background-color:red;\">"+i+"*"+n+"="+i*n+"</span>");
+                    }else if(i%2==0 && (i/2==n || i/2+1==n)){
+                        document.write("<span style=\"background-color:green;\">"+i+"*"+n+"="+i*n+"</span>");
+                    }else{
+                        document.write("<span>"+i+"*"+n+"="+i*n+"</span>");
+                    }//条件分支语句
+                }
+                /*for(var n=1;n<=i;n++){
+                    if(i%2!=0 && (i+1)/2==n){
+                        document.write("<span style=\"background-color:red;\">"+i+"*"+n+"="+i*n+"</span>");
+                    }else{
+                        if(i%2==0 && (i/2==n || i/2+1==n)){
+                            document.write("<span style=\"background-color:green;\">"+i+"*"+n+"="+i*n+"</span>");
+                        }else{
+                            document.write("<span>"+i+"*"+n+"="+i*n+"</span>");
+                        }//if嵌套
+                    }
+                }*/
+                document.write("</div>");
+            }
+        }
+        //tableFn();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function strSplit(_s){
+            var _str="abc#def#ghi";
+            var _arr=[];
+            var i=0;
+            while(_str.indexOf("#")>=0){
+                _arr[i]=_str.substr(0,_str.indexOf("#"));
+                i++;
+                _str=_str.substr(_str.indexOf("#")+1,_str.length);
+            }
+            _arr[i]=_str;
+            return _arr;
+        }
+        //alert(strSplit("#"));
+
+
+
+
+
+
+
+
+
+
+
+
+        function strReplace(_old,_new){
+            _old=="aa";
+            var _str="abaaaaabaaaaaaacdaaaef";
+            var _f=0;//
+            for(var i=0;i<_str.length;){
+                for(var n=0;n<_old.length;n++){
+                    if(_old.charAt(n)==_str.charAt(i)){
+                        i++;
+                        _f++;
+                        //continue;
+                    }else{
+                        break;
+                    }
+                }
+                if(_f==_old.length){
+                    _str=_str.substr(0,i-_old.length)+_new+_str.substr(i,_str.length);
+                }
+                _f=0;
+            }
+        }
+        //strReplace("aa","xx");
+
+        //var i=0;
+//        for(var i=0;100>10 && i<10;i++){
+//            alert(i);
+//            //i++;
+//            if(i>=10){
+//                break;
+//            }
+//        }
+
+
+
+//        var _str="abckced\""+12;
+//        alert("1"*2);
+//        alert("1"+1);
+//        alert(1+"1");//concat()
+        //alert("1".concat("abc"));
+        /*var _str0="abc";
+        var _str1=new String("abc");
+        console.log(_str0.substr());
+        console.log(_str1);*/
+
+
+        function createArr(){
+            var _arr=[];
+            var n=0;
+            for(var i=1;i<=100;i++){
+                _arr[i-1]=i-n;
+                if(i%10==0){
+                    i++;
+                    n++;//
+                    _arr[i-1]=100;
+                }
+            }
+            return _arr;
+        }
+        function delRepeat(){
+            var _arr=[8,2,3,1,1,1,1,9,8];
+            for(var i=0;i<_arr.length;i++){
+                for(var n=i+1;n<_arr.length;n++){
+                    if(_arr[i]==_arr[n]){
+                        _arr.splice(n,1);
+                        n--;
+                    }
+                }
+            }
+            return _arr;
+        }
+        //console.log(delRepeat());
+
+//        var _arr=[9,9,9,8];
+//        _arr.splice(3,0,"x","x")
+//        console.log(_arr);
+
+
+
+
+
+
+
+
+        function insertArr(n,_element){
+            var _arr=[8,5,0,3,1];
+            for(var i=_arr.length;i>n;i--){
+                _arr[i]=_arr[i-1];
+            }
+            _arr[n]=_element;
+            return _arr;
+        }
+        //console.log(insertArr(3,99));
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+1
+23
+456
+78910
+
+
+
+<div>
+    <span></span>
+
+</div>
+</body>
+</html>

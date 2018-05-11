@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        /*div{ width:100%; height:40px;}
+        img{ border:none; position:absolute; left:0px; top:0px; width:40px; height:40px;}*/
+
+
+
+
+        div#demo{ width:80px; height:40px; overflow:hidden;}
+        .container{ width:480px; height:40px; float:left; overflow:hidden;}
+        img{ border:none; float:left; margin-left:0px; width:40px; height:40px; display:inline;}
+    </style>
+    <script type="text/javascript">
+
+
+
+        function moveToLeft(){
+            var _timer=0;
+            var _left=0;
+            var _demo=document.getElementById("demo");
+            var _img=_demo.children[0];
+            var _f=0;//做标记
+            function start(){
+                window.clearTimeout(_timer);
+                if(_f==1)
+                {
+                    _left-=10;
+                }else{
+                    _left+=10;
+                }
+                if(_left>=_demo.clientWidth)
+                {
+                    _f=1;
+                }
+                if(_left==0){
+                    _f=0;
+                }
+                _img.style.left=_left+"px";
+                _timer=window.setTimeout(start,30);
+            }
+            start();
+        }
+
+        function moveByMargin(){
+            var _timer=0;
+            var _left=0;
+            var _demo=document.getElementById("demo");
+            var _img=_demo.children[0];
+            var _f=0;//做标记
+            function start(){
+                window.clearTimeout(_timer);
+                if(_f==1)
+                {
+                    _left-=10;
+                }else{
+                    _left+=10;
+                }
+                if(_left>=_demo.clientWidth)
+                {
+                    _f=1;
+                }
+                if(_left==0){
+                    _f=0;
+                }
+                _img.style.marginLeft=_left+"px";
+                _timer=window.setTimeout(start,30);
+            }
+            start();
+        }
+
+        function moveByPadding(){
+
+        }
+
+        function moveByWidth(){
+
+        }
+
+        function moveByScroll(){
+            var _timer=0;
+            var _demo=document.getElementById("demo");
+            function start(){
+                window.clearTimeout(_timer);
+                _demo.scrollLeft++;
+                _timer=window.setTimeout(start,30);
+            }
+            start();
+        }
+        window.onload=function(){
+            //moveToLeft();//通过改变css:left值实现移动
+            //moveByMargin();//通过改变css:marginLeft值实现向左向右移动
+            //moveByPadding();
+            //moveByWidth();
+            moveByScroll();//通过修改scrollLeft|scrollTop 来实现向左向右或者向上向下移动
+        }
+    </script>
+</head>
+<body>
+    <div id="demo">
+        <div class="container">
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+            <img alt="" src="../H51612/images/wuziqi.gif"/>
+        </div>
+    </div>
+</body>
+</html>

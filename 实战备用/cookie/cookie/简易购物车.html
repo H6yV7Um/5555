@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#car{
+			background: #03ccbb;
+			color: #FFF;
+			padding-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<ul id="box">
+		
+	</ul>
+	<ul id="car">
+		
+	</ul>
+	<script src="/js/main.js"></script>
+	<script>
+	//json:以名值对儿呈现，名必须加双引号,名和值之间用“:”隔开,名值对儿和名值对儿之间用“,”隔开
+		var arr = [{"proname":"小米5 尊享陶瓷黑", "proprice":2699, "memory":"4G"}, {"proname":"小米4 尊享陶瓷白", "proprice":1699, "memory":"3G"}, {"proname":"小米3 尊享陶瓷红", "proprice":699, "memory":"1G"}, {"proname":"小米2 尊享陶瓷蓝", "proprice":599, "memory":"0.5G"}];
+
+		var oBox = document.getElementById('box');
+		var oCar = document.getElementById('car');
+
+		for(var i=0; i<arr.length; i++){
+			var oLi = document.createElement("li");
+			oLi.innerHTML = "版本："+arr[i]["proname"]+" 价格："+arr[i]["proprice"]+" 内存："+arr[i]["memory"];
+			var oBtn = document.createElement("button");
+			oBtn.innerHTML = "加入购物车";
+			oBtn.index = i;
+			oBtn.onclick=function(){
+				//添加到购物车
+				var oLi = document.createElement("li");
+				oLi.innerHTML = "版本："+arr[this.index]["proname"]+" 价格："+arr[this.index]["proprice"]+" 内存："+arr[this.index]["memory"];
+				oCar.appendChild(oLi);
+
+				//将下标存储到cookie
+				var aIndex = eval($.getCookie('arr'));
+                
+				if(aIndex === null){
+					$.setCookie("arr", "["+this.index+"]", 7);
+				}else{
+					aIndex.push(this.index);
+					$.setCookie("arr", "["+aIndex+"]", 7);
+				}
+
+				
+			}
+			oLi.appendChild(oBtn);
+			oBox.appendChild(oLi);
+		}
+		var aCar = eval($.getCookie("arr"));//"[]"
+		//比如：[3,1,2,3,1,2,1,3]
+		for(var i=0; i<aCar.length; i++){
+			var oLi = document.createElement("li");
+			oLi.innerHTML = "版本："+arr[aCar[i]]["proname"]+" 价格："+arr[aCar[i]]["proprice"]+" 内存："+arr[aCar[i]]["memory"];
+			oCar.appendChild(oLi);
+		}
+
+
+		/*
+
+		cookie  car  [1,2,3,4,5,6,11]   eval([	]);
+	
+
+
+		*/
+	</script>
+</body>
+</html>

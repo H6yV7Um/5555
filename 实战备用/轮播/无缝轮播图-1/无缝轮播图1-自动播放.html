@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,div {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 820px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .prev {
+            position: absolute;
+            left: -35px;
+            top: 50%;
+            margin-top: -35px;
+            width: 71px;
+            height: 71px;
+            background: url(img/but.png) -71px 0;
+            z-index: 1;
+            display: none;
+        }
+        /*鼠标hover更换背景*/
+        .prev:hover {
+            background: url(img/but.png) 0 0;
+        }
+        .next {
+            position: absolute;
+            right: -35px;
+            top: 50%;
+            margin-top: -35px;
+            width: 71px;
+            height: 71px;
+            background: url(img/but.png) -71px -71px;
+            z-index: 1;
+            display: none;
+        }
+        .next:hover {
+            background: url(img/but.png) 0 -71px;
+        }
+        #banner {
+            width: 820px;
+            height: 419px;
+            position: relative;
+			overflow:hidden;
+        
+        }
+        #banner img {
+            position: absolute;
+            top: 0;
+            left: 820px;
+        }
+        /*第一张图*/
+        #banner .first {
+            left: 0;
+        }
+        #btns {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -75px;
+            height: 20px;
+            border-radius: 10px;
+            width: 150px;
+            background: rgba(0,0,0,0.5);
+        }
+        #btns span {
+            margin-top: 5px;
+            width: 10px;
+            height: 10px;
+            float: left;
+            margin-left: 13px;
+            border-radius: 5px;
+            background-color: #666;
+        }
+        /*小圆点悬浮*/
+        #btns span:hover {
+            background: #F09;
+        }
+        #btns .hover {
+            background: #F09;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <a href="javascript:void(0)" class="prev"></a>
+        <a href="javascript:void(0)" class="next"></a>
+        <div id="banner">
+            <img src="img/flash1.jpg" alt="" class="first">
+            <img src="img/flash2.jpg" alt="">
+            <img src="img/flash3.jpg" alt="">
+            <img src="img/flash4.jpg" alt="">
+            <img src="img/flash5.jpg" alt="">
+            <img src="img/flash6.jpg" alt="">
+        </div>
+        <div id="btns">
+            <span class="hover"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //1.自动向左滚动
+            var index = 0;//要显示的图
+            var preindex = 0;//要显示的这张图的前一张图
+            var timer = null;//自动滚动
+            var $imgs = $("#banner img");
+            var $navs = $("#btns span");//小圆点
+            autoPlay();
+            function autoPlay() {
+                timer = setInterval(function () {
+                    index++;//显示下一张图
+                    if(index > 5) {
+                        index = 0;
+                        preindex = 5;//索引为0的图的前一张是 5,做到无缝
+                    }
+                    moveLeft();//向左移动之后,index对应的preindex也需要改变
+                    preindex = index;//当前显示的这一张图,将成为下一个要显示的前一张图
+                },3000);
+            }
+            //向左移动
+           function  moveLeft() {
+                //前一张图运动到 -820,当前这张图运动到0
+               //从0运动到-820,因为preindex是当前显示的图,left: 0
+               $imgs.eq(preindex).stop(true).animate({left: -820});
+               //.css({left: 820})保证要显示的图,每次都从 820开始运动
+               $imgs.eq(index).stop(true).css({left: 820}).animate({left: 0});
+               //当前要显示的图的索引就是小圆点的索引
+               $navs.eq(index).addClass("hover").siblings().removeClass("hover");
+			   
+           }
+			 $navs.eq(index).mouseenter(function(){
+				$(this).addClass("hover").siblings().removeClass("hover");
+		   }
+
+        });
+    </script>
+</body>
+</html>

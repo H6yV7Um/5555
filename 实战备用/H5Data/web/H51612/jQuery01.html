@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        function Regions(){
+            this.province=function(_data){
+                var _options="";
+                for(var i=0; i< _data["regions"].length;i++){
+                    _options+="<option value=\""+_data["regions"][i]["id"]+"\">"+_data["regions"][i]["name"]+"</option>";
+                }
+                $("#province").html(_options);
+                var _self=this;
+                $("#province")[0].onchange=function(){
+                    var _value=-1;
+                    var _p=-1;
+                    for(var n=0;n<this.children.length;n++){
+                        if(this.children[n].selected){
+                            _value=this.children[n].value;
+                            _p=n;
+                            break;
+                        }
+                    }
+                    //alert($("#province option:selected").val());
+                    _self.city(_data,_p);
+                }
+            }
+            this.city=function(_data,_p){
+                var _options="";
+                for(var i=0;i<_data["regions"][_p]["regions"].length;i++){
+                    _options+="<option value=\""+_data["regions"][_p]["regions"][i]["id"]+"\">"+_data["regions"][_p]["regions"][i]["name"]+"</option>";
+                }
+                $("#city").html(_options);
+                var _self=this;//作用:
+                $("#city")[0].onchange=function(){
+                    //var _value=-1;
+                    var _c=-1;
+                    for(var n=0;n<this.children.length;n++){
+                        if(this.children[n].selected){
+                            //_value=this.children[n].value;
+                            _c=n;
+                            break;
+                        }
+                    }
+                    //alert($("#province option:selected").val());
+                    _self.county(_data,_p,_c);
+                }
+            }
+            this.county=function(_data,_p,_c){
+                var _options="";
+                for(var i=0;i<_data["regions"][_p]["regions"].length;i++){
+                    _options+="<option value=\""+_data["regions"][_p]["regions"][_c]["regions"][i]["id"]+"\">"+_data["regions"][_p]["regions"][_c]["regions"][i]["name"]+"</option>";
+                }
+                $("#county").html(_options);
+            }
+        }
+        $(document).ready(function(){
+            $.post("Javascript/cityName.json",null,function(data,textStatus){
+                if(textStatus=="success"){
+                    var _data=window.eval("("+data+")");
+                    console.log(_data);
+                    var _regions=new Regions();
+                    _regions.province(_data);
+
+                }
+            },"text");
+        });
+
+    </script>
+</head>
+<body>
+<select id="province">
+</select>
+<select id="city"></select>
+<select id="county"></select>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head><!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8">
+    <script src="jquery-1.11.1.js"></script>
+    <style>
+
+@font-face {
+      font-family: 'fontello';
+      src: url('./font/fontello.eot?67191753');
+      src: url('./font/fontello.eot?67191753#iefix') format('embedded-opentype'),
+           url('./font/fontello.woff?67191753') format('woff'),
+           url('./font/fontello.ttf?67191753') format('truetype'),
+           url('./font/fontello.svg?67191753#fontello') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* : .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed*/
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+    
+    *{
+    	margin:0;
+    	padding:0;
+    	
+    }
+    #right{
+    	position:fixed;
+    	right:1px;
+    	top:250px;
+   
+    }
+    
+    li{
+    	list-style:none; 
+    	width:35px;
+    	height:35px;
+    	border-radius: 3px 0px 0px 3px;
+      background-color: #7a6e6e;
+      position: relative;
+ 			text-align: center;
+ 			line-height: 35px;
+ 			margin: 1px;
+ 			margin-right: 0; 
+    }
+    li:hover{
+    	cursor:pointer;
+    }
+    li i{
+    	    width: 34px;
+			    margin-left: 1px;
+			    position: relative;
+			    z-index: 12;
+			    background-color: #7a6e6e;
+			    color:#fff;
+    }
+    .activeLi{
+    	background:red;  	
+    }
+    
+    .s{
+    	    width: 62px;
+			    height: 35px;
+			    line-height: 35px;
+			    color: #fff;
+			    text-align: center;
+			    font-family: "微软雅黑";
+			    position: absolute;
+			    z-index: -1;
+			    left: 0px;
+			    top: 0;
+			    background-color: #7a6e6e;
+			    text-align: center;
+			    border-radius: 3px 0px 0px 3px;		    
+    }
+    em{
+    	font-size: 13px;
+    }
+    
+     </style>
+    
+
+  </head>
+  <body>
+  
+    <i class="demo-icon icon-heart-empty">&#xe800;</i>
+      <div id="right">
+	    	<ul>
+	    		<li>
+	        	<i class="demo-icon icon-heart-empty">&#xe800;</i><em class="s">我的关注</em>     	
+	    		</li>
+	    		<li>
+	        	<i class="demo-icon icon-torso">&#xe801;</i> <em class="s">京东会员</em>   	
+	    		</li>
+	    		<li>
+	        	<i class="demo-icon icon-cart">&#xe802;</i> <em class="s">购物车</em>  	       	
+	    		</li>
+	    		<li>
+	        	<i class="demo-icon icon-clock">&#xe803;</i>  <em class="s">我的足迹</em>    	
+	    		</li>
+	    		<li>
+	        	<i class="demo-icon icon-up-open">&#xf005;</i>	 <em class="s">顶部</em>  	
+	    		</li>
+	    	</ul>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$("#right ul li").mouseenter(function(){
+				
+				$(this).addClass("activeLi")
+							 .find("i")
+							 .addClass("activeLi")
+							 .end()
+							 .css("border-radius",0)
+				
+				$(this).find(".s").css("background","red").stop().animate({"left":-62},500);
+			})
+			
+			$("#right ul li").mouseleave(function(){
+	 			 $(this).removeClass("activeLi")
+	 			 			  .find("i")
+	 			 			  .removeClass("activeLi")
+	 			 			  .end()
+	 			 			  .css("border-radius","3px 0 0 3px");
+	 			 			  
+	 			 $(this).find(".s").css("background","#7a6e6e").stop().animate({"left":0},500);
+	 		})
+	 		
+	 		$("#right ul li").last().click(function(){
+	 			 $(document).scrollTop(0);
+	 		})
+		})
+</script>

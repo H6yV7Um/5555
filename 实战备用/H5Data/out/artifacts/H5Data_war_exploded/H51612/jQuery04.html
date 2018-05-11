@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+    </style>
+    <style>
+        *{margin:0;padding:0}
+        /*div { margin:3px; width:40px; height:40px;
+            position:absolute; left:0px; top:30px;
+            background:green; display:none; }
+        div.newcolor { background:blue; }
+        span { color:red; }*/
+        .div10{width:1000px;height:400px;margin:0 auto;background-color:#555555}
+        .div10 p{width:100px;float:left;height:400px;background-color:#f1f1f1;}
+    </style>
+    <script type="text/javascript" src="Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+//            var _left=800;
+//            $("#go").click(function(){
+//                (function self() {
+//                    $("#frame").animate({
+//                        left: -800 + "px"
+//                    }, 1000).delay(2000).animate({},function(){self()});
+//                })()
+//            });
+//            $("#stop").click(function(){
+//                $("#frame").stop();
+//            })
+//            alert($("div").index($("#frame")[0]));
+
+            $("p").on("mouseover",function(){
+                $("p").not(this).animate({width:"100px"},300);
+$("p").not(this).css("background-color","pink")
+                $(this).animate({width:"500px"},300);
+                $(this).css("background-color","red")
+            })
+
+
+
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+<div class="div10">
+    <p>hong</p>
+    <p>LAN</p>
+    <p>huang</p>
+    <p>lv</p>
+    <p>fen</p>
+</div>
+
+
+<!--<button id="go"> Run</button><button id="stop">stop</button>-->
+<!--<div id="view">-->
+    <!--<div id="frame">-->
+        <!--<img alt="" src="images/img1.jpg"/>-->
+        <!--<img alt="" src="images/img2.jpg"/>-->
+        <!--<img alt="" src="images/img3.jpg"/>-->
+        <!--<img alt="" src="images/img1.jpg"/>-->
+    <!--</div>-->
+<!--</div>-->
+
+</body>
+</html>

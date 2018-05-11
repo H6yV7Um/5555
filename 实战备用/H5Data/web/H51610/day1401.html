@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="javascript/cookie.js"></script>
+    <script type="text/javascript">
+        document.cookie="name="+window.encodeURIComponent("yuanhao")+";";
+        document.cookie="sex=male;";
+        document.cookie="age=23;";
+        document.cookie="tall=179;";
+        document.cookie="weight=75;";
+        document.cookie="familyName="+window.encodeURIComponent("袁")+";";//中文一定要记得编码
+        //window.decodeURIComponent("%E8%A2%81");//解码的方法;
+        //alert(document.cookie);
+
+        alert(getCookie("age"));
+
+        alert(window.eval("getCookie(\"tall\")"));
+"getCookie()"
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto; height:100%;}
+        #table{ width:100%; height:100%; text-align:center;}
+        #table div{ width:100%; text-align:center;}
+        #table div span{padding:10px;}
+    </style>
+    <script type="text/javascript">
+        function showNumber(){
+            for(var i=1,n=1,m=1;i<=100;i++,m++){
+                document.write(i);
+                if(n==m){
+                    m=0;
+                    n++;
+                    document.write("<br/>");
+                }
+            }
+        }
+
+        function printStar(){
+            for(var i=-5;i<=0;i++){
+                for(var n=-5;n<=5;n++){
+                    if(Math.abs(i)+Math.abs(n)<=5){
+                        document.write("<span style='color:red;'>d</span>");
+                    }else{
+                        document.write("<span>b</span>");
+                    }
+                }
+                document.write("<br/>");
+            }
+        }
+
+        function printTable(){
+            var _table=document.getElementById("table");
+            var _html="";
+            for(var i=1;i<=9;i++){
+                _html+="<div>";
+                for(var n=1;n<=i;n++){
+                    if(i%2>0 && (i+1)/2==n){
+                        _html+="<span style='color:red;'>"+n+"*"+i+"="+n*i+"</span>";
+                    }else if(i%2==0 && (i/2==n) || (i/2+1)==n){
+                        _html+="<span style='color:blue;'>"+n+"*"+i+"="+n*i+"</span>";
+                    }else {
+                        _html += "<span>" + n + "*" + i + "=" + n * i + "</span>";
+                    }
+                }
+                _html+="</div>"
+            }
+            _table.innerHTML=_html;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function fn(){
+            /**
+             * 变量提升和函数提升
+             */
+//            var main=function(){//函数提升
+//                alert(a);//变量提升
+//                alert("var");
+//                var a=10;
+//            }
+//            function main(){
+//                alert("function");
+//            }
+//            var a=0;
+            //main(1,a,[1,2,3],new Object(),function(){},"a"/*可以是任意类型的数据*/);
+
+
+            //函数返回值
+
+            function fnReturn(n){
+                alert(n);
+//                return function(){
+//                    return 10;
+//                };
+                return fnReturn;
+            }
+            //alert(fnReturn(100)(1000)(10000)(1000000));//函数的链式调用
+
+
+
+
+            //对象的链式调用
+//            function Obj(){
+//                this.method=function(n){
+//                    alert(n);
+//                    return this;
+//                }
+//            }
+//            var _obj=new Obj();
+//            alert(_obj===_obj.method(10));
+//            _obj.method(1000).method(100000);
+
+
+
+
+
+
+
+
+
+            //递归
+//            function loopFn(n){
+//                if(n==1){
+//                    return 1;
+//                }
+//                return n*loopFn(n-1);
+//            }
+            //loopFn(5);
+
+
+
+
+
+
+
+
+
+
+
+//            function arr(a){
+//                a[0]=100;
+//                //return _arr;
+//            }
+//            function main(){
+//                var _arr=[1,2,3,4,6];
+//                arr(_arr);
+//                document.write(_arr);
+//            }
+//            main();
+
+
+
+//            function arr(a){
+//                a=[2,3,4,5,6];//[]==new Array();
+//                //return _arr;
+//            }
+//            function main(){
+//                var _arr=[1,2,3,4,6];
+//                //arr(_arr);
+//                document.write(_arr);
+//            }
+//            var a=100;
+//            a=10;
+//            alert(a);
+//            arr();
+//            main();
+
+
+
+
+            function createArr(){
+                var _arr=new Array(100);
+                for(var i=1;i<100;i++){
+                    _arr[i-1]=i;
+                }
+                return _arr;
+            }
+            function main(){
+                var _arr=createArr();
+                //1,3,5,9,17
+                for(var i=1;i<100;i=i*2){
+                    if(i<=1){
+                        _arr[i]
+                    }else{
+                        _arr[i+1]
+                    }
+
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        window.onload=function(){
+            //showNumber();
+            //printStar();
+            //printTable();
+            fn();
+        }
+    </script>
+</head>
+<body>
+
+<div id="table"></div>
+</body>
+</html>

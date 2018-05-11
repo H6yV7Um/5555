@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+
+   //地区选择
+  $(function(){
+  $.get("json/cityName.json", null, function(data) {
+	        
+	        function cityEvent(m,_city){
+				_city.onchange=function(){
+				var _options="";
+				var _county=document.getElementById("county");
+				for(var n=0;n<this.children.length;n++){
+					if(this.children[n].selected){
+						for(var i=0;i<data["regions"][m]["regions"][n]["regions"].length;i++){
+							_options+="<option>"+data["regions"][m]["regions"][n]["regions"][i]["name"]+"</option>";
+						}
+						_county.innerHTML=_options;
+					}
+				}
+			}
+			}
+			function provinceEvent(){
+				var _options="";
+				var _city=document.getElementById("city")
+				var _list=this.children;
+				for(var i=0;i<_list.length;i++){
+					if(_list[i].selected){
+						for(var n=0;n<data["regions"][i]["regions"].length;n++){
+							_options+="<option>"+data["regions"][i]["regions"][n]["name"]+"</option>";
+						}
+						_city.innerHTML=_options;
+						cityEvent(i,_city);
+						break;
+					}
+				}
+				
+			}
+			
+			
+			function readerProvince(){
+				var _options="";
+				for(var i=0;i<data["regions"].length;i++){
+				_options+="<option>"+data["regions"][i]["name"]+"</option>"
+				}
+				var _province=document.getElementById("province");
+				_province.innerHTML=_options;
+				_province.onchange=provinceEvent;
+			}
+			
+				readerProvince();
+			
+			 
+			}, "json");
+		})
+    </script>
+</head>
+<body>
+<select name="province" id="province"></select>
+<select name="city" id="city"></select>
+<select name="county" id="county"></select>
+</body>
+</html>

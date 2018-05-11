@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+//        function People(){
+//            this.father=1;
+//        }
+//        function Parents(){
+//            this.self=1;
+//        }
+//        Parents.prototype=new People();
+//        Parents.prototype.abc=1000;
+//        var _parents=new Parents();
+//        //alert(_parents.hasOwnProperty("father"));
+//        if("self" in _parents){
+//            if(_parents.hasOwnProperty("self")){
+//                alert("this is own property");
+//            }else{
+//                alert("prototype property");
+//            }
+//        }
+
+//        People.prototype.constructor=Parents;
+//        Parents.prototype=new People();
+//        var _parents=new Parents();
+//        console.log(_parents.constructor);
+
+
+//        function Parents(){
+//            this.self=1;
+//        }
+//        Parents.prototype.fn=function(){
+//            alert("abc");
+//        }
+//        var _p0=new Parents();
+//        var _p0=new Parents();
+//        var _p0=new Parents();
+//        var _p0=new Parents();
+//Parents.prototype=new People();
+//        var _p0=new Parents();
+//        var _p0=new Parents();
+//        var _p0=new Parents();
+//        var _p0=new Parents();
+
+
+
+
+
+
+
+        //call()\apply();
+
+
+
+
+
+
+
+
+        function People(){
+            this.people=1000;
+        }
+
+        function Parents(a,b,c){
+            this.a=a;
+            this.b=b;
+            this.c=c;
+            this.parents=100000;
+        }
+
+        function Children(){
+            this.children=99;
+            this.parents=2;
+        }
+
+        var _c=new Children();
+        Parents.call(_c,10,20,30);
+        //var _str="abc";
+        Parents.apply(_c,[10,20,30]);
+        People.call(_c);
+        console.log(_c.parents);
+        console.log(_c.people);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script type="text/javascript">
+		</script>
+		<style>
+			body,
+			ul,
+			li,
+			p,
+			h3 {
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				font-family: "microsoft yahei";
+				font-size: 14px;
+			}
+			li{
+				list-style: none;
+			}
+			a {
+				text-decoration: none;
+				color: #333;
+			}
+			
+			a:hover {
+				color: red;
+			}
+			img{
+				display: block;
+				border: none;
+			}
+			.clearfix:after {
+				content: "";
+				display: block;
+				height: 0;
+				overflow: hidden;
+				clear: both;
+			}
+			#product_list li{
+				float: left;
+				margin: 10px;
+				width:188px;
+				border:1px solid #aaa;
+				padding: 10px;
+				line-height: 32px;
+			}
+			.price{
+				font-size:16px;
+			}
+			.btn{
+				display: block;
+				width:100px;
+				height:32px;
+				background: red;
+				color: white;
+				border:none;
+				margin: 0 auto;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="product_list">
+			<ul>
+				<!--<li>
+					<a href="">
+						<img src="img/htc.jpg">
+					</a>
+					<p class="price">￥3000</p>
+					<h3><a href="">htc</a></h3>
+					<input type="button" value="加入购物车" class="btn">
+				</li>
+				<li>
+					<a href="">
+						<img src="img/htc.jpg">
+					</a>
+					<p>￥3000</p>
+					<h3><a href="">htc</a></h3>
+					<input type="button" value="加入购物车" class="btn">
+				</li>-->
+			</ul>
+		</div>
+		<script>
+			$(function(){
+				$.get("js/product.json",function(data){
+					console.log(data);
+					var str = "";
+					//var num = 0;
+					$.each(data,function(index,obj){
+						console.log(index,obj.id)
+						str += "<li>"+
+					"<a href='detail.html?id="+obj.id+"'>"+
+					"<img src='"+obj.imgres+"'>"+
+					"</a>"+
+					"<p class='price'>"+obj.price+"</p>"+
+					"<h3><a href='detail.html?id="+obj.id+"'>"+obj.title+"</a></h3>"+
+					"<input type='button' value='加入购物车' data-id='"+obj.id+"' class='btn js-btn'>"+
+				"</li>"
+					});
+					$("#product_list ul").html(str);
+					var total = $.cookie("total")||0;
+					$(".js-btn").each(function(){
+						var num = $.cookie("id"+$(this).attr("data-id")+"num")||0;
+						$(this).click(function(){
+						total++;
+						var prodId = $(this).attr("data-id");
+						console.log(prodId);
+						$.cookie("id"+prodId,prodId,{expires:7,path:"/"});
+						$.cookie("id"+prodId+"num",++num,{expires:7,path:"/"});
+						$.cookie("total",total,{expires:7,path:"/"});
+					})
+						
+					})
+					
+					console.log(JSON.parse($.cookie());
+					
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 500px;
+				height: 500px;
+				margin: 20px auto;
+				border: 10px solid #c00;
+				position: relative;
+				background: #abcdef;
+			}
+			.arrow{
+				position: absolute;
+				top: 0;
+				left: 50%;
+				width: 10px;
+				height: 250px;
+				margin-left: -5px;
+				background: #CC0000;
+				transition: all 2s;
+			}
+			td{
+				width: 50px;
+				height: 50px;
+				border: 1px solid #ddd;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<!--<table border="0" cellspacing="0" cellpadding="0">
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				
+			</table>-->
+			<div class="arrow">
+				
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var obj = {
+			"name":"liming",
+			"sex":"boy"
+		}
+		$("#box").on("mouseenter",function(){
+			$(".arrow").css({
+				"transformOrigin":"5px 200px",
+				"transform":"rotate("+135+"deg)"
+				})
+		})
+		localStorage.setItem("PEO",JSON.stringify(obj));
+		alert(typeof JSON.stringify(obj));
+		console.log($(".arrow").width())
+	</script>
+</html>

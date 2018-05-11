@@ -1,0 +1,77 @@
+﻿<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style:none;
+	}
+	.box{
+		width:800px;
+		margin:0 auto;
+	}
+	.nav{
+		overflow:hidden;
+	}
+	.nav span{
+		display:block;
+		float:left;
+		width:150px;
+		margin:10px 25px;
+		height:40px;
+		background:#03ccbb;
+		line-height:40px;
+		font-weight:bold;
+		text-align:center;
+		color:#FFF;
+		cursor:pointer;
+	}
+	.nav span.active{
+		background:#F90;
+	}
+	.box ul{
+		height:200px;
+		overflow:hidden;
+	}
+	.box li{
+		height:200px;
+		display:none;
+	}
+	.box li.active{
+		display:block;
+	}
+</style>
+<body>
+	<div class="box">
+		<div class="nav" id="nav">
+			<span>美食</span><span>游戏</span><span>电影</span><span>健身</span>
+		</div>
+		<ul id="oUl">
+			<li style="background:red;"></li>
+			<li style="background:yellow;"></li>
+			<li style="background:blue;"></li>
+			<li style="background:green"></li>
+		</ul>
+	</div>
+	<script>
+	/*
+	var obj = {};
+	obj.name = "张三";
+	obj.abc = true;
+	console.log(obj);
+	*/
+	var aSpan = nav.children;//获取所有span
+	var aLi = oUl.children;//获取所有li
+	aSpan[0].className = "active";
+	aLi[0].className = "active";
+		for(var i=0; i<aSpan.length; i++){
+			aSpan[i].index = i;//保存元素下标
+			aSpan[i].onmouseover=function(){//给span添加点击事件
+				for(var i=0; i<aSpan.length; i++){//清空className
+					aSpan[i].className = "";
+					aLi[i].className = "";
+				}
+				aLi[this.index].className = "active";//设置当前className为active
+				this.className = "active";
+			}
+		}
+	</script>
+</body>

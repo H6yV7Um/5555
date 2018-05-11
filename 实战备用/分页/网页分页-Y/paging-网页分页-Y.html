@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> paging </title>
+	<link rel="stylesheet" href="css/reset.css" />
+
+	<script src="js/jquery-1.11.0.js"></script>
+	<style>
+		#pageBox{
+			width:920px;
+			height:auto;
+			margin:20px auto;
+		}
+		#pageBox dl{
+			border:1px solid #000;
+			margin:10px;
+			width:188px;
+			height:156px;
+			padding:10px;
+			text-align: center;
+			float:left;
+		}
+		#pageBox dl dt{
+			width:188px;
+			height:116px;
+		}
+		#pageBox dl dd p{
+			line-height: 20px
+		}
+
+		#btn{
+			line-height: 10px;
+			text-align: center;
+		}
+		#btn a{
+			display:inline-block;
+			margin:0 5px;
+			padding:5px;
+			
+		}
+	</style>
+</head>
+
+<body>
+	<div id="pageBox" class="clearfix">
+		<!-- <dl>
+			<dt>
+				<a href=""><img src="img/htc.jpg" alt=""></a>
+			</dt>
+			<dd>
+				<p>HTC</p>
+				<p>$2000</p>
+			</dd>
+		</dl> -->
+		
+	</div>
+	<div id="btn">
+				<a id="fir" href="#">首页</a><a id="up" href="#">上一页</a><!-- <a href="">1</a> --><a id="down" href="#">下一页</a><a id="last" href="#">尾页</a>	
+
+		</div>
+	<script>
+		$(function(){
+			//获取json数据
+			$.get("js/product0928.json",function(data){
+				console.log(data);
+				//console.log(data.id)
+				var j = 0;
+				for(var k in data){
+					j++;
+				}
+				//每页显示数目
+				var perPageNum = 8;
+				//总条数
+	/*----->*/  var totleNum = j;  //----->>> var totleNum = data.length --->
+						// data.length为undefined  后面的for循环无法运行 -->> 666<<
+				console.log(totleNum);
+				// 页数
+				var pageNum = Math.ceil(totleNum/perPageNum);
+					// 
+					function creatList(n) {
+						var str = "";
+						// for循环判断每页起止项
+						for(i = n * perPageNum; i < Math.min(perPageNum * (n + 1),totleNum); i++){							
+							//alert(i)
+
+							// 将i值赋给k  与json 中数据统一
+							var k = "000" + i;
+							// 拼接字符串
+							str += "<dl><dt><a href='detail.html?"+ k +"'><img src='img/" + data[k].imgres + "' alt=''></a></dt><dd><p>"+ data[k].title +"</p><p>$"+ data[k].price +"</p></dd></dl>";
+						}
+						// 将拼接好的字符串添加到div中				
+						$("#pageBox").html(str);
+					}
+					// 调用 (页码数 - 1)
+					creatList(0);	
+
+
+					// 添加按钮
+					var str_a = "";
+					//alert(pageNum);
+					for (var m = 0; m < pageNum; m++) {
+						//alert(m);
+						str_a += "<a class='page' href='#'>" +(m + 1) +"</a>"
+							//alert(str_a);
+					};
+					$("#down").before(str_a);
+
+					// 点击页面跳转
+		/*----->*/  var n = 0;  // ----->>> var一个变量,为点击上一页/下一页的跳转做准备
+								// ----->>> 666
+					$(".page").each(function(index,value){
+						//console.log(index);
+						//console.log($(this));
+						$(this).click(function(){
+							//alert(1);
+							//console.log(index);
+							creatList(index); // index 与 ($(this).html()-1)等价
+							n = index;
+						});
+					})
+
+					// 上一页 跳转
+					$("#up").click(function(){
+		/*----->*/  	if(n == 0){     // 判断 n 的值 
+							alert("已为首页")
+						} else{
+							creatList(n-1);
+		/*----->*/  		n -= 1;        // 点击上一页 n 的值发生变化
+						}						
+					})
+
+					// 下一页 跳转
+					$("#down").click(function(){
+		/*----->*/  	if(n == pageNum -1){     // 判断 n 的值 
+							alert("已为尾页")
+						} else{
+							creatList(n+1);
+		/*----->*/  		n += 1;        // 点击上一页 n 的值发生变化
+						}						
+					})
+
+					// 首页 跳转
+					$("#fir").click(function(){
+						creatList(0);
+						n = 0;              //  <<<------ 更新 n 值      
+					})
+					
+					// 尾页 跳转
+					$("#last").click(function(){
+						creatList(pageNum - 1);
+						n = pageNum - 1;     //  <<<------ 更新 n 值   
+					})
+					
+			});
+		});
+					//  控制页面每跳转一次 更新一次 n 的值
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				margin-top: 30px;
+				width: 80px;
+				height: 80px;
+				background: black;
+			}
+		</style>
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function Expend(_obj,_max){
+				 var _timer=0;
+            var _width=_obj.offsetWidth;
+            this.plus=function() {
+                function exec() {
+                    window.clearTimeout(_timer);
+                    _width += 40;
+                    _obj.style.width = _width + "px";
+                    if (_width < _max) {
+                        _timer = window.setTimeout(exec, 30);
+                    }
+                }
+                exec();
+            }
+            this.mouseout=function() {
+                function substruct() {
+                    window.clearTimeout(_timer);
+                    _width -= 40;
+                    _obj.style.width = _width + "px";
+                    if (_width > 100) {
+                        _timer = window.setTimeout(substruct, 30);
+                    }
+                }
+                substruct();
+            }
+			}
+		window.onload=function(){
+		
+			 var _list=document.getElementsByTagName("div");
+            var _arr=new Array(_list.length);
+			for(var i=0;i<_list.length;i++){
+				_arr[i]=new Expend(_list[i],800);
+				(function(n){
+					_list[n].onmouseover=function(){
+						_arr[n].plus();
+					}
+					_list[n].onmouseout=function(){
+						_arr[n].mouseout();
+					}
+					
+				})(i)
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<div class="11"></div>
+		<div class="12" ></div>
+		<div class="13"></div>
+		<div class="14"></div>
+		<div class="15"></div>
+		<div class="16"></div>
+	</body>
+</html>

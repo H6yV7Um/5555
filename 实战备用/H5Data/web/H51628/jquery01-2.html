@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{ width:100px; height:100px; background-color:red;}
+    </style>
+    <script type="text/javascript" src="http://10.9.169.104:8080/yansi.txt">
+//        var _obj=new Object();
+//        _obj.fn=function(){
+//            console.log(this);
+//            this.fn2=function(){
+//                console.log(this);
+//            }
+//            return this.fn2;
+//        }
+//        window.onload=function(){
+//            var _div=document.getElementsByTagName("div")[0];
+//            _div.onclick=function(){
+//                console.log(this);
+//                (function(){
+//                    console.log(this);
+//                })();
+//                this.fn=_obj.fn();
+//                this.fn();//
+//                //_obj.fn()();
+//            }
+//        }
+    </script>
+    <script type="text/javascript" src="/H51612/Javascript/Ajax.js"></script>
+    <script type="text/javascript">
+
+//        ajaxRequest("post","/url/PostMessage",true,{"t":"2016","u":"demo3","m":"message"},function(data){
+//            console.log(data);
+//        });
+        function cityEvent(m,_city,fn){
+            _city.onchange=fn;
+        }
+        function provinceEvent(){
+            var _options="";
+            var _city=document.getElementById("city");
+            var _list=this.children;
+            for(var i=0;i<_list.length;i++){
+                if(_list[i].selected){
+                    for(var n=0;n<a["regions"][i]["regions"].length;n++){
+                        _options+="<option>"+a["regions"][i]["regions"][n]["name"]+"</option>";
+                    }
+                    _city.innerHTML=_options;
+                    cityEvent(i,_city,function(){
+                        var _options="";
+                        for(var n=0;n<this.children.length;n++){
+                            if(this.children[n].selected){
+                                for(var i=0;i<a["regions"][m]["regions"][n]["region"].length;i++){
+
+                                }
+                            }
+                        }
+                    });
+                    break;
+                }
+            }
+        }
+        function readerProvince(){
+            var _options="";
+            for(var i=0;i<a["regions"].length;i++){
+                _options+="<option>"+a["regions"][i]["name"]+"</option>"
+            }
+            var _province=document.getElementById("province");
+            _province.innerHTML=_options;
+            _province.onchange=provinceEvent;
+        }
+        window.onload=function(){
+            readerProvince();
+            console.log(a);
+        }
+        function closure(){
+            var i=1;
+            return function(h){
+                i=h;
+                for(var n=1;n<=i;n++){
+                    document.write(n+"*"+i+"="+i*n+"&nbsp;&nbsp;&nbsp;&nbsp;");
+                }
+                document.write("<br/>");
+            }
+        }
+        function main(){
+            var fn=closure();
+            for(var m=1;m<10;m++){
+                fn(m);
+            }
+        }
+        main();
+    </script>
+</head>
+<body>
+<select name="" id="province"></select>
+<select name="" id="city"></select>
+<select name="" id="county"></select>
+</body>
+</html>

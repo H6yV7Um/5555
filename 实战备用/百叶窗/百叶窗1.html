@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{margin: 0 auto; text-align: center; }
+			#content{width: 500px; height: 400px; border: 1px solid red;  position:absolute; overflow: hidden;}
+			#content div{ width: 50px; height: 400px; background-size:500px 400px;background-image: url(img/01.jpg); position: absolute;}
+			
+		</style>
+		<script type="text/javascript">
+		window.onload=function(){
+			var _content=document.getElementById("content");
+			
+			timer=setInterval(a,60);
+			var _top=400;
+			var _top1=-400
+		    function a(){
+				_top-=10;
+				_top1+=10;
+				if(_top==0&&_top1==0){
+					clearInterval(timer);
+				}
+				for(var i=0;i<10;i++){
+				var _contenter=document.createElement("div");
+				if(i%2==0){
+				_contenter.style.top=_top+"px";
+				}else{
+				_contenter.style.top=_top1+"px"
+				}
+				
+				_contenter.style.left=(50*i)+"px";
+				_contenter.style.backgroundPosition=(-50*i )+"px"+" "+ 0+"px";
+				_content.appendChild(_contenter);
+			}
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{margin: 0;padding: 0;position: relative;height: 100%;}
+			#head{background: red;height:10px;width: 10px;position: absolute;left: 0;top: 0;right: 0;bottom: 0;z-index: 1;}
+			.body{background: darkred;height:10px;width: 10px;position: absolute;left: 0;top: 0;right: 0;bottom: 0;z-index: 1;}
+		</style>
+		<script>
+			function Snack(){
+				var _self = this;
+				this.current = 39;
+				this.body = null;
+				this.bindEvent = function(){
+					document.onkeydown = function(e){
+						e = e||event
+						var _code = e.keyCode ||e.which
+						if(_code >=37&&_code<=40){
+							if((_self.current ==39&&_code!=37)||(_self.current ==37&&_code!=39)||(_self.current ==38&&_code!=40)||(_self.current ==40&&_code!=38))
+								_self.current = _code;
+								_self.move()
+						}
+					}
+				}
+				this.move(){
+					
+				}
+				this.food(){
+					this.body = ducument.createElement("div");
+					this.body.className = "body";
+					this.body.style.top = "px";
+					this.body.style.left = "px"
+					return this
+				}
+			}
+			window.onload = function(){
+				new Snack().food().
+			}
+		</script>
+	</head>
+	<body>
+		<div id="head"></div>
+		<div class="body" style="left: -10;top: 0;"></div>
+		<div class="body" style="left: -20;top: 0;"></div>
+		<div class="body" style="left: -30;top: 0;"></div>
+		<div class="body" style="left: -40;top: 0;"></div>
+	</body>
+</html>

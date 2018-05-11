@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            /**
+             * url:远程服务器接口的链接地址
+             * 第二个参数表示要向远程服务器接口发送的数据
+             * 第三个参数就是服务器响应完成以后需要回调执行的方法
+             * 第四个参数表示需要服务器返回的数据类型
+             */
+//            $.post("http://10.9.169.104:8080/test.html",{},function(data,textStatus){
+//                if(textStatus=="success"){
+//                    alert(typeof data);
+//                    JSON.parse(data);
+//                    window.eval("("+data+")");
+//                    console.log(data);
+//                }
+//            },"html/text/xml/script/json/jsonp");
+
+            //console.log($.ajax());
+            //console.log(new window.XMLHttpRequest());
+//            $.ajax({
+//                url: "test.html",
+//                success: function(data){
+//                    alert(data);
+//                    $(this).addClass("done");
+//                }
+//            });
+
+
+//            function People(abc,m,n){
+//                this.abc=1000;
+//            }
+//            var _obj=new Object();
+//            People.call(_obj,1000,100,10);
+//            People.apply(_obj,[1000,100,10]);
+
+
+
+
+//            $.ajax({
+//                url:"/url/demo",
+//                success:function(data){
+//                    alert("success");
+//                }
+//            });
+            $(document).ready(function(){
+                $("#demo").load("head.html");
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="demo"></div>
+</body>
+</html>

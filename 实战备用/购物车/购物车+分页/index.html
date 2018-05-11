@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车</title>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <style>
+     body,ul,li,p,h3 {margin: 0;padding: 0;}
+     body{font-family: "microsoft yahei";font-size: 14px;}
+     li{list-style: none;}
+     a {text-decoration: none;color: #333;}
+     a:hover {color: red;}
+     img{display: block;border: none;}
+     .clearfix:after {content:""; display: block;height: 0;overflow: hidden;
+        clear: both;}
+     #product_list{margin: 15px 0 0 50px;}   
+     #product_list li{float: left;margin: 10px; width:188px;
+        border:1px solid #aaa;padding: 10px;line-height: 32px;
+    }
+     .price{font-size:16px;}
+     .btn{display: block;width:90px;height:32px;background: red;
+        color: white;border:none;margin: 0 auto;cursor: pointer;border-radius: 8px}
+     .btnList{position: absolute;top: 622px;left: 400px;}
+     .btnList a { display: inline-block; width:50px; height:20px;border:1px solid #ccc; border-radius:5px; margin-right:5px; text-align:center;}
+     .btnList a:hover{ background:#ddd;}
+    </style>
+</head>
+<body>
+        <div id="product_list">
+            <ul>
+                <!-- <li>
+                    <a href="">
+                        <img src="img/htc.jpg">
+                    </a>
+                    <p class="price">￥3000</p>
+                    <h3><a href="">htc</a></h3>
+                    <input type="button" value="加入购物车" class="btn">
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/htc.jpg">
+                    </a>
+                    <p>￥3000</p>
+                    <h3><a href="">htc</a></h3>
+                    <input type="button" value="加入购物车" class="btn">
+                </li> -->
+               
+            </ul>
+                <div class="btnList">
+                    <a class="first" href="##">上一页</a><a class="last" href="##">下一页</a>
+                </div>
+        </div>
+</body>
+<script>
+    $(function(){
+
+        // 分页-------------------------
+      $.get("js/product.json",function(data){
+              // console.log(data)
+                var i=0;
+                $.each(data,function(index,data){
+                    i++;//获取数据的长度
+                    //console.log(i)
+                   //console.log(data.title,data.price,data.imgres)
+                })
+                var pageLength = 10;//定义每页数据的个数
+                var total = i;//所有的数据个数
+//              console.log(total)
+                var pageNum = Math.ceil(total/pageLength);//获得页数
+//              console.log(pageNum)
+                //显示某页数据的函数
+                function a(n){//n是当前页数
+                    var str1=""
+                        for(var m=n*pageLength;m<Math.min(total,(n+1)*pageLength);m++){
+                            //m循环的最小值，(n+1)*pageLength)循环的最大值
+                           console.log(total)
+                            str1+="<li>"+
+                            "<a href='detail.html?id="+data[m].id+"'>"+
+                                "<img src='"+data[m].imgres+"'>"+
+                            "</a>"+
+                            "<p class='price'>"+data[m].price+"</p>"+
+                            "<h3><a href='detail.html?id="+data[m].id+"'>"+data[m].title+"</a></h3>"+
+                            "<input type='button' value='加入购物车' data-id='"+data[m].id+"' class='btn'>"+
+                            "</li>"
+                        }
+                        $("#product_list ul").html(str1)
+                }          
+                a(0) 
+                //通过页面的个数pageNum来创建按钮
+                var str1=""
+                for(var i=0;i<pageNum;i++){//页面的个数也就是按钮的个数
+                    var inner = "<a class='page' href='###'>"+(i+1)+"</a>"
+                    $(inner).insertBefore(".last")//把循环得到的按钮插入到a标签.last的前面
+                }   
+                //点击切换页面
+                var n = 1;
+                $(".page").each(function(){//不能用a 因为a包括了上一页和下一页
+                    $(this).click(function(){
+                        a($(this).html()-1)//点击1执行a(0)
+                        n= $(this).html();
+                    })          
+                }) 
+                //上一页
+                $(".first").click(function(){
+                        if(n ==1){
+                        //如果页数是第一页,则不执行                        
+                        }else{
+                            a(n-2);
+                            n--;
+                        }
+                    })              
+                //下一页
+                $(".last").click(function(){
+                        if(n ==pageNum){ 
+                        //如果是最后一页则不执行                        
+                        }else{
+                            a(n)
+                            n++;
+                        }
+                    })
+            })
+    // 分页结束
+
+
+        $.get("js/product.json",function(data){//以get方式获取 json
+            console.log(data)//json中的对象
+            var str="";
+            $.each(data, function(index,obj) {//each循环遍历 循环data中的对象
+                // console.log(index,obj.id)// "id": "0001",
+                // console.log(index,obj.title)// "title": "htc",
+                // console.log(index,obj.imgres)// "imgres": "img/htc.jpg"
+                // console.log(index,obj.price)// "price": "￥3000",
+                str+="<li>"+
+                    "<a href='detail.html?id="+obj.id+"'>"+
+                        "<img src='"+obj.imgres+"'>"+
+                    "</a>"+
+                    "<p class='price'>"+obj.price+"</p>"+
+                    "<h3><a href='detail.html?id="+obj.id+"'>"+obj.title+"</a></h3>"+
+                    "<input type='button' value='加入购物车'  class='btn'>"+
+                "</li>"
+            });
+            // console.log($(str))
+            //$("#product_list ul").html(str);//把str输出到html中的ul中
+            var total = $.cookie("total")||0;
+            //var一个变量total，当cookie中的有total值时取total的值如果没有则取0
+            console.log($(".btn"))
+            $(".btn").each(function() {//循环遍历input
+                var num = $.cookie("id"+$(this).attr("data-id")+"num")||0;
+                //var一个变量num，当cookie中的有num值时取num的值如果没有则取0
+                $(this).click(function(){//点击事件，点击哪个按钮this就是那个按钮
+                    total++//每点击一次total+1
+                    var prodId = $(this).attr("data-id");
+                    //data-id 自定义的obj.id商品id
+                    //prodId 存储cookie每点击一次相应商品数量加1
+                     console.log(prodId);
+                    $.cookie("id"+prodId,prodId,{expires:7,path:"/"});
+                    //存cookie，"id"+prodId是id名称，prodId是id的值
+                    //expires:7,过期时间7天，path:"/"，路径
+                    $.cookie("id"+prodId+"num",++num,{expires:7,path:"/"});
+                    //存cookie，id和id名  id下的num和num值
+                    console.log(num);
+                    $.cookie("total",total,{expires:7,path:"/"});
+                    //存cookie  total和total值，所选商品数量的和
+                    console.log(total);
+                })
+            })
+             //console.log($.cookie());
+             //$cookie("cart",{"id0001":"0001","id0001num":1});
+             console.log($.cookie())
+
+             var cookieObj=$.cookie();
+
+             $.each(cookieObj,function(key,value){
+                console.log(key,value)
+             })
+        })
+   
+
+    }
+)
+</script>
+</html>

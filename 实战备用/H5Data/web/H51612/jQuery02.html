@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo{
+        }
+    </style>
+    <script type="text/javascript" src="Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        /*function Chain(){
+            this.name="huziyang";
+            this.age="18";
+            this.pro="program";
+            this.walk=function(){
+                this.name="123";
+                return this;
+            }
+            this.eat=function(){
+                this.age=1000;
+                return this;
+            }
+        }*/
+        $(document).ready(function(){
+            //console.log($("div").eq(0).html("123").next().html("456"));
+            /*var _chain=new Chain();
+            _chain.walk().walk();
+            console.log(_chain.name+":"+_chain.age);*/
+            /*console.log($(".demo").last().hasClass("fn"));
+            console.log($("div").filter(".demo,#02"));*/
+            //console.log($("input[type=text]").parent().is(".abc,.demo"));
+            /*console.log($("input").map(function(){
+                console.log($(this).val());
+            }));
+            $("p").append($("input").map(function(){
+                return $(this).val();
+            }).get().join(", "));*/
+
+
+            /*function fn(){
+                return this;
+            }
+            function ObjectJq(_obj){
+                this.input0=_obj[0];
+                this.input1=_obj[1];
+                this.map=function(fn){
+                    //var _x=_obj;
+                    _obj[0].callback=fn;
+                    return this.input.callback();
+                }
+                this.input1.callback=fn;
+            }
+            var _obj=[document.getElementById("text"),document.getElementById("text02")];
+            var _jq=new ObjectJq(_obj);
+            console.log(_jq.map(fn));*/
+
+            //$("input").map(fn);
+
+
+            /**
+             * 配合body中的jquery中的map方法那一段代码使用
+             * function fn(){
+                console.log(this.value="abcde");
+                //return this;
+            }
+             function InputObject(_list){
+                this.map=function(callback){
+                    for(var i=0;i<_list.length;i++){
+                        _list[i].callback=callback;
+                        _list[i].callback();
+                    }
+                }
+            }
+             var _inputs=document.getElementsByTagName("input");
+             var _io=new InputObject(_inputs);
+             _io.map(fn);
+             */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //console.log($("p").contents().not("[nodeType=1]"));
+            //map(callback)
+            //var _span=document.createElement("span");
+//            $("#click").click(function(){
+//                $("p").wrap($("#content")[0])
+//            });
+            //$("div").html();
+
+
+
+            /*function fn() {
+                return '<div class="' + $(this).text() + '" />';
+            }
+
+            //var jQuery=null;
+            function jQuery(_name){
+                this.obj=document.getElementById(_name);
+                this.wrap=function(cb){
+                    this.obj.fn=cb;
+                    var _html=this.obj.fn();
+                    var _reg=/\<[a-z]+/g;
+                    var _tag=_html.match(_reg)[0].replace("<","");
+                    var _node=document.createElement(_tag);
+                    _node.className=_html.match(/class=\"[a-z]+\"/g)[0].replace(/class=/g,"");
+                    _node.appendChild(this.obj);
+                    document.getElementsByTagName("body")[0].appendChild(_node);
+                }
+            }
+            var $=new jQuery("demo");
+            console.log($);
+            $.wrap(function(){
+                var _abc=this;
+                return '<div class="' + this.id + '" />';
+            });*/
+
+
+            $("p").css("background-color","red");
+            $("p").css({
+                "background-color":"blue",
+                "font-size":"25px",
+                "position":"absolute",
+                "left":"100px"
+            });
+
+            ///alert($("p").css("left"));
+
+
+
+
+
+            function cssHooks(_attr){
+                this[_attr]="";
+                this.supportAttr="";
+                this.get=function(){
+                    return this[_attr];
+                }
+                this.set=function(){
+                    this[_attr]=this.supportAttr;
+                }
+                this.solution=function(){
+                    var vendorProp, supportedProp,
+                            capProp = _attr.charAt(0).toUpperCase() + _attr.slice(1),
+                            prefixes = [ "Moz", "Webkit", "O", "ms" ],
+                            div = document.createElement( "div" );
+                    if ( _attr in div.style ) {
+                        supportedProp = _attr;
+                    } else {
+                        for ( var i = 0; i < prefixes.length; i++ ) {
+                            vendorProp = prefixes[i] + capProp;
+                            if ( vendorProp in div.style ) {
+                                supportedProp = vendorProp;
+                                break;
+                            }
+                        }
+                    }
+                    div = null;
+                    this.supportAttr= supportedProp;
+                    this.set();
+                    return this[_attr];
+                }
+            }
+            var _css=new cssHooks("borderRadius");
+            alert(_css.solution());
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+    <!--jquery中的map方法-->
+    <!--<div id="dem01" class="demo fn">-->
+        <!--<input type="text" value="123456" id="text">-->
+        <!--<input type="text" id="text02" name="name" value="John"/>-->
+        <!--<input type="text" name="password" value="password"/>-->
+        <!--<input type="text" name="url" value="http://ejohn.org/"/>-->
+    <!--</div>-->
+
+    <!--<div><p><span>Hello</span></p><span>Hello Again</span></div>-->
+    <!--<p>Hello <a href="http://ejohn.org/">John</a>, how are you doing?</p>-->
+
+    <p>Hello</p>
+
+</body>
+</html>

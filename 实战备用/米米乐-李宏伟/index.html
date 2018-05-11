@@ -1,0 +1,2267 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>米米乐商城</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index_01.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+	</head>
+<!--任务时间轴，任务散点图，态势图，航迹星下点，地图标绘-->
+	<body>
+		<!--导航-->
+
+		<div id="wrp_01">
+			<div id="pub_top">
+				<div class="user">
+					<span class="ml20">
+						<a href="login.html">登录</a>
+					</span>
+					<span class="ml20">
+						<a href="register.html">注册</a>
+					</span>
+				</div>
+				<div class="menu">
+					<div class="menu_car">
+						<dl class="my_car">
+							<div class="goods_num">0</div>
+							<dt class="car_text">
+								
+								<span></span>
+								购物车
+								<em>0</em>
+								件
+								<i class="arrow"></i>
+							</dt>
+							<dd style="width: 348px; top: 30px;">
+								<div class="sub_title">
+									<h4>最新加入的商品</h4>
+								</div>
+								<div class="goods_box">
+									<div class="car_goods">
+										<img class="loading" src="img/loading.gif" />
+									</div>
+								</div>
+								<div class="checkout">
+									<span class="total_goods">
+										共<strong>0</strong>种商品
+									</span>
+									<a href="login.html">结算购物车中的商品</a>
+
+								</div>
+							</dd>
+
+						</dl>
+						<dl class>
+							<dt>
+								<a href="login.html">用户中心</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a href="login.html">商品收藏</a>
+									</li>
+									<li>
+										<a href="login.html">店铺收藏</a>
+									</li>
+									<li>
+										<a href="login.html">米米乐收藏</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a href="login.html">我的订单</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>待付款订单</a>
+									</li>
+									<li>
+										<a>待确认订单</a>
+									</li>
+									<li>
+										<a>待评价交易</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a>客户服务</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>帮助中心</a>
+									</li>
+									<li>
+										<a>售后服务</a>
+									</li>
+									<li>
+										<a>客服中心</a>
+									</li>
+									<li>
+										<a>在线客服</a>
+									</li>
+									<li>
+										<a>QQ客服</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt style="width: 90px;">
+								<em class="wang"></em>
+								<a>网站导航</a>
+								<i></i>
+							</dt>
+							<dd style="width: 102px;">
+								<ul>
+									<li style="width: 102px;">
+										<a>导购频道</a>
+									</li>
+
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="background: #fafafa;">
+			<div style="margin: 0 auto;height: 70px;width: 100%;">
+				<div style="background: url(img/1.jpg) no-repeat center;width: 100%;cursor: pointer;height: 70px;"></div>
+			</div>
+		</div>
+
+		<div id="header">
+			<span class="log">
+				<a><img src="img/log.png"></a>
+			</span>
+			<div class="ipt_bar">
+				<form class="search_form">
+					<input type="hidden" class="search" />
+					<input type="text" class="s_text" placeholder="搜索 家居生活 试试^.^" />
+					<input type="submit" value="搜索" class="s_submit" />
+				</form>
+				<div class="keyword">
+					<ul>
+						<li>
+							<a style="color: #c81623;">iphone7</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">台湾美食</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">8.8包邮</a>
+						</li>
+						<li>
+							<a style="color: #c81623;">手机热卖</a>
+						</li>
+						<li>
+							<a>魅蓝</a>
+						</li>
+						<li>
+							<a>iphone6</a>
+						</li>
+						<li>
+							<a>得力</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header_menu">
+				<ul>
+					<li>
+
+						<a class="fir">
+							<i></i> 认证包邮
+						</a>
+					</li>
+					<li>
+
+						<a class="sec">
+							<i></i> 认证包邮
+						</a>
+					</li>
+					<li>
+
+						<a class="thir">
+							<i></i> 认证包邮
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--右边侧栏-->
+		<div class="r-sider-bar">
+			<div class="sider-wrap">
+				<ul class="sevice">
+					<li>
+                		<span><img src="img/zhankai.png" alt=""></span>
+                		<a href="" class="zhankai dis">联系客服</a>
+            		</li>
+            		<li id="user-cart">
+               		 	<span><img src="img/cart.png" alt=""></span>
+            		</li>
+            		<li id="user-history">
+                		<span><img src="img/history.png" alt=""></span>
+					</li>
+					<li class="erweima">
+                		<span><img src="img/erweima1.png" alt=""></span>
+                		<div class="dis"><img src="img/erweima.png" alt=""></div>
+            		</li>
+				</ul>
+				<div class="sider-gotop">
+            		<span><img src="img/t_top.png" alt=""></span>
+            			TOP
+            		<a href="#" class="zhankai dis">返回顶部</a>
+        		</div>
+			</div>
+		</div>
+		<!--导航     end-->
+
+		<div id="wrp_02">
+			<div class="nav">
+				<div class="all_case">
+					<div class="title_all">
+						<h3>
+							<a>
+								<i class="classical"></i>
+								所有商品分类
+							</a>
+						</h3>
+						<i class="arrow"></i>
+					</div>
+					<div class="classical_d" style="display:;">
+						<ul class="category">
+							
+							<!--<li><div class="_class"><span class="_img"><img src="img/05.jpg" /></span><h2 style="color: #fff;"><a>手机</a>
+								<span>/</span><a>数码</a></h2></div><div class="sub_class" style="display:;"><div class="sub_left"><div class="shouji">
+								<span></span><h1><a>手机数码</a></h1></div><dl><dt><a>手机通讯</a><span class="arrow"></span></dt><dd><a>Iphone</a>
+								<a>三星</a><a>小米</a><a>魅族</a><a>华为</a></a><a>诺基亚</a><a>联想</a><a>HTC</a></a><a>中兴</a><a>索尼</a><a>乐视</a></a><a>其他</a><a>微软</a>
+								<a>华为儿童定位手表</a></dd></dl>
+							</li>-->			
+						
+						</ul>
+					</div>
+				</div>
+				<ul class="nav_menu">
+					<li>
+						<a style="color:#D4121B;">首页</a>
+					</li>
+					<li>
+						<a href="active.html">米活动</a>
+					</li>
+					<li>
+						<a>乐社区</a>
+					</li>
+					<li>
+						<a>商家入驻</a>
+					</li>
+					<li>
+						<a>8.8天天抢</a>
+					</li>
+					<li>
+						<a>团购</a>
+					</li>
+					<li>
+						<a href="mijinrong.html">米金融 </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="home-focus-layout">
+			<div class="focus_box">
+				<!-- 幻灯片 -->
+
+				<div class="focus_top_banner">
+					<!-- 首页幻灯 -->
+					<ul class="banner_img">
+						<li style="background-color:#3c01fd;" class="play_img">
+							<a href=""><img title="手机特卖199起" src="img/play-1.png" alt="手机特卖199起" /></a>
+						</li>
+						<li style="background-color:#15adf8" class="play_img">
+							<a href=""><img title="微软SurfacePro4" src="img/play-2.jpg" alt="微软SurfacePro4" /></a>
+						</li>
+						<li style="background-color:#3885ff" class="play_img">
+							<a href=""><img title="品胜专场低至6元" src="img/play-3.jpg" alt="品胜专场低至6元" /></a>
+						</li>
+						<li style="background-color:#faece9" class="play_img">
+							<a href=""><img title="iPhone 6s" src="img/play-4.jpg" alt="iPhone 6s" /></a>
+						</li>
+						<li style="background-color:#edebf6" class="play_img">
+							<a href=""><img title="iPhone SE" src="img/play-5.jpg" alt="iPhone SE" /></a>
+						</li>
+						<li style="background-color:#5f62af" class="play_img">
+							<a href=""><img title="oa办公全场1元起" src="img/play-6.png" alt="oa办公全场1元起" /></a>
+						</li>
+					</ul>
+					<div class="ad-title">
+						<a href="" class="slider-item">手机特卖199起</a>
+						<a href="" class="slider-item">微软SurfacePro4</a>
+						<a href="" class="slider-item">品胜专场低至6元</a>
+						<a href="" class="slider-item">iPhone 6s</a>
+						<a href="" class="slider-item">iPhone SE</a>
+						<a href="" title="oa办公全场1元起" class="slider-item">oa办公全场1元起</a>
+					</div>
+				</div>
+				<!-- 幻灯片 end -->
+
+				<div class="right-sidebar">
+					<!-- 预留广告位-->
+					<div class="ad">
+						<a href=""><img style="width:228px;height:60px" border="0" src="img/huiyuan.png" alt=""></a>
+					</div>
+					<!-- 预留广告位 end -->
+					<!-- 会员登录信息 -->
+					<div class="wel_come">
+						<dl>
+							<dt>
+                        <img src="img/hi.png" alt="">
+                    </dt>
+							<dd>Hi,您好</dd>
+							<dd>欢迎来到米米乐商城</dd>
+						</dl>
+					</div>
+					<div class="login-in">
+						<a href="login.html" rel="nofollow" target="_blank">登录</a>
+						<a href="" rel="nofollow" target="_blank">注册</a>
+					</div>
+					<!-- 会员登录信息 end -->
+					<!-- 商城公告 -->
+					<div class="proclamation">
+						<div class="tabs-panel" id="show_roll">
+							<ul class="mall-news">
+								<li>
+									<a target="_blank" href="" title="【通知】签到红包活动取消" rel="nofollow">【通知】签到红包活动取消 </a>
+									<time>(2016-08-31)</time>
+								</li>
+								<li>
+									<a target="_blank" href="" title="【立减】iPhone7不加价预售" rel="nofollow">【立减】iPhone7不加价预 </a>
+									<time>(2016-08-16)</time>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 商城公告 end -->
+					<!-- 生活充值 -->
+					<div style="background: #ffffff;_margin:-6px 0 0 0;">
+						<div class="conve-bd-wrap">
+							<ul id="J_conveBd" class="conve-bd-inner conve-pc">
+								<li class="life-service">
+									<a class="mod J_mod" rel="nofollow" href="" data-spm-anchor-id="" target="_blank">
+										<img src="img/hf.png" /> 话费
+									</a>
+								</li>
+								<li class="life-service">
+									<a class="mod J_mod" rel="nofollow" href="" data-spm-anchor-id="" target="_blank">
+										<img src="img/fji.png" /> 机票
+									</a>
+								</li>
+								<li class="life-service">
+									<a class="mod J_mod" rel="nofollow" href="" data-spm-anchor-id="" target="_blank">
+										<img src="img/lpk.png" /> 礼品卡
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="sider-ad">
+						<a href="" target="_blank"><img style="width:228px;height:136px" border="0" src="img/lpka.jpg" alt="会员下广告"></a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!--HomeFocusLayout End-->
+		<!--中间内容-->
+
+		<div class="home-sale-box">
+			<div class="home-sale-layout wrapper">
+				<!-- 幻灯片下面广告位 -->
+				<div class="left-layout">
+					<div class="sale-goods-list ">
+						<div class="sale-goods-list ">
+							<div class="sale-goods-fir">
+								<h2>手机app免费下载</h2>
+								<img src="img/wx.png" />
+							</div>
+							<ul>
+								<li>
+									<a href="" target="_blank" title=""><img src="img/my.jpg" width="248" height="180" alt=""></a>
+								</li>
+								<li>
+									<a href="" target="_blank" title=""><img src="img/hw.png" width="248" height="180" alt=""></a>
+								</li>
+								<li>
+									<a href="" target="_blank" title=""><img src="img/ms.jpg" width="248" height="180" alt=""></a>
+								</li>
+								<li>
+									<a href="" target="_blank" title=""><img src="img/htc.jpg" width="248" height="180" alt=""></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="new-salelist">
+					<div class="fl">
+						<!-- 特惠专区 -->
+						<div class="activity-list">
+							<h2>特惠专区</h2>
+							<ul>
+								<li>
+									<span class="cut"></span>
+									<a href="" target="_blank" rel="nofollow">美食特惠 <em>低至两折</em></a>
+								</li>
+								<li>
+									<span class="special"></span>
+									<a href="" target="_blank" rel="nofollow">果粉专场 <em>5s月供197元</em></a>
+								</li>
+								<li>
+									<span class="cut"></span>
+									<a href="" target="_blank" rel="nofollow">联想笔记本电脑商务超薄本 <em>新品上市</em></a>
+								</li>
+								<li>
+									<span class="special"></span>
+									<a href="" target="_blank" rel="nofollow">企业聚惠 <em>立领千元现金券</em></a>
+								</li>
+								<li>
+									<span class="cut"></span>
+									<a href="" target="_blank" rel="nofollow">iphone6上新 <em>嘿，苹果手机看这里！</em></a>
+								</li>
+								<li>
+									<span class="special"></span>
+									<a href="" target="_blank" rel="nofollow">办公文具专场 <em>你的办公好帮手</em></a>
+								</li>
+								<li>
+									<span class="cut"></span>
+									<a href="" target="_blank" rel="nofollow">联想电脑专场 <em>立返100预采金</em></a>
+								</li>
+
+							</ul>
+						</div>
+						<!-- 特惠专区 end -->
+						<!-- 行业新闻 -->
+						<div class="article-list">
+							<h2>行业新闻</h2>
+							<ul>
+								<li>
+									<span>【最新】</span>
+									<a href="" target="_blank" title="贵=好？买贵的不如选合适的！分享几招吸尘器选购技巧">贵=好？买贵的不如选合适的！分享几招吸尘器选购技巧</a>
+								</li>
+								<li>
+									<span>【最新】</span>
+									<a href="" target="_blank" title="米米乐发展农业电子商务精准扶贫果农">米米乐发展农业电子商务精准扶贫果农</a>
+								</li>
+								<li>
+									<span>【最新】</span>
+									<a href="" target="_blank" title="感动武侯十大人物米米乐董事长刘文太上榜">感动武侯十大人物米米乐董事长刘文太上榜</a>
+								</li>
+								<li>
+									<span>【最新】</span>
+									<a href="" target="_blank" title="“蓝瘦香菇”的母婴用品有哪些？">“蓝瘦香菇”的母婴用品有哪些？</a>
+								</li>
+								<li>
+									<span>【最新】</span>
+									<a href="" target="_blank" title="【特惠】米米乐鸡尾酒1元一瓶，约么？">【特惠】米米乐鸡尾酒1元一瓶，约么？</a>
+								</li>
+								<li>
+									<span>【最新】</span>
+									<a href="" target="_blank" title="杯垫可以开花？你信么？">杯垫可以开花？你信么？</a>
+								</li>
+							</ul>
+						</div>
+						<!-- 行业新闻 end -->
+					</div>
+
+					<!-- 特惠专区图片广告 -->
+
+					<div class="right-ad-list">
+						<ul class="big-ad">
+							<li>
+								<a href="" target="_blank" title=""><img src="img/hzm.png" width="265" height="320" alt=""></a>
+							</li>
+							<li>
+								<a href="" target="_blank" title="安易客"><img src="img/ayk.jpg" width="265" height="320" alt="安易客"></a>
+							</li>
+							<li>
+								<a href="" target="_blank" title="松茸"><img src="img/sr.jpg" width="265" height="320" alt="松茸"></a>
+							</li>
+						</ul>
+						<ul class="small-ad">
+							<li>
+								<a href="" target="_blank" title="麦"><img src="img/mei.jpg" width="275" height="90" alt="麦"></a>
+							</li>
+							<li>
+								<a href="" target="_blank" title="松子"><img src="img/songzi.jpg" width="275" height="90" alt="松子"></a>
+							</li>
+							<li>
+								<a href="" target="_blank" title="羊肚菌"><img src="img/yangdu.jpg" width="275" height="90" alt="羊肚菌"></a>
+							</li>
+							<li>
+								<a href="" target="_blank" title="开心果"><img src="img/kxg.jpg" width="275" height="90" alt="开心果"></a>
+							</li>
+							<li>
+								<a href="" target="_blank" title=""><img src="img/hmg.jpg" width="275" height="90" alt=""></a>
+							</li>
+							<li>
+								<a href="" target="_blank" title="pic_name6"><img src="img/zao.jpg" width="275" height="90" alt="pic_name6"></a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 特惠专区图片广告 end -->
+
+				</div>
+
+				<!-- 幻灯片下面广告位end -->
+			</div>
+
+			<div style="height:20px;"></div>
+			<div style="margin:auto;width:1200px; height:70px;">
+				<a href=""><img style="width:1200px;height:70px" border="0" src="img/pf.jpg" alt=""></a>
+			</div>
+			<!-- 楼层导航 -->
+			<div class="floor_menu" style="display: block;">
+				<ul>
+					<li>
+						<a href="#blue" class="">
+							<span class="zi">企业办公</span>
+							<span class="shu"><img src="img/f01.png" alt=""></span>
+						</a>
+					</li>
+					<li>
+						<a href="#green">
+							<span class="zi">员工福利</span>
+							<span class="shu"><img src="img/f02.png" alt=""></span>
+						</a>
+					</li>
+					<li>
+						<a href="#purple">
+							<span class="zi">商务赠礼</span>
+							<span class="shu"><img src="img/f03.png" alt=""></span>
+						</a>
+					</li>
+					<li>
+						<a href="#orange">
+							<span class="zi">促销推荐</span>
+							<span class="shu"><img src="img/f04l.png" alt=""></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 楼层导航end -->
+			<!--floor_one-->
+			<div class="home-standard-layout wrapper floor style-blue">
+				<div class="header-bar clearfix">
+					<div class="title">
+						<h2 title="企业办公"><a name="blue"></a>企业办公</h2>
+					</div>
+					<div class="other-classes">
+						<ul class="tab-new-nav">
+							<li class="tabs-selected">
+								<i class="arrow"></i>
+								<h3>商品推荐</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>办公文具</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>促销推荐</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>商品推荐5个</h3>
+							</li>
+						</ul>
+					</div>
+					<span class="more">
+         				<a target="_blank" href="";gc_id=1" title="查看更多"> 查看更多&gt;&gt;</a>        
+         			</span>
+				</div>
+				<div class="clearfix">
+					<div class="left-sidebar">
+						<div class="m1 style-blue">1F
+							<div class="m2"></div>
+						</div>
+						<!--楼层分类-->
+						<div class="left_tit clearfix">
+							<ul class="left_tit_Ul">
+								<!--布局-->
+								<!--<li>
+			                        <a href="">
+			                           	 电脑整机                        
+			                        </a>
+                    			</li>-->
+							</ul>
+						</div>
+						<!--- 左下大图 ---->
+						<div class="left-ads">
+							<a href="" rel="nofollow" title="" target="_blank"><img src="img/xfs.jpg" alt=""></a>
+						</div>
+						<!-- 小品牌滑动 -->
+						<div class="recommend">
+							<div class="recommend_brand" style="visibility: visible; overflow:hidden; position: relative; z-index: 2; left: 0px; height: 150px;">
+								<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; height: 600px; top: -347.931px;">
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="OKI" target="_blank">
+											<img src="img/left1.png" alt="OKI">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="得力" target="_blank">
+											<img src="img/left2.png" alt="得力">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="丹爵" target="_blank">
+											<img src="img/left3.jpg" alt="丹爵">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="惠普" target="_blank">
+											<img src="img/left4.jpg" alt="惠普">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="东芝（TOSHIBA）" target="_blank">
+											<img src="img/left5.jpg" alt="东芝（TOSHIBA）">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="联想" target="_blank">
+											<img src="img/left6.gif" alt="联想">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="OKI" target="_blank">
+											<img src="img/left1.png" alt="OKI">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="得力" target="_blank">
+											<img src="img/left2.png" alt="得力">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="丹爵" target="_blank">
+											<img src="img/left3.jpg" alt="丹爵">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="left" title="惠普" target="_blank">
+											<img src="img/left4.jpg" alt="惠普">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="东芝（TOSHIBA）" target="_blank">
+											<img src="img/left5.jpg" alt="东芝（TOSHIBA）">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="联想" target="_blank">
+											<img src="img/left6.gif" alt="联想">
+										</a>
+									</li>
+								</ul>
+							</div>
+							<span href="#" class="recommend_pre">&lt;</span>
+							<span href="#" class="recommend_next">&gt;</span>
+						</div>
+					</div>
+					<!--- 中部图片布局 ---->
+					<div class="middle-layout">
+						<div class="tabs-panel middle-goods-list6">
+							<div>
+								<ul>
+									<li class="goods_group1">
+										<div class="goods_show_box" style="position: relative;">
+											<!-- 幻灯片 -->
+											<div class="goods_show" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 1167px;">
+												<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 3890px; left: 0;overflow: hidden;" id="oul">
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p2"><img src="img/p2.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p3"><img src="img/p3.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p4"><img src="img/p4.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p5"><img src="img/p5.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p6"><img src="img/p6.png" width="389px" height="174px;"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p2"><img src="img/p2.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p3"><img src="img/p3.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p4"><img src="img/p4.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p5"><img src="img/p5.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p6"><img src="img/p6.png" width="389px" height="174px"></a>
+													</li>
+												</ul>
+											</div>
+											<span class="goods_show_pre" style="top: 32%;">&lt;</span>
+											<span class="goods_show_next" style="top: 32%;">&gt;</span>
+										</div>
+										<!-- 幻灯片end -->
+										<!-- 中下二图 -->
+										<div class="main_adv">
+											<a href="" title="" class="ad1 p3" rel="nofollow" target="_blank">
+												<img src="img/m01.jpg" alt="" " width="194 " height="184 ">
+			                                </a>
+			                                <a href=" " title=" " class="ad1 p1 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m02.jpg " alt=" " width="194 " height="184 ">
+			                                </a>
+			                            </div>
+										<!-- 中下二图end -->
+									</li>
+									<li class="goods_group2 ">
+			                            <div class="group_adv ">
+			                                <a href=" " title=" " target="_blank ">
+			                                    <img src="img/m03.jpg " alt=" " width="194 " height="357 ">
+			                                </a>
+			                            </div>
+			                        </li>
+									<li class="goods_group3 ">
+			                            <div class="main_adv ">
+			                                <a href=" " title=" " class="ad1 p3 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m04.jpg " alt=" " width="194 " height="179 ">
+			                                </a>
+			                            </div>
+			                            <div class="main_adv ">
+			                                <a href=" " title=" " class="ad1 p1 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m05.jpg " alt=" " width="194 " height="179 ">
+			                                </a>
+			                            </div>
+			                        </li>
+									<li class="goods_group4 ">
+			                            <div class="group4_title ">
+			                                <h3>本月总排行榜</h3>
+			                            </div>
+			                            <ul>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class="one ">1</span>
+			                                        <p>齐心 B2715 中号标准办公剪刀 170mm 配色 把</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">齐心 B2715 中号标准办公剪刀 170mm 配色 把</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="齐心 B2715 中号标准办公剪刀 170mm 配色 把 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l01.png " alt="齐心 B2715 中号标准办公剪刀 170mm 配色 把 " height="100 " width="97 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥4.50</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class="two ">2</span>
+			                                        <p>齐心B2672 健康胶水 125ml 大号</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">齐心B2672 健康胶水 125ml 大号</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="齐心B2672 健康胶水 125ml 大号 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l02.png " alt="齐心B2672 健康胶水 125ml 大号 " height="100 " width="98 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥4.80</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>                                
+			                                    <div class="p_goods ">
+			                                        <span class="thr ">3</span>
+			                                        <p>莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装</p>
+			                                    </div>
+			                                    <dl style="display: block; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l03.png " alt="莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装 " height="100 " width="96 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥10.00</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>                                
+			                                    <div class="p_goods ">
+			                                        <span class=" ">4</span>
+			                                        <p>得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l04.jpg " alt="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 " width="100 " height="100 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥8.80</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class=" ">5</span>
+			                                        <p>得力(deli)9873 10ml原子印油(红色)</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">得力(deli)9873 10ml原子印油(红色)</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="得力(deli)9873 10ml原子印油(红色) " target="_blank " rel="nofollow ">
+			                                                <img src="img/l05.jpg " alt="得力(deli)9873 10ml原子印油(红色) " width="100 " height="100 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥3.90</dd>
+			                                    </dl>
+			                                </li>
+                                        </ul>
+                					</li>
+								</ul>
+							</div>
+							<!--- 下推荐商品5个 ---->
+							<div class="tabs-panel goods-list ">
+			                    <ul id="_th ">
+			                      	<!--<li style="opacity: 1; "><dl><dt class="goods-name "><a href=" " title="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 </a></dt>
+			                        <dd class="goods-thumb " style="margin-top: 0px; "><a href=" "><img src="img1/th01.jpg " alt="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">
+			                        </a></dd><dd class="goods-price "><em>￥8.80</em><span class="original ">￥12.00</span></dd></dl>
+			                        </li>-->
+			                               
+			                    </ul>
+			                </div>
+			            </div>    
+						<!--- 10个商品1  -->
+						<div class="tabs-panel middle-goods-list2 tabs-hide">
+							<ul id="th02">
+								<li style="opacity: 1;">
+									<dl>
+										<dt class="goods-name">
+						                    <a target="_blank" href="" title="齐心D5002强力系列易事贴 3X3英寸 黄 包">齐心D5002强力系列易事贴 3X3英寸 黄 包 </a>
+						                </dt>
+										<dd class="goods-thumb">
+											<a target="_blank" rel="nofollow" href="http://www.mmloo.com/shop/item-152084.html">
+												<img src="http://www.mmloo.com/data/upload/shop/store/goods/559/2016/05/559_05175732103471971_240.png" alt="齐心D5002强力系列易事贴 3X3英寸 黄 包">
+											</a>
+										</dd>
+										<dd class="goods-price"><em>￥28.00</em></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<!--- 10个商品1end  -->
+					</div>
+				</div>
+			</div>
+			<!--floor_one  end-->
+			<!--floor_two-->
+			<div class="home-standard-layout wrapper floor style-blue">
+				<div class="header-bar clearfix">
+					<div class="title">
+						<h2 title="企业办公"><a name="blue"></a>企业办公</h2>
+					</div>
+					<div class="other-classes">
+						<ul class="tab-new-nav">
+							<li class="tabs-selected">
+								<i class="arrow"></i>
+								<h3>商品推荐</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>办公文具</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>促销推荐</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>商品推荐5个</h3>
+							</li>
+						</ul>
+					</div>
+					<span class="more">
+         				<a target="_blank" href="";gc_id=1" title="查看更多"> 查看更多&gt;&gt;</a>        
+         			</span>
+				</div>
+				<div class="clearfix">
+					<div class="left-sidebar">
+						<div class="m1 style-blue">1F
+							<div class="m2"></div>
+						</div>
+						<!--楼层分类-->
+						<div class="left_tit clearfix">
+							<ul class="left_tit_Ul">
+								<!--布局-->
+								<!--<li>
+			                        <a href="">
+			                           	 电脑整机                        
+			                        </a>
+                    			</li>-->
+							</ul>
+						</div>
+						<!--- 左下大图 ---->
+						<div class="left-ads">
+							<a href="" rel="nofollow" title="" target="_blank"><img src="img/xfs.jpg" alt=""></a>
+						</div>
+						<!-- 小品牌滑动 -->
+						<div class="recommend">
+							<div class="recommend_brand" style="visibility: visible; overflow:hidden; position: relative; z-index: 2; left: 0px; height: 150px;">
+								<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; height: 600px; top: -347.931px;">
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="OKI" target="_blank">
+											<img src="img/left1.png" alt="OKI">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="得力" target="_blank">
+											<img src="img/left2.png" alt="得力">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="丹爵" target="_blank">
+											<img src="img/left3.jpg" alt="丹爵">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="惠普" target="_blank">
+											<img src="img/left4.jpg" alt="惠普">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="东芝（TOSHIBA）" target="_blank">
+											<img src="img/left5.jpg" alt="东芝（TOSHIBA）">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="联想" target="_blank">
+											<img src="img/left6.gif" alt="联想">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="OKI" target="_blank">
+											<img src="img/left1.png" alt="OKI">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="得力" target="_blank">
+											<img src="img/left2.png" alt="得力">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="丹爵" target="_blank">
+											<img src="img/left3.jpg" alt="丹爵">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="left" title="惠普" target="_blank">
+											<img src="img/left4.jpg" alt="惠普">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="东芝（TOSHIBA）" target="_blank">
+											<img src="img/left5.jpg" alt="东芝（TOSHIBA）">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="联想" target="_blank">
+											<img src="img/left6.gif" alt="联想">
+										</a>
+									</li>
+								</ul>
+							</div>
+							<span href="#" class="recommend_pre">&lt;</span>
+							<span href="#" class="recommend_next">&gt;</span>
+						</div>
+					</div>
+					<!--- 中部图片布局 ---->
+					<div class="middle-layout">
+						<div class="tabs-panel middle-goods-list6">
+							<div>
+								<ul>
+									<li class="goods_group1">
+										<div class="goods_show_box" style="position: relative;">
+											<!-- 幻灯片 -->
+											<div class="goods_show" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 1167px;">
+												<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 3890px; left: 0;overflow: hidden;" id="oul">
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p2"><img src="img/p2.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p3"><img src="img/p3.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p4"><img src="img/p4.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p5"><img src="img/p5.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p6"><img src="img/p6.png" width="389px" height="174px;"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p2"><img src="img/p2.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p3"><img src="img/p3.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p4"><img src="img/p4.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p5"><img src="img/p5.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p6"><img src="img/p6.png" width="389px" height="174px"></a>
+													</li>
+												</ul>
+											</div>
+											<span class="goods_show_pre" style="top: 32%;">&lt;</span>
+											<span class="goods_show_next" style="top: 32%;">&gt;</span>
+										</div>
+										<!-- 幻灯片end -->
+										<!-- 中下二图 -->
+										<div class="main_adv">
+											<a href="" title="" class="ad1 p3" rel="nofollow" target="_blank">
+												<img src="img/m01.jpg" alt="" " width="194 " height="184 ">
+			                                </a>
+			                                <a href=" " title=" " class="ad1 p1 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m02.jpg " alt=" " width="194 " height="184 ">
+			                                </a>
+			                            </div>
+										<!-- 中下二图end -->
+									</li>
+									<li class="goods_group2 ">
+			                            <div class="group_adv ">
+			                                <a href=" " title=" " target="_blank ">
+			                                    <img src="img/m03.jpg " alt=" " width="194 " height="357 ">
+			                                </a>
+			                            </div>
+			                        </li>
+									<li class="goods_group3 ">
+			                            <div class="main_adv ">
+			                                <a href=" " title=" " class="ad1 p3 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m04.jpg " alt=" " width="194 " height="179 ">
+			                                </a>
+			                            </div>
+			                            <div class="main_adv ">
+			                                <a href=" " title=" " class="ad1 p1 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m05.jpg " alt=" " width="194 " height="179 ">
+			                                </a>
+			                            </div>
+			                        </li>
+									<li class="goods_group4 ">
+			                            <div class="group4_title ">
+			                                <h3>本月总排行榜</h3>
+			                            </div>
+			                            <ul>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class="one ">1</span>
+			                                        <p>齐心 B2715 中号标准办公剪刀 170mm 配色 把</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">齐心 B2715 中号标准办公剪刀 170mm 配色 把</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="齐心 B2715 中号标准办公剪刀 170mm 配色 把 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l01.png " alt="齐心 B2715 中号标准办公剪刀 170mm 配色 把 " height="100 " width="97 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥4.50</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class="two ">2</span>
+			                                        <p>齐心B2672 健康胶水 125ml 大号</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">齐心B2672 健康胶水 125ml 大号</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="齐心B2672 健康胶水 125ml 大号 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l02.png " alt="齐心B2672 健康胶水 125ml 大号 " height="100 " width="98 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥4.80</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>                                
+			                                    <div class="p_goods ">
+			                                        <span class="thr ">3</span>
+			                                        <p>莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装</p>
+			                                    </div>
+			                                    <dl style="display: block; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l03.png " alt="莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装 " height="100 " width="96 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥10.00</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>                                
+			                                    <div class="p_goods ">
+			                                        <span class=" ">4</span>
+			                                        <p>得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l04.jpg " alt="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 " width="100 " height="100 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥8.80</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class=" ">5</span>
+			                                        <p>得力(deli)9873 10ml原子印油(红色)</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">得力(deli)9873 10ml原子印油(红色)</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="得力(deli)9873 10ml原子印油(红色) " target="_blank " rel="nofollow ">
+			                                                <img src="img/l05.jpg " alt="得力(deli)9873 10ml原子印油(红色) " width="100 " height="100 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥3.90</dd>
+			                                    </dl>
+			                                </li>
+                                        </ul>
+                					</li>
+								</ul>
+							</div>
+							<!--- 下推荐商品5个 ---->
+							<div class="tabs-panel goods-list ">
+			                    <ul id="_fir ">
+			                      	<!--<li style="opacity: 1; "><dl><dt class="goods-name "><a href=" " title="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 </a></dt>
+			                        <dd class="goods-thumb " style="margin-top: 0px; "><a href=" "><img src="img1/th01.jpg " alt="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">
+			                        </a></dd><dd class="goods-price "><em>￥8.80</em><span class="original ">￥12.00</span></dd></dl>
+			                        </li>-->
+			                               
+			                    </ul>
+			                </div>
+			            </div>    
+						<!--- 10个商品1  -->
+						<div class="tabs-panel middle-goods-list2 tabs-hide">
+							<ul id="th02">
+								<li style="opacity: 1;">
+									<dl>
+										<dt class="goods-name">
+						                    <a target="_blank" href="" title="齐心D5002强力系列易事贴 3X3英寸 黄 包">齐心D5002强力系列易事贴 3X3英寸 黄 包 </a>
+						                </dt>
+										<dd class="goods-thumb">
+											<a target="_blank" rel="nofollow" href="http://www.mmloo.com/shop/item-152084.html">
+												<img src="http://www.mmloo.com/data/upload/shop/store/goods/559/2016/05/559_05175732103471971_240.png" alt="齐心D5002强力系列易事贴 3X3英寸 黄 包">
+											</a>
+										</dd>
+										<dd class="goods-price"><em>￥28.00</em></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<!--- 10个商品1end  -->
+					</div>
+				</div>
+			</div>
+			<!--floor_two end-->
+			<!--floor_three-->
+			<div class="home-standard-layout wrapper floor style-blue">
+				<div class="header-bar clearfix">
+					<div class="title">
+						<h2 title="企业办公"><a name="blue"></a>企业办公</h2>
+					</div>
+					<div class="other-classes">
+						<ul class="tab-new-nav">
+							<li class="tabs-selected">
+								<i class="arrow"></i>
+								<h3>商品推荐</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>办公文具</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>促销推荐</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>商品推荐5个</h3>
+							</li>
+						</ul>
+					</div>
+					<span class="more">
+         				<a target="_blank" href="";gc_id=1" title="查看更多"> 查看更多&gt;&gt;</a>        
+         			</span>
+				</div>
+				<div class="clearfix">
+					<div class="left-sidebar">
+						<div class="m1 style-blue">1F
+							<div class="m2"></div>
+						</div>
+						<!--楼层分类-->
+						<div class="left_tit clearfix">
+							<ul class="left_tit_Ul">
+								<!--布局-->
+								<!--<li>
+			                        <a href="">
+			                           	 电脑整机                        
+			                        </a>
+                    			</li>-->
+							</ul>
+						</div>
+						<!--- 左下大图 ---->
+						<div class="left-ads">
+							<a href="" rel="nofollow" title="" target="_blank"><img src="img/xfs.jpg" alt=""></a>
+						</div>
+						<!-- 小品牌滑动 -->
+						<div class="recommend">
+							<div class="recommend_brand" style="visibility: visible; overflow:hidden; position: relative; z-index: 2; left: 0px; height: 150px;">
+								<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; height: 600px; top: -347.931px;">
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="OKI" target="_blank">
+											<img src="img/left1.png" alt="OKI">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="得力" target="_blank">
+											<img src="img/left2.png" alt="得力">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="丹爵" target="_blank">
+											<img src="img/left3.jpg" alt="丹爵">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="惠普" target="_blank">
+											<img src="img/left4.jpg" alt="惠普">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="东芝（TOSHIBA）" target="_blank">
+											<img src="img/left5.jpg" alt="东芝（TOSHIBA）">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="联想" target="_blank">
+											<img src="img/left6.gif" alt="联想">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="OKI" target="_blank">
+											<img src="img/left1.png" alt="OKI">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="得力" target="_blank">
+											<img src="img/left2.png" alt="得力">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="丹爵" target="_blank">
+											<img src="img/left3.jpg" alt="丹爵">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="left" title="惠普" target="_blank">
+											<img src="img/left4.jpg" alt="惠普">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="东芝（TOSHIBA）" target="_blank">
+											<img src="img/left5.jpg" alt="东芝（TOSHIBA）">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="联想" target="_blank">
+											<img src="img/left6.gif" alt="联想">
+										</a>
+									</li>
+								</ul>
+							</div>
+							<span href="#" class="recommend_pre">&lt;</span>
+							<span href="#" class="recommend_next">&gt;</span>
+						</div>
+					</div>
+					<!--- 中部图片布局 ---->
+					<div class="middle-layout">
+						<div class="tabs-panel middle-goods-list6">
+							<div>
+								<ul>
+									<li class="goods_group1">
+										<div class="goods_show_box" style="position: relative;">
+											<!-- 幻灯片 -->
+											<div class="goods_show" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 1167px;">
+												<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 3890px; left: 0;overflow: hidden;" id="oul">
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p2"><img src="img/p2.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p3"><img src="img/p3.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p4"><img src="img/p4.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p5"><img src="img/p5.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p6"><img src="img/p6.png" width="389px" height="174px;"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p2"><img src="img/p2.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p3"><img src="img/p3.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p4"><img src="img/p4.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p5"><img src="img/p5.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p6"><img src="img/p6.png" width="389px" height="174px"></a>
+													</li>
+												</ul>
+											</div>
+											<span class="goods_show_pre" style="top: 32%;">&lt;</span>
+											<span class="goods_show_next" style="top: 32%;">&gt;</span>
+										</div>
+										<!-- 幻灯片end -->
+										<!-- 中下二图 -->
+										<div class="main_adv">
+											<a href="" title="" class="ad1 p3" rel="nofollow" target="_blank">
+												<img src="img/m01.jpg" alt="" " width="194 " height="184 ">
+			                                </a>
+			                                <a href=" " title=" " class="ad1 p1 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m02.jpg " alt=" " width="194 " height="184 ">
+			                                </a>
+			                            </div>
+										<!-- 中下二图end -->
+									</li>
+									<li class="goods_group2 ">
+			                            <div class="group_adv ">
+			                                <a href=" " title=" " target="_blank ">
+			                                    <img src="img/m03.jpg " alt=" " width="194 " height="357 ">
+			                                </a>
+			                            </div>
+			                        </li>
+									<li class="goods_group3 ">
+			                            <div class="main_adv ">
+			                                <a href=" " title=" " class="ad1 p3 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m04.jpg " alt=" " width="194 " height="179 ">
+			                                </a>
+			                            </div>
+			                            <div class="main_adv ">
+			                                <a href=" " title=" " class="ad1 p1 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m05.jpg " alt=" " width="194 " height="179 ">
+			                                </a>
+			                            </div>
+			                        </li>
+									<li class="goods_group4 ">
+			                            <div class="group4_title ">
+			                                <h3>本月总排行榜</h3>
+			                            </div>
+			                            <ul>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class="one ">1</span>
+			                                        <p>齐心 B2715 中号标准办公剪刀 170mm 配色 把</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">齐心 B2715 中号标准办公剪刀 170mm 配色 把</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="齐心 B2715 中号标准办公剪刀 170mm 配色 把 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l01.png " alt="齐心 B2715 中号标准办公剪刀 170mm 配色 把 " height="100 " width="97 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥4.50</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class="two ">2</span>
+			                                        <p>齐心B2672 健康胶水 125ml 大号</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">齐心B2672 健康胶水 125ml 大号</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="齐心B2672 健康胶水 125ml 大号 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l02.png " alt="齐心B2672 健康胶水 125ml 大号 " height="100 " width="98 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥4.80</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>                                
+			                                    <div class="p_goods ">
+			                                        <span class="thr ">3</span>
+			                                        <p>莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装</p>
+			                                    </div>
+			                                    <dl style="display: block; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l03.png " alt="莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装 " height="100 " width="96 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥10.00</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>                                
+			                                    <div class="p_goods ">
+			                                        <span class=" ">4</span>
+			                                        <p>得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l04.jpg " alt="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 " width="100 " height="100 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥8.80</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class=" ">5</span>
+			                                        <p>得力(deli)9873 10ml原子印油(红色)</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">得力(deli)9873 10ml原子印油(红色)</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="得力(deli)9873 10ml原子印油(红色) " target="_blank " rel="nofollow ">
+			                                                <img src="img/l05.jpg " alt="得力(deli)9873 10ml原子印油(红色) " width="100 " height="100 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥3.90</dd>
+			                                    </dl>
+			                                </li>
+                                        </ul>
+                					</li>
+								</ul>
+							</div>
+							<!--- 下推荐商品5个 ---->
+							<div class="tabs-panel goods-list ">
+			                    <ul id="_three ">
+			                      	<!--<li style="opacity: 1; "><dl><dt class="goods-name "><a href=" " title="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 </a></dt>
+			                        <dd class="goods-thumb " style="margin-top: 0px; "><a href=" "><img src="img1/th01.jpg " alt="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">
+			                        </a></dd><dd class="goods-price "><em>￥8.80</em><span class="original ">￥12.00</span></dd></dl>
+			                        </li>-->
+			                               
+			                    </ul>
+			                </div>
+			            </div>    
+						<!--- 10个商品1  -->
+						<div class="tabs-panel middle-goods-list2 tabs-hide">
+							<ul id="th02">
+								<li style="opacity: 1;">
+									<dl>
+										<dt class="goods-name">
+						                    <a target="_blank" href="" title="齐心D5002强力系列易事贴 3X3英寸 黄 包">齐心D5002强力系列易事贴 3X3英寸 黄 包 </a>
+						                </dt>
+										<dd class="goods-thumb">
+											<a target="_blank" rel="nofollow" href="http://www.mmloo.com/shop/item-152084.html">
+												<img src="http://www.mmloo.com/data/upload/shop/store/goods/559/2016/05/559_05175732103471971_240.png" alt="齐心D5002强力系列易事贴 3X3英寸 黄 包">
+											</a>
+										</dd>
+										<dd class="goods-price"><em>￥28.00</em></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<!--- 10个商品1end  -->
+					</div>
+				</div>
+			</div>
+			<!--floor_three end-->
+			<!--floor_four-->
+			<div class="home-standard-layout wrapper floor style-blue">
+				<div class="header-bar clearfix">
+					<div class="title">
+						<h2 title="企业办公"><a name="blue"></a>企业办公</h2>
+					</div>
+					<div class="other-classes">
+						<ul class="tab-new-nav">
+							<li class="tabs-selected">
+								<i class="arrow"></i>
+								<h3>商品推荐</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>办公文具</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>促销推荐</h3>
+							</li>
+							<li class="">
+								<i class="arrow"></i>
+								<h3>商品推荐5个</h3>
+							</li>
+						</ul>
+					</div>
+					<span class="more">
+         				<a target="_blank" href="";gc_id=1" title="查看更多"> 查看更多&gt;&gt;</a>        
+         			</span>
+				</div>
+				<div class="clearfix">
+					<div class="left-sidebar">
+						<div class="m1 style-blue">1F
+							<div class="m2"></div>
+						</div>
+						<!--楼层分类-->
+						<div class="left_tit clearfix">
+							<ul class="left_tit_Ul">
+								<!--布局-->
+								<!--<li>
+			                        <a href="">
+			                           	 电脑整机                        
+			                        </a>
+                    			</li>-->
+							</ul>
+						</div>
+						<!--- 左下大图 ---->
+						<div class="left-ads">
+							<a href="" rel="nofollow" title="" target="_blank"><img src="img/xfs.jpg" alt=""></a>
+						</div>
+						<!-- 小品牌滑动 -->
+						<div class="recommend">
+							<div class="recommend_brand" style="visibility: visible; overflow:hidden; position: relative; z-index: 2; left: 0px; height: 150px;">
+								<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; height: 600px; top: -347.931px;">
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="OKI" target="_blank">
+											<img src="img/left1.png" alt="OKI">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="得力" target="_blank">
+											<img src="img/left2.png" alt="得力">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="丹爵" target="_blank">
+											<img src="img/left3.jpg" alt="丹爵">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="惠普" target="_blank">
+											<img src="img/left4.jpg" alt="惠普">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="东芝（TOSHIBA）" target="_blank">
+											<img src="img/left5.jpg" alt="东芝（TOSHIBA）">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="联想" target="_blank">
+											<img src="img/left6.gif" alt="联想">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="OKI" target="_blank">
+											<img src="img/left1.png" alt="OKI">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="得力" target="_blank">
+											<img src="img/left2.png" alt="得力">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="丹爵" target="_blank">
+											<img src="img/left3.jpg" alt="丹爵">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="left" title="惠普" target="_blank">
+											<img src="img/left4.jpg" alt="惠普">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="东芝（TOSHIBA）" target="_blank">
+											<img src="img/left5.jpg" alt="东芝（TOSHIBA）">
+										</a>
+									</li>
+									<li style="overflow: hidden; float: none; width: 225px; height: 50px;">
+										<a href="" title="联想" target="_blank">
+											<img src="img/left6.gif" alt="联想">
+										</a>
+									</li>
+								</ul>
+							</div>
+							<span href="#" class="recommend_pre">&lt;</span>
+							<span href="#" class="recommend_next">&gt;</span>
+						</div>
+					</div>
+					<!--- 中部图片布局 ---->
+					<div class="middle-layout">
+						<div class="tabs-panel middle-goods-list6">
+							<div>
+								<ul>
+									<li class="goods_group1">
+										<div class="goods_show_box" style="position: relative;">
+											<!-- 幻灯片 -->
+											<div class="goods_show" style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 1167px;">
+												<ul style="margin: 0px; padding: 0px; position: relative; list-style-type: none; z-index: 1; width: 3890px; left: 0;overflow: hidden;" id="oul">
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p2"><img src="img/p2.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p3"><img src="img/p3.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p4"><img src="img/p4.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p5"><img src="img/p5.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p6"><img src="img/p6.png" width="389px" height="174px;"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p2"><img src="img/p2.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p3"><img src="img/p3.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p4"><img src="img/p4.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p5"><img src="img/p5.png" width="389px" height="174px"></a>
+													</li>
+													<li style="overflow: hidden; float: left; width: 389px; height: 174px;">
+														<a class="ad1 p6"><img src="img/p6.png" width="389px" height="174px"></a>
+													</li>
+												</ul>
+											</div>
+											<span class="goods_show_pre" style="top: 32%;">&lt;</span>
+											<span class="goods_show_next" style="top: 32%;">&gt;</span>
+										</div>
+										<!-- 幻灯片end -->
+										<!-- 中下二图 -->
+										<div class="main_adv">
+											<a href="" title="" class="ad1 p3" rel="nofollow" target="_blank">
+												<img src="img/m01.jpg" alt="" " width="194 " height="184 ">
+			                                </a>
+			                                <a href=" " title=" " class="ad1 p1 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m02.jpg " alt=" " width="194 " height="184 ">
+			                                </a>
+			                            </div>
+										<!-- 中下二图end -->
+									</li>
+									<li class="goods_group2 ">
+			                            <div class="group_adv ">
+			                                <a href=" " title=" " target="_blank ">
+			                                    <img src="img/m03.jpg " alt=" " width="194 " height="357 ">
+			                                </a>
+			                            </div>
+			                        </li>
+									<li class="goods_group3 ">
+			                            <div class="main_adv ">
+			                                <a href=" " title=" " class="ad1 p3 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m04.jpg " alt=" " width="194 " height="179 ">
+			                                </a>
+			                            </div>
+			                            <div class="main_adv ">
+			                                <a href=" " title=" " class="ad1 p1 " rel="nofollow " target="_blank ">
+			                                    <img src="img/m05.jpg " alt=" " width="194 " height="179 ">
+			                                </a>
+			                            </div>
+			                        </li>
+									<li class="goods_group4 ">
+			                            <div class="group4_title ">
+			                                <h3>本月总排行榜</h3>
+			                            </div>
+			                            <ul>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class="one ">1</span>
+			                                        <p>齐心 B2715 中号标准办公剪刀 170mm 配色 把</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">齐心 B2715 中号标准办公剪刀 170mm 配色 把</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="齐心 B2715 中号标准办公剪刀 170mm 配色 把 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l01.png " alt="齐心 B2715 中号标准办公剪刀 170mm 配色 把 " height="100 " width="97 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥4.50</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class="two ">2</span>
+			                                        <p>齐心B2672 健康胶水 125ml 大号</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">齐心B2672 健康胶水 125ml 大号</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="齐心B2672 健康胶水 125ml 大号 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l02.png " alt="齐心B2672 健康胶水 125ml 大号 " height="100 " width="98 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥4.80</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>                                
+			                                    <div class="p_goods ">
+			                                        <span class="thr ">3</span>
+			                                        <p>莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装</p>
+			                                    </div>
+			                                    <dl style="display: block; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l03.png " alt="莱特3003标准财务凭证账册单据莱特财务借支单 财务必备记账凭证 借支单5本装 " height="100 " width="96 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥10.00</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>                                
+			                                    <div class="p_goods ">
+			                                        <span class=" ">4</span>
+			                                        <p>得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 " target="_blank " rel="nofollow ">
+			                                                <img src="img/l04.jpg " alt="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 " width="100 " height="100 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥8.80</dd>
+			                                    </dl>
+			                                </li>
+			                                <li>
+			                                    <div class="p_goods ">
+			                                        <span class=" ">5</span>
+			                                        <p>得力(deli)9873 10ml原子印油(红色)</p>
+			                                    </div>
+			                                    <dl style="display: none; ">
+			                                        <dt>
+			                                            <a href=" " target="_blank " rel="nofollow ">得力(deli)9873 10ml原子印油(红色)</a>
+			                                        </dt>
+			                                        <dd class="goods-pic ">
+			                                            <a href=" " title="得力(deli)9873 10ml原子印油(红色) " target="_blank " rel="nofollow ">
+			                                                <img src="img/l05.jpg " alt="得力(deli)9873 10ml原子印油(红色) " width="100 " height="100 ">
+			                                            </a>
+			                                        </dd>
+			                                        <dd class="price ">￥3.90</dd>
+			                                    </dl>
+			                                </li>
+                                        </ul>
+                					</li>
+								</ul>
+							</div>
+							<!--- 下推荐商品5个 ---->
+							<div class="tabs-panel goods-list ">
+			                    <ul id="_four ">
+			                      	<!--<li style="opacity: 1; "><dl><dt class="goods-name "><a href=" " title="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 </a></dt>
+			                        <dd class="goods-thumb " style="margin-top: 0px; "><a href=" "><img src="img1/th01.jpg " alt="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">
+			                        </a></dd><dd class="goods-price "><em>￥8.80</em><span class="original ">￥12.00</span></dd></dl>
+			                        </li>-->
+			                               
+			                    </ul>
+			                </div>
+			            </div>    
+						<!--- 10个商品1  -->
+						<div class="tabs-panel middle-goods-list2 tabs-hide">
+							<ul id="th02">
+								<li style="opacity: 1;">
+									<dl>
+										<dt class="goods-name">
+						                    <a target="_blank" href="" title="齐心D5002强力系列易事贴 3X3英寸 黄 包">齐心D5002强力系列易事贴 3X3英寸 黄 包 </a>
+						                </dt>
+										<dd class="goods-thumb">
+											<a target="_blank" rel="nofollow" href="http://www.mmloo.com/shop/item-152084.html">
+												<img src="http://www.mmloo.com/data/upload/shop/store/goods/559/2016/05/559_05175732103471971_240.png" alt="齐心D5002强力系列易事贴 3X3英寸 黄 包">
+											</a>
+										</dd>
+										<dd class="goods-price"><em>￥28.00</em></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+						<!--- 10个商品1end  -->
+					</div>
+				</div>
+			</div>
+			<!--floor_four end-->
+		</div>	
+		<!--中间内容end-->
+		<!--- 优店推荐 --->
+		<div class="wrapper groom" style="background-color:#FFF;">
+        <h2>优店推荐</h2>
+        <ul>
+            <li>                            
+                <a href="" target="_blank" title="食品" rel="nofollow">
+                  <img src="img1/tj_01.jpg" width="390" height="430" alt="食品">
+                </a>
+            </li>
+            <li>                
+                <a href="" target="_blank" title="包" rel="nofollow">
+                  <img src="img1/tj_02.jpg" width="390" height="430" alt="包">
+                </a>
+            </li>
+            <li>                
+                <a href="" target="_blank" title="花" rel="nofollow">
+                  <img src="img1/tj_03.jpg" width="390" height="430" alt="花">
+                </a>
+            </li>
+        </ul>                        
+        <div style="height:0px; clear:both;"></div>
+    	</div>
+		<!--- 优店推荐 end --->
+		<div class="wrapper_out">
+			<div class="wrapper clear" style="width: 1200px;">
+				<div style="float: left; ">
+					<ul>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+					</ul>
+				</div>
+				<div style="float:right;height:230px;width:410px;background:white;margin-right:0px;">
+					<table>
+						<tbody>
+						<tr>
+						<td>
+					  		<div class="kefu">
+					     		<div class="con">
+					        		<dl>
+					        			<dt style="font-weight:bold;font-size:16px;">客服中心</dt>
+					        			<dd class="tel">&nbsp;&nbsp;&nbsp;&nbsp;4006-780-781</dd>
+					        			<dd>E-mail：mmloo@mmloo.com</dd>
+					        			<dd>四川省成都市新南路亚华大厦六楼</dd>
+					        			<dd><a rel="nofollow" href=""><img alt="QQ" src="img/qq.gif  " style="vertical-align: middle;">4006780781</a></dd>
+					        		</dl>
+				        		</div> 
+					  		</div>
+					  	</td>
+					  	<td>
+					  		<div class="microinfo">
+					     		<dl class="mic">
+									<dt><a href="">关于米米乐商城</a></dt>
+									<dt><img width="80" height="80" title="米米乐微信公众号" alt="米米乐微信公众号" src="img/qmi.png"><br>
+										<div style="margin-top:3px;">手机下单更优惠</div>
+										<div style="margin-top:3px;">快乐网购 轻松拥有</div>
+									</dt>
+				         		</dl>
+					  		</div>
+					  	</td>	
+						</tr>
+		  				</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<div class="wrapperFriendly " style="position: relative; ">
+			<span><a href=" ">网上商城</a></span><span><a href=" ">免费信息发布</a></span><span><a href=" ">客栈网</a></span><span><a href=" ">乐天代购</a></span><span><a href=" ">蛋糕网上订购</a></span><span><a href=" ">吃喝玩乐</a></span><span><a href=" ">网上数码商城</a></span><span><a href=" ">1688批发网</a></span><span><a href=" ">深圳童装批发</a></span><span><a href=" ">中国皮革网</a></span><span><a href=" ">户外装备</a></span><span><a href=" ">饰品批发</a></span><span><a href=" ">惠爱你</a></span><span><a href=" ">网上订花</a></span><span><a href=" ">美容加盟</a></span><span><a href=" ">户外用品</a></span><span><a href=" ">外贸童装批发网</a></span><span><a href=" ">礼品册</a></span><span><a href=" ">促销活动</a></span><span><a href=" ">日日顺净水商城</a></span><span><a href=" ">舒华跑步机</a></span><span><a href=" ">冰柜</a></span><span><a href=" ">制造资源</a></span><span><a href=" ">整体衣柜</a></span><span><a href=" ">仪器仪表世界网</a></span><span><a href=" ">LED</a></span><span><a href=" ">中国供应商</a></span><span><a href=" ">十大品牌</a></span><span><a href=" ">触摸屏网与液晶网</a></span><span><a href=" ">洛阳分类信息</a></span><span><a href=" ">前进商务网</a></span><span><a href=" ">牛商网</a></span><a href=" ">大连房产网</a></span><a href=" ">洁具</a></span><a href=" ">白酒代理</a></span>
+			<a href=" ">百川网</a></span><a href=" ">石家庄房产网</a></span><a href=" ">1688货源网</a></span><a href=" ">酒价格</a></span><a href=" ">童装代理</a></span><a href=" ">内增高鞋</a></span><a href=" ">珠宝店加盟</a></span><a href=" ">砭石</a></span><a href=" ">拼客网</a></span><a href=" ">微商代理货源网</a></span><a href=" ">别墅图片大全</a></span><a href=" ">隐形眼镜</a></span><a href=" ">中国环保设备网</a></span><a href=" ">化妆品代理网</a></span><a href=" ">商祺网</a></span><a href=" ">兼职网</a></span><a href=" ">连锁加盟网</a></span><a href=" ">楚天运动频道</a></span>
+		</div>
+		<div class="footer ">
+			<span class="to_top "><a href=" " class="back_to_top ">返回顶部</a></span>
+			<ul>
+				<li>
+					<a style=" ">电脑节|</a><a style=" ">年货节|</a><a style=" ">批发商城|</a><a style=" ">合作及洽谈|</a><a style=" ">联系我们|</a><a style=" ">关于米米乐商城|</a><a style=" ">商家登陆|</a><a style=" ">开店协议|</a><a style=" ">商家入驻|</a><a style=" ">手机版|</a><a style=" ">友情链接|</a><a style="color: red; ">招聘英才</a><a style=" ">米商|</a><a style=" ">8.8包邮</a>
+				</li>
+				<li>© 2016 米米乐商城 www.mmloo.com 版权所有  蜀ICP备06015925号-1</li>
+			</ul>
+		</div>
+		<div class="footerend ">
+			<span>
+				<a id="___szfw_logo___ ">
+					<img src="http://www.mmloo.com/shop/templates/default/images/cxlogo.png " height="47px "/>
+				</a>
+			</span>
+		</div>
+		
+	</body>
+</html>
+<script>
+/*二级菜单*/
+		/*布局*/
+			/*<li><div class="_class"><span class="_img"><img src="img/05.jpg" /></span><h2 style="color: #fff;"><a>手机</a>
+			<span>/</span><a>数码</a></h2></div><div class="sub_class" style="display:;"><div class="sub_left"><div class="shouji">
+			<span></span><h1><a>手机数码</a></h1></div><dl><dt><a>手机通讯</a><span class="arrow"></span></dt><dd><a>Iphone</a>
+			<a>三星</a><a>小米</a><a>魅族</a><a>华为</a></a><a>诺基亚</a><a>联想</a><a>HTC</a></a><a>中兴</a><a>索尼</a><a>乐视</a></a><a>其他</a><a>微软</a>
+			<a>华为儿童定位手表</a></dd></dl>
+			</li>*/
+	$(function(){
+		$.get("json/my.json",function(data){
+			console.log(data)
+			var _html = ""
+			for(var k in data) {
+				console.log(k)
+				_html += '<li class="firli "><div class="_class "><span class="_img "><img src="img/'+data[k]['picurl']+'" width="100% "></span><h2 style="color: #fff; "><a>' + data[k]["name2"] + '</a></h2><div class="sub_class" style=" top:'+data[k]["Top"]+'"><div class="sub_left"><div class="shouji"><span></span><h1><a>'+data[k]["phone"]+'</a></h1></div>'
+					
+						for(var k2 in data[k]["title"]){
+							_html += '<dl><dt><a>'+data[k]["title"][k2]["case1"]+'</a><span class="arrow">&gt</span></dt><dd>';
+							for(var k3 in data[k]["title"][k2]["case2"]){
+								_html += '<a>'+data[k]["title"][k2]["case2"][k3]["name"]+'</a>'
+							}
+							_html += '</dd></dl>'
+						}
+						
+				_html+='</div></li>';
+			}
+			
+			$(".category ").html(_html);
+		},"json")
+		
+		$(".all_case").click(function(){
+			window.location.href = "N_index.html"
+		})
+	})	
+			
+	
+
+/*轮播图*/
+	
+	$(document).ready(function(){
+		var length,
+		currentIndex = 0,
+		interval,
+		hasStart = false,
+		t = 2000;
+		length = $(".play_img ").length;
+		$(".play_img:not(:first) ").hide();
+		
+		$('.slider-item:first').addClass('slider-item-selected');
+		
+		$('.play_img').hover(function(){
+			stop();
+		},function(){
+			start();
+		})
+		
+		//小下标的hover
+		$('.slider-item').hover(function(e){
+			stop();
+			var  preIndex = $(".slider-item ").filter(".slider-item-selected ").index();//位置
+			console.log(preIndex)
+			currentIndex = $(this).index();
+			play(preIndex, currentIndex);//调用play函数
+		}, function() {
+			start();
+		})
+		
+		function pre() {
+			var preIndex = currentIndex;
+			currentIndex = (--currentIndex + length) % length;
+			//console.log(currentIndex);
+			play(preIndex, currentIndex);
+		}
+		function next() {
+			var preIndex = currentIndex;
+			currentIndex = ++currentIndex % length;
+			play(preIndex, currentIndex);
+			
+		}
+		function play(preIndex, currentIndex) {
+			$('.play_img').eq(preIndex).fadeOut(500).parent().children().eq(currentIndex).fadeIn(1000);
+			$('.slider-item ').removeClass('slider-item-selected');
+			$('.slider-item ').eq(currentIndex).addClass('slider-item-selected');
+		}
+		function start() {
+			if(!hasStart) {
+				hasStart = true;
+				interval = setInterval(next, t);
+			}
+		}
+		function stop() {
+			clearInterval(interval);
+			hasStart = false;
+		}
+		start();	
+	})
+/*	楼层分类	 */ 
+	  
+	$(document).ready(function(){
+	  	$.get("json/left_tit.json ", function(aData) {
+				var _html = " ";
+				for(var k in aData){
+					//console.log(aData)
+					for(var i = 0;i<aData[k].length;i++){
+						_html += '<li><a href=" ">'+aData[k][i]+'</a></li>'
+						
+					}
+					$('.left_tit_Ul').html(_html)
+				}
+				
+		}, "json ")
+	})
+/*	小轮播one*/
+	
+    	$(function () {
+            var index = 0;
+            var timer = null;
+            var $imgs = $(".recommend_brand ul ");
+            autoPlay();
+            function autoPlay() {
+                timer = setInterval(function () {
+                    index++;
+                    if(index > 12) {
+                        index = 0;
+                        preindex = 12;
+                    }
+                    moveTop();
+                    preindex = index;    
+                },1000);
+            }
+           
+           function  moveTop() {
+               
+               //$imgs.eq(preindex).stop(true).animate({top: -50});
+               
+               $imgs.stop(true).css({top:+50}).animate({top:-50});
+               
+               //$navs.eq(index).addClass("hover ").siblings().removeClass("hover ");
+           }
+
+        })
+    /*中间布局*/
+   
+	 	  $(function () {
+            
+            var index = 0;
+            var preindex = 0;
+            var timer = null;
+            var $imgs = $(".goods_show ul ");
+            autoPlay();
+            function autoPlay() {
+                timer = setInterval(function () {
+                    index++;
+                    if(index > 10) {
+                        index = 0;
+                        preindex = 10;
+                    }
+                    moveLeft();
+                    preindex = index;
+                },1000);
+            }
+           
+           function  moveLeft() {
+              
+               $imgs.eq(preindex).stop(true).animate({left: -389});
+               //.css({left: 820})保证要显示的图,每次都从 820开始运动
+               $imgs.eq(index).stop(true).css({left: 389}).animate({left: 0});
+               //当前要显示的图的索引就是小圆点的索引
+              // $navs.eq(index).addClass("hover ").siblings().removeClass("hover ");
+           }
+        });
+		/*布局*/
+		/*<li style="opacity: 1; "><dl><dt class="goods-name "><a href=" " title="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 </a></dt>
+		<dd class="goods-thumb " style="margin-top: 0px; "><a href=" "><img src="img1/th01.jpg " alt="得力(deli)7083 安全石墨铅芯素描 绘图HB铅笔/学生铅笔 12支/盒 ">
+		</a></dd><dd class="goods-price "><em>￥8.80</em><span class="original ">￥12.00</span></dd></dl></li>
+		*/	
+/*floor_0ne*/
+		$(function(){
+			$.get("json/th.json ",function(data){
+				var oUl = document.getElementById("_th ");
+				var aData = eval(data);
+				//console.log(aData)
+				oUl.innerHTML = " "
+				for(var i = 0;i < aData.length;i++){
+					var oLi = document.createElement('li');
+					oLi.innerHTML = '<dl><dt class="goods-name "><a href=" " title=" '+aData[i]['p1']+' ">'+aData[i]['p1']+'</a></dt><dd class="goods-thumb " style="margin-top: 0px; "><a href=" "><img src="img1/'+aData[i]['picurl']+' " alt=" '+aData[i]['p1 ']+' "></a></dd><dd class="goods-price "><em>￥'+aData[i]['price']+'</em><span class="original ">￥'+aData[i]['original']+'</span></dd></dl>'
+					oUl.appendChild(oLi)
+				}
+				 $(".goods-list ul li ").mouseenter(function () {
+            
+               $(this).find("dl dd img ").stop(true).animate({
+               
+                    "margin-top ":"-25px "
+                },500);
+            }); 
+           $(".goods-list ul li ").mouseleave(function () {
+          
+                $(this).find("dl dd img ").animate({
+
+                        "margin-top ":"0px "
+                },500);
+            });
+			},"json ")
+/*floor_two*/			
+			$.get("json/th.json ",function(data){
+				var oUl = document.getElementById("_fir ");
+				var aData = eval(data);
+				//console.log(aData)
+				oUl.innerHTML = " "
+				for(var i = 0;i < aData.length;i++){
+					var oLi = document.createElement('li');
+					oLi.innerHTML = '<dl><dt class="goods-name "><a href=" " title=" '+aData[i]['p1']+'">'+aData[i]['p1']+'</a></dt><dd class="goods-thumb" style="margin-top: 0px; "><a href=" "><img src="img1/'+aData[i]['picurl']+' " alt=" '+aData[i]['p1']+' "></a></dd><dd class="goods-price "><em>￥'+aData[i]['price']+'</em><span class="original ">￥'+aData[i]['original']+'</span></dd></dl>'
+					oUl.appendChild(oLi)
+				}
+			},"json")
+/*floor_three*/
+			$.get("json/th.json ",function(data){
+				var oUl = document.getElementById("_three ");
+				var aData = eval(data);
+				//console.log(aData)
+				oUl.innerHTML = " "
+				for(var i = 0;i < aData.length;i++){
+					var oLi = document.createElement('li');
+					oLi.innerHTML = '<dl><dt class="goods-name "><a href=" " title=" '+aData[i]['p1']+'">'+aData[i]['p1']+'</a></dt><dd class="goods-thumb" style="margin-top: 0px; "><a href=" "><img src="img1/'+aData[i]['picurl']+' " alt=" '+aData[i]['p1']+' "></a></dd><dd class="goods-price "><em>￥'+aData[i]['price']+'</em><span class="original ">￥'+aData[i]['original']+'</span></dd></dl>'
+					oUl.appendChild(oLi)
+				}
+			},"json")
+/*floor_four*/
+			$.get("json/th.json ",function(data){
+				var oUl = document.getElementById("_four ");
+				var aData = eval(data);
+				//console.log(aData)
+				oUl.innerHTML = " "
+				for(var i = 0;i < aData.length;i++){
+					var oLi = document.createElement('li');
+					oLi.innerHTML = '<dl><dt class="goods-name "><a href=" " title=" '+aData[i]['p1']+'">'+aData[i]['p1']+'</a></dt><dd class="goods-thumb" style="margin-top: 0px; "><a href=" "><img src="img1/'+aData[i]['picurl']+' " alt=" '+aData[i]['p1']+' "></a></dd><dd class="goods-price "><em>￥'+aData[i]['price']+'</em><span class="original ">￥'+aData[i]['original']+'</span></dd></dl>'
+					oUl.appendChild(oLi)
+				}
+				$(".goods-list ul li ").mouseenter(function () {
+            
+	               	$(this).find("dl dd img ").stop(true).animate({
+	               
+	                    "margin-top ":"-25px "
+	                },500);
+            	}); 
+           		$(".goods-list ul li ").mouseleave(function () {
+          
+	                $(this).find("dl dd img ").animate({
+	
+	                        "margin-top ":"0px "
+	                },500);
+            });
+				
+			},"json")
+		
+//tab切换
+			$(".tab-new-nav li").mouseenter(function(){
+			//$(this).addClass("active");
+			//$(this).siblings().removeClass("active");
+			
+		
+			$(this).addClass("tabs-selected active")
+			
+			
+			.removeClass("tabs-selected active");
+			
+			$(".tabs-hide").eq( $(this).index() ).css("display","block")
+			
+			})			  
+		
+		})
+	
+		
+</script>

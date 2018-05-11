@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+        function Regions(_data){
+            this.province=function(){
+                //console.log($("#province"));
+                var _options="";
+                //console.log(_data["regions"])
+                for(var i=0;i<_data["regions"].length;i++){
+                    //console.log(_data["regions"][i]["id"])
+                    _options+="<option id=\""+_data["regions"][i]["id"]+"\">"+_data["regions"][i]["name"]+"</option>"
+                }
+                $("#province").html(_options);
+            };
+            var _p= 0,_c=0;
+            $("#province")[0].onchange=function(){
+                var _list=this.children,_options="";        //this.children为当前的<option></option>
+                //console.log(_list.length)
+                for(var i=0;i<_list.length;i++){
+                    if(_list[i].selected){
+                        _p=i;
+                        for(var n=0;n<_data["regions"][_p]["regions"].length;n++){
+                             //console.log(_data["regions"][_p]["regions"][n]["name"]);
+                            _options+="<option id=\""+_data["regions"][_p]["regions"][n]["id"]+"\">"+_data["regions"][_p]["regions"][n]["name"]+"</option>"
+                        }
+                        $("#city").html(_options);
+                        $("#city")[0].onchange();/*我修改了这里:调用city的函数,在省改变时调用市的函数 和区的函数同时修改.就好了.微笑*/
+                    }
+                }
+            }
+            $("#city")[0].onchange=function(){
+                _list=this.children;/*我修改这里 你这里原来是_list=this.children,_options="";不可以这么写 没有var 可以写上var 或者我现在这样子 不过我这样子写是全局变量不推荐.O(∩_∩)O~~*/
+                _options="";
+                for(var i=0;i<_list.length;i++){
+                    if(_list[i].selected){
+                        _c=i;
+                        for(var n=0;n<_data["regions"][_p]["regions"][_c]["regions"].length;n++){
+                            _options+="<option id=\""+_data["regions"][_p]["regions"][_c]["regions"][n]["id"]+"\">"+_data["regions"][_p]["regions"][_c]["regions"][n]["name"]+"</option>"
+                        }
+                        $("#conty").html(_options);
+                    }
+                }
+            }
+        }
+        $(document).ready(function(){
+//            //回调函数
+//            function doSomething(callback) {
+//// Call the callback
+//                callback('stuff', 'goes', 'here');
+//            }
+//            function foo(a, b, c) {
+//// I'm the callback
+//                alert(a + " " + b + " " + c);
+//            }
+//            console.log(foo);
+//            doSomething(foo);
+            $.post("cityName.json",null,function(data,textStatus){
+                if(textStatus=="success"){
+                    var _data=window.eval("("+data+")");
+                    var _regions=new Regions(_data);
+                    _regions.province();
+                }
+            },"text");
+        });
+
+    </script>
+</head>
+<body>
+    <select name="" id="province"></select>
+    <select name="" id="city"></select>
+    <select name="" id="conty"></select>
+</body>
+</html>

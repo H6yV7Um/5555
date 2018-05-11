@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        div#container{ width:auto; height:auto;
+            border:solid 3px #000; position:relative;
+            margin:0 auto;}
+        div.module{ width:150px; height:auto; padding:2px;
+            overflow:hidden; position:absolute;}
+        div img{ width:150px; border:none; float:left;}
+        div span{ width:100%; height:30px; line-height:30px;
+            text-align:center; display:block; float:left;}
+    </style>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+
+        /**
+         * 因为要给图片定位，且每一行最后一张图不能超过浏览器的宽度，
+         * 所以我们要设定id为container的div的宽度，保证当前的宽度
+         * 是图片的最大整数倍
+         */
+        function initCss(){
+            var _c=Math.floor(($("body").width()-6)/154);
+            //计算出每行可以放多少张图片后，应该干什么：排列图片
+            var _w=_c*154;//当前浏览器窗口的宽度;
+            $("#container").css("width",_w+"px");
+            return _c;
+        }
+
+        function dealData(data){//处理数据
+            var _container=$("#container")[0];
+            var _div=null,_span=null,_img=null;
+            for(var k=_s;k<_s+20 && k<data["images"].length;k++){
+                _img=document.createElement("img");
+                _img.src="../H51610/waterfall/"+(k+1)+".jpg";
+
+                _span=document.createElement("span");
+                _span.innerHTML="H51628WATERFALL";
+
+                _div=document.createElement("div");
+                _div.className="module";
+
+                _div.appendChild(_img);
+                _div.appendChild(_span);
+
+                _container.appendChild(_div);
+            }
+        }
+
+        function minHeight(){
+            var n=0,_min=_arr[0];
+            for(var i=1;i<_arr.length;i++){
+                if(_min>_arr[i]){
+                    _min=_arr[i];
+                    n=i;
+                }
+            }
+            return n;
+        }
+
+        function waterfall(s){
+            var n=0;
+            var _list=$(".module").get();
+            for(var i=s;i<_list.length;i++){
+                n=minHeight();
+                $(_list[i]).css({"left":n*154+"px","top":_arr[n]+"px"});
+                _arr[n]+=_list[i].offsetHeight;
+            }
+        }
+        /**
+         * 为什么要检测图片的complete属性
+         *
+         * 图片加载状态检测完毕，执行瀑布流操作
+         */
+        function checkImgComplete(){
+            var _list=$("#container img").get();
+            var _timer=0;
+            function checking() {
+                window.clearTimeout(_timer);
+                var _complete = true;
+                for (var i = _s; i < _list.length; i++) {
+                    if (!_list[i].complete) {
+                        //complete:img标签自有一个属性。当图片加载完成以后该属性值为：true
+                        //该图片为加载完成期间，该属性值为：false;
+                        _complete = false;
+                        break;
+                    }
+                }
+                if (_complete) {
+                    waterfall(_s);
+                } else {
+                    _timer = window.setTimeout(checking,60);
+                }
+            }
+            checking();
+        }
+
+        //var _data=null;
+        function loadImage(){//只负责获取数据
+            $.post("../H51610/javascript/waterfall.json",null,function(data,textStatus){
+                //_data=data;
+                dealData(data);
+                checkImgComplete();
+                resetContainerHeight();
+            },"json");
+        }
+
+        function initArray(c){
+            _arr=new Array(c);
+            for(var i=0;i<c;i++){
+                _arr[i]=0;
+            }
+        }
+
+        function resetContainerHeight(){
+            var _max=_arr[0];
+            for(var i=1;i<_arr.length;i++){
+                if(_max<_arr[i]){
+                    _max=_arr[i];
+                }
+            }
+            $("#container").css("height",_max+"px");
+        }
+        var _arr=null;
+        var _s=0;//记录当前需要从第几张图片进行加载
+        $(document).ready(function(){
+            var _c=initCss();
+            initArray(_c);
+            loadImage();//加载图片
+        });
+        window.onscroll=function(){
+            var _total=$(document).height();
+            var s_t=$(document).scrollTop();
+            var w_h=$(window).height();
+            if(_total==s_t+w_h){
+                _s=_s+20;
+                loadImage();
+            }
+        }
+        window.onresize=function(){
+            var _c=initCss();
+            initArray(_c);
+            //_s=0;
+            waterfall(0);
+            resetContainerHeight();
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+
+</div>
+</body>
+</html>

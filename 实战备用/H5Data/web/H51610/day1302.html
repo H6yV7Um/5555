@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #menu{ position:absolute; display:none; width:60px; height:80px; border:solid 1px #ccc;}
+        #menu span{ display:block; width:100%; height:25px; line-height:25px; text-align:center; color:#555; font-size:13px;}
+
+        img{ position:absolute;}
+    </style>
+
+    <script type="text/javascript">
+//获取键码值
+//        window.onkeydown=function(e){
+//            var e=e|| window.event;
+//            alert(e.keyCode||e.which);
+//            alert(String.fromCharCode(e.keyCode||e.which));
+//        }
+
+
+
+
+
+
+//注意onkeypress和onkeydown间的区别
+        window.onkeypress=function(e){
+            var e=e|| window.event;
+//            alert(e.keyCode||e.which);
+//            alert(String.fromCharCode(e.keyCode||e.which));
+
+
+
+//回车键和ctrl键同时按下
+            if(e.keyCode==13 && e.ctrlKey){
+                alert("allow");
+            }else{
+                alert("deny");
+            }
+
+
+        }
+
+
+
+
+
+        /*window.onload=function(){
+//            var _area=document.getElementById("textarea");
+//            alert(_area.innerHTML);
+//            _area.value="abc";
+//            alert(_area.value);
+            //设置textarea的value值会导致innerHTML失效
+
+
+//阻止超链接的默认事件
+            document.getElementById("a").onclick=function(e){
+                var e=e||window.event;
+                e.preventDefault();
+                //window.location.href=this.href;
+            }
+        }*/
+
+
+
+
+
+
+
+
+
+
+        /**
+         * 自定义右键菜单并且阻止默认菜单出现
+         * 阻止默认事件的方法:e.preventDefault|e.returnValue=false;    ||    return false;
+         * @param e
+         */
+//        document.oncontextmenu=function(e){
+//            var e=e||window.event;
+//            e.preventDefault();//阻止默认事件
+//            var _menu=document.getElementById("menu");
+//            _menu.style.display="block";
+//            _menu.style.left=e.pageX+"px";
+//            _menu.style.top=e.pageY+"px";
+//            //return false;
+//        }
+//        document.onclick=function(){
+//            document.getElementById("menu").style.display="none";
+//        }
+
+
+
+
+
+
+
+
+
+/**
+ * 拖拽
+ */
+        window.onload=function(){
+            var _img=document.getElementsByTagName("img")[0];
+            _img.onmousedown=function() {
+                document.onmousemove = function (e) {
+                    console.log(e);
+                    var e = e || window.event;
+                    //e.preventDefault();
+                    if(e.preventDefault){
+                        e.preventDefault();
+                    }else{
+                        e.returnValue=false;
+                    }//阻止默认事件的兼容解决方法
+                    _img.style.left = e.clientX-20 + "px";
+                    _img.style.top = e.clientY-20 + "px";
+                }
+            }
+            _img.onmouseup=function(){
+                document.onmousemove=null;
+            }
+        }
+
+
+
+
+
+    </script>
+</head>
+<body>
+<textarea name="textarea" id="textarea" cols="30" rows="10" value="">777777888</textarea>
+<a href="http://www.baidu.com" id="a">baidu</a>
+<div id="menu">
+    <span>贴贴</span>
+    <span>贴贴</span>
+    <span>贴贴</span>
+</div>
+<img alt="" src="../H51612/images/wuziqi.gif"/>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{margin: 0 auto; text-align: center; }
+			#content{width: 500px; height: 400px; border: 1px solid red;  position:absolute; overflow: hidden;}
+			#content div{ width: 50px; height: 400px; background-size:500px 400px;background-image: url(img/01.jpg); position: absolute;}
+			
+		</style>
+		<script src="js/move.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		window.onload=function(){
+			var _content=document.getElementById("content");
+			for(var i=0;i<10;i++){
+				var _contenter=document.createElement("div");
+				_content.appendChild(_contenter);
+				_contenter.style.left=(50*i)+"px";
+				_contenter.style.backgroundPosition=(-50*i )+"px"+" "+ 0+"px";
+			}
+			var _contenter1=document.getElementById("content").getElementsByTagName("div");
+			var _top=-400
+			for(var n=0;n<10;n++){
+				_contenter1[n].index=n;
+				_contenter1[n].style.top=_top+"px"
+				_top-=100;
+			     startMove(_contenter1[n], {top:0});
+				
+			}
+			
+			
+		}
+		</script>
+	</head>
+	<body>
+		<div id="content">
+			
+		</div>
+	</body>
+</html>
+

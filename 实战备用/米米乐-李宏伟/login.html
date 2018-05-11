@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index_01.css" />
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/ajax.js"></script>
+		
+	</head>
+
+	<body>
+		<div style="background: #fafafa;">
+			<div style="margin: 0 auto;height: 70px;width: 100%;">
+				<div style="background: url(img/1.jpg) no-repeat center;width: 100%;cursor: pointer;height: 70px;"></div>
+			</div>
+		</div>
+		<div id="header" style="width: 1000px;">
+			<span class="log">
+				<a><img src="img/log.png"></a>
+			</span>
+		</div>
+<!--
+		<div class="nc_login_layout">
+			<div class="login_left">
+				<img src="img/login_01.jpg" border="0">
+			</div>
+			<div class="login_right">
+				<div class="login_right_title">
+					<h3>用户登录</h3>
+				</div>
+				<div class="login_right_content">
+					
+				</div>
+			</div>
+		</div>
+-->
+<!--登录注册-->
+<div class="nc-login-layout">
+  <div class="left-pic"><img src="https://login.mmloo.com/data/upload/shop/login/2.jpg" border="0"></div>
+  <div class="nc-login fr">
+    <div class="nc-login-title">
+      <h3>用户登录</h3>
+    </div>
+    <div class="nc-login-content bor" id="demo-form-site">
+      <form id="login_form" method="post" class="bg">
+        <input type="hidden" name="formhash" value="5A-6IiLtP1FLdOp3hN0ak5RLzN72J7z">        <input type="hidden" name="form_submit" value="ok">
+        <input name="nchash" type="hidden" value="f53baf94">
+        <dl>
+            <dt><label class="lable label_1" for="user_name"></label></dt>
+          <dd style="min-height:54px;">
+              <input type="text" class="text text1" autocomplete="off" placeholder="手机号/会员名/邮箱" style="padding: 10px 8px 10px 50px; " name="user_name" id="user_name">
+            <label class="_user"></label>
+          </dd>
+        </dl>
+        <dl>
+          <dt><label class="lable label_2" for="password"></label></dt>
+          <dd style="min-height:54px;">
+            <input type="password" class="text text2" name="password" autocomplete="off" id="password">
+            <label class="_user1"></label>
+          </dd>
+        </dl>
+        <!--        <dl>
+          <dt>验证码</dt>
+          <dd style="min-height:54px;">
+            <input type="text" name="captcha" class="text w50 fl" id="captcha" maxlength="4" size="10" />
+            <img src="https://login.mmloo.com/index.php?act=seccode&op=makecode&nchash=f53baf94" name="codeimage" border="0" id="codeimage" class="fl ml5"> <a href="javascript:void(0)" class="ml5" onclick="javascript:document.getElementById('codeimage').src='https://login.mmloo.com/index.php?act=seccode&op=makecode&nchash=f53baf94&t=' + Math.random();">看不清，换一张</a>
+            <label></label>
+          </dd>
+        </dl>-->
+                <dl>
+          <dt>&nbsp;</dt>
+          <dd>
+            <input type="button" class="login_submit" value="登&nbsp;&nbsp;&nbsp;录" name="Submit">
+            <a class="forget" href="index.php?act=login&amp;op=forget_password">忘记密码？</a>
+            <input type="hidden" value="http://www.mmloo.com/" name="ref_url">
+          </dd>
+        </dl>
+      </form>
+      <dl class="mt10 mb10">
+        <dt>&nbsp;</dt>
+        <dd>还不是本站会员？立即<a title="" href="register.html" class="register">注册</a></dd>
+      </dl>
+            <dl class="d">
+        <dd class="nc-login-other">
+          <p>您可以用合作伙伴账号登录：</p>
+                    <a href="https://login.mmloo.com/shop/api.php?act=toqq" title="QQ" class="qq">&nbsp;</a>
+                              <a href="https://login.mmloo.com/shop/api.php?act=tosina" title="新浪微博" class="sina">&nbsp;</a>
+                              <a href="https://login.mmloo.com/shop/api.php?act=toalipay" title="支付宝" class="alipay">&nbsp;</a>
+                  </dd>
+      </dl>
+          </div>
+    <div class="nc-login-bottom"></div>
+  </div>
+</div>
+
+		<div class="footer">
+			<span class="to_top"><a href="" class="back_to_top">返回顶部</a></span>
+			<ul>
+				<li>
+					<a style="">电脑节|</a>
+					<a style="">年货节|</a>
+					<a style="">批发商城|</a>
+					<a style="">合作及洽谈|</a>
+					<a style="">联系我们|</a>
+					<a style="">关于米米乐商城|</a>
+					<a style="">商家登陆|</a>
+					<a style="">开店协议|</a>
+					<a style="">商家入驻|</a>
+					<a style="">手机版|</a>
+					<a style="">友情链接|</a>
+					<a style="color: red;">招聘英才</a>
+					<a style="">米商|</a>
+					<a style="">8.8包邮</a>
+				</li>
+				<li>© 2016 米米乐商城 www.mmloo.com 版权所有 蜀ICP备06015925号-1</li>
+			</ul>
+		</div>
+		<div class="footerend">
+			<span>
+				<a id="___szfw_logo___">
+					<img src="img/login_02.png" height="47px">
+				</a>
+			</span>
+		</div>
+	</body>
+<script>
+	$(function(){
+		$(".login_submit").click(function() {
+
+		var _cart = JSON.parse(cookie.getCookie("regist"));
+
+		if(_cart == null) {
+			alert("你还没有注册过！！");
+		} else {
+			if(_cart[$(".text1").val()] && $(".text2").val() == _cart[$(".text1").val()]) {
+                var dDate = new Date();
+		           dDate.setDate(dDate.getDate()+7);
+                    document.cookie = "username="+$(".text1").val()+"; expires="+dDate;
+				window.location.href = "index.html";
+			} else {
+				if(_cart[$(".text1").val()]) {
+					alert("您输入的密码不正确");
+				} else {
+					alert("您输入的账户不正确");
+				}
+			}
+		}
+	})
+		
+		
+		
+	})
+	
+</script>
+</html>

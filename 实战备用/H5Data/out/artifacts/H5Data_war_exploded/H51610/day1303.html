@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #outer{ width:300px;height:300px; background-color:red;}
+        #center{ width:200px;height:200px; background-color:yellow;}
+        #inner{ width:100px;height:100px; background-color:green;}
+    </style>
+    <script type="text/javascript">
+        //事件监听方法绑定事件与on开头事件之间的区别
+//        function click01(e){
+//            console.log(e);
+//            alert("demo");
+//            click02(e);
+//        }
+//        function click02(e){
+//            console.log(e);
+//            alert("demo2");
+//        }
+//        function addEventListener(){
+//            var _demo=document.getElementById("demo");
+////            _demo.addEventListener("click",click01,true);
+////            _demo.addEventListener("click",click02,true);
+//            _demo.onclick=click01;
+//            //_demo.onclick=click02;
+//        }
+//        window.onload=function(){
+//            addEventListener();
+//        }
+
+
+
+
+
+        //绑定多个函数时按照绑定顺序执行
+//        function click01(e){
+//            console.log(e);
+//            alert("demo");
+//            //click02(e);
+//        }
+//        function click02(e){
+//            console.log(e);
+//            alert("demo2");
+//        }
+//        function addEventListener(){
+//            var _demo=document.getElementById("demo");
+//            _demo.addEventListener("click",click01,true);
+//            _demo.addEventListener("click",click02,true);
+//        }
+//        window.onload=function(){
+//            addEventListener();
+//        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //捕获
+
+        function capture(){
+            var _list=document.getElementsByTagName("div");
+            for(var i=0;i<_list.length;i++){
+                if(_list[i].id!="demo"){
+                    _list[i].addEventListener("mousemove",function(){
+                        alert(this.id);
+                    },true);//第三个参数决定是捕获机制,还是冒泡机制;
+                }
+            }
+        }
+
+        //attachEvent();此方法绑定事件函数内的this指向与onclick、addEventListener等方法内的this指向不同
+        function attachEvent(){
+            var _list=document.getElementsByTagName("div");
+            for(var i=0;i<_list.length;i++){
+                if(_list[i].id!="demo"){
+                    _list[i].attachEvent("onclick",function(e){
+                        var e=e||window.event;
+                        alert(this.innerHTML);
+                        alert(e.target.innerHTML);
+                    });//第三个参数决定是捕获机制,还是冒泡机制;
+                }
+            }
+        }
+
+
+
+
+
+        //解决事件监听的兼容问题
+        function addEvent(_obj,_type,_fn,_capture){
+            if(_obj.addEventListener) {
+                _obj.addEventListener(_type, _fn, _capture);
+            }else {
+                _obj.attachEvent("on" + _type, _fn);
+            }
+        }
+
+
+
+        function click(){
+            alert("mouseover");
+        }
+        function click02(){
+            alert("02");
+        }
+
+        window.onload=function(){
+            //capture();
+            //attachEvent();
+            var _demo=document.getElementById("demo");
+            _demo.addEventListener("click",click,true);
+            _demo.addEventListener("click",click02,true);
+            _demo.removeEventListener("click",click,true);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <div id="demo">
+        abcde
+    </div>
+    <div id="outer">
+        <div id="center">
+            <div id="inner"></div>
+        </div>
+    </div>
+</body>
+</html>

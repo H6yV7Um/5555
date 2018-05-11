@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车页</title>
+		<link rel="icon" href="../images/anta.icon" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/cart.css"/>
+		<script src="../js/jquery_1.11.3.min.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script src="../js/index.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/cart.js"></script>
+	</head>
+	<body>
+		<!--购物车顶部-->
+		<div class="cart_header">
+			<h4>你好,欢迎来到安踏官方商城！</h4>
+			<ul class="head_list1">
+				<li><a href="login.html">请登录</a></li>
+				<li><a href="register.html">免费注册<span>即送20优惠券</span></a></li>
+			</ul>
+			<ul class="head_list2">
+				<li class="first"><a href="">收藏安踏</a></li>
+				<li><a href="">品牌官网</a></li>
+				<li><a href="">企业采购</a></li>
+				<li class="phone no_bd"><a href="">手机商城</a></li>
+			</ul>
+		</div>
+		<!--购物车logo部分-->
+		<div id="cart_logo">
+			<h1 class="logo left"></h1>
+			<ul class="logo_r">
+				<li>
+					<span class="act">我的购物车</span>
+				</li>
+				<li>
+					<span>填写核对订单信息</span>
+				</li>
+				<li class="end">
+					<span>成功提交订单</span>
+				</li>
+			</ul>
+		</div>
+		<!--我的购物车部分-->
+		<div id="my_cart">
+			
+			<div class="cart_box">
+				<h1>我的购物车</h1>
+				<table  class="tab">
+					<thead>
+						<tr>
+							<td class="w50"><input type="checkbox" id="allChecked"/></td>
+							<td class="w80">商品编号</td>
+							<td class="w120">商品图片</td>
+							<td class="shop_info w290">商品信息</td>
+							<td class="w150">单价</td>
+							<td class="w200">商品数量</td>
+							<td class="w80">赠送积分</td>
+							<td class="w80">删除商品</td>
+						</tr>
+					</thead>
+					<tbody>
+						<!--对购物车中物品的相关操作-->
+						<tr class="shop_run">
+							<td colspan="4">
+								<span class="clearPro"><a href="javascript:;">清空购物车</a></span>
+							</td>
+							<td class="pay" colspan="5"><i>应付金额</i><span class="total">¥<em>0</em></span></td>
+						</tr>
+						<!--表格末尾-->
+						<tr class="shop_b">
+							<td colspan="6">
+								<a class="goShopping" href="../index.html">继续购物</a>
+							</td>
+							<td colspan="2">
+								<a class="sub" href="javascript:;">提交订单</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--购物车中没有商品时显示为空-->
+			<div class="no_shop">
+				<h2>购物车内没有商品,您可以<a href="../index.html">马上去挑选商品<a></h2>
+			</div>
+		</div>
+			<!--服务区-->
+	<!--lx-->
+	<div id="lx">
+		<div class="lianx">
+			<div class="lianL">
+				<div>
+					<h4>新手指南</h4>
+					<p><a href="#">新用户注册</a></p>
+					<p><a href="#">积分政策</a></p>
+					<p><a href="#">用户协议</a></p>
+					<p><a href="#">会员政策</a></p>
+				</div>
+				<div>
+					<h4>购物指南</h4>
+					<p><a href="#">购物流程</a></p>
+					<p><a href="#">订单查询</a></p>
+					<p><a href="#">尺码对照表</a></p>
+				</div>
+				<div>
+					<h4>支付方式</h4>
+					<p><a href="#">发票制度</a></p>
+					<p><a href="#">支付方式</a></p>
+				</div>
+				<div>
+					<h4>配送服务</h4>
+					<p><a href="#">包装形式</a></p>
+					<p><a href="#">配送方式</a></p>
+					<p><a href="#">配送费用</a></p>
+					<p><a href="#">快递查询</a></p>
+				</div>
+				<div>
+					<h4>售后服务</h4>
+					<p><a href="#">退款方式</a></p>
+					<p><a href="#">退换货政策</a></p>
+					<p><a href="#">退换货流程</a></p>
+				</div>
+				<div>
+					<h4>联系我们</h4>
+					<p><a href="#">友情链接</a></p>
+					<p><a href="#">商务合作</a></p>
+					<p><a href="#">企业团购</a></p>
+				</div>
+				<div>
+					<h4>网站导航</h4>
+					<p><a href="#">网站地图</a></p>
+					<p><a href="#">标签</a></p>
+				</div>
+			</div>
+			<div class="lianR">
+				<p><a href="#">在线客服</a></p>
+			</div>		
+		</div>	
+	</div>
+	<div id="lbox1">
+		<div class="lbox">
+			<p class="g1"><img src="../images/g1.jpg" alt=""/><span>官方直营<a>正品保证</a></span></p>
+			<p class="g2"><img src="../images/g2.jpg" alt=""/><span>会员专享<a>折上折优惠</a></span></p>
+			<p class="g3"><img src="../images/g3.jpg" alt=""/>购物258包邮</p>
+			<p class="g4"><img src="../images/g4.jpg" alt=""/><span>支持7天无理由<a>退换货</a></span></p>
+		</div>
+	</div>
+	<!--bottom-->
+	<div id="bottom1">
+		<div class="bottom">
+			<p class="b1">Copyright 2012-2015 XIAMEN ANTA E-COMMERCE LIMITED All Rights Reserve</p>
+			<p class="b2">厦门安踏电子商务有限公司 闽ICP备11020421</p>
+			<p class="b3">福建厦门市思明区观音山嘉义路99号安踏营运中心 电话：400-858-2020</p>
+			<p class="b4">
+				<a href="#"><img src="../images/b1.jpg" alt=""/></a>
+				<a href="#"><img src="../images/b2.jpg" alt=""/></a>
+				<a href="#"><img src="../images/b3.jpg" alt=""/></a>
+				<a href="#"><img src="../images/b4.jpg" alt=""/></a>
+			</p>
+			
+		</div>
+	</div>
+	</body>
+</html>

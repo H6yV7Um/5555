@@ -1,0 +1,43 @@
+html,body{ height: 100%; margin: 0; padding: 0; font-size: 14px;}
+body{ display: flex; display: -webkit-flex; flex-flow: column; -webkit-flex-flow: column;}
+
+section{ background: #ccf; flex: 1;-webkit-flex: 1; display: flex; display: -webkit-flex;  flex-flow: column; -webkit-flex-flow: column;}
+section nav{ height: 3rem; line-height: 3rem; background: #666666; color: #fff; overflow-y: hidden; overflow-x: auto;}
+section nav span{ margin-left: 1rem;}
+section nav em{ display: none;}
+section article{flex: 1; background: #E7E1CD; overflow: hidden;}
+
+.product{ width: 50%; height: 10rem; float: left;}
+.product .inBox{ margin: 0.5rem; height:8rem; overflow:hidden; padding: 0;}
+.product .inBox img{ margin: 0; border: 0; width: 100%;};
+@media screen and (max-width:320px ) {
+	html{font-size: 12px;}
+}
+@media screen and (min-width:321px) and (max-width:750px ) {
+	
+}
+@media screen and (min-width:751px ) {
+	 html{font-size: 16px;}
+	 section nav{ height: auto; width: 15rem;}
+	 section{flex-flow: row}
+	 section nav span{ display: block;}
+	
+	 section nav em{ display:inline; margin-left: 1rem;}
+}
+header{ background: #900; height: 4rem; text-align: center; color: #fff;}
+footer{ background: #999; height: 4.2rem; display: flex; display: -webkit-flex;}
+
+header button{ height:3rem ; line-height: 3rem; margin: 0.5rem; min-width: 4rem; border-radius: 0.2rem; background: #900; }
+header button i.iconfont{font-size: 1.5rem; color: #fff;}
+.floatleft{ float: left;}
+.floatright{ float: right;}
+
+footer button{ flex: 1; height: 100%; border: 0;  position: relative;height:3rem ; line-height: 3rem; margin: 0.5rem; min-width: 4rem; border-radius: 0.2rem; background: #900;}
+footer button i.iconfont{ font-size: 1.5rem;}
+footer button h3{ margin: 0;}
+.clearboth:after{ content: "."; overflow: hidden; height: 1px; width: 1px; clear: both; visibility: hidden;}
+.noborder{ border: 0;}
+
+.carSum{ position: absolute; width: 1.5rem; height: 1.5rem; background: #606; border-radius:50%; text-align: center; line-height: 1.5rem; color: #fff; top:0.5rem; right: 0.5rem; z-index: 999;}
+
+.prodBox{ height: 6rem; background: #ccc; margin-bottom: 2px;}

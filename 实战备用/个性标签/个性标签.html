@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style >
+		*{margin:0;padding:0; list-style: none;}
+		#box_01{background: green;width:500px; height:164px;margin:0 auto;}
+		#box_02{float:left;height:80px;}
+		#_box{float:left;}
+		 p{ font-size:22px; font-weight: bold;color:#F90;}
+		 #ul_01 li{font-size:14px;padding:3px 5px;background:red; margin:3px 3px; float:left; color:#fff; cursor: pointer;
+		 opacity: 0.6;}
+		 #ul_01 li i{display:none; cursor:pointer;}
+		 #ul_01 li i.active{ display:inline-block;}
+		#all span{ font-size:14px;padding:3px 5px;background:blue; margin:3px 3px; float:left; color:#fff; cursor:pointer;}
+		#all span.active{background: #0096db}
+	</style>
+
+	</head>
+	<body>
+		<div id="box_01">
+			<div id="box_02">
+
+				<p>我的标签：</p>
+				<ul id="ul_01">
+				</ul>
+			</div>
+		<div id="_box">
+		<p>设置标签：</p>
+		<p id="all">
+			<span>打 球</span>
+			<span>玩游戏</span>
+			<span>健 身</span>
+			<span>美 食</span>
+			<span>唱 歌</span>
+			<span>看电影</span>
+			<span>购物狂</span>
+			<span>旅  游</span>
+            <span>看球赛</span>
+			<span>奋斗ing</span>
+			<span>看 书</span>
+		</p>
+	</div>
+</div>
+	<script>
+	var aSpan=all.getElementsByTagName('span');
+	var oUl=document.getElementsByTagName('ul')[0];
+	for(var i=0;i<aSpan.length;i++){
+		aSpan[i].onclick=function(){
+			var oLi=document.createElement('li');
+			oLi.innerHTML=this.innerHTML+'<i>'+'×'+'</i>';
+			oLi.onmouseover=function(){
+				var me=this.children[0]
+				me.className="active";
+				me.onclick=function(){
+					for(var j=0;j<aSpan.length;j++){
+						var you=aSpan[j].innerHTML+'<i class="active">'+'×'+'</i>';
+						if(you==oLi.innerHTML){
+							aSpan[j].className="";
+						}
+					}
+					oUl.removeChild(oLi);
+				}
+			}
+			oLi.onmouseout=function(){
+					this.children[0].className="";
+				}
+			if(this.className==""){
+				oUl.appendChild(oLi);
+				this.className="active"
+				}
+		}
+	}
+</script>
+
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box" style="width:100px;height:100px;background:#03ccbb;position:absolute; left:0; top:0;"></div>
+	<script>
+		var oBox = document.getElementById('box');
+		var aCookie = document.cookie.split("; ");
+       
+		for(var i=0; i<aCookie.length; i++){
+			var aCook = aCookie[i].split('=');
+			if(aCook[0] == "x"){
+				oBox.style.left = aCook[1]+"px";
+			}else if(aCook[0] == 'y'){
+				oBox.style.top = aCook[1]+"px";
+			}
+		}
+		var dDate = new Date();
+		dDate.setDate(dDate.getDate()+7);
+		oBox.onmousedown=function(e){
+			e = e || event;
+			var nX = e.clientX - oBox.offsetLeft;
+			var nY = e.clientY - oBox.offsetTop;
+			var nLeft = 0;
+			var nTop = 0;
+			document.onmousemove=function(e){
+				e = e || event;
+				nLeft = e.clientX - nX;
+				nTop = e.clientY - nY;
+				oBox.style.left = nLeft + 'px';
+				oBox.style.top = nTop + 'px';
+			}
+			document.onmouseup=function(){
+				document.onmousemove = null;
+				document.onmouseup = null;
+				document.cookie = "x="+nLeft+"; expires="+dDate;
+				document.cookie = "y="+nTop+"; expires="+dDate;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="style/jQdialog.css" type="text/css" rel="stylesheet" />
+	</head>
+	<body>
+		<button id="dialog01">弹出窗口1</button>
+		<button id="dialog02">弹出窗口2</button>
+		<button id="dialog03">弹出窗口3</button>
+		<script type="text/javascript" src="script/jquery-1.11.3.js" ></script>
+		<script src="script/jQdialog.js"></script>
+		<script>
+		$(function(){
+			
+			$("#dialog01").on("click",function(){
+				//console.log("a");
+				alert("111111111111111");
+//				var dialog01=new JQDialog({
+//					text:"第一个弹窗！",
+//					title:"弹出窗"
+//				});
+//				dialog01._create();
+			})
+			$("#dialog02").on("click",function(){
+				//console.log("a");
+				var dialog01=new JQDialog({
+					text:"第二个弹窗！",
+					width:200,
+					height:100,
+					btnClass:"close"
+				});
+				dialog01._create();
+			})
+			
+			$("#dialog03").mydialog({
+				text:"jq弹出窗插件！"
+			});
+		})
+			
+		</script>
+	</body>
+</html>

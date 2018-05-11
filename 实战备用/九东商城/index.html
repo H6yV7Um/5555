@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+<script>
+function listload(){
+		this.data=0;
+		var _self=this;
+		this.getlist=function(){
+			$.get("Json/menu.json",function(data){
+			_self.data=eval(data);
+			for(var i=0;i<_self.data[0]["category"].length;i++){
+				var _html='<ul class="fir"><li class="title1"><a href="/products.html?n=1">'+_self.data[0]["category"][i]["title"]+'</a></li><li class="list"></li></ul>'
+				
+				$('.menu').append(_html);
+			};
+			_self.appear();
+			_self.addlist1();
+			},"text");
+			}
+		this.addlist1=function(){
+			for(var j=0;j<_self.data[0]["category"].length;j++){
+				for(var n=0;n<_self.data[0]["category"][j]["children"].length;n++){
+					console.log(_self.data[0]["category"][j]["children"].length)
+					var _html1='<a href="">'+_self.data[0]["category"][j]["children"][n]["title"]+'</a>';
+				$('.menu .list').eq(j).append(_html1);
+				}
+			}
+			this.addlist_right1();
+		}	
+		this.addlist_right1=function(){
+			$(".menu .fir").mouseover(function(){
+				var a=$(".menu .fir").index(this);
+				$('.fenlei').empty();
+				for(var i=0;i<_self.data[0]["category"][a]["children"].length;i++){
+					var _html='<dl><dt><a href="">'+_self.data[0]["category"][a]["children"][i]["title"]+'</a></dt><dd><ul></ul></dd></dl>';
+					$('.fenlei').append(_html)
+					_self.addlist_right2(a);
+				}
+			})
+		}
+		this.addlist_right2=function(a){
+			for(var i=0;i<_self.data[0]["category"][a]["children"].length;i++){
+				for(var j=0;j<_self.data[0]["category"][a]["children"][i]["children"].length;j++){
+					var _html='<li><a href="">'+_self.data[0]["category"][a]["children"][i]["children"][j]["title"]+'</a></li>'
+					$('.fenlei ul').append(_html)
+				}
+			}
+		}
+		this.appear=function(){
+			$(".menu .fir").mouseover(function(){				
+				$('.fenlei').css({display:"block"})
+			});
+			$(".fenlei").mouseover(function(){				
+				$('.fenlei').css({display:"block"})
+			});
+			$(".fenlei").mouseout(function(){
+				$('.fenlei').css({display:"none"})
+			});
+			$(".menu .fir").mouseout(function(){
+				$('.fenlei').css({display:"none"})
+			});
+		}
+	}
+	$(function(){
+		
+		
+		var load=new listload();
+		
+		load.getlist(); 
+		
+		
+	})
+
+</script>
+	
+	</head>
+	<body>
+		<div class="top">
+			<div>
+				<span id="top_user">
+					<span class="login">会员，请登录</span>
+					<a class="reg">免费注册</a>
+				</span>
+			</div>
+		</div>
+		<div class="header">
+   			 <div class="content">
+        		<div class="logo"><a href="http://www.jiudon.com"><img alt="" src="images/logo.jpg"></a></div>
+        		<div class="words"><img alt="" src="images/words.jpg"></div>
+        		<div class="search"><input type="text" id="keyword"><span id="search">搜索</span></div>
+        		<div class="motto"><span>购物即存款消费即赚钱</span></div>
+       			<div class="QRcode"><img alt="" src="images/QRcode.jpg"></div>
+			    <div class="tag">
+			        <img alt="" src="images/icon_01.jpg" class="l_icon">
+			        <span>全部商品分类</span>
+			        <img alt="" src="images/icon_02.jpg" class="r_icon">
+			    </div>
+	<div>	    
+        
+          
+        </div>
+        <div class="nav" id="nav">
+        	<a href="/products.html?n=13">小家电</a>
+        	<a href="/products.html?n=15">个人用品</a>
+        	<a href="/products.html?n=5">美容护理</a>
+        	<a href="/products.html?n=57">手机/配件</a>
+        	<a href="/products.html?n=58">电脑/配件</a>
+        	<a href="/products.html?n=59">平板电脑</a>
+        	<a href="/products.html?n=9">农副</a>
+        	<a href="/products.html?n=87">九东汽车商城</a>
+        </div>
+    		</div>
+</div>
+		<div id="zhongbu">
+		<div id="na" class="topp">
+	        <div class="menu"  style="display: block;">
+	        </div>
+	        <div class="fenlei">
+	        </div>
+		</div>
+	</div>
+
+
+	</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index_01.css"/>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cookie.css"/>
+		<script src="js/jquery-1.11.3.js"></script>
+		<script src="js/ajax.js"></script>
+	</head>
+	<body>
+		<div id="wrp_01">
+			<div id="pub_top">
+				<div class="user">
+					<span class="ml20">
+						<a href="login.html">登录</a>
+					</span>
+					<span class="ml20">
+						<a href="register.html">注册</a>
+					</span>
+				</div>
+				<div class="menu">
+					<div class="menu_car">
+						<dl class="my_car">
+							<div class="goods_num">0</div>
+							<dt class="car_text">
+								<span></span>
+								购物车
+								<em>0</em>
+								件
+								<i class="arrow"></i>
+							</dt>
+							<dd style="width: 348px; top: 30px;">
+								<div class="sub_title">
+									<h4>最新加入的商品</h4>
+								</div>
+								<div class="goods_box">
+									<div class="car_goods">
+										<img class="loading" src="img/loading.gif" />
+									</div>
+								</div>
+								<div class="checkout">
+									<span class="total_goods">
+										共<strong>0</strong>种商品
+									</span>
+									<a>结算购物车中的商品</a>
+
+								</div>
+							</dd>
+
+						</dl>
+						<dl class>
+							<dt>
+								<a>用户中心</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>商品收藏</a>
+									</li>
+									<li>
+										<a>店铺收藏</a>
+									</li>
+									<li>
+										<a>米米乐收藏</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a>我的订单</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>待付款订单</a>
+									</li>
+									<li>
+										<a>待确认订单</a>
+									</li>
+									<li>
+										<a>待评价交易</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt>
+								<a>客户服务</a>
+								<i></i>
+							</dt>
+							<dd>
+								<ul>
+									<li>
+										<a>帮助中心</a>
+									</li>
+									<li>
+										<a>售后服务</a>
+									</li>
+									<li>
+										<a>客服中心</a>
+									</li>
+									<li>
+										<a>在线客服</a>
+									</li>
+									<li>
+										<a>QQ客服</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+
+						<dl class>
+							<dt style="width: 90px;">
+								<em class="wang"></em>
+								<a>网站导航</a>
+								<i></i>
+							</dt>
+							<dd style="width: 102px;">
+								<ul>
+									<li style="width: 102px;">
+										<a>导购频道</a>
+									</li>
+
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--导航结束-->
+		
+		<header class="ncc-head-layout">
+		    <div class="site-logo">
+		    	<a href="http://www.mmloo.com/shop"><img src="img/log.png" class="pngFix"></a>
+		    </div>
+		    <ul class="ncc-flow">
+			    <li class="current"><i class="step1"></i>
+			        <p>我的购物车</p>
+			        <sub></sub>
+			        <div class="hr"></div>
+			    </li>
+			    <li class=""><i class="step2"></i>
+			        <p>填写核对购物信息</p>
+			        <sub></sub>
+			        <div class="hr"></div>
+			    </li>
+			    <li class=""><i class="step3"></i>
+			        <p>支付提交</p>
+			        <sub></sub>
+			        <div class="hr"></div>
+			    </li>
+			    <li class=""><i class="step4"></i>
+			        <p>订单完成</p>
+			        <sub></sub>
+			        <div class="hr"></div>
+			    </li>
+		    </ul>
+  		</header>
+  		<!--购物车-->
+  		
+  		<div class="ncc-wrapper">
+	  		<div class="ncc-main">
+	  			<div class="ncc-title">
+				    <h3>我的购物车</h3>
+				    <h5>查看购物车商品清单，增加减少商品数量，并勾选想要的商品进入下一步操作。</h5>
+				</div>
+	  		</div>
+	  		
+	  		<form action="https://buy.mmloo.com/index.php?act=buy&amp;op=buy_step1" method="POST" id="form_buy" name="form_buy">
+			    <input type="hidden" value="1" name="ifcart">
+			    <table class="ncc-table-style" nc_type="table_cart">
+			      	<thead>
+				        <tr>
+				          	<th class="w50"><label>
+				              <input type="checkbox" checked="" value="1" id="selectAll">全选</label>
+				           	</th>   	
+				          	<th></th>
+				          	<th>商品</th>
+				          	<th class="w120">单价(元)</th>
+				          	<th class="w120">数量</th>
+				          	<th class="w120">小计</th>
+				          	<th class="w80">操作</th>
+				        </tr>
+			      	</thead>
+			      	
+			      <!--	加入-->
+			         <tbody>
+				        <tr>
+				          	<th colspan="20"><i class="icon-home"></i><a target="_blank" href="">官方店铺</a> <span member_id="1"><a class="chat chat_offline" title="在线联系" href="JavaScript:chat(1);"></a></span>
+				                <div class="store-sale"><em><i class="icon-gift"></i>免运费</em>满49免运费 </div>
+				            </th>
+				        </tr>
+
+        <!-- S one store list -->
+                		<tr id="cart_item_87842" nc_group="87842" class="shop-list ">
+         		 			<td><input type="checkbox" checked="" nc_type="eachGoodsCheckBox" value="87842|1" id="cart_id87842" name="cart_id"></td>
+                    		<td class="w60">
+                    			<a href="" target="_blank" class="ncc-goods-thumb"><img src="img/ui0.jpg" alt="苹果Apple MacBook Pro 笔记本电脑 Retina显示屏 MJLT2MK9P2CH/A 15英寸"></a>
+                    		</td>
+                    		<td class="tl">
+                    			<dl class="ncc-goods-info">
+              						<dt>
+              							<a href="" target="_blank">苹果Apple MacBook Pro 笔记本电脑 Retina显示屏 MJLT2MK9P2CH/A 15英寸</a>
+              						</dt>
+              						<dd></dd>
+                                </dl>
+                    		</td>                                          
+            
+          					<td class="w120">
+          						￥<em id="item87842_price">17888.00</em>
+          					</td>
+                        		          
+                    		<td class="w120 ws0"><a href="JavaScript:void(0);" title="减少商品件数" class="add-substract-key tip1">-</a>
+            					<input id="input_item_87842" value="1" orig="1" changed="1" onkeyup="change_quantity(87842, this);" type="text" class="text w20">
+            					<a href="JavaScript:void(0);" title="增加商品件数" class="add-substract-key tip2">+</a></td>
+                    		<td class="w120">           ￥<em id="item87842_subtotal" nc_type="eachGoodsTotal">17888.00</em></td>
+            				
+          					<td class="w80">
+                        		<a class="w80_delet" href="javascript:void(0)">删除</a>
+                    		</td>
+                		</tr>
+
+        <!-- S bundling goods list -->
+                <!-- E bundling goods list -->
+                        <!-- E one store list -->
+
+        <!-- S mansong list -->
+                <!-- E mansong list -->
+
+				       
+              		</tbody>  
+              		
+			      	<tfoot>
+			      		 <tr id="clone_tr">
+				          <td class="tr" colspan="20"><div class="ncc-store-account">
+				              <dl>
+				                <dt>店铺合计：</dt>
+				                <dd>￥<em nc_type="eachStoreTotal" id="cartTotal_shop">0.00</em></dd>
+				              </dl>
+				            </div></td>
+				        </tr>
+				        <tr>
+				          <td colspan="20"><div class="ncc-all-account">商品总价￥<em id="cartTotal">0.00</em>元</div></td>
+				        </tr>
+			      	</tfoot>
+			      	
+			     <!-- 	end-->
+			    </table>
+		  	</form>
+		  	<div class="ncc-bottom"><a id="next_submit" href="javascript:void(0)" class="ncc-btn ncc-btn-acidblue fr"><i class="icon-pencil">
+		  		</i>结算</a>
+		  	</div>
+		</div>
+		<!--购物车end-->
+		
+		<!--结尾部分-->
+		<div class="wrapper_out">
+			<div class="wrapper clear" style="width: 1200px;">
+				<div style="float: left; ">
+					<ul>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+						<li> 
+							<dl class="s1">
+					      		<dt>购物指南</dt>
+					        	<dd><i></i><a href="" title="礼品卡的购买与使用" rel="nofollow" target="_blank">礼品卡的购买与使用 </a></dd>
+					      	    <dd><i></i><a href="" title="无法收到邮件？" rel="nofollow" target="_blank">无法收到邮件？ </a></dd>
+					      	    <dd><i></i><a href="" title="关于捷信分期" rel="nofollow" target="_blank">关于捷信分期 </a></dd>
+					      	    <dd><i></i><a href="" title="邮费制度" rel="nofollow" target="_blank">邮费制度 </a></dd>
+					      	    <dd><i></i><a href="" title="订单状态说明" rel="nofollow" target="_blank"> 订单状态说明 </a></dd>
+					      	</dl>
+						</li>
+					</ul>
+				</div>
+				<div style="float:right;height:230px;width:410px;background:white;margin-right:0px;">
+					<table>
+						<tbody>
+						<tr>
+						<td>
+					  		<div class="kefu">
+					     		<div class="con">
+					        		<dl>
+					        			<dt style="font-weight:bold;font-size:16px;">客服中心</dt>
+					        			<dd class="tel">&nbsp;&nbsp;&nbsp;&nbsp;4006-780-781</dd>
+					        			<dd>E-mail：mmloo@mmloo.com</dd>
+					        			<dd>四川省成都市新南路亚华大厦六楼</dd>
+					        			<dd><a rel="nofollow" href=""><img alt="QQ" src="img/qq.gif  " style="vertical-align: middle;">4006780781</a></dd>
+					        		</dl>
+				        		</div> 
+					  		</div>
+					  	</td>
+					  	<td>
+					  		<div class="microinfo">
+					     		<dl class="mic">
+									<dt><a href="">关于米米乐商城</a></dt>
+									<dt><img width="80" height="80" title="米米乐微信公众号" alt="米米乐微信公众号" src="img/qmi.png"><br>
+										<div style="margin-top:3px;">手机下单更优惠</div>
+										<div style="margin-top:3px;">快乐网购 轻松拥有</div>
+									</dt>
+				         		</dl>
+					  		</div>
+					  	</td>	
+						</tr>
+		  				</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="footer ">
+			<span class="to_top "><a href=" " class="back_to_top ">返回顶部</a></span>
+			<ul>
+				<li>
+					<a style=" ">电脑节|</a><a style=" ">年货节|</a><a style=" ">批发商城|</a><a style=" ">合作及洽谈|</a><a style=" ">联系我们|</a><a style=" ">关于米米乐商城|</a><a style=" ">商家登陆|</a><a style=" ">开店协议|</a><a style=" ">商家入驻|</a><a style=" ">手机版|</a><a style=" ">友情链接|</a><a style="color: red; ">招聘英才</a><a style=" ">米商|</a><a style=" ">8.8包邮</a>
+				</li>
+				<li>© 2016 米米乐商城 www.mmloo.com 版权所有  蜀ICP备06015925号-1</li>
+			</ul>
+		</div>
+		<div class="footerend ">
+			<span>
+				<a id="___szfw_logo___ ">
+					<img src="http://www.mmloo.com/shop/templates/default/images/cxlogo.png " height="47px "/>
+				</a>
+			</span>
+		</div>
+		
+		<script type="text/javascript">
+			$(function(){
+				
+				var _cart = JSON.parse(cookie.getCookie("cart"));
+				var goods1 = $("#cart_item_87842").clone();
+				$("#cart_item_87842").remove();
+				$.get("json/list.json",function(data){
+					i=0;
+					for(var k in _cart){
+					var goods2=	goods1.clone();
+					    goods2.attr("data_id" ,k);
+						$("tbody").append(goods2);
+		
+						$("#cart_item_87842 .w60 img").eq(i)[0].src = "img/"+data[k]["picurl_0"] ;
+						$("#cart_item_87842 .ncc-goods-info a").eq(i).html(data[k]["p1"]);
+						$("#cart_item_87842 .w120 #item87842_price").eq(i).text(data[k]["p_01"] );
+						$(".tip2").eq(i)[0].id=k;
+						$(".tip1").eq(i)[0].id=k;
+						$(".w80_delet").eq(i).html("删除");
+						$(".w80_delet").eq(i)[0].id=k;
+						$(".w80_delet").eq(i)[0].href = "";
+						$(".ws0 input").eq(i).val(_cart[k]);
+						 price = data[k]["p_01"];
+						 num = _cart[k];
+						 total=price*num;
+						$("#cart_item_87842 .w120 #item87842_subtotal").eq(i).text(total );
+						
+						
+						(function(i){
+							//点击加号
+							$(".tip2").eq(i).click(function(){
+								allmomey2 = 0;
+								Ttotal = 0;
+								znum = $(this)[0].id;
+								console.log(znum)
+								var _cart = JSON.parse(cookie.getCookie("cart"));
+								var _cookie = "cart={";
+									for(var k in _cart) {
+										if(k ==znum){
+											_cookie += "\"" +  k + "\":" + (_cart[k]+1)  + ",";
+										}else{
+											_cookie += "\"" + k + "\":" + _cart[k]  + ",";
+										}
+									}
+									_cookie = _cookie.substring(0, _cookie.lastIndexOf(","));
+								_cookie += "}";
+								document.cookie = _cookie;
+								console.log( _cookie);
+								 _cart1 = JSON.parse(cookie.getCookie("cart"));
+								$(".ws0 input").eq(i).val(_cart1[znum]);
+								var price1 = data[znum]["p_01"];
+								var num1 = _cart[k];
+								var Ttotal=price1*num1;
+								$("#cart_item_87842 .w120 #item87842_subtotal").eq(i).text(Ttotal );
+									var gwnumber1=0;
+									for(var k1 in _cart1) {
+										number1 = _cart1[k1];
+										price2 = data[k1]["p_01"];
+										Tmoney = price2 * number1;
+										allmomey2 += Tmoney;
+										 //gwnumber1+=number1;
+									}
+								$("#cartTotal_shop").text(allmomey2)
+								$("#cartTotal").text(allmomey2);
+							})	
+							//点击减号
+							$(".tip1").eq(i).click(function(){
+								var allmoney2 = 0;
+								znum = $(this)[0].id;
+								//console.log(znum)
+								var _cart_tip1 = JSON.parse(cookie.getCookie("cart"));
+								var _cookie = "cart={";
+									for(var k in _cart_tip1) {
+											if(k ==znum){
+												_cookie += "\"" + k + "\":" + (_cart_tip1[k]-1)  + ",";
+											}else{
+												_cookie += "\"" + k + "\":" + _cart_tip1[k]  + ",";
+											}
+									}
+									_cookie = _cookie.substring(0, _cookie.lastIndexOf(","));
+								_cookie += "}";
+								document.cookie = _cookie;
+								//console.log( _cookie);
+								 _cart_tip2 = JSON.parse(cookie.getCookie("cart"));	
+								 $(".ws0 input").eq(i).val(_cart_tip2[znum]);
+								var _price1 = data[znum]["p_01"];
+								var _num1 = _cart_tip2[k];
+								var _Ttotal=_price1*_num1;
+								$("#cart_item_87842 .w120 #item87842_subtotal").eq(i).text(_Ttotal );
+								var _gwnumber1=0;
+									for(var k1 in _cart_tip2) {
+										_number1 = _cart_tip2[k1];
+										_price1 = data[k1]["p_01"];
+										_Tmoney = _price1 * _number1;
+										allmoney2 += _Tmoney;
+										 //gwnumber1+=number1;
+									}
+								$("#cartTotal_shop").text(allmoney2)
+								$("#cartTotal").text(allmoney2);
+							})
+							
+						
+							//点击删除
+
+							$(".w80_delet").eq(i).click(function() {
+								var num = $(this).attr("id")
+								var _cart5 = JSON.parse(cookie.getCookie("cart"))
+								var _dtcart= JSON.parse(cookie.getCookie("delet"));
+								var _cookie = "cart={";
+								var _cookie2="delet={"
+                                for(var d in _dtcart) {
+										_cookie2+="\"" + d + "\":" + _dtcart[d] + "," ;
+									}
+								for(var k in _cart5) {
+
+									if(k != num) {
+										_cookie += "\"" + k + "\":" + _cart5[k] + ",";
+									}
+									else{
+									
+										_cookie2+="\"" + k + "\":" + _cart5[k] + "," ;
+										
+									}
+								}
+								if(_cookie != "cart={") {
+									_cookie = _cookie.substring(0, _cookie.lastIndexOf(","));
+								
+								}
+		
+										_cookie2 = _cookie2.substring(0, _cookie2.lastIndexOf(","));
+								
+								_cookie += "}";
+								_cookie2+="}";
+								document.cookie = _cookie;
+								document.cookie=_cookie2;
+				
+							})
+
+								
+							
+						})(i)
+						
+						i++;
+					}
+					
+				},"json")
+						
+			})	
+		</script>
+	
+		
+		
+		
+	</body>
+</html>

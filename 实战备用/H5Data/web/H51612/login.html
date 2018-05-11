@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var _user={
+                "1001":{
+                    "account":"123456",
+                    "password":"123456"
+                },
+                "1002":{
+
+                }
+            }
+            $("span").text(validateCode());
+            $("#login").click(function(){
+
+                if($("#validateCode").val()==$("span").text()){
+                    for(var key in _user){
+                        if($("#account").val()==_user[key]["account"] && true){
+                            $("div").html("欢迎"+_user[key]["account"]);
+                        }
+                    }
+                }
+
+            })
+        });
+        function validateCode(){
+            var _code=[];
+            var m=0;
+            for(var i=0;i<36;i++){
+                if(i<=9){
+                    _code[i]=i;
+                }else{
+                    _code[i]=String.fromCharCode("a".charCodeAt(0)+m);
+                    m++;
+                }
+            }
+            return ""+_code[Math.floor(Math.random()*_code.length)]+_code[Math.floor(Math.random()*_code.length)]+_code[Math.floor(Math.random()*_code.length)]+_code[Math.floor(Math.random()*_code.length)];
+        }
+        function validateUser(){
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="account"/>
+<input type="password" id="password"/>
+<input type="text" id="validateCode"/><span></span>
+<input type="button" id="login"/>
+<div></div>
+</body>
+</html>

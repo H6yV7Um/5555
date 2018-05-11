@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>弹幕</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#box{
+		width: 1178px;
+		height: 981px;
+		background:url(img/2.gif) repeat center;
+		margin:100px auto;
+		position: relative;
+		border: 2px red solid;
+		overflow: hidden;
+	}
+	#video{
+		width: 1178px;
+		height: 800px;
+
+		overflow:hidden;
+		display: block;
+
+	}
+	#bottom{
+		width:420px;
+		height:80px;
+		margin-top:420px;
+		display: none;
+		position: absolute;
+		bottom:0;
+		left:180px;
+	}
+	#bottom #btn{
+		width:50px;
+		height:25px;
+		position: absolute;
+		top:30px;
+		left:300px;
+	}
+	#bottom #inp{
+		width:280px;
+		height:30px;
+		position: absolute;
+		top:25px;
+		left:10px;
+	}
+	#video p{
+		color:red;
+		font-size: 28px;
+		font-weight: 600;
+		line-height: 28px;
+		position: absolute;
+		top:200px;
+		left:1178px;
+		white-space: nowrap;
+		display: block;
+	}
+	#btn1{
+		position: absolute;
+		top:30px;
+		left:355px;
+		height:25px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="video"></div>
+		<div id="bottom">
+			<input id="inp" placeholder="请输入发送内容" />
+			<button id="btn">发送</button>
+			<button id="btn1">隐藏弹幕</button>
+		</div>
+    </div>
+	
+
+</body>
+<script type="text/javascript">
+		var obox = document.getElementById('box');
+		var ovideo = document.getElementById('video');
+		var oBottom = document.getElementById('bottom');
+		var oBtn = document.getElementById('btn');
+		var oinp = document.getElementById('inp');
+		var oBtn1 = document.getElementById('btn1');
+		obox.onmouseover = function(){
+			oBottom.style.display = "block";
+		}
+		obox.onmouseout = function(){
+			oBottom.style.display = "none";
+		}
+
+		oBtn.onclick = function(){
+			send();
+		} 
+		document.onkeydown=function(){
+			if(event.keyCode==13){
+				send();
+			}
+		};
+		
+
+		function send(){
+			var ovalue = oinp.value;
+			if(ovalue){
+				var oP = document.createElement('p');
+				ovideo.appendChild(oP);
+				var text = document.createTextNode(ovalue);
+				oP.appendChild(text);
+				oP.style.top = highRandom() + 'px';
+				oP.style.color = colorRandom();
+				oP.style.fontSize = sizeRandom();
+				oinp.value = "";
+			}
+			var num = 1178;
+			var timer = setInterval(function(){
+				num--;
+				if(num <= -oP.offsetWidth){
+					clearInterval(timer);
+					ovideo.removeChild(oP);
+				}
+				oP.style.left = num + 'px';
+			},runRandom());
+		}	
+
+		var onOff = true;
+		oBtn1.onclick = function(){
+			if(onOff){
+				onOff = false;
+				ovideo.style.display = 'none';
+				oBtn1.innerHTML = '显示弹幕';
+			}else{
+				onOff = true;
+				ovideo.style.display = 'block';
+				oBtn1.innerHTML = '隐藏弹幕';
+			}
+		}
+
+
+
+
+		function colorRandom(){
+			var aColor = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+			var sColor = '#';
+			for(var i=0; i<6; i++){
+				sColor += aColor[parseInt(Math.random()*16)];
+			}
+			return sColor;
+		}
+		function runRandom(){
+			return Math.floor( Math.random()*16 ) + 14//14-29
+		}
+		function sizeRandom(){
+			return Math.floor( Math.random()*16 ) + 13 +'px'//13-28
+		}
+
+		function highRandom(){
+			return ( Math.random()*800 ) 
+		}
+
+
+
+</script>
+</html>

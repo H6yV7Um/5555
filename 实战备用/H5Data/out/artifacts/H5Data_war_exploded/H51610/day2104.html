@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        var obj_01={
+            "method":function(n){
+                alert(n);
+                //obj_02.method(10);
+            }
+        }
+        var obj_02={
+            "method":function(n){
+                obj_01.method(n);
+            }
+        }
+        //obj_02.method(10);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function People(){//以下 this 指向当前构造函数所构造出的对象。
+            this.arm=2;
+            this.leg=2;
+            this.eat=function(){
+                alert("eat");
+                return "eat";
+            }
+            this.walk=function(){
+                alert("walk");
+            }
+        }
+        var _people=new People();
+        console.log(_people);
+
+
+        var name="abc";
+        var _obj={
+            "getNameFunction":function(){
+                return function(){
+                    return this;
+                }
+            }
+        };
+        console.log((function (){
+            return this
+        })());
+
+
+        var _this={
+            "name":"tom"
+        };
+        _this.getName=function(){
+            return this;
+        };
+        console.log(_this.getName());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

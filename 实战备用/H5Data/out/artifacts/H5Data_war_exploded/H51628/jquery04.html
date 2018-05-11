@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{width:100px; height:100px; background-color:red; margin-top:10px;}
+    </style>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+//            console.log($("div:eq(0)").css({"background-color":"red","width":"100px","height":"100px"}));
+//            console.log($("div").eq(0));
+            //console.log($("ul li").hasClass("demo"));
+//            if($("ul li").hasClass("demo")){
+//                $("ul li:first").show(2000);
+//            }
+
+            /*function demo(){
+                alert("demo");
+            }
+            demo.ajax=function(){
+                alert("ok");
+            }
+            demo.ajax=function(){
+                alert("prototype");
+            }
+            var _demo=new demo();
+            console.log(_demo instanceof Object);
+            _demo.ajax();
+            demo();*/
+
+
+//            var _obj=new Object();
+//            _obj.a=1000;
+//            function Demo(){
+//                this.a=10;
+//                this.b=100;
+//                this.fn=function(){
+//                    alert(this.a+this.b);
+//                    return this;
+//                }
+//            }
+//            var _demo=new Demo();
+//            console.log(_demo.a);
+
+
+            //console.log($("ul li").filter(".demo").show(2000));
+
+            //console.log($("input").parent().is($("form")[0]));
+
+
+//console.log($("p").append($("input").map(function(){
+//    return $(this).val();
+//}).get().join(", ")));
+//            $("p").append($("input").map(function(){
+//                return $(this).val();
+//            }));
+
+            //$('li').has('ul').css('background-color','red');
+
+
+
+//            var _arr=[$("input").eq(0),$("input").eq(1),$("input").eq(2)];
+//            _arr.map=function(){
+//                for(var i=0;i<this.length;i++){
+//                    console.log(this[i].val()+",");
+//                }
+//            }
+//            _arr.map();
+
+
+
+
+            //console.log($("div").children("span.demo"));
+
+
+            //console.log($(".demo").nextUntil(".abc"));
+
+//            console.log($("span").parents());
+//            console.log($("span").parentsUntil("html"));
+
+            //console.log($("p").append("<a href=\"http://www.1000phone.com\">12345</a>"));
+//            $(".inner").click(function(){
+//                alert("inner");
+//            });
+//            $(".demo").click(function(){
+//                alert("demo");
+//            })
+//            console.log($("body").append($(".inner").remove()));
+//            console.log($("body").append($(".demo").detach()));
+
+//            function css(_param){
+//                _param.width(0,100);
+//                _param.width(0,document.getElementsByTagName("div")[0].clientWidth);
+//            }
+//
+//            var _obj={
+//                attr:0,
+//                width: function(index, value) {
+//                    console.log(value);
+//                    return pareFloat(value) * 1.2;
+//                },
+//                height: function(index, value) {
+//                    return parseFloat(value) * 1.2;
+//                }
+//            };
+//
+//
+//
+//            var _obj=new Object();
+//            _obj.attr=0;
+//            _obj.method=function(){
+//
+//            }
+//
+//
+//            var _obj={
+//                "attr":10,
+//                "method":function(){
+//
+//                }
+//            }
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//            _obj.width(0,100);
+//            css(_obj);
+
+//            $("div").click(function() {
+//                $(this).css({
+//                    width: function(index, value) {
+//                        return parseFloat(value) * 1.2;
+//                    },
+//                    height: function(index, value) {
+//                        return parseFloat(value) * 1.2;
+//                    }
+//                });
+//            });
+
+
+
+
+
+            /*$("p:last").css("position","absolute");
+            //$("p:last").position({ top: 100, left: 300 });
+            var p = $("p:last");
+            var position = p.position();
+            p.html( "left: " + position.left + ", top: " + position.top );*/
+
+
+
+
+
+
+
+//            (function($) {
+//                if (!$.cssHooks) {
+//                    throw("jQuery 1.4.3+ is needed for this plugin to work");
+//                    return;
+//                }
+//                function styleSupport( prop ) {
+//                    var vendorProp,//?
+//                            supportedProp,//支持的属性
+//                            capProp = prop.charAt(0).toUpperCase() + prop.slice(1),//capProp==BorderRadius //prop.charAt(0).toUpperCase()=="B" + prop.slice(1)=="orderRadius",
+//                            prefixes = [ "Moz", "Webkit", "O", "ms" ],//表示前缀
+//                            //-Moz-BorderRadius:50%;MozBorderRadius
+//                            //-O-BorderRadius:50%;
+//                            //-Webkit-BorderRadius:50%;
+//                            //-ms-BorderRadius:50%;
+//                            div = document.createElement( "div" );//创建div对象
+//                    if ( prop in div.style ) {//prop＝＝borderRadius; div.style
+//                        supportedProp = prop;
+//                    } else {
+//                        for ( var i = 0; i < prefixes.length; i++ ) {
+//                            vendorProp = prefixes[i] + capProp;//vendorProp=="MozBorderRadius"
+//                            if ( vendorProp in div.style ) {
+//                                supportedProp = vendorProp;
+//                                break;
+//                            }
+//                        }
+//                    }
+//                    div = null;//手动回收div的内存
+//                    $.support[ prop ] = supportedProp
+//                    return supportedProp;
+//                }
+//                var borderRadius = styleSupport("borderRadius");
+//                // Set cssHooks only for browsers that
+//                // support a vendor-prefixed border radius
+//                if ( borderRadius && borderRadius !== "borderRadius" ) {
+//                    $.cssHooks.borderRadius = {
+//                        get: function( elem, computed, extra ) {
+//                            return $.css( elem, borderRadius );
+//                        },
+//                        set: function( elem, value) {
+//                            elem.style[ borderRadius ] = value;
+//                        }
+//                    };
+//                }
+//            })(jQuery);
+
+            //$("div").css("borderRadius","50%");
+
+//            function css(_prop,_value){
+//                if("not Supported"){
+//                    $.support[_prop]//假设当前为火狐浏览器
+//                    $("div").css($.support[_prop],_value);
+//                }
+//            }
+//            css("borderRadius","50%");
+
+
+//            var _div=document.createElement("div");
+//            console.log(_div.style instanceof Object);
+
+
+
+
+//            function Entry(){
+//                var attr=null;
+//                this.get=function(){
+//                    return attr;
+//                }
+//                this.set=function(n){
+//                    attr=n;
+//                }
+//            }
+//            var _entry=new Entry();
+//            _entry.setAttr(10000);
+//            alert(_entry.getAttr());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+    </script>
+</head>
+<body>
+<p>Hello</p><p>2nd Paragraph</p>
+</body>
+</html>

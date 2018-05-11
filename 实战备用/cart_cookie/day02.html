@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        div{ line-height:30px;}
+        span{ border:solid 1px #555;}
+    </style>
+    <script type="text/javascript">
+        /*function Animal(){
+
+         }*/
+        //alert(new Animal().prototype);
+
+        /*var _obj={
+                 attr:"abc",
+                 fn:function(){
+                 alert("tip");
+             },
+             toString:function(){
+                return "[object Object]";
+               }
+         }
+         console.log(String(_obj));//隐式数据类型转换，强制数据类型转换
+         */
+
+        //        var _str='john\'s' ;//有特殊意义的字符叫“ 元 字符”；“\”反斜线，在字符串中叫转义字符
+        //        var cookie="{\"1001\":\"1\"}";//{"\"1001\"\":1}
+        //
+        //
+        //
+        //        var data=JSON.parse("{\"1001\":1}");
+        //        for(var k in data){
+        //            alert(typeof k);
+        //        }
+
+        /*var cart={
+            "1001":[[1,"yes","red","31","310","3100"],[1,"no","肩宽","腰围","臀围"],[1,"no","肩宽","腰围","胸围"]],
+            "1002":[[1,"yes","red","肩宽","腰围","臀围"],[1,"no","肩宽","腰围","臀围"]],
+            "1003":[[1,"yes","red","肩宽","腰围","臀围"]]
+        }*/
+
+        function CookieOperator(){
+            /**
+             * @param _data type === Array (二维数组)
+             */
+            this.format=function(_data){
+                var _tmp="";
+                for(var i=0;i<_data.length;i++){
+                    _tmp+="[\""+_data[i].join(",").replace(/\,/g,"\",\"")+"\"],";
+                }
+                return _tmp.replace(/\,$/g,"");
+            }
+            /**
+             * 考虑中文编码问题
+             * @param _data type===Object like JSON
+             * var cart={
+                    "1001":[[1,"yes","red","31","310","3100"],[1,"no","肩宽","腰围","臀围"],[1,"no","肩宽","腰围","胸围"]],
+                    "1002":[[1,"yes","red","肩宽","腰围","臀围"],[1,"no","肩宽","腰围","臀围"]],
+                    "1003":[[1,"yes","red","肩宽","腰围","臀围"]]
+                }
+             */
+            this.save=function(_data){
+                var _tmp="{";
+                for(var k in _data){
+                    _tmp+="\""+k+"\":["+this.format(_data[k])+"],"
+                }
+                _tmp=_tmp.replace(/\,$/g,"");
+                _tmp+="}";
+                document.cookie="cart="+window.encodeURIComponent(_tmp);
+            }
+            /**
+             * @param key type==string 是cookie的key值
+             */
+            this.read=function(key){
+                var _reg=new RegExp(key+"=","g");//    /cart=/g
+                if(_reg.test(document.cookie)) {
+                    var cookie = document.cookie.split(/;\s+/g);
+                    for (var i = 0; i < cookie.length; i++) {
+                        _reg.lastIndex = 0;
+                        if (_reg.test(cookie[i])) {
+                            return JSON.parse(window.decodeURIComponent(cookie[i].replace(_reg, "")));
+                            //return JSON.parse(cookie[i].split("=")[1]);
+                        }
+                    }
+                }else{
+                    return {};
+                }
+            }
+            /**
+             * 页面上要存到cookie的数据与原来cookie内的数据进行比较
+             * @param data cookie 内的数据
+             * @param _tmp type===Array 将要保存到cookie内的数据
+             * @param key type===String 产品的ID
+             */
+            this.compareData=function(data,_tmp,key,num){
+                var _has= 2,_flag=0;
+                if(!data[key]){
+                    data[key]=[_tmp];
+                    return data;
+                }
+                for(var i=0;i<data[key].length;i++){
+                    if(_tmp.length!=data[key][i].length){
+                        continue;
+                    }
+                    for(var n=2;n<_tmp.length && data[key][i].length;n++){
+                        if(data[key][i][n]==_tmp[n]){
+                            _has++;
+                        }
+                    }
+                    if(_has==_tmp.length){
+                        data[key][i][0]=(num?num:parseInt(data[key][i][0])+1);
+                        _flag=1;
+                        break;
+                    }else{
+                        _has=2;
+                    }
+                }
+                if(_flag<1) {
+                    data[key].push(_tmp);
+                }
+                return data;
+            }
+            /**
+             *
+             */
+            this.dealNum=function(data,_tmp,key,num){
+                var _has=2;
+                for(var i=0;i<data[key].length;i++){
+                    for(var n=2;n<_tmp.length;n++){
+                        if(data[key][i][n]===_tmp[n]){
+                            _has++;
+                        }
+                    }
+                    if(_has==_tmp.length){
+                        data[key][i][0]=(num?num:parseInt(data[key][i][0])-1);
+                        break;
+                    }else{
+                        _has=2;
+                    }
+                }
+                return data;
+            }
+            this.dealRecordSet=function(data,key){
+                delete data[key];
+                return data;
+            }
+        }
+
+        /****************************自定义的方法********************************/
+        /**
+         * 改变dom元素的颜色
+         * @param _obj 当前点击的对象
+         */
+        function changeColor(_obj){
+            var _list=_obj.parentNode.children;
+            for(var i=0;i<_list.length;i++){
+                _list[i].style.border="solid 1px #555";
+            }
+            _obj.style.border="solid 1px red";
+        }
+        /**
+         * 获取网页中选择的产品属性
+         * @param _obj
+         * @returns {string[]}
+         */
+        function getDataFromPage(_obj){
+            var _identify=_obj.title;
+            var _div=document.getElementsByTagName("div");
+            var _tmp=["1","yes"];
+            var _list=null;
+            for(var i=0;i<_div.length;i++){
+                if(_div[i].className===_identify){
+                    _list=_div[i].children;
+                    for(var n=0;n<_list.length;n++){
+                        if(_list[n].style.border==="1px solid red"){
+                            _tmp.push(_list[n].innerHTML);
+                        }
+                    }
+                }
+            }
+            return _tmp;
+        }
+        /**
+         * 给网页中需要绑定事件的元素添加click事件
+         */
+        function bindEvent(){
+            var _list=document.getElementsByTagName("div");
+            var _span=null;
+            for(var i=0;i<_list.length;i++){
+                if(_list[i].className && !_list[i].id){//choice span to change color
+                    _span=_list[i].children;
+                    for(var n=1;n<_span.length;n++){
+                        _span[n].onclick=function(){
+                            changeColor(this);
+                        }
+                    }
+                }else if(_list[i].id && !_list[i].className){//jion to cart
+                    _list[i].onclick=function(){
+                        var _operator=new CookieOperator();
+                        var data=_operator.read("cart");
+                        _operator.save(_operator.compareData(data,getDataFromPage(this),this.id));
+                        console.log(_operator.read("cart"));
+                    }
+                }
+            }
+            document.getElementById("delete").onclick=function(){
+                var _operator=new CookieOperator();
+                _operator.dealRecordSet(_operator.read("cart"),this.className);
+
+                console.log(_operator.read("cart"));
+            }
+            document.getElementById("plus").onclick=function(){
+                var _operator=new CookieOperator();
+                _operator.save(_operator.compareData(_operator.read("cart"),getDataFromPage(this),this.className));
+                console.log(_operator.read("cart"));
+            }
+            document.getElementById("substract").onclick=function(){
+                var _operator=new CookieOperator();
+                var _data=_operator.dealNum(_operator.read("cart"),getDataFromPage(this),this.className);
+                _operator.save(_data);
+                console.log(_operator.read("cart"));
+            }
+            document.getElementById("num").onblur=function(){
+                var _operator=new CookieOperator();
+                var _data=_operator.dealNum(_operator.read("cart"),getDataFromPage(this),this.className,parseInt(this.value));
+                _operator.save(_data);
+                console.log(_operator.read("cart"));
+            }
+        }
+
+        window.onload=function(){
+            var _operator=new CookieOperator();
+            var _data=_operator.read("cart")
+            console.log(_data);
+            bindEvent();
+        }
+
+    </script>
+</head>
+<body>
+<div class="1001">
+    <span>color:</span>
+    <span>yellow</span>
+    <span>red</span>
+    <span>blue</span>
+</div>
+<div class="1001">
+    <span>肩宽:</span>
+    <span>29</span>
+    <span>31</span>
+    <span>33</span>
+</div>
+<div class="1001">
+    <span>腰围:</span>
+    <span>290</span>
+    <span>310</span>
+    <span>330</span>
+</div>
+<div class="1001">
+    <span>臀围:</span>
+    <span>2900</span>
+    <span>3100</span>
+    <span>3300</span>
+</div>
+<div class="1001">
+    <span>width:</span>
+    <span>1333</span>
+    <span>768</span>
+    <span>256</span>
+</div>
+<div class="1001">
+    <span>memory:</span>
+    <span>128</span>
+    <span>256</span>
+    <span>512</span>
+</div>
+<div id="1001" title="1001">
+    加入购物车
+</div>
+<div id="delete" class="1001" title="1001">clear</div>
+<div id="plus" class="1001" title="1001">+</div>
+<div id="substract" class="1001" title="1001">-</div>
+<input type="text" id="num" class="1001" title="1001" value="1"/>
+
+
+
+
+<hr/>
+<div class="1002">
+    <span>color:</span>
+    <span>yellow</span>
+    <span>red</span>
+    <span>blue</span>
+</div>
+<div class="1002">
+    <span>肩宽:</span>
+    <span>29</span>
+    <span>31</span>
+    <span>33</span>
+</div>
+<div class="1002">
+    <span>腰围:</span>
+    <span>290</span>
+    <span>310</span>
+    <span>330</span>
+</div>
+<div class="1002">
+    <span>臀围:</span>
+    <span>2900</span>
+    <span>3100</span>
+    <span>3300</span>
+</div>
+<div id="1002">
+    加入购物车
+</div>
+<hr/>
+<div class="1003">
+    <span>color:</span>
+    <span>yellow</span>
+    <span>red</span>
+    <span>blue</span>
+</div>
+<div class="1003">
+    <span>肩宽:</span>
+    <span>29</span>
+    <span>31</span>
+    <span>33</span>
+</div>
+<div class="1003">
+    <span>腰围:</span>
+    <span>290</span>
+    <span>310</span>
+    <span>330</span>
+</div>
+<div class="1003">
+    <span>臀围:</span>
+    <span>2900</span>
+    <span>3100</span>
+    <span>3300</span>
+</div>
+<div id="1003">
+    加入购物车
+</div>
+</body>
+</html>

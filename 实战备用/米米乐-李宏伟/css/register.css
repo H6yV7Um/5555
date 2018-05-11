@@ -1,0 +1,193 @@
+.re_welcome{
+	display: inline-block;
+	height: 30px;
+	color: #555555;
+	font-size: 22px;
+	padding-top: 50px;
+	
+}
+#header{
+	margin: 0 auto ;
+	position: relative;
+}
+
+.already_login {
+    float: right;
+    font-family: '微软雅黑';
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+a{
+    color: #00549D;
+}
+.nc-login-layout{
+	width:1000px;
+	margin: 20px auto;
+	-webkit-box-shadow: 0px 10px 10px rgba(0,0,0,0.1),
+ 	1px -2px 20px rgba(0,0,0,0.1) inset;
+}
+.zcTitle {
+    border-bottom: 1px solid #E6E6E6;
+    width: 100%;
+    text-align: center;
+}
+.zcTitle ul li.current {
+    color: #E02423;
+    border-bottom: 2px solid #E02423;
+}
+.zcTitle ul li {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: '微软雅黑';
+    font-size: 22px;
+    margin: 0 26px 0 27px;
+    cursor: pointer;
+}
+.nc-login{
+	width: 400px;
+	margin: 10px auto;
+}
+.nc-login-content{
+	background: #F9F9F9;
+	padding: 20px 0 0 0;
+	overflow: hidden;
+}
+.nc-login-content input {
+    font-family: "微软雅黑";
+    font-size: 16px;
+    border: 1px solid #E6E6E6;
+}
+.nc-login-content div.cBox, .nc-login-content div.short {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    font-family: "微软雅黑";
+    font-size: 16px;
+}
+.nc-login-content div i {
+    display: inline-block;
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    width: 16px;
+    height: 16px;
+    background: url(../img/correct.png);
+    display: none;
+}
+.nc-login-content div.short i {
+    left: 123px;
+    top: 13px;
+}
+.nc-login-content div i.error {
+    background: url("../img/error.png");
+}
+.nc-login-content div label {
+    clear: both;
+    display: block;
+    line-height: 26px;
+    height: 26px;
+    width: 210px;
+    margin: 0;
+    text-indent: 10px;
+}
+label.error {
+    color: #F30;
+    font-family: "微软雅黑";
+    font-size: 16px;
+}
+.nc-login-content div input.error {
+    border: 1px solid #E12323;
+}
+.input-40 {
+    height: 40px;
+    width: 398px;
+    text-indent: 10px;
+}
+
+.nc-login-content input {
+    font-family: "微软雅黑";
+    font-size: 16px;
+    border: 1px solid #E6E6E6;
+}
+.w148 {
+    width: 148px;
+    height: 40px;
+    text-indent: 10px;
+}
+.mt8 {
+    margin: 8px 0 0 20px;
+}
+.fl {
+    float: left;
+    display: inline;
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+.mt10 {
+    margin: 10px 0 0 10px;
+}
+
+.mt10 {
+    margin-top: 10px !important;
+}
+.nc-login-content input {
+    font-family: "微软雅黑";
+    font-size: 16px;
+    border: 1px solid #E6E6E6;
+}
+.reget {
+    width: 148px;
+    height: 42px;
+    line-height: 40px;
+    border: 1px solid #BBB;
+    float: left;
+    text-align: center;
+    margin-left: 20px;
+    background: #F4F4F4;
+    color: #777;
+    cursor: pointer;
+}
+.cap {
+    float: left;
+}
+.w148 {
+    width: 148px;
+    height: 40px;
+    text-indent: 10px;
+}
+.ml5 {
+    margin-left: 5px!important;
+}
+.nc-login-layout a.agreement {
+    color: #c53801;
+    font-weight: 600;
+}
+a:link, a:visited, a:active {
+    text-decoration: none;
+}
+input, select, textarea {
+    font: 12px/20px Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+}
+.nc-login-content .submit {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFF;
+    background: url(../img/zhuce.png) no-repeat;
+    vertical-align: middle;
+    width: 400px;
+    height: 40px;
+    padding: 0;
+    margin: 20px 0;
+    border: 0;
+    cursor: pointer;
+    clear: both;
+}
+li{
+	list-style: none;
+}

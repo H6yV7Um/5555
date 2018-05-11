@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0034)http://fgm.cc/learn/iphone-unlock/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>iPhone手机解锁效果</title>
+<style type="text/css">
+#originDiv {width:200px;height:200px;margin:100px;position:relative;}
+#originDiv img {width:100%;}
+#originDiv #moveDiv {width:100px;height:100px;background-color:#FF0;position:absolute;top:0;left:0;opacity:0.6;filter:alpha(opacity=60);cursor:move;display:none;}
+#bigDiv {display:none;width:250px;height:250px;position:absolute;top:100px;left:400px;overflow:hidden;}
+#bigDiv img {width:500px;height:500px;}
+</style>
+
+</head>
+<body>
+	<div id="originDiv">
+		<img src="an.jpg" />
+		<div id="moveDiv"></div>
+	</div>
+	<div id="bigDiv">
+		<img src="an.jpg" />
+	</div>
+
+<script type="text/javascript">
+	var moveDiv = document.getElementById("moveDiv");
+	var originDiv = document.getElementById("originDiv");
+	var bigDiv = document.getElementById("bigDiv");
+	var bigImg = bigDiv.children[0];
+	console.log(bigDiv.children[0])
+	var scale = 0; //2
+		//console.log(bigImg.clientWidth);
+		//添加移动事件
+		originDiv.onmousemove = function(evt) {
+			//console.log(e)
+			var e = evt || window.event;
+			//console.log(e.clientX)
+			var x = e.clientX - originDiv.offsetLeft - moveDiv.offsetWidth/2;
+			//movediv距离大盒子的左边距
+		
+			var y = e.clientY - originDiv.offsetTop - moveDiv.offsetHeight/2;
+				//边界问题
+			var maxx = originDiv.clientWidth - moveDiv.offsetWidth;
+			//console.log(maxx)
+			//console.log(originDiv.clientWidth)
+			var maxy = originDiv.clientHeight - moveDiv.offsetHeight;
+			if(x<0) {
+				x = 0;
+			}
+			if(x>maxx) {
+				x = maxx;
+			}
+			if(y<0) {
+				y = 0;
+			}
+			if(y>maxy) {
+				y = maxy;
+			}
+			moveDiv.style.left = x + "px";
+			moveDiv.style.top = y + "px";
+			bigDiv.scrollLeft = x * scale; //大图需要滚动的距离
+			bigDiv.scrollTop = y * scale;
+		};
+		//鼠标移上原图
+		originDiv.onmouseover = function() {
+			moveDiv.style.display = "block";
+			bigDiv.style.display = "block";
+			//display为none时 clientWidth为0
+			scale = bigImg.clientWidth/originDiv.clientWidth;
+		};
+		originDiv.onmouseout = function() {
+			moveDiv.style.display = "none";
+			bigDiv.style.display = "none";
+		};
+</script>
+</body>
+</html>

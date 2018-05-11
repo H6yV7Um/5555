@@ -1,0 +1,13 @@
+[
+	{
+		"id": "0001",
+		"title": "htc",
+		"price": "￥3000",
+		"imgres": "img/htc.jpg"
+	}, {
+		"id": "0002",
+		"title": "nokia",
+		"price": "￥2000",
+		"imgres": "img/nokia.jpg"
+	}
+]

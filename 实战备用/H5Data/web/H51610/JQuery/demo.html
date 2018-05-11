@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        img{boder:none; float:left; width:510px;}
+        #slider{ width:660px; height:334px; margin:0 auto; overflow:hidden; margin-top:100px;}
+        #slider span{ display:block; width:30px; height:334px; overflow:hidden; float:left;}
+    </style>
+    <script type="text/javascript" src="../../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("div span").mouseenter(function(){
+                $("div span").not(this).finish().animate({width:"30px"},1000);
+                $(this).finish().animate({width:"510px"},1000);
+            });
+            function createNode(){
+                for(var i=0;i<6;i++){
+                    $("div").append("<span><img alt=\"\" src=\"../images/0"+(i+1)+".jpg\"></span>");
+                }
+            }
+        });
+
+        var a={n:1};
+        var b=a;
+        a.x=a={n:2};
+        console.log(b.x);
+    </script>
+</head>
+<body>
+<div id="slider">
+    <span><img alt="" src="../images/01.jpg"></span>
+    <span><img alt="" src="../images/02.jpg"></span>
+    <span><img alt="" src="../images/03.jpg"></span>
+    <span><img alt="" src="../images/04.jpg"></span>
+    <span><img alt="" src="../images/05.jpg"></span>
+    <span style="width: 510px;"><img alt="" src="../images/06.jpg"></span>
+</div>
+</body>
+</html>

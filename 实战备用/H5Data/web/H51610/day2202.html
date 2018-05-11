@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //工厂模式
+        function factory(_name,_tall,_weight){
+            var _obj=new Object();
+            _obj.name=_name;
+            _obj.tall=_tall;
+            _obj.weight=_weight;
+            return _obj;
+        }
+        var _m=factory("tom","150","150");
+        //console.log(_m);
+        var _p=factory("pig","50","120");
+//        console.log(_p);
+//        console.log(_m instanceof Object);
+//        console.log(_p instanceof Object);
+        //缺点:无法区分对象数据类型
+
+
+        //构造函数的方式创建对象
+        /*function People(){
+            this.head=1;
+            this.arm=2;
+            this.leg=2;
+        }*/
+//        var _person1=new People();
+//        _person1.arm=4;
+//        //console.log(_person);
+//        var _person2=new People();
+////        console.log(_person1.arm===_person2.arm);
+////        console.log(_person1===_person2);
+//        console.log(_person2.arm);
+
+
+
+
+
+
+
+
+
+        //共享方法不安全,一旦遇到变量或者函数名同名的时候会引起对象改变
+//        function eat(){
+//            alert("eat");
+//        }
+//        function People(){
+//            this.head=1;
+//            this.arm=2;
+//            this.leg=2;
+//            this.eat=eat;
+//        }
+//        var _p1=new People();
+//        function eat(){
+//            alert("walk");
+//        }
+//
+//        _p1.eat();
+//        var _p2=new People();
+//        _p2.eat();
+
+
+
+
+        function People(){
+            this.head=1;
+            this.arm=2;
+            this.leg=2;
+        }
+        console.log(People.prototype);
+        console.log(new People().prototype);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

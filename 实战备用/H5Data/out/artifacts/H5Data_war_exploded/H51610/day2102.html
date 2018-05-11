@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+
+        /*var _fn=function(){
+
+        }//将匿名函数赋值给变量
+        function fn(n){
+            console.log(n);
+            return fn;
+        }
+        //fn(1)(2);//函数连续调用
+
+        var fn1=0;
+        //一般情况下,函数都应该是全局函数。
+        function fn(n){
+
+            return n;//注意:也可以灵活运用。
+        }
+        var _str=fn(10);
+        fn(fn(10)==10);//==fn(10)
+        var result=fn(10)+fn(10);
+        function main(){
+            var _arr=[];
+            fn(2+3);
+            fn1;
+        }//函数的灵活调用
+*/
+        //递归方法打印乘法口诀表
+//        var i=1;
+//        (function fn1(){
+//            if(i>9){
+//                return;
+//            }
+//            var n=1;
+//            (function fn2(){
+//                if(n>i){
+//                    return;
+//                }else{
+//                    document.write(n+"*"+i+"="+i*n);
+//                    n++;
+//                    fn2();
+//                }
+//            })();
+//            document.write("<br/>");
+//            i++;
+//            fn1();
+//        })();
+
+
+
+
+
+        //        var fn;
+        //        var a=0;
+        //        var a=10;
+        //        (function fn(){
+        //            alert("ok");
+        //        })();
+        //        fn=(function fn(){
+        //            alert("ok");
+        //            return fn;
+        //        })();
+        //        fn();
+
+
+
+        //匿名函数的自我调用或者叫自我运行的方法
+        (function (){
+
+        })();
+        (function (){
+
+        }());
+
+        //匿名函数与有名称的函数的区别
+        //1、不能被调用(除了自我调用)
+//        function(){
+//            alert("ok");
+//        }
+        //2、一般情况下赋值给变量,目的:方便调用。
+//        var fn=function (){
+//            alert("ok");
+//        }
+        //fn();
+
+
+
+        //闭包:闭包是指在函数外部访问函数作用域中变量的函数
+
+//        function main(){
+//            var n=10;
+//            function inner(){
+//                alert(n++);
+//
+//            }
+//            return inner;
+//        }
+//        function fn(){
+//            var f=main();
+//            f();
+//            f();
+//        }
+        //fn();
+        //fn();
+
+
+
+        /*function main(){
+            var n=10;
+            function inner(){
+                //var n;
+                alert(n);
+                //var n=100;
+            }
+            return inner;
+        }
+        var fn=main();
+        fn();
+        fn();*/
+
+
+
+
+
+
+
+//        window.onload=function(){
+//            var n=1000;
+//            function abc(){
+//                alert(n++);
+//            }
+//            abc();
+//        }
+//        setTimeout(function(){
+//            var n=100;
+//            document.getElementsByTagName("div")[0].onclick=function(){
+//                alert(n);
+//            }
+//        },10000);
+
+
+
+
+
+
+
+
+        function boundEvent(){
+            var _list=document.getElementsByTagName("div");
+            for(var i=0;i<_list.length;i++) {
+                (function fn(n) {
+                    _list[n].onclick = function () {
+                        alert(n);
+                    }
+                })(i);
+            }
+        }
+
+
+//        function boundEvent(){
+//            var _list=document.getElementsByTagName("div");
+//            for(var i=0;i<_list.length;i++){
+//                //(function (n){
+//                    _list[i].onclick=function(){
+//                        alert(i);
+//                    }
+//                //})(i);
+//            }
+//        }
+
+        window.onload=function(){
+            //boundEvent();
+            document.getElementsByTagName("div")[0].onclick=false;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <div style="width:100px; margin-top:5px; height:100px; background-color:red;"></div>
+    <div style="width:100px; margin-top:5px; height:100px; background-color:red;"></div>
+    <div style="width:100px; margin-top:5px; height:100px; background-color:red;"></div>
+    <div style="width:100px; margin-top:5px; height:100px; background-color:red;"></div>
+    <div style="width:100px; margin-top:5px; height:100px; background-color:red;"></div>
+    <div style="width:100px; margin-top:5px; height:100px; background-color:red;"></div>
+    <div style="width:100px; height:100px; background-color:red;"></div>
+    <div style="width:100px; height:100px; background-color:red;"></div>
+    <div style="width:100px; height:100px; background-color:red;"></div>
+    <div style="width:100px; height:100px; background-color:red;"></div>
+</body>
+</html>

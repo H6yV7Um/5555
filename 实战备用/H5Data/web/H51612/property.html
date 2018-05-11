@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var abc=0;
+        function Person(){
+            this.abc=1000;
+            abc=100000;
+        }
+        Person.abc=10000000000000;
+        var _p=new Person();
+        alert(_p.abc);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

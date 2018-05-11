@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		p{ text-align: center;
+			color: red;
+			font-size:30px;
+		}
+		span{
+			font-size:25px;
+			float: left;
+		}
+		    ul{
+		    	overflow: hidden;
+		    }
+			li{
+				width: 25px;
+				height: 27px;
+				display: block;
+				list-style-type: none;
+				float: left;
+				margin-left: 10px;
+			
+			}
+		</style>
+		<script type="text/javascript">
+		window.onload=function(){
+			var oLi=document.getElementsByTagName("li");
+			
+			for(var i=0;i<oLi.length;i++){
+				oLi[i].style.background="url(img/1.png)"
+				oLi[i].index=i;
+				oLi[i].onmouseover=function(){
+					oLi[this.index].style.background="url(img/2.png)";
+				}
+				oLi[i].onmouseout=function(){
+					oLi[this.index].style.background="url(img/1.png)";
+				}
+				oLi[i].count=1;
+				oLi[i].onclick=function(){
+					this.count++;
+					if(this.count%2==0){
+					oLi[this.index].style.background="url(img/2.png)";
+					oLi[this.index].onmouseout=function(){
+				    oLi[this.index].style.background="url(img/2.png)";	
+					};
+					}
+					
+					else if(this.count%2==1){
+					oLi[this.index].style.background="url(img/1.png)";
+						oLi[this.index].onmouseout=function(){
+				    oLi[this.index].style.background="url(img/1.png)";	
+					};
+					}
+				
+		
+				}
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<p>美丽之冠酒店</p>
+		<h4>请给予七星评价！</h4>
+		<span>综合评价：</span>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+.db_banner .tu1{
+	height: 480px;
+}
+.db_banner .tu2{
+	height: 217px;
+}
+.nov_box01 {
+    width: 100%;
+    height: 3130px;
+    background: #fe1c42 url(../images/yure_03.jpg) no-repeat center top;
+    padding-top: 230px;
+}
+.nov_box01_content, .nov_box02_content, .nov_box03_content {
+    width: 1176px;
+    margin: 0 auto;
+}
+.nov_promotion {
+    padding: 13px 0;
+    height: 294px;
+}
+.nov_promotion_left {
+    float: left;
+    width: 587px;
+}
+.nov_promotion_right {
+    float: right;
+    width: 574px;
+}
+.nov_ms3 {
+    position: relative;
+    width: 1200px;
+    overflow: hidden;
+}
+.nov_items {
+    float: left;
+    margin-right: 9px;
+    margin-top: 9px;
+    width: 220px;
+    height: 260px;
+    background: #fff;
+    padding: 4px;
+}
+.nov_img img {
+    width: 220px;
+    height: 220px;
+}
+.nov_price {
+    height: 39px;
+    text-align: center;
+    color: #333;
+    font-family: "微软雅黑";
+    line-height: 37px;
+}
+.nov_price a {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    font-family: "微软雅黑";
+    text-decoration: none;
+    line-height: 39px;
+}
+.nov_box02 {
+    width: 100%;
+    height: 615px;
+    background: #ffc40d url(../images/yure_17.jpg) no-repeat center top;
+    padding-top: 230px;
+}
+.nov_box03 {
+    width: 100%;
+    height: 1185px;
+    background: #fe1c42 url(../images/yure_25.jpg) no-repeat center top;
+    padding-top: 336px;
+}
+.nov_fotter {
+    padding: 50px 0;
+    background: #09131d;
+    text-align: center;
+}

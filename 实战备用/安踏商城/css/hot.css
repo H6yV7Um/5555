@@ -1,0 +1,108 @@
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img{margin:0;padding:0;}
+
+.dbbanner{
+	height: 480px;
+    position: relative;
+}
+.banner{
+
+    height: 480px;
+   
+    position: absolute;
+}
+
+.ny_hd{
+    height: 460px;
+    position: relative;
+    background: #e6e6e6;
+
+}
+.ny_hd1{
+    height: 430px;   
+    width: 1100px;
+    margin: 0 auto;
+}
+.run1{	
+    height: 335px;
+    background: #e6e6e6 url(../images/hot3.jpg) no-repeat center;
+
+}
+.db_bq{
+    color: #fff;
+    width: 1100px;
+    height: 270px;    
+    margin: 0 auto;
+    padding-top: 270px;
+}
+.db_bq li{
+	float: left;
+}
+.db_bq a {
+    color: #fff;
+    font-size: 16px;
+}
+.db_bq a:hover{
+    text-decoration: underline;
+}
+.run2{
+	width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.item{
+	width: 215px;
+    height: 284px;    
+    float: left;
+    margin-right: 5px;
+    margin-top: 8px;
+    position: relative;
+    background: #fff;
+}
+.item dl dd{
+    height: 49px;
+    font-size: 14px;
+    line-height: 20px;
+    font-size: 12px;
+    padding-left: 6px;
+    background: #fff;
+}
+.item dl dd p{
+	margin-top: 4px;
+}
+.item dl dd p a{
+	
+	color: #333;
+}
+.item dl dd p a:hover{
+    text-decoration: underline;
+}
+.item span a{
+	display: block;
+	background: url(../images/doll.jpg) no-repeat 146px center;
+}
+.item span a{
+	color: #999;
+	text-decoration: line-through;
+}
+.red img{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.word{
+	width: 50px;
+	height: 24px;
+	font-size: 26px;
+	color: #fc2c4a;
+	position: absolute;
+	bottom: 31px;
+	right: 2px;
+}
+#lbox1,#bottom1{
+    background: #fff;
+}
+.new{
+    width: 1100px;
+    margin: 0 auto;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function Entry(){
+            var a;
+            var b;
+            var c;
+            this.getXYZ=function(){
+                return a;
+            }
+            this.setA=function(n){
+                a=n;
+            }
+        }
+        var _entry=new Entry();
+        _entry.setA(10);
+        //alert(_entry.getXYZ());
+        function Interface(){
+            this.method=null;//提供一个***方法
+            this.exec=function(){
+                if(this.method){
+                    alert("ok");
+                }
+            }
+        }
+        var _interface=new Interface();
+        _interface.method=function(){
+            alert("upan");
+        }
+        _interface.method();
+        _interface.method=function () {
+            alert("mouse");
+        }
+        _interface.method();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        #small{ width:400px; height:400px; position:relative; left:20px; top:20px;}
+        #small span{ display:block; width:80px; height:80px; overflow:hidden; border:solid 1px #fff; background-color:yellow; opacity:0.5; position:absolute; display:none;}
+        #small img{ width:400px; height:400px; border:none;}
+        #big{ width:160px; height:160px; overflow:hidden; position:relative; left:420px; top:20px; display:none;}
+        #big img{ width:800px; height:800px; border:none; position:absolute;}
+        #demo{ width:20px; height:20px; margin:10px; padding:10px;}
+    </style>
+    <script type="text/javascript">
+        function expand(){
+            var _small=document.getElementById("small");
+            var _big=document.getElementById("big");
+            var _step=parseInt((_small.currentStyle||window.getComputedStyle(_small,null))["left"].replace("px",""));
+            _small.children[0].onmouseover=function(e){
+                var e=e||window.event;
+                //console.log(e.target);
+                if(e.target===this) {
+                    var _span = _small.children[1];
+                    _span.style.display = "block";
+                    _span.style.left = e.clientX - 40-_step + "px";
+                    _span.style.top = e.clientY - 40-_step + "px";
+                    _span.onmousemove=function(e){
+                        var e=e||window.event;
+                        _span.style.left = e.clientX - 40-_step + "px";
+                        _span.style.top = e.clientY - 40-_step + "px";
+                        _big.style.display = "block";
+
+                        var _left=e.clientX-_step-parseInt(this.clientWidth/2);
+                        var _top=e.clientY-_step-parseInt(this.clientHeight/2);
+                        _big.children[0].style.left=-_left*2+"px";
+                        _big.children[0].style.top=-_top*2+"px";
+                    }
+                }
+            }
+        }
+
+        window.onload=function(){
+            expand();
+            var _demo=document.getElementById("demo");
+            alert(_demo.clientWidth);
+        }
+    </script>
+</head>
+<body>
+<div id="small">
+    <img alt="" src="../H51612/images/img1.jpg"/>
+    <span></span>
+</div>
+<div id="big">
+    <img alt="" src="../H51612/images/img1.jpg"/>
+</div>
+
+<div id="demo"></div>
+</body>
+</html>

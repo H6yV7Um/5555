@@ -1,0 +1,6 @@
+
+.icon-heart-empty:before { content: '\e800'; } /* '' */
+.icon-torso:before { content: '\e801'; } /* '' */
+.icon-cart:before { content: '\e802'; } /* '' */
+.icon-clock:before { content: '\e803'; } /* '' */
+.icon-up-open:before { content: '\f005'; } /* '' */

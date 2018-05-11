@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #drag{ width:400px; border:solid 3px #ccc; position:absolute;}
+        #drag span{ display:block; width:400px; height:30px; line-height:30px;
+            text-indent:10px;
+            border-bottom:solid 3px #ccc;}
+        img{ width:400px; border:none;}
+    </style>
+    <script type="text/javascript">
+        function getId(_id){
+            return document.getElementById(_id);
+        }
+        window.onload=function(){
+            getId("drag").children[0].onmousedown=function(e){
+                var e=e||window.event;
+                var x=e.offsetX,y=e.offsetY;
+                document.onmousemove=function(e){
+                    var e=e||window.event;
+                    getId("drag").style.left=e.clientX-x+"px";
+                    getId("drag").style.top=e.clientY-y+"px";
+                }
+            }
+            getId("drag").children[0].onmouseup=function(){
+                document.onmousemove=null;
+            }
+//            getId("text").onblur=function(){
+//                alert("blur");
+//            }
+//            getId("text").onchange=function(){
+//                alert("change");
+//            }
+//            getId("select").onchange=function(){
+//                alert("selectChange");
+//            }
+//            getId("text").onselect=function(){
+//                alert("select");
+//            }
+//
+//            getId("img").onclick=function(e){
+//                console.log(e);
+//            }
+//            getId("img").onmouseout=function(){
+//                console.log(this);
+//            }
+
+
+//            var _script=document.createElement("script");
+//            _script.type="text/javascript";
+//            _script.id="script";
+//            _script.src="../H51612/Javascript/Ajax.js";
+//            _script.onload=function(){//懒加载
+//                alert(ajaxRequest);
+//            }
+//            document.getElementsByTagName("head")[0].appendChild(_script);
+        }
+
+        window.onresize=function(){
+            alert("resize");
+        }
+
+        window.onunload=function(){
+            alert("exit");
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+<input type="text" id="text" value="1234"/>
+<select name="select" id="select">
+    <option value="01">1</option>
+    <option value="02">2</option>
+    <option value="03">3</option>
+</select>
+<div id="drag">
+    <span>拖拽标题</span>
+    <img src="../H51612/images/img1.jpg" id="img" alt="">
+</div>
+</body>
+</html>

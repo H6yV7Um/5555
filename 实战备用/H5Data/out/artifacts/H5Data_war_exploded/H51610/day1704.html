@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto; text-align:center;}
+        #history{ width:500px; height:400px; overflow:hidden; overflow-y:scroll; margin:0 auto; padding-top:20px; border:solid 1px #ccc;}
+        #history span{ display:block; width:100%; height:auto; min-height:25px; line-height:25px; text-align:left; text-indent:10px; font-size:13px; color:#333;}
+
+        #ctrl{ width:500px; height:180px; padding-top:15px; overflow:hidden; margin:0 auto; border:solid 1px #ccc; border-top:none;}
+        #ctrl div{ width:100%; float:left; text-align:center; margin-top:5px; display:inline;}
+        #ctrl div span.tag{ display:block; width:70px; color:#555; float:left; font-size:13px; text-align:right;}
+        #user{ width:150px; outline:none; border:solid 1px #ccc; padding:3px; float:left; margin-left:20px; display:inline;}
+        #message{ width:380px; height:90px; float:left; margin-left:20px; display:inline;}
+        #sender{ display:block; width:70px; margin:0 auto; margin-top:5px; border:solid 1px #ddd; border-radius:3px; height:25px; line-height:25px; text-align:center; font-size:13px;}
+    </style>
+    <script type="text/javascript">
+        function callBack(_data){
+            var _history=document.getElementById("history");
+            var _span="";
+            for(var key in _data){
+                _span+="<span>"+_data[key]+"("+key+")"+"</span>";
+            }
+            _history.innerHTML=_span;
+            _span=null;
+        }
+        function crossDomain(){
+            var _timer=0;
+            var _script=document.createElement("script");
+            _script.type="text/javascript";
+            function postData() {
+                window.clearTimeout(_timer);
+                _script.src="/url/PostMessage";
+                _script.onload=function(){
+                    _timer = window.setTimeout(postData,10000);
+                }
+                document.getElementsByTagName("head")[0].appendChild(_script);
+            }
+            postData();
+            function boundEvent(){
+                document.getElementById("sender").onclick=function(){
+                    var _parameter="";
+                    var _d=new Date();
+                    _parameter+="t="+_d.getHours()+_d.getMinutes()+_d.getSeconds()+_d.getMilliseconds();
+                    _parameter+="&u="+document.getElementById("user").value;
+                    _parameter+="&m="+document.getElementById("message").value;
+                    _script=document.createElement("script");
+                    _script.type="text/javascript";
+                    _script.src="/url/PostMessage?"+_parameter;
+                    document.getElementsByTagName("head")[0].appendChild(_script);
+                }
+            }
+            boundEvent();
+        }
+        window.onload=function(){
+            crossDomain();
+        }
+    </script>
+</head>
+<body>
+<div id="history">
+
+</div>
+<div id="ctrl">
+    <div>
+        <span class="tag">用户名:</span>
+        <input type="text" id="user"/>
+    </div>
+    <div>
+        <span class="tag">短消息:</span>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        <span id="sender">发送</span>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .block{
+            width:10px; height:10px;
+            background-color:red;
+            position:absolute;
+            top:100px;
+        }
+    </style>
+    <script type="text/javascript" src="../H51612/Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        function animate(){
+//            function show() {
+//                $("div").show(3000, function () {
+//                    hide();
+//                });
+//            }
+//            function hide() {
+//                $("div").hide(3000, function () {
+//                    show();
+//                });
+//            }
+//            hide();
+
+
+
+
+
+
+//            function slide() {
+//                $("div").slideUp(3000, function () {
+//                    $(this).slideDown(3000);
+//                });
+//            }
+//            slide();
+
+
+
+//            function slideToggle(){
+//                $("div").slideToggle(2000,function(){
+//                    slideToggle();
+//                });
+//                $("div").slideToggle(2000,slideToggle);
+//                slideToggle();
+//            }
+//            slideToggle();
+
+
+
+//            function fadeTo(){
+//                $("div").fadeTo("slow","0.2","swing",function(){});
+//            }
+//            fadeTo();
+
+
+//            $("div").animate({
+//                "width":"1000px",
+//                "height":"1000px",
+//                "opacity":"0.5",
+//                "margin-left":"100px"
+//            },3000,function(){});
+
+
+            $("#go").click(function(){
+                $(".block").animate({left: '+800px'}, 2000);
+            });
+
+// 当点击按钮后停止动画
+            $("#stop").click(function(){
+                $(".block").stop(true,false);
+            });
+        }
+        $(document).ready(function(){
+            animate();
+        });
+    </script>
+</head>
+<body>
+<button id="go">Go</button>
+<button id="stop">STOP!</button>
+<div class="block"></div>
+</body>
+</html>

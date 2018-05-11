@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="Style/Style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="javascript/Style.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            var _demo=document.getElementById("demo");
+//            var _blinds=new Blinds(_demo);
+//            var _floor=new Floor(_demo);
+//            var _exchange=new Exchange(_demo);
+//            Floor.prototype=new Exchange(_demo);
+//            Blinds.prototype=new Floor(_demo);
+//            var _style=new Blinds(_demo);
+//            Exchange.call(_style,_demo);
+//            Floor.call(_style,_demo);
+            switch(Math.floor(Math.random()*3)) {
+                case 0:_style.blinds(15,"images/img1.jpg");break;
+                case 1:_style.floor(20, "images/img1.jpg");break;
+                case 2:_style.exchange(20, "images/img1.jpg");break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="blind" id="demo"></div>
+</body>
+</html>

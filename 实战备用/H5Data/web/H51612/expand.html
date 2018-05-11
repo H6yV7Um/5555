@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{ margin:0 auto;}
+        div{ width:100px;
+            height:100px;
+            overflow: hidden;
+            background-color:#000;
+            margin:10px;
+        }
+    </style>
+    <script type="text/javascript">
+//        function Computer(){
+//            this.screen=null;
+//            this.keybord=null
+//            this.touchbord=null;
+//            this.print=function(){
+//                alert("print");
+//            }
+//            this.show=function(){
+//
+//            }
+//        }
+//        var _lenovo=new Computer();
+//        _lenovo.finger=function(){
+//
+//        }
+//
+//        var _dell=new Computer();
+//        _lenovo.finger();
+//
+//        _dell.print=function(){//overwrite
+//            alert("big");
+//        }
+//        _dell.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function Expand(_obj,_max){
+            this._timer=0;//私有属性
+            this._width=_obj.offsetWidth;
+
+            var _self=this;
+            this.plus=function() {
+                function exec() {
+                    window.clearTimeout(_self._timer);
+                    _self._width += 10;
+                    _obj.style.width = _self._width + "px";
+                    if (_self._width < _max) {
+                        _self._timer = window.setTimeout(exec, 30);
+                    }
+                }
+                exec();
+            }
+            this.mouseout=function() {
+                function substruct() {
+                    window.clearTimeout(_self._timer);
+                    _self._width -= 10;
+                    _obj.style.width = _self._width + "px";
+                    if (_self._width > 100) {
+                        _self._timer = window.setTimeout(substruct, 30);
+                    }
+                }
+                substruct();
+            }
+        }
+        window.onload=function(){
+            var _list=document.getElementsByTagName("div");
+            var _arr=new Array(_list.length);
+            //var _expand2=new Expand(this,500);
+            for(var i=0;i<_list.length;i++){
+                _arr[i]=new Expand(_list[i],500);
+                (function(n){
+                    _list[n].onmouseover=function(){
+                        _arr[n].plus();
+                        //var _expand1=new Expand(this,500);
+                    }
+                    _list[n].onmouseout=function(){
+                        _arr[n].mouseout();
+                    }
+                })(i);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

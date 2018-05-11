@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="Javascript/jquery.js"></script>
+    <script type="text/javascript">
+        var _products={
+            "10001":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10002":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10003":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10004":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10005":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10006":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10007":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10008":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10009":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10010":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10011":{
+                "name":"家电",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10001"
+            },
+            "10012":{
+                "name":"服装",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10002"
+            },
+            "10013":{
+                "name":"服装",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10002"
+            },
+            "10014":{
+                "name":"服装",
+                "price":"",
+                "store":"",
+                "property":{},
+                "img":{
+                    "main":"url",
+                    "group":[],
+                    "detail":["",""]
+                },
+                "discount":"",
+                "categoryID":"10002"
+            }
+        };
+        document.cookie="key={\"10001\":0};";
+
+        $(document).ready(function(){
+            function boundEvent(){
+                $("span").not(".del").click(function(){
+                    var _cookie=document.cookie;
+                    if(_cookie.indexOf("cart=")>=0){
+                        _cookie=_cookie.replace("cart=","");
+                        var _cart=window.eval("("+_cookie+")");
+                        var _f=0;
+                        for(var key in _cart){
+                            if(this.id==key){
+                                _cart[key]+=1;
+                                _f=1;
+                                break;
+                            }
+                        }
+                        if(_f==0){
+                            _cart[this.id]=1;
+                        }
+                        _cookie="{"
+                        for(var k in _cart){
+                            _cookie+="\""+k+"\":"+_cart[k]+","
+                        }
+                        _cookie=_cookie.substr(0,_cookie.lastIndexOf(","));
+                        _cookie+="}";
+                        document.cookie="cart="+_cookie;
+                    }else{
+                        _cookie="cart={\""+this.id+"\":1}";
+                        document.cookie=_cookie;
+                    }
+                    //var _cookie="_cart={\"10001\":10,\"10002\":2,\"10003\":19}";
+
+                });
+                $(".del").click(function(){
+                    deleteProduct(this.id)
+                })
+            }
+            function checkUrl(){
+                var _url=window.location.href;
+                if(/id=\d+/g.test(_url)){
+                    var _identify=parseInt(_url.match(/id=\d+/g)[0].replace("id=",""));
+                    var _list="";
+                    for(var key in _products){
+                        if(_products[key]["categoryID"]==_identify){
+                            _list+="<span id=\""+key+"\">"+_products[key]["name"]+"</span><span id=\""+key+"\" class=\"del\">-</span>";
+                        }
+                    }
+                    $("#products").html(_list);
+                    boundEvent();
+                }
+            }
+            checkUrl();
+
+
+
+            function deleteProduct(_identify){
+                var _cookie=document.cookie;
+                _cookie=_cookie.replace("cart=","");
+                var _cart=window.eval("("+_cookie+")");
+                _cookie="{";
+                for(var key in _cart){
+                    if(key!=_identify){
+                        _cookie+="\""+key+"\":"+_cart[key]+","
+                    }
+                }
+                _cookie=_cookie.substr(0,_cookie.lastIndexOf(","));
+                _cookie+="}";
+                document.cookie="cart="+_cookie;
+            }
+            //deleteProduct();
+
+
+
+
+
+
+        })
+
+    </script>
+</head>
+<body>
+<div id="products"></div>
+</body>
+</html>

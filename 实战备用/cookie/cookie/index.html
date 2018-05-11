@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//存储cookie
+		//cookie 一般在浏览器关闭时自动清除，我可以通过设置过期时间的方式让cookie保留在浏览器上
+		//cookie的过期时间为Date格式
+		var dDate = new Date();
+		//dDate.setDate(dDate.getDate()+7);
+		dDate.setDate(dDate.getDate()-1);
+		//document.cookie = "name=123; expires="+dDate;
+		document.cookie = "name=; expires="+dDate;
+		alert(document.cookie);
+
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
