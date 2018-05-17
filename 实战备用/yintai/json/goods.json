@@ -1,0 +1,253 @@
+{
+	"classify001":{
+		"name" : "口红",
+		"list" : [
+			{
+				"id" : "shop01",
+				"name" : "(自营)Lancome兰蔻菁纯柔润丝缎唇膏 381 3.4g",
+				"bigsrc" : "list-1.jpg",
+				"bbigsrc" : "fdj-bimg.jpg",
+				"smallsrc" : "list-s1.jpg",
+				"price" : "270",
+				"originalPrice" : "270" 
+				
+			},
+			{
+				"id" : "shop02",
+				"name" : "(自营）LANEIGE兰芝水润绚彩染唇釉-甜莓粉6g",
+				"bigsrc" : "list-2.jpg",
+				"bbigsrc" : "fdj-bimg2.jpg",
+				"smallsrc" : "list-s2.jpg",
+				"price" : "165",
+				"originalPrice" : "165" 
+			},
+			{
+				"id" : "shop03",
+				"name" : "monplay蒙芭拉诱光润口红",
+				"bigsrc" : "list-3.jpg",
+				"bbigsrc" : "fdj-bimg3.jpg",
+				"smallsrc" : "list-s3.jpg",
+				"price" : "16",
+				"originalPrice" : "59" 
+			},
+			{
+				"id" : "shop04",
+				"name" : "艾熙唇膏3.7g",
+				"bigsrc" : "list-4.jpg",
+				"bbigsrc" : "fdj-bimg4.jpg",
+				"smallsrc" : "list-s4.jpg",
+				"price" : "29",
+				"originalPrice" : "99" 
+			},
+			{
+				"id" : "shop05",
+				"name" : "蒙芭拉甜心亮泽口红笔2.8g",
+				"bigsrc" : "list-5.jpg",
+				"bbigsrc" : "fdj-bimg5.jpg",
+				"smallsrc" : "list-s5.jpg",
+				"price" : "20",
+				"originalPrice" : "69" 
+			},
+			{
+				"id" : "shop06",
+				"name" : "(自营)YSL圣罗兰纯口红 16 3.8g",
+				"bigsrc" : "list-6.jpg",
+				"bbigsrc" : "fdj-bimg6.jpg",
+				"smallsrc" : "list-s6.jpg",
+				"price" : "310",
+				"originalPrice" : "310" 
+			},
+			{
+				"id" : "shop07",
+				"name" : "(自营)Lancome兰蔻空气轻垫唇油 372 6.5ml",
+				"bigsrc" : "list-7.jpg",
+				"bbigsrc" : "fdj-bimg7.jpg",
+				"smallsrc" : "list-s7.jpg",
+				"price" : "240",
+				"originalPrice" : "240" 
+			},
+			{
+				"id" : "shop08",
+				"name" : "(自营)Lancome兰蔻菁纯柔润丝缎唇膏 381 3.4g",
+				"bigsrc" : "list-1.jpg",
+				"bbigsrc" : "fdj-bimg.jpg",
+				"smallsrc" : "list-s1.jpg",
+				"price" : "270",
+				"originalPrice" : "270" 
+			},
+			{
+				"id" : "shop09",
+				"name" : "(自营）LANEIGE兰芝水润绚彩染唇釉-甜莓粉6g",
+				"bigsrc" : "list-2.jpg",
+				"bbigsrc" : "fdj-bimg2.jpg",
+				"smallsrc" : "list-s2.jpg",
+				"price" : "165",
+				"originalPrice" : "165"  
+			},
+			{
+				"id" : "shop10",
+				"name" : "(自营)Lancome兰蔻菁纯柔润丝缎唇膏 381 3.4g",
+				"bigsrc" : "list-1.jpg",
+				"bbigsrc" : "fdj-bimg.jpg",
+				"smallsrc" : "list-s1.jpg",
+				"price" : "270",
+				"originalPrice" : "270" 
+			},
+			{
+				"id" : "shop11",
+				"name" : "(自营)Lancome兰蔻菁纯柔润丝缎唇膏 381 3.4g",
+				"bigsrc" : "list-1.jpg",
+				"bbigsrc" : "fdj-bimg.jpg",
+				"smallsrc" : "list-s1.jpg",
+				"price" : "270",
+				"originalPrice" : "270" 
+				
+			},
+			{
+				"id" : "shop12",
+				"name" : "(自营）LANEIGE兰芝水润绚彩染唇釉-甜莓粉6g",
+				"bigsrc" : "list-2.jpg",
+				"bbigsrc" : "fdj-bimg2.jpg",
+				"smallsrc" : "list-s2.jpg",
+				"price" : "165",
+				"originalPrice" : "165" 
+			},
+			{
+				"id" : "shop13",
+				"name" : "monplay蒙芭拉诱光润口红",
+				"bigsrc" : "list-3.jpg",
+				"bbigsrc" : "fdj-bimg3.jpg",
+				"smallsrc" : "list-s3.jpg",
+				"price" : "16",
+				"originalPrice" : "59" 
+			},
+			{
+				"id" : "shop14",
+				"name" : "艾熙唇膏3.7g",
+				"bigsrc" : "list-4.jpg",
+				"bbigsrc" : "fdj-bimg4.jpg",
+				"smallsrc" : "list-s4.jpg",
+				"price" : "29",
+				"originalPrice" : "99" 
+			},
+			{
+				"id" : "shop15",
+				"name" : "蒙芭拉甜心亮泽口红笔2.8g",
+				"bigsrc" : "list-5.jpg",
+				"bbigsrc" : "fdj-bimg5.jpg",
+				"smallsrc" : "list-s5.jpg",
+				"price" : "20",
+				"originalPrice" : "69" 
+			},
+			{
+				"id" : "shop16",
+				"name" : "(自营)YSL圣罗兰纯口红 16 3.8g",
+				"bigsrc" : "list-6.jpg",
+				"bbigsrc" : "fdj-bimg6.jpg",
+				"smallsrc" : "list-s6.jpg",
+				"price" : "310",
+				"originalPrice" : "310" 
+			},
+			{
+				"id" : "shop17",
+				"name" : "(自营)Lancome兰蔻空气轻垫唇油 372 6.5ml",
+				"bigsrc" : "list-7.jpg",
+				"bbigsrc" : "fdj-bimg7.jpg",
+				"smallsrc" : "list-s7.jpg",
+				"price" : "240",
+				"originalPrice" : "240" 
+			},
+			{
+				"id" : "shop18",
+				"name" : "(自营)Lancome兰蔻菁纯柔润丝缎唇膏 381 3.4g",
+				"bigsrc" : "list-1.jpg",
+				"bbigsrc" : "fdj-bimg.jpg",
+				"smallsrc" : "list-s1.jpg",
+				"price" : "270",
+				"originalPrice" : "270" 
+			},
+			{
+				"id" : "shop19",
+				"name" : "(自营）LANEIGE兰芝水润绚彩染唇釉-甜莓粉6g",
+				"bigsrc" : "list-2.jpg",
+				"bbigsrc" : "fdj-bimg2.jpg",
+				"smallsrc" : "list-s2.jpg",
+				"price" : "165",
+				"originalPrice" : "165"  
+			},
+			{
+				"id" : "shop20",
+				"name" : "(自营)Lancome兰蔻菁纯柔润丝缎唇膏 381 3.4g",
+				"bigsrc" : "list-1.jpg",
+				"bbigsrc" : "fdj-bimg.jpg",
+				"smallsrc" : "list-s1.jpg",
+				"price" : "270",
+				"originalPrice" : "270" 
+			},
+			{
+				"id" : "shop21",
+				"name" : "(自营)Lancome兰蔻菁纯柔润丝缎唇膏 381 3.4g",
+				"bigsrc" : "list-1.jpg",
+				"bbigsrc" : "fdj-bimg.jpg",
+				"smallsrc" : "list-s1.jpg",
+				"price" : "270",
+				"originalPrice" : "270" 
+				
+			},
+			{
+				"id" : "shop22",
+				"name" : "(自营）LANEIGE兰芝水润绚彩染唇釉-甜莓粉6g",
+				"bigsrc" : "list-2.jpg",
+				"bbigsrc" : "fdj-bimg2.jpg",
+				"smallsrc" : "list-s2.jpg",
+				"price" : "165",
+				"originalPrice" : "165" 
+			},
+			{
+				"id" : "shop23",
+				"name" : "monplay蒙芭拉诱光润口红",
+				"bigsrc" : "list-3.jpg",
+				"bbigsrc" : "fdj-bimg3.jpg",
+				"smallsrc" : "list-s3.jpg",
+				"price" : "16",
+				"originalPrice" : "59" 
+			},
+			{
+				"id" : "shop24",
+				"name" : "艾熙唇膏3.7g",
+				"bigsrc" : "list-4.jpg",
+				"bbigsrc" : "fdj-bimg4.jpg",
+				"smallsrc" : "list-s4.jpg",
+				"price" : "29",
+				"originalPrice" : "99" 
+			},
+			{
+				"id" : "shop25",
+				"name" : "蒙芭拉甜心亮泽口红笔2.8g",
+				"bigsrc" : "list-5.jpg",
+				"bbigsrc" : "fdj-bimg5.jpg",
+				"smallsrc" : "list-s5.jpg",
+				"price" : "20",
+				"originalPrice" : "69" 
+			},
+			{
+				"id" : "shop26",
+				"name" : "(自营)YSL圣罗兰纯口红 16 3.8g",
+				"bigsrc" : "list-6.jpg",
+				"bbigsrc" : "fdj-bimg6.jpg",
+				"smallsrc" : "list-s6.jpg",
+				"price" : "310",
+				"originalPrice" : "310" 
+			},
+			{
+				"id" : "shop27",
+				"name" : "(自营)Lancome兰蔻空气轻垫唇油 372 6.5ml",
+				"bigsrc" : "list-7.jpg",
+				"bbigsrc" : "fdj-bimg.jpg",
+				"smallsrc" : "list-s7.jpg",
+				"price" : "240",
+				"originalPrice" : "240" 
+			}
+		]
+	}
+}

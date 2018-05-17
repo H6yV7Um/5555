@@ -1,0 +1,372 @@
+@charset "UTF-8";
+body{
+    background: #f4f4f4;
+}
+#headmain{
+    height:100px ;
+    background:#fff;
+    padding-top: 20px;
+    div{
+        height: 100px;
+    }
+}
+#body{
+    width: 980px;
+    margin: 0 auto;
+    .bdwrap{
+        width: 940px;
+        padding: 20px;
+        margin: 20px auto;
+        background: #FFFFFF;
+        .cartstep{
+            height: 80px;
+            margin-bottom: 10px;
+            h2{
+                float: left;
+                width: 112px;
+                height: 80px;
+                text-indent: -999px;
+                overflow: hidden;
+                background: url(../images/shopping-head.jpg) no-repeat 0 0;
+            }
+            .s-step{
+                float: right;
+                padding-top: 3px;
+                margin-right: 10px;
+                display: inline;
+            }
+        }
+    }
+}
+.cartbox{
+    .cartboxhd{
+        height: 30px;
+        background: #666;
+        span{
+            float: left;
+            line-height: 30px;
+            text-align: left;
+            font-weight: 700;
+            overflow: hidden;
+            color: #FFFFFF;
+        }
+        .th-chk{
+            width: 103px;
+            padding-left: 27px;
+        }
+        .th-item{
+            width: 372px;
+        }
+        .th-price{
+            width: 130px;
+        }
+        .th-amount{
+            width: 66px;
+            padding-right: 60px;
+            text-align: center;
+        }
+        .th-sum{
+            width: 90px;
+        }
+        .th-op{
+            width: 92px;
+        }
+    }
+    .cartboxcon{
+        width: 940px;
+        margin-bottom: 10px;
+        .cartlist-title{
+            clear: both;
+            position: relative;
+            height: 30px;
+            border: 1px solid #e2e2e2;
+            border-bottom: none;
+            background: #EEEEEE;
+            h3{
+                line-height: 30px;
+                color: #666666;
+                padding: 0 32px 0 10px;
+                font-size: 12px;
+            }
+        }
+        .cartlist-list{
+            clear: both;
+            display: block;
+            position: relative;
+            width: 938px;
+            border: 1px solid #e2e2e2;
+            border-top: none;
+            .product{
+                position: relative;
+                padding: 15px 0 0;
+                border-bottom: 1px solid #e2e2e2;
+                background: #f9f9f9;
+                div{
+                    float: left;
+                }
+                .th-chk{
+                    width: 40px;
+                    height: 62px;
+                    padding-left: 26px;
+                    input{
+                        margin-top: 14.5px;
+                    }
+                }
+                .th-item{
+                    width: 435px;
+                    .property{
+                        width: 425px;
+                        margin-bottom: 10px;
+                        .pro-img{
+                            float: left;
+                            width: 45px;
+                            height: 60px;
+                            margin-right: 10px;
+                            overflow: hidden;
+                            border: 1px solid #efefef;
+                            background: #FFFFFF;
+                            a{
+                                img{
+                                    vertical-align: top;
+                                    width: 45px;
+                                    height: 60px;
+                                }
+                            }
+                        }
+                        .pro-title{
+                            float: left;
+                            width: 328px;
+                            position: relative;
+                           
+                        }
+                        .pro-pro{
+                            float: left;
+                            width: 328px;
+                            position: relative;
+                            p{
+                                height: 22px;
+                                line-height: 22px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                width: 328px;
+                                span{
+                                    margin-right: 10px;
+                                    color: #999;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+                .th-price{
+                    width: 130px;
+                    margin-top: 11px;
+                    line-height: 20px;
+                    strong{
+                        display: inline-block;
+                        height: 16px;
+                        line-height: 16px;
+                        vertical-align: middle;
+                        color: #E5004F;
+                        padding-left: 8px;
+                        font-weight: bold;
+                    }
+                }
+                .th-amount{
+                    width: 66px;
+                    padding-right: 60px;
+                    text-align: center;
+                    height: 20px;
+                    margin-top: 11px;
+                    .pro-number{
+                        position: relative;
+                        width: 64px;
+                        margin: 0 auto;
+                        text-align: center;
+                        color: #666666;
+                        a{
+                           position: absolute;
+                           width: 16px;
+                           height: 18px;
+                           line-height: 18px;
+                           overflow: hidden;
+                           border: 1px solid #dfdfdf;
+                           background: #EEEEEE;
+                           color: #666666;
+                           &.jian{
+                               left: 0;
+                               top: 0;
+                               z-index: 2;
+                           }
+                           &.add{
+                               right: 0;
+                               top: 0;
+                               z-index: 2;
+                           } 
+                        }
+                        input{
+                            position: absolute;
+                            left: 17px;
+                            top: 0;
+                            z-index: 1;
+                            width: 28px;
+                            height: 18px;
+                            line-height: 18px;
+                            overflow: hidden;
+                            text-align: center;
+                            border: 1px solid #CCCCCC;
+                            background: #FFFFFF;
+                            color: #666666;
+                        }
+                    }
+                }
+                .th-sum{
+                    width: 90px;
+                    margin-top: 10px;
+                }
+                .th-op{
+                    width: 91px;
+                    margin-top: 3px;
+                    .operation{
+                        position: relative;
+                        a{
+                            display: block;
+                            width: 52px;
+                            height: 18px;
+                            padding-left: 16px;
+                            color: #666666;
+                            background: url(../images/shopping-icon.png) no-repeat 0 -92px;
+                        }
+                        .delete{
+                            background-position: 1px -125px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.payoftable{
+    width: 938px;
+    margin: 10px 2 20px;
+    border: solid #DDDDDD;
+    border-width: 1px 1px 2px;
+    background: #EEEEEE;
+    .payofone{
+        min-height: 24px;
+        margin: 15px 20px 5px;
+        .payofoneL{
+            float: left;
+            line-height: 24px;
+            .th-chk{
+                float: left;
+                width: 55px;
+                padding-left: 6px;
+                display: inline-block;
+                margin-top: -1px;
+                height: 20px;
+                overflow: hidden;
+                vertical-align: middle;
+            }
+            a{
+                float: left;
+                margin-right: 15px;
+            }
+        }
+        .payofoneR{
+            float: right;
+            height: 24px;
+            line-height: 24px;
+            padding: 0 6px 0 21px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #666;
+            background: url(../images/shopping-icon.png) no-repeat 0 -299px;
+        }
+    }
+    .payoftwo{
+        min-height: 24px;
+        margin: 0 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #d2d2d2;
+        .totalamount{
+            float: right;
+            height: 24px;
+            line-height: 24px;
+            padding-right: 6px;
+            font-size: 14px;
+            span{
+                float: left;
+                color: #666;
+                strong{
+                    font-family: verdana;
+                    font-weight: 400;
+                    color: #E5004F;
+                    
+                }
+            }
+        }
+    }
+    .payoffou{
+        width: 938px;
+        height: 65px;
+        .payoffoucon{
+            width: 886px;
+            height: 42px;
+            padding: 8px 26px 15px;
+            left: auto;
+            bottom: 0;
+            z-index: 99;
+            background: #eee;
+            .accountbox{
+                float: right;
+                width: 147px;
+                height: 43px;
+                margin-left: 15px;
+                overflow: hidden;
+                cursor: pointer;
+                background:url(../images/shopping-submit.png) no-repeat 0 0;
+                &:hover{
+                    background-position: -147px 0;
+                }
+                input{
+                    float: left;
+                    width: 143px;
+                    height: 38px;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    overflow: hidden;
+                    opacity: 0;
+                }
+            }
+            .accountnum{
+                float: right;
+                height: 42px;
+                line-height: 42px;
+                font-size: 14px;
+                font-weight: 700;
+                color: #333333;
+                i{
+                    font-size: 12px;
+                    font-weight: 400;
+                    margin-left: -5px;
+                    font-style:normal;
+                    color: #666666;
+                }
+                strong{
+                    padding: 0 5px;
+                    font-size: 16px;
+                    font-family: verdana;
+                    color: #E5004F;
+                    vertical-align: middle;
+                    font-weight: bold;
+                    b{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+}

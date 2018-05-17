@@ -1,0 +1,17 @@
+{
+	"css": [
+		"src/css/index/index.less",
+		"src/css/detail/detail.less",
+		"src/css/information/information.less",
+		"src/css/information/swiper.less",
+		"src/css/cart/cart.less"
+	],
+
+	"js": [
+		"src/js/index/index.js",
+		"src/js/detail/detail.js",
+		"src/js/information/information.js",
+		"src/js/information/swiper.js",
+		"src/js/cart/cart.js"
+	]
+}

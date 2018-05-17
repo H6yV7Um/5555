@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="dist/index.css"/>
+<link rel="stylesheet" type="text/css" href="dist/cart.css"/>
+<link rel="stylesheet" type="text/css" href="dist/common.css"/>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/cookie.js"></script>
+<!--<script src="js/common.js"></script>-->
+
+</head>
+<body>
+	<div class="wrap">
+		<div id="headbox"></div>
+		<div id="headmain">
+			<div class="yt-wrap">
+				<h1 class="ilogo"><a href="index.html"><img src="images/header-20160223.gif"/></a></h1>
+			</div>
+		</div>
+		<div id="body">
+			<img src="images/mobile-adt.png"/>
+			<div class="bdwrap">
+				<div class="cartstep">
+					<h2>购物车</h2>
+					<div class="s-step"><img src="images/5.png"/></div>
+				</div>
+				<div class="cartbox">
+					<div class="cartboxhd">
+						<span class="th-chk"><input type="checkbox" class="qx"/>&nbsp;全选</span>
+						<span class="th-item">商品</span>
+						<span class="th-price">单价</span>
+						<span class="th-amount">数量</span>
+						<span class="th-sum">获得积分</span>
+						<span class="th-op">操作</span>
+					</div>
+					<div class="cartboxcon">
+						<div class="cartlist-title">
+							<h3>普通商品</h3>
+						</div>
+						<div class="cartlist-list">
+							<!--<div class="product clearfix">
+								<div class="th-chk"><input type="checkbox"/></div>
+								<div class="th-item">
+									<div class="property">
+										<div class="pro-img"><a href="#"><img src="images/35934.jpg"/></a></div>
+										<p class="pro-title"><a href="#">(自营)Lancome兰蔻新菁纯柔润丝绒唇膏 189 3.4g</a></p>
+										<div class="pro-pro">
+											<p><span>颜色：<b>189</b></span><span>容量：<b>4g</b></span></p>
+										</div>
+									</div>
+								</div>
+								<div class="th-price"><strong>￥<em>270.00</em></strong></div>
+								<div class="th-amount">
+									<div class="pro-number">
+										<a href="javascript:;" class="jian">-</a>
+										<input type="text" / class="num">
+										<a href="javascript:;" class="add">+</a>
+									</div>
+								</div>
+								<div class="th-sum">540</div>
+								<div class="th-op">
+									<div class="operation"><a href="javascript:;" class="collect">移入收藏</a></div>
+									<div class="operation"></div>
+									<div class="operation"><a href="javascript:;" class="delete">删除商品</a></div>
+								</div>
+							</div>-->
+						</div>
+					</div>
+					<div class="payoftable">
+						<div class="payofone">
+							<div class="payofoneL">
+								<span class="th-chk"><input type="checkbox" class="qx"/>&nbsp;全选</span>
+								<a href="#">删除选中的商品</a>
+								<a href="#">继续购物</a>
+							</div>
+							<p class="payofoneR">该订单已满100元，运费已免</p>
+						</div>
+						<div class="payoftwo">
+							<div class="totalamount">
+								<span>商品总价：<strong class="total">0</strong></span>
+								<span class="math">-</span>
+								<span>节省金额：<strong class="total">￥0.00</strong></span>
+								<span class="math">+</span>
+								<span>运费：<strong class="freight">￥0.00</strong></span>
+								<span class="math">=</span>
+								<span>结算金额：<strong class="pay">0</strong></span>
+								
+							</div>
+						</div>
+						<div class="payothr"></div>
+						<div class="payoffou">
+							<div class="payoffoucon">
+								<div class="accountbox"><input type="submit" id="accounts" value="结算" /></div>
+								<div class="accountnum">
+									结算金额：
+									<i>(以已免运费)</i>
+									<strong class="endpay">0</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footbox"></div>
+	</div>
+</body>
+</html>
+<script>
+$("#headbox").load("common.html #headtop");
+$("#footbox").load("common.html #foot");
+</script>

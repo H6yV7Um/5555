@@ -1,0 +1,163 @@
+{
+	"ret": true,
+	"data": {
+		"category":[{
+			"icon": "&#xe664",
+			"category_id":1
+		},{
+			"icon": "&#xe665;",
+			"category_id":2
+		},{
+			"icon": "&#xe666;",
+			"category_id":3
+		},{
+			"icon": "&#xe666;",
+			"category_id":4
+		},{
+			"icon": "&#xe666;",
+			"category_id":5
+		},{
+			"icon": "&#xe666;",
+			"category_id":6
+		},{
+			"icon": "&#xe666;",
+			"category_id":7
+		},{
+			"icon": "&#xe666;",
+			"category_id":8
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		},{
+			"icon": "&#xe666;",
+			"category_id":9
+		}],
+		"goosItem":[{
+			"goods_id": 1, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 2, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 3, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 4, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 5, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 6, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 7, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		},{
+			"goods_id": 8, 
+			"goods_img":"./imgs/1.gif",
+			"goods_name": "T恤白色",
+			"goods_price": 49,
+			"old_price": 999
+		}]
+	}
+}

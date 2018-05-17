@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS3实现3D图片翻转洗牌特效 - huiyi8素材网</title>
+
+<meta name="viewport" content="width=800, user-scalable=no">
+
+<link rel="stylesheet" href="css/kort.css">
+
+</head>
+
+<body>
+
+<div class="contents">
+	<article>
+		<h1>Kort</h1>
+		<p>缩略图预览的概念。悬停缩略图，<br />或触摸和滑动如果你在触摸装置。</p>
+	</article>
+</div>
+
+<h2>Default</h2>
+<div class="thumb kort">
+	<img src="img/1.jpg" width="200" height="200">
+	<img src="img/2.jpg" width="200" height="200">
+	<img src="img/3.jpg" width="200" height="200">
+	<img src="img/4.jpg" width="200" height="200">
+	<img src="img/5.jpg" width="200" height="200">
+	<img src="img/6.jpg" width="200" height="200">
+	<img src="img/7.jpg" width="200" height="200">
+	<img src="img/8.jpg" width="200" height="200">
+	<img src="img/9.jpg" width="200" height="200">
+</div>
+
+<h2>Concave</h2>
+<div class="thumb kort concave">
+	<img src="img/1.jpg" width="200" height="200">
+	<img src="img/2.jpg" width="200" height="200">
+	<img src="img/3.jpg" width="200" height="200">
+	<img src="img/4.jpg" width="200" height="200">
+	<img src="img/5.jpg" width="200" height="200">
+	<img src="img/6.jpg" width="200" height="200">
+	<img src="img/7.jpg" width="200" height="200">
+	<img src="img/8.jpg" width="200" height="200">
+	<img src="img/9.jpg" width="200" height="200">
+</div>
+
+<h2>Stack</h2>
+<div class="thumb kort stack">
+	<img src="img/1.jpg" width="200" height="200">
+	<img src="img/2.jpg" width="200" height="200">
+	<img src="img/3.jpg" width="200" height="200">
+	<img src="img/4.jpg" width="200" height="200">
+	<img src="img/5.jpg" width="200" height="200">
+	<img src="img/6.jpg" width="200" height="200">
+	<img src="img/7.jpg" width="200" height="200">
+	<img src="img/8.jpg" width="200" height="200">
+	<img src="img/9.jpg" width="200" height="200">
+</div>
+
+<script src="js/kort.js"></script>
+
+<script>
+	// FF OS X animates this at 3-4 FPS when there are box-shadows
+	// on the images, hence the hack... Ugh :/
+	if( navigator.userAgent.match( /firefox/gi ) ) {
+		[].slice.call( document.querySelectorAll( '.thumb img' ) ).forEach(function( el ) { el.style.boxShadow = 'none'; });
+	}
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://www.huiyi8.com/" target="_blank">huiyi8素材网</a></p>
+</div>
+</body>
+</html>

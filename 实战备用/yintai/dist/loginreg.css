@@ -1,0 +1,481 @@
+@charset "UTF-8";
+/*注册登录页的样式*/
+#head {
+  width: 100%;
+  min-width: 1190px;
+  padding: 20px 0;
+  background: #fff;
+}
+#head .headmain {
+  height: 76px;
+  background: #fff;
+}
+#head .headmain .ilogo {
+  float: left;
+  width: 215px;
+  height: 76px;
+  margin: 0 5px 0 0;
+}
+#head .headmain .ilogo a {
+  display: block;
+  overflow: hidden;
+  width: 215px;
+  height: 76px;
+  background: #eee url(../images/header-20160223.gif) no-repeat 0 0;
+}
+#head .headmain .ilogin {
+  float: left;
+  width: 124px;
+  height: 24px;
+  margin-top: 52px;
+  background: url(../images/header-login.png) no-repeat 0 0;
+}
+#head .headmain .itips {
+  float: right;
+  height: 76px;
+}
+#head .headmain .itips span {
+  float: left;
+  height: 41px;
+  margin-top: 35px;
+  font-family: "微软雅黑";
+}
+#head .headmain .itips span strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+#head .headmain .itips span strong i {
+  font-style: normal;
+  color: #E5004F;
+}
+#head .headmain .itips span b {
+  font-weight: 400;
+  color: #888;
+}
+#head .headmain .itips .delivery {
+  width: 145px;
+  padding: 0 0 0 45px;
+  background: url(../images/footer-01.png) 0 -80px no-repeat;
+}
+#head .headmain .itips .genuine {
+  width: 130px;
+  padding: 0 0 0 48px;
+  background: url(../images/footer-01.png) 0 -154px no-repeat;
+}
+#head .headmain .itips .freight {
+  width: 110px;
+  padding: 0 0 0 60px;
+  background: url(../images/footer-01.png) 0 -225px no-repeat;
+}
+
+/*-------------------------------body----------------------------------*/
+#body {
+  width: auto;
+  background: #f9f9f9;
+}
+#body .bodymain {
+  padding: 60px 0 50px;
+  position: relative;
+}
+#body .bodymain .login-cf {
+  float: left;
+}
+#body .loginblock {
+  float: right;
+  width: 385px;
+  min-height: 460px;
+  border-radius: 3px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: #fff;
+}
+#body .loginblock .login {
+  width: 385px;
+  min-height: 375px;
+  overflow: hidden;
+  position: relative;
+}
+#body .loginblock .login .login-tab {
+  float: left;
+  width: 385px;
+  height: 40px;
+}
+#body .loginblock .login .login-tab li {
+  width: 128px;
+  float: left;
+  position: relative;
+  height: 40px;
+  line-height: 39px;
+  font-size: 14px;
+  color: #999;
+  background: #FFFFFF;
+  border-bottom: 1px solid #CCCCCC;
+  cursor: pointer;
+  text-align: center;
+  font-family: "微软雅黑";
+}
+#body .loginblock .login .login-tab li b {
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  right: 0;
+  top: 50%;
+  margin-top: -10px;
+  background: #d2d2d2;
+}
+#body .loginblock .login .login-tab li.active {
+  border-bottom: 3px solid #E5004F;
+  color: #333;
+  height: 38px;
+}
+
+/*-----------------------------------登录的内容块------------------------------------*/
+.login {
+  position: relative;
+  background: #f3f3f3;
+}
+
+.loginblock .login-tab-con {
+  width: 386px;
+  margin-top: 60px;
+  display: none;
+}
+.loginblock .login-tab-con.selected {
+  display: block;
+}
+
+.inp-wrap {
+  box-sizing: border-box;
+  position: relative;
+  height: 61px;
+  line-height: 39px;
+  background: #FFFFFF;
+  border-top: 1px solid #d5d5d5;
+  border-bottom: 1px solid #d5d5d5;
+  padding: 10px 18px;
+}
+.inp-wrap img {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.inp-wrap input {
+  height: 30px;
+  line-height: 30px;
+  width: 80%;
+  font-size: 16px;
+  color: #666;
+  vertical-align: middle;
+  border: 0;
+}
+.inp-wrap .yzm {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}
+
+.no-border-top {
+  border-top: none;
+}
+
+.yzmhz {
+  display: none;
+}
+
+.login-btn {
+  margin: 10px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 500px;
+  border-radius: 5px;
+  background: #E5004F;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "微软雅黑";
+}
+
+.login-reg {
+  text-align: right;
+  margin: 10px;
+}
+.login-reg a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding-right: 2px;
+  color: #E5004F;
+  cursor: pointer;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+.login-reg .forget-pwd {
+  float: left;
+  font-size: 16px;
+  color: #999999;
+  padding-left: 10px;
+}
+.login-reg .register {
+  float: right;
+}
+
+/*---------------------------二维码登录--------------------------------*/
+.qrcode {
+  height: 316px;
+  background: #FFFFFF;
+}
+
+.login-tab-con .qrcode-login {
+  width: 280px;
+  margin: 0 auto;
+}
+.login-tab-con .qrcode-login .qrcode-title {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 30px;
+}
+.login-tab-con .qrcode-login .qrcode-main {
+  position: relative;
+  height: 140px;
+  margin: 25px 0 15px;
+}
+.login-tab-con .qrcode-login .qrcode-main .qrcode-img {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  left: 70px;
+}
+.login-tab-con .qrcode-login .qrcode-main .qrcode-img img {
+  width: 125px;
+  height: 125px;
+  padding: 10px;
+  vertical-align: top;
+}
+.login-tab-con .qrcode-login .qrcode-desc {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ddd;
+}
+.login-tab-con .qrcode-login .qrcode-desc a {
+  font-size: 14px;
+  color: #666666;
+}
+.login-tab-con .qrcode-login .qrcode-tip {
+  width: 140px;
+  margin: 0 auto;
+  padding: 3px 0;
+  text-align: center;
+  border: 1px solid #E5004F;
+  color: #E5004F;
+}
+
+/*-----------------------   第三方登录    -----------------------*/
+.cooperate-thired {
+  padding: 18px 0;
+}
+.cooperate-thired .cooperate-title {
+  position: relative;
+  height: 24px;
+  text-align: center;
+  margin: 0 20px;
+}
+.cooperate-thired .cooperate-title h3 {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  height: 24px;
+  padding: 0 5px;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  background: #FFFFFF;
+  color: #999;
+}
+.cooperate-thired .cooperate-title p {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  height: 1px;
+  overflow: hidden;
+  background: #ccc;
+}
+.cooperate-thired .cooperate-link {
+  clear: both;
+  line-height: 24px;
+  text-align: center;
+  color: #999;
+}
+.cooperate-thired .cooperate-link a {
+  display: inline-block;
+  height: 20px;
+  margin: 0 5px;
+  color: #999999;
+}
+
+.errmask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: none;
+}
+.errmask .erralert {
+  width: 80%;
+  height: 160px;
+  margin: 100px auto;
+  border-radius: 6px;
+  background: #fff;
+  font-family: "微软雅黑";
+}
+.errmask .erralert div:nth-child(1) {
+  text-align: center;
+  padding: 15px 15px 0;
+  font-size: 20px;
+  color: #000;
+}
+.errmask .erralert div:nth-child(2) {
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 15px;
+  color: #666666;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.errmask .erralert div:nth-child(3) {
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  font-size: 17px;
+  line-height: 38px;
+}
+.errmask .erralert div:nth-child(3) span {
+  color: #E5004F;
+}
+
+/*----------------------------注册的块---------------------------*/
+.regblock {
+  width: 385px;
+  height: 460px;
+  float: right;
+  background: #f1f1f1;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  position: relative;
+}
+.regblock .register-title {
+  position: relative;
+  height: 40px;
+  line-height: 39px;
+  text-align: center;
+  color: #333333;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E5004F;
+}
+.regblock .register-tip {
+  padding: 10px 20px;
+  text-align: right;
+}
+.regblock .register-tip a {
+  color: red;
+}
+.regblock .register-con .registerForm {
+  border-top: 1px solid #d2d2d2;
+  position: relative;
+}
+.regblock .register-con .registerForm .regList {
+  position: relative;
+  height: 44px;
+  line-height: 44px;
+  padding-left: 20px;
+  border-bottom: 1px solid #d2d2d2;
+  background: #fff;
+}
+.regblock .register-con .registerForm .regList input {
+  height: 20px;
+  width: 50%;
+  color: #333;
+}
+.regblock .register-con .registerForm p {
+  line-height: 16px;
+  padding: 10px;
+  color: #666666;
+  font-size: 12px;
+}
+.regblock .register-con .registerForm .submitbtn {
+  display: block;
+  width: 80%;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 auto 15px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #E5004F;
+  border-radius: 6px;
+  background: #f1f1f1;
+}
+.regblock .register-con .registerForm .forbid {
+  color: #FFFFFF;
+  background: #CCCCCC;
+  border: 1px solid #CCCCCC;
+}
+
+.getcode {
+  float: right;
+  margin-right: 20px;
+  margin-top: 8px;
+  width: 90px;
+  height: 28px;
+  line-height: 26px;
+  text-align: center;
+  border: 1px solid #999;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #666666;
+  background: #fff;
+}
+
+/*----------------------------底部---------------------------*/
+#foot {
+  width: 100%;
+  min-width: 1190px;
+  padding-top: 30px;
+  background: #fff;
+}
+#foot .ilinks {
+  text-align: center;
+  margin-bottom: 25px;
+}
+#foot .ilinks a {
+  margin: 0 10px;
+  color: #757575;
+}
+#foot .copyright {
+  text-align: center;
+}
+#foot .copyright p {
+  line-height: 22px;
+  color: #b2b2b2;
+}
+#foot .copyright p a {
+  margin: 0 6px;
+  color: #b2b2b2;
+}
+#foot .all-mark {
+  padding: 10px 0 20px;
+  text-align: center;
+}
+#foot .all-mark a {
+  display: inline-block;
+  margin: 0 12px;
+  vertical-align: middle;
+}

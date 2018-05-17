@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>iscroll左右滑动效果 - 懒人码库</title>
+
+<script type="text/javascript" src="iscroll.js"></script>
+
+<style>
+#carousel{
+  margin: 10px 0;
+  width:100%;
+  height:35px;
+  overflow:hidden;
+}
+#carousel ul{
+  position: relative;
+}
+#carousel li{
+  float: left;
+  margin-left: 10px;
+  width:93px;
+  height: 35px;
+}
+</style>
+</head>
+
+<body><div id="carousel">
+        <ul>
+          <li>333333333</li>
+          <li>343434343</li>
+          <li>ddfdfdf</li>
+          <li>ddfdfdf</li>
+          <li>ddfdfdf</li>
+          <li>ddfdfdf</li>
+          <li>ddfdfdf</li>
+        </ul>
+      </div>cccccccccccccc
+
+
+<script>
+	window.addEventListener('load',function(){ 
+  var $carousel = document.getElementById('carousel'),
+      $ul = $carousel.querySelector('ul'),
+      liArray = $carousel.querySelectorAll('li'),
+      liNum = liArray.length;
+
+  $ul.style.width = (liArray[0].clientWidth + 10)*7 +"px";
+  
+
+  var carousel=new iScroll("carousel",{hScrollbar:false, vScrollbar:false});
+  
+});
+</script>
+</body>
+</html>

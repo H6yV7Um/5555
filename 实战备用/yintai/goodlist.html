@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<!--<link rel="stylesheet" href="dist/common.css" />-->
+<link rel="stylesheet" type="text/css" href="dist/index.css"/>
+<link rel="stylesheet" type="text/css" href="dist/goodlist.css"/>
+<script src="js/jquery-1.8.3.js"></script>
+<script src="js/common.js"></script>
+<script src="js/cookie.js"></script>
+<script src="js/goodslist.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="headbox"></div>
+		<div id="bodybox" class="clearfix">
+			<div id="goodslistmain">
+				<!--商品选择-->
+				<div class="goodslistsel">
+
+				</div>
+				<!--商品列表-->
+				<div class="goods clearfix">
+					<!--每个商品信息-->
+					<div class="goods-main clearfix"></div>
+				</div>
+				<!--商品分页-->
+				<div class="goods-page">
+					<div class="foot-page">
+						<span></span>
+						<span>1</span>
+						<span></span>
+						<em class="pageAll">共一页</em>
+						<em>到第<input type="text" value="1" maxlength="3" class="pageinp"/>页</em>
+						<button class="p-btn"></button>
+					</div>
+				</div>
+				<!--浏览历史-->
+				<div class="history">
+					<span>浏览历史</span>
+				</div>
+				<div class="his-con">
+					<span>浏览历史为空</span>
+				</div>
+			</div>
+		</div>
+		<div id="footbox"></div>
+	</div>
+</body>
+</html>

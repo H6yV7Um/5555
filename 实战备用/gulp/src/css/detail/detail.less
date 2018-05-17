@@ -1,0 +1,66 @@
+@import "../common/base.less";
+@import "../common/border.less";
+@import "../iconfont/iconfont.less";
+
+.header{
+    width: 100%;
+    line-height: .86rem;
+    background: linear-gradient(to bottom, #d2302d, #a21412);
+    text-align: center;
+    font-size: .38rem;
+    color: #fff;
+}
+.header::before{
+    border-color: #c92b2a;
+}
+.header-car{
+    position: absolute;
+    right: .21rem;
+    top: .16rem;
+    width: 1.05rem;
+    line-height: .56rem;
+    border-radius: .16rem;
+    background: linear-gradient(to bottom, #d94748, #940807);
+    border: .02rem solid #941415;
+    font-size: .4rem;
+    color: #fff;
+}
+.go-back{
+    position: absolute;
+    left: 0.16rem;
+    font-size: 0.56rem;
+    color: #fff;
+}
+.detail-wrapper{
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: .86rem;
+    right: 0;
+    bottom: 0; 
+}
+.detail-scroller{
+    width: 100%;
+}
+.detail-content{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    padding: .38rem .72rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+.detail-imgwrapper{
+    width: 100%;
+    background: #ccc;
+    margin-bottom: .16rem;
+}
+.detail-img{
+    width: 100%;
+}
+.detail-description{
+    text-align: left;
+    line-height: .38rem;
+    font-size: .24rem;
+    color: #8a8a8a;
+}

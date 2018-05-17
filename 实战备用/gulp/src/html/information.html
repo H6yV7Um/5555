@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="./css/information.css" />
+	<link rel="stylesheet" href="./css/swiper.css" />
+</head>
+<body>
+	<header class="header border-top">
+		<a href="javascript:;" class="go-back iconfont">&#xe619;</a>
+		商品资料
+		<a href="javascript:;"><div class="header-car iconfont">&#xe61b;</div></a>
+	</header>
+	<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="imgs/1.jpg"/></div>
+            <div class="swiper-slide"><img src="imgs/2.jpg"/></div>
+            <div class="swiper-slide"><img src="imgs/3.jpg"/></div>
+        </div>
+        <!-- Add Pagination -->
+        <div id="swiper-pagination" class="swiper-pagination"></div>
+    </div>
+    <div class="info-content">
+    	<a href="#">
+	    	<p>美特斯邦威 红色花朵印花连衣裙</p>
+	    	<p class="goods-price">&nbsp;&yen;  <i>85</i>.00  &nbsp;&nbsp;&nbsp;<s>159.00</s></p>
+	    	<p>购买人数：209</p>
+    	</a>
+    </div>
+    <div class="view-info">
+    	<a href="#">
+    		<span class="info-icon"></span>
+    		<span class="info-text">查看商品详情</span>
+    		<span class="info-arrow"></span>
+    	</a>
+    </div>
+    <footer>
+    	<button class="add-cart">添加到购物车</button>
+    </footer>
+
+	
+	<script src="./js/bundle.js"></script>
+	<script src="./js/information.js"></script>
+	<script src="./js/swiper.js"></script>
+	<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+    </script>
+</body>
+</html><br />

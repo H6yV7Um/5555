@@ -1,0 +1,351 @@
+@charset "UTF-8";
+.menu-wrap {
+  display: none;
+}
+
+body {
+  background: #F4F4F4;
+}
+
+#body {
+  width: 1190px;
+  margin: 0 auto;
+  clear: both;
+  background: #f4f4f4;
+  font: 12px/1.5 "微软雅黑";
+}
+
+.type-sel {
+  background: #F8F8F8;
+  height: 46px;
+  padding: 0 0 0 20px;
+  width: 1170px;
+  line-height: 46px;
+}
+.type-sel span {
+  color: #666666;
+  margin: 0 3px 0 0;
+}
+.type-sel span a {
+  color: #666;
+}
+
+/*商品详情*/
+.det-main {
+  width: 1190px;
+  background: #FFFFFF;
+  margin-bottom: 10px;
+}
+.det-main .d-left {
+  float: left;
+  position: relative;
+  padding: 20px 10px 10px 0;
+  width: 955px;
+  background: #FFFFFF;
+}
+.det-main .d-right {
+  width: 225px;
+  float: left;
+  background: #FFFFFF;
+  height: 100%;
+  padding: 30px 0;
+}
+
+.d-left .d-info {
+  width: 500px;
+  float: right;
+  font-size: 14px;
+}
+.d-left .d-info h1 {
+  font: 18px/1.5 "microsoft yahei";
+  color: #000000;
+  margin-bottom: 20px;
+}
+.d-left .d-info .priceInfo {
+  color: #999999;
+  margin-bottom: 30px;
+  cursor: default;
+  width: 500px;
+}
+.d-left .d-info .priceInfo .ytprice {
+  height: 25px;
+  line-height: 25px;
+  vertical-align: middle;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.d-left .d-info .priceInfo .ytprice strong {
+  color: #E5004F;
+  font-size: 24px;
+  vertical-align: baseline;
+  display: inline-block;
+  font-weight: bold;
+}
+.d-left .d-info .priceInfo .ytprice strong em {
+  font-weight: normal;
+}
+.d-left .d-info .d-active {
+  width: 495px;
+  background: #eff0f4;
+  padding: 5px 0 5px 4px;
+  font-family: "microsoft yahei";
+  color: #999999;
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.d-left .d-info .d-active div {
+  padding: 2px 12px 2px 0;
+  font-size: 12px;
+  color: #E5004F;
+}
+.d-left .d-info .d-active div span {
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  text-align: center;
+  margin: 0 6px;
+  width: auto;
+  vertical-align: top;
+  background: url(../images/icon.png) no-repeat 100% -353px;
+}
+.d-left .d-info .d-active div span strong {
+  padding: 0 10px;
+  line-height: 20px;
+  display: inline-block;
+  height: 20px;
+  font-size: 12px;
+  color: #FFFFFF;
+  font-weight: normal;
+  float: left;
+  margin: 0;
+}
+.d-left .d-info .d-active div span em {
+  width: 5px;
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  font-size: 0;
+  background: url(../images/icon.png) no-repeat -98px -195px;
+}
+.d-left .d-info .parameter {
+  width: 500px;
+  overflow: hidden;
+}
+.d-left .d-info .parameter .p-wrap {
+  width: 475px;
+  padding: 10px 0;
+  position: relative;
+}
+.d-left .d-info .parameter .p-wrap dl {
+  overflow: hidden;
+  width: 475px;
+  float: left;
+  margin-top: 5px;
+}
+.d-left .d-info .parameter .p-wrap dl dt {
+  float: left;
+  color: #999;
+  width: 100px;
+  line-height: 20px;
+}
+.d-left .d-info .parameter .p-wrap dl dd {
+  float: left;
+  overflow: hidden;
+  width: 370px;
+  display: block;
+}
+.d-left .d-info .parameter .p-wrap dl dd .item {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+.d-left .d-info .parameter .p-wrap dl dd .item a {
+  border: 1px solid #EEEEEE;
+  padding: 4px;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  background: #FFFFFF;
+  cursor: pointer;
+  color: #000000;
+}
+.d-left .d-info .parameter .p-wrap dl dd .item a:hover {
+  border-color: #E5004F;
+}
+.d-left .d-info .parameter .p-wrap dl dd .item img {
+  height: 30px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.d-left .d-info .parameter .p-wrap dl dd .item span {
+  font-size: 12px;
+  color: #000000;
+  vertical-align: middle;
+}
+.d-left .d-info .parameter .p-wrap .selsize .item a {
+  width: 50px;
+  display: inline-block;
+  padding: 1px 2px;
+  height: 21px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 21px;
+}
+.d-left .d-info .parameter .p-wrap .buy {
+  clear: both;
+  height: 40px;
+  padding-top: 10px;
+}
+.d-left .d-info .parameter .p-wrap .buy .count {
+  float: left;
+  margin-right: 10px;
+}
+.d-left .d-info .parameter .p-wrap .buy .addcart {
+  float: left;
+}
+.d-left .d-info .parameter .p-wrap .buy .addcart button {
+  cursor: pointer;
+  width: 150px;
+  border: none;
+  margin-right: 10px;
+  outline: none;
+  height: 40px;
+  float: left;
+  overflow: hidden;
+  background: #E5004F url(../images/button_v2.png) no-repeat;
+}
+.d-left .d-info .parameter .p-wrap .buy .addcart .buyit {
+  background-position: 0 -560px;
+}
+.d-left .d-info .parameter .p-wrap .buy .addcart .buyit:hover {
+  background-position: 0 -600px;
+}
+.d-left .d-info .parameter .p-wrap .buy .addcart .incart:hover {
+  background-position: 0 -40px;
+}
+
+.d-fdj {
+  float: left;
+  width: 435px;
+  height: 512px;
+}
+.d-fdj .img-box {
+  width: 328px;
+  height: 472px;
+  margin: 0 auto;
+}
+
+#box {
+  position: relative;
+  /*border:1px solid #ccc;*/
+  width: 300px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+#box ul {
+  overflow: hidden;
+  /*  border-top:1px solid #ccc;*/
+  position: absolute;
+  top: 350px;
+  left: 0;
+  width: 350px;
+}
+
+#box li {
+  float: left;
+  border-top: none;
+}
+
+.small {
+  width: 300px;
+  height: 400px;
+}
+
+.small img {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#bottom {
+  width: 288px;
+  height: 82px;
+  margin-top: 60px;
+}
+
+#bottom li {
+  width: 62px;
+  height: 62px;
+  overflow: hidden;
+  text-align: center;
+  padding: 0 5px;
+}
+#bottom li a {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  border: 1px solid #e1e1e1;
+}
+#bottom li a img {
+  width: 40px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 4px;
+}
+
+#big {
+  width: 400px;
+  height: 400px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 320px;
+  display: none;
+}
+
+#mask {
+  width: 156.25px;
+  height: 156.25px;
+  background: #ccc;
+  border: 1px solid #fff;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.bigImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#small {
+  position: relative;
+  cursor: move;
+}
+
+.fav {
+  margin-top: 90px;
+}
+
+.d-service {
+  float: right;
+  width: 500px;
+  margin: 20px 0;
+}
+
+.d-right {
+  width: 225px;
+  float: left;
+  background: #FFFFFF;
+  height: 100%;
+  padding: 30px 0;
+}

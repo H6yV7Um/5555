@@ -1,0 +1,14 @@
+{
+	"floor-mp": {
+		"mpNav" : ["针织衫","外套","裙装","围巾","腰带","女鞋","女包","男包","钱包","男鞋","衬衫","双肩包"],
+		"mpWf" :{
+			"src1" : ["mp-nav-1.jpg","mp-nav-1.jpg","mp-nav-1.jpg","mp-nav-1.jpg"],
+			"src2" : ["mp-nav-2.jpg","mp-nav-2.jpg","mp-nav-2.jpg","mp-nav-2.jpg"],
+			"src3" : ["mp-nav-3.jpg","mp-nav-3.jpg","mp-nav-3.jpg","mp-nav-3.jpg"]			
+		},
+		"mpSlidesrc" : ["mp-slide-1.jpg","mp-slide-2.jpg"],
+		"mpBannersrc" : ["mp-block-1.jpg","mp-block-2.jpg","mp-block-3.jpg","mp-block-4.jpg"]
+	}
+		
+	
+}
